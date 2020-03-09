@@ -7,7 +7,7 @@
       </v-col>
       <v-col class="d-flex" :cols="$vuetify.breakpoint.smAndDown ? '12' : '9'">
         <v-container fluid>
-          <v-row justify="center">
+          <v-row justify="center" class="row-with-wide-cards">
             <v-col
               v-for="(item, i) in topic.items"
               :key="i"
@@ -50,7 +50,7 @@ export default {
       },
       lg : {
         type: String,
-        default : "3"
+        default : "5"
       },
       xl : {
         type: String,
@@ -71,5 +71,8 @@ export default {
 .tool-header {
   font-size: 200%;
   color: #1a73e8;
+}
+.row-with-wide-cards {
+  width: 100%;
 }
 </style>
