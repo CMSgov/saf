@@ -299,8 +299,8 @@
 
 <script>
 import firebase from 'firebase/app'
-import { firestore } from 'firebase';
-import { storage } from 'firebase';
+// import { firestore } from 'firebase';
+// import { storage } from 'firebase';
   export default {
     props:{
 
@@ -353,11 +353,11 @@ import { storage } from 'firebase';
       uploadImage() {
         this.imageUploading = true;
         var fileName = `${this.userId}.${this.imageUpload.name.split(".")[1]}`;
-        console.log(fileName);
+        //console.log(fileName);
         var refLink = firebase.storage().ref("team/" + fileName);
-        refLink.put(this.imageUpload).then(file => {
+        refLink.put(this.imageUpload).then(() => {
           refLink.getDownloadURL().then(a => {
-            console.log(a);
+            //console.log(a);
             this.imageURL = a;
             this.imageUploading = false;
             this.uploadImage = "Uploaded";
@@ -387,11 +387,11 @@ import { storage } from 'firebase';
                     web: this.web,
                 }
             }
-            firebase.firestore().collection('team').doc(Data.id).set(Data).then(res=>{
+            firebase.firestore().collection('team').doc(Data.id).set(Data).then(()=>{
                 this.dialog = false
                 this.$emit('showSuccess')
-            }).catch(e=>{
-                console.log(e)
+            }).catch(()=>{
+                //console.log(e)
             })
         }
           

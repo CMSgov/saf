@@ -1,6 +1,6 @@
 <template>
   <v-dialog v-model="dialog" scrollable width="1200">
-    <template v-slot:activator="{ on }">
+    <!--<template v-slot:activator="{ on }">-->
       <v-tooltip bottom>
         <template v-slot:activator="{ on }">
           <v-btn icon color="primary" v-on="on" @click.stop="dialog = true" dark>
@@ -9,7 +9,7 @@
         </template>
         <span>Edit {{speakerData.name}} Details</span>
       </v-tooltip>
-    </template>
+    <!--</template>-->
 
     <v-card v-if="dialog">
       <v-card-title class="headline" primary-title>Edit {{speakerData.name.split(" ")[0]}}'s Details</v-card-title>
@@ -283,8 +283,8 @@ export default {
         this.imageUpload.name.split(".")[1]
       }`;
       var refLink = firebase.storage.ref("speakers/" + fileName);
-      refLink.put(this.imageUpload).then(file => {
-        console.log(file);
+      refLink.put(this.imageUpload).then(() => {
+        //console.log(file);
         refLink.getDownloadURL().then(a => {
           this.updatedData.image = a;
           this.imageUploading = false;
@@ -324,8 +324,8 @@ export default {
             this.isUpdating = false;
             this.dialog = false;
             this.$emit("showEditSuccess", true);
-        }).catch(err=>{
-            console.log(err);
+        }).catch(()=>{
+            //console.log(err);
             this.isUpdating = false;
         });
     }
