@@ -1,5 +1,5 @@
 <template>
-  <v-content class="pa-0 ">
+  <v-content class="pa-0">
     <v-container fluid class="pa-0 mt-2">
       <v-row
         justify="center"
@@ -8,7 +8,16 @@
         class="py-0 my-0"
       >
         <v-col md="12" lg="10" xs="12" class="py-3 my-0">
-          <trainingHeader />
+          <Header>
+            <h3 slot="title"> Our Training</h3>
+            <p slot="subtitle">
+              Questions? Please contact
+              <a
+                style="color:#1565C0;text-decoration: none;"
+                :href="`mailto:${communityData.communityEmail}`"
+              >{{communityData.communityEmail}}</a>
+            </p>
+          </Header>
         </v-col>
       </v-row>
     </v-container>
@@ -20,17 +29,22 @@
         </v-col>
       </v-row>
     </v-container>
-
   </v-content>
 </template>
 
 <script>
-import trainingHeader from "../components/training/trainingHeader";
 import pastTraining from "../components/training/traininginfo";
+import communityData from "@/assets/data/communityData.json";
+import Header from "@/components/core/Header.vue";
 
 export default {
+  data() {
+    return {
+      communityData: communityData
+    };
+  },
   components: {
-    trainingHeader,
+    Header,
     pastTraining
   },
   created() {
@@ -40,8 +54,9 @@ export default {
     } else {
       metaThemeColor.setAttribute("content", "#0277bd");
     }
-  }
-};
+  },
+
+}
 </script>
 
 

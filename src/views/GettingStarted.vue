@@ -8,7 +8,7 @@
         class="py-0 my-0"
       >
         <v-col md="12" lg="10" xs="12" class="py-3 my-0">
-          <gsHeader />
+          <Header><h3 slot="title">Getting Started</h3></Header>
         </v-col>
       </v-row>
     </v-container>
@@ -25,12 +25,12 @@
 </template>
 
 <script>
-import gsHeader from "../components/gettingstarted/gsHeader";
+import Header from "@/components/core/Header.vue";
 import gsInfo from "../components/gettingstarted/gsInfo";
 
 export default {
   components: {
-    gsHeader,
+    Header,
     gsInfo
   },
   created() {
