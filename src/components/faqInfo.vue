@@ -14,13 +14,13 @@
               <p>{{faq.answer}}</p>
             </v-list-item>
             <v-list-item class="google-font" v-show="faq.link">
-              <p>{{faq.link}}</p>
+              <a :href="faq.link" download>{{faq.link_text}}</a>
             </v-list-item>
             <v-list-item class="google-font" v-show="faq.img">
               <p>{{faq.img}}</p>
             </v-list-item>
             <v-list-item v-show="faq.code">
-              <pre><code>{{faq.code}}</code></pre>
+              <pre><code class="pa-2">{{faq.code}}</code></pre>
             </v-list-item>
           </v-list-item-content>
         </v-list-item>
@@ -34,6 +34,7 @@ import faqs from "@/assets/data/faqs.json";
 export default {
   data: () => ({
     faqs: faqs
-  })
+  }),
+
 };
 </script>

@@ -3,7 +3,8 @@
       {
             "question"  : "How do I know which NIST SP 800-53 Security Controls are addressed using this framework?",
             "answer"    : "NIST SP 800-53 associations are included in all InSpec profiles and output from other security tools processed through Heimdall_tools. See this presentation to learn more!",
-            "link"      : ">>download link<<"
+            "link":           "MITRE_InSpec_Profiles_and_HDF_include_NIST_SP-800-53_Associations.pdf",
+            "link_text":      "Inspec, HDF, and NIST SP 800-53 Security Controls"
       },
       {
             "question"  : "How can I use InSpec tests in my CI/CD pipeline?",
