@@ -9,13 +9,13 @@
       >
         <v-col md="12" lg="10" xs="12" class="py-3 my-0">
           <Header>
-            <h3 slot="title"> Our Training</h3>
+            <h3 slot="title">Our Training</h3>
             <p slot="subtitle">
-              Questions? Please contact
+              Contact us at
               <a
                 style="color:#1565C0;text-decoration: none;"
                 :href="`mailto:${communityData.communityEmail}`"
-              >{{communityData.communityEmail}}</a>
+              >{{communityData.communityEmail}}</a> to sign up for instructor-led training. See below for dates and times!
             </p>
           </Header>
         </v-col>
@@ -54,9 +54,8 @@ export default {
     } else {
       metaThemeColor.setAttribute("content", "#0277bd");
     }
-  },
-
-}
+  }
+};
 </script>
 
 
