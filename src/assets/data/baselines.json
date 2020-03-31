@@ -50,6 +50,13 @@
       "category": ["Operating Systems"]
     },
     {
+      "shortName": "Windows 10 STIG",
+      "longName": "Microsoft Windows 10 STIG v1r19",
+      "link": "https://github.com/mitre/microsoft-windows-10-stig-baseline",
+      "svg": "inspec-blue-back-border",
+      "category": ["Operating Systems"]
+    },
+    {
       "shortName": "RSA Archer 6 SCG",
       "longName": "RSA Archer 6 Security Configuration Guide",
       "link": "https://github.com/mitre/rsa-archer-6-security-configuration-guide-baseline",
