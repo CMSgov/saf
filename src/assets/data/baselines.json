@@ -17,7 +17,7 @@
     {
       "shortName": "Red Hat CVE Scan",
       "longName": "Red Hat CVE Vulnerability Scan",
-      "link": "https://github.cms.gov/ISPG/rhel_cve_vulnerability_scan_baseline",
+      "link": "https://github.com/CMSgov/rhel_cve_vulnerability_scan_baseline",
       "svg": "inspec-blue-back-border",
       "category": ["Operating Systems"]
     },
