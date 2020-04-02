@@ -90,6 +90,13 @@
       "link": "https://github.com/mitre/chef-stig-mongodb-enterprise-advanced-hardening",
       "svg": "chef-2",
       "category": ["Databases"]
+    },
+    {
+      "shortName": "DRAFT: VMWARE VCSA 6.7 STIG",
+      "longName": "VMware vCenter Server Appliance 6.7 STIG",
+      "link": "https://github.com/mitre/chef-stig-mongodb-enterprise-advanced-hardening",
+      "svg": "ansible",
+      "category": ["Platform"]
     }
   ]
 }
