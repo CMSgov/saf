@@ -1,37 +1,27 @@
 <template>
   <v-container fluid>
-    <v-expansion-panels tile>
-      <v-expansion-panel v-for="category in faqs" :key="category">
+    <v-expansion-panels accordion tile v-model="panel" multiple flat>
+      <v-expansion-panel v-for="faq in faqs" :key="faq">
         <v-expansion-panel-header
           class="google-font"
           style="color: #1a73e8; font-weight: 200; font-size:120% "
-        >{{category.category}}</v-expansion-panel-header>
-        <v-expansion-panel-content class="mb-2">{{category.desc}}
-        <v-expansion-panels accordion tile>
-          <v-expansion-panel v-for="faq in category.questions" :key="faq">
-            <v-expansion-panel-header
-              class="google-font"
-              style="color: #1a73e8; font-weight: 200; font-size:120% "
-            >{{faq.question}}</v-expansion-panel-header>
-            <v-expansion-panel-content>{{faq.answer}}</v-expansion-panel-content>
-            <v-expansion-panel-content v-if="faq.links">
-              <div v-for="link in faq.links" :key="link">
-                <a
-                  :href="link.download_link ? link.download_link : link.link"
-                  target="_blank"
-                  :download="link.download_link"
-                >{{link.name}}</a>
-              </div>
-            </v-expansion-panel-content>
-            <v-expansion-panel-content v-if="faq.code" class="hidden-sm-and-down">
-              <v-row>
-                <v-col xs="3">
-                  <code class="pa-2" v-if="faq.code">{{faq.code}}</code>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-content>
-          </v-expansion-panel>
-        </v-expansion-panels>
+        >{{faq.question}}</v-expansion-panel-header>
+        <v-expansion-panel-content>{{faq.answer}}</v-expansion-panel-content>
+        <v-expansion-panel-content v-if="faq.links">
+          <div v-for="link in faq.links" :key="link">
+            <a
+              :href="link.download_link ? link.download_link : link.link"
+              target="_blank"
+              :download="link.download_link"
+            >{{link.name}}</a>
+          </div>
+        </v-expansion-panel-content>
+        <v-expansion-panel-content v-if="faq.code" class="hidden-sm-and-down">
+          <v-row>
+            <v-col xs="3">
+              <code class="pa-2" v-if="faq.code">{{faq.code}}</code>
+            </v-col>
+          </v-row>
         </v-expansion-panel-content>
       </v-expansion-panel>
     </v-expansion-panels>
@@ -65,7 +55,8 @@
 import faqs from "@/assets/data/faqs.json";
 export default {
   data: () => ({
-    faqs: faqs.faqs
+    faqs: faqs.faqs,
+    panel: [0, 1],
   })
 };
 </script>

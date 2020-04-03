@@ -21,7 +21,7 @@
           target="_blank"
         >InSpec Advanced Developer Course</a>
       </span>
-      - In depth explaination of some of the higher functionalities provided by InSpec
+      - In depth explanation of some of the higher functionalities provided by InSpec
     </p>
 
     <br />
