@@ -160,6 +160,16 @@ const router = new Router({
       }
     },    
     {
+      path: "/faq",
+      name: "faq",
+      component: () => import("@/views/Faq.vue"),
+      meta: {
+        title: `FAQs | ${communityData.communityName}`,
+        color: "#0277bd",
+        requiresAuth: false
+      }
+    },  
+    {
       path:'/admin/dashboard/events',
       name:"admin-events",
       component:()=> import('@/views/Admin/Events'),
