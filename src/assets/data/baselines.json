@@ -1,242 +1,249 @@
 {
   "baselines": [
     {
-      "shortName": "Red Hat 6 STIG",
-      "longName": "Red Hat 6 STIG",
-      "link": "https://github.com/mitre/red-hat-enterprise-linux-6-stig-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Operating Systems"]
-    },
-    {
-      "shortName": "Red Hat 7 STIG",
-      "longName": "Red Hat 7 STIG",
-      "link": " https://github.com/simp/inspec-profile-disa_stig-el7",
-      "svg": "inspec-blue-back-border",
-      "category": ["Operating Systems"]
-    },
-    {
-      "shortName": "Red Hat CVE Scan",
-      "longName": "Red Hat CVE Vulnerability Scan",
-      "link": "https://github.com/CMSgov/rhel_cve_vulnerability_scan_baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Operating Systems"]
-    },
-    {
-      "shortName": "Windows 2012 STIG",
-      "longName": "Microsoft Windows 2012r2 Member Server STIG",
-      "link": "https://github.com/mitre/microsoft-windows-2012r2-memberserver-stig-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Operating Systems"]
-    },
-    {
-      "shortName": "Windows 2016 STIG",
-      "longName": "Microsoft Windows Server 2016 STIG",
-      "link": "https://github.com/mitre/microsoft-windows-server-2016-stig-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Operating Systems"]
-    },
-    {
-      "shortName": "Docker CE CIS",
-      "longName": "Docker CE CIS",
-      "link": "https://github.com/mitre/docker-ce-cis-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Operating Systems"]
-    },
-    {
-      "shortName": "Ubuntu 16.04 STIG",
-      "longName": "Canonical Ubuntu 16.04 STIG",
-      "link": "https://github.com/mitre/canonical-ubuntu-16.04-lts-stig-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Operating Systems"]
-    },
-    {
-      "shortName": "Windows 10 STIG",
-      "longName": "Microsoft Windows 10 STIG v1r19",
-      "link": "https://github.com/mitre/microsoft-windows-10-stig-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Operating Systems"]
-    },
-    {
-      "shortName": "RSA Archer 6 SCG",
-      "longName": "RSA Archer 6 Security Configuration Guide",
-      "link": "https://github.com/mitre/rsa-archer-6-security-configuration-guide-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Application Logic"]
-    },
-    {
-      "shortName": "Red Hat Jboss 6.3 STIG",
-      "longName": "Red Hat Jboss Enterprise Application Server 6.3 STIG",
-      "link": "https://github.com/mitre/red-hat-jboss-eap-6.3-stig-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Application Logic"]
-    },
-    {
-      "shortName": "JRE 7 STIG",
-      "longName": "Oracle Java Runtime Environment 7 Unix STIG",
-      "link": "https://github.com/mitre/oracle-java-runtime-environment-7-unix-stig-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Application Logic"]
-    },
-    {
-      "shortName": "JRE 8 STIG",
-      "longName": "Oracle Java Runtime Environment 8 Unix STIG",
-      "link": "https://github.com/mitre/oracle-java-runtime-environment-8-unix-stig-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Application Logic"]
-    },
-    {
-      "shortName": "IIS 8.5 Server STIG",
-      "longName": "Microsoft IIS 8.5 Server STIG",
-      "link": "https://github.com/mitre/microsoft-iis-8.5-server-stig-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Web Servers"]
-    },
-    {
-      "shortName": "IIS 8.5 Site STIG",
-      "longName": "Microsoft IIS 8.5 Site STIG",
-      "link": "https://github.com/mitre/microsoft-iis-8.5-site-stig-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Web Servers"]
-    },
-    {
-      "shortName": "NGINX",
-      "longName": "NGINX",
-      "link": "https://github.com/mitre/nginx-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Web Servers"]
-    },
-    {
-      "shortName": "Oracle MySQL 5.7 CIS",
-      "longName": "Oracle MySQL Enterprise Edition 5.7 CIS",
-      "link": "https://github.com/mitre/oracle-mysql-ee-5.7-cis-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Databases"]
-    },
-    {
-      "shortName": "AWS RDS MySQL 5.7 CIS",
-      "longName": "AWS RDS MySQL Enterprise Edition 5.7 CIS",
-      "link": "https://github.com/mitre/aws-rds-oracle-mysql-ee-5.7-cis-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Databases"]
-    },
-    {
-      "shortName": "PostgreSQL 9.x STIG",
-      "longName": "Crunchy Data PostgreSQL 9.x STIG",
-      "link": "https://github.com/CrunchyData/pgstigcheck-inspec",
-      "svg": "inspec-blue-back-border",
-      "category": ["Databases"]
-    },
-    {
-      "shortName": "AWS RDS PostgreSQL 9.x STIG",
-      "longName": "AWS RDS Crunchy Data PostgreSQL 9.x STIG",
-      "link": "https://github.com/mitre/aws-rds-crunchy-data-postgresql-9-stig-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Databases"]
-    },
-    {
-      "shortName": "MSQL 2014 Database STIG",
-      "longName": "Microsoft SQL Server 2014 Database STIG",
-      "link": "https://github.com/mitre/microsoft-sql-server-2014-database-stig-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Databases"]
-    },
-    {
-      "shortName": "MSQL 2014 Instance STIG",
-      "longName": "Microsoft SQL Server 2014 Database STIG",
-      "link": "https://github.com/mitre/microsoft-sql-server-2014-instance-stig-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Databases"]
-    },
-    {
-      "shortName": "AWS MSQL 2014 STIG",
-      "longName": "AWS RDS Microsoft SQL 2014 Server STIG Instance",
-      "link": "https://github.com/mitre/aws-rds-microsoft-sql-server-2014-instance-stig-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Databases"]
-    },
-    {
-      "shortName": "Oracle Database 12c STIG",
-      "longName": "Oracle Database 12c STIG",
-      "link": "https://github.com/mitre/oracle-database-12c-stig-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Databases"]
-    },
-    {
-      "shortName": "MongoDB STIG",
-      "longName": "MongoDB STIG",
-      "link": "https://github.com/mitre/mongodb-enterprise-advanced-3-stig-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Databases"]
-    },
-    {
-      "shortName": "AWS CIS",
-      "longName": "AWS CIS Foundations",
-      "link": "https://github.com/mitre/cis-aws-foundations-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Cloud Service Providers"]
-    },
-    {
       "shortName": "AWS S3",
-      "longName": "AWS S3",
-      "link": "https://github.com/mitre/aws-s3-baseline",
-      "svg": "inspec-blue-back-border",
+      "longName": "",
+      "link": "https://github.com/CMSgov/aws-s3-baseline",
+      "svg": "inspec-white-border",
       "category": ["Cloud Service Providers"]
     },
     {
-      "shortName": "AWS RDS CIS",
-      "longName": "AWS RDS Infrastructure CIS",
-      "link": "https://github.com/mitre/aws-rds-infrastructure-cis-baseline",
-      "svg": "inspec-blue-back-border",
+      "shortName": "ARS 3.1 High AWS RDS MSQL Server Instance 2014 STIG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-high-aws-rds-microsoft-sql-server-2014-instance-stig-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Databases"]
+    },
+    {
+      "shortName": "ARS 3.1 High AWS RDS Oracle Database 12c STIG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-high-aws-rds-oracle-database-12c-stig-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Databases"]
+    },
+    {
+      "shortName": "ARS 3.1 High Ubuntu 16.04 STIG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-high-canonical-ubuntu-16.04-lts-stig-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Operating Systems"]
+    },
+    {
+      "shortName": "ARS 3.1 High IIS 8.5 Server STIG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-iis-8.5-server-stig-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Web Servers"]
+    },
+    {
+      "shortName": "ARS 3.1 High IIS 8.5 Site STIG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-iis-8.5-site-stig-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Web Servers"]
+    },
+    {
+      "shortName": "ARS 3.1 High MSQL Server 2014 Database STIG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-sql-server-2014-database-stig-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Databases"]
+    },
+    {
+      "shortName": "ARS 3.1 High MSQL Server 2014 Instance STIG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Databases"]
+    },
+    {
+      "shortName": "ARS 3.1 High Windows 2012 STIG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-windows-2012r2-member-server-stig-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Operating Systems"]
+    },
+    {
+      "shortName": "ARS 3.1 High Windows 2016 STIG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-windows-server-2016-stig-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Operating Systems"]
+    },
+    {
+      "shortName": "ARS 3.1 High RSA Archer 6 SCG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-high-rsa-archer-6-security-configuration-guide-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Application Logic"]
+    },
+    {
+      "shortName": "ARS 3.1 Low AWS RDS Oracle Database 12c STIG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-low-aws-rds-oracle-database-12c-stig-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Databases"]
+    },
+    {
+      "shortName": "ARS 3.1 Low Ubuntu 16.04 STIG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-low-canonical-ubuntu-16.04-lts-stig-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Operating Systems"]
+    },
+    {
+      "shortName": "ARS 3.1 Low Windows 2016 STIG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-low-microsoft-windows-server-2016-stig-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Operating Systems"]
+    },
+    {
+      "shortName": "ARS 3.1 Moderate AWS Foundations CIS ",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-aws-foundations-cis-overlay",
+      "svg": "inspec-white-border",
       "category": ["Cloud Service Providers"]
     },
     {
-      "shortName": "GCP PCI-DSS 3.2.1",
-      "longName": "Google Cloud Platform PCI-DSS 3.2.1",
-      "link": "https://github.com/GoogleCloudPlatform/inspec-gcp-pci-profile",
-      "svg": "inspec-blue-back-border",
+      "shortName": "ARS 3.1 Moderate AWS RDS PostgreSQL 9.x STIG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-aws-rds-crunchy-data-postgresql-9-stig-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Databases"]
+    },
+    {
+      "shortName": "ARS 3.1 Moderate AWS Infrastructure CIS ",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-aws-rds-infrastructure-cis-overlay",
+      "svg": "inspec-white-border",
       "category": ["Cloud Service Providers"]
     },
     {
-      "shortName": "GCP CIS Benchmark",
-      "longName": "Google Cloud Platform CIS Benchmark",
-      "link": "https://github.com/GoogleCloudPlatform/inspec-gcp-cis-benchmark",
-      "svg": "inspec-blue-back-border",
-      "category": ["Cloud Service Providers"]
+      "shortName": "ARS 3.1 Moderate AWS RDS Oracle Database 12c STIG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-aws-rds-oracle-database-12c-stig-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Databases"]
     },
     {
-      "shortName": "DRAFT: VMWare ESXI 6.7 STIG",
-      "longName": "DRAFT: VMWare ESXI 6.7 STIG",
-      "link": "https://github.com/vmware/dod-compliance-and-automation/tree/master/vsphere/6.7/vsphere/inspec/vmware-esxi-6.7-stig-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Platform"]
+      "shortName": "ARS 3.1 Moderate AWS RDS Oracle MySQL EE 5.7 CIS",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-aws-rds-oracle-mysql-ee-5.7-cis-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Databases"]
     },
     {
-      "shortName": "DRAFT: VMWare vSphere VM 6.7 STIG",
-      "longName": "DRAFT: VMware vSphere Virtual Machines version 6.7 STIG",
-      "link": "    https://github.com/vmware/dod-compliance-and-automation/tree/master/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Platform"]
+      "shortName": "ARS 3.1 Moderate Ubuntu 16.04 STIG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-canonical-ubuntu-16.04-lts-stig-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Operating Systems"]
     },
     {
-      "shortName": "VMWare vSphere VM 6.5 STIG",
-      "longName": "VMware vSphere Virtual Machines version 6.5 STIG",
-      "link": "https://github.com/kclinden/vmware-vsphere-65-virtual-machine-stig-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Platform"]
+      "shortName": "ARS 3.1 Moderate PostgreSQL 9.x STIG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-crunchy-data-postgresql-9-stig-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Databases"]
     },
     {
-      "shortName": "VMWare ESXI 6.5 STIG",
-      "longName": "VMWare ESXI 6.5 STIG",
-      "link": "https://github.com/kclinden/vmware-esxi-6.5-stig-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Platform"]
+      "shortName": "ARS 3.1 Moderate Docker CE CIS",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-docker-ce-cis-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Operating Systems"]
     },
     {
-      "shortName": "DRAFT: VMWare VCSA 6.7 STIG",
-      "longName": "DRAFT: VMware vCenter Service Appliance version 6.7",
-      "link": "https://github.com/vmware/dod-compliance-and-automation/tree/master/vsphere/6.7/vcsa/inspec/vmware-vcsa-6.7-stig-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": ["Platform"]
+      "shortName": "ARS 3.1 Moderate Windows 2016 STIG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-microsoft-windows-server-2016-stig-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Operating Systems"]
+    },
+    {
+      "shortName": "ARS 3.1 Moderate MongoDB STIG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-mongodb-enterprise-advanced-3-stig-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Databases"]
+    },
+    {
+      "shortName": "ARS 3.1 Moderate NGINX",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-nginx-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Databases"]
+    },
+    {
+      "shortName": "ARS 3.1 Moderate Oracle Database 12c STIG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-oracle-database-12c-stig-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Databases"]
+    },
+    {
+      "shortName": "ARS 3.1 Moderate JRE 7 STIG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-oracle-java-runtime-environment-7-unix-stig-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Application Logic"]
+    },
+    {
+      "shortName": "ARS 3.1 Moderate JRE 8 STIG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-oracle-java-runtime-environment-8-unix-stig-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Application Logic"]
+    },
+    {
+      "shortName": "ARS 3.1 Moderate Oracle MySQL EE 5.7 CIS",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-oracle-mysql-ee-5.7-cis-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Databases"]
+    },
+    {
+      "shortName": "ARS 3.1 Moderate Red Hat 6 STIG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-red-hat-enterprise-linux-6-stig-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Operating Systems"]
+    },
+    {
+      "shortName": "ARS 3.1 Moderate Red Hat 7 STIG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-red-hat-enterprise-linux-7-stig-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Operating Systems"]
+    },
+    {
+      "shortName": "ARS 3.1 Moderate Red Hat Jboss 6.3 STIG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-red-hat-jboss-eap-6.3-stig-overlay",
+      "svg": "inspec-white-border",
+      "category": ["Application Logic"]
+    },
+    {
+      "shortName": "AWS Linux 2 CIS",
+      "longName": "",
+      "link": "https://github.com/CMSgov/CMS-AWS-West-AWS-Linux2-CIS-Benchmark",
+      "svg": "inspec-white-border",
+      "category": ["Operating Systems"]
+    },
+    {
+      "shortName": "EL7 STIG",
+      "longName": "",
+      "link": "https://github.com/CMSgov/inspec-profile-disa_stig-el7",
+      "svg": "inspec-white-border",
+      "category": ["Operating Systems"]
+    },
+    {
+      "shortName": "Red Hat CVE Vulnerability Scan",
+      "longName": "",
+      "link": "https://github.com/CMSgov/rhel_cve_vulnerability_scan_baseline",
+      "svg": "inspec-white-border",
+      "category": ["Operating Systems"]
     }
   ]
 }

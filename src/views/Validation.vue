@@ -18,7 +18,7 @@
           <div class="ma-2 pa-2 google-font">
             <p>
               These open-source community-based InSpec profiles validate the security of
-              common system components. MITRE is helping to provide stewardship over
+              common system components. CMS is helping to provide stewardship over
               these profiles, hosted here and at other community vendor sites. If you
               are interested in new profiles, please contact us at
               <a

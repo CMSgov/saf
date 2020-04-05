@@ -1,5 +1,5 @@
 export const configData = {
-  MeetupURLName: "MITRE-Tech-Talks", // Example GDG-Jalandhar  CHAPTER_URL_NAME
+  MeetupURLName: "CMS-Tech-Talks", // Example GDG-Jalandhar  CHAPTER_URL_NAME
   MediumBlogPublicationUsername: "mitre-tech-talks"
 };
 

@@ -12,7 +12,7 @@
                         height="300px"
                         style="border-top-right-radius:8px;border-top-left-radius:8px;"
                     >
-                        <v-card-title class="align-end google-font fill-height" style="color:white">About MITRE SAF</v-card-title>
+                        <v-card-title class="align-end google-font fill-height" style="color:white">About CMS SAF</v-card-title>
                         <template v-slot:placeholder>
                             <v-row
                             class="fill-height ma-0"
@@ -24,7 +24,7 @@
                         </template>
           </v-img>-->
           <div class="pa-5">
-            <p class="google-font mb-0" style="font-size:150%">About MITRE SAF</p>
+            <p class="google-font mb-0" style="font-size:150%">About CMS SAF</p>
             <p
               class="google-font mt-0"
               style="font-size:95%"
@@ -59,7 +59,7 @@
 
       <v-col cols="12" md="4" lg="4" sm="8" class="pa-0 float-right">
         <div class="ma-1 pa-3" style="border:1px solid #e0e0e0;border-radius:8px">
-          <!-- <p class="google-font mb-0" style="font-size:150%">About MITRE SAF</p> -->
+          <!-- <p class="google-font mb-0" style="font-size:150%">About CMS SAF</p> -->
           <p
             class="google-font mt-0"
             style="font-size:95%"

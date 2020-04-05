@@ -1,69 +1,44 @@
 {
   "Sponsors": [
     {
-      "name": "National Geospatial-Intelligence Agency",
-      "link": "https://www.nga.mil/",
-      "img": "NGIA.png"
-    },
-    {
-      "name": "Department of Defense",
-      "link": "https://www.defense.gov/",
-      "img": "DOD.png"
-    },
-    {
-      "name": "United States Army",
-      "link": "https://home.army.mil/imcom/index.php",
-      "img": "Army.png"
-    },
-    {
-      "name": "Defense Information Systems Agnecy",
-      "link": "https://www.disa.mil/",
-      "img": "DISA.png"
-    },
-    {
-      "name": "Department of Health & Human Services",
-      "link": "https://www.hhs.gov/",
-      "img": "DHHS.png"
-    },
-    {
-      "name": "Centers for Medicare & Medicaid Services",
-      "link": "https://www.cms.gov/",
+      "name": "IUSG",
+      "link": "",
       "img": "CMS.png"
     },
     {
-      "name": "Internal Revenue Service",
-      "link": "https://www.irs.gov/",
-      "img": "IRS.png"
+      "name": "BCDA",
+      "link": "",
+      "img": "CMS.png"
     },
     {
-      "name": "National Reconnaissance Office",
-      "link": "https://www.nro.gov/",
-      "img": "NRO.png"
+      "name": "CFACTS",
+      "link": "",
+      "img": "CMS.png"
     },
     {
-      "name": "Department of Homeland Security",
-      "link": "https://www.dhs.gov/",
-      "img": "DHS.png"
+      "name": "T-MSIS",
+      "link": "",
+      "img": "CMS.png"
     },
     {
-      "name": "United States Army INSCOM",
-      "link": "https://www.army.mil/inscom",
-      "img": "Shield.png"
+      "name": "IDM",
+      "link": "",
+      "img": "CMS.png"
     },
     {
-      "name": "Department of Veterans Affairs",
-      "link": "https://www.va.gov/",
-      "img": "VA.png"
+      "name": "MACFIN",
+      "link": "",
+      "img": "CMS.png"
     },
     {
-      "name": "Federal Aviation Administration",
-      "link": "https://www.faa.gov/",
-      "img": "FAA.png"
+      "name": "Lewin Group",
+      "link": "",
+      "img": "CMS.png"
     },
     {
-      "name": "Center for Disease Control and Prevention",
-      "link": "https://www.cdc.gov/",
-      "img": "CDC.png"
+      "name": "ACT",
+      "link": "",
+      "img": "CMS.png"
     }
   ]
 }

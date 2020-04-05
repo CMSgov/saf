@@ -17,7 +17,7 @@
           "desc": "Align with security baselines using our Ansible, Chef, and Terraform content",
           "icon": "mdi-security",
           "svg": "",
-          "link": "hardening",
+          "link": "",
           "tools": ""
         },
         {

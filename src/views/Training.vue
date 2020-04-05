@@ -9,23 +9,29 @@
       >
         <v-col md="12" lg="10" xs="12" class="py-3 my-0">
           <Header>
-            <h3 slot="title">Our Training</h3>
-            <p slot="subtitle">
-              Contact us at
-              <a
-                style="color:#1565C0;text-decoration: none;"
-                :href="`mailto:${communityData.communityEmail}`"
-              >{{communityData.communityEmail}}</a> to sign up for instructor-led training. See below for dates and times!
-            </p>
+            <h3 slot="title">Training</h3>
           </Header>
         </v-col>
       </v-row>
     </v-container>
-
+    <br />
     <v-container fluid class="pa-0 py-2">
       <v-row justify="center" align="center">
         <v-col md="12" lg="10" xs="12" class="py-0">
-          <pastTraining />
+          <v-container fluid>
+          <p
+            class="google-font"
+            style="font-size:150%;color: #1a73e8;"
+          >Partner Training</p>
+          <p class="google-font mb-0" style="font-size:100%">
+            <!-- <pastTraining /> -->
+            Our partners at MITRE offer regular InSpec training courses. You can find sign-up information, as well as recordings of previous courses, on the
+            <a
+              href="https://saf.mitre.org/#/training"
+              target="_blank"
+            >MITRE Security Automation Framework website.</a>
+          </p>
+          </v-container>
         </v-col>
       </v-row>
     </v-container>
@@ -33,7 +39,7 @@
 </template>
 
 <script>
-import pastTraining from "../components/training/traininginfo";
+// import pastTraining from "../components/training/traininginfo";
 import communityData from "@/assets/data/communityData.json";
 import Header from "@/components/core/Header.vue";
 
@@ -44,8 +50,8 @@ export default {
     };
   },
   components: {
-    Header,
-    pastTraining
+    Header
+    // pastTraining
   },
   created() {
     let metaThemeColor = document.querySelector("meta[name=theme-color]");

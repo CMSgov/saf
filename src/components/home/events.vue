@@ -15,7 +15,7 @@
         <p
           class="google-font mt-0"
           style="font-size:95%"
-        >MITRE is proud to offer sessions covering topics that span from the technical to the visionary. Join us to discover what technology can enable: how product innovation, open source, machine learning, and atificial intelligence can propel enterprises forward and solve the big problems that impact all of us.</p>
+        >CMS is proud to offer sessions covering topics that span from the technical to the visionary. Join us to discover what technology can enable: how product innovation, open source, machine learning, and atificial intelligence can propel enterprises forward and solve the big problems that impact all of us.</p>
         <!-- <router-link
           to="/events"
           text

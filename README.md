@@ -1,10 +1,10 @@
-# MITRE SAF
+# CMS SAF
 
 [![MadeWithVueJs.com shield](https://madewithvuejs.com/storage/repo-shields/1444-shield.svg)](https://madewithvuejs.com/p/aura/shield-link)
 
  <!-- [![Build Status](https://travis-ci.org/gdg-x/aura.svg?branch=master)](https://travis-ci.org/gdg-x/aura-->
 
-MITRE Security Automation Framework Website. <br>
+CMS Security Automation Framework Website. <br>
 [Demo](https://mitre-saf.firebaseapp.com/) <br>
 Version: 1.0.0
 
@@ -12,7 +12,7 @@ Version: 1.0.0
 
 ## Overview
 
-The MITRE Security Automation Framework (SAF) brings together open-source, accessible applications, techniques, libraries, and tools developed by MITRE and the community to streamline security automation for Systems and in DevOps pipelines.
+The CMS Security Automation Framework (SAF) brings together open-source, accessible applications, techniques, libraries, and tools developed by CMS and the community to streamline security automation for Systems and in DevOps pipelines.
 
 The template is created by [GDG Jalandhar](https://meetup.com/GDG-Jalandhar/).
 

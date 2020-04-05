@@ -4,32 +4,22 @@
       <v-col cols="12" md="12" lg="12" sm="12" class="mb-0">
         <p class="google-font mb-1" style="font-weight: 350;font-size:200%">
           <b>
-            The
-            <span style="color: #1a73e8;">SAF</span>
+            The CMS 
+            <span style="color: #1a73e8;">DevOps</span>
             Community
           </b>
         </p>
-        <p
-          class="google-font mt-1 mb-0"
-          style="font-size:120%"
-        >A very big thank you to our community members for their continued partnership.</p>
-        <p class="google-font mt-0 mb-0" style="font-size:120%">
-          If you’re interested in being showcased here, please contact
-          <a
-            style="color:#1565C0;text-decoration: none;"
-            :href="`mailto:${communityData.communityEmail}`"
-          >{{communityData.communityEmail}}</a> to discuss opportunities.
-        </p>
+        
       </v-col>
     </v-row>
 
     <v-container fluid>
-      <v-row justify="space-between" v-for="(itemp,i) in partnerData" :key="i" :class="color_mode">
-        <v-col cols="12" md="12" lg="12" sm="12" class="mx-1 mt-5" v-if="itemp.length>0">
+      <v-row justify="center" align="center" v-for="(itemp,i) in partnerData" :key="i" :class="color_mode">
+        <!-- <v-col cols="12" md="12" lg="12" sm="12" class="mx-1 mt-5" v-if="itemp.length>0">
           <p class="google-font mb-0" style="font-size:130%">{{i}}</p>
-        </v-col>
+        </v-col> -->
         <v-slide-group class="pa-2" show-arrows>
-          <v-col v-for="(item,j) in itemp" :key="j" class>
+          <v-col v-for="(item,j) in itemp" :key="j" >
               <!--:color="active ? 'primary' : '#574B75'"         // This was never configured properly - what is "active"? -->
             <v-card
               class="ma-4"
@@ -38,6 +28,7 @@
               width="200"
               v-bind:href="(itemp.length > 0 ) ? item.link : null"
               target="_blank"
+              text-center
             >
               <v-tooltip bottom>
                 <template v-slot:activator="{ on }">
@@ -49,9 +40,10 @@
                     width="200"
                     contain
                   ></v-img>
-                  <v-card-subtitle class="google-font mb-0">{{item.name}}</v-card-subtitle>
+                  <!-- <v-card-subtitle class="google-font mb-0 justify-center">{{item.name}}</v-card-subtitle> -->
                 </template>
               </v-tooltip>
+              <v-card-title class="justify-center align-center">{{item.name}}</v-card-title>
             </v-card>
           </v-col>
         </v-slide-group>
@@ -60,7 +52,7 @@
 
     <br />
 
-    <v-container fluid>
+    <!-- <v-container fluid>
       <v-row
         justify="space-between"
         v-for="(itemp,i) in commercialpart"
@@ -72,7 +64,7 @@
         </v-col>
         <v-slide-group class="pa-2" show-arrows>
           <v-col v-for="(item,j) in itemp" :key="j" class>
-              <!--:color="active ? 'primary' : '#574B75'"-->
+
             <v-card
               class="ma-4"
               elevation="4"
@@ -97,7 +89,7 @@
           </v-col>
         </v-slide-group>
       </v-row>
-    </v-container>
+    </v-container> -->
   </v-container>
 </template>
 

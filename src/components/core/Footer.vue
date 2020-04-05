@@ -74,12 +74,12 @@
             <p
               class="google-font pl-0 ml-0 mr-3"
               :style="this.$vuetify.breakpoint.smAndDown ? '' : 'font-size:200%'"
-            >MITRE SAF</p>
+            >CMS SAF</p>
             <v-spacer />
-            <p
+            <!-- <p
               class="google-font pl-0"
               :style="this.$vuetify.breakpoint.smAndDown ? 'font-size:75%' : ''"
-            >The MITRE Corporation © 2020</p>
+            >CMS © 2020</p> -->
 
             <!-- <v-btn
               v-for="(item,i) in FooterData.FooterEndSession"

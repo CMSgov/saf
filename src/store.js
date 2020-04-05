@@ -29,16 +29,16 @@ export default new Vuex.Store({
           showBottomNav: true
         }
       },
-      {
-        text: "Hardening",
-        to: "/hardening",
-        icon: "mdi-security",
-        meta: {
-          showToolbar: true,
-          enabled: true,
-          showBottomNav: true
-        }
-      },
+      // {
+      //   text: "Hardening",
+      //   to: "/hardening",
+      //   icon: "mdi-security",
+      //   meta: {
+      //     showToolbar: true,
+      //     enabled: true,
+      //     showBottomNav: true
+      //   }
+      // },
       {
         text: "Visualization",
         to: "/visualization",
