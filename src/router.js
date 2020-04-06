@@ -49,16 +49,16 @@ const router = new Router({
         requiresAuth: false
       }
     },
-    {
-      path: "/team",
-      name: "team",
-      component: () => import("./views/Team.vue"),
-      meta: {
-        title: "Team | " + communityData.communityName,
-        color: "#0277bd",
-        requiresAuth: false
-      }
-    },
+    // {
+    //   path: "/team",
+    //   name: "team",
+    //   component: () => import("./views/Team.vue"),
+    //   meta: {
+    //     title: "Team | " + communityData.communityName,
+    //     color: "#0277bd",
+    //     requiresAuth: false
+    //   }
+    // },
     {
       path: "/contact",
       name: "contact",

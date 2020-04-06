@@ -13,14 +13,6 @@
           "tools": ""
         },
         {
-          "name": "Hardening",
-          "desc": "Align with security baselines using our Ansible, Chef, and Terraform content",
-          "icon": "mdi-security",
-          "svg": "",
-          "link": "",
-          "tools": ""
-        },
-        {
           "name": "Visualization",
           "desc": "Dive deep into test results visually via rollups, charts, and timelines",
           "icon": "mdi-image-search",
