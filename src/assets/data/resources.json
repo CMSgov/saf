@@ -1,8 +1,19 @@
 {
   "items": [
     {
+      "name": "What is DevSecOps?",
+      "desc": "DevSecOps is a software development framework that stresses automation and rapid user feedback to deliver quality, secure software quickly. A DevSecOps pipline is a collection of tools and practices that can automate as much of development as possible, from testing to change management to deployment.",
+      "values" : [
+        {
+          "name" : "DevSecOps Practices Checklist",
+          "desc" : "See here for an overview of what makes a good DevSecOps pipeline",
+          "download_link" : "DevSecOps Checklist 12142018.pdf"
+        }
+      ]
+    },
+    {
       "name": "InSpec",
-      "desc": "InSpec is a free and open-source Chef framework for testing and auditing applications and infrastructure. InSpec is designed to integrate very easily into existing DevOps pipelines. CMS has partnered with the open-source community to create a growing number of baseline testing profiles to make it easy for developers to jump right in.",
+      "desc": "InSpec is a free and open-source Chef framework for testing and auditing applications and infrastructure. InSpec is designed to integrate very easily into existing DevSecOps pipelines. CMS has partnered with the open-source community to create a growing number of baseline testing profiles to make it easy for developers to jump right in.",
       "values": [
         {
           "name": "InSpec Documentation",
@@ -36,6 +47,7 @@
         }
       ]
     }
+    
   ],
   "videos": [
     {

@@ -1,20 +1,21 @@
 <template>
   <v-container fluid>
       <br>
-    <p class="google-font mb-0" style="font-size:150%;color: #1a73e8;">InSpec</p>
+    
       <v-list two-line>
         <template v-for="item in resources.items">
           <v-list-item :key="item.name">
             <v-list-item-content>
-              <!-- <v-list-item-title style="font-size:150% ma-2">
+              <v-list-item-title  class="google-font mb-0" style="font-size:150%;color: #1a73e8;">
               <b>{{item.name}}</b>
-              </v-list-item-title>-->
+              </v-list-item-title>
               <v-list-item class="google-font mt-0 mb-0">{{item.desc}}</v-list-item>
               <v-list-item v-for="entry in item.values" :key="entry.name">
                 <div>
                   <li>
                     <span>
-                      <a :href="entry.link" target="_blank">{{entry.name}}</a>
+                      <a v-if="entry.link" :href="entry.link" target="_blank">{{entry.name}}</a>
+                      <a v-if="entry.download_link" :href="entry.download_link" target="_blank" download>{{entry.name}}</a>
                       <span v-show="entry.desc"> -- {{entry.desc}}</span>
                     </span>
                   </li>
