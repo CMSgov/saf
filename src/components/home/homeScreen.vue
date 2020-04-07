@@ -25,6 +25,7 @@
         </p>
         <!-- <p class="google-font mt-0 mb-0" style="font-size:150%">{{communityData.community}}</p> -->
         <p class="google-font" style="font-size:100%">{{communityData.communityShortDescription}}</p>
+        <p class="google-font" style="font-size:100%">{{communityData.communityLongDec}}</p>
         <!-- <p class="google-font" style="font-size:100%;color:#9e9e9e">
           <span v-for="(item,i) in communityData.communityHashTags" :key="i">#{{item}} &nbsp;</span>
         </p>-->
