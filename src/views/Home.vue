@@ -18,7 +18,7 @@
           :class="this.$vuetify.theme.dark == true?'darkModeContainer':'lightModeContainer'"
         >
         
-          <whatwedo :whatwedodata="wwd"/>
+          <whatwedo :whatwedodata="mission" />
         </v-col>
       </v-row>
     </v-container>
@@ -33,7 +33,7 @@
           class="py-0"
           :class="this.$vuetify.theme.dark == true?'darkModeContainer':'lightModeContainer'"
         >
-          <whatwedo />
+          <whatwedo :whatwedodata="wwd"/>
         </v-col>
       </v-row>
     </v-container>
@@ -82,6 +82,7 @@
 import homeStartScreen from "../components/home/homeScreen";
 import whatwedo from "../components/home/whatwedo";
 import whatwedodata from "@/assets/data/whatWeDo.json";
+import missiondata from "@/assets/data/mission.json";
 //import aboutCommunity from "../components/home/aboutCommunity";
 //import events from "../components/home/events";
 //import featureEvents from "../components/home/featureEvents";
@@ -97,7 +98,8 @@ export default {
     partners
   },
   data: () => ({
-    wwd : whatwedodata.whatWeDo
+    wwd : whatwedodata.whatWeDo,
+    mission: missiondata.whatWeDo
   }),
   computed: {
     showTraining() {

@@ -1,5 +1,5 @@
 <template>
-  <v-card outlined class="d-flex flex-column" :to="item.link" flat style="width: 100%">
+  <v-card outlined class="d-flex flex-column" :to="item.link" flat style="width: 100%" >
     <!--<toolBlock v-if="item.tools" :tools="item.tools" />-->
     <v-icon v-if="item.icon" large style="font-size:300%" class="mt-4">{{ item.icon }}</v-icon>
     <img
@@ -9,9 +9,28 @@
       dark
       style="max-width: 32px; max-height: 32px;"
     />
+    <v-img
+      v-else-if="item.graphic"
+      v-on:mouseover="mouseOverCheck = current" 
+      v-on:mouseout="mouseOverCheck = ''" 
+      v-bind:src="mouseOverCheck === current ? require('@/assets/img/gif/' + item.graphic + '.gif') : require('@/assets/img/gif/' + item.graphic_frame + '.png')"
+      v-on="on"
+      class="ma-2"
+
+      max-height="328"
+    />
+    <v-img
+      v-else-if="item.graphic_frame"
+      v-on:mouseover="mouseOverCheck = current" 
+      v-on:mouseout="mouseOverCheck = ''" 
+      v-bind:src="mouseOverCheck === current ? require('@/assets/img/gif/' + item.graphic + '.gif') : require('@/assets/img/gif/' + item.graphic_frame + '.png')"
+      v-on="on"
+      class="ma-2"
+      max-height="328"
+    />
     <v-card-title
       class="google-font mt-2 title align-bottom justify-center break-word"
-    >{{ make_readable(item.name) }}</v-card-title>
+    ><v-icon class="mr-2">{{item.side_icon}}</v-icon>{{ make_readable(item.name) }}</v-card-title>
     <v-spacer />
     <v-card-text class="google-font pa-2">{{ item.desc }}</v-card-text>
     <v-spacer />
@@ -75,6 +94,11 @@
 
 //import toolBlock from "@/components/home/wwdComponents/toolBlock.vue";
 export default {
+  data () {
+    return {
+        mouseOverCheck: ''
+    }
+  },
   props: {
     item: Object
   },
