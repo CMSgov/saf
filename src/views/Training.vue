@@ -22,7 +22,7 @@
             <p class="google-font" style="font-size:150%;color: #1a73e8;">Partner Training</p>
             <p>
               InSpec is an open-source and precise scripting framework to help you test the functionality and security of your systems. Many profiles are available as part of the open source community, with CMS-tailored profiles located on our
-              <router-link to="/validation">Validation</router-link>page. Due to the intuitive nature of the InSpec language, developers and security professionals can spend less time debating about
+              <router-link to="/validation">Validation</router-link> page. Due to the intuitive nature of the InSpec language, developers and security professionals can spend less time debating about
               <i>how</i> to test, and more time solving problems using the
               <a href="https://heimdall-lite.mitre.org/#/" target="_blank">Heimdall Lite</a> or
               <a href="https://github.com/mitre/heimdall" target="_blank">Heimdall Server</a> visualization tools.
