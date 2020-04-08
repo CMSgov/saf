@@ -168,7 +168,17 @@ const router = new Router({
         color: "#0277bd",
         requiresAuth: false
       }
-    },  
+    },
+    // {
+    //   path: '/demo',
+    //   name: 'demo',
+    //   component: () => import("@/views/Demo.vue"),
+    //   meta:{
+    //     title:`Demo | ${communityData.CommunityName}`,
+    //     color:"#0277bd",
+    //     requiresAuth: false,
+    //   }
+    // },
     {
       path:'/admin/dashboard/events',
       name:"admin-events",
@@ -229,6 +239,7 @@ const router = new Router({
         requiresAuth: false,
       }
     },
+    
   ]
 });
 

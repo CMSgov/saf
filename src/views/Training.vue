@@ -6,7 +6,7 @@
         align="center"
         :class="this.$vuetify.theme.dark == true?'grey darken-4':'grey lighten-4'"
         class="py-0 my-0"
-      >
+      > 
         <v-col md="12" lg="10" xs="12" class="py-3 my-0">
           <Header>
             <h3 slot="title">Training</h3>
