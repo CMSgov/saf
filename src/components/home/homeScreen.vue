@@ -16,16 +16,22 @@
         </v-img> 
       </v-col>-->
       <v-col md="12" lg="10" xs="12">
-        <p class="google-font mb-1" style="font-weight: 350;color: #616161;font-size:300%">
-          <b :style="this.$vuetify.theme.dark ? 'color: white' : 'color:#616161'">
-            <span :style="color_mode">Security
-            <span style="color: #1a73e8;">Automation</span>
-            Framework</span>
+        <p class="google-font" style="font-weight: 350;font-size:300%">
+          <b style="color: #1a73e8;">
+              CMS Security Automation Framework
           </b>
         </p>
-        <!-- <p class="google-font mt-0 mb-0" style="font-size:150%">{{communityData.community}}</p> -->
-        <!-- <p class="google-font" style="font-size:100%">{{communityData.communityShortDescription}}</p>
-        <p class="google-font" style="font-size:100%">{{communityData.communityLongDec}}</p> -->
+        <br />
+        <v-text-area class="google-font ma-2 title">{{communityData.communityShortDescription}}</v-text-area>
+        <v-text-area class="">
+          <ul class="title mt-4">
+            <li>The ACT (Adaptive Capabilities Testing) team will accept security testing data from this framework.</li>
+            <li>Developers can harden and run validation security early and often in their environments, using their own orchestration, functional and unit testing systems, to keep security defects as low as possible.</li>
+          </ul>
+        </v-text-area>
+        <!-- <p class="google-font mt-0 mb-0" style="font-size:150%">{{communityData.community}}</p>
+        <p class="google-font" style="font-size:100%">{{communityData.communityShortDescription}}</p>
+        <p class="google-font" style="font-size:100%">{{communityData.communityLongDec}}</p>-->
         <!-- <p class="google-font" style="font-size:100%;color:#9e9e9e">
           <span v-for="(item,i) in communityData.communityHashTags" :key="i">#{{item}} &nbsp;</span>
         </p>-->

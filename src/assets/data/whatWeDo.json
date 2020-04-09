@@ -48,7 +48,7 @@
         {
           "name": "Mature DevSecOps Best Practices",
           "desc": "Train users and managers, publish Best Practices, SOPs, and Checklists",
-          "icon": "mdi-chair-school",
+          "icon": "mdi-checkbox-multiple-marked",
           "side_icon": "",
           "svg": "",
           "link": "",
@@ -69,41 +69,6 @@
       "sectionHeader": "How We Do It",
       "sectionDesc": "Provide open-source, accessible solutions for building security into the DevSecOps pipeline",
       "items": [
-        {
-          "name": "ACT Support",
-          "link": "",
-          "desc": "Aid ISPG ACT team in deploying tools for security assessments",
-          "svg": "",
-          "icon": ""
-        },
-        {
-          "name": "DevOps Pilots and Onboarding",
-          "link": "",
-          "desc": "Engage new CMS DevOps teams to incorporate tools",
-          "svg": "",
-          "icon": ""
-        },
-        {
-          "name": "Training for DevOps Teams",
-          "link": "/training",
-          "desc": "7 classes provided, including DHS staff and contractors 48 CMS contractors trained to develop InSpec profiles",
-          "svg": "",
-          "icon": ""
-        },
-        {
-          "name": "Automated Assessment",
-          "link": "",
-          "desc": "Support automated testing needs for ACT, CCIC, and DevOps Teams",
-          "svg": "",
-          "icon": ""
-        },
-        {
-          "name": "Control Status Reporting",
-          "link": "",
-          "desc": "Expand Heimdall to meet IUSG enterprise-level demands and new DevOps requirements",
-          "svg": "",
-          "icon": ""
-        },
         {
           "name": "Standardizing Security Testing Content",
           "link": "",
@@ -211,6 +176,41 @@
       "sectionHeader": "How We Support It",
       "sectionDesc": "Develop a toolchain to support the above areas of What and How for secure development",
       "items": [
+        {
+          "name": "ACT Support",
+          "link": "",
+          "desc": "Aid ISPG ACT team in deploying tools for security assessments",
+          "svg": "",
+          "icon": ""
+        },
+        {
+          "name": "DevOps Pilots and Onboarding",
+          "link": "",
+          "desc": "Engage new CMS DevOps teams to incorporate tools",
+          "svg": "",
+          "icon": ""
+        },
+        {
+          "name": "Training for DevOps Teams",
+          "link": "/training",
+          "desc": "7 classes provided, including DHS staff and contractors 48 CMS contractors trained to develop InSpec profiles",
+          "svg": "",
+          "icon": ""
+        },
+        {
+          "name": "Automated Assessment",
+          "link": "",
+          "desc": "Support automated testing needs for ACT, CCIC, and DevOps Teams",
+          "svg": "",
+          "icon": ""
+        },
+        {
+          "name": "Control Status Reporting",
+          "link": "",
+          "desc": "Expand Heimdall to meet IUSG enterprise-level demands and new DevOps requirements",
+          "svg": "",
+          "icon": ""
+        },
         {
           "name": "Heimdall Lite",
           "link": "",

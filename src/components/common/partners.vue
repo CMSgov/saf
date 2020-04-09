@@ -2,14 +2,11 @@
   <v-container fluid>
     <v-row align="center" justify="center" class="mb-0">
       <v-col cols="12" md="12" lg="12" sm="12" class="mb-0">
-        <p class="google-font mb-1" style="font-weight: 350;font-size:200%">
+        <p class="google-font mb-1" style="font-weight: 350;color: #1a73e8;font-size:200%">
           <b>
-            The CMS 
-            <span style="color: #1a73e8;">SAF</span>
-            Community
+            The CMS SAF Community
           </b>
         </p>
-        
       </v-col>
     </v-row>
 

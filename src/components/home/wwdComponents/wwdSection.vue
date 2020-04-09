@@ -1,12 +1,12 @@
 <template>
   <v-container fluid>
-    <v-row align="center" justify="center">
+    <v-row align="center" justify="center" v-if="topic.sectionHeader">
       <p class="google-font ma-4 tool-header">{{ topic.sectionHeader }}</p>
     </v-row>
-    <v-row align="center" justify="center">
+    <v-row align="center" justify="center" v-if="topic.sectionDesc">
       <p class="google-font mb-4" style="font-size:95%">{{ topic.sectionDesc }}</p>
     </v-row>
-    <v-row justify="center" class="row-with-wide-cards">
+    <v-row>
       <v-col
         v-for="(item, i) in topic.items"
         :key="i"
@@ -15,7 +15,7 @@
         :md="md"
         :lg="lg"
         :xl="xl"
-        class="text-center pa- d-flex justify-center"
+        class="text-center pa-1 d-flex"
       >
         <wwdBasicCard :item="item" />
       </v-col>
@@ -68,7 +68,5 @@ export default {
   font-size: 200%;
   color: #1a73e8;
 }
-.row-with-wide-cards {
-  width: 100%;
-}
+
 </style>
