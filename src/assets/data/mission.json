@@ -1,0 +1,38 @@
+{
+    "whatWeDo": [
+        {
+            "sectionHeader": "",
+            "sectionDesc": "",
+            "items": [
+              {
+                "name": "Mission",
+                "desc": "",
+                "icon": "",
+                "side_icon" : "mdi-lock",
+                "svg": "",
+                "link": "",
+                "tools": "",
+                "bullets" : ["Stay Secure Every Sprint", "Expedite the ATO Process"]
+              },
+              {
+                "name": "Approach",
+                "desc": "",
+                "side_icon": "mdi-robot",
+                "svg": "",
+                "link": "",
+                "tools": "",
+                "bullets" : ["Open Source", "Automation"]
+              },
+              {
+                "name": "Objective",
+                "desc": "",
+                "side_icon": "mdi-book",
+                "svg": "",
+                "link": "",
+                "tools": "",
+                "bullets" : ["Publish Best Practices", "Incorporate ISPG Policy"]
+              }
+            ]
+          }
+    ]
+}

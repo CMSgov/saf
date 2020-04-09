@@ -232,13 +232,6 @@
       "category": ["Operating Systems"]
     },
     {
-      "shortName": "EL7 STIG",
-      "longName": "",
-      "link": "https://github.com/CMSgov/inspec-profile-disa_stig-el7",
-      "svg": "inspec-white-border",
-      "category": ["Operating Systems"]
-    },
-    {
       "shortName": "Red Hat CVE Vulnerability Scan",
       "longName": "",
       "link": "https://github.com/CMSgov/rhel_cve_vulnerability_scan_baseline",

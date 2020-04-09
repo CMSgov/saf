@@ -20,6 +20,16 @@ export default new Vuex.Store({
         }
       },
       {
+        text: "Getting Started",
+        to: "/gettingstarted",
+        icon: "mdi-book-open",
+        meta: {
+          showToolbar: true,
+          enabled: true,
+          showBottomNav: true
+        }
+      },
+      {
         text: "Validation",
         to: "/validation",
         icon: "mdi-thumb-up",
@@ -50,16 +60,6 @@ export default new Vuex.Store({
         }
       },
       {
-        text: "Getting Started",
-        to: "/gettingstarted",
-        icon: "mdi-book-open",
-        meta: {
-          showToolbar: true,
-          enabled: true,
-          showBottomNav: true
-        }
-      },
-      {
         text: "Training",
         to: "/training",
         icon: "mdi-chair-school",
@@ -78,7 +78,17 @@ export default new Vuex.Store({
           enabled: true,
           showBottomNav: true
         }
-      }
+      },
+      // {
+      //   text: "Cool New Component",
+      //   to: "/demo",
+      //   icon: "mdi-frequently-asked-questions",
+      //   meta: {
+      //     showToolbar: true,
+      //     enabled: true,
+      //     showBottomNav: true
+      //   }
+      // }
     ],
     adminDrawer: true,
     adminLinks: [

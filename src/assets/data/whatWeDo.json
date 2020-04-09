@@ -7,33 +7,61 @@
         {
           "name": "Validation",
           "desc": "Produce detailed security testing data throughout development",
-          "icon": "mdi-thumb-up",
+          "icon": "",
+          "side_icon" : "mdi-thumb-up",
           "svg": "",
           "link": "validation",
-          "tools": ""
-        },
-        {
-          "name": "Hardening",
-          "desc": "Align with security baselines using our Ansible, Chef, and Terraform content",
-          "icon": "mdi-security",
-          "svg": "",
-          "link": "",
-          "tools": ""
+          "tools": "",
+          "graphic" : "validation_2",
+          "graphic_frame" : "validation_frame_2"
         },
         {
           "name": "Visualization",
           "desc": "Dive deep into test results visually via rollups, charts, and timelines",
-          "icon": "mdi-image-search",
+          "icon": "",
+          "side_icon" : "mdi-image-search",
+          "svg": "",
+          "link": "",
+          "tools": "",
+          "graphic" : "visualization_2",
+          "graphic_frame" : "visualization_frame2"
+        },
+        {
+          "name": "Training",
+          "desc": "Learn how to write effective tests and apply them to the team's pipeline",
+          "icon": "",
+          "side_icon": "mdi-chair-school",
+          "svg": "",
+          "link": "training",
+          "tools": "",
+          "graphic" : "training_test",
+          "graphic_frame" : "training"
+        },
+        {
+          "name": "Open Source Community Stewardship",
+          "desc": "Maintain/expand Security Automation open source community",
+          "icon": "mdi-handshake",
+          "side_icon": "",
           "svg": "",
           "link": "",
           "tools": ""
         },
         {
-          "name": "Training",
-          "desc": "Learn how to write effective tests and apply them to the team's pipeline",
-          "icon": "mdi-chair-school",
+          "name": "Mature DevSecOps Best Practices",
+          "desc": "Train users and managers, publish Best Practices, SOPs, and Checklists",
+          "icon": "mdi-checkbox-multiple-marked",
+          "side_icon": "",
           "svg": "",
-          "link": "training",
+          "link": "",
+          "tools": ""
+        },
+        {
+          "name": "Quality Assurance",
+          "desc": "Peer-review new InSpec profiles developed by CMS contractors",
+          "icon": "mdi-magnify",
+          "side_icon": "",
+          "svg": "",
+          "link": "",
           "tools": ""
         }
       ]
@@ -149,6 +177,41 @@
       "sectionHeader": "How We Support It",
       "sectionDesc": "Develop a toolchain to support the above areas of What and How for secure development",
       "items": [
+        {
+          "name": "ACT Support",
+          "link": "",
+          "desc": "Aid ISPG ACT team in deploying tools for security assessments",
+          "svg": "",
+          "icon": ""
+        },
+        {
+          "name": "DevOps Pilots and Onboarding",
+          "link": "",
+          "desc": "Engage new CMS DevOps teams to incorporate tools",
+          "svg": "",
+          "icon": ""
+        },
+        {
+          "name": "Training for DevOps Teams",
+          "link": "/training",
+          "desc": "7 classes provided, including DHS staff and contractors 48 CMS contractors trained to develop InSpec profiles",
+          "svg": "",
+          "icon": ""
+        },
+        {
+          "name": "Automated Assessment",
+          "link": "",
+          "desc": "Support automated testing needs for ACT, CCIC, and DevOps Teams",
+          "svg": "",
+          "icon": ""
+        },
+        {
+          "name": "Control Status Reporting",
+          "link": "",
+          "desc": "Expand Heimdall to meet IUSG enterprise-level demands and new DevOps requirements",
+          "svg": "",
+          "icon": ""
+        },
         {
           "name": "Heimdall Lite",
           "link": "",

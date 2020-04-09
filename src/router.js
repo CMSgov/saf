@@ -49,16 +49,16 @@ const router = new Router({
         requiresAuth: false
       }
     },
-    {
-      path: "/team",
-      name: "team",
-      component: () => import("./views/Team.vue"),
-      meta: {
-        title: "Team | " + communityData.communityName,
-        color: "#0277bd",
-        requiresAuth: false
-      }
-    },
+    // {
+    //   path: "/team",
+    //   name: "team",
+    //   component: () => import("./views/Team.vue"),
+    //   meta: {
+    //     title: "Team | " + communityData.communityName,
+    //     color: "#0277bd",
+    //     requiresAuth: false
+    //   }
+    // },
     {
       path: "/contact",
       name: "contact",
@@ -168,7 +168,17 @@ const router = new Router({
         color: "#0277bd",
         requiresAuth: false
       }
-    },  
+    },
+    // {
+    //   path: '/demo',
+    //   name: 'demo',
+    //   component: () => import("@/views/Demo.vue"),
+    //   meta:{
+    //     title:`Demo | ${communityData.CommunityName}`,
+    //     color:"#0277bd",
+    //     requiresAuth: false,
+    //   }
+    // },
     {
       path:'/admin/dashboard/events',
       name:"admin-events",
@@ -229,6 +239,7 @@ const router = new Router({
         requiresAuth: false,
       }
     },
+    
   ]
 });
 
