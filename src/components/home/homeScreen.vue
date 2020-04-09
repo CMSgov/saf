@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container fluid class="pb-0">
     <v-row align="center">
       <!-- <v-col md="3" sm="5">
         <v-img
@@ -22,13 +22,13 @@
           </b>
         </p>
         <br />
-        <v-text-area class="google-font ma-2 title">{{communityData.communityShortDescription}}</v-text-area>
-        <v-text-area class="">
+        <p class="google-font ms-0 title">{{communityData.communityShortDescription}}</p>
+        <p>
           <ul class="title mt-4">
             <li>The ACT (Adaptive Capabilities Testing) team will accept security testing data from this framework.</li>
             <li>Developers can harden and run validation security early and often in their environments, using their own orchestration, functional and unit testing systems, to keep security defects as low as possible.</li>
           </ul>
-        </v-text-area>
+        </p>
         <!-- <p class="google-font mt-0 mb-0" style="font-size:150%">{{communityData.community}}</p>
         <p class="google-font" style="font-size:100%">{{communityData.communityShortDescription}}</p>
         <p class="google-font" style="font-size:100%">{{communityData.communityLongDec}}</p>-->
