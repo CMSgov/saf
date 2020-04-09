@@ -34,7 +34,8 @@
           "svg": "",
           "link": "training",
           "tools": "",
-          "graphic_frame" : "profile"
+          "graphic" : "training",
+          "graphic_frame" : "training_test"
         },
         {
           "name": "Open Source Community Stewardship",
