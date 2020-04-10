@@ -8,7 +8,7 @@
                 "name": "Mission",
                 "desc": "",
                 "icon": "",
-                "side_icon" : "mdi-lock",
+                "side_icon" : "lock",
                 "svg": "",
                 "link": "",
                 "tools": "",
@@ -17,7 +17,8 @@
               {
                 "name": "Approach",
                 "desc": "",
-                "side_icon": "mdi-robot",
+                "icon" : "",
+                "side_icon": "map",
                 "svg": "",
                 "link": "",
                 "tools": "",
@@ -26,7 +27,7 @@
               {
                 "name": "Objective",
                 "desc": "",
-                "side_icon": "mdi-book",
+                "side_icon": "book",
                 "svg": "",
                 "link": "",
                 "tools": "",

@@ -44,8 +44,8 @@ body {
 }
 
 .break-word {
-    overflow-wrap: normal;
+    overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: normal;
-    hyphens: auto;
+    hyphens: none;
 }

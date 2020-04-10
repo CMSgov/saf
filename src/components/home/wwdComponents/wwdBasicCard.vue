@@ -28,15 +28,20 @@
       max-height="328"
     />
     <v-card-title class="google-font mt-2 title align-bottom justify-center break-word">
-      <v-icon class="mr-2">{{item.side_icon}}</v-icon>
+      <v-icon class="mr-2">{{ item.side_icon }}</v-icon>
       {{ make_readable(item.name) }}
     </v-card-title>
     <v-spacer />
     <v-card-text v-if="item.desc" class="google-font pa-2">{{ item.desc }}</v-card-text>
     <template v-if="item.bullets">
       <v-card-text class="justify-center">
-      <ul v-for="bullet in item.bullets" :key="bullet" class="google-font pa-2 justify-center">• {{bullet}}</ul>
-    </v-card-text></template>
+        <ul
+          v-for="bullet in item.bullets"
+          :key="bullet"
+          class="google-font pa-2 justify-center"
+        >• {{bullet}}</ul>
+      </v-card-text>
+    </template>
     <v-spacer />
     <v-card-actions class="pa-0">
       <v-container row dense>
@@ -66,7 +71,7 @@
                 text
                 v-on="on"
               >
-                <v-icon>mdi-file-document</v-icon>
+                <v-icon>file-document</v-icon>
               </v-btn>
             </template>
             <span>Documentation</span>
@@ -81,7 +86,7 @@
                 text
                 v-on="on"
               >
-                <v-icon>mdi-github</v-icon>
+                <v-icon>github</v-icon>
               </v-btn>
             </template>
             <span>GitHub</span>
