@@ -30,9 +30,9 @@
                     v-show="entry.svg"
                     :src="require('@/assets/img/svg/' + entry.svg + '.svg')"
                     svg-inline
-                    style="max-width: 14px; max-height: 14px;"
+                    max-width="14"
+                    max-height="14"
                     class="mr-2"
-                    contain
                   />
                   {{ entry.shortName }}
                 </v-chip>
