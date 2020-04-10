@@ -13,8 +13,8 @@
       :to="link.to"
       small
       v-if="link.meta.showBottomNav && link.meta.enabled"
-      class="mt-2 ps-0 google-font"
-      style="text-transform: capitalize; "
+      class="mt-2 ps-0 google-font" 
+      style="text-transform: capitalize;font-size:65% "
       text
       @click="onClick($event, link)"
     >
