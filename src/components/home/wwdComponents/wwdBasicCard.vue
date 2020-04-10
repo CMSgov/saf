@@ -33,9 +33,10 @@
     </v-card-title>
     <v-spacer />
     <v-card-text v-if="item.desc" class="google-font pa-2">{{ item.desc }}</v-card-text>
-    <v-card-text v-if="item.bullets" class="google-font pa-2">
-      <li v-for="bullet in item.bullets" :key="bullet">{{bullet}}</li>
-    </v-card-text>
+    <template v-if="item.bullets">
+      <v-card-text class="justify-center">
+      <ul v-for="bullet in item.bullets" :key="bullet" class="google-font pa-2 justify-center">• {{bullet}}</ul>
+    </v-card-text></template>
     <v-spacer />
     <v-card-actions class="pa-0">
       <v-container row dense>
