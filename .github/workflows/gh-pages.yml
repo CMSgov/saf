@@ -1,7 +1,5 @@
 name: Deploy to GitHub Pages
 on:
-  release:
-    types: [published]
    push:
      branches:
        - master
