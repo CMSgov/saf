@@ -30,8 +30,8 @@
                     v-show="entry.svg"
                     :src="require('@/assets/img/svg/' + entry.svg + '.svg')"
                     svg-inline
-                    max-width="14"
-                    max-height="14"
+                    max-width="15"
+                    max-height="15"
                     class="mr-2"
                   />
                   {{ entry.shortName }}
