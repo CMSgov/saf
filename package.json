@@ -9,8 +9,9 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@mdi/font": "^5.0.45",
     "core-js": "^2.6.11",
-    "firebase": "^7.13.1",
+    "firebase": "^7.14.0",
     "material-design-icons": "^3.0.1",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",

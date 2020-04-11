@@ -6,6 +6,7 @@ import "./registerServiceWorker";
 import vuetify from "./plugins/vuetify";
 import "./style.css";
 import firebase from "@/firebase";
+//import "material-design-icons-iconfont/dist/material-design-icons.css";
 Vue.config.productionTip = false;
 
 firebase.auth.onAuthStateChanged(() => {
