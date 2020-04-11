@@ -9,7 +9,7 @@ jobs:
     name: Generate VERSION.md
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout mitre-saf
+      - name: Checkout cms-saf
         uses: actions/checkout@v1
         with:
           token: ${{secrets.GITHUB_TOKEN}}

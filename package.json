@@ -1,17 +1,21 @@
 {
-  "name": "mitre-saf",
-  "version": "0.9.0",
+  "name": "cms-saf",
+  "version": "0.9.8",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "release-it": "npm version patch && git push --follow-tags"
   },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@mdi/font": "^5.0.45",
     "core-js": "^2.6.11",
-    "firebase": "^7.13.1",
+    "firebase": "^7.14.0",
     "material-design-icons": "^3.0.1",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
