@@ -6,20 +6,27 @@ on:
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+      - uses: actions/checkout@master
+
+      - name: setup node
+        uses: actions/setup-node@v1
         with:
-          persist-credentials: false
+          node-version: "12.x"
 
-      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
-        run: |
-          npm install
-          npm run build
+      - name: install
+        run: npm install
 
-      - name: Deploy
+      #- name: test
+      #  run: npm run test:unit
+
+      - name: build
+        run: npm run build
+
+      - name: deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_branch: gh-pages
           publish_dir: ./dist
