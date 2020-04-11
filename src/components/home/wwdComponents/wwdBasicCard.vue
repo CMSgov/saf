@@ -28,7 +28,7 @@
       max-height="328"
     />
     <v-card-title class="google-font mt-2 title align-bottom justify-center break-word">
-      <v-icon class="mr-2">{{ item.side_icon }}</v-icon>
+      <v-icon class="mr-2">mdi-{{ item.side_icon }}</v-icon>
       {{ make_readable(item.name) }}
     </v-card-title>
     <v-spacer />
@@ -71,7 +71,7 @@
                 text
                 v-on="on"
               >
-                <v-icon>file-document</v-icon>
+                <v-icon>mdi-file-document</v-icon>
               </v-btn>
             </template>
             <span>Documentation</span>
@@ -86,7 +86,7 @@
                 text
                 v-on="on"
               >
-                <v-icon>github</v-icon>
+                <v-icon>mdi-github</v-icon>
               </v-btn>
             </template>
             <span>GitHub</span>
