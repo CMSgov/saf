@@ -4,8 +4,8 @@
 
  <!-- [![Build Status](https://travis-ci.org/gdg-x/aura.svg?branch=master)](https://travis-ci.org/gdg-x/aura-->
 
-CMS Security Automation Framework Website. <br>
-[Demo](https://mitre-saf.firebaseapp.com/) <br>
+CMS Security Automation Framework Website.
+
 Version: 1.0.0
 
 ### Show some :heart: and star the repo to support the project
