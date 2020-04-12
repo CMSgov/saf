@@ -43,6 +43,11 @@
       </v-card-text>
     </template>
     <v-spacer />
+    <div justify="center" v-show="item.shields" class="mt-2">
+      <img v-for="shield in item.shields" :key="shield" class="ms-2"
+        :src=shield
+      />
+    </div>
     <v-card-actions class="pa-0">
       <v-container row dense>
         <v-row justify="center">
