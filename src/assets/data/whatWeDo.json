@@ -224,9 +224,9 @@
           "svg": "",
           "tools": "",
           "shields" : [
-            "https://github.com/mitre/heimdall-lite/workflows/heimdall-vuetify/badge.svg",
-            "https://img.shields.io/docker/pulls/mitre/heimdall-lite?label=Docker%20Hub%20Pulls",
-            "https://img.shields.io/docker/cloud/build/mitre/heimdall-lite"
+            "https://img.shields.io/github/package-json/v/mitre/heimdall-lite",
+            "https://img.shields.io/npm/dt/heimdall-lite?label=npm%20downloads",
+            "https://img.shields.io/docker/pulls/mitre/heimdall-lite?label=docker%20hub%20pulls"
           ]
         },
         {
@@ -241,8 +241,10 @@
           "svg": "",
           "tools": "",
           "shields" : [
-            "https://img.shields.io/docker/pulls/mitre/heimdall?label=Docker%20Hub%20Pulls",
-            "https://img.shields.io/docker/cloud/build/mitre/heimdall"
+            "https://img.shields.io/github/v/tag/mitre/heimdall?label=version",
+            "https://img.shields.io/npm/dt/heimdall?label=npm%20downloads",
+            "https://img.shields.io/docker/pulls/mitre/heimdall?label=docker%20hub%20pulls"
+            
           ]
         },
         {
@@ -269,8 +271,8 @@
           "svg": "",
           "tools": "",
           "shields" : [
-            "https://github.com/mitre/inspec_tools/workflows/inspec_tools/badge.svg",
-            "https://github.com/mitre/inspec_tools/workflows/Release%20Management/badge.svg"
+            "https://img.shields.io/github/v/release/mitre/inspec_tools?label=version",
+            "https://img.shields.io/gem/dt/inspec_tools?label=gem%20downloads"
           ]
         },
         {
@@ -285,8 +287,8 @@
           "svg": "",
           "tools": "",
           "shields" : [
-            "https://github.com/mitre/heimdall_tools/workflows/heimdall_tools/badge.svg",
-            "https://github.com/mitre/heimdall_tools/workflows/Build%20and%20release%20gem/badge.svg"
+            "https://img.shields.io/github/v/release/mitre/heimdall_tools?label=version",
+            "https://img.shields.io/gem/dt/heimdall_tools?label=gem%20downloads"
           ]
         },
         {
@@ -299,7 +301,11 @@
           "doc_link": "https://inspecjs.mitre.org",
           "github_link": "https://github.com/mitre/inspecjs",
           "svg": "",
-          "tools": ""
+          "tools": "",
+          "shields" : [
+            "https://img.shields.io/npm/v/inspecjs?label=version",
+            "https://img.shields.io/npm/dt/inspecjs?label=npm%20downloads"
+          ]
         },
         {
           "name": "InSpecJS_Tools",
