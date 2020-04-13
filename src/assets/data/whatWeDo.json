@@ -329,7 +329,11 @@
           "doc_link": "https://hdf-json-to-splunk.mitre.org",
           "github_link": "https://github.com/mitre/hdf-json-to-splunk/",
           "svg": "",
-          "tools": ""
+          "tools": "",
+          "shields" : [
+            "https://img.shields.io/github/v/release/mitre/hdf-json-to-splunk?label=version",
+            "https://img.shields.io/github/downloads/mitre/hdf-json-to-splunk/total?label=github%20downloads"
+          ]
         },
         {
           "name": "HeimdallJS_Tools (Coming Soon!)",
