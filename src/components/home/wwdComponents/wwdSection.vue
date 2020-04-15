@@ -4,7 +4,7 @@
       <p class="google-font ma-4 tool-header">{{ topic.sectionHeader }}</p>
     </v-row>
     <v-row align="center" justify="center" v-if="topic.sectionDesc">
-      <p class="google-font mb-4" style="font-size:95%">{{ topic.sectionDesc }}</p>
+      <p class="google-font mb-4 body-1" >{{ topic.sectionDesc }}</p>
     </v-row>
     <v-row justify="center">
       <v-col

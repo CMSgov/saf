@@ -32,13 +32,13 @@
       {{ make_readable(item.name) }}
     </v-card-title>
     <v-spacer />
-    <v-card-text v-if="item.desc" class="google-font pa-2">{{ item.desc }}</v-card-text>
+    <v-card-text v-if="item.desc" class="google-font pa-2 body-1">{{ item.desc }}</v-card-text>
     <template v-if="item.bullets">
       <v-card-text class="justify-center">
         <ul
           v-for="bullet in item.bullets"
           :key="bullet"
-          class="google-font pa-2 justify-center"
+          class="google-font pa-2 justify-center body-1 body-1"
         >• {{bullet}}</ul>
       </v-card-text>
     </template>
