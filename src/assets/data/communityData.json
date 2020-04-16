@@ -3,7 +3,7 @@
   "communityShortDescription": "The CMS Security Automation Framework (SAF) brings together applications, techniques, libraries, and tools developed by CMS and the security community to streamline security automation for systems and DevOps pipelines. Benefits of using this framework include:",
   "communityLongDec": "Developers can use the framework to harden their systems and run validation security tests early and often in their environments to keep security defects as low as possible. Users can bring their own orchestration, functional and unit testing systems. The ACT (Adaptive Capabilities Testing) team will accept security testing data from this framework. ",
   "communityMeetupLink": "",
-  "communityEmail": "TO BE DETERMINED",
+  "communityEmail": "(tbd))",
   "website": "https://saf.cms.gov",
   "programWebsite": "",
   "communityHashTags": ["CMSSAF", "CMS_SAF"],
