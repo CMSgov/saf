@@ -38,7 +38,7 @@
         <ul
           v-for="bullet in item.bullets"
           :key="bullet"
-          class="google-font pa-2 justify-center body-1 body-1"
+          class="google-font pa-2 justify-center body-1"
         >• {{bullet}}</ul>
       </v-card-text>
     </template>
