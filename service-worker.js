@@ -1,4 +1,4 @@
-importScripts("/saf/precache-manifest.83747979c79e993d4e37aac1be34362d.js", "https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+importScripts("/saf/precache-manifest.194e1c65e8afe3f1c67d3e5c96c3e85e.js", "https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 self.addEventListener("message", e => {
   if (!e.data) {
@@ -19,10 +19,10 @@ importScripts("https://www.gstatic.com/firebasejs/3.5.2/firebase-messaging.js");
 
 var config = {
   apiKey: "AIzaSyBb-1hlnQfIELblC3HUqzI-M29xiwoMYds",
-  authDomain: "mitre-saf.firebaseapp.com",
-  databaseURL: "https://mitre-saf.firebaseio.com",
-  projectId: "mitre-saf",
-  storageBucket: "mitre-saf.appspot.com",
+  authDomain: "cms-saf.firebaseapp.com",
+  databaseURL: "https://cms-saf.firebaseio.com",
+  projectId: "cms-saf",
+  storageBucket: "cms-saf.appspot.com",
   messagingSenderId: "157303555912",
   appId: "1:157303555912:web:04c0e431777d1ee41f557d"
 };
