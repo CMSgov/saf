@@ -17,10 +17,10 @@ importScripts("https://www.gstatic.com/firebasejs/3.5.2/firebase-messaging.js");
 
 var config = {
   apiKey: "AIzaSyBb-1hlnQfIELblC3HUqzI-M29xiwoMYds",
-  authDomain: "mitre-saf.firebaseapp.com",
-  databaseURL: "https://mitre-saf.firebaseio.com",
-  projectId: "mitre-saf",
-  storageBucket: "mitre-saf.appspot.com",
+  authDomain: "cms-saf.firebaseapp.com",
+  databaseURL: "https://cms-saf.firebaseio.com",
+  projectId: "cms-saf",
+  storageBucket: "cms-saf.appspot.com",
   messagingSenderId: "157303555912",
   appId: "1:157303555912:web:04c0e431777d1ee41f557d"
 };
