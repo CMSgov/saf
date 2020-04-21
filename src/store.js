@@ -70,6 +70,16 @@ export default new Vuex.Store({
         }
       },
       {
+        text: "Contact Us",
+        to: "/contactus",
+        icon: "mdi-chair-school",
+        meta: {
+          showToolbar: true,
+          enabled: true,
+          showBottomNav: true
+        }
+      },
+      {
         text: "FAQ",
         to: "/faq",
         icon: "mdi-frequently-asked-questions",

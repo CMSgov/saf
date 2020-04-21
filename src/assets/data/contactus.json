@@ -1,0 +1,18 @@
+{
+    "ContactUsDescription": "The CMS Security Automation Project is developed by the CMS Information Security and Privacy Group (ISPG). The ISPG leads for the project are:",
+    "ISPGLeads": [
+      {
+        "name": "Shawnte Singletary",
+        "email": "test@test.com",
+        "phone": "111-111-1111"
+     },
+      {
+        "name": "Mark Elky",
+        "email": "test@test.com",
+        "phone": "111-111-1111"
+      }
+    ],
+    "ForQuestions": "For questions about Security Automation at CMS, please reach out to us at",
+    "CMSSAFEmail": "saf@cms.hhs.gov"
+
+}
