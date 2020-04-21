@@ -150,6 +150,16 @@ const router = new Router({
       }
     },
     {
+      path: "/contactus",
+      name: "contactus",
+      component: () => import("@/views/ContactUs.vue"),
+      meta: {
+        title: `Contact Us | ${communityData.communityName}`,
+        color: "#0277bd",
+        requiresAuth: false
+      }
+    },
+    {
       path: "/training",
       name: "training",
       component: () => import("@/views/Training.vue"),
