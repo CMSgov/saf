@@ -6,6 +6,8 @@ import "./registerServiceWorker";
 import vuetify from "./plugins/vuetify";
 import "./style.css";
 import firebase from "@/firebase";
+import VueTabulator from "vue-tabulator";
+
 Vue.config.productionTip = false;
 
 firebase.auth.onAuthStateChanged(() => {
@@ -13,6 +15,7 @@ firebase.auth.onAuthStateChanged(() => {
     router,
     store,
     vuetify,
-    render: h => h(App)
+    VueTabulator,
+    render: (h) => h(App),
   }).$mount("#app");
 });

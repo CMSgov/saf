@@ -2,21 +2,21 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import communityData from "./assets/data/communityData.json";
-import goTo from 'vuetify/es5/services/goto';
+import goTo from "vuetify/es5/services/goto";
 
 Vue.use(Router);
 
 const router = new Router({
-//  mode: "history",
-//  base: process.env.BASE_URL,
+  //  mode: "history",
+  //  base: process.env.BASE_URL,
   scrollBehavior(to) {
-    let scrollTo = 0
+    let scrollTo = 0;
     if (to.hash) {
-      scrollTo = to.hash
+      scrollTo = to.hash;
     } else {
-      scrollTo = 0
+      scrollTo = 0;
     }
-    return goTo(scrollTo, { 'duration': 0 })
+    return goTo(scrollTo, { duration: 0 });
   },
   routes: [
     {
@@ -26,18 +26,18 @@ const router = new Router({
       meta: {
         title: "Home | " + communityData.communityName,
         color: "#0277bd",
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
-        {
+    {
       path: "/about",
       name: "about",
       component: () => import("./views/About.vue"),
       meta: {
         title: "About | " + communityData.communityName,
         color: "#0277bd",
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
     {
       path: "/events",
@@ -46,8 +46,8 @@ const router = new Router({
       meta: {
         title: "Events | " + communityData.communityName,
         color: "#0277bd",
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
     {
       path: "/team",
@@ -56,8 +56,18 @@ const router = new Router({
       meta: {
         title: "Team | " + communityData.communityName,
         color: "#0277bd",
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
+    },
+    {
+      path: "/test",
+      name: "test",
+      component: () => import("./components/Test2.vue"),
+      meta: {
+        title: "Test | " + communityData.communityName,
+        color: "#0277bd",
+        requiresAuth: false,
+      },
     },
     {
       path: "/contact",
@@ -66,8 +76,8 @@ const router = new Router({
       meta: {
         title: "Contact | " + communityData.communityName,
         color: "#0277bd",
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
     {
       path: "/partners",
@@ -76,8 +86,8 @@ const router = new Router({
       meta: {
         title: "Partners | " + communityData.communityName,
         color: "#0277bd",
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
     {
       path: "/events/:id",
@@ -86,18 +96,18 @@ const router = new Router({
       meta: {
         title: "Event Name | " + communityData.communityName,
         color: "#0277bd",
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
     {
-      path: '/team/:id',
-      name: 'team-details',
-      component: () => import( './views/ViewTeam.vue'),
-      meta:{
-        title:'Team | '+communityData.CommunityName,
-        color:'#0277bd',
-        requiresAuth:false
-      }
+      path: "/team/:id",
+      name: "team-details",
+      component: () => import("./views/ViewTeam.vue"),
+      meta: {
+        title: "Team | " + communityData.CommunityName,
+        color: "#0277bd",
+        requiresAuth: false,
+      },
     },
     {
       path: "/admin",
@@ -106,8 +116,8 @@ const router = new Router({
       meta: {
         title: `Admin Login | ${communityData.communityName}`,
         color: "#0277bd",
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
     {
       path: "/dashboard",
@@ -116,8 +126,8 @@ const router = new Router({
       meta: {
         title: `Admin Dashboard | ${communityData.communityName}`,
         color: "#0277bd",
-        requiresAuth: true
-      }
+        requiresAuth: true,
+      },
     },
     {
       path: "/validation",
@@ -126,8 +136,8 @@ const router = new Router({
       meta: {
         title: `Validation Profiles | ${communityData.communityName}`,
         color: "#0277bd",
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
     {
       path: "/hardening",
@@ -136,8 +146,8 @@ const router = new Router({
       meta: {
         title: `Hardening Profiles | ${communityData.communityName}`,
         color: "#0277bd",
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
     {
       path: "/gettingstarted",
@@ -146,8 +156,8 @@ const router = new Router({
       meta: {
         title: `Getting Started | ${communityData.communityName}`,
         color: "#0277bd",
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
     {
       path: "/training",
@@ -156,70 +166,70 @@ const router = new Router({
       meta: {
         title: `Training | ${communityData.communityName}`,
         color: "#0277bd",
-        requiresAuth: false
-      }
-    },    
-    {
-      path:'/admin/dashboard/events',
-      name:"admin-events",
-      component:()=> import('@/views/Admin/Events'),
-      meta:{
-        title:`Admin Dashboard | ${communityData.CommunityName}`,
-        color:"#0277bd",
-        requiresAuth: true,
-      }
-    },
-    {
-      path:'/admin/dashboard/team',
-      name:"admin-team",
-      component:()=> import('@/views/Admin/Team'),
-      meta:{
-        title:`Admin Dashboard | ${communityData.CommunityName}`,
-        color:"#0277bd",
-        requiresAuth: true,
-      }
-    },
-    {
-      path:'/admin/dashboard/team/:id',
-      name:"admin-team-member",
-      component:()=> import('@/views/Admin/Team/showTeam'),
-      meta:{
-        title:`Admin Dashboard | ${communityData.CommunityName}`,
-        color:"#0277bd",
-        requiresAuth: true,
-      }
-    },
-    {
-      path:'/admin/dashboard/speaker',
-      name:"admin-speakers",
-      component:()=> import('@/views/Admin/Speaker'),
-      meta:{
-        title:`Admin Dashboard | ${communityData.CommunityName}`,
-        color:"#0277bd",
-        requiresAuth: true,
-      }
-    },
-    {
-      path:'/admin/dashboard/speaker/:id',
-      name:"admin-speaker-member",
-      component:()=> import('@/views/Admin/Speaker/viewSpeaker'),
-      meta:{
-        title:`Admin Dashboard | ${communityData.CommunityName}`,
-        color:"#0277bd",
-        requiresAuth: true,
-      }
-    },
-    {
-      path: '*',
-      name: 'redirect',
-      redirect: { path: '/' },
-      meta:{
-        title:`Redirect | ${communityData.CommunityName}`,
-        color:"#0277bd",
         requiresAuth: false,
-      }
+      },
     },
-  ]
+    {
+      path: "/admin/dashboard/events",
+      name: "admin-events",
+      component: () => import("@/views/Admin/Events"),
+      meta: {
+        title: `Admin Dashboard | ${communityData.CommunityName}`,
+        color: "#0277bd",
+        requiresAuth: true,
+      },
+    },
+    {
+      path: "/admin/dashboard/team",
+      name: "admin-team",
+      component: () => import("@/views/Admin/Team"),
+      meta: {
+        title: `Admin Dashboard | ${communityData.CommunityName}`,
+        color: "#0277bd",
+        requiresAuth: true,
+      },
+    },
+    {
+      path: "/admin/dashboard/team/:id",
+      name: "admin-team-member",
+      component: () => import("@/views/Admin/Team/showTeam"),
+      meta: {
+        title: `Admin Dashboard | ${communityData.CommunityName}`,
+        color: "#0277bd",
+        requiresAuth: true,
+      },
+    },
+    {
+      path: "/admin/dashboard/speaker",
+      name: "admin-speakers",
+      component: () => import("@/views/Admin/Speaker"),
+      meta: {
+        title: `Admin Dashboard | ${communityData.CommunityName}`,
+        color: "#0277bd",
+        requiresAuth: true,
+      },
+    },
+    {
+      path: "/admin/dashboard/speaker/:id",
+      name: "admin-speaker-member",
+      component: () => import("@/views/Admin/Speaker/viewSpeaker"),
+      meta: {
+        title: `Admin Dashboard | ${communityData.CommunityName}`,
+        color: "#0277bd",
+        requiresAuth: true,
+      },
+    },
+    {
+      path: "*",
+      name: "redirect",
+      redirect: { path: "/" },
+      meta: {
+        title: `Redirect | ${communityData.CommunityName}`,
+        color: "#0277bd",
+        requiresAuth: false,
+      },
+    },
+  ],
 });
 
 router.beforeEach((to, from, next) => {

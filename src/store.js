@@ -16,8 +16,18 @@ export default new Vuex.Store({
         meta: {
           showToolbar: true,
           enabled: true,
-          showBottomNav: false
-        }
+          showBottomNav: false,
+        },
+      },
+      {
+        text: "Test",
+        to: "/test",
+        icon: "mdi-home",
+        meta: {
+          showToolbar: true,
+          enabled: true,
+          showBottomNav: false,
+        },
       },
       {
         text: "Validation",
@@ -26,8 +36,8 @@ export default new Vuex.Store({
         meta: {
           showToolbar: true,
           enabled: true,
-          showBottomNav: true
-        }
+          showBottomNav: true,
+        },
       },
       {
         text: "Hardening",
@@ -36,8 +46,8 @@ export default new Vuex.Store({
         meta: {
           showToolbar: true,
           enabled: true,
-          showBottomNav: true
-        }
+          showBottomNav: true,
+        },
       },
       {
         text: "Visualization",
@@ -46,8 +56,8 @@ export default new Vuex.Store({
         meta: {
           showToolbar: true,
           enabled: false,
-          showBottomNav: true
-        }
+          showBottomNav: true,
+        },
       },
       {
         text: "Getting Started",
@@ -56,8 +66,8 @@ export default new Vuex.Store({
         meta: {
           showToolbar: true,
           enabled: true,
-          showBottomNav: true
-        }
+          showBottomNav: true,
+        },
       },
       {
         text: "Training",
@@ -66,9 +76,9 @@ export default new Vuex.Store({
         meta: {
           showToolbar: true,
           enabled: true,
-          showBottomNav: true
-        }
-      }
+          showBottomNav: true,
+        },
+      },
     ],
     adminDrawer: true,
     adminLinks: [
@@ -78,8 +88,8 @@ export default new Vuex.Store({
         icon: "mdi-home",
         meta: {
           showToolbar: false,
-          showBottomNav: true
-        }
+          showBottomNav: true,
+        },
       },
       {
         text: "Events",
@@ -87,8 +97,8 @@ export default new Vuex.Store({
         icon: "mdi-assistant",
         meta: {
           showToolbar: false,
-          showBottomNav: true
-        }
+          showBottomNav: true,
+        },
       },
       {
         text: "Team",
@@ -96,8 +106,8 @@ export default new Vuex.Store({
         icon: "mdi-account-group",
         meta: {
           showToolbar: false,
-          showBottomNav: true
-        }
+          showBottomNav: true,
+        },
       },
       {
         text: "Speaker",
@@ -105,30 +115,30 @@ export default new Vuex.Store({
         icon: "mdi-account-switch",
         meta: {
           showToolbar: false,
-          showBottomNav: true
-        }
-      }
-    ]
+          showBottomNav: true,
+        },
+      },
+    ],
   },
   getters: {
-    links: state => {
+    links: (state) => {
       return state.items;
     },
-    AdminLinks: state => {
+    AdminLinks: (state) => {
       return state.adminLinks;
     },
-    isCompactGetter: state => {
+    isCompactGetter: (state) => {
       return state.isCompact;
-    }
+    },
   },
   mutations: {
     setDrawer: (state, payload) => (state.drawer = payload),
-    toggleDrawer: state => (state.drawer = !state.drawer),
-    toggleCompact: state => (state.isCompact = !state.isCompact),
+    toggleDrawer: (state) => (state.drawer = !state.drawer),
+    toggleCompact: (state) => (state.isCompact = !state.isCompact),
 
     // For Admin
     ADsetDrawer: (state, payload) => (state.adminDrawer = payload),
-    ADtoggleDrawer: state => (state.adminDrawer = !state.adminDrawer)
+    ADtoggleDrawer: (state) => (state.adminDrawer = !state.adminDrawer),
   },
-  actions: {}
+  actions: {},
 });
