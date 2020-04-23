@@ -20,6 +20,16 @@
           "link": "https://mitre-inspec-advanced-developer.netlify.com/course/4.html"
         }
       ]
+    },
+    {
+      "question": "How many ARS controls are covered under SAF?",
+      "answer": "Currently, about 121 CMS ARS 3.1 security controls are assessed under this framework. Note that coverage varies based on the component type. For more information, click here:",
+      "links": [
+        {
+          "name": "CMS SAF ARS Range",
+          "download_link": "CMS_SAF_ARS_Range_04232020.pdf"
+        }
+      ]
     }
   ]
 }
