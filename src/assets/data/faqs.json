@@ -2,7 +2,7 @@
   "faqs": [
     {
       "question": "How many ARS controls are assessed under the CMS SAF?",
-      "answer": "Currently, about 121 CMS ARS 3.1 security controls are assessed under this framework. Note that coverage varies based on the component type. For more information, click here:",
+      "answer": "Currently, about 121 CMS ARS 3.1 security controls are assessed under this framework. Note that assessment coverage varies based on the component type. For more information, click here:",
       "links": [
         {
           "name": "CMS SAF ARS Assessment Range",
