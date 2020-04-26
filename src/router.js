@@ -62,7 +62,7 @@ const router = new Router({
     {
       path: "/test",
       name: "test",
-      component: () => import("./components/Test2.vue"),
+      component: () => import("./components/Test.vue"),
       meta: {
         title: "Test | " + communityData.communityName,
         color: "#0277bd",
