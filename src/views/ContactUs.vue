@@ -17,8 +17,28 @@
         <v-col md="12" lg="10" xs="12" class="py-3 my-0">
           <div class="ma-2 pa-2 google-font">
             <p>
-              {{ contactus.ContactUsDescription }} <br><br><br>
+              {{ contactus.ContactUsDescription }} <br>
               <!--ISPGLeadsList-->
+                <template>
+                  <v-container fluid>
+                      <v-list one-line>
+                        <template v-for="item in contactus.ISPGLeads">
+                          <v-list-item :key="item.name">
+                            <v-list-item-content>
+                              <v-list-item-title  class="google-font mt-0 mb-0" style="font-size:90%;color: #1a73e8;">
+                              <b>{{item.name}}</b>
+                              </v-list-item-title>
+                              <v-list-item class="google-font mt-0 mb-0">{{item.email}} | {{item.phone}}</v-list-item>
+                              <v-list-item v-for="entry in item.values" :key="entry.name">
+                              </v-list-item>
+                            </v-list-item-content>
+                          </v-list-item>
+                        </template>
+                      </v-list>
+                  </v-container>
+                </template>
+              <!--ISPGLeadsListEnd-->
+              
               {{ contactus.ForQuestions }}
               <a
                 :href="mail_link"
@@ -33,18 +53,16 @@
 </template>
 
 <script>
-import profileTemplateCompact from "@/components/profiles/profileTemplateCompact.vue";
 import Header from "@/components/core/Header.vue";
 import contactus from "@/assets/data/contactus.json"
 
 export default {
   components: {
-    profileTemplateCompact,
     Header
   },
   data() {
     return {
-      contactus: contactus,
+      contactus: contactus.ContactUs,
       isCompact: false
     };
   },
