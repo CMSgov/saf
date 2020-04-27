@@ -69,7 +69,7 @@ export default new Vuex.Store({
           showBottomNav: true
         }
       },
-      {
+      /* {
         text: "Contact Us",
         to: "/contactus",
         icon: "mdi-chair-school",
@@ -78,7 +78,7 @@ export default new Vuex.Store({
           enabled: true,
           showBottomNav: true
         }
-      },
+      }, */
       {
         text: "FAQ",
         to: "/faq",
