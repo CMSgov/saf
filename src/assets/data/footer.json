@@ -1,15 +1,11 @@
 {
-  "Links": [
-    {
-      "About": [
+  "FooterStartContent": [
         {
           "LinkName": "CMS SAF",
-          "Link": "/about"
+          "Link": "/home"
         }
-      ]
-    }
   ],
-  "FooterEndSession": [
+  "FooterEndContent": [
     {
       "LinkName": "Contact Us",
       "Link": "/contactus"

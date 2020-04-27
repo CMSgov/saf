@@ -72,10 +72,16 @@
             style="padding:0 !important"
             :class="this.$vuetify.theme.dark == true?'grey darken-4':'white'"
           >
-            <p
-              class="google-font pl-0 ml-0 mr-3"
-              :style="this.$vuetify.breakpoint.smAndDown ? '' : 'font-size:150%'"
-            >CMS SAF</p>
+            <v-btn
+              v-for="(item,i) in FooterData.FooterStartContent"
+              :key="i"
+              :to="item.Link"
+              class="ml-0 google-font hidden-sm-and-down"
+              style="text-transform: capitalize;font-size:150%"
+              text
+              aria-label="Footer Bottom Button"
+            >{{ item.LinkName }}
+            </v-btn>
             <v-spacer />
             <!-- <p
               class="google-font pl-0"
@@ -83,12 +89,11 @@
             >CMS © 2020</p> -->
 
             <v-btn
-              v-for="(item,i) in FooterData.FooterEndSession"
+              v-for="(item,i) in FooterData.FooterEndContent"
               :key="i"
-              :to="{ name: 'contactus'}"
-              target="_blank"
+              :to="item.Link"
               class="ml-0 google-font hidden-sm-and-down"
-              style="text-transform: capitalize;font-size:110%"
+              style="text-transform: capitalize;font-size:120%"
               text
               aria-label="Footer Bottom Button"
             >{{ item.LinkName }}</v-btn>
