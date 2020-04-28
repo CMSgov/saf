@@ -17,7 +17,13 @@
         <v-col md="12" lg="10" xs="12" class="py-3 my-0">
           <div class="ma-2 pa-2 google-font">
             <p>
-              {{ contactus.ContactUsDescription }} <br>
+
+              {{ contactus.ForQuestions }}
+              <a
+                :href="mail_link"
+              >{{ contactus.CMSSAFEmail }}</a>
+              <br><br>
+              {{ contactus.ContactUsDescription }}
               <!--ISPGLeadsList-->
                 <template>
                   <v-container fluid>
@@ -25,8 +31,8 @@
                         <template v-for="item in contactus.ISPGLeads">
                           <v-list-item :key="item.name">
                             <v-list-item-content>
-                              <v-list-item-title  class="google-font mt-0 mb-0" style="font-size:90%;color: #1a73e8;">
-                              <b>{{item.name}}</b>
+                              <v-list-item-title  class="google-font mt-0 mb-0" style="font-size:100%;color: #1a73e8;">
+                              {{item.name}}
                               </v-list-item-title>
                               <v-list-item class="google-font mt-0 mb-0">{{item.email}} | {{item.phone}}</v-list-item>
                               <v-list-item v-for="entry in item.values" :key="entry.name">
@@ -39,10 +45,7 @@
                 </template>
               <!--ISPGLeadsListEnd-->
               
-              {{ contactus.ForQuestions }}
-              <a
-                :href="mail_link"
-              >{{ contactus.CMSSAFEmail }}</a>
+              
             </p>
 
           </div>
