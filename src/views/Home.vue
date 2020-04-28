@@ -10,20 +10,26 @@
     <!-- MISSION -->
     <v-container fluid class="pa-0 py-2">
       <v-row justify="center" align="center">
-        <v-col
-          md="12"
-          lg="10"
-          xs="12"
-          class="py-0"
-          :class="this.$vuetify.theme.dark == true?'darkModeContainer':'lightModeContainer'"
-        >
-        
-          <whatwedo :whatwedodata="mission" />
+        <v-col md="12" lg="10" xs="12" class="pt-5 pb-0">
+          <v-row justify="center" align="center">
+            <v-col cols="12" sm="4" md="4" lg="4" xl="4" v-for="item in mission.items" :key="item">
+              <div
+                class="google-font mt-2 title"
+                style="text-align: center"
+              >{{ make_readable(item.name) }}</div>
+              <ul
+                v-for="bullet in item.bullets"
+                :key="bullet"
+                class="google-font pa-2 body-1"
+                style="text-align: center"
+              >• {{bullet}}</ul>
+            </v-col>
+          </v-row>
         </v-col>
       </v-row>
     </v-container>
 
-  <!-- WWD -->
+    <!-- WWD -->
     <v-container fluid class="pa-0 py-2">
       <v-row justify="center" align="center">
         <v-col
@@ -33,7 +39,7 @@
           class="py-0"
           :class="this.$vuetify.theme.dark == true?'darkModeContainer':'lightModeContainer'"
         >
-          <whatwedo :whatwedodata="wwd"/>
+          <whatwedo :whatwedodata="wwd" />
         </v-col>
       </v-row>
     </v-container>
@@ -44,7 +50,7 @@
           <aboutCommunity />
         </v-col>
       </v-row>
-    </v-container> -->
+    </v-container>-->
 
     <!--<v-container fluid class="pa-0 py-2">
       <v-row justify="center" align="center">
@@ -66,7 +72,7 @@
           <featureEvents />
         </v-col>
       </v-row>
-    </v-container> -->
+    </v-container>-->
 
     <v-container fluid class="pa-0 py-2">
       <v-row justify="center" align="center">
@@ -98,8 +104,8 @@ export default {
     partners
   },
   data: () => ({
-    wwd : whatwedodata.whatWeDo,
-    mission: missiondata.whatWeDo
+    wwd: whatwedodata.whatWeDo,
+    mission: missiondata.whatWeDo[0]
   }),
   computed: {
     showTraining() {
@@ -112,6 +118,11 @@ export default {
       metaThemeColor.setAttribute("content", "#212121");
     } else {
       metaThemeColor.setAttribute("content", "#0277bd");
+    }
+  },
+  methods: {
+    make_readable(str) {
+      return str.replace(/_/, " ");
     }
   }
 };

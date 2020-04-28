@@ -1,13 +1,23 @@
 {
   "items": [
     {
-      "name": "What is DevSecOps?",
+      "name": "Mature DevSecOps Best Practices",
       "desc": "DevSecOps is a software development framework that stresses automation and rapid user feedback to deliver quality, secure software quickly. A DevSecOps pipline is a collection of tools and practices that can automate as much of development as possible, from testing to change management to deployment.",
       "values" : [
         {
-          "name" : "DevSecOps Practices Checklist",
-          "desc" : "See here for an overview of what makes a good DevSecOps pipeline",
+          "name" : "DevSecOps Best Practices Checklist",
+          "desc" : "",
           "download_link" : "DevSecOps Checklist 12142018.pdf"
+        },
+        {
+          "name" : "Training For Managers",
+          "desc" : "TODO",
+          "download_link" : ""
+        },
+        {
+          "name" : "SOPs",
+          "desc" : "TODO",
+          "download_link" : ""
         }
       ]
     },

@@ -2,22 +2,16 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import communityData from "./assets/data/communityData.json";
-// import goTo from 'vuetify/es5/services/goto';
+//import goTo from 'vuetify/es5/services/goto';
 
 Vue.use(Router);
 
 const router = new Router({
 //  mode: "history",
 //  base: process.env.BASE_URL,
-  // scrollBehavior(to) {
-  //   let scrollTo = 0
-  //   if (to.hash) {
-  //     scrollTo = to.hash
-  //   } else {
-  //     scrollTo = 0
-  //   }
-  //   return goTo(scrollTo, { 'duration': 0 })
-  // },
+  scrollBehavior() {
+    return { x: 0, y: 0 };
+  },
   routes: [
     {
       path: "/",
