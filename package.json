@@ -32,6 +32,7 @@
     "@vue/cli-plugin-pwa": "^3.12.1",
     "@vue/cli-service": "^3.12.1",
     "babel-eslint": "^10.1.0",
+    "csv-loader": "^3.0.3",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.2.3",
     "sass": "^1.26.3",
