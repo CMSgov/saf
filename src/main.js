@@ -7,6 +7,7 @@ import vuetify from "./plugins/vuetify";
 import "./style.css";
 import firebase from "@/firebase";
 import VueTabulator from "vue-tabulator";
+import VueCsvLoader from "vue-csv-loader";
 
 Vue.config.productionTip = false;
 
@@ -16,6 +17,7 @@ firebase.auth.onAuthStateChanged(() => {
     store,
     vuetify,
     VueTabulator,
+    VueCsvLoader,
     render: (h) => h(App),
   }).$mount("#app");
 });

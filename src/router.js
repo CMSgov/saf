@@ -70,6 +70,16 @@ const router = new Router({
       },
     },
     {
+      path: "/test2",
+      name: "test",
+      component: () => import("./components/Test2.vue"),
+      meta: {
+        title: "Test | " + communityData.communityName,
+        color: "#0277bd",
+        requiresAuth: false,
+      },
+    },
+    {
       path: "/contact",
       name: "contact",
       component: () => import("./views/Contact.vue"),

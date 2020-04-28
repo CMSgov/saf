@@ -20,8 +20,18 @@ export default new Vuex.Store({
         },
       },
       {
-        text: "Test",
+        text: "Control Coverage",
         to: "/test",
+        icon: "mdi-home",
+        meta: {
+          showToolbar: true,
+          enabled: true,
+          showBottomNav: false,
+        },
+      },
+      {
+        text: "CSV Loader",
+        to: "/test2",
         icon: "mdi-home",
         meta: {
           showToolbar: true,
