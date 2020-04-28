@@ -29,6 +29,13 @@
       "category": ["Operating Systems"]
     },
     {
+      "shortName": "Red Hat 7 STIG",
+      "longName": "Red Hat Enterprise 7 Linux STIG",
+      "link": "https://github.com/USGS-CIDA/stig",
+      "svg": "chef-2",
+      "category": ["Operating Systems"]
+    },
+    {
       "shortName": "Docker CIS Benchmark",
       "longName": "Docker CIS Benchmark",
       "link": "https://github.com/mitre/ansible-cis-docker-ce-hardening",
