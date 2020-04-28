@@ -10,7 +10,7 @@
     {
       "shortName": "Red Hat 7 STIG",
       "longName": "Red Hat 7 STIG",
-      "link": " https://github.com/simp/inspec-profile-disa_stig-el7",
+      "link": "https://github.com/mitre/redhat-enterprise-linux-7-stig-baseline",
       "svg": "inspec-blue-back-border",
       "category": ["Operating Systems"]
     },
