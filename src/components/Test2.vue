@@ -41,12 +41,14 @@ enough for the limited about we use csv.
         </tbody>
       </table>
     </section>
+    {{ test }}
   </div>
 </template>
 
 <script>
 import CsvLoader from "vue-csv-loader";
 import "vue-csv-loader/dist/csv-loader.css";
+import test from "../assets/data/cms-saf-control-mapping.csv";
 
 export default {
   name: "app",
@@ -57,7 +59,8 @@ export default {
     return {
       showCheckbox: true,
       csvHeader: [],
-      csvBody: []
+      csvBody: [],
+      test: test
     };
   },
   methods: {
