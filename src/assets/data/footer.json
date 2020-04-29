@@ -1,18 +1,14 @@
 {
-  "Links": [
-    {
-      "About": [
+  "FooterStartContent": [
         {
           "LinkName": "CMS SAF",
-          "Link": "/about"
+          "Link": "/home"
         }
-      ]
-    }
   ],
-  "FooterEndSession": [
+  "FooterEndContent": [
     {
-      "LinkName": "DevOps Checklist 101",
-      "Link": "https://www.cms.gov/Research-Statistics-Data-and-Systems/CMS-Information-Technology/InformationSecurity/Downloads/DevSecOps-Checklist.pdf"
+      "LinkName": "Contact Us",
+      "Link": "mailto:saf@cms.hhs.gov"
     }
   ]
 }
