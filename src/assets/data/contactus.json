@@ -1,6 +1,9 @@
 {
   "ContactUs": {
-    "ForQuestions": "For questions about Security Automation Framework at CMS, please see our FAQ or feel free to reach out to us at",
+    "ForQuestions": "For general questions about Security Automation Framework at CMS, please see our ",
+    "FAQ": "FAQ",
+    "FAQLink": "/faq",
+    "ForMoreQuestions": " or feel free to reach out to us at",
     "CMSSAFEmail": "saf@cms.hhs.gov",
     "ContactUsDescription": "The CMS Security Automation Framework is developed by the CMS Information Security and Privacy Group (ISPG). The ISPG leads for the project are:",
     "ISPGLeads": [

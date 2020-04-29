@@ -18,10 +18,8 @@
           <div class="ma-2 pa-2 google-font">
             <p>
 
-              {{ contactus.ForQuestions }}
-              <a
-                :href="mail_link"
-              >{{ contactus.CMSSAFEmail }}</a>
+              {{ contactus.ForQuestions }}<a :to="contactus.FAQLink">{{ contactus.FAQ }}</a>{{ contactus.ForMoreQuestions }}
+              <a href="mailto:saf@cms.hhs.gov">{{ contactus.CMSSAFEmail }}</a>
               <br><br>
               {{ contactus.ContactUsDescription }}
               <!--ISPGLeadsList-->
