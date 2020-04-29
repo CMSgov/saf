@@ -1,12 +1,13 @@
 <template>
   <v-container fluid>
-
-    <v-list >
+    <v-list>
       <template v-for="item in resources.items">
         <v-list-item-group :key="item.name">
-          <v-list-item-content>
-            <v-list-item-title class="google-font mb-2" style="font-size:150%;color: #1a73e8;">
-              <b>{{item.name}}</b>
+          <v-list-item-content class="ms-4">
+            <v-list-item-title
+              class="google-font mb-2 wrap-list-text"
+            >
+              <b class>{{item.name}}</b>
             </v-list-item-title>
             <v-list-item class="google-font my-2">{{item.desc}}</v-list-item>
             <v-list-item dense class="ma-0" v-for="entry in item.values" :key="entry.name">
@@ -69,3 +70,16 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.wrap-list-text {
+  -webkit-line-clamp: unset !important;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: normal;
+  hyphens: none;
+  font-size:150%;
+  color: #1a73e8;
+}
+</style>
