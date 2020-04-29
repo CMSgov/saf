@@ -1,12 +1,22 @@
 {
   "faqs": [
     {
-      "question": "How do I know which NIST SP 800-53 Security Controls are addressed using this framework?",
+      "question": "How many ARS controls are assessed under the CMS SAF?",
+      "answer": "Currently, about 121 CMS ARS 3.1 security controls are assessed under this framework. Note that assessment coverage varies based on the component type. For more information, click here:",
+      "links": [
+        {
+          "name": "CMS SAF ARS Assessment Range",
+          "download_link": "CMS_SAF_ARS_Assessment_Range_04232020.pdf"
+        }
+      ]
+    },
+    {
+      "question": "How are ARS (NIST SP 800-53) Security Control associations included in the assessment tests used in this framework?",
       "answer": "NIST SP 800-53 associations are included in all InSpec profiles and output from other security tools processed through Heimdall_tools. See our presentation to learn more!",
       "links": [
         {
           "name": "InSpec, HDF, and NIST SP 800-53 Security Controls",
-          "download_link": "CMS_InSpec_Profiles_and_HDF_include_NIST_SP-800-53_associations_03172020 (002).pdf"
+          "download_link": "CMS_InSpec_Profiles_and_HDF_include_NIST_SP-800-53_associations_04232020.pdf"
         }
       ]
     },
@@ -20,6 +30,6 @@
           "link": "https://mitre-inspec-advanced-developer.netlify.com/course/4.html"
         }
       ]
-    }
+    }    
   ]
 }

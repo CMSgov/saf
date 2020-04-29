@@ -143,6 +143,16 @@ const router = new Router({
         requiresAuth: false
       }
     },
+    // {
+    //   path: "/contactus",
+    //   name: "contactus",
+    //   component: () => import("@/views/ContactUs.vue"),
+    //   meta: {
+    //     title: `Contact Us | ${communityData.communityName}`,
+    //     color: "#0277bd",
+    //     requiresAuth: false
+    //   }
+    // },
     {
       path: "/training",
       name: "training",
