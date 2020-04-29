@@ -1,7 +1,7 @@
 <template>
   <v-footer
     height="auto"
-    class="ma-0"
+    class="ma-0 d-none d-sm-flex"
     :class="this.$vuetify.theme.dark == true?'grey darken-4':'white'"
     style="border-color:#e0e0e0;border-width: 1px;border-style: solid;border-bottom: 0;border-left:0;border-right:0"
   >
@@ -76,10 +76,10 @@
               v-for="(item,i) in FooterData.FooterStartContent"
               :key="i"
               :to="item.Link"
-              class="ml-0 google-font hidden-sm-and-down"
               style="text-transform: capitalize;font-size:150%"
               text
               aria-label="Footer Bottom Button"
+              class="google-font"
             >{{ item.LinkName }}
             </v-btn>
             <v-spacer />
@@ -92,7 +92,7 @@
               v-for="(item,i) in FooterData.FooterEndContent"
               :key="i"
               :href="item.Link"
-              class="ml-0 google-font hidden-sm-and-down"
+              class="ml-0 google-font"
               style="text-transform: capitalize;font-size:120%"
               text
               aria-label="Footer Bottom Button"
