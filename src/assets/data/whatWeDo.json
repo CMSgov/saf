@@ -178,8 +178,15 @@
       "sectionDesc": "Develop a toolchain to support the above areas of What and How for secure development",
       "items": [
         {
+          "name": "ACT Support",
+          "router_link": "pilots",
+          "desc": "Aid ISPG ACT team in deploying tools for security assessments",
+          "svg": "",
+          "icon": ""
+        },
+        {
           "name": "DevOps Pilots and Onboarding",
-          "router_link": "teams",
+          "router_link": "pilots",
           "desc": "Engage new CMS DevOps teams to incorporate tools",
           "svg": "",
           "icon": ""

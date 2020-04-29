@@ -8,13 +8,13 @@
       </v-row>
     </v-container>
     <!-- MISSION -->
-    <v-container fluid class="pa-0 py-2">
+    <v-container fluid class="pa-0">
       <v-row justify="center" align="center">
-        <v-col md="12" lg="10" xs="12" class="pt-5 pb-0">
+        <v-col md="12" lg="10" xs="12" class="pa-0">
           <v-row justify="center" align="center">
             <v-col cols="12" sm="4" md="4" lg="4" xl="4" v-for="item in mission.items" :key="item">
               <div
-                class="google-font mt-2 title"
+                class="google-font title"
                 style="text-align: center"
               >{{ make_readable(item.name) }}</div>
               <ul

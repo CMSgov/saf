@@ -163,6 +163,16 @@ const router = new Router({
         requiresAuth: false
       }
     },
+    {
+      path: "/pilots",
+      name: "pilots",
+      component: () => import("@/views/Pilots.vue"),
+      meta: {
+        title: `Pilots | ${communityData.communityName}`,
+        color: "#0277bd",
+        requiresAuth: false
+      }
+    },
     // {
     //   path: '/demo',
     //   name: 'demo',
