@@ -6,11 +6,13 @@
       :to="item.router_link"
       :href="item.link"
       :color="hover && (item.router_link || item.link) ? 'grey' : ''"
+      :target="item.link ? '_blank' : ''"
       style="width: 100%"
+
     >
       <!--<toolBlock v-if="item.tools" :tools="item.tools" />-->
 
-      <v-icon v-if="item.icon" large style="font-size:300%" class="mt-4">{{ item.icon }}</v-icon>
+      <v-icon v-if="item.icon" large style="font-size:300%" class="mt-4" :color="hover && (item.router_link || item.link) ? '#1a73e8' : ''">{{ item.icon }}</v-icon>
       <!-- <v-fade-transition v-if="item.graphic" mode="out-in">
       <v-img
         v-on:mouseover="mouseOverCheck = current"
@@ -35,8 +37,8 @@
         class="ma-2"
         max-height="328"
       />
-      <v-card-title class="google-font mt-2 title align-bottom justify-center break-word">
-        <v-icon class="mr-2">mdi-{{ item.side_icon }}</v-icon>
+      <v-card-title class="google-font mt-2 title align-bottom justify-center break-word" :style="hover && (item.router_link || item.link) ? 'color:#1a73e8' : ''">
+        <v-icon class="mr-2" :color="hover && (item.router_link || item.link) ? '#1a73e8' : ''">mdi-{{ item.side_icon }}</v-icon>
         {{ make_readable(item.name) }}
       </v-card-title>
       <v-spacer />
@@ -46,7 +48,7 @@
           <ul
             v-for="bullet in item.bullets"
             :key="bullet"
-            class="google-font pa-2 justify-center body-1"
+            class="google-font pa-2 justify-center body-1 "
           >• {{bullet}}</ul>
         </v-card-text>
       </template>

@@ -12,12 +12,12 @@
         {
           "name" : "DevSecOps Best Practices Guide",
           "desc" : "",
-          "download_link" : "CMS_InSpec_Profile_Lifecycle_SOP_v1.0_20190702.pdf"
+          "download_link" : "DRAFT-DevSecOps_Best_Practices_Guide_20190516.pdf"
         },
         {
           "name" : "InSpec Profile Lifecycle SOP",
           "desc" : "",
-          "download_link" : "DRAFT-DevSecOps_Best_Practices_Guide_20190516.pdf"
+          "download_link" : "CMS_InSpec_Profile_Lifecycle_SOP_v1.0_20190702.pdf"
         }
       ]
     },
