@@ -91,7 +91,7 @@
             <v-btn
               v-for="(item,i) in FooterData.FooterEndContent"
               :key="i"
-              :to="item.Link"
+              :href="item.Link"
               class="ml-0 google-font hidden-sm-and-down"
               style="text-transform: capitalize;font-size:120%"
               text
