@@ -250,7 +250,7 @@
         {
           "name": "Vulcan (alpha)",
           "link": "",
-          "desc": "Application for streamlining InSpec profile and overlay development using the Security Requirments Guide (SRG)",
+          "desc": "Application for streamlining InSpec profile and overlay development using the Security Requirements Guide (SRG)",
           "icon": "",
           "app_link": "https://vulcan-demo.mitre.org",
           "app_svg": "app",
