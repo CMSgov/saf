@@ -26,7 +26,7 @@
               >{{ db.communityEmail }}</a>. If you are interested in developing and contributing your own
               profiles, please see our links to Training material.
             </p>
-            <profileTemplateCompact :profiles="baselines.baselines" />
+            <profileTemplateCompact :profiles="profiles.profiles" />
           </div>
         </v-col>
       </v-row>
@@ -37,7 +37,7 @@
 <script>
 import profileTemplateCompact from "@/components/profiles/profileTemplateCompact.vue";
 import Header from "@/components/core/Header.vue";
-import baselines from "@/assets/data/baselines.json";
+import profiles from "@/assets/data/profiles.json";
 import db from "@/assets/data/communityData.json";
 import { mapMutations } from "vuex";
 
@@ -48,7 +48,7 @@ export default {
   },
   data() {
     return {
-      baselines: baselines,
+      profiles: profiles,
       db: db,
       isCompact: false
     };
