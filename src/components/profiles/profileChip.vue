@@ -3,7 +3,7 @@
     v-if="entry.link"
     :href="entry.link"
     target="_blank"
-    class="google-font break-word ma-2 pa-2 text-none"
+    class="google-font break-word pa-2 text-none"
     label
     outlined
   >

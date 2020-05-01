@@ -1,229 +1,500 @@
 {
-    "profiles": [
-      {
-        "name": "AWS S3",
-        "category": ["Cloud Service Providers"],
-        "links": [
-          {
-            "name" : "Baseline",
-            "link" : "https://github.com/CMSgov/aws-s3-baseline",
-            "svg": "inspec-white-border"
-          }
-        ]
-      },
-      {
-        "name": "AWS RDS MSQL Server Instance 2014 STIG",
-        "category": ["Databases"],
-        "links": [
-          {
-            "name" : "Baseline",
-            "link" : "https://github.com/CMSgov/cms-ars-3.1-high-aws-rds-microsoft-sql-server-2014-instance-stig-overlay",
-            "svg": "inspec-white-border"
-          }
-        ]
-      },
-      {
-        "name": "AWS RDS Oracle Database 12c STIG",
-        "category": ["Databases"],
-        "links": [
-            {
-                "name" : "ARS 3.1 Low",
-                "link" : "https://github.com/CMSgov/cms-ars-3.1-low-aws-rds-oracle-database-12c-stig-overlay",
-                "svg": "inspec-white-border"
-            },
-            {
-                "name" : "ARS 3.1 Moderate",
-                "link" : "https://github.com/CMSgov/cms-ars-3.1-moderate-aws-rds-oracle-database-12c-stig-overlay",
-                "svg": "inspec-white-border"
-            },
-            {
-                "name" : "ARS 3.1 High",
-                "link" : "https://github.com/CMSgov/cms-ars-3.1-high-aws-rds-oracle-database-12c-stig-overlay",
-                "svg": "inspec-white-border"
-            }
-        ]
-      },
-      {
-        "name": "Ubuntu 16.04 STIG",
-        "link": "https://github.com/CMSgov/cms-ars-3.1-high-canonical-ubuntu-16.04-lts-stig-overlay",
-        "category": ["Operating Systems"],
-        "links" : [
-            {
-                "name" : "ARS 3.1 Low",
-                "link" : "https://github.com/CMSgov/cms-ars-3.1-low-canonical-ubuntu-16.04-lts-stig-overlay",
-                "svg": "inspec-white-border"
-            },
-            {
-                "name" : "ARS 3.1 Moderate",
-                "link" : "https://github.com/CMSgov/cms-ars-3.1-moderate-canonical-ubuntu-16.04-lts-stig-overlay",
-                "svg": "inspec-white-border"
-            },
-            {
-                "name" : "ARS 3.1 High",
-                "link" : "https://github.com/CMSgov/cms-ars-3.1-high-canonical-ubuntu-16.04-lts-stig-overlay",
-                "svg": "inspec-white-border"
-            }
-        ]
-      },
-      {
-        "name": "ARS 3.1 High IIS 8.5 Server STIG",
-        "link": "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-iis-8.5-server-stig-overlay",
-        "svg": "inspec-white-border",
-        "category": ["Web Servers"]
-      },
-      {
-        "name": "ARS 3.1 High IIS 8.5 Site STIG",
-        "link": "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-iis-8.5-site-stig-overlay",
-        "svg": "inspec-white-border",
-        "category": ["Web Servers"]
-      },
-      {
-        "name": "ARS 3.1 High MSQL Server 2014 Database STIG",
-        "link": "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-sql-server-2014-database-stig-overlay",
-        "svg": "inspec-white-border",
-        "category": ["Databases"]
-      },
-      {
-        "name": "ARS 3.1 High MSQL Server 2014 Instance STIG",
-        "link": "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay",
-        "svg": "inspec-white-border",
-        "category": ["Databases"]
-      },
-      {
-        "name": "ARS 3.1 High Windows 2012 STIG",
-        "link": "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-windows-2012r2-member-server-stig-overlay",
-        "svg": "inspec-white-border",
-        "category": ["Operating Systems"]
-      },
-      {
-        "name": "Windows 2016 STIG",
-        "category": ["Operating Systems"],
-        "links" : [
-            {
-                "name" : "ARS 3.1 Low",
-                "link" : "https://github.com/CMSgov/cms-ars-3.1-low-microsoft-windows-server-2016-stig-overlay",
-                "svg": "inspec-white-border"
-            },
-            {
-                "name" : "ARS 3.1 Moderate",
-                "link" : "https://github.com/CMSgov/cms-ars-3.1-moderate-microsoft-windows-server-2016-stig-overlay",
-                "svg": "inspec-white-border"
-            },
-            {
-                "name" : "ARS 3.1 High",
-                "link" : "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-windows-server-2016-stig-overlay",
-                "svg": "inspec-white-border"
-            }
-        ]
-      },
-      {
-        "name": "ARS 3.1 High RSA Archer 6 SCG",
-        "link": "https://github.com/CMSgov/cms-ars-3.1-high-rsa-archer-6-security-configuration-guide-overlay",
-        "svg": "inspec-white-border",
-        "category": ["Application Logic"]
-      },
-      {
-        "name": "ARS 3.1 Moderate AWS Foundations CIS",
-        "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-aws-foundations-cis-overlay",
-        "svg": "inspec-white-border",
-        "category": ["Cloud Service Providers"]
-      },
-      {
-        "name": "ARS 3.1 Moderate AWS RDS PostgreSQL 9.x STIG",
-        "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-aws-rds-crunchy-data-postgresql-9-stig-overlay",
-        "svg": "inspec-white-border",
-        "category": ["Databases"]
-      },
-      {
-        "name": "ARS 3.1 Moderate AWS Infrastructure CIS ",
-        "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-aws-rds-infrastructure-cis-overlay",
-        "svg": "inspec-white-border",
-        "category": ["Cloud Service Providers"]
-      },
-      {
-        "name": "ARS 3.1 Moderate AWS RDS Oracle MySQL EE 5.7 CIS",
-        "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-aws-rds-oracle-mysql-ee-5.7-cis-overlay",
-        "svg": "inspec-white-border",
-        "category": ["Databases"]
-      },
-      {
-        "name": "ARS 3.1 Moderate PostgreSQL 9.x STIG",
-        "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-crunchy-data-postgresql-9-stig-overlay",
-        "svg": "inspec-white-border",
-        "category": ["Databases"]
-      },
-      {
-        "name": "ARS 3.1 Moderate Docker CE CIS",
-        "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-docker-ce-cis-overlay",
-        "svg": "inspec-white-border",
-        "category": ["Operating Systems"]
-      },
-      {
-        "name": "ARS 3.1 Moderate MongoDB STIG",
-        "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-mongodb-enterprise-advanced-3-stig-overlay",
-        "svg": "inspec-white-border",
-        "category": ["Databases"]
-      },
-      {
-        "name": "ARS 3.1 Moderate NGINX",
-        "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-nginx-overlay",
-        "svg": "inspec-white-border",
-        "category": ["Databases"]
-      },
-      {
-        "name": "ARS 3.1 Moderate Oracle Database 12c STIG",
-        "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-oracle-database-12c-stig-overlay",
-        "svg": "inspec-white-border",
-        "category": ["Databases"]
-      },
-      {
-        "name": "ARS 3.1 Moderate JRE 7 STIG",
-        "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-oracle-java-runtime-environment-7-unix-stig-overlay",
-        "svg": "inspec-white-border",
-        "category": ["Application Logic"]
-      },
-      {
-        "name": "ARS 3.1 Moderate JRE 8 STIG",
-        "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-oracle-java-runtime-environment-8-unix-stig-overlay",
-        "svg": "inspec-white-border",
-        "category": ["Application Logic"]
-      },
-      {
-        "name": "ARS 3.1 Moderate Oracle MySQL EE 5.7 CIS",
-        "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-oracle-mysql-ee-5.7-cis-overlay",
-        "svg": "inspec-white-border",
-        "category": ["Databases"]
-      },
-      {
-        "name": "ARS 3.1 Moderate Red Hat 6 STIG",
-        "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-red-hat-enterprise-linux-6-stig-overlay",
-        "svg": "inspec-white-border",
-        "category": ["Operating Systems"]
-      },
-      {
-        "name": "ARS 3.1 Moderate Red Hat 7 STIG",
-        "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-red-hat-enterprise-linux-7-stig-overlay",
-        "svg": "inspec-white-border",
-        "category": ["Operating Systems"]
-      },
-      {
-        "name": "ARS 3.1 Moderate Red Hat Jboss 6.3 STIG",
-        "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-red-hat-jboss-eap-6.3-stig-overlay",
-        "svg": "inspec-white-border",
-        "category": ["Application Logic"]
-      },
-      {
-        "name": "AWS Linux 2 CIS",
-        "link": "https://github.com/CMSgov/CMS-AWS-West-AWS-Linux2-CIS-Benchmark",
-        "svg": "inspec-white-border",
-        "category": ["Operating Systems"]
-      },
-      {
-        "name": "Red Hat CVE Vulnerability Scan",
-        "link": "https://github.com/CMSgov/rhel_cve_vulnerability_scan_baseline",
-        "svg": "inspec-white-border",
-        "category": ["Operating Systems"]
-      }
-    ]
-  }
-  
+  "profiles": [
+    {
+      "name": "AWS S3",
+      "category": [
+        "Cloud Service Providers"
+      ],
+      "links": [
+        {
+          "name": "AWS S3",
+          "fips": [
+            "none"
+          ],
+          "link": "https://github.com/CMSgov/aws-s3-baseline",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "AWS RDS MSQL Server Instance 2014 STIG",
+      "category": [
+        "Databases"
+      ],
+      "links": [
+        {
+          "name": "ARS 3.1 High",
+          "fips": [
+            "high"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-high-aws-rds-microsoft-sql-server-2014-instance-stig-overlay",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "AWS RDS Oracle Database 12c STIG",
+      "category": [
+        "Databases"
+      ],
+      "links": [
+        {
+          "name": "ARS 3.1 Low",
+          "fips": [
+            "low"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-low-aws-rds-oracle-database-12c-stig-overlay",
+          "svg": "inspec-white-border"
+        },
+        {
+          "name": "ARS 3.1 Moderate",
+          "fips": [
+            "mod"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-aws-rds-oracle-database-12c-stig-overlay",
+          "svg": "inspec-white-border"
+        },
+        {
+          "name": "ARS 3.1 High",
+          "fips": [
+            "high"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-high-aws-rds-oracle-database-12c-stig-overlay",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "Ubuntu 16.04 STIG",
+      "category": [
+        "Operating Systems"
+      ],
+      "links": [
+        {
+          "name": "ARS 3.1 Low",
+          "fips": [
+            "low"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-low-canonical-ubuntu-16.04-lts-stig-overlay",
+          "svg": "inspec-white-border"
+        },
+        {
+          "name": "ARS 3.1 Moderate",
+          "fips": [
+            "mod"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-canonical-ubuntu-16.04-lts-stig-overlay",
+          "svg": "inspec-white-border"
+        },
+        {
+          "name": "ARS 3.1 High",
+          "fips": [
+            "high"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-high-canonical-ubuntu-16.04-lts-stig-overlay",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "IIS 8.5 Server STIG",
+      "category": [
+        "Web Servers"
+      ],
+      "links": [
+        {
+          "name": "ARS 3.1 High",
+          "fips": [
+            "high"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-iis-8.5-server-stig-overlay",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "IIS 8.5 Site STIG",
+      "category": [
+        "Web Servers"
+      ],
+      "links": [
+        {
+          "name": "ARS 3.1 High",
+          "fips": [
+            "high"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-iis-8.5-site-stig-overlay",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "MSQL Server 2014 Database STIG",
+      "category": [
+        "Databases"
+      ],
+      "links": [
+        {
+          "name": "ARS 3.1 High",
+          "fips": [
+            "high"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-sql-server-2014-database-stig-overlay",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "MSQL Server 2014 Instance STIG",
+      "category": [
+        "Databases"
+      ],
+      "links": [
+        {
+          "name": "ARS 3.1 High",
+          "fips": [
+            "high"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "Windows 2012 STIG",
+      "category": [
+        "Operating Systems"
+      ],
+      "links": [
+        {
+          "name": "ARS 3.1 High",
+          "fips": [
+            "high"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-windows-2012r2-member-server-stig-overlay",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "Windows 2016 STIG",
+      "category": [
+        "Operating Systems"
+      ],
+      "links": [
+        {
+          "name": "ARS 3.1 Low",
+          "fips": [
+            "low"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-low-microsoft-windows-server-2016-stig-overlay",
+          "svg": "inspec-white-border"
+        },
+        {
+          "name": "ARS 3.1 Moderate",
+          "fips": [
+            "mod"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-microsoft-windows-server-2016-stig-overlay",
+          "svg": "inspec-white-border"
+        },
+        {
+          "name": "ARS 3.1 High",
+          "fips": [
+            "high"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-windows-server-2016-stig-overlay",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "ARS 3.1 High RSA Archer 6 SCG",
+      "category": [
+        "Application Logic"
+      ],
+      "links": [
+        {
+          "name": "ARS 3.1 High",
+          "fips": [
+            "high"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-high-rsa-archer-6-security-configuration-guide-overlay",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "AWS Foundations CIS",
+      "category": [
+        "Cloud Service Providers"
+      ],
+      "links" : [
+        {
+          "name": "ARS 3.1 Moderate",
+          "fips": [
+            "mod"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-aws-foundations-cis-overlay",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "AWS RDS PostgreSQL 9.x STIG",
+      "category": [
+        "Databases"
+      ],
+      "links" : [
+        {
+          "name": "ARS 3.1 Moderate",
+          "fips": [
+            "mod"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-aws-rds-crunchy-data-postgresql-9-stig-overlay",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "AWS Infrastructure CIS",
+      "category": [
+        "Cloud Service Providers"
+      ],
+      "links" : [
+        {
+          "name": "ARS 3.1 Moderate",
+          "fips": [
+            "mod"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-aws-rds-infrastructure-cis-overlay",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "AWS RDS Oracle MySQL EE 5.7 CIS",
+      "category": [
+        "Databases"
+      ],
+      "links" : [
+        {
+          "name": "ARS 3.1 Moderate",
+          "fips": [
+            "mod"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-aws-rds-oracle-mysql-ee-5.7-cis-overlay",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "PostgreSQL 9.x STIG",
+      "category": [
+        "Databases"
+      ],
+      "links" : [
+        {
+          "name": "ARS 3.1 Moderate",
+          "fips": [
+            "mod"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-crunchy-data-postgresql-9-stig-overlay",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "Docker CE CIS",
+      "category": [
+        "Operating Systems"
+      ],
+      "links" : [
+        {
+          "name": "ARS 3.1 Moderate",
+          "fips": [
+            "mod"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-docker-ce-cis-overlay",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "MongoDB STIG",
+      "category": [
+        "Databases"
+      ],
+      "links" : [
+        {
+          "name": "ARS 3.1 Moderate",
+          "fips": [
+            "mod"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-mongodb-enterprise-advanced-3-stig-overlay",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "NGINX",
+      "category": [
+        "Databases"
+      ],
+      "links" : [
+        {
+          "name": "ARS 3.1 Moderate",
+          "fips": [
+            "mod"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-nginx-overlay",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "Oracle Database 12c STIG",
+      "category": [
+        "Databases"
+      ],
+      "links" : [
+        {
+          "name": "ARS 3.1 Moderate",
+          "fips": [
+            "mod"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-oracle-database-12c-stig-overlay",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "Java Runtime Environment 7 STIG",
+      "category": [
+        "Application Logic"
+      ],
+      "links" : [
+        {
+          "name": "ARS 3.1 Moderate",
+          "fips": [
+            "mod"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-oracle-java-runtime-environment-7-unix-stig-overlay",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "Java Runtime Environment 8 STIG",
+      "category": [
+        "Application Logic"
+      ],
+      "links" : [
+        {
+          "name": "ARS 3.1 Moderate",
+          "fips": [
+            "mod"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-oracle-java-runtime-environment-8-unix-stig-overlay",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "Oracle MySQL EE 5.7 CIS",
+      "category": [
+        "Databases"
+      ],
+      "links" : [
+        {
+          "name": "ARS 3.1 Moderate",
+          "fips": [
+            "mod"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-oracle-mysql-ee-5.7-cis-overlay",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "Red Hat 6 STIG",
+      "category": [
+        "Operating Systems"
+      ],
+      "links" : [
+        {
+          "name": "ARS 3.1 Moderate",
+          "fips": [
+            "mod"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-red-hat-enterprise-linux-6-stig-overlay",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "Red Hat 7 STIG",
+      "category": [
+        "Operating Systems"
+      ],
+      "links" : [
+        {
+          "name": "ARS 3.1 Moderate",
+          "fips": [
+            "mod"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-red-hat-enterprise-linux-7-stig-overlay",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "Red Hat Jboss 6.3 STIG",
+      "category": [
+        "Application Logic"
+      ],
+      "links" : [
+        {
+          "name": "ARS 3.1 Moderate",
+          "fips": [
+            "mod"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-red-hat-jboss-eap-6.3-stig-overlay",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "AWS Linux 2 CIS",
+      "category": [
+        "Operating Systems"
+      ],
+      "links" : [
+        {
+          "name": "AWS Linux 2 CIS",
+          "fips": [
+            "none"
+          ],
+          "link": "https://github.com/CMSgov/CMS-AWS-West-AWS-Linux2-CIS-Benchmark",
+          "svg": "inspec-white-border"
+        }
+      ]
+    },
+    {
+      "name": "Red Hat CVE Vulnerability Scan",
+      "category": [
+        "Operating Systems"
+      ],
+      "links" : [
+        {
+          "name": "Red Hat CVE Vulnerability Scan",
+          "fips": [
+            "none"
+          ],
+          "link": "https://github.com/CMSgov/rhel_cve_vulnerability_scan_baseline",
+          "svg": "inspec-white-border"
+        }
+      ]
+    }
+  ]
+}

@@ -16,12 +16,19 @@
                   class="font-weight-bold subtitle-2 ma-2 pa-2 break-word justify-center text-left google-font"
                 >{{ cat }}</h2>
               </v-col>
-              <v-col cols="auto d-flex flex-wrap">
-                <template v-for="(entry, i) in getByCategory(profiles, [cat])">
-                  <profileChip v-if="entry.link" :entry="entry" :key="entry.category + entry.name + i"/>
-                  <profileCard v-if="entry.links" :entry="entry" :key="entry.category + entry.name + i"/>
-                </template>
+            </v-row>
+            <v-row
+              dense
+              v-for="(entry, i) in getByCategory(profiles, [cat])"
+              :key="entry.category + entry.longName + i"
+            >
+              <v-col cols="3">
+                <profileChip v-if="getByFips(entry, 'none')" :entry="getByFips(entry, 'none')" />
+                <p v-else>{{entry.name}}</p>
               </v-col>
+              <v-col cols="3"><profileChip :entry="getByFips(entry, 'low')" /></v-col>
+              <v-col cols="3"><profileChip :entry="getByFips(entry, 'mod')" /></v-col>
+              <v-col cols="3"><profileChip :entry="getByFips(entry, 'high')" /></v-col>
             </v-row>
           </v-container>
         </v-col>
@@ -31,8 +38,7 @@
 </template>
 
 <script>
-import profileCard from "@/components/profiles/profileCard.vue"
-import profileChip from "@/components/profiles/profileChip.vue"
+import profileChip from "@/components/profiles/profileChip.vue";
 export default {
   props: {
     profiles: Array
@@ -42,8 +48,8 @@ export default {
       fab: false
     };
   },
-  components : {
-    profileCard,
+  components: {
+
     profileChip
   },
   methods: {
@@ -77,6 +83,21 @@ export default {
         }
         return 0;
       });
+    },
+    getByFips(profile, fips_cat) {
+      var i;
+      var j;
+      console.log(profile.links.length)
+      for (i = 0; i < profile.links.length; i++) {
+        
+        for (j = 0; j < profile.links[i].fips.length; j++) {
+          console.log(profile.links[i].fips)
+          if (profile.links[i].fips[j] == fips_cat) {
+            console.log(profile.links[i]);
+            return profile.links[i];
+          }
+        }
+      }
     }
   },
   computed: {
