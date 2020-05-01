@@ -1,7 +1,7 @@
 {
   "faqs": [
     {
-      "question": "How do I know which NIST SP 800-53 Security Controls are addressed using this framework?",
+      "question": "How are NIST SP 800-53 Security Control associations included in the assessment tests used in this framework?",
       "answer": "NIST SP 800-53 associations are included in all InSpec profiles and output from other security tools processed through Heimdall_tools. See our presentation to learn more!",
       "links": [
         {
