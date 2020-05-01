@@ -16,26 +16,11 @@
                   class="font-weight-bold subtitle-2 ma-2 pa-2 break-word justify-center text-left google-font"
                 >{{ cat }}</h2>
               </v-col>
-              <v-col cols="auto">
-                <v-chip
-                  v-for="(entry, i) in getByCategory(profiles, [cat])"
-                  :key="entry.category + entry.longName + i"
-                  :href="entry.link"
-                  target="_blank"
-                  class="google-font break-word ma-2 pa-2 text-none"
-                  label
-                  outlined
-                >
-                  <v-img
-                    v-show="entry.svg"
-                    :src="require('@/assets/img/svg/' + entry.svg + '.svg')"
-                    svg-inline
-                    max-width="15"
-                    max-height="15"
-                    class="mr-2"
-                  />
-                  {{ entry.shortName }}
-                </v-chip>
+              <v-col cols="auto d-flex flex-wrap">
+                <template v-for="(entry, i) in getByCategory(profiles, [cat])">
+                  <profileChip v-if="entry.link" :entry="entry" :key="entry.category + entry.name + i"/>
+                  <profileCard v-if="entry.links" :entry="entry" :key="entry.category + entry.name + i"/>
+                </template>
               </v-col>
             </v-row>
           </v-container>
@@ -46,6 +31,8 @@
 </template>
 
 <script>
+import profileCard from "@/components/profiles/profileCard.vue"
+import profileChip from "@/components/profiles/profileChip.vue"
 export default {
   props: {
     profiles: Array
@@ -55,7 +42,10 @@ export default {
       fab: false
     };
   },
-
+  components : {
+    profileCard,
+    profileChip
+  },
   methods: {
     make_linkable(str) {
       return str.replace(/\s+/g, "-").toLowerCase();
