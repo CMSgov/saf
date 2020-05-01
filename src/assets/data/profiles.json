@@ -2,15 +2,25 @@
     "profiles": [
       {
         "name": "AWS S3",
-        "svg": "inspec-white-border",
         "category": ["Cloud Service Providers"],
-        "link" : "https://github.com/CMSgov/aws-s3-baseline"
+        "links": [
+          {
+            "name" : "Baseline",
+            "link" : "https://github.com/CMSgov/aws-s3-baseline",
+            "svg": "inspec-white-border"
+          }
+        ]
       },
       {
         "name": "AWS RDS MSQL Server Instance 2014 STIG",
-        "link": "https://github.com/CMSgov/cms-ars-3.1-high-aws-rds-microsoft-sql-server-2014-instance-stig-overlay",
-        "svg": "inspec-white-border",
-        "category": ["Databases"]
+        "category": ["Databases"],
+        "links": [
+          {
+            "name" : "Baseline",
+            "link" : "https://github.com/CMSgov/cms-ars-3.1-high-aws-rds-microsoft-sql-server-2014-instance-stig-overlay",
+            "svg": "inspec-white-border"
+          }
+        ]
       },
       {
         "name": "AWS RDS Oracle Database 12c STIG",
