@@ -1,5 +1,5 @@
 <template>
-  <v-card target="_blank" class="mx-auto google-font break-word ma-2 pa-2 text-none" max-width="400px" label outlined>
+  <v-card target="_blank" class="mx-auto google-font break-word text-none" max-width="350px" label outlined>
     <v-card-title class="body-2 break-word">{{entry.name}}</v-card-title>
     
     <v-card-text>
