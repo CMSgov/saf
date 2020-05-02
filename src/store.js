@@ -30,16 +30,6 @@ export default new Vuex.Store({
         },
       },
       {
-        text: "CSV Loader",
-        to: "/test2",
-        icon: "mdi-home",
-        meta: {
-          showToolbar: true,
-          enabled: true,
-          showBottomNav: false,
-        },
-      },
-      {
         text: "Validation",
         to: "/validation",
         icon: "mdi-thumb-up",
