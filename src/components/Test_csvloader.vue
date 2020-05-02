@@ -1,3 +1,6 @@
+/*
+  csv-loader component is unnecessary for our usecase.  being able to directly import csvs and have it be autoconverted to json is pretty dope tho esp the conversion from string true/false to booleans.
+  */
 <!--
 Notes: Loading the full on MITRE 900 controls csv seems to streach the limits of the 
 filereader library. We may have to account for this...
