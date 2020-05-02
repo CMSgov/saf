@@ -1,87 +1,65 @@
-// run with npx vue serve src/components/Test.vue
 <template>
-  <v-content>
-    <div class="myowndamnwrapper">
-      <h1>Vue Tabulator</h1>
-      <VueTabulator class="myowndamntable" v-model="dados" :options="options" />
-    </div>
-  </v-content>
+<div class="myowndamnwrapper">
+  <h1>Vue Tabulator</h1>
+  <label>Filter: <input v-model="filterText"/></label>
+  <c-grid class="myowndamntable" :data="data" :filter="filter" :frozen-col-count="2">
+    <c-grid-column-group v-for="(col, index) in columns" :key="col.value" :caption="col.text">
+      <c-grid-column :field="col.value" :caption="index >= 1 ? data.filter(control => control[col.value]).length.toString() : ''" :width="col.width"/>
+    </c-grid-column-group>
+  </c-grid>
+</div>
 </template>
 
 <script>
-import { TabulatorComponent } from "vue-tabulator";
-// import { VuePapaParse } from "vue-papa-parse";
-// import myfile from "../assets/data/mitre-csv.csv";
+import * as cGridAll from 'vue-cheetah-grid';
+import json from "@/assets/data/mitre-saf-control-mapping.json";
 
 export default {
   components: {
-    VueTabulator: TabulatorComponent
-    // VuePapaParse
+    ...cGridAll
   },
   data() {
     return {
-      dados: this.genData(10, 10),
-      options: { columns: this.genOptions(10) }
+      columns: this.getOptions(Object.keys(json[0])),
+      data: json,
+      filter: undefined,
+      filterText: '',
     };
   },
+  watch: {
+    filterText(text) {
+      this.onFilterChange(text);
+    },
+  },
   methods: {
-    genOptions(numcolumns) {
+    getOptions(columnheaders) {
+      const columnWidth = 100;
       let columns = [
         {
-          title: "CMS ARS 3-1 Control",
-          hozAlign: "left",
-          field: "CMS ARS 3-1 Control",
-          headerFilter: "tickCross",
-          headerFilterParams: { tristate: true },
-          headerFilterEmptyCheck: function(value) {
-            return value === null;
-          }
+          text: columnheaders[0],
+          value: columnheaders[0],
+          align: "start",
+          width: columnWidth,
         },
         {
-          title: "ALL",
-          field: "ALL",
-          hozAlign: "center",
-          formatter: "tickCross",
-          topCalc: "count",
-          headerFilter: "tickCross",
-          headerFilterParams: { tristate: true },
-          headerFilterEmptyCheck: function(value) {
-            return value === null;
-          }
-        }
+          text: columnheaders[1],
+          value: columnheaders[1],
+          align: "center",
+          width: columnWidth,
+        },
       ];
-      for (let i = 0; i < numcolumns; i++) {
-        columns.push({
-          title: i.toString(),
-          field: i.toString(),
-          hozAlign: "center",
-          formatter: "tickCross",
-          topCalc: "count",
-          headerFilter: "tickCross",
-          headerFilterParams: { tristate: true },
-          headerFilterEmptyCheck: function(value) {
-            return value === null;
-          }
-        });
+      for(let i = 2; i < columnheaders.length; i++) {
+        columns.push({ text: columnheaders[i], value: columnheaders[i], align: "center", width: columnWidth });
       }
-      console.log("columsn", columns); // eslint-disable-line
       return columns;
     },
-    genData(numColumns, numRows) {
-      let rows = [];
-      for (let j = 0; j < numRows; j++) {
-        let row = {
-          "CMS ARS 3-1 Control": j.toString(),
-          ALL: Math.random() < 0.5
-        };
-        for (let i = 0; i < numColumns; i++) {
-          row[i.toString()] = Math.random() < 0.5;
-        }
-        rows.push(row);
+    onFilterChange(text) {
+      if(!text) {
+        this.filter = undefined;
+      } else {
+        this.filter = (record) => record[this.columns[0].value].toLowerCase().includes(this.filterText.toLowerCase());
       }
-      console.log("rows", rows); // eslint-disable-line
-      return rows;
-    }
+    },
   }
 };
 </script>
@@ -99,12 +77,8 @@ body {
 
     .myowndamntable {
       height: 90%;
+      color: white;
     }
   }
 }
-
-//@import "~vue-tabulator/dist/scss/tabulator_site.scss";
-//@import "~vue-tabulator/dist/scss/tabulator_modern.scss";
-@import "~vue-tabulator/dist/scss/tabulator_midnight.scss";
-//@import "~vue-tabulator/dist/scss/bootstrap/tabulator_bootstrap4cd .scss";
 </style>
