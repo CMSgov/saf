@@ -1,6 +1,6 @@
 <template>
   <v-content class="pa-0">
-    <v-card v-for="cat in categorized" :key="cat" outlined class="ma-2">
+    <v-card v-for="cat in categoryOrder" :key="cat" outlined class="ma-2">
       <v-row align="center" dense no-gutters justify="start">
         <v-col cols="2" v-show="$vuetify.breakpoint.smAndUp">
           <h2
@@ -8,7 +8,7 @@
             :class="{'subtitle-2': $vuetify.breakpoint.mdAndDown}"
           >{{ cat }}</h2>
         </v-col>
-        <v-col cols="10">
+        <v-col :cols="$vuetify.breakpoint.xs ? '12' : '10'">
           <v-container>
             <v-row dense no-gutters align="center" justify="start">
               <v-col cols="auto" v-show="$vuetify.breakpoint.xs">
@@ -17,19 +17,16 @@
                 >{{ cat }}</h2>
               </v-col>
             </v-row>
-            <v-row
-              dense
+            <v-card
+              outlined
+              class="d-flex pr-4 pl-2 py-2 ma-2"
               v-for="(entry, i) in getByCategory(profiles, [cat])"
-              :key="entry.category + entry.longName + i"
+              :key="i"
             >
-              <v-col cols="3">
-                <profileChip v-if="getByFips(entry, 'none')" :entry="getByFips(entry, 'none')" />
-                <p v-else>{{entry.name}}</p>
-              </v-col>
-              <v-col cols="3"><profileChip :entry="getByFips(entry, 'low')" /></v-col>
-              <v-col cols="3"><profileChip :entry="getByFips(entry, 'mod')" /></v-col>
-              <v-col cols="3"><profileChip :entry="getByFips(entry, 'high')" /></v-col>
-            </v-row>
+              <rowView v-if="$vuetify.breakpoint.smAndUp" :entry="entry" />
+              <colView v-else :entry="entry" />
+              
+            </v-card>
           </v-container>
         </v-col>
       </v-row>
@@ -38,19 +35,27 @@
 </template>
 
 <script>
-import profileChip from "@/components/profiles/profileChip.vue";
+import rowView from "@/components/profiles/rowView.vue";
+import colView from "@/components/profiles/colView.vue"; 
 export default {
   props: {
     profiles: Array
   },
   data() {
     return {
-      fab: false
+      fab: false,
+      categoryOrder: [
+        "Cloud Service Providers",
+        "Operating Systems",
+        "Databases",
+        "Application Logic",
+        "Web Servers"
+      ]
     };
   },
   components: {
-
-    profileChip
+    rowView,
+    colView
   },
   methods: {
     make_linkable(str) {
@@ -76,29 +81,15 @@ export default {
         }
       }
       return filteredProfiles.sort(function(a, b) {
-        if (a["shortName"] > b["shortName"]) {
+        if (a["name"] > b["name"]) {
           return 1;
-        } else if (a["shortName"] < b["shortName"]) {
+        } else if (a["name"] < b["name"]) {
           return -1;
         }
         return 0;
       });
     },
-    getByFips(profile, fips_cat) {
-      var i;
-      var j;
-      console.log(profile.links.length)
-      for (i = 0; i < profile.links.length; i++) {
-        
-        for (j = 0; j < profile.links[i].fips.length; j++) {
-          console.log(profile.links[i].fips)
-          if (profile.links[i].fips[j] == fips_cat) {
-            console.log(profile.links[i]);
-            return profile.links[i];
-          }
-        }
-      }
-    }
+    
   },
   computed: {
     moveForBottomNavStyle() {
@@ -107,18 +98,21 @@ export default {
       } else {
         return "";
       }
-    },
-    categorized() {
-      var categories = new Set();
-      var i;
-      var j;
-      for (i = 0; i < this.profiles.length; i++) {
-        for (j = 0; j < this.profiles[i].category.length; j++) {
-          categories.add(this.profiles[i].category[j]);
-        }
-      }
-      return Array.from(categories);
     }
+    // function no longer useable since there is a defined category ordr
+    // assume that all profiles fall in defined categories in the categoryOrder var,
+    // but any additional categories must be directly added to the order or they will not appear
+    // categorized() {
+    //   var categories = new Set();
+    //   var i;
+    //   var j;
+    //   for (i = 0; i < this.profiles.length; i++) {
+    //     for (j = 0; j < this.profiles[i].category.length; j++) {
+    //       categories.add(this.profiles[i].category[j]);
+    //     }
+    //   }
+    //   return Array.from(categories);
+    // }
   }
 };
 </script>

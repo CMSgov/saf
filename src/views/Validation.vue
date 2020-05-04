@@ -15,7 +15,7 @@
     <v-container fluid>
       <v-row justify="center" align="center" class="py-0 my-0">
         <v-col md="12" lg="10" xs="12" class="py-3 my-0">
-          <div class="ma-2 pa-2 google-font">
+          <div class=" google-font">
             <p>
               These open-source community-based InSpec profiles validate the security of
               common system components. CMS is helping to provide stewardship over
