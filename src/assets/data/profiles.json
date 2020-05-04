@@ -257,7 +257,7 @@
       ]
     },
     {
-      "name": "AWS Infrastructure CIS",
+      "name": "AWS RDS Infrastructure CIS",
       "category": [
         "Cloud Service Providers"
       ],
