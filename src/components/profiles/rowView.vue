@@ -2,7 +2,7 @@
   <v-row dense align="center">
     <v-col :cols="getByFips(entry, 'none') ? '12' : '4'" >
       <profileChip v-if="getByFips(entry, 'none')" :entry="getByFips(entry, 'none')" />
-      <div class="body-2 break-word" v-else>{{entry.name}}</div>
+      <div class="body-1 break-word" v-else>{{entry.name}}</div>
     </v-col>
     <v-col cols="8" class="pa-0">
       <v-container class="pa-0 px-2" v-if="!getByFips(entry, 'none')" fluid>

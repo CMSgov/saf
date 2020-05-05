@@ -12,7 +12,7 @@
             "none"
           ],
           "link": "https://github.com/CMSgov/aws-s3-baseline",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -28,7 +28,7 @@
             "high"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-high-aws-rds-microsoft-sql-server-2014-instance-stig-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -44,7 +44,7 @@
             "low"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-low-aws-rds-oracle-database-12c-stig-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         },
         {
           "name": "ARS 3.1 Moderate",
@@ -52,7 +52,7 @@
             "mod"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-aws-rds-oracle-database-12c-stig-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         },
         {
           "name": "ARS 3.1 High",
@@ -60,7 +60,7 @@
             "high"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-high-aws-rds-oracle-database-12c-stig-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -76,7 +76,7 @@
             "low"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-low-canonical-ubuntu-16.04-lts-stig-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         },
         {
           "name": "ARS 3.1 Moderate",
@@ -84,7 +84,7 @@
             "mod"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-canonical-ubuntu-16.04-lts-stig-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         },
         {
           "name": "ARS 3.1 High",
@@ -92,7 +92,7 @@
             "high"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-high-canonical-ubuntu-16.04-lts-stig-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -108,7 +108,7 @@
             "high"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-iis-8.5-server-stig-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -124,7 +124,7 @@
             "high"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-iis-8.5-site-stig-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -140,7 +140,7 @@
             "high"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-sql-server-2014-database-stig-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -156,7 +156,7 @@
             "high"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -172,7 +172,7 @@
             "high"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-windows-2012r2-member-server-stig-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -188,7 +188,7 @@
             "low"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-low-microsoft-windows-server-2016-stig-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         },
         {
           "name": "ARS 3.1 Moderate",
@@ -196,7 +196,7 @@
             "mod"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-microsoft-windows-server-2016-stig-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         },
         {
           "name": "ARS 3.1 High",
@@ -204,7 +204,7 @@
             "high"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-windows-server-2016-stig-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -220,7 +220,7 @@
             "high"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-high-rsa-archer-6-security-configuration-guide-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -236,7 +236,7 @@
             "mod"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-aws-foundations-cis-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -252,7 +252,7 @@
             "mod"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-aws-rds-crunchy-data-postgresql-9-stig-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -268,7 +268,7 @@
             "mod"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-aws-rds-infrastructure-cis-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -284,7 +284,7 @@
             "mod"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-aws-rds-oracle-mysql-ee-5.7-cis-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -300,7 +300,7 @@
             "mod"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-crunchy-data-postgresql-9-stig-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -316,7 +316,7 @@
             "mod"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-docker-ce-cis-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -332,14 +332,14 @@
             "mod"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-mongodb-enterprise-advanced-3-stig-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
     {
       "name": "NGINX",
       "category": [
-        "Databases"
+        "Web Servers"
       ],
       "links" : [
         {
@@ -348,7 +348,7 @@
             "mod"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-nginx-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -364,7 +364,7 @@
             "mod"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-oracle-database-12c-stig-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -380,7 +380,7 @@
             "mod"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-oracle-java-runtime-environment-7-unix-stig-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -396,7 +396,7 @@
             "mod"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-oracle-java-runtime-environment-8-unix-stig-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -412,7 +412,7 @@
             "mod"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-oracle-mysql-ee-5.7-cis-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -428,7 +428,7 @@
             "mod"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-red-hat-enterprise-linux-6-stig-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -444,7 +444,7 @@
             "mod"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-red-hat-enterprise-linux-7-stig-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -460,7 +460,7 @@
             "mod"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-red-hat-jboss-eap-6.3-stig-overlay",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -476,7 +476,7 @@
             "none"
           ],
           "link": "https://github.com/CMSgov/CMS-AWS-West-AWS-Linux2-CIS-Benchmark",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     },
@@ -492,7 +492,7 @@
             "none"
           ],
           "link": "https://github.com/CMSgov/rhel_cve_vulnerability_scan_baseline",
-          "svg": "inspec-white-border"
+          "svg": "inspec-blue-black-border"
         }
       ]
     }

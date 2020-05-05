@@ -3,9 +3,9 @@
     v-if="entry.link"
     :href="entry.link"
     target="_blank"
-    class="google-font break-word 2 text-none"
+    class="google-font break-word text-none "
+    :color="this.$vuetify.theme.dark == true?'grey darken-4':'white'"
     label
-    outlined
   >
     <v-img
       v-show="entry.svg"

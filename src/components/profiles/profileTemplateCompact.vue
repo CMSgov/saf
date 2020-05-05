@@ -20,12 +20,13 @@
             <v-card
               outlined
               class="d-flex pr-4 pl-2 py-2 ma-2"
+              :class="$vuetify.theme.dark ?'grey darken-2':'grey lighten-4'"
+              color=""
               v-for="(entry, i) in getByCategory(profiles, [cat])"
               :key="i"
             >
               <rowView v-if="$vuetify.breakpoint.smAndUp" :entry="entry" />
               <colView v-else :entry="entry" />
-              
             </v-card>
           </v-container>
         </v-col>
