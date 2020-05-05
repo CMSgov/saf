@@ -1,20 +1,26 @@
 <template>
-  <v-row dense align="center">
-    <v-col :cols="getByFips(entry, 'none') ? '12' : '4'" >
-      <profileChip v-if="getByFips(entry, 'none')" :entry="getByFips(entry, 'none')" />
-      <div class="body-1 break-word" v-else>{{entry.name}}</div>
+  <v-row dense align="center" class="pa-1">
+    <v-col :cols="getByFips(entry, 'none') ? '12' : '4'" class="pa-0">
+      <profileChip v-if="getByFips(entry, 'none')" :entry="getByFips(entry, 'none')" class="pa-0" />
+      <div class="body-1 break-word pa-0" v-else>{{entry.name}}</div>
     </v-col>
-    <v-col cols="8" class="pa-0">
-      <v-container class="pa-0 px-2" v-if="!getByFips(entry, 'none')" fluid>
+    <v-col cols="8" v-if="!getByFips(entry, 'none')" class="pa-0">
+      <v-container class="pa-0 pl-2" v-if="!getByFips(entry, 'none')" fluid>
         <v-row align="center">
-          <v-col class="pa-0 ma-2">
-            <profileChip :entry="getByFips(entry, 'low')" />
+          <v-col class="pa-0">
+            <v-row justify="center">
+              <profileChip :entry="getByFips(entry, 'low')" />
+            </v-row>
           </v-col>
-          <v-col class="pa-0 ma-2">
-            <profileChip :entry="getByFips(entry, 'mod')" />
+          <v-col class="pa-0">
+            <v-row justify="center">
+              <profileChip :entry="getByFips(entry, 'mod')" />
+            </v-row>
           </v-col>
-          <v-col class="pa-0 ma-2">
-            <profileChip :entry="getByFips(entry, 'high')" />
+          <v-col class="pa-0">
+            <v-row justify="center">
+              <profileChip :entry="getByFips(entry, 'high')" />
+            </v-row>
           </v-col>
         </v-row>
       </v-container>
@@ -29,7 +35,7 @@ export default {
     profileChip
   },
   props: {
-      entry: Object
+    entry: Object
   },
   methods: {
     getByFips(profile, fips_cat) {

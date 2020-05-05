@@ -1,10 +1,10 @@
 <template>
 
-      <v-container class="pa-0 px-2" fluid>
+      <v-container class="pa-0" fluid>
         <v-row justify="center">
-          <v-col cols="auto">
+          <v-col cols="auto"  class="pa-0 ma-2">
             <profileChip v-if="getByFips(this.entry, 'none')" :entry="getByFips(this.entry, 'none')" />
-            <div class="body-1 break-word ma-2" v-else>{{entry.name}}</div>
+            <div class="body-1 break-word" v-else>{{entry.name}}</div>
           </v-col>
           <v-col cols="auto" class="pa-0 ma-2" v-if="getByFips(entry, 'low')">
             <profileChip :entry="getByFips(entry, 'low')" />

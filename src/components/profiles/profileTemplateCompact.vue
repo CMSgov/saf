@@ -4,22 +4,22 @@
       <v-row align="center" dense no-gutters justify="start">
         <v-col cols="2" v-show="$vuetify.breakpoint.smAndUp">
           <h2
-            class="font-weight-bold ma-2 pa-2 break-word justify-center text-center google-font"
+            class="font-weight-bold ma-2 break-word justify-center text-center google-font"
             :class="{'subtitle-2': $vuetify.breakpoint.mdAndDown}"
           >{{ cat }}</h2>
         </v-col>
         <v-col :cols="$vuetify.breakpoint.xs ? '12' : '10'">
-          <v-container>
+          <v-container class="pa-0">
             <v-row dense no-gutters align="center" justify="start">
               <v-col cols="auto" v-show="$vuetify.breakpoint.xs">
                 <h2
-                  class="font-weight-bold subtitle-2 ma-2 pa-2 break-word justify-center text-left google-font"
+                  class="font-weight-bold subtitle-1 ma-2 break-word justify-center text-left google-font"
                 >{{ cat }}</h2>
               </v-col>
             </v-row>
             <v-card
               outlined
-              class="d-flex pr-4 pl-2 py-2 ma-2"
+              class="d-flex pr-1 pl-1 ma-2"
               :class="$vuetify.theme.dark ?'grey darken-2':'grey lighten-4'"
               color=""
               v-for="(entry, i) in getByCategory(profiles, [cat])"
