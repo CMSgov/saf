@@ -20,7 +20,7 @@ export default new Vuex.Store({
         },
       },
       {
-        text: "Control Coverage",
+        text: "Control Assessment Range",
         to: "/test",
         icon: "mdi-home",
         meta: {
