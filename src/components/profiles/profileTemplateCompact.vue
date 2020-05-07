@@ -1,17 +1,23 @@
 <template>
   <v-content class="pa-0">
     <v-card v-for="cat in categoryOrder" :key="cat" outlined class="ma-2">
-      <v-row align="center" dense no-gutters justify="start">
-        <v-col cols="2" v-show="$vuetify.breakpoint.smAndUp">
+      <v-row
+        align="center"
+        dense
+        no-gutters
+        justify="center"
+        :class="$vuetify.theme.dark ?'black':'white'"
+      >
+        <v-col cols="2" v-show="$vuetify.breakpoint.mdAndUp">
           <h2
             class="font-weight-bold ma-2 break-word justify-center text-center google-font"
-            :class="{'subtitle-2': $vuetify.breakpoint.mdAndDown}"
+            :class="{'subtitle-2': $vuetify.breakpoint.mdAndDown, 'black' : $vuetify.theme.dark, 'white' : $vuetify.theme.dark == False}"
           >{{ cat }}</h2>
         </v-col>
         <v-col :cols="$vuetify.breakpoint.xs ? '12' : '10'">
           <v-container class="pa-0">
             <v-row dense no-gutters align="center" justify="start">
-              <v-col cols="auto" v-show="$vuetify.breakpoint.xs">
+              <v-col cols="auto" v-show="$vuetify.breakpoint.smAndDown">
                 <h2
                   class="font-weight-bold subtitle-1 ma-2 break-word justify-center text-left google-font"
                 >{{ cat }}</h2>
@@ -20,12 +26,11 @@
             <v-card
               outlined
               class="d-flex pr-1 pl-1 ma-2"
-              :class="$vuetify.theme.dark ?'grey darken-2':'grey lighten-4'"
-              color=""
+              :class="$vuetify.theme.dark ?'grey darken-4':'grey lighten-5'"
               v-for="(entry, i) in getByCategory(profiles, [cat])"
               :key="i"
             >
-              <rowView v-if="$vuetify.breakpoint.smAndUp" :entry="entry" />
+              <rowView v-if="$vuetify.breakpoint.mdAndUp" :entry="entry" />
               <colView v-else :entry="entry" />
             </v-card>
           </v-container>
@@ -37,7 +42,7 @@
 
 <script>
 import rowView from "@/components/profiles/rowView.vue";
-import colView from "@/components/profiles/colView.vue"; 
+import colView from "@/components/profiles/colView.vue";
 export default {
   props: {
     profiles: Array
@@ -89,8 +94,7 @@ export default {
         }
         return 0;
       });
-    },
-    
+    }
   },
   computed: {
     moveForBottomNavStyle() {

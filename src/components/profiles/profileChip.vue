@@ -4,8 +4,9 @@
       :href="entry.link"
       target="_blank"
       class="google-font break-word text-none pa-2"
-      :color="this.$vuetify.theme.dark == true?'grey darken-4':'white'"
-      label
+      color="grey darken-3"
+      
+      :outlined="!this.$vuetify.theme.dark"
     >
       <v-img
         v-show="entry.svg"
