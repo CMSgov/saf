@@ -2,7 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import communityData from "./assets/data/communityData.json";
-import goTo from "vuetify/es5/services/goto";
+//import goTo from 'vuetify/es5/services/goto';
 
 Vue.use(Router);
 
@@ -16,7 +16,7 @@ const router = new Router({
     } else {
       scrollTo = 0;
     }
-    return goTo(scrollTo, { duration: 0 });
+    return this.$vuetify.goTo(scrollTo, { 'duration': 0 })
   },
   routes: [
     {
@@ -170,12 +170,22 @@ const router = new Router({
       },
     },
     {
-      path: "/admin/dashboard/events",
-      name: "admin-events",
-      component: () => import("@/views/Admin/Events"),
+      path: "/faq",
+      name: "faq",
+      component: () => import("@/views/Faq.vue"),
       meta: {
-        title: `Admin Dashboard | ${communityData.CommunityName}`,
+        title: `FAQs | ${communityData.communityName}`,
         color: "#0277bd",
+        requiresAuth: false
+      }
+    },
+    {
+      path:'/admin/dashboard/events',
+      name:"admin-events",
+      component:()=> import('@/views/Admin/Events'),
+      meta:{
+        title:`Admin Dashboard | ${communityData.CommunityName}`,
+        color:"#0277bd",
         requiresAuth: true,
       },
     },

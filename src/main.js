@@ -8,6 +8,7 @@ import "./style.css";
 import firebase from "@/firebase";
 import VueTabulator from "vue-tabulator";
 import VueCsvLoader from "vue-csv-loader";
+//import "material-design-icons-iconfont/dist/material-design-icons.css";
 
 Vue.config.productionTip = false;
 

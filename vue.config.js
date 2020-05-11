@@ -22,7 +22,8 @@ module.exports = {
     },
   },
   productionSourceMap: false,
-  //  publicPath: process.env.NODE_ENV === 'production'
-  //    ? '/mitre-saf/'
-  //    : '/'
+  transpileDependencies: ['vuetify']
+//  publicPath: process.env.NODE_ENV === 'production'
+//    ? '/mitre-saf/'
+//    : '/'
 };

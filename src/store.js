@@ -77,8 +77,18 @@ export default new Vuex.Store({
           showToolbar: true,
           enabled: true,
           showBottomNav: true,
-        },
+        }
       },
+      {
+        text: "FAQ",
+        to: "/faq",
+        icon: "mdi-frequently-asked-questions",
+        meta: {
+          showToolbar: true,
+          enabled: true,
+          showBottomNav: true,
+        }
+      }
     ],
     adminDrawer: true,
     adminLinks: [
