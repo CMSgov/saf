@@ -1,8 +1,16 @@
+/*
+  phase 0 mvp:
+  vuex - dynamic data, totals underneath column, columns
+  click on header - as part of filter for true/false
+  filters - control names, header names
+  default filters
+  styling
+  */
 <template>
 <div class="myowndamnwrapper">
   <h1>Vue Tabulator</h1>
-  <label>Filter: <input v-model="filterText"/></label>
-  <c-grid class="myowndamntable" :data="data" :filter="filter" :frozen-col-count="2">
+  <label>Filter: <input type="text" v-debounce:100ms.fireonempty="setFilterText"/></label>
+  <c-grid class="myowndamntable" :data="data" :frozen-col-count="2">
     <c-grid-column-group v-for="(col, index) in columns" :key="col.value" :caption="col.text">
       <c-grid-column :field="col.value" :caption="index >= 1 ? data.filter(control => control[col.value]).length.toString() : ''" :width="col.width"/>
     </c-grid-column-group>
@@ -11,8 +19,10 @@
 </template>
 
 <script>
+import { createNamespacedHelpers } from 'vuex';
 import * as cGridAll from 'vue-cheetah-grid';
-import json from "@/assets/data/mitre-saf-control-mapping.json";
+
+const { mapGetters, mapMutations } = createNamespacedHelpers('controlTable');
 
 export default {
   components: {
@@ -20,46 +30,21 @@ export default {
   },
   data() {
     return {
-      columns: this.getOptions(Object.keys(json[0])),
-      data: json,
-      filter: undefined,
-      filterText: '',
     };
   },
+  computed: {
+    ...mapGetters({
+      data: 'getData',
+      columns: 'getColumns',
+      getFilterText: 'getFilterText',
+    }),
+  },
   watch: {
-    filterText(text) {
-      this.onFilterChange(text);
-    },
   },
   methods: {
-    getOptions(columnheaders) {
-      const columnWidth = 100;
-      let columns = [
-        {
-          text: columnheaders[0],
-          value: columnheaders[0],
-          align: "start",
-          width: columnWidth,
-        },
-        {
-          text: columnheaders[1],
-          value: columnheaders[1],
-          align: "center",
-          width: columnWidth,
-        },
-      ];
-      for(let i = 2; i < columnheaders.length; i++) {
-        columns.push({ text: columnheaders[i], value: columnheaders[i], align: "center", width: columnWidth });
-      }
-      return columns;
-    },
-    onFilterChange(text) {
-      if(!text) {
-        this.filter = undefined;
-      } else {
-        this.filter = (record) => record[this.columns[0].value].toLowerCase().includes(this.filterText.toLowerCase());
-      }
-    },
+    ...mapMutations({
+      setFilterText: 'setFilterText',
+    }),
   }
 };
 </script>
