@@ -6,6 +6,12 @@
     <v-row align="center" justify="center" v-if="topic.sectionDesc">
       <p class="google-font mb-4 body-2" >{{ topic.sectionDesc }}</p>
     </v-row>
+    <v-row justify="center" v-if="topic.image">
+      <v-img
+        :src="require('@/assets/img/what-we-do/' + topic.image + '.png')"
+        class="ma-2"
+      />
+    </v-row>
     <v-row justify="center">
       <v-col
         v-for="(item, i) in topic.items"
