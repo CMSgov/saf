@@ -3,24 +3,39 @@
 import json from "@/assets/data/mitre-saf-control-mapping.json";
 
 const state = {
-  filter: '',
+  controlFilters: [],
+  profileFilters: [],
   data: json,
 };
 
 const getters = {
-  getFilterText: state => {
-    return state.filter;
+  getControls: state => {
+    return state.data.map(row => row['NIST SP 800-53 Control']);
+  },
+  getProfiles: state => {
+    return Object.keys(state.data[0]).filter(key => !["NIST SP 800-53 Control", "ALL"].includes(key));
+  },
+  getControlFilters: state => {
+    return state.controlFilters;
+  },
+  getProfileFilters: state => {
+    return state.profileFilters;
   },
   getData: state => {
-    return state.data.filter(row => row['NIST SP 800-53 Control'].toLowerCase().includes(getters.getFilterText(state).toLowerCase()));
+    const filters = getters.getControlFilters(state);
+    if(filters.length){
+      return state.data.filter(row => filters.some(filter => row['NIST SP 800-53 Control'].toLowerCase().includes(filter.toLowerCase())));
+    } else {
+      return state.data;
+    }
   },
   getColumns: state => {
-    const data = getters.getData(state);
-    if(!data.length) {
-      return [];
+    const filters = getters.getProfileFilters(state);
+    let columnheaders = Object.keys(state.data[0]);
+    if(filters.length){
+      columnheaders = columnheaders.filter(col => ['NIST SP 800-53 Control', 'ALL'].includes(col) || filters.some(filter => col.toLowerCase().includes(filter.toLowerCase())));
     }
 
-    const columnheaders = Object.keys(getters.getData(state)[0]);
     const columnWidth = 100;
     let columns = [];
     for(let column of columnheaders) {
@@ -34,8 +49,11 @@ const getters = {
 };
 
 const mutations = {
-  setFilterText(state, text) {
-    state.filter = text;
+  setControlFilters(state, filters) {
+    state.controlFilters = filters;
+  },
+  setProfileFilters(state, filters) {
+    state.profileFilters = filters;
   },
 };
 

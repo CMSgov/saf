@@ -60,11 +60,11 @@ const router = new Router({
       },
     },
     {
-      path: "/test",
-      name: "test",
-      component: () => import("./components/Test.vue"),
+      path: "/controlTable",
+      name: "controlTable",
+      component: () => import("./components/ControlTable.vue"),
       meta: {
-        title: "Test | " + communityData.communityName,
+        title: "Control Table | " + communityData.communityName,
         color: "#0277bd",
         requiresAuth: false,
       },

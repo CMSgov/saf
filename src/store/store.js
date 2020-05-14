@@ -22,7 +22,7 @@ export default new Vuex.Store({
       },
       {
         text: "Control Assessment Range",
-        to: "/test",
+        to: "/controlTable",
         icon: "mdi-home",
         meta: {
           showToolbar: true,
