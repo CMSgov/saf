@@ -4,14 +4,9 @@
       <p class="google-font ma-4 tool-header">{{ topic.sectionHeader }}</p>
     </v-row>
     <v-row align="center" justify="center" v-if="topic.sectionDesc">
-      <p class="google-font mb-4 body-2" >{{ topic.sectionDesc }}</p>
+      <p class="google-font mb-4 body-2">{{ topic.sectionDesc }}</p>
     </v-row>
-    <v-row justify="center" v-if="topic.image">
-      <v-img
-        :src="require('@/assets/img/what-we-do/' + topic.image + '.png')"
-        class="ma-2"
-      />
-    </v-row>
+    <slot name="image"></slot>
     <v-row justify="center">
       <v-col
         v-for="(item, i) in topic.items"
@@ -74,5 +69,4 @@ export default {
   font-size: 200%;
   color: #1a73e8;
 }
-
 </style>
