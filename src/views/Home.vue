@@ -74,13 +74,13 @@
       </v-row>
     </v-container>-->
 
-    <v-container fluid class="pa-0 py-2">
+    <!-- <v-container fluid class="pa-0 py-2">
       <v-row justify="center" align="center">
         <v-col md="12" lg="10" xs="12" class="py-0">
           <partners />
         </v-col>
       </v-row>
-    </v-container>
+    </v-container> -->
   </v-content>
 </template>
 
@@ -92,7 +92,7 @@ import missiondata from "@/assets/data/mission.json";
 //import aboutCommunity from "../components/home/aboutCommunity";
 //import events from "../components/home/events";
 //import featureEvents from "../components/home/featureEvents";
-import partners from "../components/common/partners";
+//import partners from "../components/common/partners";
 
 export default {
   components: {
@@ -101,7 +101,7 @@ export default {
     //aboutCommunity,
     //events,
     //featureEvents,
-    partners
+    // partners
   },
   data: () => ({
     wwd: whatwedodata.whatWeDo,

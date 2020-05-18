@@ -56,7 +56,7 @@ import faqs from "@/assets/data/faqs.json";
 export default {
   data: () => ({
     faqs: faqs.faqs,
-    panel: [0, 1, 2],
+    panel: [0, 1, 2, 3],
   })
 };
 </script>

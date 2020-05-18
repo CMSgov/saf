@@ -1,10 +1,19 @@
 <template>
   <v-container fluid>
     <wwdSection :topic="whatwedodata[0]" md="4" lg="4" xl="4" />
-    <v-divider v-if="whatwedodata[2]" />
-    <wwdSection v-if="whatwedodata[1]" :topic="whatwedodata[1]" md="3" lg="3" xl="3" />
-    <v-divider v-if="whatwedodata[2]" />
-    <wwdSection v-if="whatwedodata[2]" :topic="whatwedodata[2]" md="4" lg="4" xl="4" />
+    <v-divider />
+    <wwdSection :topic="whatwedodata[1]" md="3" lg="3" xl="3" />
+    <v-divider />
+    <wwdSection :topic="whatwedodata[2]" md="4" lg="4" xl="4">
+      <template v-slot:image>
+      <v-row justify="center">
+        <v-img
+          :src="require('@/assets/img/what-we-do/' + whatwedodata[2].image + '.png')"
+          class="ma-2"
+        />
+      </v-row>
+    </template>
+    </wwdSection>
   </v-container>
 </template>
 
