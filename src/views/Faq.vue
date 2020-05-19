@@ -34,7 +34,7 @@
 
 <script>
 import Header from "@/components/core/Header.vue";
-import faqInfo from "@/components/faqInfo.vue";
+import faqInfo from "@/components/FAQ/faqInfo.vue";
 import communityData from "@/assets/data/communityData.json";
 
 export default {

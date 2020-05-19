@@ -23,6 +23,26 @@
             </v-col>
           </v-row>
         </v-expansion-panel-content>
+        <v-expansion-panel-content v-if="faq.code" class="hidden-sm-and-down">
+          <v-row>
+            <v-col xs="3">
+              <code class="pa-2" v-if="faq.code">{{faq.code}}</code>
+            </v-col>
+          </v-row>
+        </v-expansion-panel-content>
+        <v-expansion-panel-content v-if="faq.images" class="">
+          <v-container fluid>
+            <v-row justify="center">
+              <v-col cols="auto" class="d-flex" v-for="img in faq.images" :key="img.path">
+                <v-img
+                  :src="require('@/assets/img/tools/' + img.path)"
+                  :width="img.maxwidth ? img.maxwidth : ''"
+                  class="ma-2"
+                />
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-expansion-panel-content>
       </v-expansion-panel>
     </v-expansion-panels>
 
@@ -56,7 +76,7 @@ import faqs from "@/assets/data/faqs.json";
 export default {
   data: () => ({
     faqs: faqs.faqs,
-    panel: [0, 1, 2, 3],
+    panel: [0, 1, 2, 3, 4]
   })
 };
 </script>
