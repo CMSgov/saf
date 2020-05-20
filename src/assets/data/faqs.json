@@ -32,27 +32,39 @@
     },
     {
       "question": "Which tools are supported by the CMS SAF?",
-      "answer": "The CMS SAF both creates security automation applications, and tools which encourage interoperability and standardization between other applications. Our applications include Vulcan and Heimdall, and our tools support security automation in InSpec, Splunk, SonarQube, OWASP ZAP, Fortify, and Burp Suite.",
-      "images": [
+      "answer": "",
+      "links": [
         {
-          "name": "Heimdall",
-          "path": "logo-orange-tsp.svg",
-          "maxwidth" : "128"
+          "name": "InSpec (and our InSpec profiles)",
+          "link": "https://cmsgov.github.io/saf/#/validation",
+          "desc" : " for assessing configuration settings, vulnerabilities, and least functionality"
         },
         {
-          "name": "Chef",
-          "path": "chef-2.svg",
-          "maxwidth" : "128"
+          "name": "Heimdall Server",
+          "link": "https://heimdall.mitre.org",
+          "desc" : " to visualize security data using a persistent viewer instance"
         },
         {
-          "name": "SonarQube",
-          "path": "sq.png",
-          "maxwidth" : "400"
+          "name": "Heimdall Lite",
+          "link": "https://heimdall-lite.mitre.org",
+          "desc" : " to visualize security data easily from anywhere, in-browser"
         },
         {
-          "name": "Splunk",
-          "path": "splunk-black-white-bg.png",
-          "maxwidth" : "128"
+          "name": "Heimdall_tools",
+          "link": "https://cmsgov.github.io/saf/#/validation",
+          "desc" : " to convert data from these tools (to Heimdall Data Format - HDF) to be viewed in Heimdall:",
+          "bullets" : [
+            "SonarQube",
+            "Fortify",
+            "OWASP ZAP",
+            "Burp Suite Pro",
+            "Nessus"
+          ]
+        },
+        {
+          "name": "HDF-to-Splunk",
+          "link": "http://hdf-json-to-splunk.mitre.org/",
+          "desc" : " converter to use Splunk to store HDF security data"
         }
       ]
     },

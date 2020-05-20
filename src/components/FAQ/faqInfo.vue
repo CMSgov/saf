@@ -6,15 +6,24 @@
           class="google-font"
           style="color: #1a73e8; font-weight: 200; font-size:120% "
         >{{faq.question}}</v-expansion-panel-header>
-        <v-expansion-panel-content>{{faq.answer}}</v-expansion-panel-content>
+        <v-expansion-panel-content v-if="faq.answer">
+          <v-html>{{faq.answer}}</v-html>
+        </v-expansion-panel-content>
         <v-expansion-panel-content v-if="faq.links">
-          <div v-for="link in faq.links" :key="link">
-            <a
-              :href="link.download_link ? link.download_link : link.link"
-              target="_blank"
-              :download="link.download_link"
-            >{{link.name}}</a>
-          </div>
+          <ul>
+            <li v-for="link in faq.links" :key="link">
+              <span><a
+                :href="link.download_link ? link.download_link : link.link"
+                target="_blank"
+                :download="link.download_link"
+              >{{link.name}}</a>{{link.desc}}
+              </span>
+
+              <ul v-if="link.bullets">
+                <li v-for="entry in link.bullets" :key="entry">{{entry}}</li>
+              </ul>
+            </li>
+          </ul>
         </v-expansion-panel-content>
         <v-expansion-panel-content v-if="faq.code" class="hidden-sm-and-down">
           <v-row>
@@ -30,7 +39,7 @@
             </v-col>
           </v-row>
         </v-expansion-panel-content>
-        <v-expansion-panel-content v-if="faq.images" class="">
+        <v-expansion-panel-content v-if="faq.images" class>
           <v-container fluid>
             <v-row justify="center">
               <v-col cols="auto" class="d-flex" v-for="img in faq.images" :key="img.path">
@@ -45,29 +54,6 @@
         </v-expansion-panel-content>
       </v-expansion-panel>
     </v-expansion-panels>
-
-    <!-- <v-list-item :key="faq.question">
-          <v-list-item-content>
-            <v-list-item>
-              <p
-                class="google-font"
-                style="color: #1a73e8; font-weight: 200; font-size:120% "
-              >{{faq.question}}</p>
-            </v-list-item>
-            <v-list-item class="google-font">
-              <p>{{faq.answer}}</p>
-            </v-list-item>
-            <v-list-item class="google-font" v-show="faq.link">
-              <a :href="faq.link" download>{{faq.link_text}}</a>
-            </v-list-item>
-            <v-list-item class="google-font" v-show="faq.img">
-              <p>{{faq.img}}</p>
-            </v-list-item>
-            <v-list-item v-show="faq.code">
-              <pre><code class="pa-2">{{faq.code}}</code></pre>
-            </v-list-item>
-          </v-list-item-content>
-    </v-list-item>-->
   </v-container>
 </template>
 
@@ -76,7 +62,7 @@ import faqs from "@/assets/data/faqs.json";
 export default {
   data: () => ({
     faqs: faqs.faqs,
-    panel: [0, 1, 2, 3, 4]
+    panel: []
   })
 };
 </script>
