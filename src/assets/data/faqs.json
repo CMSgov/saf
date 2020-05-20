@@ -42,16 +42,16 @@
         {
           "name": "Heimdall Server",
           "link": "https://heimdall.mitre.org",
-          "desc" : " to visualize security data using a persistent viewer instance"
+          "desc" : " to visualize security data using a full viewer instance to store results, coordinate across the development team, and more"
         },
         {
           "name": "Heimdall Lite",
           "link": "https://heimdall-lite.mitre.org",
-          "desc" : " to visualize security data easily from anywhere, in-browser"
+          "desc" : " to visualize security data easily from anywhere, using a lightweight in-browser version of Heimdall for simple use cases"
         },
         {
           "name": "Heimdall_tools",
-          "link": "https://cmsgov.github.io/saf/#/validation",
+          "link": "https://heimdall-tools.mitre.org/",
           "desc" : " to convert data from these tools (to Heimdall Data Format - HDF) to be viewed in Heimdall:",
           "bullets" : [
             "SonarQube",
