@@ -13,10 +13,10 @@
                 :href="mail_link"
               >{{ db.communityEmail }}</a>.
             </p>
-            <profileTemplateCompact :profiles="hardening.hardening" :categoryOrder="categoryOrder" />
           </div>
         </v-col>
       </v-row>
+      <profileTemplateCompact class="mx-1" :profiles="hardening.hardening" :categoryOrder="categoryOrder" />
     </v-container>
   </v-content>
 </template>
