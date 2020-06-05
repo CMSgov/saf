@@ -9,7 +9,7 @@
           "desc": "Produce detailed security testing data throughout development",
           "icon": "mdi-thumb-up",
           "svg": "",
-          "link": "validation",
+          "router_link": "validation",
           "tools": ""
         },
         {
@@ -17,7 +17,7 @@
           "desc": "Align with security baselines using our Ansible, Chef, and Terraform content",
           "icon": "mdi-security",
           "svg": "",
-          "link": "hardening",
+          "router_link": "hardening",
           "tools": ""
         },
         {
@@ -33,7 +33,7 @@
           "desc": "Learn how to write effective tests and apply them to the team's pipeline",
           "icon": "mdi-chair-school",
           "svg": "",
-          "link": "training",
+          "router_link": "training",
           "tools": ""
         }
       ]
@@ -107,7 +107,7 @@
         },
         {
           "name": "Analyzing Security Data",
-          "link": "https://heimdall-lite.mitre.orgc",
+          "link": "https://heimdall-lite.mitre.org",
           "desc": "Deep dive into the data and make decisions on how best to reduce risk",
           "svg": "",
           "icon": "",
