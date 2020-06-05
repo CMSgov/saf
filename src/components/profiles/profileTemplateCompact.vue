@@ -3,7 +3,7 @@
     <v-container fluid>
       <v-row justify="center">
         <v-col  cols="auto" v-for="cat in categoryOrder" :key="cat" outlined class="ma-0 pa-1" :class="$vuetify.breakpoint.xs ? 'flex-grow-1' : 'd-flex'">
-          <v-card class="ma-0 pa-1">
+          <v-card class="ma-0 pa-1" outlined :class="$vuetify.theme.dark ?'grey darken-4':'grey lighten-3'">
             <h2
               class="font-weight-bold break-word justify-center text-center google-font ma-1"
               :class="{'subtitle-2': $vuetify.breakpoint.mdAndDown}"
@@ -15,6 +15,7 @@
               :href="entry.link"
               target="_blank"
               class="google-font break-word text-none ma-1"
+              :class="$vuetify.theme.dark ?'grey darken-3':'grey lighten-4'"
               label
               outlined
             >
