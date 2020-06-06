@@ -4,12 +4,12 @@
       <p class="google-font primary--text mb-2" style="font-size:150%;">
         <b>Training Courses Currently Offered</b>
       </p>
-      <div v-for="(course, i) in trainingData.courses" :key="i" class="ml-2">
+      <div v-for="(course, i) in trainingData.courses" :key="i" class="ma-2">
         <a :href="course.link" target="_blank" style="font-size:125%">{{course.name}}</a>
-        <p class="google-font my-2">
-          {{course.desc}}
-          <li v-for="(bullet, j) in course.bullets" :key="j">{{bullet}}</li>
-
+        <p class="google-font ma-2">
+          {{course.desc}}</p>
+          <li v-for="(bullet, j) in course.bullets" :key="j" class="google-font ms-2">{{bullet}}</li>
+        
       </div>
       <p class="google-font primary--text my-2" style="font-size:150%;">
         <b>Upcoming Training Sessions</b>
