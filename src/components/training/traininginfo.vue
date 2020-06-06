@@ -5,16 +5,11 @@
         <b>Training Courses Currently Offered</b>
       </p>
       <div v-for="(course, i) in trainingData.courses" :key="i" class="ml-2">
-        
-          <a
-            :href="course.link"
-            target="_blank"
-            style="font-size:125%"
-          >{{course.name}}</a>
-          <p class="google-font">
-            {{course.desc}}
-            <li v-for="(bullet, j) in course.bullets" :key="j">{{bullet}}</li>
-        </p>
+        <a :href="course.link" target="_blank" style="font-size:125%">{{course.name}}</a>
+        <p class="google-font my-2">
+          {{course.desc}}
+          <li v-for="(bullet, j) in course.bullets" :key="j">{{bullet}}</li>
+
       </div>
       <p class="google-font primary--text my-2" style="font-size:150%;">
         <b>Upcoming Training Sessions</b>
@@ -22,7 +17,7 @@
       <!-- <p
         class="google-font mt-0 mb-0"
         style="font-size:95%"
-      >Trainings are listed in chronological order by date.</p> -->
+      >Trainings are listed in chronological order by date.</p>-->
       <v-row>
         <v-col
           md="12"
@@ -44,9 +39,9 @@
       </p>
       <p
         class="google-font mt-0 mb-0 ml-2"
-        style=""
+        style
       >Trainings are listed in chronological order by date.</p>
-      <p class="google-font mt-0 mb-0 ml-2" style="">
+      <p class="google-font mt-0 mb-0 ml-2" style>
         <b>Note:</b> Video recordings of these trainings will be made available once they are edited for presentability.
       </p>
       <v-row justify="center" :class="color_mode" class="ma-2">

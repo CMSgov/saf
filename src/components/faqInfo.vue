@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
-    <v-expansion-panels focusable hover tile v-model="panel">
-      <v-expansion-panel v-for="(faq, index) in faqs" :key="index" v-bind:id="index++">
+    <v-expansion-panels focusable hover tile multiple v-model="panel">
+      <v-expansion-panel v-for="(faq, index, i) in faqs" :key="i">
         <v-expansion-panel-header
           class="google-font"
           style="font-weight: 300; font-size:120% "
@@ -10,13 +10,22 @@
           <span v-html="faq.answer"></span>
         </v-expansion-panel-content>
         <v-expansion-panel-content v-if="faq.links">
-          <div v-for="(link, index) in faq.links" :key="index">
-            <a
-              :href="link.download_link ? link.download_link : link.link"
-              target="_blank"
-              :download="link.download_link"
-            >{{link.name}}</a>
-          </div>
+          <ul>
+            <li v-for="(link, i) in faq.links" :key="i">
+              <span>
+                <a
+                  :href="link.download_link ? link.download_link : link.link"
+                  target="_blank"
+                  :download="link.download_link"
+                >{{link.name}}</a>
+                {{link.desc}}
+              </span>
+
+              <ul v-if="link.bullets">
+                <li v-for="(entry, i) in link.bullets" :key="i">{{entry}}</li>
+              </ul>
+            </li>
+          </ul>
         </v-expansion-panel-content>
         <v-expansion-panel-content v-if="faq.code" class="hidden-sm-and-down">
           <v-row>
@@ -57,8 +66,14 @@
 import faqs from "@/assets/data/faqs.json";
 export default {
   data: () => ({
-    faqs: faqs.faqs,
-    panel: [0, 1]
-  })
+    faqs: faqs.faqs
+  }),
+  computed: {
+    panel() {
+      //allow for a URL to specify which faq to open by default
+      var panel = parseInt(this.$route.hash.slice(1)) - 1
+      return [panel];
+    }
+  }
 };
 </script>
