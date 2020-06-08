@@ -2,11 +2,10 @@
   <v-content class="pa-0">
     <v-container fluid>
       <v-row justify="center">
-        <v-col  :cols="$vuetify.breakpoint.xs ? '12' : 'auto'" v-for="cat in categoryOrder" :key="cat" outlined class="ma-0 pa-1" :class="$vuetify.breakpoint.xs ? 'flex-grow-1' : 'd-flex'">
+        <v-col xs="12" sm="6" md="auto" lg="auto" xl="auto" v-for="cat in categoryOrder" :key="cat" outlined class="ma-0 pa-1 " :class="$vuetify.breakpoint.smAndDown ? 'flex-grow-1' : 'd-flex'">
           <v-card class="ma-0 pa-1" outlined :class="$vuetify.theme.dark ?'grey darken-4':'grey lighten-3'">
             <h2
               class="font-weight-bold break-word justify-center text-center google-font ma-1"
-              :class="{'subtitle-2': $vuetify.breakpoint.mdAndDown}"
             >{{ cat }}</h2>
 
             <v-card
