@@ -13,10 +13,10 @@
                 :href="mail_link"
               >{{ db.communityEmail }}</a>.
             </p>
-            <profileTemplateCompact :profiles="hardening.hardening" :categoryOrder="categoryOrder" />
           </div>
         </v-col>
       </v-row>
+      <profileTemplateCompact class="mx-1" :profiles="hardening.hardening" :categoryOrder="categoryOrder" />
     </v-container>
   </v-content>
 </template>
@@ -39,9 +39,9 @@ export default {
       db: db,
       categoryOrder: [
         "Cloud Service Providers",
-        "Databases",
-        "Operating Systems",
         "Virtual Platforms",
+        "Operating Systems",
+        "Databases",
         "Web Servers"
       ]
     };

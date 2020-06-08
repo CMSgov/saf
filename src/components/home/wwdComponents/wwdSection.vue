@@ -1,7 +1,7 @@
 <template>
-  <v-container fluid>
-    <v-row align="center" justify="center">
-      <p class="google-font ma-4 tool-header primary--text">{{ topic.sectionHeader }}</p>
+  <v-container fluid class="pa-0">
+    <v-row align="center" justify="center" >
+      <p class="google-font ma-0 tool-header primary--text">{{ topic.sectionHeader }}</p>
     </v-row>
     <v-row align="center" justify="center" v-if="topic.sectionDesc">
       <p class="google-font mb-4 body-2">{{ topic.sectionDesc }}</p>

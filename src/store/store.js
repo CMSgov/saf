@@ -57,7 +57,7 @@ export default new Vuex.Store({
         meta: {
           showToolbar: true,
           enabled: true,
-          showBottomNav: true,
+          showBottomNav: false,
         },
       },
       {

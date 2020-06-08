@@ -3,7 +3,7 @@
     <template v-for="item in resources.items">
       <div :key="item.name" class="ms-2">
         <p class="google-font mb-2 wrap-list-text">
-          <b class>{{item.name}}</b>
+          <b>{{item.name}}</b>
         </p>
         <p flat class="google-font ma-2">{{item.desc}}</p>
         <p flat dense class="ma-2 google-font" v-for="entry in item.values" :key="entry.name">

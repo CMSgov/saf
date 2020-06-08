@@ -18,10 +18,10 @@
               profiles, please see our
               <router-link to="training">training material</router-link>.
             </p>
-            <profileTemplateCompact :profiles="baselines.baselines" :categoryOrder="categoryOrder" />
           </div>
         </v-col>
       </v-row>
+      <profileTemplateCompact :profiles="baselines.baselines" :categoryOrder="categoryOrder" class="mx-1"/>
     </v-container>
   </v-content>
 </template>
@@ -45,10 +45,10 @@ export default {
       isCompact: false,
       categoryOrder: [
         "Cloud Service Providers",
-        "Application Logic",
-        "Databases",
-        "Operating Systems",
         "Virtual Platforms",
+        "Operating Systems",
+        "Databases",
+        "Application Logic",
         "Web Servers"
       ]
     };

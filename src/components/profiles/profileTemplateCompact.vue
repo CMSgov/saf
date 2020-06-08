@@ -2,11 +2,10 @@
   <v-content class="pa-0">
     <v-container fluid>
       <v-row justify="center">
-        <v-col cols="auto" v-for="cat in categoryOrder" :key="cat" outlined class="ma-2">
-          <v-card class="ma-0 pa-0">
+        <v-col xs="12" sm="6" md="auto" lg="auto" xl="auto" v-for="cat in categoryOrder" :key="cat" outlined class="ma-0 pa-1 " :class="$vuetify.breakpoint.smAndDown ? 'flex-grow-1' : 'd-flex'">
+          <v-card class="ma-0 pa-1" outlined :class="$vuetify.theme.dark ?'grey darken-4':'grey lighten-3'">
             <h2
-              class="font-weight-bold break-word justify-center text-center google-font ma-2"
-              :class="{'subtitle-2': $vuetify.breakpoint.mdAndDown}"
+              class="font-weight-bold break-word justify-center text-center google-font ma-1"
             >{{ cat }}</h2>
 
             <v-card
@@ -14,23 +13,24 @@
               :key="entry.category + entry.longName + i"
               :href="entry.link"
               target="_blank"
-              class="google-font break-word text-none ma-2"
+              class="google-font break-word text-none ma-1"
+              :class="$vuetify.theme.dark ?'grey darken-3':'grey lighten-4'"
               label
               outlined
             >
-              <v-list class="">
+              <v-list class="pa-0">
                 <v-list-item class="ma-0 pa-0">
                   <v-list-item-action class="ma-0 pa-0">
                     <v-img
                       v-show="entry.svg"
                       :src="require('@/assets/img/svg/' + entry.svg + '.svg')"
                       svg-inline
-                      style="max-width: 14px; max-height: 14px;"
-                      class="mr-2"
+                      style="max-width: 28px; max-height: 28px;"
+                      class="mx-2"
                       contain
                     />
                   </v-list-item-action>
-                  <v-list-item-title class="ma-0 pa-0" style="font-size:80%">{{ entry.shortName }}</v-list-item-title>
+                  <v-list-item-title class="ml-1 pa-1 " style="font-size:90%">{{ entry.shortName }}</v-list-item-title>
                 </v-list-item>
               </v-list>
             </v-card>
