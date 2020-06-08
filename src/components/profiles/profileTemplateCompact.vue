@@ -19,7 +19,7 @@
               label
               outlined
             >
-              <v-list class="">
+              <v-list class="pa-0">
                 <v-list-item class="ma-0 pa-0">
                   <v-list-item-action class="ma-0 pa-0">
                     <v-img
@@ -27,11 +27,11 @@
                       :src="require('@/assets/img/svg/' + entry.svg + '.svg')"
                       svg-inline
                       style="max-width: 28px; max-height: 28px;"
-                      class="ma-2"
+                      class="mx-2"
                       contain
                     />
                   </v-list-item-action>
-                  <v-list-item-title class="ma-0 pa-2" style="font-size:90%">{{ entry.shortName }}</v-list-item-title>
+                  <v-list-item-title class="ml-1 pa-1 " style="font-size:90%">{{ entry.shortName }}</v-list-item-title>
                 </v-list-item>
               </v-list>
             </v-card>

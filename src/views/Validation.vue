@@ -45,10 +45,10 @@ export default {
       isCompact: false,
       categoryOrder: [
         "Cloud Service Providers",
-        "Application Logic",
-        "Databases",
-        "Operating Systems",
         "Virtual Platforms",
+        "Operating Systems",
+        "Databases",
+        "Application Logic",
         "Web Servers"
       ]
     };

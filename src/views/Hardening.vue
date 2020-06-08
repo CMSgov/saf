@@ -39,9 +39,9 @@ export default {
       db: db,
       categoryOrder: [
         "Cloud Service Providers",
-        "Databases",
-        "Operating Systems",
         "Virtual Platforms",
+        "Operating Systems",
+        "Databases",
         "Web Servers"
       ]
     };
