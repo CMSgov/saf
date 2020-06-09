@@ -40,6 +40,11 @@
           "desc" : " for assessing configuration settings, vulnerabilities, and least functionality"
         },
         {
+          "name": "InSpec Tools",
+          "link": "https://inspec-tools.mitre.org",
+          "desc": "to create and format InSpec data like profiles and results"
+        },
+        {
           "name": "Heimdall Server",
           "link": "https://heimdall.mitre.org",
           "desc" : " to visualize security data using a full viewer instance to store results, coordinate across the development team, and more"
