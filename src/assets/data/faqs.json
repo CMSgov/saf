@@ -28,8 +28,13 @@
       "links": [
         {
           "name": "InSpec (and our InSpec profiles)",
-          "link": "https://cmsgov.github.io/saf/#/validation",
+          "router_link": "/validation",
           "desc": " for assessing configuration settings, vulnerabilities, and least functionality"
+        },
+        {
+          "name": "InSpec Tools",
+          "link": "https://inspec-tools.mitre.org",
+          "desc": "to create and format InSpec data like profiles and results"
         },
         {
           "name": "Heimdall Server",

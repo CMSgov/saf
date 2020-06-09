@@ -13,7 +13,9 @@
           <ul>
             <li v-for="(link, i) in faq.links" :key="i">
               <span>
+                <router-link v-if="link.router_link" :to="link.router_link">{{link.name}}</router-link>
                 <a
+                  v-else
                   :href="link.download_link ? link.download_link : link.link"
                   target="_blank"
                   :download="link.download_link"
@@ -71,7 +73,7 @@ export default {
   computed: {
     panel() {
       //allow for a URL to specify which faq to open by default
-      var panel = parseInt(this.$route.hash.slice(1)) - 1
+      var panel = parseInt(this.$route.hash.slice(1)) - 1;
       return [panel];
     }
   }
