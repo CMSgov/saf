@@ -1,17 +1,21 @@
 <template>
   <v-container fluid>
     <v-expansion-panels focusable hover tile multiple v-model="panel">
-      <v-expansion-panel v-for="faq in faqs" :key="faq">
-        <v-expansion-panel-header
-          class="google-font"
-          style="font-weight: 200; font-size:120% "
-        >{{faq.question}}</v-expansion-panel-header>
+      <v-expansion-panel v-for="(faq, index) in faqs" :key="index">
+        <v-expansion-panel-header class="google-font" style="font-weight: 200; font-size:120% ">
+          <div>
+            <v-btn icon :to="$route.path + '#' + faq.tag[0]" class="mr-2" @click.native.stop>
+              <v-icon>mdi-link</v-icon>
+            </v-btn>
+            <span>{{index + 1}}. {{faq.question}}</span>
+          </div>
+        </v-expansion-panel-header>
         <v-expansion-panel-content v-if="faq.answer">
-          <v-html>{{faq.answer}}</v-html>
+          <p><span v-html="faq.answer"></span></p>
         </v-expansion-panel-content>
         <v-expansion-panel-content v-if="faq.links">
           <ul>
-            <li v-for="link in faq.links" :key="link">
+            <li v-for="(link, index) in faq.links" :key="index">
               <span>
                 <router-link v-if="link.router_link" :to="link.router_link">{{link.name}}</router-link>
                 <a
@@ -65,13 +69,31 @@
 import faqs from "@/assets/data/faqs.json";
 export default {
   data: () => ({
-    faqs: faqs.faqs,
+    faqs: faqs.faqs
+
   }),
   computed: {
-    panel() {
+    panel: {
+      get: function() {
       //allow for a URL to specify which faq to open by default
-      var panel = parseInt(this.$route.hash.slice(1)) - 1;
-      return [panel];
+      var panel = this.$route.hash.slice(1);
+      return [this.lookupOrder(panel)];
+      },
+      set: function(index) {
+        return [index]
+      }
+    }
+  },
+  methods : {
+    lookupOrder(name) {
+      var ord, i;
+      for(i = 0; i < this.faqs.length; i++) {
+        var faq = this.faqs[i]
+        if (faq.tag[0] == name) {
+          ord = parseInt(faq.tag[1]) - 1
+        }
+      }
+      return ord;
     }
   }
 };
