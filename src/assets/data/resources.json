@@ -56,6 +56,11 @@
           "link": "https://mitre.github.io/inspec_tools/"
         }
       ]
+    },
+    {
+      "name": "Running InSpec",
+      "desc": "(Placeholder) One of InSpec's core stengths is its deployment flexibility. InSpec can run tests on a local machine or a remote host, without installing an agent on the target.",
+      "image": "inspec-runner-locations.png"
     }
     
   ],

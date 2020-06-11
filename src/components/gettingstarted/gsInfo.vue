@@ -1,34 +1,31 @@
 <template>
   <v-container fluid>
-    <v-list>
-      <template v-for="item in resources.items">
-        <v-list-item-group :key="item.name">
-          <v-list-item-content class="ms-4">
-            <v-list-item-title
-              class="google-font mb-2 wrap-list-text"
-            >
-              <b class>{{item.name}}</b>
-            </v-list-item-title>
-            <v-list-item class="google-font my-2">{{item.desc}}</v-list-item>
-            <v-list-item dense class="ma-0" v-for="entry in item.values" :key="entry.name">
-              <span>
-                <a v-if="entry.link" :href="entry.link" target="_blank">{{entry.name}}</a>
-                <a
-                  v-if="entry.download_link"
-                  :href="entry.download_link"
-                  target="_blank"
-                  download
-                >{{entry.name}}</a>
-                <span v-show="entry.desc"> -- {{entry.desc}}</span>
-              </span>
-            </v-list-item>
-          </v-list-item-content>
-        </v-list-item-group>
-      </template>
-    </v-list>
-    <br />
+    <template v-for="(item, index) in resources.items">
+      <div :key="index" class="ms-2">
+        <p class="google-font mb-2 wrap-list-text">
+          <b>{{item.name}}</b>
+        </p>
+        <p flat class="google-font ma-2">{{item.desc}}</p>
+        <p flat dense class="ma-2 google-font" v-for="entry in item.values" :key="entry.name">
+          <span>
+            <a v-if="entry.link" :href="entry.link" target="_blank">{{entry.name}}</a>
+            <a
+              v-if="entry.download_link"
+              :href="entry.download_link"
+              target="_blank"
+              download
+            >{{entry.name}}</a>
+            <!-- <span v-show="entry.desc"> -- {{entry.desc}}</span> -->
+          </span>
+          
+        </p>
+        <v-img v-if="item.image" :src="require('@/assets/img/getting-started/' + item.image)" />
+      </div>
+    </template>
   </v-container>
 </template>
+              
+            
 
 <script>
 import communityData from "@/assets/data/communityData.json";
