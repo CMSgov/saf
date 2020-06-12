@@ -60,6 +60,16 @@ export default new Vuex.Store({
         }
       },
       {
+        text: "Implementation/Hardening",
+        to: "/implementation",
+        icon: "mdi-lock",
+        meta: {
+          showToolbar: true,
+          enabled: true,
+          showBottomNav: false
+        }
+      },
+      {
         text: "Training",
         to: "/training",
         icon: "mdi-chair-school",
