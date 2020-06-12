@@ -9,7 +9,7 @@
       > 
         <v-col md="12" lg="10" xs="12" class="py-3 my-0">
           <Header>
-            <h3 slot="title"><template v-if="$vuetify.breakpoint.xs">Implementation/<br />Hardening</template><template v-else>Implementation/Hardening</template></h3>
+            <h3 slot="title">Implementation/<br v-if="$vuetify.breakpoint.xs"/>Hardening</h3>
           </Header>
         </v-col>
       </v-row>
@@ -23,7 +23,7 @@
             <p>CMS SAF implementation and hardening content will be added to this site as it is developed.</p>
             <p class="google-font" style="font-size:150%;color: #1a73e8;">Partner Content</p>
             <p>
-              The open-source community has developed basic hardening baselines to help securely configure common system components. Our partners at MITRE are providing stewardship over these hardening baselines <a href="https://saf.mitre.org/#/hardening">here</a>. Please note that this content is not designed to align with CMS ARS controls. 
+              The open-source community has developed basic Ansible, Chef, and Terraform hardening baselines to help securely configure common system components. Our partners at MITRE are providing stewardship over these hardening baselines <a href="https://saf.mitre.org/#/hardening">here</a>. Please note that this content is not designed to align with CMS ARS controls. 
             </p>
           </v-container>
         </v-col>

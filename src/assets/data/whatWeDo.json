@@ -24,7 +24,18 @@
           "link": "https://heimdall-lite.mitre.org",
           "tools": "",
           "graphic" : "visualization_2",
-          "graphic_frame" : "visualization_frame2"
+          "graphic_frame" : "visualization_frame2.png"
+        },
+        {
+          "name": "Implementation/Hardening",
+          "desc": "Align with security baselines using Ansible, Chef, and Terraform content",
+          "icon": "",
+          "side_icon" : "lock", 
+          "svg": "",
+          "router_link": "/implementation",
+          "tools": "",
+          "graphic" : "",
+          "graphic_frame" : "cybersecurity-concept--matrix-and-padlock.jpg"
         },
         {
           "name": "Training",
@@ -35,7 +46,7 @@
           "router_link": "training",
           "tools": "",
           "graphic" : "",
-          "graphic_frame" : "demo"
+          "graphic_frame" : "demo.png"
         },
         {
           "name": "Open Source Community Stewardship",
@@ -153,8 +164,8 @@
           ]
         },
         {
-          "name": "Hardening Content",
-          "link": "https://saf.mitre.org/#/hardening",
+          "name": "Implementation/Hardening Content",
+          "router_link": "/implementation",
           "desc": "Use the SAF hardening baseline library to configure systems for security",
           "svg": "",
           "icon": "",
