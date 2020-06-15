@@ -86,7 +86,7 @@
           "path" : "inspec-runner-locations.png"
         }
       ],
-      "tag" : "code-review"
+      "tag" : "inspec-deployment"
     },
     {
       "question": "How can I use InSpec tests in my CI/CD pipeline?",
