@@ -19,12 +19,8 @@
       <v-row justify="center" align="center">
         <v-col md="12" lg="10" xs="12" class="py-0">
           <v-container fluid>
-            <p class="google-font" style="font-size:150%;color: #1a73e8;">CMS Official Content</p>
-            <p>CMS SAF implementation and hardening content will be added to this site as it is developed.</p>
-            <p class="google-font" style="font-size:150%;color: #1a73e8;">Partner Content</p>
-            <p>
-              The open-source community has developed basic Ansible, Chef, and Terraform hardening baselines to help securely configure common system components. Our partners at MITRE are providing stewardship over these hardening baselines <a href="https://saf.mitre.org/#/hardening">here</a>. Please note that this content is not designed to align with CMS ARS controls. 
-            </p>
+            <p>CMS ISPG is helping to provide stewardship over open-source community-based implementation/hardening content to help configure the security of common system components, hosted here and at other community vendor sites. Our partners at MITRE host baseline implementation/hardening content <a href="https://saf.mitre.org/#/hardening" target="_blank">here</a>. Over time, CMS will populate this page with overlays to these implementation baselines, tailored to specific CMS-policy requirements.</p>
+            
           </v-container>
         </v-col>
       </v-row>

@@ -19,7 +19,6 @@
       <v-row justify="center" align="center">
         <v-col md="12" lg="10" xs="12" class="py-0">
           <v-container fluid>
-            <p class="google-font" style="font-size:150%;color: #1a73e8;">Partner Training</p>
             <p>
               InSpec is an open-source and precise scripting framework to help you test the functionality and security of your systems. Many profiles are available as part of the open source community, with CMS-tailored profiles located on our
               <router-link to="/validation">Validation</router-link> page. Due to the intuitive nature of the InSpec language, developers and security professionals can spend less time debating about
