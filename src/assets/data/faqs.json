@@ -9,7 +9,7 @@
           "download_link": "CMS_SAF_ARS_Assessment_Range_04232020.pdf"
         }
       ],
-      "tag" : ["ars-range", "1"]
+      "tag" : "ars-range"
     },
     {
       "question": "How are ARS (NIST SP 800-53) Security Control associations included in the assessment tests used in this framework?",
@@ -20,7 +20,7 @@
           "download_link": "CMS_InSpec_Profiles_and_HDF_include_NIST_SP-800-53_associations_04232020.pdf"
         }
       ],
-      "tag" : ["security-control-associations", "2"]
+      "tag" : "security-control-associations"
     },
     {
       "question": "What is a recommended best practice for Code Review?",
@@ -31,7 +31,7 @@
           "download_link": "SAF_Code_Review_Recommendations.pdf"
         }
       ],
-      "tag" : ["code-review", "3"]
+      "tag" : "code-review"
     },
     {
       "question": "Which tools are supported by the CMS SAF?",
@@ -75,7 +75,18 @@
           "desc" : " converter to use Splunk to store HDF security data"
         }
       ],
-      "tag" : ["tools", "4"]
+      "tag" : "tools"
+    },
+    {
+      "question": "How is InSpec deployed?",
+      "answer": "It is intended and recommended that InSpec be installed on a \"runner\" host (such as a DevOps orchestration server, an administrative management system, or a developer's workstation/laptop) and run against the target remotely. However, InSpec may be deployed in various ways depending on the needs of the user:",
+      "images": [
+        {
+          "name" : "InSpec Deployment Diagram",
+          "path" : "inspec-runner-locations.png"
+        }
+      ],
+      "tag" : "code-review"
     },
     {
       "question": "How can I use InSpec tests in my CI/CD pipeline?",
@@ -87,7 +98,7 @@
           "link": "https://mitre-inspec-advanced-developer.netlify.com/course/4.html"
         }
       ],
-      "tag" : ["pipeline", "5"]
+      "tag" : "pipeline"
     },
     {
       "question": "What is the difference between Chef InSpec and CINC Auditor?",
@@ -106,7 +117,7 @@
           "link": "https://www.chef.io/subscription-model-faq/"
         }
       ],
-      "tag" : ["inspec-cinc", "6"]
+      "tag" : "inspec-cinc"
     }
   ]
 }
