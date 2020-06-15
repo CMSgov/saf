@@ -4,7 +4,7 @@
       <v-expansion-panel v-for="(faq, index) in faqs" :key="index">
         <v-expansion-panel-header class="google-font" style="font-weight: 300; font-size:120% ">
           <div>
-            <v-btn icon :to="$route.path + '#' + faq.tag[0]" class="mr-2" @click.native.stop>
+            <v-btn icon :to="$route.path + '#' + faq.tag" class="mr-2" @click.native.stop>
               <v-icon>mdi-link</v-icon>
             </v-btn>
             <span>{{index + 1}}. {{faq.question}}</span>
