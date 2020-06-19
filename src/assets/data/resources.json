@@ -56,34 +56,6 @@
           "link": "https://mitre.github.io/inspec_tools/"
         }
       ]
-    },
-    {
-      "name": "Running InSpec",
-      "desc": "It is intended and recommended that InSpec be installed on a \"runner\" host (such as a DevOps orchestration server, an administrative management system, or a developer's workstation/laptop) and run against the target remotely. However, InSpec may be deployed in various ways depending on the needs of the user:",
-      "image": "inspec-runner-locations.png"
-    }
-    
-  ],
-  "videos": [
-    {
-      "name": "Inspec: Human Readable, Automated Compliance",
-      "link": "https://www.youtube.com/embed/IaUjpJ5SUAA"
-    },
-    {
-      "name": "Inspec: Human Readable, Automated Compliance",
-      "link": "https://www.youtube.com/embed/IaUjpJ5SUAA"
-    },
-    {
-      "name": "Inspec: Human Readable, Automated Compliance",
-      "link": "https://www.youtube.com/embed/IaUjpJ5SUAA"
-    },
-    {
-      "name": "Inspec: Human Readable, Automated Compliance",
-      "link": "https://www.youtube.com/embed/IaUjpJ5SUAA"
-    },
-    {
-      "name": "Inspec: Human Readable, Automated Compliance",
-      "link": "https://www.youtube.com/embed/IaUjpJ5SUAA"
     }
   ]
 }
