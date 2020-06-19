@@ -77,17 +77,7 @@
       ],
       "tag" : "tools"
     },
-    {
-      "question": "How is InSpec deployed?",
-      "answer": "It is intended and recommended that InSpec be installed on a \"runner\" host (such as a DevOps orchestration server, an administrative management system, or a developer's workstation/laptop) and run against the target remotely. However, InSpec may be deployed in various ways depending on the needs of the user:",
-      "images": [
-        {
-          "name" : "InSpec Deployment Diagram",
-          "path" : "inspec-runner-locations.png"
-        }
-      ],
-      "tag" : "inspec-deployment"
-    },
+    
     {
       "question": "How can I use InSpec tests in my CI/CD pipeline?",
       "answer": "InSpec tests can be integrated as part of a test battery in your favorite CI platform. For example, you can add InSpec testing to your Travis CI file to run InSpec automatically. For further details, please see our Advanced InSpec Developer's Course.",
