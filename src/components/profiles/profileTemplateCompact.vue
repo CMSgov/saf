@@ -1,6 +1,7 @@
 <template>
   <v-content class="pa-0">
     <v-card v-for="cat in categoryOrder" :key="cat" outlined class="ma-2">
+      
       <v-row
         align="center"
         dense
@@ -16,10 +17,10 @@
         </v-col>
         <v-col :cols="$vuetify.breakpoint.xs ? '12' : '10'">
           <v-container class="pa-0">
-            <v-row dense no-gutters align="center" justify="start">
+            <v-row dense no-gutters align="center" justify="center">
               <v-col cols="auto" v-show="$vuetify.breakpoint.smAndDown">
                 <h2
-                  class="font-weight-bold subtitle-1 ma-2 break-word justify-center text-left google-font"
+                  class="font-weight-bold text-h6 ma-2 break-word justify-center text-center google-font"
                 >{{ cat }}</h2>
               </v-col>
             </v-row>
