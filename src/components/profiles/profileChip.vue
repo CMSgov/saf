@@ -5,15 +5,13 @@
       target="_blank"
       class="google-font break-word text-none pa-2"
       color="grey darken-3"
-      
       :outlined="!this.$vuetify.theme.dark"
     >
       <v-img
         v-show="entry.svg"
         :src="require('@/assets/img/svg/' + entry.svg + '.svg')"
         svg-inline
-        max-width="15"
-        max-height="15"
+        style="max-width:15px; max-height:15px;"
         class="mr-2"
       />
       {{ entry.name }}

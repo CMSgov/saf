@@ -3,19 +3,12 @@
     <v-app-bar-nav-icon class="d-md-none d-lg-none" @click="toggleDrawer"></v-app-bar-nav-icon>
 
     <v-toolbar-title class="px-0">
-      <v-container fluid>
-        <v-row align="center">
-          <v-col class="pl-2">
-            
-            <router-link
-              :to="{ name: 'home'}"
-              class="google-font"
-              style="text-decoration:none;font-size:110%"
-              :class="this.$vuetify.theme.dark?'whiteText':'blackText'"
-            >{{communityData.communityName}}</router-link>
-          </v-col>
-        </v-row>
-      </v-container>
+      <router-link
+        :to="{ name: 'home'}"
+        class="google-font"
+        style="text-decoration:none;font-size:110%"
+        :class="this.$vuetify.theme.dark?'whiteText':'blackText'"
+      >{{communityData.communityName}}</router-link>
     </v-toolbar-title>
 
     <div class="flex-grow-1"></div>
