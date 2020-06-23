@@ -1,7 +1,9 @@
 <template>
   <v-row dense align="center" class="pa-1">
-    <v-col :cols="getByFips(entry, 'none') ? '12' : '4'" class="pa-0">
-      <profileChip v-if="getByFips(entry, 'none')" :entry="getByFips(entry, 'none')" class="pa-0" />
+    <v-col cols="4" class="pa-0">
+      <v-row justify="start" v-if="getByFips(entry, 'none')">
+        <profileChip :entry="getByFips(entry, 'none')" class="pa-0 ml-3" />
+      </v-row>
       <div class="body-1 break-word pa-0" v-else>{{entry.name}}</div>
     </v-col>
     <v-col cols="8" v-if="!getByFips(entry, 'none')" class="pa-0">
@@ -55,3 +57,4 @@ export default {
   }
 };
 </script>
+
