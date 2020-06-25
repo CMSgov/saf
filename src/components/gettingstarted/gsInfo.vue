@@ -19,7 +19,7 @@
           </span>
           
         </p>
-        <v-img v-if="item.image" :src="require('@/assets/img/getting-started/' + item.image)" />
+        <v-img v-if="item.image" :src="require('@/assets/img/tools/' + item.image)" />
       </div>
     </template>
   </v-container>
