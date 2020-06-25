@@ -1,5 +1,5 @@
 module.exports = {
-  chainWebpack: (config) => {
+  chainWebpack: config => {
     config.module
       .rule("csv")
       .test(/\.csv$/)
@@ -11,6 +11,9 @@ module.exports = {
         skipEmptyLines: true,
       })
       .end();
+    config.plugin('VuetifyLoaderPlugin').tap(args => [{
+      progressiveImages: true
+    }]);
   },
   pwa: {
     name: "MITRE SAF",
@@ -22,7 +25,7 @@ module.exports = {
     },
   },
   productionSourceMap: false,
-  transpileDependencies: ["vuetify"],
+  transpileDependencies: ["vuetify", "dashify", "vue-papa-parse", "vue-tabulator", "register-service-worker"],
   //  publicPath: process.env.NODE_ENV === 'production'
   //    ? '/mitre-saf/'
   //    : '/'

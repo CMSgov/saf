@@ -1,3 +1,5 @@
+import 'babel-polyfill';
+import "intersection-observer";
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
@@ -9,7 +11,14 @@ import firebase from "@/firebase";
 import vueDebounce from 'vue-debounce';
 import VueTabulator from "vue-tabulator";
 import VueCsvLoader from "vue-csv-loader";
+import cssVars from "css-vars-ponyfill";
 //import "material-design-icons-iconfont/dist/material-design-icons.css";
+
+cssVars({
+  watch: true,
+});
+
+IntersectionObserver.prototype.POLL_INTERVAL = 100; // time in ms
 
 Vue.config.productionTip = false;
 
