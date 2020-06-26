@@ -123,16 +123,16 @@ const router = new Router({
         requiresAuth: false
       }
     },
-    // {
-    //   path: "/hardening",
-    //   name: "hardening",
-    //   component: () => import("@/views/Hardening.vue"),
-    //   meta: {
-    //     title: `Hardening Profiles | ${communityData.communityName}`,
-    //     color: "#0277bd",
-    //     requiresAuth: false
-    //   }
-    // },
+    {
+      path: "/implementation",
+      name: "implementation",
+      component: () => import("@/views/Implementation.vue"),
+      meta: {
+        title: `Implementation/Hardening | ${communityData.communityName}`,
+        color: "#0277bd",
+        requiresAuth: false
+      }
+    },
     {
       path: "/gettingstarted",
       name: "gettingstarted",

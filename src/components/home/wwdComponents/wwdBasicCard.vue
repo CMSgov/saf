@@ -33,7 +33,7 @@
       />
       <v-img
         v-else-if="item.graphic_frame"
-        v-bind:src="require('@/assets/img/gif/' + item.graphic_frame + '.png')"
+        v-bind:src="require('@/assets/img/gif/' + item.graphic_frame)"
         class="ma-2"
         max-height="328"
       />

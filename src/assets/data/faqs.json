@@ -8,7 +8,8 @@
           "name": "CMS SAF ARS Assessment Range",
           "download_link": "CMS_SAF_ARS_Assessment_Range_04232020.pdf"
         }
-      ]
+      ],
+      "tag" : "ars-range"
     },
     {
       "question": "How are ARS (NIST SP 800-53) Security Control associations included in the assessment tests used in this framework?",
@@ -18,7 +19,8 @@
           "name": "InSpec, HDF, and NIST SP 800-53 Security Controls",
           "download_link": "CMS_InSpec_Profiles_and_HDF_include_NIST_SP-800-53_associations_04232020.pdf"
         }
-      ]
+      ],
+      "tag" : "security-control-associations"
     },
     {
       "question": "What is a recommended best practice for Code Review?",
@@ -28,7 +30,8 @@
           "name": "SAF Code Review Recommendations",
           "download_link": "SAF_Code_Review_Recommendations.pdf"
         }
-      ]
+      ],
+      "tag" : "code-review"
     },
     {
       "question": "Which tools are supported by the CMS SAF?",
@@ -71,8 +74,10 @@
           "link": "http://hdf-json-to-splunk.mitre.org/",
           "desc" : " converter to use Splunk to store HDF security data"
         }
-      ]
+      ],
+      "tag" : "tools"
     },
+    
     {
       "question": "How can I use InSpec tests in my CI/CD pipeline?",
       "answer": "InSpec tests can be integrated as part of a test battery in your favorite CI platform. For example, you can add InSpec testing to your Travis CI file to run InSpec automatically. For further details, please see our Advanced InSpec Developer's Course.",
@@ -82,7 +87,27 @@
           "name": "InSpec Pipeline Integration Example",
           "link": "https://mitre-inspec-advanced-developer.netlify.com/course/4.html"
         }
-      ]
+      ],
+      "tag" : "pipeline"
+    },
+    {
+      "question": "What is the difference between Chef InSpec and CINC Auditor?",
+      "answer": "<p> All Chef software source code, including Chef InSpec, is open source under the Apache-2.0 license. </p> <p> Use of Chef's binary builds requires a paid license for use in production. </p> <p> Use of Chef binaries and releases in development, test, evaluation and demonstration do not require a formal support agreement. </p> <p> This is a common model in Enterprise Open Source software companies. The first major example of this was when Red Hat updated its licensing model. The open-community created the CentOS project to produce distributions of the RedHat OSS licensed code as a fully open-source software distribution. </p> <p> For more information about Chef's goals and intentions for this update, please see <a href='https://blog.chef.io/chef-software-announces-the-enterprise-automation-stack/' >https://blog.chef.io/chef-software-announces-the-enterprise-automation-stack/</a > and the <a href='https://www.chef.io/subscription-model-faq/' >https://www.chef.io/subscription-model-faq/</a >. </p> <p> Chef Inc. is working with the Cinc Project and the OSU Open Source Lab in support of the open source community. Chef and Cinc have worked hard to ensure that both the commercial-support and community-support model is easy for the end-user community. </p> <p> Cinc project is creating community distributions that follow the Apache-2.0 and Chef End User License Agreement (EULA) for the community to use freely and without a license. </p> <p> If you need Chef support for production use and deployment of Chef binaries, please <a href='https://pages.chef.io/2020-OSS-LandingPage.html' >https://pages.chef.io/2020-OSS-LandingPage.html</a > about their various options. </p> <p> The Cinc project is not a fork, the Cinc and Chef binaries are functionally identical and build from the exact same OSS code on GitHub. </p> <p> The Cinc distributions remove all trademarked and Chef owned intellectual property and images, etc. This makes them compliant with the Chef Software Trademark policy and EULA, and provides the community with a freely distributable and purely open-source option to use Chef's open source technology. </p> <p> The <a href='https://cinc.sh/goals/'>Cinc project's goals</a> are to provide the community with a freely distributable and purely open-source option to use Chef's open source technology. </p>",
+      "links": [
+        {
+          "name": "CINC Project",
+          "link": "https://cinc.sh"
+        },
+        {
+          "name": "Chef EULA Changes",
+          "link": "https://blog.chef.io/chef-software-announces-the-enterprise-automation-stack/"
+        },
+        {
+          "name": "Chef Subscription Model FAQ",
+          "link": "https://www.chef.io/subscription-model-faq/"
+        }
+      ],
+      "tag" : "inspec-cinc"
     }
   ]
 }
