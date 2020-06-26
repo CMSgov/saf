@@ -26,6 +26,10 @@
               >{{ db.communityEmail }}</a>. If you are interested in developing and contributing your own
               profiles, please see our links to Training material.
             </p>
+            <p>
+              All assessment tests under SAF are associated with CMS ARS 3.1 (NIST SP 800-53) Security Controls. Explore these associations in this
+              <router-link to="control-table">Control Assessment Range table</router-link>!
+            </p>
             <profileTemplateCompact :profiles="profiles.profiles" />
           </div>
         </v-col>
