@@ -12,7 +12,7 @@
     >
       <!--<toolBlock v-if="item.tools" :tools="item.tools" />-->
 
-      <v-icon v-if="item.icon" large style="font-size:300%" class="mt-4" :color="hover && (item.router_link || item.link) ? '#1a73e8' : ''">{{ item.icon }}</v-icon>
+      <v-icon v-if="item.icon" large style="font-size:300%" class="mt-4" :color="hover && (item.router_link || item.link) ? '#1a73e8' : ''">mdi-{{ item.icon }}</v-icon>
       <!-- <v-fade-transition v-if="item.graphic" mode="out-in">
       <v-img
         v-on:mouseover="mouseOverCheck = current"
