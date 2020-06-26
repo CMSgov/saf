@@ -164,7 +164,7 @@
           ]
         },
         {
-          "name": "Implementation/Hardening Content",
+          "name": "Implementation​/​Hardening Content",
           "router_link": "/implementation",
           "desc": "Use the SAF hardening baseline library to configure systems for security",
           "svg": "",
