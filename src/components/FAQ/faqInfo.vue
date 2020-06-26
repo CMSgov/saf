@@ -33,13 +33,13 @@
             </li>
           </ul>
         </v-expansion-panel-content>
-        <v-expansion-panel-content v-if="faq.code" class="hidden-sm-and-down">
+        <!-- <v-expansion-panel-content v-if="faq.code" class="hidden-sm-and-down">
           <v-row>
             <v-col xs="3">
               <code class="pa-2" v-if="faq.code">{{faq.code}}</code>
             </v-col>
           </v-row>
-        </v-expansion-panel-content>
+        </v-expansion-panel-content> -->
         <v-expansion-panel-content v-if="faq.images" class="pa-0 ma-0">
           <v-container fluid class="ma-0 pa-0">
             <v-row justify="center" class="ma-0 pa-0">
