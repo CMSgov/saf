@@ -11,7 +11,7 @@
       >{{communityData.communityName}}</router-link>
     </v-toolbar-title>
 
-    <div class="flex-grow-1"></div>
+    <v-spacer />
     <v-btn
       v-for="(link, i) in metalinks"
       :key="i"
