@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <v-container class="d-flex flex-wrap flex-column">
+    <v-container class="d-flex flex-wrap flex-column ma-0 pa-0" fluid>
       <v-row>
         <v-col cols="12" sm="6">
           <v-combobox
@@ -271,13 +271,9 @@ export default {
 .wrapper {
   width: 100%;
 
-  .container {
-    padding: 0;
-
-    .checkbox {
+  .container .checkbox {
       font-size: 30px;
       vertical-align: sub;
-    }
   }
 }
 </style>
