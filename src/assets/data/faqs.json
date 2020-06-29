@@ -1,12 +1,12 @@
 {
   "faqs": [
     {
-      "question": "How many ARS controls are assessed under the CMS SAF?",
-      "answer": "Currently, about 121 CMS ARS 3.1 security controls are assessed under this framework. Note that assessment coverage varies based on the component type. For more information, click here:",
+      "question": "How many ARS (NIST SP 800-53) security controls are assessed under the CMS SAF?",
+      "answer": "Currently, about 121 CMS ARS 3.1 (NIST SP 800-53) security controls are assessed under this framework. Note that assessment coverage varies based on the component type. For more information, explore this Control Assessment Range table!",
       "links": [
         {
-          "name": "CMS SAF ARS Assessment Range",
-          "download_link": "CMS_SAF_ARS_Assessment_Range_04232020.pdf"
+          "name": "Control Assessment Range table",
+          "router_link": "/control-table"
         }
       ],
       "tag" : "ars-range"

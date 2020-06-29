@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import controlTable from "./modules/controlTable.module";
 
 Vue.use(Vuex);
 
@@ -170,5 +171,8 @@ export default new Vuex.Store({
     ADsetDrawer: (state, payload) => (state.adminDrawer = payload),
     ADtoggleDrawer: state => (state.adminDrawer = !state.adminDrawer)
   },
-  actions: {}
+  actions: {},
+  modules: {
+    controlTable,
+  },
 });

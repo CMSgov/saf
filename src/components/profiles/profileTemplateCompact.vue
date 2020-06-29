@@ -12,7 +12,7 @@
         <v-col cols="2" v-show="$vuetify.breakpoint.mdAndUp">
           <h2
             class="font-weight-bold ma-2 break-word justify-center text-center google-font"
-            :class="{'subtitle-2': $vuetify.breakpoint.mdAndDown, 'black' : $vuetify.theme.dark, 'white' : $vuetify.theme.dark == False}"
+            :class="{'subtitle-2': $vuetify.breakpoint.mdAndDown, 'black' : $vuetify.theme.dark, 'white' : !$vuetify.theme.dark}"
           >{{ cat }}</h2>
         </v-col>
         <v-col :cols="$vuetify.breakpoint.xs ? '12' : '10'">
