@@ -1,6 +1,6 @@
 <template>
-  <v-container fluid class="pa-0">
-    <v-row align="center" class="pa-0">
+  <v-container fluid class="py-0">
+    <v-row align="center">
       <!-- <v-col md="3" sm="5">
         <v-img
           :src="require('@/assets/img/home.svg')"
