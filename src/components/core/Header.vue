@@ -1,12 +1,10 @@
 <template>
-  <v-container fluid>
-    <v-row align="center">
-      <v-col md="12" sm="12" cols="12">
-        <p class="google-font break-word" style="color: #1a73e8; font-weight: 350; font-size:200%">
-          <slot name="title"></slot>
-        </p>
-        <slot name="subtitle" class="google-font mt-0" style="font-size:120%"></slot>
-      </v-col>
-    </v-row>
-  </v-container>
+  <div>
+    <div class="google-font primary--text pa-0 ma-0" style="font-weight: 350; font-size: 2.0rem">
+      <slot name="title"></slot>
+    </div>
+    <div class="google-font ma-0 pa-0" style="font-size: 1.0rem">
+      <slot name="subtitle"></slot>
+    </div>
+  </div>
 </template>
