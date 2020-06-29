@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <v-container class="d-flex flex-wrap flex-column">
+    <v-container fluid class="d-flex flex-wrap flex-column ma-0 pa-0">
       <v-row>
         <v-col cols="12" sm="6">
           <v-combobox
@@ -108,7 +108,7 @@
             <v-row dense>
               <v-col>
                 <v-card class="d-flex justify-center" dense flat tile>Legend</v-card>
-                <v-divider class="" />
+                <v-divider class />
               </v-col>
             </v-row>
             <v-row dense>
@@ -119,7 +119,7 @@
                 :key="index"
                 class="pa-0"
               >
-                <div class="px-2 ma-1 " :style="'border-left:1px solid #a88132'">
+                <div class="px-2 ma-1" :style="'border-left:1px solid #a88132'">
                   <p class="ma-0" style="font-size:0.9rem">{{entry.name}}</p>
                   <span style="font-size:0.8rem" v-html="entry.desc" />
                 </div>
@@ -174,7 +174,7 @@ export default {
       set(val) {
         this.setProfileFilters(val);
       }
-    },
+    }
   },
   methods: {
     ...mapMutations({
@@ -200,7 +200,7 @@ export default {
           defaultBgColor({ row, col }) {
             // change the color of the checked row.
             // '-3' since the row value given is for the displayed table (we have 3 header rows) whereas the data index starts at 0
-            if (that.data[row-3][that.columns[col].value] === true) {
+            if (that.data[row - 3][that.columns[col].value] === true) {
               return "#4caf50";
             } else if (row % 2) {
               return "#253341";
@@ -210,7 +210,7 @@ export default {
           },
           borderColor: "#2f4154",
           frozenRowsColor: "white",
-          frozenRowsBgColor({col}) {
+          frozenRowsBgColor({ col }) {
             if (col !== 0 && that.columns[col].checkmark !== "☒") {
               return "#a88132";
             }
@@ -223,11 +223,11 @@ export default {
           checkbox: {
             checkBgColor: "#35495e",
             borderColor: "#35495e"
-          },
+          }
         });
       } else {
         return materialDesignTheme.extends({
-          color({col}) {
+          color({ col }) {
             if (col === 0) {
               return "black";
             }
@@ -236,7 +236,7 @@ export default {
           defaultBgColor({ row, col }) {
             // change the color of the checked row.
             // '-3' since the row value given is for the displayed table (we have 3 header rows) whereas the data index starts at 0
-            if (that.data[row-3][that.columns[col].value] === true) {
+            if (that.data[row - 3][that.columns[col].value] === true) {
               return "#4caf50";
             } else if (row % 2) {
               return "#f9f9f9";
@@ -246,7 +246,7 @@ export default {
           },
           borderColor: "#dddddd",
           frozenRowsColor: "black",
-          frozenRowsBgColor({col}) {
+          frozenRowsBgColor({ col }) {
             if (col !== 0 && that.columns[col].checkmark !== "☒") {
               return "#deaf50";
             }
@@ -259,10 +259,10 @@ export default {
           checkbox: {
             checkBgColor: "#35495e",
             borderColor: "#35495e"
-          },
+          }
         });
       }
-    },
+    }
   }
 };
 </script>
@@ -271,13 +271,9 @@ export default {
 .wrapper {
   width: 100%;
 
-  .container {
-    padding: 0;
-
-    .checkbox {
-      font-size: 30px;
-      vertical-align: sub;
-    }
+  .container .checkbox {
+    font-size: 30px;
+    vertical-align: sub;
   }
 }
 </style>
