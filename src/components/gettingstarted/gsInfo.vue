@@ -2,11 +2,11 @@
   <v-container fluid>
     <template v-for="(item, index) in resources.items">
       <div :key="index" class="ms-2">
-        <p class="google-font mb-2 wrap-list-text">
+        <p class=" mb-2 wrap-list-text">
           <b>{{item.name}}</b>
         </p>
-        <p flat class="google-font ma-2">{{item.desc}}</p>
-        <p flat dense class="ma-2 google-font" v-for="entry in item.values" :key="entry.name">
+        <p flat class=" ma-2">{{item.desc}}</p>
+        <p flat dense class="ma-2 " v-for="entry in item.values" :key="entry.name">
           <span>
             <a v-if="entry.link" :href="entry.link" target="_blank">{{entry.name}}</a>
             <a

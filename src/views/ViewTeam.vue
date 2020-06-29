@@ -33,8 +33,8 @@
                                         >
                                     </v-avatar>
                                     
-                                    <p class="mt-3 mb-0 google-font mb-0" style="font-size:120%">{{teamData.name}}</p>
-                                    <p class="mt-1 mb-0 google-font mt-0" style="font-size:100%">{{teamData.designation}}</p>
+                                    <p class="mt-3 mb-0  mb-0" style="font-size:120%">{{teamData.name}}</p>
+                                    <p class="mt-1 mb-0  mt-0" style="font-size:100%">{{teamData.designation}}</p>
 
                                     <v-chip class="mt-2" small>{{teamData.role}}</v-chip>
 
@@ -50,10 +50,10 @@
 
                                 <v-col cols="12" md="9" class="elevation-1 py-5 text-left pa-5" v-if="showTeamData" :class="this.$vuetify.theme.dark == true?'grey darken-4':'white'">
                                     <p class="mb-0"><b>Bio</b></p>
-                                    <p class="mt-1 mb-0 google-font mt-0" style="font-size:110%">{{teamData.bio}}</p>
+                                    <p class="mt-1 mb-0  mt-0" style="font-size:110%">{{teamData.bio}}</p>
 
                                     <p class="mb-0 mt-3"><b>Social Links</b></p>
-                                    <p class="mt-1 mb-0 google-font mt-0" style="font-size:110%">
+                                    <p class="mt-1 mb-0  mt-0" style="font-size:110%">
                                         <span style="cursor: pointer;" v-for="(slink,i) in teamData.socialLinks" :key="i" class="mr-1">
                                             <a v-if="slink" :href="slink" target="_blank" style="text-decoration:none;">
                                                 <v-chip small style="text-transform: uppercase;">{{i}}</v-chip>
@@ -74,7 +74,7 @@
                             <v-container fluid>
                                 <v-row class="elevation-1 pa-3 white">
                                     <v-col>
-                                        <h1 class="google-font">User {{$route.params.id}} Not Found</h1>
+                                        <h1 class="">User {{$route.params.id}} Not Found</h1>
                                     </v-col>
                                 </v-row>
                             </v-container>

@@ -6,8 +6,8 @@
       </v-list-item-avatar>
 
       <v-list-item-content>
-        <v-list-item-title class="google-font mb-0" v-text="data.data.name"></v-list-item-title>
-        <v-list-item-subtitle class="google-font mb-0 mt-0">{{ data.data.designation }}</v-list-item-subtitle>
+        <v-list-item-title class=" mb-0" v-text="data.data.name"></v-list-item-title>
+        <v-list-item-subtitle class=" mb-0 mt-0">{{ data.data.designation }}</v-list-item-subtitle>
         <socialMediaDetails class="pl-0 ml-0" :data="{data:data.data.socialLinks}" />
       </v-list-item-content>
     </v-list-item>

@@ -5,7 +5,7 @@
     <v-toolbar-title class="px-0">
       <router-link
         :to="{ name: 'home'}"
-        class="google-font"
+        class=""
         style="text-decoration:none;font-size:110%"
         :class="this.$vuetify.theme.dark?'whiteText':'blackText'"
       >{{communityData.communityName}}</router-link>
@@ -16,7 +16,7 @@
       v-for="(link, i) in metalinks"
       :key="i"
       :to="link.to"
-      class="ml-2 google-font hidden-sm-and-down"
+      class="ml-2  hidden-sm-and-down"
       style="text-transform: capitalize;"
       text
       @click="onClick($event, link)"

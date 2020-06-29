@@ -57,13 +57,13 @@
                           <v-avatar size="100">
                             <img :src="(item.image.length>0)?item.image:require('@/assets/img/common/avatar.png')" alt />
                           </v-avatar>
-                          <p class="mt-3 mb-0 google-font mb-0" style="font-size:120%">{{item.name}}</p>
+                          <p class="mt-3 mb-0  mb-0" style="font-size:120%">{{item.name}}</p>
                           <p
-                            class="mt-0 mb-0 google-font mt-0"
+                            class="mt-0 mb-0  mt-0"
                             style="font-size:70%"
                           >{{item.designation}}</p>
                           <p
-                            class="mt-0 mb-0 google-font mt-0"
+                            class="mt-0 mb-0  mt-0"
                             style="font-size:80%"
                           >{{item.company.name}}</p>
                         </div>

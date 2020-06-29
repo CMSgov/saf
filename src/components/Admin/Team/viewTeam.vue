@@ -12,8 +12,8 @@
                 :lazy-src="getImgUrl(teamData.image)" alt=""
                 >
             </v-avatar>
-            <p class="mt-3 mb-0 google-font mb-0" style="font-size:120%">{{teamData.name}}</p>
-            <p class="mt-0 mb-0 google-font mt-0" style="font-size:80%">{{teamData.designation}}</p>
+            <p class="mt-3 mb-0  mb-0" style="font-size:120%">{{teamData.name}}</p>
+            <p class="mt-0 mb-0  mt-0" style="font-size:80%">{{teamData.designation}}</p>
             <v-chip class="ma-1" x-small>{{teamData.role}}</v-chip>
             <!-- <v-chip class="ma-1" x-small>{{teamData.visible}}</v-chip>
             <v-chip class="ma-1" x-small>{{teamData.active}}</v-chip> -->
@@ -24,7 +24,7 @@
 
       <v-card v-if="dialog" color="">
         <v-card-title
-          class="px-5 google-font"
+          class="px-5 "
           primary-title
         >
          {{teamData.name}} 
@@ -40,8 +40,8 @@
                             :lazy-src="getImgUrl(teamData.image)" alt=""
                             >
                         </v-avatar>
-                        <p class="mt-3 mb-0 google-font mb-0" style="font-size:120%">{{teamData.name}}</p>
-                        <p class="mt-1 mb-0 google-font mt-0" style="font-size:100%">{{teamData.designation}}</p>
+                        <p class="mt-3 mb-0  mb-0" style="font-size:120%">{{teamData.name}}</p>
+                        <p class="mt-1 mb-0  mt-0" style="font-size:100%">{{teamData.designation}}</p>
 
                         <v-chip class="mt-2" small>{{teamData.role}}</v-chip>
 
@@ -58,19 +58,19 @@
 
                     <v-col cols="12" md="9" >
                         <p class="mb-0"><b>Bio</b></p>
-                        <p class="mt-1 mb-0 google-font mt-0" style="font-size:110%">{{teamData.bio}}</p>
+                        <p class="mt-1 mb-0  mt-0" style="font-size:110%">{{teamData.bio}}</p>
 
                         <p class="mb-0 mt-3"><b>Email</b></p>
-                        <p class="mt-0 mb-0 google-font mt-0" style="font-size:110%">{{teamData.email}}</p>
+                        <p class="mt-0 mb-0  mt-0" style="font-size:110%">{{teamData.email}}</p>
 
                         <p class="mb-0 mt-3"><b>Mobile</b></p>
-                        <p class="mt-0 mb-0 google-font mt-0" style="font-size:110%">{{teamData.mbnumber}}</p>
+                        <p class="mt-0 mb-0  mt-0" style="font-size:110%">{{teamData.mbnumber}}</p>
 
                         <p class="mb-0 mt-3"><b>User ID</b></p>
-                        <p class="mt-0 mb-0 google-font mt-0" style="font-size:110%">{{teamData.id}}</p>
+                        <p class="mt-0 mb-0  mt-0" style="font-size:110%">{{teamData.id}}</p>
 
                         <p class="mb-0 mt-3"><b>Social Links</b></p>
-                        <p class="mt-1 mb-0 google-font mt-0" style="font-size:110%">
+                        <p class="mt-1 mb-0  mt-0" style="font-size:110%">
                             <span style="cursor: pointer;" v-for="(slink,i) in teamData.socialLinks" :key="i" class="mr-1">
                                 <a v-if="slink" :href="slink" target="_blank" style="text-decoration:none;">
                                     <v-chip small style="text-transform: uppercase;">{{i}}</v-chip>
@@ -85,8 +85,8 @@
                 </v-row>
             </v-container>
             
-            <!-- <p class="google-font">{{teamData.designation}}</p>
-            <p class="google-font">{{teamData.bio}}</p> -->
+            <!-- <p class="">{{teamData.designation}}</p>
+            <p class="">{{teamData.bio}}</p> -->
             <!-- {{teamData}} -->
 
             <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis dolorem numquam modi libero. Quae itaque eligendi asperiores esse neque placeat recusandae ipsum, veritatis quasi corporis omnis? Tempora minima esse exercitationem.</p> -->

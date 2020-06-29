@@ -2,7 +2,7 @@
   <v-navigation-drawer v-model="adminDrawer" app width="300px" clipped>
     <!-- <v-list-item>
         <v-list-item-content>
-          <v-list-item-title class="google-font " style="font-size:130%">
+          <v-list-item-title class=" " style="font-size:130%">
             {{communitydata.CommunityName}}
           </v-list-item-title>
         </v-list-item-content>
@@ -17,7 +17,7 @@
         :to="link.to"
         :href="link.href"
         @click="onClick($event, link)"
-        class="google-font my-0 py-0"
+        class=" my-0 py-0"
         color="primary"
       >
         <v-list-item-icon>

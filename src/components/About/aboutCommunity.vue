@@ -16,8 +16,8 @@
         <!-- </v-img> -->
       </v-col>
       <v-col md="8" sm="8" cols="12" class="py-0 my-0">
-        <p class="google-font mt-0" style="font-size:110%">{{ communityData.communityLongDec }}</p>
-        <p class="google-font mt-0 mb-0" style="font-size:110%">
+        <p class=" mt-0" style="font-size:110%">{{ communityData.communityLongDec }}</p>
+        <p class=" mt-0 mb-0" style="font-size:110%">
           SAF focuses on building security into DevOps with the goal of
           preventing vulnerable applications from reaching production.
         </p>
@@ -25,7 +25,7 @@
         <!-- <v-btn
           :href="communityData.CommunityMeetupLink"
           target="_blank"
-          class="ma-0 google-font elevation-1 primary"
+          class="ma-0  elevation-1 primary"
           style="text-transform: capitalize;border-radius:5px;color:white"
         >Become a Member</v-btn>
 &nbsp;

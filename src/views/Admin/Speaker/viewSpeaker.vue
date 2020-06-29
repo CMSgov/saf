@@ -11,7 +11,7 @@
             <router-link
               to="/admin/dashboard/speaker/"
               :color="$vuetify.theme.dark == true?'white':'black'"
-              class="ma-0 google-font mb-0"
+              class="ma-0  mb-0"
               style="border-radius:5px;text-transform: capitalize;text-decoration:none;"
             >
               <v-icon left>mdi-arrow-left-thick</v-icon>
@@ -53,11 +53,11 @@
                 </v-avatar>
 
                 <p
-                  class="mt-3 mb-0 google-font mb-0 text--black"
+                  class="mt-3 mb-0  mb-0 text--black"
                   style="font-size:120%"
                 >{{speaker.name}}</p>
                 <p
-                  class="mt-1 mb-0 google-font mt-0 greyText"
+                  class="mt-1 mb-0  mt-0 greyText"
                   style="font-size:100%"
                 >{{speaker.designation}}</p>
 
@@ -83,28 +83,28 @@
                 <p class="mb-0">
                   <b>Bio</b>
                 </p>
-                <p class="mt-1 mb-0 google-font greyText mt-0">{{speaker.bio}}</p>
+                <p class="mt-1 mb-0  greyText mt-0">{{speaker.bio}}</p>
 
                 <p class="mb-0 mt-3">
                   <b>Email</b>
                 </p>
-                <p class="mt-0 mb-0 google-font greyText mt-0">{{speaker.email}}</p>
+                <p class="mt-0 mb-0  greyText mt-0">{{speaker.email}}</p>
 
                 <p class="mb-0 mt-3">
                   <b>Mobile</b>
                 </p>
-                <p class="mt-0 mb-0 google-font greyText mt-0">{{speaker.mbnumber}}</p>
+                <p class="mt-0 mb-0  greyText mt-0">{{speaker.mbnumber}}</p>
                 <p class="mb-0 mt-3">
                   <b>Location</b>
                 </p>
                 <p
-                  class="mt-0 mb-0 google-font greyText mt-0"
+                  class="mt-0 mb-0  greyText mt-0"
                 >{{speaker.city}}, {{ speaker.country }}</p>
 
                 <p class="mb-0 mt-3">
                   <b>User ID</b>
                 </p>
-                <p class="mt-0 mb-0 google-font greyText mt-0">{{speaker.id}}</p>
+                <p class="mt-0 mb-0  greyText mt-0">{{speaker.id}}</p>
 
                 <p class="mb-0 mt-3">
                   <b>Social Links</b>
@@ -112,7 +112,7 @@
                 <p class="mt-1 mb-0 mt-0">
                   <v-chip-group column>
                     <v-chip
-                      class="google-font"
+                      class=""
                       v-for="(socialLinks,i) in speaker.socialLinks"
                       :key="i"
                       :href="socialLinks"

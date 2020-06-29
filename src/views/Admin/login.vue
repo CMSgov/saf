@@ -16,7 +16,7 @@
                   </v-row>
                 </template>
               </v-img>
-              <h2 class="google-font mb-5">Login Panel for Aura Admin</h2>
+              <h2 class=" mb-5">Login Panel for Aura Admin</h2>
               <v-text-field label="Email" v-model="email" type="email" outlined></v-text-field>
               <v-text-field type="password" v-model="password" label="Password" outlined></v-text-field>
 

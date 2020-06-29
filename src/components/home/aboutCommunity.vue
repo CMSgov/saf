@@ -4,15 +4,15 @@
       <v-col cols="12" md="12" lg="12" sm="12" class="pa-0" style="color:white">
         <div class="ma-1">
           <div class="pa-5">
-            <p class="google-font mb-0" style="font-size:150%">About {{communityData.communityName}}</p>
-            <p class="google-font mt-0" style="font-size:95%">{{communityData.communityLongDec}}</p>
+            <p class=" mb-0" style="font-size:150%">About {{communityData.communityName}}</p>
+            <p class=" mt-0" style="font-size:95%">{{communityData.communityLongDec}}</p>
 
             <!-- <v-btn
               :href="communityData.CommunityMeetupLink"
               target="_blank"
               outlined
               color
-              class="ma-0 google-font"
+              class="ma-0 "
               style="border-radius:5px;text-transform: capitalize;color:white"
             >Meetup Page</v-btn>&nbsp; -->
             <!-- <v-btn
@@ -20,14 +20,14 @@
               target="_blank"
               outlined
               color
-              class="ma-0 google-font"
+              class="ma-0 "
               style="border-radius:5px;text-transform: capitalize;color:white"
             >Facebook Page</v-btn> -->
             <!-- <br />
             <br />
             <router-link
               to="/about"
-              class="google-font"
+              class=""
               style="text-decoration:none;color:white"
             >See More about {{communityData.community}}</router-link> -->
           </div>
@@ -60,8 +60,8 @@
                            </v-col>
 
                            <v-col cols="12" md="12" lg="12" sm="12" class="pa-3">
-                               <p class="google-font mb-0" style="font-size:150%">About CMS SAF</p>
-                                <p class="google-font mt-0" style="font-size:95%">Google Developer Group Jalandhar is inspired by GTUG/GDG Family . We started our journey in Feb 2011. We try to engage student developers, fresh graduates and professionals through our hack events & meetups. The motive is to create a local ecosystem of programmers & hackers in and around Jalandhar. The technology awareness is main goal for first few years of the group.</p>
+                               <p class=" mb-0" style="font-size:150%">About CMS SAF</p>
+                                <p class=" mt-0" style="font-size:95%">Google Developer Group Jalandhar is inspired by GTUG/GDG Family . We started our journey in Feb 2011. We try to engage student developers, fresh graduates and professionals through our hack events & meetups. The motive is to create a local ecosystem of programmers & hackers in and around Jalandhar. The technology awareness is main goal for first few years of the group.</p>
                            </v-col> 
 
                        </v-row>

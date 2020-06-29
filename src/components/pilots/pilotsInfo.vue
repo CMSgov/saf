@@ -4,12 +4,12 @@
       <template v-slot:default>
         <thead>
           <tr>
-            <th class="text-left google-font title">Team</th>
-            <th class="text-left google-font title">Scope</th>
+            <th class="text-left  title">Team</th>
+            <th class="text-left  title">Scope</th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="pilot in pilots.pilots" :key="pilot.name" class="google-font">
+          <tr v-for="pilot in pilots.pilots" :key="pilot.name" class="">
             <td class="subtitle-1">{{ pilot.name }}</td>
             <td class="body-2">{{ pilot.scope }}</td>
           </tr>

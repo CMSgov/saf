@@ -15,7 +15,7 @@
     <v-container fluid>
       <v-row justify="center" align="center" class="py-0 my-0">
         <v-col md="12" lg="10" xs="12" class="py-3 my-0">
-          <div class="ma-2 pa-2 google-font">
+          <div class="ma-2 pa-2 ">
             <p>
               These open-source community-based hardening baselines help to securely configure common system components. CMS is helping to provide stewardship over these hardening baselines, hosted here and at other community vendor sites. If you are interested in new hardening baselines, please contact us at
               <a

@@ -11,9 +11,9 @@
       style="background-position:right"
     > -->
       <v-col cols="12" md="12" lg="12" sm="12" class>
-        <p class="google-font mb-0" style="font-size:150%;color: #1a73e8;">Upcoming Events</p>
+        <p class=" mb-0" style="font-size:150%;color: #1a73e8;">Upcoming Events</p>
         <p
-          class="google-font mt-0"
+          class=" mt-0"
           style="font-size:95%"
         >As events and Trainings are scheduled, they will appear below along with additional contact information for those events. </p>
         <v-row v-if="showLoader">
@@ -47,7 +47,7 @@
             class="pa-3"
             :class="$vuetify.theme.dark == true?'darkModeCard':'lightModeCard'"
           >
-            <p class="google-font px-2 mb-0" style="font-size:140%">
+            <p class=" px-2 mb-0" style="font-size:140%">
               <v-icon>mdi-calendar-blank</v-icon>
               <br />No Upcoming Events!
             </p>

@@ -15,7 +15,7 @@
     <v-container fluid>
       <v-row justify="center" align="center" class="py-0 my-0">
         <v-col md="12" lg="10" xs="12" class="py-3 my-0">
-          <div class="ma-2 pa-2 google-font">
+          <div class="ma-2 pa-2 ">
             <p>
 
               {{ contactus.ForQuestions }}<a :to="contactus.FAQLink">{{ contactus.FAQ }}</a>{{ contactus.ForMoreQuestions }}
@@ -29,10 +29,10 @@
                         <template v-for="item in contactus.ISPGLeads">
                           <v-list-item :key="item.name">
                             <v-list-item-content>
-                              <v-list-item-title  class="google-font mt-0 mb-0" style="font-size:100%;color: #1a73e8;">
+                              <v-list-item-title  class=" mt-0 mb-0" style="font-size:100%;color: #1a73e8;">
                               {{item.name}}
                               </v-list-item-title>
-                              <v-list-item class="google-font mt-0 mb-0">{{item.email}} | {{item.phone}}</v-list-item>
+                              <v-list-item class=" mt-0 mb-0">{{item.email}} | {{item.phone}}</v-list-item>
                               <v-list-item v-for="entry in item.values" :key="entry.name">
                               </v-list-item>
                             </v-list-item-content>

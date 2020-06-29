@@ -9,7 +9,7 @@
           <v-col>
             <router-link
               :to="{ name: 'admin-dashhboard'}"
-              class="google-font"
+              class=""
               style="text-decoration:none;font-size:110%;"
             >{{communitydata.CommunityName}}</router-link>
           </v-col>
@@ -22,7 +22,7 @@
       v-for="(link, i) in AdminLinks"
       :key="i"
       :to="link.to"
-      class="ml-2 google-font hidden-sm-and-down"
+      class="ml-2  hidden-sm-and-down"
       style="text-transform: capitalize;"
       text
       @click="onClick($event, link)"
@@ -31,7 +31,7 @@
       <v-icon v-if="this.$vuetify.theme.dark">mdi-brightness-7</v-icon>
       <v-icon v-else>mdi-brightness-4</v-icon>
     </v-btn>
-    <v-btn class="ml-2 google-font" style="text-transform: capitalize;" text @click="logout">Logout</v-btn>
+    <v-btn class="ml-2 " style="text-transform: capitalize;" text @click="logout">Logout</v-btn>
   </v-app-bar>
 </template>
 

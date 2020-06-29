@@ -1,5 +1,5 @@
 <template>
-  <v-app class="pa-0 ma-0">
+  <v-app class="pa-0 ma-0 google-font">
     <v-content>
     <v-snackbar v-model="snackWithButtons" :timeout="timeout" bottom left class="snack">
       {{ snackWithBtnText }}

@@ -3,17 +3,17 @@
     <v-row class="py-0 my-0">
       <v-col md="9" sm="6" cols="12" class="py-0 my-0">
         <!-- <p
-          class="google-font mb-0"
+          class=" mb-0"
           style="font-size:110%"
         >Our events are open to newbies, developers, managers, and organizations who are interested in Google's technologies or use them as part of their projects.</p> -->
         <br />
-        <p class="google-font">Questions? Please contact
+        <p class="">Questions? Please contact
           <a
             style="color:#1565C0;text-decoration: none;"
             :href="`mailto:${communityData.communityEmail}`"
           >{{communityData.communityEmail}}</a>
         </p>
-        <!-- <p class="google-font mt-4 mb-3" style="font-size:130%">
+        <!-- <p class=" mt-4 mb-3" style="font-size:130%">
           Follow Us:
           <span v-for="(item,i) in communityData.SocialLinks" :key="i">
             <v-tooltip top>

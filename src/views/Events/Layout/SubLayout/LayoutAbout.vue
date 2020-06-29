@@ -4,15 +4,15 @@
             <v-col md="12" sm="12" cols="12" class="py-0 my-0">
                 <v-row class="">
                     <v-col>
-                        <p class="google-font mb-0"><b>About</b></p>
-                        <p class="google-font mb-3">{{aboutData.EventDescription}}</p>
+                        <p class=" mb-0"><b>About</b></p>
+                        <p class=" mb-3">{{aboutData.EventDescription}}</p>
                         
                         <!-- {{aboutData}} -->
 
-                        <p class="google-font mb-0 mt-3"><b>Date:</b> {{aboutData.EventDate.Date}}/{{aboutData.EventDate.Month}}/{{aboutData.EventDate.Year}}</p>
-                        <p class="google-font mb-0 mb-0"><b>Time:</b> {{aboutData.EventTime.StartTime}} - {{aboutData.EventTime.EndTime}}</p>
-                        <p class="google-font mb-0 mb-0"><b>Venue:</b> {{aboutData.EventVenue}}</p>
-                        <p class="google-font mb-0 mb-0"><b>Contact Email:</b> {{communityData.communityEmail}}</p>
+                        <p class=" mb-0 mt-3"><b>Date:</b> {{aboutData.EventDate.Date}}/{{aboutData.EventDate.Month}}/{{aboutData.EventDate.Year}}</p>
+                        <p class=" mb-0 mb-0"><b>Time:</b> {{aboutData.EventTime.StartTime}} - {{aboutData.EventTime.EndTime}}</p>
+                        <p class=" mb-0 mb-0"><b>Venue:</b> {{aboutData.EventVenue}}</p>
+                        <p class=" mb-0 mb-0"><b>Contact Email:</b> {{communityData.communityEmail}}</p>
                         
                         <div class="mt-3 mb-2">
                             <span v-for="(item,i) in aboutData.EventHashTags" :key="i">
@@ -22,7 +22,7 @@
                         </div>
 
                         <div class="mt-4">
-                            <!-- <p class="google-font mb-0"><b>Registraton, RSVP & Feedback</b></p> -->
+                            <!-- <p class=" mb-0"><b>Registraton, RSVP & Feedback</b></p> -->
                             <v-btn v-if="aboutData.Links.RegistrationLink" class="ml-0 ma-2" dark  :href="aboutData.Links.RegistrationLink" target="_blank" color="indigo">Registration</v-btn>
 
                             <v-btn v-if="aboutData.Links.CallForSpeaker" class="ml-0 ma-2" dark  :href="aboutData.Links.CallForSpeaker" target="_blank" color="warning">Call For Speaker</v-btn>
@@ -33,7 +33,7 @@
                         </div>
 
                         <div class="mt-3">
-                            <p class="google-font mb-0"><b>Social Media Pages</b></p>
+                            <p class=" mb-0"><b>Social Media Pages</b></p>
                             <v-btn class="ml-0 ma-2" dark color="indigo" v-if="aboutData.Links.EventFacebookPageURL" :href="aboutData.Links.EventFacebookPageURL" target="_blank">
                                 <v-icon left>mdi-facebook</v-icon>Facebook
                             </v-btn>

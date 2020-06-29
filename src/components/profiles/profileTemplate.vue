@@ -19,7 +19,7 @@
         v-for="cat in categorized"
         :key="cat"
         :class="{'x-small': $vuetify.breakpoint.mdAndDown}"
-        class="pa-2 ma-2 google-font"
+        class="pa-2 ma-2 "
         :to="{hash: make_linkable(cat)}"
       >{{cat}}</v-btn>
     </div>
@@ -27,7 +27,7 @@
       v-for="cat in categorized"
       :key="cat"
       flat
-      class="ma-2 pa-2 google-font jump"
+      class="ma-2 pa-2  jump"
       :id="make_linkable(cat)"
     >
       <h2>{{ cat }}</h2>
@@ -55,7 +55,7 @@
             </v-row>
           </v-col>
           <v-col cols="9">
-            <v-card-title class="headline break-word google-font">{{ entry.longName }}</v-card-title>
+            <v-card-title class="headline break-word ">{{ entry.longName }}</v-card-title>
           </v-col>
         </v-row>
       </v-card>
