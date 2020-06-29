@@ -4,20 +4,22 @@
       <v-col cols="12" lg="10" class="pa-0 ma-0">
         <Header>
           <h3 slot="title">Validation</h3>
-          <p slot="subtitle" class="ma-0 google-font">
-            These open-source community-based InSpec profiles validate the security of
-            common system components. MITRE is helping to provide stewardship over
-            these profiles, hosted here and at other community vendor sites. If you
-            are interested in new profiles, please contact us at
-            <a
-              :href="mail_link"
-            >
-              {{ db.communityEmail }}
-            </a>
-            . If you are interested in developing and contributing your own
-            profiles, please see our
-            <router-link to="training">training material</router-link>.
-          </p>
+          <div slot="subtitle" class="ma-0">
+            <p class="ma-0">
+              These open-source community-based InSpec profiles validate the security of
+              common system components. MITRE is helping to provide stewardship over
+              these profiles, hosted here and at other community vendor sites. If you
+              are interested in new profiles, please contact us at
+              <a :href="mail_link">{{ db.communityEmail }}</a>
+              . If you are interested in developing and contributing your own
+              profiles, please see our
+              <router-link to="training">training material</router-link>.
+            </p>
+            <p class="ma-0">
+              All assessment tests under SAF are associated with NIST SP 800-53 Security Controls. Explore these associations in this
+              <router-link to="control-table">Control Assessment Range table</router-link>!
+            </p>
+          </div>
         </Header>
       </v-col>
     </v-row>

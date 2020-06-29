@@ -1,16 +1,5 @@
 module.exports = {
   chainWebpack: config => {
-    config.module
-      .rule("csv")
-      .test(/\.csv$/)
-      .use("csv-loader")
-      .loader("csv-loader")
-      .options({
-        dynamicTyping: true,
-        header: true,
-        skipEmptyLines: true,
-      })
-      .end();
     config.plugin('VuetifyLoaderPlugin').tap(args => [{
       progressiveImages: true
     }]);
@@ -25,7 +14,7 @@ module.exports = {
     },
   },
   productionSourceMap: false,
-  transpileDependencies: ["vuetify", "dashify", "vue-papa-parse", "vue-tabulator", "register-service-worker"],
+  transpileDependencies: ["vuetify", "register-service-worker"],
   //  publicPath: process.env.NODE_ENV === 'production'
   //    ? '/mitre-saf/'
   //    : '/'
