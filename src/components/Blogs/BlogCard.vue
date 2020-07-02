@@ -20,16 +20,16 @@
         </template>
       </v-img>
       <div class="pa-3">
-        <p class="google-font ma-0 mt-2" style="font-size:120%;">{{data.data.title | summary(30) }}</p>
-        <p class="google-font mt-0 mb-0" style="font-size:90%;">{{data.data.pubDate}}</p>
-        <p class="google-font mt-0 mb-4" style="font-size:90%;">{{data.data.author }}</p>
+        <p class=" ma-0 mt-2" style="font-size:120%;">{{data.data.title | summary(30) }}</p>
+        <p class=" mt-0 mb-0" style="font-size:90%;">{{data.data.pubDate}}</p>
+        <p class=" mt-0 mb-4" style="font-size:90%;">{{data.data.author }}</p>
         <!-- <v-chip x-small v-for="(item,i) in data.data.categories" outlined :key="i">{{item}}</v-chip> -->
         <v-btn
           target="_blank"
           text
           small
           :href="data.data.link"
-          class="mb-0 mt-0 google-font"
+          class="mb-0 mt-0 "
           style="color:#1a73e8;text-decoration:none"
         >Read</v-btn>
       </div>
@@ -39,18 +39,18 @@
       <v-card class="mx-auto" max-width="100%" outlined>
         <v-list-item three-line>
           <v-list-item-content>
-            <div class="mb-4 google-font">{{data.data.pubDate | dateFilter}}</div>
+            <div class="mb-4 ">{{data.data.pubDate | dateFilter}}</div>
             <v-list-item-title
-              class="mb-1 google-font"
+              class="mb-1 "
               style="font-size:120%"
             >{{data.data.title | summary(30)}}</v-list-item-title>
-            <!-- <v-list-item-subtitle class="google-font">{{data.data.author}}</v-list-item-subtitle> -->
-            <!-- <v-list-item-subtitle class="google-font" v-html="$options.filters.summary(data.data.description,180)"></v-list-item-subtitle> -->
+            <!-- <v-list-item-subtitle class="">{{data.data.author}}</v-list-item-subtitle> -->
+            <!-- <v-list-item-subtitle class="" v-html="$options.filters.summary(data.data.description,180)"></v-list-item-subtitle> -->
             <v-list-item-subtitle
-              class="google-font mb-0"
+              class=" mb-0"
               v-html="$options.filters.summary(filterData(data.data.description),100)"
             ></v-list-item-subtitle>
-            <!-- <p class="google-font mt-0 mb-0" style="font-size:70%;">{{data.data.author}}</p> -->
+            <!-- <p class=" mt-0 mb-0" style="font-size:70%;">{{data.data.author}}</p> -->
           </v-list-item-content>
 
           <v-list-item-avatar tile size="100" color="grey">

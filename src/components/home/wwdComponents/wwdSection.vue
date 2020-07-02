@@ -1,10 +1,10 @@
 <template>
   <v-container fluid>
     <v-row align="center" justify="center" v-if="topic.sectionHeader">
-      <p class="google-font ma-4 tool-header">{{ topic.sectionHeader }}</p>
+      <p class=" ma-4 tool-header">{{ topic.sectionHeader }}</p>
     </v-row>
     <v-row align="center" justify="center" v-if="topic.sectionDesc">
-      <p class="google-font mb-4 body-2">{{ topic.sectionDesc }}</p>
+      <p class=" mb-4 body-2">{{ topic.sectionDesc }}</p>
     </v-row>
     <slot name="image"></slot>
     <v-row justify="center">

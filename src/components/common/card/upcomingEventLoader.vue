@@ -6,17 +6,17 @@
   >
     <v-card-title class="mb-0">
       <div>
-        <p class="google-font mb-2 animate-shimmer" style="color:#424242;width:120px;height:10px;"></p>
+        <p class=" mb-2 animate-shimmer" style="color:#424242;width:120px;height:10px;"></p>
         <p
-          class="google-font mt-1 mb-0 animate-shimmer"
+          class=" mt-1 mb-0 animate-shimmer"
           style="color:#424242;width:140px;height:20px;"
         ></p>
         <p
-          class="google-font mt-1 mb-0 animate-shimmer"
+          class=" mt-1 mb-0 animate-shimmer"
           style="color:#424242;width:100px;height:20px;"
         ></p>
         <p
-          class="google-font mt-1 mb-0 animate-shimmer"
+          class=" mt-1 mb-0 animate-shimmer"
           style="color:#424242;width:100px;height:20px;"
         ></p>
       </div>

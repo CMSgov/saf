@@ -10,7 +10,7 @@
       <v-row align="center" justify="center" class="my-0 py-0">
         <v-col cols="12" md="10" lg="10" sm="10" class="py-0 my-0">
           <v-divider v-if="!this.$vuetify.theme.dark"></v-divider>
-          <p class="google-font mt-4 mb-3" style="font-size:130%">
+          <p class=" mt-4 mb-3" style="font-size:130%">
             Follow Us:
             <span v-for="(item,i) in communityData.SocialLinks" :key="i">
               <v-tooltip top>
@@ -42,14 +42,14 @@
                 :key="i"
               >
                <div v-for="(itemp,j) in item" :key="j" class="mt-1">
-                  <p class="google-font mb-0" style="font-size: 140%;font-weight: 300;">
+                  <p class=" mb-0" style="font-size: 140%;font-weight: 300;">
                     <b>{{j}}</b>
                   </p>
                   <div v-for="(linkdata,k) in itemp" :key="k">
                     <a
                       :href="linkdata.Link"
                       :class="$vuetify.theme.dark?'darkThemeTextLink':'lightThemeTextLink'"
-                      class="google-font"
+                      class=""
                       target="_blank"
                       style="text-decoration: none;font-size:110%"
                     >{{linkdata.LinkName}}</a>
@@ -79,12 +79,12 @@
               style="text-transform: capitalize;font-size:150%"
               text
               aria-label="Footer Bottom Button"
-              class="google-font"
+              class=""
             >{{ item.LinkName }}
             </v-btn>
             <v-spacer />
             <!-- <p
-              class="google-font pl-0"
+              class=" pl-0"
               :style="this.$vuetify.breakpoint.smAndDown ? 'font-size:75%' : ''"
             >CMS © 2020</p> -->
 
@@ -92,7 +92,7 @@
               v-for="(item,i) in FooterData.FooterEndContent"
               :key="i"
               :href="item.Link"
-              class="ml-0 google-font"
+              class="ml-0 "
               style="text-transform: capitalize;font-size:120%"
               text
               aria-label="Footer Bottom Button"

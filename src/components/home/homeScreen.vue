@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="pb-0">
+  <v-container fluid class="py-0">
     <v-row align="center">
       <!-- <v-col md="3" sm="5">
         <v-img
@@ -15,31 +15,31 @@
           </template>
         </v-img> 
       </v-col>-->
-      <v-col md="12" lg="10" xs="12">
-        <p class="google-font" style="font-weight: 350;font-size:300%">
-          <b style="color: #1a73e8;">
+      <v-col md="12" lg="10" xs="12" class="pa-0">
+        <p class="primary--text" style="font-weight: 350;font-size:300%">
+          <b>
               CMS Security Automation Framework
           </b>
         </p>
-        <br />
-        <p class="google-font ms-0 title">{{communityData.communityShortDescription}}</p>
-        <p>
+
+        <p class=" ms-0 title">{{communityData.communityShortDescription}}</p>
+        <p class="ma-0">
           <ul class="title mt-4">
             <li>The ACT (Adaptive Capabilities Testing) team will accept security testing data from this framework.</li>
             <li>Developers can harden and run validation security early and often in their environments, using their own orchestration, functional and unit testing systems, to keep security defects as low as possible.</li>
           </ul>
         </p>
-        <!-- <p class="google-font mt-0 mb-0" style="font-size:150%">{{communityData.community}}</p>
-        <p class="google-font" style="font-size:100%">{{communityData.communityShortDescription}}</p>
-        <p class="google-font" style="font-size:100%">{{communityData.communityLongDec}}</p>-->
-        <!-- <p class="google-font" style="font-size:100%;color:#9e9e9e">
+        <!-- <p class=" mt-0 mb-0" style="font-size:150%">{{communityData.community}}</p>
+        <p class="" style="font-size:100%">{{communityData.communityShortDescription}}</p>
+        <p class="" style="font-size:100%">{{communityData.communityLongDec}}</p>-->
+        <!-- <p class="" style="font-size:100%;color:#9e9e9e">
           <span v-for="(item,i) in communityData.communityHashTags" :key="i">#{{item}} &nbsp;</span>
         </p>-->
 
         <!-- <v-btn
           :href="communityData.CommunityMeetupLink"
           target="_blank"
-          class="ma-0 google-font elevation-1 primary"
+          class="ma-0  elevation-1 primary"
           style="text-transform: capitalize;border-radius:5px;color:white"
         >Become a Member</v-btn>
 &nbsp;

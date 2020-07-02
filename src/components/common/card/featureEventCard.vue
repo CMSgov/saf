@@ -11,16 +11,16 @@
           <v-row>
             <v-col cols="12" md="12">
               <p
-                class="google-font mb-0"
+                class=" mb-0"
                 style="font-size:95%"
               >{{data.data.EventDate.Date}}/{{data.data.EventDate.Month}}/{{data.data.EventDate.Year}}</p>
-              <p class="google-font mb-0" style="font-size:150%">{{data.data.FeatureEventName}}</p>
-              <p class="google-font mb-0" style="font-size:90%">{{data.data.EventVenue}}</p>
-              <!-- <p class="google-font">{{data.data.EventTime.StartTime}} - {{data.data.EventTime.EndTime}}</p> -->
+              <p class=" mb-0" style="font-size:150%">{{data.data.FeatureEventName}}</p>
+              <p class=" mb-0" style="font-size:90%">{{data.data.EventVenue}}</p>
+              <!-- <p class="">{{data.data.EventTime.StartTime}} - {{data.data.EventTime.EndTime}}</p> -->
 
-              <!-- <p class="google-font">{{data.data.EventDescription}}</p> -->
+              <!-- <p class="">{{data.data.EventDescription}}</p> -->
 
-              <p class="mb-0 mt-2 google-font" style="color:#1a73e8">See More</p>
+              <p class="mb-0 mt-2 " style="color:#1a73e8">See More</p>
             </v-col>
           </v-row>
         </v-container>
@@ -28,22 +28,22 @@
     </template>
     <!-- :style="{'background-image':'url('+require('@/assets/img/svg/footer.svg')+')'}" -->
     <v-card color v-if="dialog">
-      <v-card-title class="px-5 py-5 google-font" style="background-position:right bottom;">
-        <p class="google-font mb-0" style="font-size:150%">{{data.data.FeatureEventName}}</p>
+      <v-card-title class="px-5 py-5 " style="background-position:right bottom;">
+        <p class=" mb-0" style="font-size:150%">{{data.data.FeatureEventName}}</p>
       </v-card-title>
 
       <v-card-text class="pb-5 pt-0">
         <p
-          class="google-font mb-0"
+          class=" mb-0"
           style="font-size:120%"
         >{{data.data.EventDate.Date}}/{{data.data.EventDate.Month}}/{{data.data.EventDate.Year}}</p>
-        <p class="google-font mb-0" style="font-size:110%">{{data.data.EventVenue}}</p>
-        <p class="google-font">{{data.data.EventTime.StartTime}} - {{data.data.EventTime.EndTime}}</p>
+        <p class=" mb-0" style="font-size:110%">{{data.data.EventVenue}}</p>
+        <p class="">{{data.data.EventTime.StartTime}} - {{data.data.EventTime.EndTime}}</p>
 
-        <p class="google-font mb-0" style="font-size:95%">
+        <p class=" mb-0" style="font-size:95%">
           <b>Description</b>
         </p>
-        <p class="google-font mt-0" style="font-size:110%">{{data.data.EventDescription}}</p>
+        <p class=" mt-0" style="font-size:110%">{{data.data.EventDescription}}</p>
 
         <v-btn
           color="#1a73e8"

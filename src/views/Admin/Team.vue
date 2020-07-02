@@ -97,8 +97,8 @@
                           :src="item.image" alt=""
                           >
                       </v-avatar>
-                      <p class="mt-3 mb-0 google-font mb-0" style="font-size:120%">{{item.name}}</p>
-                      <p class="mt-0 mb-0 google-font mt-0" style="font-size:80%">{{item.designation}}</p>
+                      <p class="mt-3 mb-0  mb-0" style="font-size:120%">{{item.name}}</p>
+                      <p class="mt-0 mb-0  mt-0" style="font-size:80%">{{item.designation}}</p>
                       <v-chip class="ma-1" x-small>{{item.role}}</v-chip>
                     </div>
                   </v-col>

@@ -1,37 +1,34 @@
 <template>
-  <v-content class="pa-0">
-    <v-container fluid class="pa-0 mt-2">
-      <v-row
-        justify="center"
-        align="center"
-        class="py-0 my-0"
-        :class="this.$vuetify.theme.dark == true?'grey darken-4':'grey lighten-4'"
-      >
-        <v-col md="12" lg="10" xs="12" class="py-3 my-0">
-          <Header><h3 slot="title">Validation</h3></Header>
-        </v-col>
-      </v-row>
-    </v-container>
-    <v-container fluid>
-      <v-row justify="center" align="center" class="py-0 my-0">
-        <v-col md="12" lg="10" xs="12" class="py-3 my-0">
-          <div class=" google-font">
-            <p>
-              These open-source community-based InSpec profiles validate the security of
-              common system components. CMS ISPG is helping to provide stewardship over
-              these profiles, hosted here and at other community vendor sites. If you
-              are interested in new profiles, please contact us at
-              <a
-                :href="mail_link"
-              >{{ db.communityEmail }}</a>. If you are interested in developing and contributing your own
-              profiles, please see our links to Training material.
-            </p>
-            <profileTemplateCompact :profiles="profiles.profiles" />
-          </div>
-        </v-col>
-      </v-row>
-    </v-container>
-  </v-content>
+  <v-container fluid class="pa-0 ma-0">
+    <v-row justify="center" align="center" class="mx-0">
+      <v-col cols="12" lg="10" class="pa-0 ma-0">
+        <Header>
+          <h3 slot="title">Validation</h3>
+        </Header>
+      </v-col>
+    </v-row>
+    <v-row justify="center" align="center" class="py-0 my-0">
+      <v-col md="12" lg="10" xs="12" class="py-3">
+        <div class="ml-2">
+          <p>
+            These open-source community-based InSpec profiles validate the security of
+            common system components. CMS ISPG is helping to provide stewardship over
+            these profiles, hosted here and at other community vendor sites. If you
+            are interested in new profiles, please contact us at
+            <a
+              :href="mail_link"
+            >{{ db.communityEmail }}</a>. If you are interested in developing and contributing your own
+            profiles, please see our links to Training material.
+          </p>
+          <p>
+            All assessment tests under SAF are associated with CMS ARS 3.1 (NIST SP 800-53) Security Controls. Explore these associations in this
+            <router-link to="control-table">Control Assessment Range table</router-link>!
+          </p>
+        </div>
+        <profileTemplateCompact :profiles="profiles.profiles" />
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>

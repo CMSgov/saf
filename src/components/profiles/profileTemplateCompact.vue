@@ -11,8 +11,8 @@
       >
         <v-col cols="2" v-show="$vuetify.breakpoint.mdAndUp">
           <h2
-            class="font-weight-bold ma-2 break-word justify-center text-center google-font"
-            :class="{'subtitle-2': $vuetify.breakpoint.mdAndDown, 'black' : $vuetify.theme.dark, 'white' : $vuetify.theme.dark == False}"
+            class="font-weight-bold ma-2 break-word justify-center text-center "
+            :class="{'subtitle-2': $vuetify.breakpoint.mdAndDown, 'black' : $vuetify.theme.dark, 'white' : !$vuetify.theme.dark}"
           >{{ cat }}</h2>
         </v-col>
         <v-col :cols="$vuetify.breakpoint.xs ? '12' : '10'">
@@ -20,7 +20,7 @@
             <v-row dense no-gutters align="center" justify="center">
               <v-col cols="auto" v-show="$vuetify.breakpoint.smAndDown">
                 <h2
-                  class="font-weight-bold text-h6 ma-2 break-word justify-center text-center google-font"
+                  class="font-weight-bold text-h6 ma-2 break-word justify-center text-center "
                 >{{ cat }}</h2>
               </v-col>
             </v-row>

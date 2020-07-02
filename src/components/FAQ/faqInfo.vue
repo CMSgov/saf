@@ -2,7 +2,7 @@
   <v-container fluid>
     <v-expansion-panels focusable hover tile multiple v-model="panel">
       <v-expansion-panel v-for="(faq, index) in faqs" :key="index">
-        <v-expansion-panel-header class="google-font" style="font-weight: 300; font-size:120% ">
+        <v-expansion-panel-header class="" style="font-weight: 300; font-size:120% ">
           <div>
             <v-btn icon :to="$route.path + '#' + faq.tag" class="mr-2" @click.native.stop>
               <v-icon>mdi-link</v-icon>

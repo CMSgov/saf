@@ -15,17 +15,17 @@
                 <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
             </v-layout>
       </v-img>
-      <p class="google-font mt-2" style="font-size:130%">ghh</p>
+      <p class=" mt-2" style="font-size:130%">ghh</p>
       
     </v-flex>-->
 
     <v-list-item>
       <v-list-item-content>
         <v-list-item-title
-          class="google-font"
+          class=""
           style="font-size:130%"
         >{{communityData.communityName}}</v-list-item-title>
-        <!-- <v-list-item-subtitle class="google-font">
+        <!-- <v-list-item-subtitle class="">
             Google Developers Group
         </v-list-item-subtitle>-->
       </v-list-item-content>
@@ -40,7 +40,7 @@
           :to="link.to"
           :href="link.href"
           @click="onClick($event, link)"
-          class="google-font pl-0"
+          class=" pl-0"
           color="primary"
         >
           <v-list-item-icon class="pl-4"> 

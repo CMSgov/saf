@@ -2,7 +2,7 @@
   <v-container fluid>
     <v-row align="center" justify="center" class="mb-0">
       <v-col cols="12" md="12" lg="12" sm="12" class="mb-0">
-        <p class="google-font mb-1" style="font-weight: 350;color: #1a73e8;font-size:200%">
+        <p class=" mb-1" style="font-weight: 350;color: #1a73e8;font-size:200%">
           <b>
             The CMS SAF Community
           </b>
@@ -13,7 +13,7 @@
     <v-container fluid>
       <v-row justify="center" align="center" v-for="(itemp,i) in partnerData" :key="i" :class="color_mode">
         <!-- <v-col cols="12" md="12" lg="12" sm="12" class="mx-1 mt-5" v-if="itemp.length>0">
-          <p class="google-font mb-0" style="font-size:130%">{{i}}</p>
+          <p class=" mb-0" style="font-size:130%">{{i}}</p>
         </v-col> -->
         <v-slide-group class="pa-2" show-arrows>
           <v-col v-for="(item,j) in itemp" :key="j" >
@@ -37,7 +37,7 @@
                     width="200"
                     contain
                   ></v-img>
-                  <!-- <v-card-subtitle class="google-font mb-0 justify-center">{{item.name}}</v-card-subtitle> -->
+                  <!-- <v-card-subtitle class=" mb-0 justify-center">{{item.name}}</v-card-subtitle> -->
                 </template>
               </v-tooltip>
               <v-card-title class="justify-center align-center">{{item.name}}</v-card-title>
@@ -57,7 +57,7 @@
         :class="color_mode"
       >
         <v-col cols="12" md="12" lg="12" sm="12" class="mx-1 mt-5" v-if="itemp.length>0">
-          <p class="google-font mb-0" style="font-size:130%">{{i}}</p>
+          <p class=" mb-0" style="font-size:130%">{{i}}</p>
         </v-col>
         <v-slide-group class="pa-2" show-arrows>
           <v-col v-for="(item,j) in itemp" :key="j" class>

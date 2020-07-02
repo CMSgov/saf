@@ -54,6 +54,16 @@ const router = new Router({
     //   }
     // },
     {
+      path: "/control-table",
+      name: "control-table",
+      component: () => import("./views/ControlTableView.vue"),
+      meta: {
+        title: "Control Table | " + communityData.communityName,
+        color: "#0277bd",
+        requiresAuth: false,
+      },
+    },
+    {
       path: "/contact",
       name: "contact",
       component: () => import("./views/Contact.vue"),

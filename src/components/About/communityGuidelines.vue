@@ -7,7 +7,7 @@
     </v-row>-->
     <v-row align="center" class="py-0 my-0 mb-5">
       <v-col md="8" sm="8" cols="12" class="py-0 my-0">
-        <h1 class="google-font mb-2">Shifting Security Left</h1>
+        <h1 class=" mb-2">Shifting Security Left</h1>
         <p>The goal of this framework is to help the community of developers, operators, and security auditors measure, visualize, and correct security defects as early as possible in the development lifecycle, at each commit, from sprint to sprint.</p>
         <!-- {{communityData.CommunityGuideline}} -->
         <!-- <v-expansion-panels accordion>

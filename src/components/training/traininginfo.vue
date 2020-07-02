@@ -1,11 +1,11 @@
 <template>
   <v-container fluid>
     <p
-      class="google-font mb-0"
+      class=" mb-0"
       style="font-size:150%;color: #1a73e8;"
     >Training Courses Currently Offered</p>
     <br />
-    <p class="google-font mb-0" style="font-size:100%">
+    <p class=" mb-0" style="font-size:100%">
       <span style="color: #1a73e8;">
         <a
           href="https://mitre-inspec-developer.netlify.com/"
@@ -14,7 +14,7 @@
       </span>
       - Reviews the basics on how to write and run tests
     </p>
-    <p class="google-font mb-0" style="font-size:100%">
+    <p class=" mb-0" style="font-size:100%">
       <span style="color: #1a73e8;">
         <a
           href="https://mitre-inspec-advanced-developer.netlify.com/"
@@ -26,9 +26,9 @@
 
     <br />
     <br />
-    <p class="google-font mb-0" style="font-size:150%;color: #1a73e8;">Upcoming Training Sessions</p>
+    <p class=" mb-0" style="font-size:150%;color: #1a73e8;">Upcoming Training Sessions</p>
     <p
-      class="google-font mt-0 mb-0"
+      class=" mt-0 mb-0"
       style="font-size:95%"
     >Trainings are listed in chronological order by date.</p>
     <br />
@@ -43,19 +43,19 @@
       >
         <v-dialog v-model="dialog">
           <template v-slot:activator="{ on }">
-            <p class="google-font mb-0" style="font-size:100%;">{{item.name}}</p>
+            <p class=" mb-0" style="font-size:100%;">{{item.name}}</p>
           </template>
         </v-dialog>
       </v-col>
     </v-row>
     <br />
     <br />
-    <p class="google-font mb-0" style="font-size:150%;color: #1a73e8;">Past Training Sessions</p>
+    <p class=" mb-0" style="font-size:150%;color: #1a73e8;">Past Training Sessions</p>
     <p
-      class="google-font mt-0 mb-0"
+      class=" mt-0 mb-0"
       style="font-size:95%"
     >Trainings are listed in chronological order by date.</p>
-    <p class="google-font mt-0 mb-0" style="font-size:95%">
+    <p class=" mt-0 mb-0" style="font-size:95%">
       <b>Note:</b> Video recordings of these trainings will be made available once they are edited for presentability.
     </p>
     <v-row justify="center" :class="color_mode" class="ma-2">
@@ -78,25 +78,25 @@
                 class="pa-2"
                 @click="passItemData(item)"
               >
-                <p class="google-font mt-1 mb-0 break-word" style="font-size:90%">{{ item.date }}</p>
-                <p class="google-font ma-0 mt-0 break-word" style="font-size:120%;">{{ item.name }}</p>
-                <p class="mb-0 mt-2 google-font" style="color:#1a73e8">See More</p>
+                <p class=" mt-1 mb-0 break-word" style="font-size:90%">{{ item.date }}</p>
+                <p class=" ma-0 mt-0 break-word" style="font-size:120%;">{{ item.name }}</p>
+                <p class="mb-0 mt-2 " style="color:#1a73e8">See More</p>
               </div>
             </template>
 
             <v-card color v-show="dialog" :data="dialogData">
               <v-card-title
-                class="px-5 py-5 google-font break-word"
+                class="px-5 py-5  break-word"
                 :class="{'x-small': $vuetify.breakpoint.mdAndDown}"
                 style="background-position:right bottom;"
               >{{dialogData.name}}</v-card-title>
 
               <v-card-text class="pa-5">
-                <p class="google-font mt-3 mb-0 break-word" style="font-size:110%">
+                <p class=" mt-3 mb-0 break-word" style="font-size:110%">
                   <b>Name:</b>
                   {{dialogData.name}}
                 </p>
-                <p class="google-font mt-1 mb-0" style="font-size:110%">
+                <p class=" mt-1 mb-0" style="font-size:110%">
                   <b>Date:</b>
                   {{dialogData.date}}
                 </p>

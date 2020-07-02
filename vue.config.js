@@ -1,4 +1,9 @@
 module.exports = {
+  chainWebpack: config => {
+    config.plugin('VuetifyLoaderPlugin').tap(args => [{
+      progressiveImages: true
+    }]);
+  },
   pwa: {
     name: "CMS SAF",
     workboxPluginMode: "InjectManifest",

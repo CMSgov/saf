@@ -2,17 +2,17 @@
   <v-card flat class="ma-1 pa-1 my-0 elevation-0" style="border-radius:7px;border:1px #ddd solid">
     <v-card-title class="mb-0">
       <div>
-        <p class="google-font mb-2 animate-shimmer" style="color:#424242;width:200px;height:20px;"></p>
+        <p class=" mb-2 animate-shimmer" style="color:#424242;width:200px;height:20px;"></p>
         <p
-          class="google-font mt-1 mb-0 animate-shimmer"
+          class=" mt-1 mb-0 animate-shimmer"
           style="color:#424242;width:100px;height:20px;"
         ></p>
         <p
-          class="google-font mt-1 mb-0 animate-shimmer"
+          class=" mt-1 mb-0 animate-shimmer"
           style="color:#424242;width:100px;height:20px;"
         ></p>
         <p
-          class="google-font mt-1 mb-0 animate-shimmer"
+          class=" mt-1 mb-0 animate-shimmer"
           style="color:#424242;width:100px;height:20px;"
         ></p>
       </div>

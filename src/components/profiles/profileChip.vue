@@ -3,7 +3,7 @@
     v-if="entry"
     :href="entry.link"
     target="_blank"
-    class="google-font break-word text-none pa-0 ma-0"
+    class=" break-word text-none pa-0 ma-0"
     :outlined="!this.$vuetify.theme.dark"
   >
     <v-list class="pa-0" :color="this.$vuetify.theme.dark ? 'grey darken-3' : ''">
