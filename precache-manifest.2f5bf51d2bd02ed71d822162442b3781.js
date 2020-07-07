@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "fb97715b96da8f955f6e",
+    "revision": "8bade9cbe10aa39b03ad",
     "url": "/saf/css/app.7a109764.css"
   },
   {
-    "revision": "fb97715b96da8f955f6e",
-    "url": "/saf/js/app.014357f7.js"
+    "revision": "8bade9cbe10aa39b03ad",
+    "url": "/saf/js/app.f4f7dc3c.js"
   },
   {
     "revision": "3ae49d93ed239bf13513",
@@ -96,12 +96,12 @@ self.__precacheManifest = [
     "url": "/saf/js/chunk-5be23707.9fa57756.js"
   },
   {
-    "revision": "7031b4e642330b207592",
+    "revision": "2e3591ab8793135b90c6",
     "url": "/saf/css/chunk-5f92c8b6.8806c056.css"
   },
   {
-    "revision": "7031b4e642330b207592",
-    "url": "/saf/js/chunk-5f92c8b6.c6dcb40a.js"
+    "revision": "2e3591ab8793135b90c6",
+    "url": "/saf/js/chunk-5f92c8b6.4d7b1b66.js"
   },
   {
     "revision": "10e3445b571a8616e05b",
@@ -332,7 +332,7 @@ self.__precacheManifest = [
     "url": "/saf/img/demo.3a46e406.png"
   },
   {
-    "revision": "e59465c157dfbdff186ba021bc435557",
+    "revision": "d5c054b786b3361fb0200ea411f9f927",
     "url": "/saf/index.html"
   },
   {
@@ -340,8 +340,8 @@ self.__precacheManifest = [
     "url": "/saf/_redirects"
   },
   {
-    "revision": "7ecaa5a6a7dc88c217ab4be7789a3ca2",
-    "url": "/saf/DevSecOps Checklist 12142018.pdf"
+    "revision": "6dd933d373c24f4790875d0e500cd4fa",
+    "url": "/saf/DevSecOps-Checklist-07022020.pdf"
   },
   {
     "revision": "b2174230811e6edd524d5c338620a264",
@@ -380,16 +380,16 @@ self.__precacheManifest = [
     "url": "/saf/CMS_InSpec_Profile_Lifecycle_SOP_v1.0_20190702.pdf"
   },
   {
-    "revision": "08a68fb37049f932d9d613e968a2d26a",
-    "url": "/saf/CMS_InSpec_Profiles_and_HDF_include_NIST_SP-800-53_associations_04232020.pdf"
-  },
-  {
     "revision": "4076d8e641ae460f689afda8336dfdc4",
     "url": "/saf/DRAFT-DevSecOps_Best_Practices_Guide_20190516.pdf"
   },
   {
     "revision": "4b00a811782f7fa776f060ad7ca0e6de",
     "url": "/saf/MITRE_InSpec_Profiles_and_HDF_include_NIST_SP-800-53_Associations.pdf"
+  },
+  {
+    "revision": "08a68fb37049f932d9d613e968a2d26a",
+    "url": "/saf/CMS_InSpec_Profiles_and_HDF_include_NIST_SP-800-53_associations_04232020.pdf"
   },
   {
     "revision": "f44b7e40a6630ca764dd19538fe03c71",
