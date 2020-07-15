@@ -187,7 +187,7 @@
     {
       "sectionHeader": "How We Support It",
       "sectionDesc": "Develop a toolchain to support the above areas of What and How for secure development",
-      "image" : "whatWeDo",
+      "image" : "howWeSupportIt",
       "items": [
         {
           "name": "ACT Support",
