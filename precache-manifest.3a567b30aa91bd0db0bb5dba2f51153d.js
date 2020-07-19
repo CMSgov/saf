@@ -376,12 +376,12 @@ self.__precacheManifest = [
     "url": "/saf/CMS_InSpec_Profile_Lifecycle_SOP_v1.0_20190702.pdf"
   },
   {
-    "revision": "08a68fb37049f932d9d613e968a2d26a",
-    "url": "/saf/CMS_InSpec_Profiles_and_HDF_include_NIST_SP-800-53_associations_04232020.pdf"
-  },
-  {
     "revision": "4076d8e641ae460f689afda8336dfdc4",
     "url": "/saf/DRAFT-DevSecOps_Best_Practices_Guide_20190516.pdf"
+  },
+  {
+    "revision": "08a68fb37049f932d9d613e968a2d26a",
+    "url": "/saf/CMS_InSpec_Profiles_and_HDF_include_NIST_SP-800-53_associations_04232020.pdf"
   },
   {
     "revision": "4b00a811782f7fa776f060ad7ca0e6de",
