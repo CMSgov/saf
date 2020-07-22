@@ -18,7 +18,6 @@ jobs:
         with:
           path: |
             /opt/inspec
-            /usr/bin/inspec
           key: ${{ env.cache-name }}-4.18.108
       - name: Cache node
         uses: actions/cache@v2
@@ -30,7 +29,7 @@ jobs:
           restore-keys: ${{ env.cache-name }}-
       - name: Install dependencies
         run: |
-          command -v inspec >/dev/null 2>&1 || curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P inspec -v 4.18.108
+          [ -f /opt/inspec/bin/inspec ] && ln -s /opt/inspec/bin/inspec /usr/bin/inspec || curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P inspec -v 4.18.108
           npm install --only=dev
       - name: Ingest and process data
         run: |
