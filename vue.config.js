@@ -14,6 +14,6 @@ module.exports = {
     }
   },
   productionSourceMap: false,
-  transpileDependencies: ["vuetify", "register-service-worker"],
-  publicPath: process.env.NODE_ENV === "production" ? "/saf/" : "/"
+  transpileDependencies: ["vuetify", "register-service-worker"]
+  //publicPath: process.env.NODE_ENV === "production" ? "/saf/" : "/"
 };
