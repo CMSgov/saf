@@ -45,7 +45,7 @@
         {
           "name": "Standardizing Security Testing Content",
           "router_link": "validation",
-          "desc": "Build on the SAF community's library of standard security profiles",
+          "desc": "Build on the MITRE | SAF community's library of standard security profiles",
           "svg": "",
           "icon": "",
           "tools": [
@@ -127,7 +127,7 @@
         {
           "name": "Hardening Content",
           "router_link": "hardening",
-          "desc": "Use the SAF hardening baseline library to configure systems for security",
+          "desc": "Use the MITRE | SAF hardening baseline library to configure systems for security",
           "svg": "",
           "icon": "",
           "tools": [
@@ -146,9 +146,58 @@
       ]
     },
     {
+      "sectionHeader": "When To Use It",
+      "sectionDesc" : "Develop and programmatically automate security in planning, development, assessment, and operational activities",
+      "images": [
+        { "filename": "whenToUseIt", "router_link": "gettingstarted" }
+      ],
+      "items": [
+        {
+          "name": "During PLANNING an organization can use MITRE | SAF to:",
+          "link": "",
+          "bullets" : [
+            "Identify applicable security and privacy requirements",
+            "Assess development best practices guidance",
+            "Identify MITRE | SAF tools to support development, assessment, & operations security processes",
+            "Become a participant through the Continuous Collaboration Agreement"
+          ]
+        },
+        {
+          "name": "During DEVELOPMENT an organization can use MITRE | SAF to:",
+          "link": "",
+          "bullets" : [
+            "Implement relevant security hardening scripts",
+            "Validate security status and aggregate security testing data at each build",
+            "Drill-down in visualization tools to identify security defect root cause and mitigations",
+            "Set security testing results thresholds ","Assess development best practices guidance",
+            "Store or export “evidence” for assessors"
+          ]
+        },
+        {
+          "name": "During ASSESSMENT an organization can use MITRE | SAF to:",
+          "link": "",
+          "bullets" : [
+            "Aggregate all security control assessment data ",
+            "Visualize security status to prioritize assessment activities",
+            "Run validation checks on prioritized areas",
+            "Drill-down in visualization tools to identify root cause and inform risk assessment"
+          ]
+        },
+        {
+          "name": "During OPERATIONS an organization can use MITRE | SAF to:",
+          "link": "",
+          "bullets" : [
+            "Monitor security posture through validation checks",
+            "Aggregate normalized security testing content to enable data visualization, drill-down, and root cause analysis",
+            "Assign remediation actions for identified security risks"
+          ]
+        }
+      ]
+    },
+    {
       "sectionHeader": "How We Support It",
       "sectionDesc": "Develop a toolchain to support the above areas of What and How for secure development",
-      "image" : "toolchain",
+      "images": [{ "filename": "howWeSupportIt" }],
       "items": [
         {
           "name": "Heimdall Lite",
@@ -161,7 +210,7 @@
           "github_link": "https://github.com/mitre/heimdall-lite",
           "svg": "",
           "tools": "",
-          "shields" : [
+          "shields": [
             "https://img.shields.io/github/package-json/v/mitre/heimdall-lite",
             "https://img.shields.io/npm/dt/heimdall-lite?label=npm%20downloads",
             "https://img.shields.io/docker/pulls/mitre/heimdall-lite?label=docker%20hub%20pulls"
@@ -178,11 +227,10 @@
           "github_link": "https://github.com/mitre/heimdall",
           "svg": "",
           "tools": "",
-          "shields" : [
+          "shields": [
             "https://img.shields.io/github/v/tag/mitre/heimdall?label=version",
             "https://img.shields.io/npm/dt/heimdall?label=npm%20downloads",
             "https://img.shields.io/docker/pulls/mitre/heimdall?label=docker%20hub%20pulls"
-            
           ]
         },
         {
@@ -208,7 +256,7 @@
           "github_link": "https://github.com/mitre/inspec_tools/",
           "svg": "",
           "tools": "",
-          "shields" : [
+          "shields": [
             "https://img.shields.io/github/v/release/mitre/inspec_tools?label=version",
             "https://img.shields.io/gem/dt/inspec_tools?label=gem%20downloads"
           ]
@@ -224,7 +272,7 @@
           "github_link": "https://github.com/mitre/heimdall_tools",
           "svg": "",
           "tools": "",
-          "shields" : [
+          "shields": [
             "https://img.shields.io/github/v/release/mitre/heimdall_tools?label=version",
             "https://img.shields.io/gem/dt/heimdall_tools?label=gem%20downloads"
           ]
@@ -240,7 +288,7 @@
           "github_link": "https://github.com/mitre/inspecjs",
           "svg": "",
           "tools": "",
-          "shields" : [
+          "shields": [
             "https://img.shields.io/npm/v/inspecjs?label=version",
             "https://img.shields.io/npm/dt/inspecjs?label=npm%20downloads"
           ]
@@ -268,7 +316,7 @@
           "github_link": "https://github.com/mitre/hdf-json-to-splunk/",
           "svg": "",
           "tools": "",
-          "shields" : [
+          "shields": [
             "https://img.shields.io/github/v/release/mitre/hdf-json-to-splunk?label=version",
             "https://img.shields.io/github/downloads/mitre/hdf-json-to-splunk/total?label=github%20downloads"
           ]
