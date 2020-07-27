@@ -9,6 +9,7 @@ export default new Vuex.Store({
     drawer: false,
     showFutureTraining: false,
     isCompact: true,
+    showFeedbackModal: false,
     items: [
       {
         text: "Home",
@@ -160,12 +161,16 @@ export default new Vuex.Store({
     },
     isCompactGetter: state => {
       return state.isCompact;
-    }
+    },
+    feedbackModalGetter: state => {
+      return state.showFeedbackModal;
+    },
   },
   mutations: {
     setDrawer: (state, payload) => (state.drawer = payload),
     toggleDrawer: state => (state.drawer = !state.drawer),
     toggleCompact: state => (state.isCompact = !state.isCompact),
+    showFeedbackModal: state => (state.showFeedbackModal = !state.showFeedbackModal),
 
     // For Admin
     ADsetDrawer: (state, payload) => (state.adminDrawer = payload),
