@@ -5,7 +5,7 @@
         <p class=" mb-2 wrap-list-text">
           <b>{{item.name}}</b>
         </p>
-        <p flat class=" ma-2">{{item.desc}}</p>
+        <span v-html="item.desc" />
         <p flat dense class="ma-2 " v-for="entry in item.values" :key="entry.name">
           <span>
             <a v-if="entry.link" :href="entry.link" target="_blank">{{entry.name}}</a>

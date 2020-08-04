@@ -22,6 +22,10 @@
       ]
     },
     {
+      "name" : "How does the CMS SAF integrate into a project?",
+      "desc" : "<p>The CMS SAF can integrate into a software development project from start to finish. CMS development teams can hit the ground running by leveraging our existing tools and testing profiles. The CMS SAF team can help you find the best way to deploy our tools into your project ecosystem. Some of the questions we will work with you to answer include:</p><div class=\"ml-2\"><p><b>What infrastructure does the project utilize?</b> The CMS SAF team has already developed a large number of validation profiles for common operating systems, web servers, cloud service providers, databases, and more. If your assets are not included, we can work with you to create new profiles.</p><p><b>How is your pipeline managed?</b> The CMS SAF team can examine your pipeline or management process, and help you pick the most sensible place to stage an InSpec runner to conduct validation tests.</p><p><b>How do you want to consume test results?</b> The CMS SAF team can work with you to build and configure a process for consuming validation test output. We offer the Heimdall Security Results Viewer, in both a lightweight deployment for small teams and a full storage server for larger projects. We also offer a number of support tools to convert the output from other security testing tools into Heimdall Data Format, to allow you to collect all security data into one place.</p><p><b>How can you fix issues discovered in validation tests?</b> The CMS SAF also includes hardening profiles which can be leveraged to remediate issues on many common stack components.</p></div>"
+    },
+    {
       "name": "InSpec",
       "desc": "InSpec is a free and open-source Chef framework for testing and auditing applications and infrastructure. InSpec is designed to integrate very easily into existing DevSecOps pipelines. CMS has partnered with the open-source community to create a growing number of baseline testing profiles to make it easy for developers to jump right in.",
       "values": [
