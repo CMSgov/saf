@@ -19,7 +19,6 @@
             @click="showFeedbackModal"
             style="text-transform: capitalize;"
             text
-            outlined
           >Give Us Feedback!</v-btn>
         </template>
         <feedbackModal v-show="feedbackModalGetter" ></feedbackModal>
