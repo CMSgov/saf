@@ -54,7 +54,7 @@
           "icon": "forum",
           "side_icon": "",
           "svg": "",
-          "link": "https://github.com/orgs/CMSgov/teams/ispg/repositories",
+          "router_link": "validation",
           "tools": ""
         },
         {
