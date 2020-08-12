@@ -5,18 +5,35 @@
     <v-toolbar-title class="px-0">
       <router-link
         :to="{ name: 'home'}"
-        class=""
+        class
         style="text-decoration:none;font-size:110%"
         :class="this.$vuetify.theme.dark?'whiteText':'blackText'"
       >{{communityData.communityName}}</router-link>
     </v-toolbar-title>
 
     <v-spacer />
+    <div v-show="$vuetify.breakpoint.smAndUp">
+      <v-dialog v-model="feedbackModalGetter" width="50rem" @click:outside="showFeedbackModal" slot="activator">
+        <template v-slot:activator="{ on }">
+          <v-btn
+            @click="showFeedbackModal"
+            style="text-transform: capitalize;"
+            text
+          >Give Us Feedback!</v-btn>
+        </template>
+        <feedbackModal v-show="feedbackModalGetter" ></feedbackModal>
+      </v-dialog>
+    </div>
+    <!-- <feedbackModal v-show="feedbackModalGetter" @close="showFeedbackModal">Hello World!</feedbackModal>
+    <div v-show="feedbackModalGetter">
+      <v-btn>what</v-btn>
+    </div>-->
+    <v-spacer />
     <v-btn
       v-for="(link, i) in metalinks"
       :key="i"
       :to="link.to"
-      class="ml-2  hidden-sm-and-down"
+      class="ml-2 hidden-sm-and-down"
       style="text-transform: capitalize;"
       text
       @click="onClick($event, link)"
@@ -31,24 +48,28 @@
 
 <script>
 import communityData from "@/assets/data/communityData.json";
+import feedbackModal from "@/components/core/FeedbackModal.vue";
 // import PushNotification from "@/components/core/PushNotifications";
-import { mapMutations } from "vuex";
+import { mapMutations, mapGetters } from "vuex";
 export default {
   data() {
     return {
-      communityData: communityData
+      communityData: communityData,
     };
   },
   components: {
-    // PushNotification
+    feedbackModal: feedbackModal,
   },
   computed: {
     metalinks() {
-      return this.$store.getters.links.filter(link => link.meta.enabled);
-    }
+      return this.$store.getters.links.filter((link) => link.meta.enabled);
+    },
+    ...mapGetters(["feedbackModalGetter"]),
   },
   methods: {
     ...mapMutations(["toggleDrawer"]),
+    ...mapMutations(["showFeedbackModal"]),
+
     onClick(e, item) {
       e.stopPropagation();
       if (item.to || !item.href) return;
@@ -65,8 +86,8 @@ export default {
       } else {
         metaThemeColor.setAttribute("content", "#0277bd");
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

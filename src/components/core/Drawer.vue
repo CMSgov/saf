@@ -21,17 +21,25 @@
 
     <v-list-item>
       <v-list-item-content>
-        <v-list-item-title
-          class=""
-          style="font-size:130%"
-        >{{communityData.communityName}}</v-list-item-title>
+        <v-list-item-title class style="font-size:130%">{{communityData.communityName}}</v-list-item-title>
         <!-- <v-list-item-subtitle class="">
             Google Developers Group
         </v-list-item-subtitle>-->
       </v-list-item-content>
     </v-list-item>
 
-    <v-divider></v-divider>
+    <v-divider />
+    <v-dialog v-model="feedbackModalGetter" width="50rem" @click:outside="showFeedbackModal">
+      <template v-slot:activator="{ on }">
+        <v-btn class="ma-2"
+          @click="showFeedbackModal"
+          style="text-transform: capitalize;"
+          text
+        >Give Us Feedback!</v-btn>
+      </template>
+      <feedbackModal v-show="feedbackModalGetter"></feedbackModal>
+    </v-dialog>
+    <v-divider />
 
     <v-list dense>
       <ul v-for="(link, i) in links" :key="i" class="ma-0 pa-0">
@@ -40,10 +48,10 @@
           :to="link.to"
           :href="link.href"
           @click="onClick($event, link)"
-          class=" pl-0"
+          class="pl-0"
           color="primary"
         >
-          <v-list-item-icon class="pl-4"> 
+          <v-list-item-icon class="pl-4">
             <v-icon>{{ link.meta.enabled ? link.icon : 'mdi-close-circle-outline' }}</v-icon>
           </v-list-item-icon>
 
@@ -64,28 +72,34 @@
 
 <script>
 import communityData from "@/assets/data/communityData.json";
+import feedbackModal from "@/components/core/FeedbackModal.vue";
 // Utilities
 import { mapGetters, mapMutations } from "vuex";
 export default {
   name: "CoreDrawer",
   data() {
     return {
-      communityData: communityData
+      communityData: communityData,
     };
+  },
+  components: {
+    feedbackModal: feedbackModal,
   },
   computed: {
     ...mapGetters(["links"]),
+    ...mapGetters(["feedbackModalGetter"]),
     drawer: {
       get() {
         return this.$store.state.drawer;
       },
       set(val) {
         this.setDrawer(val);
-      }
-    }
+      },
+    },
   },
   methods: {
     ...mapMutations(["setDrawer"]),
+    ...mapMutations(["showFeedbackModal"]),
     onClick(e, item) {
       e.stopPropagation();
       if (item.to === "/") {
@@ -96,7 +110,7 @@ export default {
       if (item.to || !item.href) return;
       this.$vuetify.goTo(item.href);
       this.setDrawer(false);
-    }
-  }
+    },
+  },
 };
 </script>
