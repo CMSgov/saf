@@ -2,10 +2,10 @@
   "items": [
     {
       "name": "Overview",
-      "desc": "See here for a one-page overview of how to use the MITRE | SAF to help developers, assessors, and operations teams automate security in their current processes.",
+      "desc": "See here for a one-page overview of how to use the MITRE SAF to help developers, assessors, and operations teams automate security in their current processes.",
       "values" : [
         {
-          "name" : "How To Use The MITRE | SAF",
+          "name" : "How To Use The MITRE SAF",
           "desc" : "",
           "download_link" : "How to Use the MITRE SAF.pdf"
         }
