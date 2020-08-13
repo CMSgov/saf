@@ -22,36 +22,6 @@ export default new Vuex.Store({
         },
       },
       {
-        text: "Validation",
-        to: "/validation",
-        icon: "mdi-thumb-up",
-        meta: {
-          showToolbar: true,
-          enabled: true,
-          showBottomNav: true,
-        },
-      },
-      {
-        text: "Hardening",
-        to: "/hardening",
-        icon: "mdi-security",
-        meta: {
-          showToolbar: true,
-          enabled: true,
-          showBottomNav: true,
-        },
-      },
-      {
-        text: "Visualization",
-        to: "/visualization",
-        icon: "mdi-image-search",
-        meta: {
-          showToolbar: true,
-          enabled: false,
-          showBottomNav: true,
-        },
-      },
-      {
         text: "Getting Started",
         to: "/gettingstarted",
         icon: "mdi-book-open",
@@ -62,8 +32,38 @@ export default new Vuex.Store({
         },
       },
       {
-        text: "Training",
-        to: "/training",
+        text: "Harden",
+        to: "/harden",
+        icon: "mdi-security",
+        meta: {
+          showToolbar: true,
+          enabled: true,
+          showBottomNav: true,
+        },
+      },
+      {
+        text: "Visualize",
+        to: "/visualize",
+        icon: "mdi-image-search",
+        meta: {
+          showToolbar: true,
+          enabled: false,
+          showBottomNav: true,
+        },
+      },
+      {
+        text: "Validate",
+        to: "/validate",
+        icon: "mdi-thumb-up",
+        meta: {
+          showToolbar: true,
+          enabled: true,
+          showBottomNav: true,
+        },
+      },
+      {
+        text: "Train",
+        to: "/train",
         icon: "mdi-chair-school",
         meta: {
           showToolbar: true,

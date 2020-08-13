@@ -129,21 +129,21 @@ const router = new Router({
       },
     },
     {
-      path: "/validation",
-      name: "validation",
+      path: "/validate",
+      name: "validate",
       component: () => import("@/views/Validation.vue"),
       meta: {
-        title: `Validation Profiles | ${communityData.communityName}`,
+        title: `Validate | ${communityData.communityName}`,
         color: "#0277bd",
         requiresAuth: false,
       },
     },
     {
-      path: "/hardening",
-      name: "hardening",
+      path: "/harden",
+      name: "harden",
       component: () => import("@/views/Hardening.vue"),
       meta: {
-        title: `Hardening Profiles | ${communityData.communityName}`,
+        title: `Harden | ${communityData.communityName}`,
         color: "#0277bd",
         requiresAuth: false,
       },
@@ -159,11 +159,11 @@ const router = new Router({
       },
     },
     {
-      path: "/training",
-      name: "training",
+      path: "/train",
+      name: "train",
       component: () => import("@/views/Training.vue"),
       meta: {
-        title: `Training | ${communityData.communityName}`,
+        title: `Our Training | ${communityData.communityName}`,
         color: "#0277bd",
         requiresAuth: false,
       },

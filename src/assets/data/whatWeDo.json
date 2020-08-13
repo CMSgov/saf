@@ -5,23 +5,23 @@
       "sectionDesc": "Bring together the right technologies, methods, and skills to meet the security needs of today's developers and operators",
       "items": [
         {
-          "name": "Validation",
+          "name": "Validate",
           "desc": "Produce detailed security testing data throughout development",
           "icon": "mdi-thumb-up",
           "svg": "",
-          "router_link": "validation",
+          "router_link": "validate",
           "tools": ""
         },
         {
-          "name": "Hardening",
+          "name": "Harden",
           "desc": "Align with security baselines using our Ansible, Chef, and Terraform content",
           "icon": "mdi-security",
           "svg": "",
-          "router_link": "hardening",
+          "router_link": "harden",
           "tools": ""
         },
         {
-          "name": "Visualization",
+          "name": "Visualize",
           "desc": "Dive deep into test results visually via rollups, charts, and timelines",
           "icon": "mdi-image-search",
           "svg": "",
@@ -29,11 +29,11 @@
           "tools": ""
         },
         {
-          "name": "Training",
+          "name": "Train",
           "desc": "Learn how to write effective tests and apply them to the team's pipeline",
           "icon": "mdi-chair-school",
           "svg": "",
-          "router_link": "training",
+          "router_link": "train",
           "tools": ""
         }
       ]
@@ -44,7 +44,7 @@
       "items": [
         {
           "name": "Standardizing Security Testing Content",
-          "router_link": "validation",
+          "router_link": "validate",
           "desc": "Build on the MITRE | SAF community's library of standard security profiles",
           "svg": "",
           "icon": "",
@@ -52,7 +52,7 @@
             {
               "name": "InSpec Profiles",
               "svg": "inspec-blue-back-border",
-              "link": "validation"
+              "link": "validate"
             },
             {
               "name": "InSpec Tools",
@@ -126,7 +126,7 @@
         },
         {
           "name": "Hardening Content",
-          "router_link": "hardening",
+          "router_link": "harden",
           "desc": "Use the MITRE | SAF hardening baseline library to configure systems for security",
           "svg": "",
           "icon": "",
@@ -134,12 +134,12 @@
             {
               "name": "Ansible Profiles",
               "svg": "ansible",
-              "link": "hardening"
+              "link": "harden"
             },
             {
               "name": "Chef Profiles",
               "svg": "chef-2",
-              "link": "hardening"
+              "link": "harden"
             }
           ]
         }

@@ -3,7 +3,7 @@
     <v-row justify="center" align="center" class="mx-0">
       <v-col cols="12" lg="10" class="pa-0 ma-0">
         <Header>
-          <h3 slot="title">Validation</h3>
+          <h3 slot="title">Validate</h3>
           <div slot="subtitle" class="ma-0">
             <p class="ma-0">
               These open-source community-based InSpec profiles validate the security of

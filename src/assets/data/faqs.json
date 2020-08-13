@@ -39,7 +39,7 @@
       "links": [
         {
           "name": "InSpec (and our InSpec profiles)",
-          "router_link": "/validation",
+          "router_link": "/validate",
           "desc": " for assessing configuration settings, vulnerabilities, and least functionality"
         },
         {
