@@ -6,8 +6,7 @@
 
 @font-face {
   font-family: roboto-condensed;
-  src: url(~@/assets/fonts/RobotoCondensed-Bold.ttf) format("truetype"),
-    url(~@/assets/fonts/RobotoCondensed-Regular.ttf) format("truetype");
+  src: url(~@/assets/fonts/RobotoCondensed-Regular.ttf) format("truetype");
 }
 
 .google-font {

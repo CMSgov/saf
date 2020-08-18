@@ -1,34 +1,38 @@
 {
   "rows": [
     {
-      "goal": [
+      "name": "GOAL",
+      "data": [
         {
-          "svg": "",
+          "svg": "inspec-white-back-border",
           "title": "HARDEN",
-          "text": "<b>Implement security baselines</b> using our Ansible, Chef, and Terraform content"
+          "subtitle": "<b>Implement security baselines</b> using our Ansible, Chef, and Terraform content"
         },
         {
-          "svg": "",
+          "svg": "inspec-white-back-border",
           "title": "VALIDATE",
-          "text": "<b>Generate detailed security testing results</b> throughout the lifecycle of a system"
+          "subtitle": "<b>Generate detailed security testing results</b> throughout the lifecycle of a system"
         },
         {
-          "svg": "",
+          "svg": "inspec-white-back-border",
           "title": "NORMALIZE",
-          "text": "<b>Convert security results</b> from all your security tools into a common data format"
+          "subtitle": "<b>Convert security results</b> from all your security tools into a common data format"
         },
         {
-          "svg": "",
+          "svg": "inspec-white-back-border",
           "title": "VISUALIZE",
-          "text": "<b>Identify overall security status</b> and deep-dive to solve specific security defects"
+          "subtitle": "<b>Identify overall security status</b> and deep-dive to solve specific security defects"
         }
-      ]
+      ],
+      "row_height": "10rem"
     },
     {
-      "inputs": [
+      "name": "INPUTS",
+      "data": [
         {
           "title": "Based On Standards",
-          "subtitle": "(STIGs, CIS Benchmarks, Agency Baselines)"
+          "subtitle": "(STIGs, CIS Benchmarks, Agency Baselines)",
+          "cols": "6"
         },
         {
           "title": "Security Tool Output",
@@ -38,7 +42,68 @@
           "title": "Aggregated Data",
           "subtitle": "(Compile All Results For Analysis)"
         }
-      ]
+      ],
+      "row_height": "7rem"
+    },
+    {
+      "name": "TOOLS",
+      "data": [
+        {
+          "subcards": [
+            {
+              "svg": "inspec-white-back-border"
+            },
+            {
+              "svg": "inspec-white-back-border"
+            },
+            {
+              "svg": "inspec-white-back-border"
+            },
+            {
+              "svg": "inspec-white-back-border",
+              "title": "Hardening",
+              "subtitle": "Content Library"
+            }
+          ]
+        },
+        {
+          "subcards": [
+            {
+              "title": "Vulcan",
+              "subtitle": [
+                {
+                  "type": "text",
+                  "contents": "<b>Author standards</b> to create "
+                },
+                {
+                  "type": "svg",
+                  "contents": "inspec-white-back-border"
+                },
+                {
+                  "type": "text",
+                  "contents": " validation code"
+                }
+              ]
+            },
+            {
+              "title": "InSpec_Tools",
+              "subtitle": "Content Library"
+            },
+            {
+              "svg": "inspec-white-back-border",
+              "title": "Validation",
+              "subtitle": "Content Library"
+            }
+          ]
+        },
+        {
+          "subcards": []
+        },
+        {
+          "subcards": []
+        }
+      ],
+      "row_height": "15rem"
     }
   ]
 }

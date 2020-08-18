@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container fluid class="ma-0 pa-0">
     <HowItWorks />
     <wwdSection :topic="whatwedodata[0]" md="6" lg="6" xl="3" />
     <v-divider class="ma-2" />
