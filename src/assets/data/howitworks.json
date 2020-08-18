@@ -1,0 +1,44 @@
+{
+  "rows": [
+    {
+      "goal": [
+        {
+          "svg": "",
+          "title": "HARDEN",
+          "text": "<b>Implement security baselines</b> using our Ansible, Chef, and Terraform content"
+        },
+        {
+          "svg": "",
+          "title": "VALIDATE",
+          "text": "<b>Generate detailed security testing results</b> throughout the lifecycle of a system"
+        },
+        {
+          "svg": "",
+          "title": "NORMALIZE",
+          "text": "<b>Convert security results</b> from all your security tools into a common data format"
+        },
+        {
+          "svg": "",
+          "title": "VISUALIZE",
+          "text": "<b>Identify overall security status</b> and deep-dive to solve specific security defects"
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "title": "Based On Standards",
+          "subtitle": "(STIGs, CIS Benchmarks, Agency Baselines)"
+        },
+        {
+          "title": "Security Tool Output",
+          "subtitle": "(Code Analysis, Continuous Monitoring, Security Operations)"
+        },
+        {
+          "title": "Aggregated Data",
+          "subtitle": "(Compile All Results For Analysis)"
+        }
+      ]
+    }
+  ]
+}
