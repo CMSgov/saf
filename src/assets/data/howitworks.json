@@ -28,7 +28,7 @@
             "size" : "3rem"
           },
           "subtitle": "<b>Convert security results</b> from all your security tools into a common data format",
-          "link" : "https://heimdall_tools.mitre.org"
+          "link" : "https://heimdall-tools.mitre.org"
         },
         {
           "svg": "inspec-white-back-border",
@@ -40,14 +40,14 @@
           "router_link" : "/visualize"
         }
       ],
-      "row_height": "8rem"
+      "row_height": "10rem"
     },
     {
       "name": "INPUTS",
       "data": [
         {
           "title": {
-            "text" : "Based On Standards",
+            "text" : "<b>Based On Standards</b>",
             "size" : "2rem"
           },
           "subtitle": "(STIGs, CIS Benchmarks, Agency Baselines)",
@@ -55,20 +55,20 @@
         },
         {
           "title": {
-            "text" : "Security Tool Output",
+            "text" : "<b>Security Tool Output</b>",
             "size" : "2rem"
           },
           "subtitle": "(Code Analysis, Continuous Monitoring, Security Operations)"
         },
         {
           "title": {
-            "text" : "Aggregated Data",
+            "text" : "<b>Aggregated Data</b>",
             "size" : "2rem"
           },
           "subtitle": "(Compile All Results For Analysis)"
         }
       ],
-      "row_height": "8rem"
+      "row_height": "9rem"
     },
     {
       "name": "TOOLS",
@@ -118,7 +118,7 @@
             {
               "title": "InSpec_Tools",
               "subtitle": "Content Library",
-              "link" : "https://inspec_tools.mitre.org"
+              "link" : "https://inspec-tools.mitre.org"
             },
             {
               "svg": "inspec-white-back-border",
@@ -138,7 +138,7 @@
             {
               "title": "Heimdall_Tools",
               "subtitle": "<b>Convert Output</b> from non-InSpec tools into HDF",
-              "link" : "https://heimdall_tools.mitre.org"
+              "link" : "https://heimdall-tools.mitre.org"
             },
             {
 
@@ -176,7 +176,7 @@
             {
               "title": "InSpec_Tools",
               "subtitle": "<b>Convert InSpec output</b> to checklist, csv, and xccdf reports",
-              "link" : "https://inspec_tools.mitre.org"
+              "link" : "https://inspec-tools.mitre.org"
             }
           ]
         }
