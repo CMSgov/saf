@@ -179,6 +179,16 @@ const router = new Router({
       }
     },
     {
+      path: "/visualize",
+      name: "visualize",
+      component: () => import("@/views/Visualize.vue"),
+      meta: {
+        title: `Visualize | ${communityData.communityName}`,
+        color: "#0277bd",
+        requiresAuth: false
+      }
+    },
+    {
       path:'/admin/dashboard/events',
       name:"admin-events",
       component:()=> import('@/views/Admin/Events'),

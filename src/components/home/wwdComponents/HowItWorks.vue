@@ -77,7 +77,7 @@
                                 <v-col v-if="subcard.svg" cols="auto" align-self="center">
                                   <v-img
                                     :src="require('@/assets/img/svg/' + subcard.svg + '.svg')"
-                                    style="max-width: 28px; max-height: 28px;"
+                                    style=""
                                     class="ma-1"
                                   />
                                 </v-col>
