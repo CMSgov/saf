@@ -76,7 +76,7 @@
         {
           "subcards": [
             {
-              "svg": "terraform-full",
+              "svg": "inspec-white-back-border",
               "link" : "https://www.terraform.io/"
             },
             {
