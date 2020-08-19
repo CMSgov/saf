@@ -5,45 +5,70 @@
       "data": [
         {
           "svg": "inspec-white-back-border",
-          "title": "HARDEN",
-          "subtitle": "<b>Implement security baselines</b> using our Ansible, Chef, and Terraform content"
+          "title": {
+            "text" : "<b>HARDEN</b>",
+            "size" : "3rem"
+          },
+          "subtitle": "<b>Implement security baselines</b> using our Ansible, Chef, and Terraform content",
+          "router_link" : "/harden"
         },
         {
           "svg": "inspec-white-back-border",
-          "title": "VALIDATE",
-          "subtitle": "<b>Generate detailed security testing results</b> throughout the lifecycle of a system"
+          "title": {
+            "text" : "<b>VALIDATE</b>",
+            "size" : "3rem"
+          },
+          "subtitle": "<b>Generate detailed security testing results</b> throughout the lifecycle of a system",
+          "router_link" : "/validate"
         },
         {
           "svg": "inspec-white-back-border",
-          "title": "NORMALIZE",
-          "subtitle": "<b>Convert security results</b> from all your security tools into a common data format"
+          "title": {
+            "text" : "<b>NORMALIZE</b>",
+            "size" : "3rem"
+          },
+          "subtitle": "<b>Convert security results</b> from all your security tools into a common data format",
+          "link" : "https://heimdall_tools.mitre.org"
         },
         {
           "svg": "inspec-white-back-border",
-          "title": "VISUALIZE",
-          "subtitle": "<b>Identify overall security status</b> and deep-dive to solve specific security defects"
+          "title": {
+            "text" : "<b>VISUALIZE</b>",
+            "size" : "3rem"
+          },
+          "subtitle": "<b>Identify overall security status</b> and deep-dive to solve specific security defects",
+          "router_link" : "/visualize"
         }
       ],
-      "row_height": "10rem"
+      "row_height": "8rem"
     },
     {
       "name": "INPUTS",
       "data": [
         {
-          "title": "Based On Standards",
+          "title": {
+            "text" : "Based On Standards",
+            "size" : "2rem"
+          },
           "subtitle": "(STIGs, CIS Benchmarks, Agency Baselines)",
           "cols": "6"
         },
         {
-          "title": "Security Tool Output",
+          "title": {
+            "text" : "Security Tool Output",
+            "size" : "2rem"
+          },
           "subtitle": "(Code Analysis, Continuous Monitoring, Security Operations)"
         },
         {
-          "title": "Aggregated Data",
+          "title": {
+            "text" : "Aggregated Data",
+            "size" : "2rem"
+          },
           "subtitle": "(Compile All Results For Analysis)"
         }
       ],
-      "row_height": "7rem"
+      "row_height": "8rem"
     },
     {
       "name": "TOOLS",
@@ -51,18 +76,22 @@
         {
           "subcards": [
             {
-              "svg": "inspec-white-back-border"
+              "svg": "inspec-white-back-border",
+              "link" : "https://www.terraform.io/"
             },
             {
-              "svg": "inspec-white-back-border"
+              "svg": "inspec-white-back-border",
+              "link" : "https://docs.chef.io/workstation/kitchen/"
             },
             {
-              "svg": "inspec-white-back-border"
+              "svg": "inspec-white-back-border",
+              "link" : "https://www.ansible.com/"
             },
             {
               "svg": "inspec-white-back-border",
               "title": "Hardening",
-              "subtitle": "Content Library"
+              "subtitle": "Content Library",
+              "router_link" : "/harden"
             }
           ]
         },
@@ -83,27 +112,76 @@
                   "type": "text",
                   "contents": " validation code"
                 }
-              ]
+              ],
+              "link" : "https://vulcan.mitre.org"
             },
             {
               "title": "InSpec_Tools",
-              "subtitle": "Content Library"
+              "subtitle": "Content Library",
+              "link" : "https://inspec_tools.mitre.org"
             },
             {
               "svg": "inspec-white-back-border",
               "title": "Validation",
-              "subtitle": "Content Library"
+              "subtitle": "Content Library",
+              "router_link" : "/validate"
             }
           ]
         },
         {
-          "subcards": []
+          "subcards": [
+            {
+              "title": "Heimdall Data Format (HDF)",
+              "subtitle": "<b>Normalize data</b> for portability and aggregation",
+              "router_link" : "/visualize"
+            },
+            {
+              "title": "Heimdall_Tools",
+              "subtitle": "<b>Convert Output</b> from non-InSpec tools into HDF",
+              "link" : "https://heimdall_tools.mitre.org"
+            },
+            {
+
+              "title": [
+                {
+                  "type": "text",
+                  "contents": "HDF to "
+                },
+                {
+                  "type": "svg",
+                  "contents": "inspec-white-back-border"
+                },
+                {
+                  "type": "text",
+                  "contents": " plugin"
+                }
+              ],
+              "subtitle" : "<b>Store HDF</b> output into Splunk for later retrieval / visualization using Heimdall",
+              "link" : "https://hdf-json-to-splunk.mitre.org"
+            }
+          ]
         },
         {
-          "subcards": []
+          "subcards": [
+            {
+              "title": "Heimdall Lite / Server",
+              "subtitle": "<b>Visualize security status,</b> drill-down to identify root cause",
+              "link" : "https://heimdall-lite.mitre.org"
+            },
+            {
+              "title": "Reporting",
+              "subtitle": "<b>Display security controls</b> and their status, critical/high findings, and recommended remediation actions",
+              "link" : ""
+            },
+            {
+              "title": "InSpec_Tools",
+              "subtitle": "<b>Convert InSpec output</b> to checklist, csv, and xccdf reports",
+              "link" : "https://inspec_tools.mitre.org"
+            }
+          ]
         }
       ],
-      "row_height": "15rem"
+      "row_height": "20rem"
     }
   ]
 }

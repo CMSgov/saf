@@ -1,7 +1,7 @@
 <template>
   <v-container class="roboto-font" style="width:100%">
-    <v-row align="center" justify="center" style="height : 5rem">
-      <p class="roboto-font ma-0 tool-header primary--text" style="font-size:300%">
+    <v-row align="center" justify="center" style="height : 8rem">
+      <p class="roboto-font tool-header primary--text ma-0" style="font-size:4rem">
         <b>HOW MITRE SAF WORKS</b>
       </p>
     </v-row>
@@ -15,7 +15,9 @@
           :style="{ height : row.row_height }"
           color="rgba(0, 0, 0, 0.0)"
         >
-          <p class="rotate inner">{{row.name}}</p>
+          <b>
+            <p class="rotate inner" style="font-size:2rem">{{row.name}}</p>
+          </b>
         </v-card>
       </v-col>
       <v-col cols="11">
@@ -26,23 +28,19 @@
             :style="{height:row.row_height}"
             justify="center"
           >
-            <v-col
-              v-for="(item, index) in row.data"
-              :key="index"
-              :cols="item.cols"
-              class="text-center"
-            >
-              <v-card flat outlined height="100%">
-                <v-card-title v-if="item.title" class="primary--text">
+            <v-col v-for="(item, index) in row.data" :key="index" :cols="item.cols">
+              <v-card flat outlined height="100%" :href="item.link" :to="item.router_link" :target="item.link ? '_blank' : ''">
+                <v-card-title v-if="item.title" class="primary--text mb-2">
                   <span v-if="item.svg">
                     <v-img
                       :src="require('@/assets/img/svg/' + item.svg + '.svg')"
                       style="max-width: 28px; max-height: 28px;"
+                      class="mr-2"
                     />
                   </span>
-                  <span>{{item.title}}</span>
+                  <span :style="'font-size:' + item.title.size" class="mb-2" v-html="item.title.text"></span>
                 </v-card-title>
-                <v-card-subtitle v-if="item.subtitle" class="primary--text" style="text-align:left">
+                <v-card-subtitle v-if="item.subtitle" class="primary--text text-subtitle">
                   <span v-html="item.subtitle" />
                 </v-card-subtitle>
                 <v-container style="height:100%">
@@ -52,7 +50,7 @@
                     :style="{ height: (100/item.subcards.length) + '%' }"
                   >
                     <v-col>
-                      <v-card flat height="100%">
+                      <v-card flat height="100%" :href="subcard.link" :to="subcard.router_link" :target="subcard.link ? '_blank' : ''">
                         <v-container fluid style="height:100%">
                           <v-row style="height:100%">
                             <v-col v-if="subcard.svg" cols="auto" align-self="center">
@@ -62,7 +60,11 @@
                                 class="ma-1"
                               />
                             </v-col>
-                            <v-col cols="8" v-if="subcard.title">
+                            <v-col
+                              v-if="subcard.title"
+                              :cols="subcard.svg ? '8' : 'auto'"
+                              align-self="center"
+                            >
                               <v-card-title
                                 v-if="typeof subcard.title === 'string'"
                                 class="primary--text ma-0 pa-0 text-svg-title"
@@ -70,14 +72,14 @@
                               />
                               <v-card-title v-else class="primary--text ma-0 pa-0 text-svg-title">
                                 <span v-for="(fragment, triplen) in subcard.title" :key="triplen">
-                                  <v-img
+                                  <img
                                     inline
                                     v-if="fragment.type === 'svg'"
                                     :src="require('@/assets/img/svg/' + fragment.contents + '.svg')"
                                     style="max-width: 14px; max-height: 14px;"
                                     class="ma-1"
                                   />
-                                  <span v-else v-html=fragment.contents />
+                                  <span v-else v-html="fragment.contents" />
                                 </span>
                               </v-card-title>
                               <v-card-subtitle
@@ -87,21 +89,24 @@
                               />
                               <v-card-subtitle
                                 v-else
-                                class="primary--text ma-0 pa-0 text-svg-subtitle"
+                                class="primary--text ma-0 pa-0 text-svg-subtitle break-word"
                               >
-                                <span
-                                  v-for="(fragment, triplen) in subcard.subtitle"
-                                  :key="triplen"
-                                >
-                                  <v-img
-                                    
-                                    v-if="fragment.type === 'svg'"
-                                    :src="require('@/assets/img/svg/' + fragment.contents + '.svg')"
-                                    style="max-width: 5px; max-height: 5px;"
-                                    class="ma-1"
+                                <template v-for="(fragment, triplen) in subcard.subtitle">
+                                  <span :key="triplen" v-if="fragment.type === 'svg'">
+                                    <img
+                                      :key="triplen"
+                                      :src="require('@/assets/img/svg/' + fragment.contents + '.svg')"
+                                      style="max-width: 5px; max-height: 5px; "
+                                      class="ma-1"
+                                    />
+                                  </span>
+                                  <span
+                                    v-else
+                                    class="break-word"
+                                    :key="triplen"
+                                    v-html="fragment.contents"
                                   />
-                                  <span v-else v-html=fragment.contents />
-                                </span>
+                                </template>
                               </v-card-subtitle>
                             </v-col>
                           </v-row>
@@ -155,14 +160,22 @@ export default {
   transform: translateX(-50%) translateY(-50%) rotate(-90deg);
 }
 
-.text-svg {
+.text {
   &-title {
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: bold;
   }
   &-subtitle {
-    font-size: 0.75rem;
+    font-size: 1rem;
+  }
+  &-svg-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  &-svg-subtitle {
+    font-size: 1rem;
     text-align: left;
   }
 }
+
 </style>
