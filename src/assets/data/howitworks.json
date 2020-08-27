@@ -4,7 +4,7 @@
       "name": "GOAL",
       "data": [
         {
-          "svg": "inspec-white-back-border",
+          "svg": "Harden Icon-Light",
           "title": {
             "text" : "<b>HARDEN</b>",
             "size" : "3rem"
@@ -13,7 +13,7 @@
           "router_link" : "/harden"
         },
         {
-          "svg": "inspec-white-back-border",
+          "svg": "Validate Icon-Light",
           "title": {
             "text" : "<b>VALIDATE</b>",
             "size" : "3rem"
@@ -22,7 +22,7 @@
           "router_link" : "/validate"
         },
         {
-          "svg": "inspec-white-back-border",
+          "svg": "Normalize Icon-Light",
           "title": {
             "text" : "<b>NORMALIZE</b>",
             "size" : "3rem"
@@ -31,7 +31,7 @@
           "link" : "https://heimdall-tools.mitre.org"
         },
         {
-          "svg": "inspec-white-back-border",
+          "svg": "Visualize Icon-Light",
           "title": {
             "text" : "<b>VISUALIZE</b>",
             "size" : "3rem"
@@ -76,19 +76,19 @@
         {
           "subcards": [
             {
-              "svg": "inspec-white-back-border",
+              "svg": "Terraform Icon and Typemark-Light",
               "link" : "https://www.terraform.io/"
             },
             {
-              "svg": "inspec-white-back-border",
+              "svg": "CHEF Icon and Typemark-Light",
               "link" : "https://docs.chef.io/workstation/kitchen/"
             },
             {
-              "svg": "inspec-white-back-border",
+              "svg": "Ansible Logo and Typemark-Light",
               "link" : "https://www.ansible.com/"
             },
             {
-              "svg": "inspec-white-back-border",
+              "svg": "Hardening Lib Icon-Light",
               "title": "Hardening",
               "subtitle": "Content Library",
               "router_link" : "/harden"
@@ -106,7 +106,7 @@
                 },
                 {
                   "type": "svg",
-                  "contents": "inspec-white-back-border"
+                  "contents": "InSpec Typemark-Light"
                 },
                 {
                   "type": "text",
@@ -117,11 +117,24 @@
             },
             {
               "title": "InSpec_Tools",
-              "subtitle": "Content Library",
+              "subtitle": [
+                {
+                  "type": "text",
+                  "contents": "<b>Create </b>"
+                },
+                {
+                  "type": "svg",
+                  "contents": "InSpec Typemark-Light"
+                },
+                {
+                  "type": "text",
+                  "contents": " <b>validation code</b> and <b>set threshold checks</b> within the pipeline"
+                }
+              ],
               "link" : "https://inspec-tools.mitre.org"
             },
             {
-              "svg": "inspec-white-back-border",
+              "svg": "Validation Lib Icon-Light",
               "title": "Validation",
               "subtitle": "Content Library",
               "router_link" : "/validate"
@@ -149,7 +162,7 @@
                 },
                 {
                   "type": "svg",
-                  "contents": "inspec-white-back-border"
+                  "contents": "Splunk Icon-Light"
                 },
                 {
                   "type": "text",

@@ -43,7 +43,7 @@
                     <span v-if="item.svg">
                       <v-img
                         :src="require('@/assets/img/svg/' + item.svg + '.svg')"
-                        style="max-width: 28px; max-height: 28px;"
+                        style="max-width: 3rem; max-height: 3rem;"
                         class="mr-2"
                       />
                     </span>
