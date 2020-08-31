@@ -108,12 +108,12 @@
                                   class="ma-0 pa-0 text-svg-subtitle break-word"
                                 >
                                   <template v-for="(fragment, triplen) in subcard.subtitle">
-                                    <span :key="triplen" v-if="fragment.type === 'svg'">
+                                    <span :key="triplen" v-if="fragment.type === 'svg'" class="">
                                       <img
                                         :key="triplen"
                                         :src="require('@/assets/img/svg/' + fragment.contents + '.svg')"
-                                        style="max-width: 5px; max-height: 5px; "
-                                        class="ma-1"
+                                        style="max-height:15px"
+                                        class="my-0 mx-1 pt-1"
                                       />
                                     </span>
                                     <span
