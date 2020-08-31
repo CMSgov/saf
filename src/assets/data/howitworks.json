@@ -7,7 +7,7 @@
           "svg": "Harden Icon-Light",
           "title": {
             "text" : "<b>HARDEN</b>",
-            "size" : "3rem"
+            "size" : "2rem"
           },
           "subtitle": "<b>Implement security baselines</b> using our Ansible, Chef, and Terraform content",
           "router_link" : "/harden"
@@ -16,7 +16,7 @@
           "svg": "Validate Icon-Light",
           "title": {
             "text" : "<b>VALIDATE</b>",
-            "size" : "3rem"
+            "size" : "2rem"
           },
           "subtitle": "<b>Generate detailed security testing results</b> throughout the lifecycle of a system",
           "router_link" : "/validate"
@@ -25,19 +25,19 @@
           "svg": "Normalize Icon-Light",
           "title": {
             "text" : "<b>NORMALIZE</b>",
-            "size" : "3rem"
+            "size" : "2rem"
           },
           "subtitle": "<b>Convert security results</b> from all your security tools into a common data format",
-          "link" : "https://heimdall-tools.mitre.org"
+          "router_link" : "/normalize"
         },
         {
           "svg": "Visualize Icon-Light",
           "title": {
             "text" : "<b>VISUALIZE</b>",
-            "size" : "3rem"
+            "size" : "2rem"
           },
           "subtitle": "<b>Identify overall security status</b> and deep-dive to solve specific security defects",
-          "router_link" : "/visualize"
+          "router_link" : "https://heimdall-lite.mitre.org"
         }
       ],
       "row_height": "10rem"
@@ -48,7 +48,7 @@
         {
           "title": {
             "text" : "<b>Based On Standards</b>",
-            "size" : "2rem"
+            "size" : "1.5rem"
           },
           "subtitle": "(STIGs, CIS Benchmarks, Agency Baselines)",
           "cols": "6"
@@ -56,14 +56,14 @@
         {
           "title": {
             "text" : "<b>Security Tool Output</b>",
-            "size" : "2rem"
+            "size" : "1.5rem"
           },
           "subtitle": "(Code Analysis, Continuous Monitoring, Security Operations)"
         },
         {
           "title": {
             "text" : "<b>Aggregated Data</b>",
-            "size" : "2rem"
+            "size" : "1.5rem"
           },
           "subtitle": "(Compile All Results For Analysis)"
         }
