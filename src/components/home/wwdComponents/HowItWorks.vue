@@ -31,8 +31,16 @@
                   :to="item.router_link"
                   :target="item.link ? '_blank' : ''"
                 >
+                <div v-if="item.svg && $vuetify.breakpoint.mdAndDown" style="text-align:center" class="ma-2">
+                  <img
+                    
+                    :src="require('@/assets/img/svg/' + item.svg + '.svg')"
+                    style="max-width: 4rem; max-height: 4rem;"
+                    class="mr-2"
+                  />
+                </div>
                   <v-card-title v-if="item.title" class="mb-2 break-word">
-                    <span v-if="item.svg">
+                    <span v-if="item.svg && $vuetify.breakpoint.lgAndUp">
                       <img
                         :src="require('@/assets/img/svg/' + item.svg + '.svg')"
                         style="max-width: 3rem; max-height: 3rem;"
@@ -54,83 +62,73 @@
                       :key="doublen"
                       :style="{ height: (100/item.subcards.length) + '%' }"
                     >
-                      <v-col>
-                        <v-hover v-slot:default="{ hover }">
-                          <v-card
-                            class="lightModeCard"
-                            :class="hover && (subcard.link || subcard.router_link) ? getHighlight() : ''"
-                            flat
-                            height="100%"
-                            :href="subcard.link"
-                            :to="subcard.router_link"
-                            :target="subcard.link ? '_blank' : ''"
-                          >
-                            <v-container fluid style="height:100%">
-                              <v-row style="height:100%">
-                                <v-col v-if="subcard.svg" cols="auto" align-self="center">
-                                  <img
-                                    :src="require('@/assets/img/svg/' + subcard.svg + '.svg')"
-                                    style="max-width: 28px; max-height: 28px;"
-                                    class="ma-1"
-                                  />
-                                </v-col>
-                                <v-col
-                                  v-if="subcard.title"
-                                  :cols="subcard.svg ? '8' : 'auto'"
-                                  align-self="center"
+                      <v-hover v-slot:default="{ hover }">
+                        <v-card
+                          class="lightModeCard"
+                          :class="hover && (subcard.link || subcard.router_link) ? getHighlight() : ''"
+                          flat
+                          :href="subcard.link"
+                          :to="subcard.router_link"
+                          :target="subcard.link ? '_blank' : ''"
+                          width="100%"
+                        >
+                          <v-container fluid style="height:100%">
+                            <v-row style="height:100%">
+                              <v-col v-if="subcard.svg" cols="auto" align-self="center">
+                                <img
+                                  :src="require('@/assets/img/svg/' + subcard.svg + '.svg')"
+                                  class="ma-1"
+                                />
+                              </v-col>
+                              <v-col v-if="subcard.title" cols="auto" align-self="center">
+                                <v-card-title
+                                  v-if="typeof subcard.title === 'string'"
+                                  class="ma-0 pa-0 text-svg-title break-word"
+                                  v-html="subcard.title"
+                                />
+                                <v-card-title v-else class="ma-0 pa-0 text-svg-title">
+                                  <span v-for="(fragment, triplen) in subcard.title" :key="triplen">
+                                    <img
+                                      inline
+                                      v-if="fragment.type === 'svg'"
+                                      :src="require('@/assets/img/svg/' + fragment.contents + '.svg')"
+                                      style="max-width: 14px; max-height: 14px;"
+                                      class="ma-1"
+                                    />
+                                    <span v-else v-html="fragment.contents" />
+                                  </span>
+                                </v-card-title>
+                                <v-card-subtitle
+                                  v-if="typeof subcard.subtitle === 'string'"
+                                  class="ma-0 pa-0 text-svg-subtitle"
+                                  v-html="subcard.subtitle"
+                                />
+                                <v-card-subtitle
+                                  v-else
+                                  class="ma-0 pa-0 text-svg-subtitle break-word"
                                 >
-                                  <v-card-title
-                                    v-if="typeof subcard.title === 'string'"
-                                    class="ma-0 pa-0 text-svg-title break-word"
-                                    v-html="subcard.title"
-                                  />
-                                  <v-card-title v-else class="ma-0 pa-0 text-svg-title">
-                                    <span
-                                      v-for="(fragment, triplen) in subcard.title"
-                                      :key="triplen"
-                                    >
+                                  <template v-for="(fragment, triplen) in subcard.subtitle">
+                                    <span :key="triplen" v-if="fragment.type === 'svg'">
                                       <img
-                                        inline
-                                        v-if="fragment.type === 'svg'"
+                                        :key="triplen"
                                         :src="require('@/assets/img/svg/' + fragment.contents + '.svg')"
-                                        style="max-width: 14px; max-height: 14px;"
+                                        style="max-width: 5px; max-height: 5px; "
                                         class="ma-1"
                                       />
-                                      <span v-else v-html="fragment.contents" />
                                     </span>
-                                  </v-card-title>
-                                  <v-card-subtitle
-                                    v-if="typeof subcard.subtitle === 'string'"
-                                    class="ma-0 pa-0 text-svg-subtitle"
-                                    v-html="subcard.subtitle"
-                                  />
-                                  <v-card-subtitle
-                                    v-else
-                                    class="ma-0 pa-0 text-svg-subtitle break-word"
-                                  >
-                                    <template v-for="(fragment, triplen) in subcard.subtitle">
-                                      <span :key="triplen" v-if="fragment.type === 'svg'">
-                                        <img
-                                          :key="triplen"
-                                          :src="require('@/assets/img/svg/' + fragment.contents + '.svg')"
-                                          style="max-width: 5px; max-height: 5px; "
-                                          class="ma-1"
-                                        />
-                                      </span>
-                                      <span
-                                        v-else
-                                        class="break-word"
-                                        :key="triplen"
-                                        v-html="fragment.contents"
-                                      />
-                                    </template>
-                                  </v-card-subtitle>
-                                </v-col>
-                              </v-row>
-                            </v-container>
-                          </v-card>
-                        </v-hover>
-                      </v-col>
+                                    <span
+                                      v-else
+                                      class="break-word"
+                                      :key="triplen"
+                                      v-html="fragment.contents"
+                                    />
+                                  </template>
+                                </v-card-subtitle>
+                              </v-col>
+                            </v-row>
+                          </v-container>
+                        </v-card>
+                      </v-hover>
                     </v-row>
                   </v-container>
                 </v-card>
