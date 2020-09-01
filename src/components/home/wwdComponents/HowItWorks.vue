@@ -4,7 +4,7 @@
       <p class="primary--text ma-0" style="font-size:300%">How MITRE SAF Works</p>
     </v-row>
     <v-row justify="center" v-for="(row, n) in data" :key="n">
-      <v-col cols="1">
+      <v-col cols="1" v-if="$vuetify.breakpoint.smAndUp">
         <v-card
           v-resize="goals"
           flat
@@ -17,10 +17,11 @@
           </b>
         </v-card>
       </v-col>
-      <v-col cols="11">
+      <v-col xs="12" smAndUp="11">
         <v-container fluid>
           <v-row justify="center">
-            <v-col v-for="(item, index) in row.data" :key="index" :cols="item.cols">
+            <p v-if="$vuetify.breakpoint.xs" class="primary--text" style="font-size:2rem">{{row.name}}</p>
+            <v-col v-for="(item, index) in row.data" class="pa-1" :key="index" :xl="item.cols.xl" :lg="item.cols.lg" :md="item.cols.md" :sm="item.cols.sm" :cols="item.cols.xs">
               <v-hover v-slot:default="{ hover }">
                 <v-card
                   :class="hover && (item.link || item.router_link) ? getHighlight() : ''"
@@ -30,6 +31,7 @@
                   :href="item.link"
                   :to="item.router_link"
                   :target="item.link ? '_blank' : ''"
+                  :min-height="item.min_height"
                 >
                 <div v-if="item.svg && $vuetify.breakpoint.mdAndDown" style="text-align:center" class="ma-2">
                   <img
