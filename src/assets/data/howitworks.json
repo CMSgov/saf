@@ -4,7 +4,7 @@
       "name": "GOAL",
       "data": [
         {
-          "svg": "Harden Icon-Light",
+          "svg": "Harden Icon",
           "title": {
             "text" : "<b>HARDEN</b>",
             "size" : "2rem"
@@ -13,7 +13,7 @@
           "router_link" : "/harden"
         },
         {
-          "svg": "Validate Icon-Light",
+          "svg": "Validate Icon",
           "title": {
             "text" : "<b>VALIDATE</b>",
             "size" : "2rem"
@@ -22,7 +22,7 @@
           "router_link" : "/validate"
         },
         {
-          "svg": "Normalize Icon-Light",
+          "svg": "Normalize Icon",
           "title": {
             "text" : "<b>NORMALIZE</b>",
             "size" : "2rem"
@@ -31,7 +31,7 @@
           "router_link" : "/normalize"
         },
         {
-          "svg": "Visualize Icon-Light",
+          "svg": "Visualize Icon",
           "title": {
             "text" : "<b>VISUALIZE</b>",
             "size" : "2rem"
@@ -76,19 +76,19 @@
         {
           "subcards": [
             {
-              "svg": "Terraform Icon and Typemark-Light",
+              "svg": "Terraform Icon and Typemark",
               "link" : "https://www.terraform.io/"
             },
             {
-              "svg": "CHEF Icon and Typemark-Light",
+              "svg": "CHEF Icon and Typemark",
               "link" : "https://docs.chef.io/workstation/kitchen/"
             },
             {
-              "svg": "Ansible Logo and Typemark-Light",
+              "svg": "Ansible Logo and Typemark",
               "link" : "https://www.ansible.com/"
             },
             {
-              "svg": "Hardening Lib Icon-Light",
+              "svg": "Hardening Lib Icon",
               "title": "Hardening",
               "subtitle": "Content Library",
               "router_link" : "/harden"
@@ -106,11 +106,11 @@
                 },
                 {
                   "type": "svg",
-                  "contents": "InSpec Icon-Light"
+                  "contents": "InSpec Icon"
                 },
                 {
                   "type": "svg",
-                  "contents": "InSpec Typemark-Light"
+                  "contents": "InSpec Typemark"
                 },
                 {
                   "type": "text",
@@ -128,11 +128,11 @@
                 },
                 {
                   "type": "svg",
-                  "contents": "InSpec Icon-Light"
+                  "contents": "InSpec Icon"
                 },
                 {
                   "type": "svg",
-                  "contents": "InSpec Typemark-Light"
+                  "contents": "InSpec Typemark"
                 },
                 {
                   "type": "text",
@@ -142,7 +142,7 @@
               "link" : "https://inspec-tools.mitre.org"
             },
             {
-              "svg": "Validation Lib Icon-Light",
+              "svg": "Validation Lib Icon",
               "title": "Validation",
               "subtitle": "Content Library",
               "router_link" : "/validate"
@@ -170,7 +170,7 @@
                 },
                 {
                   "type": "svg",
-                  "contents": "Splunk Icon-Light"
+                  "contents": "Splunk Icon"
                 },
                 {
                   "type": "text",

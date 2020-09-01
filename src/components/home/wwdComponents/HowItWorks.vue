@@ -34,7 +34,7 @@
                 <div v-if="item.svg && $vuetify.breakpoint.mdAndDown" style="text-align:center" class="ma-2">
                   <img
                     
-                    :src="require('@/assets/img/svg/' + item.svg + '.svg')"
+                    :src="require('@/assets/img/svg/' + item.svg + imgVersion + '.svg')"
                     style="max-width: 4rem; max-height: 4rem;"
                     class="mr-2"
                   />
@@ -42,7 +42,7 @@
                   <v-card-title v-if="item.title" class="mb-2 break-word">
                     <span v-if="item.svg && $vuetify.breakpoint.lgAndUp">
                       <img
-                        :src="require('@/assets/img/svg/' + item.svg + '.svg')"
+                        :src="require('@/assets/img/svg/' + item.svg + imgVersion + '.svg')"
                         style="max-width: 3rem; max-height: 3rem;"
                         class="mr-2"
                       />
@@ -76,7 +76,7 @@
                             <v-row style="height:100%">
                               <v-col v-if="subcard.svg" cols="auto" align-self="center">
                                 <img
-                                  :src="require('@/assets/img/svg/' + subcard.svg + '.svg')"
+                                  :src="require('@/assets/img/svg/' + subcard.svg + imgVersion + '.svg')"
                                   class="ma-1"
                                 />
                               </v-col>
@@ -91,9 +91,9 @@
                                     <img
                                       inline
                                       v-if="fragment.type === 'svg'"
-                                      :src="require('@/assets/img/svg/' + fragment.contents + '.svg')"
-                                      style="max-width: 14px; max-height: 14px;"
-                                      class="ma-1"
+                                      :src="require('@/assets/img/svg/' + fragment.contents + imgVersion + '.svg')"
+                                      style="max-height:20px"
+                                      class="my-0 mx-1 pt-1"
                                     />
                                     <span v-else v-html="fragment.contents" />
                                   </span>
@@ -111,7 +111,7 @@
                                     <span :key="triplen" v-if="fragment.type === 'svg'" class="">
                                       <img
                                         :key="triplen"
-                                        :src="require('@/assets/img/svg/' + fragment.contents + '.svg')"
+                                        :src="require('@/assets/img/svg/' + fragment.contents + imgVersion + '.svg')"
                                         style="max-height:15px"
                                         class="my-0 mx-1 pt-1"
                                       />
@@ -149,7 +149,9 @@ export default {
       data: howitworks.rows,
     };
   },
-
+  created : {
+    imgVersion : '-Dark'
+  },
   methods: {
     getHighlight() {
       return {
@@ -158,6 +160,15 @@ export default {
       };
     },
   },
+  computed : {
+    imgVersion()  {
+      if (this.$vuetify.theme.dark) {
+        return '-Dark';
+      } else {
+        return '-Light';
+      }
+    }
+  }
 };
 </script>
 
