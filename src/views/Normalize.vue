@@ -9,7 +9,7 @@
     </v-row>
     <v-row justify="center" align="center" class="mx-0">
       <v-col cols="12" lg="10">
-        <p class="ma-0">TODO</p>
+        <normalizeInfo />
       </v-col>
     </v-row>
   </v-container>
@@ -17,10 +17,12 @@
 
 <script>
 import Header from "@/components/core/Header.vue";
+import normalizeInfo from "@/components/normalize/normalizeInfo.vue";
 
 export default {
   components: {
-    Header
+    Header,
+    normalizeInfo
   },
 };
 </script>

@@ -129,21 +129,21 @@ const router = new Router({
       },
     },
     {
-      path: "/validate",
-      name: "validate",
+      path: "/validation",
+      name: "validation",
       component: () => import("@/views/Validation.vue"),
       meta: {
-        title: `Validate | ${communityData.communityName}`,
+        title: `Validation Profiles | ${communityData.communityName}`,
         color: "#0277bd",
         requiresAuth: false,
       },
     },
     {
-      path: "/harden",
-      name: "harden",
+      path: "/hardening",
+      name: "hardening",
       component: () => import("@/views/Hardening.vue"),
       meta: {
-        title: `Harden | ${communityData.communityName}`,
+        title: `Hardening Profiles | ${communityData.communityName}`,
         color: "#0277bd",
         requiresAuth: false,
       },
@@ -159,11 +159,11 @@ const router = new Router({
       },
     },
     {
-      path: "/train",
-      name: "train",
+      path: "/training",
+      name: "training",
       component: () => import("@/views/Training.vue"),
       meta: {
-        title: `Our Training | ${communityData.communityName}`,
+        title: `Training | ${communityData.communityName}`,
         color: "#0277bd",
         requiresAuth: false,
       },
@@ -179,11 +179,11 @@ const router = new Router({
       }
     },
     {
-      path: "/visualize",
-      name: "visualize",
-      component: () => import("@/views/Visualize.vue"),
+      path: "/normalize",
+      name: "normalize",
+      component: () => import("@/views/Normalize.vue"),
       meta: {
-        title: `Visualize | ${communityData.communityName}`,
+        title: `Normalize | ${communityData.communityName}`,
         color: "#0277bd",
         requiresAuth: false
       }
