@@ -4,12 +4,12 @@
     <v-card class="ma-2 pa-2"> 
       <pre>{{ hdf_example }}</pre>
     </v-card>
-    <p>MITRE publishes the <a href="https://heimdall-tools.mitre.org/" target="_blank"> Heimdall Tools</a> command line toolset to allow security testers to convert the output from widely used automated security testing tools into HDF. At present, Heimdall Tools can ingest output from:</p>
+    <p>MITRE created the <a href="https://heimdall-tools.mitre.org/" target="_blank"> Heimdall Tools</a> command line toolset to allow the conversion of output from widely used automated security testing tools into HDF. At present, Heimdall Tools can convert output from:</p>
     <ul>
         <li>Sonarqube</li>
         <li>Fortify</li>
         <li>OWASP ZAP</li>
-        <li>Burpsuite</li>
+        <li>Burp Suite</li>
         <li>Nessus</li>
         <li>Snyk</li>
         <li>Nikto</li>
