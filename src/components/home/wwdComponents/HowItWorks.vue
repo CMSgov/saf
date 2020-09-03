@@ -37,21 +37,21 @@
                   <img
                     
                     :src="require('@/assets/img/svg/' + item.svg + imgVersion + '.svg')"
-                    style="max-width: 4rem; max-height: 4rem;"
+                    style="max-width: 5rem; max-height: 5rem;"
                     class="mr-2"
                   />
                 </div>
-                  <v-card-title v-if="item.title" class="mb-2 break-word">
+                  <v-card-title v-if="item.title" class="mb-2 break-word text-center">
                     <span v-if="item.svg && $vuetify.breakpoint.lgAndUp">
                       <img
                         :src="require('@/assets/img/svg/' + item.svg + imgVersion + '.svg')"
-                        style="max-width: 3rem; max-height: 3rem;"
+                        style="max-width: 2.5rem; max-height: 2.5rem;"
                         class="mr-2"
                       />
                     </span>
                     <span
                       :style="'font-size:' + item.title.size"
-                      class="mb-2"
+                      class="mb-2 text-center"
                       v-html="item.title.text"
                     ></span>
                   </v-card-title>
