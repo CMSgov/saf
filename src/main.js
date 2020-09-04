@@ -9,6 +9,8 @@ import vuetify from "./plugins/vuetify";
 import "./style.css";
 import firebase from "@/firebase";
 import cssVars from "css-vars-ponyfill";
+import 'prismjs'
+import 'prismjs/themes/prism-tomorrow.css'
 
 cssVars({
   watch: true,
