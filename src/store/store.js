@@ -22,8 +22,8 @@ export default new Vuex.Store({
         },
       },
       {
-        text: "Getting Started",
-        to: "/gettingstarted",
+        text: "Get Started",
+        to: "/getstarted",
         icon: "mdi-book-open",
         meta: {
           showToolbar: true,
