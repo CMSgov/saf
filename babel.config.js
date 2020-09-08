@@ -6,7 +6,7 @@ module.exports = {
       "prismjs",
       {
         languages: ["json", "ruby"],
-        plugins: [],
+        plugins: ["line-numbers"],
         theme: "tomorrow",
         css: true,
       }

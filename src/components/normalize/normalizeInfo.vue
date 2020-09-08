@@ -11,7 +11,7 @@
       <div v-if="row.examples">
         <div v-for="ex in row.examples" :key="ex" class="ma-4">
         <p class="subheader ma-0">{{ex.title}}</p>
-          <prism language="ruby">{{ex.code}}</prism>
+          <prism :language="ex.syntax">{{ex.code}}</prism>
         </div>
       </div>
     </div>
