@@ -1,150 +1,6 @@
 {
   "whatWeDo": [
-    {
-      "sectionHeader": "What We Do",
-      "sectionDesc": "Bring together the right technologies, methods, and skills to meet the security needs of today's developers and operators",
-      "items": [
-        {
-          "name": "Validation",
-          "desc": "Produce detailed security testing data throughout development",
-          "icon": "mdi-thumb-up",
-          "svg": "",
-          "router_link": "validation",
-          "tools": ""
-        },
-        {
-          "name": "Hardening",
-          "desc": "Align with security baselines using our Ansible, Chef, and Terraform content",
-          "icon": "mdi-security",
-          "svg": "",
-          "router_link": "hardening",
-          "tools": ""
-        },
-        {
-          "name": "Visualization",
-          "desc": "Dive deep into test results visually via rollups, charts, and timelines",
-          "icon": "mdi-image-search",
-          "svg": "",
-          "link": "https://heimdall-lite.mitre.org",
-          "tools": ""
-        },
-        {
-          "name": "Training",
-          "desc": "Learn how to write effective tests and apply them to the team's pipeline",
-          "icon": "mdi-chair-school",
-          "svg": "",
-          "router_link": "training",
-          "tools": ""
-        }
-      ]
-    },
-    {
-      "sectionHeader": "How We Do It",
-      "sectionDesc": "Provide open-source, accessible solutions for building security into the DevSecOps pipeline",
-      "items": [
-        {
-          "name": "Standardizing Security Testing Content",
-          "router_link": "validation",
-          "desc": "Build on the MITRE | SAF community's library of standard security profiles",
-          "svg": "",
-          "icon": "",
-          "tools": [
-            {
-              "name": "InSpec Profiles",
-              "svg": "inspec-blue-back-border",
-              "link": "validation"
-            },
-            {
-              "name": "InSpec Tools",
-              "svg": "inspec-blue-back-border",
-              "link": "https://www.inspec.io/docs/"
-            },
-            {
-              "name": "InSpecJS_Tools",
-              "svg": "inspec-blue-back-border",
-              "link": "https://github.com/mitre/inspec_tools_js"
-            },
-            {
-              "name": "Vulcan",
-              "svg": "inspec-blue-back-border",
-              "link": "https://github.com/mitre/vulcan"
-            }
-          ]
-        },
-        {
-          "name": "Normalizing Security Data",
-          "link": "https://heimdall-tools.mitre.org/",
-          "desc": "Translate your data into a standard format to ensure interoperability",
-          "svg": "",
-          "icon": "",
-          "tools": [
-            {
-              "name": "InSpec Tools",
-              "svg": "inspec-blue-back-border",
-              "link": "https://github.com/mitre/inspec_tools/"
-            },
-            {
-              "name": "InSpecJS",
-              "svg": "inspec-blue-back-border",
-              "link": "https://github.com/mitre/inspecjs"
-            },
-            {
-              "name": "InSpecJS Tools",
-              "svg": "inspec-blue-back-border",
-              "link": "https://github.com/mitre/inspec_tools_js"
-            },
-            {
-              "name": "HeimdallJS Tools",
-              "svg": "inspec-blue-back-border",
-              "link": "https://www.inspec.io/docs/"
-            },
-            {
-              "name": "Heimdall Tools",
-              "svg": "inspec-blue-back-border",
-              "link": "https://www.inspec.io/docs/"
-            }
-          ]
-        },
-        {
-          "name": "Analyzing Security Data",
-          "link": "https://heimdall-lite.mitre.org",
-          "desc": "Deep dive into the data and make decisions on how best to reduce risk",
-          "svg": "",
-          "icon": "",
-          "tools": [
-            {
-              "name": "Heimdall Lite",
-              "svg": "heimdall",
-              "link": "https://github.com/mitre/heimdall-lite"
-            },
-            {
-              "name": "Heimdall Server",
-              "svg": "heimdall",
-              "link": "https://github.com/mitre/heimdall"
-            }
-          ]
-        },
-        {
-          "name": "Hardening Content",
-          "router_link": "hardening",
-          "desc": "Use the MITRE | SAF hardening baseline library to configure systems for security",
-          "svg": "",
-          "icon": "",
-          "tools": [
-            {
-              "name": "Ansible Profiles",
-              "svg": "ansible",
-              "link": "hardening"
-            },
-            {
-              "name": "Chef Profiles",
-              "svg": "chef-2",
-              "link": "hardening"
-            }
-          ]
-        }
-      ]
-    },
+    
     {
       "sectionHeader": "When To Use It",
       "sectionDesc" : "Develop and programmatically automate security in planning, development, assessment, and operational activities",
@@ -153,17 +9,17 @@
       ],
       "items": [
         {
-          "name": "During PLANNING an organization can use MITRE | SAF to:",
+          "name": "During PLANNING,<br />use MITRE SAF to:",
           "link": "",
           "bullets" : [
             "Identify applicable security and privacy requirements",
             "Assess development best practices guidance",
-            "Identify MITRE | SAF tools to support development, assessment, & operations security processes",
+            "Identify MITRE SAF tools to support development, assessment, & operations security processes",
             "Become a participant through the Continuous Collaboration Agreement"
           ]
         },
         {
-          "name": "During DEVELOPMENT an organization can use MITRE | SAF to:",
+          "name": "During DEVELOPMENT,<br />use MITRE SAF to:",
           "link": "",
           "bullets" : [
             "Implement relevant security hardening scripts",
@@ -174,7 +30,7 @@
           ]
         },
         {
-          "name": "During ASSESSMENT an organization can use MITRE | SAF to:",
+          "name": "During ASSESSMENT,<br />use MITRE SAF to:",
           "link": "",
           "bullets" : [
             "Aggregate all security control assessment data ",
@@ -184,7 +40,7 @@
           ]
         },
         {
-          "name": "During OPERATIONS an organization can use MITRE | SAF to:",
+          "name": "During OPERATIONS,<br />use MITRE SAF to:",
           "link": "",
           "bullets" : [
             "Monitor security posture through validation checks",
@@ -197,7 +53,6 @@
     {
       "sectionHeader": "How We Support It",
       "sectionDesc": "Develop a toolchain to support the above areas of What and How for secure development",
-      "images": [{ "filename": "howWeSupportIt" }],
       "items": [
         {
           "name": "Heimdall Lite",

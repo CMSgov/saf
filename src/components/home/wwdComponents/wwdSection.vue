@@ -4,7 +4,7 @@
       <p class="google-font ma-0 tool-header primary--text">{{ topic.sectionHeader }}</p>
     </v-row>
     <v-row align="center" justify="center" v-if="topic.sectionDesc">
-      <p class="google-font">{{ topic.sectionDesc }}</p>
+      <p class="google-font pa-2">{{ topic.sectionDesc }}</p>
     </v-row>
     <v-row justify="center" v-for="(image, index) in topic.images" :key="index" class="d-flex">
       <v-col cols="12" class="d-flex flex-column">

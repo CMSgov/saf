@@ -129,38 +129,38 @@ const router = new Router({
       },
     },
     {
-      path: "/validation",
-      name: "validation",
+      path: "/validate",
+      name: "validate",
       component: () => import("@/views/Validation.vue"),
       meta: {
-        title: `Validation Profiles | ${communityData.communityName}`,
+        title: `Validate | ${communityData.communityName}`,
         color: "#0277bd",
         requiresAuth: false,
       },
     },
     {
-      path: "/hardening",
-      name: "hardening",
+      path: "/harden",
+      name: "harden",
       component: () => import("@/views/Hardening.vue"),
       meta: {
-        title: `Hardening Profiles | ${communityData.communityName}`,
+        title: `Harden | ${communityData.communityName}`,
         color: "#0277bd",
         requiresAuth: false,
       },
     },
     {
-      path: "/gettingstarted",
-      name: "gettingstarted",
+      path: "/getstarted",
+      name: "getstarted",
       component: () => import("@/views/GettingStarted.vue"),
       meta: {
-        title: `Getting Started | ${communityData.communityName}`,
+        title: `Get Started | ${communityData.communityName}`,
         color: "#0277bd",
         requiresAuth: false,
       },
     },
     {
-      path: "/training",
-      name: "training",
+      path: "/train",
+      name: "train",
       component: () => import("@/views/Training.vue"),
       meta: {
         title: `Training | ${communityData.communityName}`,
@@ -179,12 +179,22 @@ const router = new Router({
       },
     },
     {
-      path: "/admin/dashboard/events",
-      name: "admin-events",
-      component: () => import("@/views/Admin/Events"),
+      path: "/normalize",
+      name: "normalize",
+      component: () => import("@/views/Normalize.vue"),
       meta: {
-        title: `Admin Dashboard | ${communityData.CommunityName}`,
+        title: `Normalize | ${communityData.communityName}`,
         color: "#0277bd",
+        requiresAuth: false
+      }
+    },
+    {
+      path:'/admin/dashboard/events',
+      name:"admin-events",
+      component:()=> import('@/views/Admin/Events'),
+      meta:{
+        title:`Admin Dashboard | ${communityData.CommunityName}`,
+        color:"#0277bd",
         requiresAuth: true,
       },
     },

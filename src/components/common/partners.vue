@@ -2,13 +2,12 @@
   <v-container fluid>
     <v-row align="center" justify="center" class="mb-0">
       <v-col cols="12" class="mb-0">
-        <p
-          class="mb-1 primary--text"
-          style="font-weight: bold; font-size:200%"
-        >The MITRE | SAF Community</p>
-        <p
-          class="mt-1 mb-0"
-        >A very big thank you to our community members for their continued partnership.</p>
+        <p class="mb-1 primary--text" style="font-weight: bold; font-size:200%">
+          The MITRE SAF Community
+        </p>
+        <p class="mt-1 mb-0">
+          A very big thank you to our community members for their continued partnership.
+        </p>
         <p class="mt-0 mb-0">
           If you’re interested in being showcased here, please contact
           <a

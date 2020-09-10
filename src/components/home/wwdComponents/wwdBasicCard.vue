@@ -42,17 +42,17 @@
       <v-card-title class="google-font mt-2 title align-bottom justify-center break-word" >
         <!-- :color="hover && (item.router_link || item.link) ? '#1a73e8' : ''" -->
         <v-icon class="mr-2">mdi-{{ item.side_icon }}</v-icon>
-        {{ make_readable(item.name) }}
+        <span v-html="make_readable(item.name)" />
       </v-card-title>
       <v-spacer />
-      <v-card-text v-if="item.desc" class="google-font pa-2 body-1">{{ item.desc }}</v-card-text>
+      <v-card-text v-if="item.desc" class="google-font pa-2 body-1"><span v-html="item.desc" /></v-card-text>
       <template v-if="item.bullets">
         <v-card-text class="text-left">
-          <ul 
+          <ul><li 
             v-for="bullet in item.bullets"
             :key="bullet"
             class="google-font body-1 "
-          >• {{bullet}}</ul>
+          >{{bullet}}</li></ul>
         </v-card-text>
       </template>
       <v-spacer />
