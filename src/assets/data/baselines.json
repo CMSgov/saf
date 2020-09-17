@@ -3,7 +3,7 @@
     {
       "shortName": "AWS S3",
       "longName": "",
-      "link": "https://github.com/CMSgov/aws-s3-baseline",
+      "link": "https://github.com/mitre/aws-s3-baseline",
       "svg": "inspec-white-border",
       "category": ["Cloud Service Providers"]
     },
