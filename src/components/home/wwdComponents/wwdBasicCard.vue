@@ -5,14 +5,19 @@
       class="d-flex flex-column"
       :to="item.router_link"
       :href="item.link"
-      :color="hover && (item.router_link || item.link) ? 'grey' : ''"
+      :class="hover && (item.link || item.router_link) ? getHighlight() : ''"
       :target="item.link ? '_blank' : ''"
       style="width: 100%"
-
     >
-      <!--<toolBlock v-if="item.tools" :tools="item.tools" />-->
+      <!--<toolBlock v-if="item.tools" :tools="item.tools" />       -->
 
-      <v-icon v-if="item.icon" large style="font-size:300%" class="mt-4" :color="hover && (item.router_link || item.link) ? '#1a73e8' : ''">mdi-{{ item.icon }}</v-icon>
+      <v-icon
+        v-if="item.icon"
+        large
+        style="font-size:300%"
+        class="mt-4"
+        :color="hover && (item.router_link || item.link) ? '#1a73e8' : ''"
+      >mdi-{{ item.icon }}</v-icon>
       <!-- <v-fade-transition v-if="item.graphic" mode="out-in">
       <v-img
         v-on:mouseover="mouseOverCheck = current"
@@ -37,19 +42,18 @@
         class="ma-2"
         max-height="328"
       />
-      <v-card-title class=" mt-2 title align-bottom justify-center break-word" :style="hover && (item.router_link || item.link) ? 'color:#1a73e8' : ''">
-        <v-icon class="mr-2" :color="hover && (item.router_link || item.link) ? '#1a73e8' : ''">mdi-{{ item.side_icon }}</v-icon>
-        {{ make_readable(item.name) }}
+      <v-card-title class="google-font mt-2 title align-bottom justify-center break-word">
+        <!-- :color="hover && (item.router_link || item.link) ? '#1a73e8' : ''" -->
+        <v-icon class="mr-2">mdi-{{ item.side_icon }}</v-icon>
+        <span v-html="make_readable(item.name)" />
       </v-card-title>
       <v-spacer />
-      <v-card-text v-if="item.desc" class=" pa-2 body-1">{{ item.desc }}</v-card-text>
+      <v-card-text v-if="item.desc" class="pa-2 body-1">{{ item.desc }}</v-card-text>
       <template v-if="item.bullets">
-        <v-card-text class="justify-center">
-          <ul
-            v-for="bullet in item.bullets"
-            :key="bullet"
-            class=" pa-2 justify-center body-1 "
-          >• {{bullet}}</ul>
+        <v-card-text class="text-left">
+          <ul>
+            <li v-for="bullet in item.bullets" :key="bullet" class="google-font body-1">{{bullet}}</li>
+          </ul>
         </v-card-text>
       </template>
       <v-spacer />
@@ -119,11 +123,11 @@
 export default {
   data() {
     return {
-      mouseOverCheck: ""
+      mouseOverCheck: "",
     };
   },
   props: {
-    item: Object
+    item: Object,
   },
   components: {
     //toolBlock
@@ -131,12 +135,18 @@ export default {
   methods: {
     make_readable(str) {
       return str.replace(/_/, " ");
+    },
+    getHighlight() {
+      return {
+        lighten: this.$vuetify.theme.isDark,
+        darken: !this.$vuetify.theme.isDark,
+      };
     }
   }
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .card-outer {
   position: relative;
   padding-bottom: 10px;
@@ -153,4 +163,13 @@ export default {
   max-width: 24px;
   max-height: 24px;
 }
+
+.lighten {
+  background-color: lighten(#1d1d1d, 20%);
+}
+
+.darken {
+  background-color: darken(#ffff, 20%);
+}
+
 </style>
