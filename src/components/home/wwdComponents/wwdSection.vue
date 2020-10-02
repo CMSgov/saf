@@ -6,7 +6,17 @@
     <v-row align="center" justify="center" v-if="topic.sectionDesc">
       <p class=" mb-4 body-2">{{ topic.sectionDesc }}</p>
     </v-row>
-    <slot name="image"></slot>
+    <v-row justify="center" v-for="(image, index) in topic.images" :key="index" class="d-flex">
+      <v-col cols="12" class="d-flex flex-column">
+        <v-card
+          :to="image.router_link ? image.router_link : ''"
+          :href="image.link ? image.link : ''"
+          flat outlined
+        >
+          <v-img :src="require('@/assets/img/what-we-do/' + image.filename + '.png')" />
+        </v-card>
+      </v-col>
+    </v-row>
     <v-row justify="center">
       <v-col
         v-for="(item, i) in topic.items"
