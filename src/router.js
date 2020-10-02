@@ -124,61 +124,61 @@ const router = new Router({
       }
     },
     {
-      path: "/validation",
-      name: "validation",
+      path: "/validate",
+      name: "validate",
       component: () => import("@/views/Validation.vue"),
       meta: {
-        title: `Validation Profiles | ${communityData.communityName}`,
+        title: `Validate | ${communityData.communityName}`,
         color: "#0277bd",
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
     {
-      path: "/implementation",
-      name: "implementation",
+      path: "/implement",
+      name: "implement",
       component: () => import("@/views/Implementation.vue"),
       meta: {
-        title: `Implementation/Hardening | ${communityData.communityName}`,
+        title: `Implement | ${communityData.communityName}`,
         color: "#0277bd",
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
     {
-      path: "/gettingstarted",
-      name: "gettingstarted",
+      path: "/getstarted",
+      name: "getstarted",
       component: () => import("@/views/GettingStarted.vue"),
       meta: {
-        title: `Getting Started | ${communityData.communityName}`,
+        title: `Get Started | ${communityData.communityName}`,
         color: "#0277bd",
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
-    // {
-    //   path: "/contactus",
-    //   name: "contactus",
-    //   component: () => import("@/views/ContactUs.vue"),
-    //   meta: {
-    //     title: `Contact Us | ${communityData.communityName}`,
-    //     color: "#0277bd",
-    //     requiresAuth: false
-    //   }
-    // },
     {
-      path: "/training",
-      name: "training",
+      path: "/train",
+      name: "train",
       component: () => import("@/views/Training.vue"),
       meta: {
         title: `Training | ${communityData.communityName}`,
         color: "#0277bd",
-        requiresAuth: false
-      }
-    },    
+        requiresAuth: false,
+      },
+    },
     {
       path: "/faq",
       name: "faq",
       component: () => import("@/views/Faq.vue"),
       meta: {
         title: `FAQs | ${communityData.communityName}`,
+        color: "#0277bd",
+        requiresAuth: false,
+      },
+    },
+    {
+      path: "/normalize",
+      name: "normalize",
+      component: () => import("@/views/Normalize.vue"),
+      meta: {
+        title: `Normalize | ${communityData.communityName}`,
         color: "#0277bd",
         requiresAuth: false
       }
@@ -263,7 +263,22 @@ const router = new Router({
         requiresAuth: false,
       }
     },
-    
+    {
+      path: "/validation",
+      redirect: "/validate"
+    },
+    {
+      path: "/implementation",
+      redirect: "/implement"
+    },
+    {
+      path: "/gettingstarted",
+      redirect: "/getstarted"
+    },
+    {
+      path: "/training",
+      redirect: "/train"
+    },
   ]
 });
 
