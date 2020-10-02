@@ -8,17 +8,17 @@
       ],
       "items": [
         {
-          "name": "During PLANNING,<br />use MITRE SAF to:",
+          "name": "During PLANNING,<br />use CMS SAF to:",
           "link": "",
           "bullets" : [
             "Identify applicable security and privacy requirements",
             "Assess development best practices guidance",
-            "Identify MITRE SAF tools to support development, assessment, & operations security processes",
+            "Identify CMS SAF tools to support development, assessment, & operations security processes",
             "Become a participant through the Continuous Collaboration Agreement"
           ]
         },
         {
-          "name": "During DEVELOPMENT,<br />use MITRE SAF to:",
+          "name": "During DEVELOPMENT,<br />use CMS SAF to:",
           "link": "",
           "bullets" : [
             "Implement relevant security hardening scripts",
@@ -29,7 +29,7 @@
           ]
         },
         {
-          "name": "During ASSESSMENT,<br />use MITRE SAF to:",
+          "name": "During ASSESSMENT,<br />use CMS SAF to:",
           "link": "",
           "bullets" : [
             "Aggregate all security control assessment data ",
@@ -39,7 +39,7 @@
           ]
         },
         {
-          "name": "During OPERATIONS,<br />use MITRE SAF to:",
+          "name": "During OPERATIONS,<br />use CMS SAF to:",
           "link": "",
           "bullets" : [
             "Monitor security posture through validation checks",
