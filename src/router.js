@@ -254,16 +254,6 @@ const router = new Router({
       }
     },
     {
-      path: '*',
-      name: 'redirect',
-      redirect: { path: '/' },
-      meta:{
-        title:`Redirect | ${communityData.CommunityName}`,
-        color:"#0277bd",
-        requiresAuth: false,
-      }
-    },
-    {
       path: "/validation",
       redirect: "/validate"
     },
@@ -279,6 +269,17 @@ const router = new Router({
       path: "/training",
       redirect: "/train"
     },
+    { path: '/hdf', redirect: { name: 'normalize' }},
+    {
+      path: '*',
+      name: 'redirect',
+      redirect: { path: '/' },
+      meta:{
+        title:`Redirect | ${communityData.CommunityName}`,
+        color:"#0277bd",
+        requiresAuth: false,
+      }
+    }
   ]
 });
 

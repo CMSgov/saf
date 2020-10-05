@@ -139,7 +139,7 @@
               "svg": "Hardening Lib Icon",
               "title": "Hardening",
               "subtitle": "Content Library",
-              "router_link" : "/harden"
+              "router_link" : "/implement"
             }
           ],
           "cols": {
@@ -218,7 +218,7 @@
             {
               "title": "Heimdall Data Format (HDF)",
               "subtitle": "<b>Normalize data</b> for portability and aggregation",
-              "router_link" : "/visualize"
+              "router_link" : "/normalize"
             },
             {
               "title": "Heimdall_Tools",
