@@ -2,20 +2,20 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import communityData from "./assets/data/communityData.json";
-import goTo from 'vuetify/es5/services/goto'
+// import goTo from "vuetify/es5/services/goto";
 Vue.use(Router);
 
 const router = new Router({
   //  mode: "history",
   //  base: process.env.BASE_URL,
-  scrollBehavior(to) {
-    let scrollTo = 0;
+  scrollBehavior(to, from, savedPosition) {
     if (to.hash) {
-      scrollTo = to.hash;
+      return { selector: to.hash };
+    } else if (savedPosition) {
+      return savedPosition;
     } else {
-      scrollTo = 0;
+      return { x: 0, y: 0 };
     }
-    return goTo(scrollTo, { 'duration': 0 })
   },
   routes: [
     {
@@ -129,38 +129,38 @@ const router = new Router({
       },
     },
     {
-      path: "/validation",
-      name: "validation",
+      path: "/validate",
+      name: "validate",
       component: () => import("@/views/Validation.vue"),
       meta: {
-        title: `Validation Profiles | ${communityData.communityName}`,
+        title: `Validate | ${communityData.communityName}`,
         color: "#0277bd",
         requiresAuth: false,
       },
     },
     {
-      path: "/hardening",
-      name: "hardening",
+      path: "/harden",
+      name: "harden",
       component: () => import("@/views/Hardening.vue"),
       meta: {
-        title: `Hardening Profiles | ${communityData.communityName}`,
+        title: `Harden | ${communityData.communityName}`,
         color: "#0277bd",
         requiresAuth: false,
       },
     },
     {
-      path: "/gettingstarted",
-      name: "gettingstarted",
+      path: "/getstarted",
+      name: "getstarted",
       component: () => import("@/views/GettingStarted.vue"),
       meta: {
-        title: `Getting Started | ${communityData.communityName}`,
+        title: `Get Started | ${communityData.communityName}`,
         color: "#0277bd",
         requiresAuth: false,
       },
     },
     {
-      path: "/training",
-      name: "training",
+      path: "/train",
+      name: "train",
       component: () => import("@/views/Training.vue"),
       meta: {
         title: `Training | ${communityData.communityName}`,
@@ -174,6 +174,16 @@ const router = new Router({
       component: () => import("@/views/Faq.vue"),
       meta: {
         title: `FAQs | ${communityData.communityName}`,
+        color: "#0277bd",
+        requiresAuth: false,
+      },
+    },
+    {
+      path: "/normalize",
+      name: "normalize",
+      component: () => import("@/views/Normalize.vue"),
+      meta: {
+        title: `Normalize | ${communityData.communityName}`,
         color: "#0277bd",
         requiresAuth: false
       }
@@ -228,6 +238,23 @@ const router = new Router({
         requiresAuth: true,
       },
     },
+    {
+      path: "/validation",
+      redirect: "/validate"
+    },
+    {
+      path: "/hardening",
+      redirect: "/harden"
+    },
+    {
+      path: "/gettingstarted",
+      redirect: "/getstarted"
+    },
+    {
+      path: "/training",
+      redirect: "/train"
+    },
+    { path: '/hdf', redirect: { name: 'normalize' }},
     {
       path: "*",
       name: "redirect",

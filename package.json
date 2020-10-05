@@ -1,6 +1,34 @@
 {
   "name": "mitre-saf",
   "version": "0.9.0",
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env"
+      ],
+      [
+        "@vue/app",
+        {
+          "useBuiltIns": "entry"
+        }
+      ]
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-nullish-coalescing-operator",
+      [
+        "prismjs",
+        {
+          "languages": [
+            "json",
+            "ruby"
+          ],
+          "plugins": [],
+          "theme": "tomorrow",
+          "css": true
+        }
+      ]
+    ]
+  },
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -10,15 +38,19 @@
   },
   "dependencies": {
     "@mdi/font": "^5.0.45",
+    "babel-plugin-prismjs": "^2.0.1",
     "babel-polyfill": "^6.26.0",
     "core-js": "^2.6.11",
     "css-vars-ponyfill": "^2.3.1",
     "firebase": "7.15.4",
     "intersection-observer": "^0.10.0",
     "material-design-icons": "^3.0.1",
+    "prismjs": "^1.21.0",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
     "vue-cheetah-grid": "^0.22.3",
+    "vue-code-highlight": "^0.7.5",
+    "vue-prism-component": "^1.2.0",
     "vue-router": "^3.1.6",
     "vue-svg-inline-loader": "^1.5.0",
     "vue-svg-loader": "^0.15.0",

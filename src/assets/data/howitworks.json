@@ -1,0 +1,288 @@
+{
+  "rows": [
+    {
+      "name": "GOAL",
+      "data": [
+        {
+          "svg": "Harden Icon",
+          "title": {
+            "text" : "<b>HARDEN</b>",
+            "size" : "2rem"
+          },
+          "subtitle": "<b>Implement security baselines</b> using our Ansible, Chef, and Terraform content",
+          "router_link" : "/harden",
+          "cols": {
+            "xl" : "3",
+            "lg" : "3",
+            "md" : "3",
+            "sm" : "6",
+            "xs" : "12"
+          }
+        },
+        {
+          "svg": "Validate Icon",
+          "title": {
+            "text" : "<b>VALIDATE</b>",
+            "size" : "2rem"
+          },
+          "subtitle": "<b>Generate detailed security testing results</b> throughout the lifecycle of a system",
+          "router_link" : "/validate",
+          "cols": {
+            "xl" : "3",
+            "lg" : "3",
+            "md" : "3",
+            "sm" : "6",
+            "xs" : "12"
+          }
+        },
+        {
+          "svg": "Normalize Icon",
+          "title": {
+            "text" : "<b>NORMALIZE</b>",
+            "size" : "2rem"
+          },
+          "subtitle": "<b>Convert security results</b> from all your security tools into a common data format",
+          "router_link" : "/normalize",
+          "cols": {
+            "xl" : "3",
+            "lg" : "3",
+            "md" : "3",
+            "sm" : "6",
+            "xs" : "12"
+          }
+        },
+        {
+          "svg": "Visualize Icon",
+          "title": {
+            "text" : "<b>VISUALIZE</b>",
+            "size" : "2rem"
+          },
+          "subtitle": "<b>Identify overall security status</b> and deep-dive to solve specific security defects",
+          "link" : "https://heimdall-lite.mitre.org",
+          "cols": {
+            "xl" : "3",
+            "lg" : "3",
+            "md" : "3",
+            "sm" : "6",
+            "xs" : "12"
+          }
+        }
+      ],
+      "row_height": "10rem"
+    },
+    {
+      "name": "INPUTS",
+      "data": [
+        {
+          "title": {
+            "text" : "<b>Based On Standards</b>",
+            "size" : "1.5rem"
+          },
+          "subtitle": "(STIGs, CIS Benchmarks, Agency Baselines)",
+          "cols": {
+            "xl" : "6",
+            "lg" : "6",
+            "md" : "6",
+            "sm" : "6",
+            "xs" : "12"
+          }
+        },
+        {
+          "title": {
+            "text" : "<b>Security Tool Output</b>",
+            "size" : "1.5rem"
+          },
+          "subtitle": "(Code Analysis, Continuous Monitoring, Security Operations)",
+          "cols": {
+            "xl" : "3",
+            "lg" : "3",
+            "md" : "3",
+            "sm" : "3",
+            "xs" : "12"
+          }
+        },
+        {
+          "title": {
+            "text" : "<b>Aggregated Data</b>",
+            "size" : "1.5rem"
+          },
+          "subtitle": "(Compile All Results For Analysis)",
+          "cols": {
+            "xl" : "3",
+            "lg" : "3",
+            "md" : "3",
+            "sm" : "3",
+            "xs" : "12"
+          }
+        }
+      ],
+      "row_height": "9rem"
+    },
+    {
+      "name": "TOOLS",
+      "data": [
+        {
+          "subcards": [
+            {
+              "svg": "Terraform Icon and Typemark",
+              "link" : "https://www.terraform.io/"
+            },
+            {
+              "svg": "CHEF Icon and Typemark",
+              "link" : "https://docs.chef.io/workstation/kitchen/"
+            },
+            {
+              "svg": "Ansible Logo and Typemark",
+              "link" : "https://www.ansible.com/"
+            },
+            {
+              "svg": "Hardening Lib Icon",
+              "title": "Hardening",
+              "subtitle": "Content Library",
+              "router_link" : "/harden"
+            }
+          ],
+          "cols": {
+            "xl" : "3",
+            "lg" : "3",
+            "md" : "3",
+            "sm" : "6",
+            "xs" : "12"
+          },
+          "min_height" : "400px"
+        },
+        {
+          "subcards": [
+            {
+              "title": "Vulcan",
+              "subtitle": [
+                {
+                  "type": "text",
+                  "contents": "<b>Author standards</b> to create "
+                },
+                {
+                  "type": "svg",
+                  "contents": "InSpec Icon"
+                },
+                {
+                  "type": "svg",
+                  "contents": "InSpec Typemark"
+                },
+                {
+                  "type": "text",
+                  "contents": " validation code"
+                }
+              ],
+              "link" : "https://vulcan.mitre.org"
+            },
+            {
+              "title": "InSpec_Tools",
+              "subtitle": [
+                {
+                  "type": "text",
+                  "contents": "<b>Create </b>"
+                },
+                {
+                  "type": "svg",
+                  "contents": "InSpec Icon"
+                },
+                {
+                  "type": "svg",
+                  "contents": "InSpec Typemark"
+                },
+                {
+                  "type": "text",
+                  "contents": " <b>validation code</b> and <b>set threshold checks</b> within the pipeline"
+                }
+              ],
+              "link" : "https://inspec-tools.mitre.org"
+            },
+            {
+              "svg": "Validation Lib Icon",
+              "title": "Validation",
+              "subtitle": "Content Library",
+              "router_link" : "/validate"
+            }
+          ],
+          "cols": {
+            "xl" : "3",
+            "lg" : "3",
+            "md" : "3",
+            "sm" : "6",
+            "xs" : "12"
+          },
+          "min_height" : "400px"
+        },
+        {
+          "subcards": [
+            {
+              "title": "Heimdall Data Format (HDF)",
+              "subtitle": "<b>Normalize data</b> for portability and aggregation",
+              "router_link" : "/normalize"
+            },
+            {
+              "title": "Heimdall_Tools",
+              "subtitle": "<b>Convert Output</b> from non-InSpec tools into HDF",
+              "link" : "https://heimdall-tools.mitre.org"
+            },
+            {
+
+              "title": [
+                {
+                  "type": "text",
+                  "contents": "HDF to "
+                },
+                {
+                  "type": "svg",
+                  "contents": "Splunk Icon"
+                },
+                {
+                  "type": "text",
+                  "contents": " plugin"
+                }
+              ],
+              "subtitle" : "<b>Store HDF</b> output into Splunk for later retrieval / visualization using Heimdall",
+              "link" : "https://hdf-json-to-splunk.mitre.org"
+            }
+          ],
+          "cols": {
+            "xl" : "3",
+            "lg" : "3",
+            "md" : "3",
+            "sm" : "6",
+            "xs" : "12"
+          },
+          "min_height" : "400px"
+        },
+        {
+          "subcards": [
+            {
+              "title": "Heimdall Lite / Server",
+              "subtitle": "<b>Visualize security status,</b> drill-down to identify root cause",
+              "link" : "https://heimdall-lite.mitre.org"
+            },
+            {
+              "title": "Reporting",
+              "subtitle": "<b>Display security controls</b> and their status, critical/high findings, and recommended remediation actions",
+              "link" : ""
+            },
+            {
+              "title": "InSpec_Tools",
+              "subtitle": "<b>Convert InSpec output</b> to checklist, csv, and xccdf reports",
+              "link" : "https://inspec-tools.mitre.org"
+            }
+          ],
+          "cols": {
+            "xl" : "3",
+            "lg" : "3",
+            "md" : "3",
+            "sm" : "6",
+            "xs" : "12"
+          },
+          "min_height" : "400px"
+        }
+      ],
+      "row_height": "20rem"
+    }
+  ]
+}

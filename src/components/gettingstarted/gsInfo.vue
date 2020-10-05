@@ -1,5 +1,5 @@
 <template>
-  <div class="pa-2">
+  <v-container fluid class="pa-2">
     <div v-for="item in resources.items" :key="item.name">
       <p class="mb-2 wrap-list-text">
         <b>{{item.name}}</b>
@@ -20,7 +20,7 @@
       </p>
       <v-img v-if="item.image" :src="require('@/assets/img/tools/' + item.image)" />
     </div>
-  </div>
+  </v-container>
 </template>
 
 <script>
