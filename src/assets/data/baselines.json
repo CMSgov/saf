@@ -187,28 +187,32 @@
       "longName": "AWS S3",
       "link": "https://github.com/mitre/aws-s3-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Cloud Service Providers"]
+      "category": ["Cloud Service Providers"],
+      "gitHash": "0"
     },
     {
       "shortName": "AWS RDS CIS",
       "longName": "AWS RDS Infrastructure CIS",
       "link": "https://github.com/mitre/aws-rds-infrastructure-cis-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Cloud Service Providers"]
+      "category": ["Cloud Service Providers"],
+      "gitHash": "0"
     },
     {
       "shortName": "GCP PCI-DSS 3.2.1",
       "longName": "Google Cloud Platform PCI-DSS 3.2.1",
       "link": "https://github.com/GoogleCloudPlatform/inspec-gcp-pci-profile",
       "svg": "inspec-blue-back-border",
-      "category": ["Cloud Service Providers"]
+      "category": ["Cloud Service Providers"],
+      "gitHash": "0"
     },
     {
       "shortName": "GCP CIS Benchmark",
       "longName": "Google Cloud Platform CIS Benchmark",
       "link": "https://github.com/GoogleCloudPlatform/inspec-gcp-cis-benchmark",
       "svg": "inspec-blue-back-border",
-      "category": ["Cloud Service Providers"]
+      "category": ["Cloud Service Providers"],
+      "gitHash": "0"
     },
     {
       "shortName": "DRAFT: VMWare ESXI 6.7 STIG",
@@ -294,5 +298,16 @@
       "svg": "inspec-blue-back-border",
       "category": ["Web Servers"]
     }
-  ]
+  ],
+  "extras": {
+    "csv": [
+      {
+        "shortName": "Heimdall_tools",
+        "longName": "CWE tool data mapped by Heimdall_tools",
+        "link": "https://github.com/mitre/heimdall_tools",
+        "path": "Heimdall_tools/lib/data/cwe-nist-mapping.csv",
+        "column": "NIST-ID"
+      }
+    ]
+  }
 }
