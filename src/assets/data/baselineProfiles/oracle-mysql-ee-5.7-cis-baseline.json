@@ -8,6 +8,7 @@
   "license": "Apache-2.0",
   "Description": "An InSpec Compliance Profile.",
   "version": "0.1.0",
+  "inspec_version": ">= 4.0",
   "supports": [
     {
       "platform": "os"
@@ -2237,7 +2238,7 @@
     }
   ],
   "inputs": [],
-  "sha256": "718c7572deaaded316b1aebbaa7642e2209f16adf686c5f599125e5c00011875",
+  "sha256": "2ff58564f9a7313b8b15959a9cb0f0d2bcb63c69804883529f2c352ee8c5e2f8",
   "status": "loaded",
   "generator": {
     "name": "inspec",

@@ -7,6 +7,7 @@
   "license": "Apache-2.0",
   "summary": "The CIS Docker Community Edition Benchmark v1.1.0 InSpec profile.",
   "version": "1.1.0",
+  "inspec_version": ">= 4.0",
   "attributes": [
     {
       "name": "trusted_user",
@@ -4981,7 +4982,7 @@
     }
   ],
   "inputs": [],
-  "sha256": "8fcec08252294a3c9125d2a87dc7a6d9a8c73d5e205b19d4412d50b4afa1d276",
+  "sha256": "a5584bc866b72863ba500410d9409937e692d2c288b3eff78c71126f93273cc9",
   "status": "loaded",
   "generator": {
     "name": "inspec",

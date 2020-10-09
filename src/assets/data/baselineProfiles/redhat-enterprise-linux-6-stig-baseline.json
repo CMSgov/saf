@@ -7,6 +7,7 @@
   "license": "Apache-2.0",
   "summary": "The Red Hat Enterprise Linux 6 Security Technical Implementation Guide (STIG) is published as a tool to improve the security of Department of Defense (DoD) information systems.  Comments or proposed revisions to this document should be sent via e-mail to the following address: disa.stig_spt@mail.mil.",
   "version": "0.1.0",
+  "inspec_version": ">= 4.0",
   "inputs": [],
   "supports": [],
   "controls": [
@@ -12705,7 +12706,7 @@
       "id": "controls/V-38631.rb"
     }
   ],
-  "sha256": "fd792a22709be328d70ff1bff05f65abc4821118209b9799e467f1ff84b9b497",
+  "sha256": "f94a2a454e80ea1000799eee306ce4af24e902e2bfc621d36aa2a2e4311346b6",
   "status": "loaded",
   "generator": {
     "name": "inspec",

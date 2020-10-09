@@ -7,6 +7,7 @@
   "license": "Apache 2 license",
   "summary": "Test-suite for best-practice nginx hardening",
   "version": "2.0.2",
+  "inspec_version": ">= 4.0",
   "supports": [
     {
       "platform-family": "unix"
@@ -1484,7 +1485,7 @@
     }
   ],
   "inputs": [],
-  "sha256": "ce186c5c0f7b06168080d5f7a04d13ad70a850c3b86d9c56bac515fd042e9283",
+  "sha256": "f693c7dc37b427c9ed2690a3171c1531678f0798e79f65e54e39b87143bb3c9e",
   "status": "loaded",
   "generator": {
     "name": "inspec",

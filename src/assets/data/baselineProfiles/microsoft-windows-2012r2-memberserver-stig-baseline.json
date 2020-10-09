@@ -8,6 +8,7 @@
   "summary": "Inspec profile testing STIG compliance of Windows Member Server 2012r2",
   "description": "Inspec testing for Windows 2012r2 member servers per the IASE DISA Windows 2012r2 v2r12 STIG at https://iasecontent.disa.mil/stigs/zip/U_Windows_2012_and_2012_R2_MS_V2R12_STIG.zip",
   "version": "2.17.0",
+  "inspec_version": ">= 4.0",
   "inputs": [],
   "supports": [],
   "controls": [
@@ -15770,7 +15771,7 @@
       "id": "controls/V-1150.rb"
     }
   ],
-  "sha256": "ac95a78e7e0d819f344dd9d681fa7ce640cf92d2af3203b27999e47cdd6972ac",
+  "sha256": "c0a419c8bdce7f42fdc2ea566ed425ff7dd8acc2401cad9bd2c3c5da3b1ff28b",
   "status": "loaded",
   "generator": {
     "name": "inspec",

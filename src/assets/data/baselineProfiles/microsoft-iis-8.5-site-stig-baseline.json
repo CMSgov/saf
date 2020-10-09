@@ -7,6 +7,7 @@
   "license": "Apache-2.0",
   "Description": "This Security Technical Implementation Guide is published as a tool to improvethe security of Department of Defense (DoD) information systems.",
   "version": "0.1.0",
+  "inspec_version": ">= 4.0",
   "attributes": [
     {
       "name": "public_server",
@@ -2712,7 +2713,7 @@
     }
   ],
   "inputs": [],
-  "sha256": "6b01b924917e6752ba0d395518edb4d5fb1bb4c646f0f9a35908b52b0524ae99",
+  "sha256": "ffa588b724d88359c66ddc4edc5031a9939683a409ef90f53d45ab1463b67ba4",
   "status": "loaded",
   "generator": {
     "name": "inspec",

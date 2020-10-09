@@ -13,7 +13,7 @@
       "platform": "os"
     }
   ],
-  "inspec_version": "~> 3.0",
+  "inspec_version": ">= 4.0",
   "attributes": [
     {
       "name": "is_on_siprnet",
@@ -627,7 +627,7 @@
     }
   ],
   "inputs": [],
-  "sha256": "d5b46836c19bbaffa5d535f5bd87c52de39d977878fbc6a3c8b0294226bcdaf1",
+  "sha256": "990918e7923f571347a3985595021c8a86a3f0847cc763507bd0145a1f417666",
   "status": "loaded",
   "generator": {
     "name": "inspec",

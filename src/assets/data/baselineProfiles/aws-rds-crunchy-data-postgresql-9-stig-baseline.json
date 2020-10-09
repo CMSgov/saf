@@ -13,7 +13,7 @@
       "platform": "aws"
     }
   ],
-  "inspec_version": "~> 3.0",
+  "inspec_version": ">= 4.0",
   "depends": [
     {
       "name": "pgstigcheck-inspec",
@@ -3414,7 +3414,7 @@
     }
   ],
   "inputs": [],
-  "sha256": "dc17e533d34bf79a8e875b325b2ed62c8bbaddde87328a82b5dab5c0c24c0145",
+  "sha256": "ba6f491861915ea74a527089eb6bf9e9306f7e1ee722b0c984fc0dc901258697",
   "status": "loaded",
   "generator": {
     "name": "inspec",

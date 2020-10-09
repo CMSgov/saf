@@ -8,6 +8,7 @@
   "summary": "Inspec profile testing STIG compliance of Windows Server 2016",
   "description": "Inspec testing for Windows 2016 servers per the IASE DISA Windows 2016 v1r7 STIG \n",
   "version": "0.1.0",
+  "inspec_version": ">= 4.0",
   "inputs": [],
   "supports": [],
   "controls": [
@@ -11331,7 +11332,7 @@
       "id": "controls/V-73567.rb"
     }
   ],
-  "sha256": "00ae37cd95f42eee4ee3cf7e99fa2b5826f49c613b986ee0b9197e4402379d02",
+  "sha256": "cb055fd59a7c2ae9e88aabb867e10611458b2c83e6bda49be67604d95e70b49b",
   "status": "loaded",
   "generator": {
     "name": "inspec",

@@ -7,6 +7,7 @@
   "license": "Apache-2.0",
   "summary": "The Windows 10 Security Technical Implementation Guide (STIG) is published as a tool to improve the security of Department of Defense (DoD) information systems. Comments or proposed revisions to this document should be sent via e-mail to the following address: disa.stig_spt@mail.mil.",
   "version": "1.20.0",
+  "inspec_version": ">= 4.0",
   "inputs": [],
   "supports": [],
   "controls": [
@@ -13936,7 +13937,7 @@
       "id": "controls/V-63445.rb"
     }
   ],
-  "sha256": "7a01bd5e478bf46b555956e674ff7bbe31e5c042ad4345f9c9ab83f46291b427",
+  "sha256": "9f912fd64db6d3bf2c34f0d4b74dcb04b044967416cb6eb5dc7cca2c7edfd739",
   "status": "loaded",
   "generator": {
     "name": "inspec",

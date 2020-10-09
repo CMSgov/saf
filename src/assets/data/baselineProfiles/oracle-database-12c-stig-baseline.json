@@ -7,6 +7,7 @@
   "license": "Apache-2.0",
   "summary": "This Security Technical Implementation Guide is published as a tool to improve the security of Department of Defense (DoD) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via e-mail to the following address: disa.stig_spt@mail.mil.",
   "version": "0.1.0",
+  "inspec_version": ">= 4.0",
   "inputs": [],
   "supports": [],
   "controls": [
@@ -9624,7 +9625,7 @@
       "id": "controls/V-61459.rb"
     }
   ],
-  "sha256": "1c5163a13ada389df3dc6c58f91b4e9b79df44e2c37fadfd67904c94012aee22",
+  "sha256": "e67038930a686a0972f03990292af137fcf2e2f36ae98c5aa51c29e33e3c3772",
   "status": "loaded",
   "generator": {
     "name": "inspec",

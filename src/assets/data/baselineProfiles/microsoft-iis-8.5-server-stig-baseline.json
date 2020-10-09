@@ -7,6 +7,7 @@
   "license": "Apache-2.0",
   "summary": "This Security Technical Implementation Guide is published as a tool to improve the security of Department of Defense DoD information systems. The requirements are derived from the National Institute of Standards and Technology NIST 800-53 and related documents. Comments or proposed revisions to this document should be sent via email to the following address",
   "version": "0.1.0",
+  "inspec_version": ">= 4.0",
   "attributes": [
     {
       "name": "is_proxy",
@@ -2220,7 +2221,7 @@
     }
   ],
   "inputs": [],
-  "sha256": "aade80d29bbf75ce36306f5cc5173225519d6e52f43f60faa519b2a1cf36d9b6",
+  "sha256": "5993d89cdd8b51ac628e5b47266aaf1ebe70f51da242a58222b60c79e946f031",
   "status": "loaded",
   "generator": {
     "name": "inspec",
