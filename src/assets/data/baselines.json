@@ -204,16 +204,16 @@
       "category": ["Cloud Service Providers"]
     },
     {
-      "shortName": "GCP PCI-DSS 3.2.1",
-      "longName": "Google Cloud Platform PCI-DSS 3.2.1",
+      "shortName": "DRAFT: GCP PCI-DSS 3.2.1",
+      "longName": "DRAFT: Google Cloud Platform PCI-DSS 3.2.1",
       "link": "https://github.com/GoogleCloudPlatform/inspec-gcp-pci-profile",
       "svg": "inspec-blue-back-border",
       "category": ["Cloud Service Providers"],
       "gitHash": "0"
     },
     {
-      "shortName": "GCP CIS Benchmark",
-      "longName": "Google Cloud Platform CIS Benchmark",
+      "shortName": "DRAFT: GCP CIS Benchmark",
+      "longName": "DRAFT: Google Cloud Platform CIS Benchmark",
       "link": "https://github.com/GoogleCloudPlatform/inspec-gcp-cis-benchmark",
       "svg": "inspec-blue-back-border",
       "category": ["Cloud Service Providers"],
@@ -255,15 +255,15 @@
       "category": ["Virtual Platforms"]
     },
     {
-      "shortName": "Tomcat 8 CIS",
-      "longName": "Apache Tomcat 8 CIS",
+      "shortName": "DRAFT: Tomcat 8 CIS",
+      "longName": "DRAFT: Apache Tomcat 8 CIS",
       "link": "https://github.com/mitre/apache-tomcat-8-cis-baseline",
       "svg": "inspec-blue-back-border",
       "category": ["Web Servers"]
     },
     {
-      "shortName": "Tomcat 7 CIS",
-      "longName": "Apache Tomcat 7 CIS",
+      "shortName": "DRAFT: Tomcat 7 CIS",
+      "longName": "DRAFT: Apache Tomcat 7 CIS",
       "link": "https://github.com/mitre/apache-tomcat-7-cis-baseline",
       "svg": "inspec-blue-back-border",
       "category": ["Web Servers"]
