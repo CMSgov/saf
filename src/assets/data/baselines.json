@@ -194,16 +194,14 @@
       "longName": "AWS S3",
       "link": "https://github.com/mitre/aws-s3-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Cloud Service Providers"],
-      "gitHash": "0"
+      "category": ["Cloud Service Providers"]
     },
     {
       "shortName": "AWS RDS CIS",
       "longName": "AWS RDS Infrastructure CIS",
       "link": "https://github.com/mitre/aws-rds-infrastructure-cis-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Cloud Service Providers"],
-      "gitHash": "0"
+      "category": ["Cloud Service Providers"]
     },
     {
       "shortName": "GCP PCI-DSS 3.2.1",
