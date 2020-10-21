@@ -15772,9 +15772,10 @@
     }
   ],
   "sha256": "c0a419c8bdce7f42fdc2ea566ed425ff7dd8acc2401cad9bd2c3c5da3b1ff28b",
+  "status_message": "",
   "status": "loaded",
   "generator": {
     "name": "inspec",
-    "version": "4.18.108"
+    "version": "4.23.11"
   }
 }

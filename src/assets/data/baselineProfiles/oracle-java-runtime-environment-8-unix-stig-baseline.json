@@ -628,9 +628,10 @@
   ],
   "inputs": [],
   "sha256": "990918e7923f571347a3985595021c8a86a3f0847cc763507bd0145a1f417666",
+  "status_message": "",
   "status": "loaded",
   "generator": {
     "name": "inspec",
-    "version": "4.18.108"
+    "version": "4.23.11"
   }
 }
