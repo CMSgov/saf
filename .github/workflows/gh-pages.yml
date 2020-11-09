@@ -25,7 +25,7 @@ jobs:
         run: npm run build
 
       - name: Write CNAME file
-        run: 'echo "SAF.CMS.GOV" > ./dist/CNAME'
+        run: 'echo "saf.cms.gov" > ./dist/CNAME'
 
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
