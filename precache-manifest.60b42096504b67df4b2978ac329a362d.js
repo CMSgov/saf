@@ -564,10 +564,6 @@ self.__precacheManifest = [
     "url": "/SAF_Code_Review_Recommendations.pdf"
   },
   {
-    "revision": "7780cecd623b8144d4a5d71c31059d31",
-    "url": "/CMS_SAF_ARS_Assessment_Range_04232020.pdf"
-  },
-  {
     "revision": "906089267eef5c4fd9388db92dd9b753",
     "url": "/CMS_SAF_ARS_Range_04232020.pdf"
   },
@@ -582,6 +578,10 @@ self.__precacheManifest = [
   {
     "revision": "13e04d26de97f23093f1133418926c28",
     "url": "/CMS_InSpec_Profile_Lifecycle_SOP_v1.0_20190702.pdf"
+  },
+  {
+    "revision": "7780cecd623b8144d4a5d71c31059d31",
+    "url": "/CMS_SAF_ARS_Assessment_Range_04232020.pdf"
   },
   {
     "revision": "4076d8e641ae460f689afda8336dfdc4",
