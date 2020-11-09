@@ -548,6 +548,10 @@ self.__precacheManifest = [
     "url": "/DevSecOps-Checklist-07022020.pdf"
   },
   {
+    "revision": "b2174230811e6edd524d5c338620a264",
+    "url": "/img/mitrelogo-whiteonblue.jpg"
+  },
+  {
     "revision": "d8cd15ffaf79bc2d69205b7ae80c3a65",
     "url": "/ISPG_DevSecOps_Research_Graphic_04062020.pdf"
   },
@@ -578,10 +582,6 @@ self.__precacheManifest = [
   {
     "revision": "13e04d26de97f23093f1133418926c28",
     "url": "/CMS_InSpec_Profile_Lifecycle_SOP_v1.0_20190702.pdf"
-  },
-  {
-    "revision": "b2174230811e6edd524d5c338620a264",
-    "url": "/img/mitrelogo-whiteonblue.jpg"
   },
   {
     "revision": "4076d8e641ae460f689afda8336dfdc4",
