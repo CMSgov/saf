@@ -1,0 +1,887 @@
+{
+  "name": "vmware-vm-6.7-stig-baseline",
+  "title": "InSpec Profile for VMware vSphere Virtual Machine 6.7 DISA STIG",
+  "maintainer": "The Authors",
+  "copyright": "The Authors",
+  "copyright_email": null,
+  "license": "Apache-2.0",
+  "summary": "An InSpec Compliance Profile for vSphere 6.7 Virtual Machines",
+  "version": "6.7.0",
+  "inputs": [],
+  "supports": [],
+  "controls": [
+    {
+      "title": "The virtual machine must not be able to obtain host information from\nthe hypervisor.",
+      "desc": "If enabled, a VM can obtain detailed information about the physical\nhost. The default value for the parameter is FALSE. This setting should not be\nTRUE unless a particular VM requires this information for performance\nmonitoring. An adversary potentially can use this information to inform further\nattacks on the host.",
+      "descriptions": {
+        "default": "If enabled, a VM can obtain detailed information about the physical\nhost. The default value for the parameter is FALSE. This setting should not be\nTRUE unless a particular VM requires this information for performance\nmonitoring. An adversary potentially can use this information to inform further\nattacks on the host.",
+        "check": "From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Verify the tools.guestlib.enableHostInfo value is set to\nfalse.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name tools.guestlib.enableHostInfo\n\nIf the virtual machine advanced setting tools.guestlib.enableHostInfo does not\nexist or is not set to false, this is a finding.",
+        "fix": "From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Find the tools.guestlib.enableHostInfo value and set it to\nfalse. If the setting does not exist, add the Name and Value setting at the\nbottom of screen.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \"VM Name\" | New-AdvancedSetting -Name tools.guestlib.enableHostInfo\n-Value false\n\nIf the setting exists, run:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name tools.guestlib.enableHostInfo |\nSet-AdvancedSetting -Value false"
+      },
+      "impact": 0.5,
+      "refs": [],
+      "tags": {
+        "severity": "CAT II",
+        "gtitle": "SRG-OS-000480-VMM-002000",
+        "gid": null,
+        "rid": "VMCH-67-000017",
+        "stig_id": "VMCH-67-000017",
+        "cci": "CCI-000366",
+        "nist": [
+          "CM-6 b",
+          "Rev_4"
+        ]
+      },
+      "code": "control \"VMCH-67-000017\" do\n  title \"The virtual machine must not be able to obtain host information from\nthe hypervisor.\"\n  desc  \"If enabled, a VM can obtain detailed information about the physical\nhost. The default value for the parameter is FALSE. This setting should not be\nTRUE unless a particular VM requires this information for performance\nmonitoring. An adversary potentially can use this information to inform further\nattacks on the host.\"\n  impact 0.5\n  tag severity: \"CAT II\"\n  tag gtitle: \"SRG-OS-000480-VMM-002000\"\n  tag gid: nil\n  tag rid: \"VMCH-67-000017\"\n  tag stig_id: \"VMCH-67-000017\"\n  tag cci: \"CCI-000366\"\n  tag nist: [\"CM-6 b\", \"Rev_4\"]\n  desc 'check', \"From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Verify the tools.guestlib.enableHostInfo value is set to\nfalse.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name tools.guestlib.enableHostInfo\n\nIf the virtual machine advanced setting tools.guestlib.enableHostInfo does not\nexist or is not set to false, this is a finding.\"\n  desc 'fix', \"From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Find the tools.guestlib.enableHostInfo value and set it to\nfalse. If the setting does not exist, add the Name and Value setting at the\nbottom of screen.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \\\"VM Name\\\" | New-AdvancedSetting -Name tools.guestlib.enableHostInfo\n-Value false\n\nIf the setting exists, run:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name tools.guestlib.enableHostInfo |\nSet-AdvancedSetting -Value false\"\n\n  command = \"(Get-VM -Name #{input('vmName')} | Get-AdvancedSetting -Name tools.guestlib.enableHostInfo).value\"\n  describe powercli_command(command).stdout.strip do\n    it { should cmp \"false\" }\n  end\n\nend\n",
+      "source_location": {
+        "ref": "./vmware/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline/controls/VMCH-67-000017.rb",
+        "line": 1
+      },
+      "id": "VMCH-67-000017"
+    },
+    {
+      "title": "Independent, non-persistent disks must be not be used on the virtual\nmachine.",
+      "desc": "The security issue with nonpersistent disk mode is that successful\nattackers, with a simple shutdown or reboot, might undo or remove any traces\nthat they were ever on the machine. To safeguard against this risk, production\nvirtual machines should be set to use persistent disk mode; additionally, make\nsure that activity within the VM is logged remotely on a separate server, such\nas a syslog server or equivalent Windows-based event collector. Without a\npersistent record of activity on a VM, administrators might never know whether\nthey have been attacked or hacked.\n\n    There can be valid use cases for these types of disks such as with an\napplication presentation solution where read only disks are desired and such\ncases should be identified and documented.",
+      "descriptions": {
+        "default": "The security issue with nonpersistent disk mode is that successful\nattackers, with a simple shutdown or reboot, might undo or remove any traces\nthat they were ever on the machine. To safeguard against this risk, production\nvirtual machines should be set to use persistent disk mode; additionally, make\nsure that activity within the VM is logged remotely on a separate server, such\nas a syslog server or equivalent Windows-based event collector. Without a\npersistent record of activity on a VM, administrators might never know whether\nthey have been attacked or hacked.\n\n    There can be valid use cases for these types of disks such as with an\napplication presentation solution where read only disks are desired and such\ncases should be identified and documented.",
+        "check": "From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings. Review the attached hard disks and verify they are not\nconfigured as independent nonpersistent disks.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \"VM Name\" | Get-HardDisk | Select Parent, Name, Filename, DiskType,\nPersistence | FT -AutoSize\n\nIf the virtual machine has attached disks that are in independent nonpersistent\nmode and are not documented, this is a finding.",
+        "fix": "From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings. Select the target hard disk and change the mode to persistent\nor uncheck Independent.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \"VM Name\" | Get-HardDisk | Set-HardDisk -Persistence\nIndependentPersistent\n\nor\n\nGet-VM \"VM Name\" | Get-HardDisk | Set-HardDisk -Persistence Persistent"
+      },
+      "impact": 0.5,
+      "refs": [],
+      "tags": {
+        "severity": "CAT II",
+        "gtitle": "SRG-OS-000480-VMM-002000",
+        "gid": null,
+        "rid": "VMCH-67-000006",
+        "stig_id": "VMCH-67-000006",
+        "cci": "CCI-000366",
+        "nist": [
+          "CM-6 b",
+          "Rev_4"
+        ]
+      },
+      "code": "control \"VMCH-67-000006\" do\n  title \"Independent, non-persistent disks must be not be used on the virtual\nmachine.\"\n  desc  \"The security issue with nonpersistent disk mode is that successful\nattackers, with a simple shutdown or reboot, might undo or remove any traces\nthat they were ever on the machine. To safeguard against this risk, production\nvirtual machines should be set to use persistent disk mode; additionally, make\nsure that activity within the VM is logged remotely on a separate server, such\nas a syslog server or equivalent Windows-based event collector. Without a\npersistent record of activity on a VM, administrators might never know whether\nthey have been attacked or hacked.\n\n    There can be valid use cases for these types of disks such as with an\napplication presentation solution where read only disks are desired and such\ncases should be identified and documented.\"\n  impact 0.5\n  tag severity: \"CAT II\"\n  tag gtitle: \"SRG-OS-000480-VMM-002000\"\n  tag gid: nil\n  tag rid: \"VMCH-67-000006\"\n  tag stig_id: \"VMCH-67-000006\"\n  tag cci: \"CCI-000366\"\n  tag nist: [\"CM-6 b\", \"Rev_4\"]\n  desc 'check', \"From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings. Review the attached hard disks and verify they are not\nconfigured as independent nonpersistent disks.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \\\"VM Name\\\" | Get-HardDisk | Select Parent, Name, Filename, DiskType,\nPersistence | FT -AutoSize\n\nIf the virtual machine has attached disks that are in independent nonpersistent\nmode and are not documented, this is a finding.\"\n  desc 'fix', \"From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings. Select the target hard disk and change the mode to persistent\nor uncheck Independent.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \\\"VM Name\\\" | Get-HardDisk | Set-HardDisk -Persistence\nIndependentPersistent\n\nor\n\nGet-VM \\\"VM Name\\\" | Get-HardDisk | Set-HardDisk -Persistence Persistent\"\n\n  command = \"(Get-VM -Name #{input('vmName')} | Get-HardDisk).Persistence\"\n  results = powercli_command(command)\n  results.stdout.split.each do | disk |\n    describe \"Checking the VM for Non-Persistent Hard Disks\" do\n      subject {disk}\n      it {should_not cmp \"IndependentNonPersistent\"}\n    end\n  end\n\nend\n",
+      "source_location": {
+        "ref": "./vmware/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline/controls/VMCH-67-000006.rb",
+        "line": 1
+      },
+      "id": "VMCH-67-000006"
+    },
+    {
+      "title": "Unauthorized CD/DVD devices must be disconnected on the virtual\nmachine.",
+      "desc": "Ensure that no device is connected to a virtual machine if it is not\nrequired. For example, floppy, serial and parallel ports are rarely used for\nvirtual machines in a datacenter environment, and CD/DVD drives are usually\nconnected only temporarily during software installation.",
+      "descriptions": {
+        "default": "Ensure that no device is connected to a virtual machine if it is not\nrequired. For example, floppy, serial and parallel ports are rarely used for\nvirtual machines in a datacenter environment, and CD/DVD drives are usually\nconnected only temporarily during software installation.",
+        "check": "From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings. Review the VMs hardware and verify no CD/DVD drives are\nconnected.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM | Get-CDDrive | Where {$_.extensiondata.connectable.connected -eq $true}\n| Select Parent,Name\n\nIf a virtual machine has a CD/DVD drive connected other than temporarily, this\nis a finding.",
+        "fix": "From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings. Select the CD/DVD drive and uncheck \"Connected\" and\n\"Connect at power on\" and remove any attached ISOs..\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \"VM Name\" | Get-CDDrive | Set-CDDrive -NoMedia"
+      },
+      "impact": 0.3,
+      "refs": [],
+      "tags": {
+        "severity": "CAT III",
+        "gtitle": "SRG-OS-000480-VMM-002000",
+        "gid": null,
+        "rid": "VMCH-67-000009",
+        "stig_id": "VMCH-67-000009",
+        "cci": "CCI-000366",
+        "nist": [
+          "CM-6 b",
+          "Rev_4"
+        ]
+      },
+      "code": "control \"VMCH-67-000009\" do\n  title \"Unauthorized CD/DVD devices must be disconnected on the virtual\nmachine.\"\n  desc  \"Ensure that no device is connected to a virtual machine if it is not\nrequired. For example, floppy, serial and parallel ports are rarely used for\nvirtual machines in a datacenter environment, and CD/DVD drives are usually\nconnected only temporarily during software installation.\"\n  impact 0.3\n  tag severity: \"CAT III\"\n  tag gtitle: \"SRG-OS-000480-VMM-002000\"\n  tag gid: nil\n  tag rid: \"VMCH-67-000009\"\n  tag stig_id: \"VMCH-67-000009\"\n  tag cci: \"CCI-000366\"\n  tag nist: [\"CM-6 b\", \"Rev_4\"]\n  desc 'check', \"From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings. Review the VMs hardware and verify no CD/DVD drives are\nconnected.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM | Get-CDDrive | Where {$_.extensiondata.connectable.connected -eq $true}\n| Select Parent,Name\n\nIf a virtual machine has a CD/DVD drive connected other than temporarily, this\nis a finding.\"\n  desc 'fix', \"From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings. Select the CD/DVD drive and uncheck \\\"Connected\\\" and\n\\\"Connect at power on\\\" and remove any attached ISOs..\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \\\"VM Name\\\" | Get-CDDrive | Set-CDDrive -NoMedia\"\n\n  command = \"(Get-VM -Name #{input('vmName')} | Get-CDDrive).ExtensionData.connectable.connected\"\n  results = powercli_command(command).stdout.strip\n  describe.one do\n    describe \"Checking the VM for connected CD/DVD drives\" do\n      subject {results}\n      it {should cmp \"False\"}\n    end\n    describe \"Checking the VM for connected CD/DVD drives\" do\n      subject {results}\n      it { should be_empty }\n    end\n  end\n\nend\n",
+      "source_location": {
+        "ref": "./vmware/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline/controls/VMCH-67-000009.rb",
+        "line": 1
+      },
+      "id": "VMCH-67-000009"
+    },
+    {
+      "title": "Drag and drop operations must be disabled on the virtual machine.",
+      "desc": "Copy and paste operations are disabled by default; however, by\nexplicitly disabling this feature it will enable audit controls to check that\nthis setting is correct. Copy, paste, drag and drop, or GUI copy/paste\noperations between the guest OS and the remote console could provide the means\nfor an attacker to compromise the VM.",
+      "descriptions": {
+        "default": "Copy and paste operations are disabled by default; however, by\nexplicitly disabling this feature it will enable audit controls to check that\nthis setting is correct. Copy, paste, drag and drop, or GUI copy/paste\noperations between the guest OS and the remote console could provide the means\nfor an attacker to compromise the VM.",
+        "check": "From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Verify the isolation.tools.dnd.disable value is set to true.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name isolation.tools.dnd.disable\n\nIf the virtual machine advanced setting isolation.tools.dnd.disable does not\nexist or is not set to true, this is a finding.",
+        "fix": "From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Verify the isolation.tools.dnd.disable value is set to true. If\nthe setting does not exist, add the Name and Value setting at the bottom of\nscreen.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \"VM Name\" | New-AdvancedSetting -Name isolation.tools.dnd.disable\n-Value true\n\nIf the setting exists, run:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name isolation.tools.dnd.disable |\nSet-AdvancedSetting -Value true"
+      },
+      "impact": 0.3,
+      "refs": [],
+      "tags": {
+        "severity": "CAT III",
+        "gtitle": "SRG-OS-000480-VMM-002000",
+        "gid": null,
+        "rid": "VMCH-67-000002",
+        "stig_id": "VMCH-67-000002",
+        "cci": "CCI-000366",
+        "nist": [
+          "CM-6 b",
+          "Rev_4"
+        ]
+      },
+      "code": "control \"VMCH-67-000002\" do\n  title \"Drag and drop operations must be disabled on the virtual machine.\"\n  desc  \"Copy and paste operations are disabled by default; however, by\nexplicitly disabling this feature it will enable audit controls to check that\nthis setting is correct. Copy, paste, drag and drop, or GUI copy/paste\noperations between the guest OS and the remote console could provide the means\nfor an attacker to compromise the VM.\"\n  impact 0.3\n  tag severity: \"CAT III\"\n  tag gtitle: \"SRG-OS-000480-VMM-002000\"\n  tag gid: nil\n  tag rid: \"VMCH-67-000002\"\n  tag stig_id: \"VMCH-67-000002\"\n  tag cci: \"CCI-000366\"\n  tag nist: [\"CM-6 b\", \"Rev_4\"]\n  desc 'check', \"From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Verify the isolation.tools.dnd.disable value is set to true.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name isolation.tools.dnd.disable\n\nIf the virtual machine advanced setting isolation.tools.dnd.disable does not\nexist or is not set to true, this is a finding.\"\n  desc 'fix', \"From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Verify the isolation.tools.dnd.disable value is set to true. If\nthe setting does not exist, add the Name and Value setting at the bottom of\nscreen.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \\\"VM Name\\\" | New-AdvancedSetting -Name isolation.tools.dnd.disable\n-Value true\n\nIf the setting exists, run:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name isolation.tools.dnd.disable |\nSet-AdvancedSetting -Value true\"\n\n  command = \"(Get-VM -Name #{input('vmName')} | Get-AdvancedSetting -Name isolation.tools.dnd.disable).value\"\n  describe powercli_command(command).stdout.strip do\n    it { should cmp \"true\" }\n  end\n\nend\n",
+      "source_location": {
+        "ref": "./vmware/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline/controls/VMCH-67-000002.rb",
+        "line": 1
+      },
+      "id": "VMCH-67-000002"
+    },
+    {
+      "title": "Virtual disk erasure must be disabled on the virtual machine.",
+      "desc": "Shrinking and wiping (erasing) a virtual disk reclaims unused space in\nit. If there is empty space in the disk, this process reduces the amount of\nspace the virtual disk occupies on the host drive. Normal users and processes -\nthat is, users and processes without root or administrator privileges - within\nvirtual machines have the capability to invoke this procedure. However, if this\nis done repeatedly, the virtual disk can become unavailable while this\nshrinking is being performed, effectively causing a denial-of-service. In most\ndatacenter environments, disk shrinking is not done, so this feature must be\ndisabled. Repeated disk shrinking can make a virtual disk unavailable. The\ncapability to wipe (erase) is available to non-administrative users operating\nwithin the VMs guest OS.",
+      "descriptions": {
+        "default": "Shrinking and wiping (erasing) a virtual disk reclaims unused space in\nit. If there is empty space in the disk, this process reduces the amount of\nspace the virtual disk occupies on the host drive. Normal users and processes -\nthat is, users and processes without root or administrator privileges - within\nvirtual machines have the capability to invoke this procedure. However, if this\nis done repeatedly, the virtual disk can become unavailable while this\nshrinking is being performed, effectively causing a denial-of-service. In most\ndatacenter environments, disk shrinking is not done, so this feature must be\ndisabled. Repeated disk shrinking can make a virtual disk unavailable. The\ncapability to wipe (erase) is available to non-administrative users operating\nwithin the VMs guest OS.",
+        "check": "From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Verify the isolation.tools.diskWiper.disable value is set\nto true.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name\nisolation.tools.diskShrink.disable\n\nIf the virtual machine advanced setting isolation.tools.diskWiper.disable does\nnot exist or is not set to true, this is a finding.",
+        "fix": "From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Find the isolation.tools.diskWiper.disable value and set it to\ntrue. If the setting does not exist, add the Name and Value setting at the\nbottom of screen.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \"VM Name\" | New-AdvancedSetting -Name\nisolation.tools.diskWiper.disable -Value true\n\nIf the setting exists, run:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name\nisolation.tools.diskWiper.disable | Set-AdvancedSetting -Value true"
+      },
+      "impact": 0.5,
+      "refs": [],
+      "tags": {
+        "severity": "CAT II",
+        "gtitle": "SRG-OS-000480-VMM-002000",
+        "gid": null,
+        "rid": "VMCH-67-000005",
+        "stig_id": "VMCH-67-000005",
+        "cci": "CCI-000366",
+        "nist": [
+          "CM-6 b",
+          "Rev_4"
+        ]
+      },
+      "code": "control \"VMCH-67-000005\" do\n  title \"Virtual disk erasure must be disabled on the virtual machine.\"\n  desc  \"Shrinking and wiping (erasing) a virtual disk reclaims unused space in\nit. If there is empty space in the disk, this process reduces the amount of\nspace the virtual disk occupies on the host drive. Normal users and processes -\nthat is, users and processes without root or administrator privileges - within\nvirtual machines have the capability to invoke this procedure. However, if this\nis done repeatedly, the virtual disk can become unavailable while this\nshrinking is being performed, effectively causing a denial-of-service. In most\ndatacenter environments, disk shrinking is not done, so this feature must be\ndisabled. Repeated disk shrinking can make a virtual disk unavailable. The\ncapability to wipe (erase) is available to non-administrative users operating\nwithin the VMs guest OS.\"\n  impact 0.5\n  tag severity: \"CAT II\"\n  tag gtitle: \"SRG-OS-000480-VMM-002000\"\n  tag gid: nil\n  tag rid: \"VMCH-67-000005\"\n  tag stig_id: \"VMCH-67-000005\"\n  tag cci: \"CCI-000366\"\n  tag nist: [\"CM-6 b\", \"Rev_4\"]\n  desc 'check', \"From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Verify the isolation.tools.diskWiper.disable value is set\nto true.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name\nisolation.tools.diskShrink.disable\n\nIf the virtual machine advanced setting isolation.tools.diskWiper.disable does\nnot exist or is not set to true, this is a finding.\"\n  desc 'fix', \"From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Find the isolation.tools.diskWiper.disable value and set it to\ntrue. If the setting does not exist, add the Name and Value setting at the\nbottom of screen.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \\\"VM Name\\\" | New-AdvancedSetting -Name\nisolation.tools.diskWiper.disable -Value true\n\nIf the setting exists, run:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name\nisolation.tools.diskWiper.disable | Set-AdvancedSetting -Value true\"\n\n  command = \"(Get-VM -Name #{input('vmName')} | Get-AdvancedSetting -Name isolation.tools.diskWiper.disable).value\"\n  describe powercli_command(command).stdout.strip do\n    it { should cmp \"true\" }\n  end\n\nend\n",
+      "source_location": {
+        "ref": "./vmware/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline/controls/VMCH-67-000005.rb",
+        "line": 1
+      },
+      "id": "VMCH-67-000005"
+    },
+    {
+      "title": "3D features on the virtual machine must be disabled when not required.",
+      "desc": "It is recommended that 3D acceleration be disabled on virtual machines\nthat do not require 3D functionality, (e.g. most server workloads or desktops\nnot using 3D applications).",
+      "descriptions": {
+        "default": "It is recommended that 3D acceleration be disabled on virtual machines\nthat do not require 3D functionality, (e.g. most server workloads or desktops\nnot using 3D applications).",
+        "check": "From the vSphere Web Client select the Virtual Machine, right\nclick and go to Edit Settings >> VM Options Tab >> Advanced >> Configuration\nParameters >> Edit Configuration. Find the \"mks.enable3d\" value and verify it\nis set to \"false\".\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name mks.enable3d\n\nIf the virtual machine advanced setting \"mks.enable3d\" does not exist or is\nnot set to \"false\", this is a finding.\n\nIf a virtual machine requires 3D features, this is not a finding.",
+        "fix": "From the vSphere Client select the Virtual Machine, right click and\ngo to Edit Settings >> VM Options Tab >> Advanced >> Configuration Parameters\n>> Edit Configuration. Find the \"mks.enable3d\" value and set it to \"false\".\n\nNote: The VM must be powered off to modify the advanced settings through the\nvSphere Web Client. It is recommended to configure these settings with PowerCLI\nas this can be done while the VM is powered on. In this case the modified\nsettings will not take effect until a cold boot of the VM.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \"VM Name\" | New-AdvancedSetting -Name mks.enable3d -Value false\n\nIf the setting exists, run:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name mks.enable3d |\nSet-AdvancedSetting -Value false"
+      },
+      "impact": 0.3,
+      "refs": [],
+      "tags": {
+        "severity": "CAT III",
+        "gtitle": "SRG-OS-000480-VMM-002000",
+        "gid": null,
+        "rid": "VMCH-67-000023",
+        "stig_id": "VMCH-67-000023",
+        "cci": "CCI-000366",
+        "nist": [
+          "CM-6 b",
+          "Rev_4"
+        ]
+      },
+      "code": "control \"VMCH-67-000023\" do\n  title \"3D features on the virtual machine must be disabled when not required.\"\n  desc  \"It is recommended that 3D acceleration be disabled on virtual machines\nthat do not require 3D functionality, (e.g. most server workloads or desktops\nnot using 3D applications).\"\n  impact 0.3\n  tag severity: \"CAT III\"\n  tag gtitle: \"SRG-OS-000480-VMM-002000\"\n  tag gid: nil\n  tag rid: \"VMCH-67-000023\"\n  tag stig_id: \"VMCH-67-000023\"\n  tag cci: \"CCI-000366\"\n  tag nist: [\"CM-6 b\", \"Rev_4\"]\n  desc 'check', \"From the vSphere Web Client select the Virtual Machine, right\nclick and go to Edit Settings >> VM Options Tab >> Advanced >> Configuration\nParameters >> Edit Configuration. Find the \\\"mks.enable3d\\\" value and verify it\nis set to \\\"false\\\".\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name mks.enable3d\n\nIf the virtual machine advanced setting \\\"mks.enable3d\\\" does not exist or is\nnot set to \\\"false\\\", this is a finding.\n\nIf a virtual machine requires 3D features, this is not a finding.\"\n  desc 'fix', \"From the vSphere Client select the Virtual Machine, right click and\ngo to Edit Settings >> VM Options Tab >> Advanced >> Configuration Parameters\n>> Edit Configuration. Find the \\\"mks.enable3d\\\" value and set it to \\\"false\\\".\n\nNote: The VM must be powered off to modify the advanced settings through the\nvSphere Web Client. It is recommended to configure these settings with PowerCLI\nas this can be done while the VM is powered on. In this case the modified\nsettings will not take effect until a cold boot of the VM.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \\\"VM Name\\\" | New-AdvancedSetting -Name mks.enable3d -Value false\n\nIf the setting exists, run:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name mks.enable3d |\nSet-AdvancedSetting -Value false\"\n\n  command = \"(Get-VM -Name #{input('vmName')} | Get-AdvancedSetting -Name mks.enable3d).value\"\n  describe powercli_command(command).stdout.strip do\n    it { should cmp \"false\" }\n  end\n\nend\n",
+      "source_location": {
+        "ref": "./vmware/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline/controls/VMCH-67-000023.rb",
+        "line": 1
+      },
+      "id": "VMCH-67-000023"
+    },
+    {
+      "title": "Access to virtual machines through the dvfilter network APIs must be\ncontrolled.",
+      "desc": "An attacker might compromise a VM by making use the dvFilter API.\nConfigure only those VMs to use the API that need this access.",
+      "descriptions": {
+        "default": "An attacker might compromise a VM by making use the dvFilter API.\nConfigure only those VMs to use the API that need this access.",
+        "check": "From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Look for settings with the format ethernet*.filter*.name.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name \"ethernet*.filter*.name*\"\n\nIf the virtual machine advanced setting ethernet*.filter*.name exists and\ndvfilters are not in use, this is a finding.\n\nIf the virtual machine advanced setting ethernet*.filter*.name exists and the\nvalue is not valid, this is a finding.",
+        "fix": "From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Look for settings with the format ethernet*.filter*.name. Ensure\nonly required VMs use this setting.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name ethernetX.filterY.name |\nRemove-AdvancedSetting\n\nNote:  Change the X and Y values to match the specific setting in your\nenvironment."
+      },
+      "impact": 0.3,
+      "refs": [],
+      "tags": {
+        "severity": "CAT III",
+        "gtitle": "SRG-OS-000480-VMM-002000",
+        "gid": null,
+        "rid": "VMCH-67-000019",
+        "stig_id": "VMCH-67-000019",
+        "cci": "CCI-000366",
+        "nist": [
+          "CM-6 b",
+          "Rev_4"
+        ]
+      },
+      "code": "control \"VMCH-67-000019\" do\n  title \"Access to virtual machines through the dvfilter network APIs must be\ncontrolled.\"\n  desc  \"An attacker might compromise a VM by making use the dvFilter API.\nConfigure only those VMs to use the API that need this access.\"\n  impact 0.3\n  tag severity: \"CAT III\"\n  tag gtitle: \"SRG-OS-000480-VMM-002000\"\n  tag gid: nil\n  tag rid: \"VMCH-67-000019\"\n  tag stig_id: \"VMCH-67-000019\"\n  tag cci: \"CCI-000366\"\n  tag nist: [\"CM-6 b\", \"Rev_4\"]\n  desc 'check', \"From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Look for settings with the format ethernet*.filter*.name.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name \\\"ethernet*.filter*.name*\\\"\n\nIf the virtual machine advanced setting ethernet*.filter*.name exists and\ndvfilters are not in use, this is a finding.\n\nIf the virtual machine advanced setting ethernet*.filter*.name exists and the\nvalue is not valid, this is a finding.\"\n  desc 'fix', \"From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Look for settings with the format ethernet*.filter*.name. Ensure\nonly required VMs use this setting.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name ethernetX.filterY.name |\nRemove-AdvancedSetting\n\nNote:  Change the X and Y values to match the specific setting in your\nenvironment.\"\n\n  command = \"(Get-VM -Name #{input('vmName')} | Get-AdvancedSetting -Name ethernet*.filter*).value\"\n  describe powercli_command(command).stdout.strip do\n    it { should be_empty }\n  end\n\nend\n",
+      "source_location": {
+        "ref": "./vmware/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline/controls/VMCH-67-000019.rb",
+        "line": 1
+      },
+      "id": "VMCH-67-000019"
+    },
+    {
+      "title": "Unauthorized parallel devices must be disconnected on the virtual\nmachine.",
+      "desc": "Ensure that no device is connected to a virtual machine if it is not\nrequired. For example, floppy, serial and parallel ports are rarely used for\nvirtual machines in a datacenter environment, and CD/DVD drives are usually\nconnected only temporarily during software installation.",
+      "descriptions": {
+        "default": "Ensure that no device is connected to a virtual machine if it is not\nrequired. For example, floppy, serial and parallel ports are rarely used for\nvirtual machines in a datacenter environment, and CD/DVD drives are usually\nconnected only temporarily during software installation.",
+        "check": "From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings. Review the VMs hardware and verify no parallel devices\nexist.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM | Where {$_.ExtensionData.Config.Hardware.Device.DeviceInfo.Label -match\n\"parallel\"}\n\nIf a virtual machine has a parallel device present, this is a finding.",
+        "fix": "The VM must be powered off in order to remove a parallel device.\n\nFrom the vSphere Web Client right-click the Virtual Machine and go to Edit\nSettings. Select the parallel device and click the circle-x to remove then OK."
+      },
+      "impact": 0.5,
+      "refs": [],
+      "tags": {
+        "severity": "CAT II",
+        "gtitle": "SRG-OS-000480-VMM-002000",
+        "gid": null,
+        "rid": "VMCH-67-000010",
+        "stig_id": "VMCH-67-000010",
+        "cci": "CCI-000366",
+        "nist": [
+          "CM-6 b",
+          "Rev_4"
+        ]
+      },
+      "code": "control \"VMCH-67-000010\" do\n  title \"Unauthorized parallel devices must be disconnected on the virtual\nmachine.\"\n  desc  \"Ensure that no device is connected to a virtual machine if it is not\nrequired. For example, floppy, serial and parallel ports are rarely used for\nvirtual machines in a datacenter environment, and CD/DVD drives are usually\nconnected only temporarily during software installation.\"\n  impact 0.5\n  tag severity: \"CAT II\"\n  tag gtitle: \"SRG-OS-000480-VMM-002000\"\n  tag gid: nil\n  tag rid: \"VMCH-67-000010\"\n  tag stig_id: \"VMCH-67-000010\"\n  tag cci: \"CCI-000366\"\n  tag nist: [\"CM-6 b\", \"Rev_4\"]\n  desc 'check', \"From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings. Review the VMs hardware and verify no parallel devices\nexist.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM | Where {$_.ExtensionData.Config.Hardware.Device.DeviceInfo.Label -match\n\\\"parallel\\\"}\n\nIf a virtual machine has a parallel device present, this is a finding.\"\n  desc 'fix', \"The VM must be powered off in order to remove a parallel device.\n\nFrom the vSphere Web Client right-click the Virtual Machine and go to Edit\nSettings. Select the parallel device and click the circle-x to remove then OK.\"\n\n  command = \"(Get-VM -Name #{input('vmName')}).ExtensionData.Config.Hardware.Device.DeviceInfo.label\"\n  describe powercli_command(command).stdout do\n    it { should_not match 'Parallel' }\n  end\n\nend\n",
+      "source_location": {
+        "ref": "./vmware/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline/controls/VMCH-67-000010.rb",
+        "line": 1
+      },
+      "id": "VMCH-67-000010"
+    },
+    {
+      "title": "Informational messages from the virtual machine to the VMX file must\nbe limited on the virtual machine.",
+      "desc": "The configuration file containing these name-value pairs is limited to\na size of 1MB. If not limited, VMware tools in the guest OS are capable of\nsending a large and continuous data stream to the host. This 1MB capacity\nshould be sufficient for most cases, but this value can change if necessary.\nThe value can be increased if large amounts of custom information are being\nstored in the configuration file. The default limit is 1MB.",
+      "descriptions": {
+        "default": "The configuration file containing these name-value pairs is limited to\na size of 1MB. If not limited, VMware tools in the guest OS are capable of\nsending a large and continuous data stream to the host. This 1MB capacity\nshould be sufficient for most cases, but this value can change if necessary.\nThe value can be increased if large amounts of custom information are being\nstored in the configuration file. The default limit is 1MB.",
+        "check": "From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Verify the tools.setinfo.sizeLimit value is set to 1048576.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name tools.setinfo.sizeLimit\n\nIf the virtual machine advanced setting tools.setinfo.sizeLimit does not exist\nor is not set to 1048576, this is a finding.",
+        "fix": "From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Find the tools.setinfo.sizeLimit value and set it to 1048576. If\nthe setting does not exist, add the Name and Value setting at the bottom of\nscreen.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \"VM Name\" | New-AdvancedSetting -Name tools.setinfo.sizeLimit -Value\n1048576\n\nIf the setting exists, run:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name tools.setinfo.sizeLimit |\nSet-AdvancedSetting -Value 1048576"
+      },
+      "impact": 0.3,
+      "refs": [],
+      "tags": {
+        "severity": "CAT III",
+        "gtitle": "SRG-OS-000480-VMM-002000",
+        "gid": null,
+        "rid": "VMCH-67-000015",
+        "stig_id": "VMCH-67-000015",
+        "cci": "CCI-000366",
+        "nist": [
+          "CM-6 b",
+          "Rev_4"
+        ]
+      },
+      "code": "control \"VMCH-67-000015\" do\n  title \"Informational messages from the virtual machine to the VMX file must\nbe limited on the virtual machine.\"\n  desc  \"The configuration file containing these name-value pairs is limited to\na size of 1MB. If not limited, VMware tools in the guest OS are capable of\nsending a large and continuous data stream to the host. This 1MB capacity\nshould be sufficient for most cases, but this value can change if necessary.\nThe value can be increased if large amounts of custom information are being\nstored in the configuration file. The default limit is 1MB.\"\n  impact 0.3\n  tag severity: \"CAT III\"\n  tag gtitle: \"SRG-OS-000480-VMM-002000\"\n  tag gid: nil\n  tag rid: \"VMCH-67-000015\"\n  tag stig_id: \"VMCH-67-000015\"\n  tag cci: \"CCI-000366\"\n  tag nist: [\"CM-6 b\", \"Rev_4\"]\n  desc 'check', \"From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Verify the tools.setinfo.sizeLimit value is set to 1048576.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name tools.setinfo.sizeLimit\n\nIf the virtual machine advanced setting tools.setinfo.sizeLimit does not exist\nor is not set to 1048576, this is a finding.\"\n  desc 'fix', \"From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Find the tools.setinfo.sizeLimit value and set it to 1048576. If\nthe setting does not exist, add the Name and Value setting at the bottom of\nscreen.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \\\"VM Name\\\" | New-AdvancedSetting -Name tools.setinfo.sizeLimit -Value\n1048576\n\nIf the setting exists, run:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name tools.setinfo.sizeLimit |\nSet-AdvancedSetting -Value 1048576\"\n\n  command = \"(Get-VM -Name #{input('vmName')} | Get-AdvancedSetting -Name tools.setinfo.sizeLimit).value\"\n  describe powercli_command(command).stdout.strip do\n    it { should cmp \"1048576\" }\n  end\n\nend\n",
+      "source_location": {
+        "ref": "./vmware/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline/controls/VMCH-67-000015.rb",
+        "line": 1
+      },
+      "id": "VMCH-67-000015"
+    },
+    {
+      "title": "Unauthorized floppy devices must be disconnected on the virtual\nmachine.",
+      "desc": "Ensure that no device is connected to a virtual machine if it is not\nrequired. For example, floppy, serial and parallel ports are rarely used for\nvirtual machines in a datacenter environment, and CD/DVD drives are usually\nconnected only temporarily during software installation.",
+      "descriptions": {
+        "default": "Ensure that no device is connected to a virtual machine if it is not\nrequired. For example, floppy, serial and parallel ports are rarely used for\nvirtual machines in a datacenter environment, and CD/DVD drives are usually\nconnected only temporarily during software installation.",
+        "check": "From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings. Review the VMs hardware and verify no floppy device is\nconnected.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM | Get-FloppyDrive | Select Parent, Name, ConnectionState\n\nIf a virtual machine has a floppy drive connected, this is a finding.",
+        "fix": "If the floppy drive is required to be present, then from the\nvSphere Client right-click the Virtual Machine and go to Edit Settings, make\nsure the drive is not connected and will not \"Connect at power on\".\n\nIf the floppy drive is not required, then from the vSphere Client power off the\nvirtual machine, right-click the Virtual Machine and go to Edit Settings,\nselect the floppy drive and click the circle-x to remove then OK.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \"VM Name\" | Get-FloppyDrive | Remove-FloppyDrive"
+      },
+      "impact": 0.5,
+      "refs": [],
+      "tags": {
+        "severity": "CAT II",
+        "gtitle": "SRG-OS-000480-VMM-002000",
+        "gid": null,
+        "rid": "VMCH-67-000008",
+        "stig_id": "VMCH-67-000008",
+        "cci": "CCI-000366",
+        "nist": [
+          "CM-6 b",
+          "Rev_4"
+        ]
+      },
+      "code": "control \"VMCH-67-000008\" do\n  title \"Unauthorized floppy devices must be disconnected on the virtual\nmachine.\"\n  desc  \"Ensure that no device is connected to a virtual machine if it is not\nrequired. For example, floppy, serial and parallel ports are rarely used for\nvirtual machines in a datacenter environment, and CD/DVD drives are usually\nconnected only temporarily during software installation.\"\n  impact 0.5\n  tag severity: \"CAT II\"\n  tag gtitle: \"SRG-OS-000480-VMM-002000\"\n  tag gid: nil\n  tag rid: \"VMCH-67-000008\"\n  tag stig_id: \"VMCH-67-000008\"\n  tag cci: \"CCI-000366\"\n  tag nist: [\"CM-6 b\", \"Rev_4\"]\n  desc 'check', \"From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings. Review the VMs hardware and verify no floppy device is\nconnected.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM | Get-FloppyDrive | Select Parent, Name, ConnectionState\n\nIf a virtual machine has a floppy drive connected, this is a finding.\"\n  desc 'fix', \"If the floppy drive is required to be present, then from the\nvSphere Client right-click the Virtual Machine and go to Edit Settings, make\nsure the drive is not connected and will not \\\"Connect at power on\\\".\n\nIf the floppy drive is not required, then from the vSphere Client power off the\nvirtual machine, right-click the Virtual Machine and go to Edit Settings,\nselect the floppy drive and click the circle-x to remove then OK.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \\\"VM Name\\\" | Get-FloppyDrive | Remove-FloppyDrive\"\n\n  command = \"Get-VM -Name #{input('vmName')} | Get-FloppyDrive\"\n  describe powercli_command(command).stdout do\n    it { should be_empty }\n  end\n\nend\n",
+      "source_location": {
+        "ref": "./vmware/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline/controls/VMCH-67-000008.rb",
+        "line": 1
+      },
+      "id": "VMCH-67-000008"
+    },
+    {
+      "title": "Shared salt values must be disabled on the virtual machine.",
+      "desc": "When salting is enabled (Mem.ShareForceSalting=1 or 2) in order to\nshare a page between two virtual machines both salt and the content of the page\nmust be same. A salt value is a configurable advanced option for each virtual\nmachine. You can manually specify the salt values in the virtual machine's\nadvanced settings with the new option sched.mem.pshare.salt. If this option is\nnot present in the virtual machine's advanced settings, then the value of the\nvc.uuid option is taken as the default value. Since the vc.uuid is unique to\neach virtual machine, by default TPS happens only among the pages belonging to\na particular virtual machine (Intra-VM).",
+      "descriptions": {
+        "default": "When salting is enabled (Mem.ShareForceSalting=1 or 2) in order to\nshare a page between two virtual machines both salt and the content of the page\nmust be same. A salt value is a configurable advanced option for each virtual\nmachine. You can manually specify the salt values in the virtual machine's\nadvanced settings with the new option sched.mem.pshare.salt. If this option is\nnot present in the virtual machine's advanced settings, then the value of the\nvc.uuid option is taken as the default value. Since the vc.uuid is unique to\neach virtual machine, by default TPS happens only among the pages belonging to\na particular virtual machine (Intra-VM).",
+        "check": "From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Verify the sched.mem.pshare.salt setting does not exist.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name sched.mem.pshare.salt\n\nIf the virtual machine advanced setting sched.mem.pshare.salt exists, this is a\nfinding.",
+        "fix": "From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Delete the sched.mem.pshare.salt setting.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name sched.mem.pshare.salt |\nRemove-AdvancedSetting"
+      },
+      "impact": 0.3,
+      "refs": [],
+      "tags": {
+        "severity": "CAT III",
+        "gtitle": "SRG-OS-000480-VMM-002000",
+        "gid": null,
+        "rid": "VMCH-67-000018",
+        "stig_id": "VMCH-67-000018",
+        "cci": "CCI-000366",
+        "nist": [
+          "CM-6 b",
+          "Rev_4"
+        ]
+      },
+      "code": "control \"VMCH-67-000018\" do\n  title \"Shared salt values must be disabled on the virtual machine.\"\n  desc  \"When salting is enabled (Mem.ShareForceSalting=1 or 2) in order to\nshare a page between two virtual machines both salt and the content of the page\nmust be same. A salt value is a configurable advanced option for each virtual\nmachine. You can manually specify the salt values in the virtual machine's\nadvanced settings with the new option sched.mem.pshare.salt. If this option is\nnot present in the virtual machine's advanced settings, then the value of the\nvc.uuid option is taken as the default value. Since the vc.uuid is unique to\neach virtual machine, by default TPS happens only among the pages belonging to\na particular virtual machine (Intra-VM).\"\n  impact 0.3\n  tag severity: \"CAT III\"\n  tag gtitle: \"SRG-OS-000480-VMM-002000\"\n  tag gid: nil\n  tag rid: \"VMCH-67-000018\"\n  tag stig_id: \"VMCH-67-000018\"\n  tag cci: \"CCI-000366\"\n  tag nist: [\"CM-6 b\", \"Rev_4\"]\n  desc 'check', \"From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Verify the sched.mem.pshare.salt setting does not exist.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name sched.mem.pshare.salt\n\nIf the virtual machine advanced setting sched.mem.pshare.salt exists, this is a\nfinding.\"\n  desc 'fix', \"From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Delete the sched.mem.pshare.salt setting.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name sched.mem.pshare.salt |\nRemove-AdvancedSetting\"\n\n  command = \"(Get-VM -Name #{input('vmName')} | Get-AdvancedSetting -Name sched.mem.pshare.salt).value\"\n  describe powercli_command(command).stdout.strip do\n    it { should be_empty }\n  end\n\nend\n",
+      "source_location": {
+        "ref": "./vmware/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline/controls/VMCH-67-000018.rb",
+        "line": 1
+      },
+      "id": "VMCH-67-000018"
+    },
+    {
+      "title": "Console connection sharing must be limited on the virtual machine.",
+      "desc": "By default, remote console sessions can be connected to by more than\none user at a time.  When multiple sessions are activated, each terminal window\ngets a notification about the new session. If an administrator in the VM logs\nin using a VMware remote console during their session, a non-administrator in\nthe VM might connect to the console and observe the administrator's actions.\nAlso, this could result in an administrator losing console access to a virtual\nmachine. For example, if a jump box is being used for an open console session\nand the admin loses connection to that box, then the console session remains\nopen. Allowing two console sessions permits debugging via a shared session.\nFor highest security, only one remote console session at a time should be\nallowed.",
+      "descriptions": {
+        "default": "By default, remote console sessions can be connected to by more than\none user at a time.  When multiple sessions are activated, each terminal window\ngets a notification about the new session. If an administrator in the VM logs\nin using a VMware remote console during their session, a non-administrator in\nthe VM might connect to the console and observe the administrator's actions.\nAlso, this could result in an administrator losing console access to a virtual\nmachine. For example, if a jump box is being used for an open console session\nand the admin loses connection to that box, then the console session remains\nopen. Allowing two console sessions permits debugging via a shared session.\nFor highest security, only one remote console session at a time should be\nallowed.",
+        "check": "From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Verify the RemoteDisplay.maxConnections value is set to 1.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name RemoteDisplay.maxConnections\n\nIf the virtual machine advanced setting RemoteDisplay.maxConnections does not\nexist or is not set to 1, this is a finding.",
+        "fix": "From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Find the RemoteDisplay.maxConnections value and set it to 1. If\nthe setting does not exist, add the Name and Value setting at the bottom of\nscreen.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \"VM Name\" | New-AdvancedSetting -Name RemoteDisplay.maxConnections\n-Value 1\n\nIf the setting exists, run:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name RemoteDisplay.maxConnections |\nSet-AdvancedSetting -Value 1"
+      },
+      "impact": 0.5,
+      "refs": [],
+      "tags": {
+        "severity": "CAT II",
+        "gtitle": "SRG-OS-000480-VMM-002000",
+        "gid": null,
+        "rid": "VMCH-67-000013",
+        "stig_id": "VMCH-67-000013",
+        "cci": "CCI-000366",
+        "nist": [
+          "CM-6 b",
+          "Rev_4"
+        ]
+      },
+      "code": "control \"VMCH-67-000013\" do\n  title \"Console connection sharing must be limited on the virtual machine.\"\n  desc  \"By default, remote console sessions can be connected to by more than\none user at a time.  When multiple sessions are activated, each terminal window\ngets a notification about the new session. If an administrator in the VM logs\nin using a VMware remote console during their session, a non-administrator in\nthe VM might connect to the console and observe the administrator's actions.\nAlso, this could result in an administrator losing console access to a virtual\nmachine. For example, if a jump box is being used for an open console session\nand the admin loses connection to that box, then the console session remains\nopen. Allowing two console sessions permits debugging via a shared session.\nFor highest security, only one remote console session at a time should be\nallowed.\"\n  impact 0.5\n  tag severity: \"CAT II\"\n  tag gtitle: \"SRG-OS-000480-VMM-002000\"\n  tag gid: nil\n  tag rid: \"VMCH-67-000013\"\n  tag stig_id: \"VMCH-67-000013\"\n  tag cci: \"CCI-000366\"\n  tag nist: [\"CM-6 b\", \"Rev_4\"]\n  desc 'check', \"From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Verify the RemoteDisplay.maxConnections value is set to 1.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name RemoteDisplay.maxConnections\n\nIf the virtual machine advanced setting RemoteDisplay.maxConnections does not\nexist or is not set to 1, this is a finding.\"\n  desc 'fix', \"From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Find the RemoteDisplay.maxConnections value and set it to 1. If\nthe setting does not exist, add the Name and Value setting at the bottom of\nscreen.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \\\"VM Name\\\" | New-AdvancedSetting -Name RemoteDisplay.maxConnections\n-Value 1\n\nIf the setting exists, run:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name RemoteDisplay.maxConnections |\nSet-AdvancedSetting -Value 1\"\n\n  command = \"(Get-VM -Name #{input('vmName')} | Get-AdvancedSetting -Name RemoteDisplay.maxConnections).value\"\n  describe powercli_command(command).stdout.strip do\n    it { should cmp \"1\" }\n  end\n\nend\n",
+      "source_location": {
+        "ref": "./vmware/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline/controls/VMCH-67-000013.rb",
+        "line": 1
+      },
+      "id": "VMCH-67-000013"
+    },
+    {
+      "title": "Paste operations must be disabled on the virtual machine.",
+      "desc": "Copy and paste operations are disabled by default; however, by\nexplicitly disabling this feature it will enable audit controls to check that\nthis setting is correct. Copy, paste, drag and drop, or GUI copy/paste\noperations between the guest OS and the remote console could provide the means\nfor an attacker to compromise the VM.",
+      "descriptions": {
+        "default": "Copy and paste operations are disabled by default; however, by\nexplicitly disabling this feature it will enable audit controls to check that\nthis setting is correct. Copy, paste, drag and drop, or GUI copy/paste\noperations between the guest OS and the remote console could provide the means\nfor an attacker to compromise the VM.",
+        "check": "From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Verify the isolation.tools.paste.disable value is set to\ntrue.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name isolation.tools.paste.disable\n\nIf the virtual machine advanced setting isolation.tools.paste.disable does not\nexist or is not set to true, this is a finding.",
+        "fix": "From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Find the isolation.tools.paste.disable value and set it to true.\nIf the setting does not exist, add the Name and Value setting at the bottom of\nscreen.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \"VM Name\" | New-AdvancedSetting -Name isolation.tools.paste.disable\n-Value true\n\nIf the setting exists, run:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name isolation.tools.paste.disable |\nSet-AdvancedSetting -Value true"
+      },
+      "impact": 0.3,
+      "refs": [],
+      "tags": {
+        "severity": "CAT III",
+        "gtitle": "SRG-OS-000480-VMM-002000",
+        "gid": null,
+        "rid": "VMCH-67-000003",
+        "stig_id": "VMCH-67-000003",
+        "cci": "CCI-000366",
+        "nist": [
+          "CM-6 b",
+          "Rev_4"
+        ]
+      },
+      "code": "control \"VMCH-67-000003\" do\n  title \"Paste operations must be disabled on the virtual machine.\"\n  desc  \"Copy and paste operations are disabled by default; however, by\nexplicitly disabling this feature it will enable audit controls to check that\nthis setting is correct. Copy, paste, drag and drop, or GUI copy/paste\noperations between the guest OS and the remote console could provide the means\nfor an attacker to compromise the VM.\"\n  impact 0.3\n  tag severity: \"CAT III\"\n  tag gtitle: \"SRG-OS-000480-VMM-002000\"\n  tag gid: nil\n  tag rid: \"VMCH-67-000003\"\n  tag stig_id: \"VMCH-67-000003\"\n  tag cci: \"CCI-000366\"\n  tag nist: [\"CM-6 b\", \"Rev_4\"]\n  desc 'check', \"From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Verify the isolation.tools.paste.disable value is set to\ntrue.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name isolation.tools.paste.disable\n\nIf the virtual machine advanced setting isolation.tools.paste.disable does not\nexist or is not set to true, this is a finding.\"\n  desc 'fix', \"From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Find the isolation.tools.paste.disable value and set it to true.\nIf the setting does not exist, add the Name and Value setting at the bottom of\nscreen.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \\\"VM Name\\\" | New-AdvancedSetting -Name isolation.tools.paste.disable\n-Value true\n\nIf the setting exists, run:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name isolation.tools.paste.disable |\nSet-AdvancedSetting -Value true\"\n\n  command = \"(Get-VM -Name #{input('vmName')} | Get-AdvancedSetting -Name isolation.tools.paste.disable).value\"\n  describe powercli_command(command).stdout.strip do\n    it { should cmp \"true\" }\n  end\n\nend\n",
+      "source_location": {
+        "ref": "./vmware/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline/controls/VMCH-67-000003.rb",
+        "line": 1
+      },
+      "id": "VMCH-67-000003"
+    },
+    {
+      "title": "Console access through the VNC protocol must be disabled on the\nvirtual machine.",
+      "desc": "The VM console enables you to connect to the console of a virtual\nmachine, in effect seeing what a monitor on a physical server would show. This\nconsole is also available via the VNC protocol and should be disabled.",
+      "descriptions": {
+        "default": "The VM console enables you to connect to the console of a virtual\nmachine, in effect seeing what a monitor on a physical server would show. This\nconsole is also available via the VNC protocol and should be disabled.",
+        "check": "From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Verify the RemoteDisplay.vnc.enabled value is set to false.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name RemoteDisplay.vnc.enabled\n\nIf the virtual machine advanced setting RemoteDisplay.vnc.enabled does not\nexist or is not set to false, this is a finding.",
+        "fix": "From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Find the RemoteDisplay.vnc.enabled value and set it to false. If\nthe setting does not exist, add the Name and Value setting at the bottom of\nscreen.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \"VM Name\" | New-AdvancedSetting -Name RemoteDisplay.vnc.enabled -Value\nfalse\n\nIf the setting exists, run:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name RemoteDisplay.vnc.enabled |\nSet-AdvancedSetting -Value false"
+      },
+      "impact": 0.5,
+      "refs": [],
+      "tags": {
+        "severity": "CAT II",
+        "gtitle": "SRG-OS-000480-VMM-002000",
+        "gid": null,
+        "rid": "VMCH-67-000014",
+        "stig_id": "VMCH-67-000014",
+        "cci": "CCI-000366",
+        "nist": [
+          "CM-6 b",
+          "Rev_4"
+        ]
+      },
+      "code": "control \"VMCH-67-000014\" do\n  title \"Console access through the VNC protocol must be disabled on the\nvirtual machine.\"\n  desc  \"The VM console enables you to connect to the console of a virtual\nmachine, in effect seeing what a monitor on a physical server would show. This\nconsole is also available via the VNC protocol and should be disabled.\"\n  impact 0.5\n  tag severity: \"CAT II\"\n  tag gtitle: \"SRG-OS-000480-VMM-002000\"\n  tag gid: nil\n  tag rid: \"VMCH-67-000014\"\n  tag stig_id: \"VMCH-67-000014\"\n  tag cci: \"CCI-000366\"\n  tag nist: [\"CM-6 b\", \"Rev_4\"]\n  desc 'check', \"From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Verify the RemoteDisplay.vnc.enabled value is set to false.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name RemoteDisplay.vnc.enabled\n\nIf the virtual machine advanced setting RemoteDisplay.vnc.enabled does not\nexist or is not set to false, this is a finding.\"\n  desc 'fix', \"From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Find the RemoteDisplay.vnc.enabled value and set it to false. If\nthe setting does not exist, add the Name and Value setting at the bottom of\nscreen.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \\\"VM Name\\\" | New-AdvancedSetting -Name RemoteDisplay.vnc.enabled -Value\nfalse\n\nIf the setting exists, run:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name RemoteDisplay.vnc.enabled |\nSet-AdvancedSetting -Value false\"\n\n  command = \"(Get-VM -Name #{input('vmName')} | Get-AdvancedSetting -Name RemoteDisplay.vnc.enabled).value\"\n  describe powercli_command(command).stdout.strip do\n    it { should cmp \"false\" }\n  end\n\nend\n",
+      "source_location": {
+        "ref": "./vmware/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline/controls/VMCH-67-000014.rb",
+        "line": 1
+      },
+      "id": "VMCH-67-000014"
+    },
+    {
+      "title": "Unauthorized serial devices must be disconnected on the virtual\nmachine.",
+      "desc": "Ensure that no device is connected to a virtual machine if it is not\nrequired. For example, floppy, serial and parallel ports are rarely used for\nvirtual machines in a datacenter environment, and CD/DVD drives are usually\nconnected only temporarily during software installation.",
+      "descriptions": {
+        "default": "Ensure that no device is connected to a virtual machine if it is not\nrequired. For example, floppy, serial and parallel ports are rarely used for\nvirtual machines in a datacenter environment, and CD/DVD drives are usually\nconnected only temporarily during software installation.",
+        "check": "From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings. Review the VMs hardware and verify no serial devices exist.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM | Where {$_.ExtensionData.Config.Hardware.Device.DeviceInfo.Label -match\n\"serial\"}\n\nIf a virtual machine has a serial device present, this is a finding.",
+        "fix": "The VM must be powered off in order to remove a serial device.\n\nFrom the vSphere Web Client right-click the Virtual Machine and go to Edit\nSettings. Select the serial device and click the circle-x to remove then OK."
+      },
+      "impact": 0.5,
+      "refs": [],
+      "tags": {
+        "severity": "CAT II",
+        "gtitle": "SRG-OS-000480-VMM-002000",
+        "gid": null,
+        "rid": "VMCH-67-000011",
+        "stig_id": "VMCH-67-000011",
+        "cci": "CCI-000366",
+        "nist": [
+          "CM-6 b",
+          "Rev_4"
+        ]
+      },
+      "code": "control \"VMCH-67-000011\" do\n  title \"Unauthorized serial devices must be disconnected on the virtual\nmachine.\"\n  desc  \"Ensure that no device is connected to a virtual machine if it is not\nrequired. For example, floppy, serial and parallel ports are rarely used for\nvirtual machines in a datacenter environment, and CD/DVD drives are usually\nconnected only temporarily during software installation.\"\n  impact 0.5\n  tag severity: \"CAT II\"\n  tag gtitle: \"SRG-OS-000480-VMM-002000\"\n  tag gid: nil\n  tag rid: \"VMCH-67-000011\"\n  tag stig_id: \"VMCH-67-000011\"\n  tag cci: \"CCI-000366\"\n  tag nist: [\"CM-6 b\", \"Rev_4\"]\n  desc 'check', \"From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings. Review the VMs hardware and verify no serial devices exist.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM | Where {$_.ExtensionData.Config.Hardware.Device.DeviceInfo.Label -match\n\\\"serial\\\"}\n\nIf a virtual machine has a serial device present, this is a finding.\"\n  desc 'fix', \"The VM must be powered off in order to remove a serial device.\n\nFrom the vSphere Web Client right-click the Virtual Machine and go to Edit\nSettings. Select the serial device and click the circle-x to remove then OK.\"\n\n  command = \"(Get-VM -Name #{input('vmName')}).ExtensionData.Config.Hardware.Device.DeviceInfo.label\"\n  describe powercli_command(command).stdout do\n    it { should_not match 'Serial' }\n  end\n\nend\n",
+      "source_location": {
+        "ref": "./vmware/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline/controls/VMCH-67-000011.rb",
+        "line": 1
+      },
+      "id": "VMCH-67-000011"
+    },
+    {
+      "title": "Virtual disk shrinking must be disabled on the virtual machine.",
+      "desc": "Shrinking a virtual disk reclaims unused space in it. If there is\nempty space in the disk, this process reduces the amount of space the virtual\ndisk occupies on the host drive. Normal users and processes-that is, users and\nprocesses without root or administrator privileges-within virtual machines have\nthe capability to invoke this procedure. However, if this is done repeatedly,\nthe virtual disk can become unavailable while this shrinking is being\nperformed, effectively causing a denial-of-service. In most datacenter\nenvironments, disk shrinking is not done, so this feature must be disabled.\nRepeated disk shrinking can make a virtual disk unavailable. The capability to\nshrink is available to non-administrative users operating within the VMs guest\nOS.",
+      "descriptions": {
+        "default": "Shrinking a virtual disk reclaims unused space in it. If there is\nempty space in the disk, this process reduces the amount of space the virtual\ndisk occupies on the host drive. Normal users and processes-that is, users and\nprocesses without root or administrator privileges-within virtual machines have\nthe capability to invoke this procedure. However, if this is done repeatedly,\nthe virtual disk can become unavailable while this shrinking is being\nperformed, effectively causing a denial-of-service. In most datacenter\nenvironments, disk shrinking is not done, so this feature must be disabled.\nRepeated disk shrinking can make a virtual disk unavailable. The capability to\nshrink is available to non-administrative users operating within the VMs guest\nOS.",
+        "check": "From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Verify the isolation.tools.diskShrink.disable value is set\nto true.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name\nisolation.tools.diskShrink.disable\n\nIf the virtual machine advanced setting isolation.tools.diskShrink.disable does\nnot exist or is not set to true, this is a finding.",
+        "fix": "From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Find the isolation.tools.diskShrink.disable value and set it to\ntrue. If the setting does not exist, add the Name and Value setting at the\nbottom of screen.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \"VM Name\" | New-AdvancedSetting -Name\nisolation.tools.diskShrink.disable -Value true\n\nIf the setting exists, run:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name\nisolation.tools.diskShrink.disable | Set-AdvancedSetting -Value true"
+      },
+      "impact": 0.5,
+      "refs": [],
+      "tags": {
+        "severity": "CAT II",
+        "gtitle": "SRG-OS-000480-VMM-002000",
+        "gid": null,
+        "rid": "VMCH-67-000004",
+        "stig_id": "VMCH-67-000004",
+        "cci": "CCI-000366",
+        "nist": [
+          "CM-6 b",
+          "Rev_4"
+        ]
+      },
+      "code": "control \"VMCH-67-000004\" do\n  title \"Virtual disk shrinking must be disabled on the virtual machine.\"\n  desc  \"Shrinking a virtual disk reclaims unused space in it. If there is\nempty space in the disk, this process reduces the amount of space the virtual\ndisk occupies on the host drive. Normal users and processes-that is, users and\nprocesses without root or administrator privileges-within virtual machines have\nthe capability to invoke this procedure. However, if this is done repeatedly,\nthe virtual disk can become unavailable while this shrinking is being\nperformed, effectively causing a denial-of-service. In most datacenter\nenvironments, disk shrinking is not done, so this feature must be disabled.\nRepeated disk shrinking can make a virtual disk unavailable. The capability to\nshrink is available to non-administrative users operating within the VMs guest\nOS.\"\n  impact 0.5\n  tag severity: \"CAT II\"\n  tag gtitle: \"SRG-OS-000480-VMM-002000\"\n  tag gid: nil\n  tag rid: \"VMCH-67-000004\"\n  tag stig_id: \"VMCH-67-000004\"\n  tag cci: \"CCI-000366\"\n  tag nist: [\"CM-6 b\", \"Rev_4\"]\n  desc 'check', \"From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Verify the isolation.tools.diskShrink.disable value is set\nto true.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name\nisolation.tools.diskShrink.disable\n\nIf the virtual machine advanced setting isolation.tools.diskShrink.disable does\nnot exist or is not set to true, this is a finding.\"\n  desc 'fix', \"From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Find the isolation.tools.diskShrink.disable value and set it to\ntrue. If the setting does not exist, add the Name and Value setting at the\nbottom of screen.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \\\"VM Name\\\" | New-AdvancedSetting -Name\nisolation.tools.diskShrink.disable -Value true\n\nIf the setting exists, run:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name\nisolation.tools.diskShrink.disable | Set-AdvancedSetting -Value true\"\n\n  command = \"(Get-VM -Name #{input('vmName')} | Get-AdvancedSetting -Name isolation.tools.diskShrink.disable).value\"\n  describe powercli_command(command).stdout.strip do\n    it { should cmp \"true\" }\n  end\n\n\nend\n",
+      "source_location": {
+        "ref": "./vmware/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline/controls/VMCH-67-000004.rb",
+        "line": 1
+      },
+      "id": "VMCH-67-000004"
+    },
+    {
+      "title": "Copy operations must be disabled on the virtual machine.",
+      "desc": "Copy and paste operations are disabled by default; however, by\nexplicitly disabling this feature it will enable audit controls to check that\nthis setting is correct. Copy, paste, drag and drop, or GUI copy/paste\noperations between the guest OS and the remote console could provide the means\nfor an attacker to compromise the VM.",
+      "descriptions": {
+        "default": "Copy and paste operations are disabled by default; however, by\nexplicitly disabling this feature it will enable audit controls to check that\nthis setting is correct. Copy, paste, drag and drop, or GUI copy/paste\noperations between the guest OS and the remote console could provide the means\nfor an attacker to compromise the VM.",
+        "check": "From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Verify the isolation.tools.copy.disable value is set to\ntrue.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name isolation.tools.copy.disable\n\nIf the virtual machine advanced setting isolation.tools.copy.disable does not\nexist or is not set to true, this is a finding.",
+        "fix": "From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Find the isolation.tools.copy.disable value and set it to true.\nIf the setting does not exist, add the Name and Value setting at the bottom of\nscreen.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \"VM Name\" | New-AdvancedSetting -Name isolation.tools.copy.disable\n-Value true\n\nIf the setting exists, run:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name isolation.tools.copy.disable |\nSet-AdvancedSetting -Value true"
+      },
+      "impact": 0.3,
+      "refs": [],
+      "tags": {
+        "severity": "CAT III",
+        "gtitle": "SRG-OS-000480-VMM-002000",
+        "gid": null,
+        "rid": "VMCH-67-000001",
+        "stig_id": "VMCH-67-000001",
+        "cci": "CCI-000366",
+        "nist": [
+          "CM-6 b",
+          "Rev_4"
+        ]
+      },
+      "code": "control \"VMCH-67-000001\" do\n  title \"Copy operations must be disabled on the virtual machine.\"\n  desc  \"Copy and paste operations are disabled by default; however, by\nexplicitly disabling this feature it will enable audit controls to check that\nthis setting is correct. Copy, paste, drag and drop, or GUI copy/paste\noperations between the guest OS and the remote console could provide the means\nfor an attacker to compromise the VM.\"\n  impact 0.3\n  tag severity: \"CAT III\"\n  tag gtitle: \"SRG-OS-000480-VMM-002000\"\n  tag gid: nil\n  tag rid: \"VMCH-67-000001\"\n  tag stig_id: \"VMCH-67-000001\"\n  tag cci: \"CCI-000366\"\n  tag nist: [\"CM-6 b\", \"Rev_4\"]\n  desc 'check', \"From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Verify the isolation.tools.copy.disable value is set to\ntrue.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name isolation.tools.copy.disable\n\nIf the virtual machine advanced setting isolation.tools.copy.disable does not\nexist or is not set to true, this is a finding.\"\n  desc 'fix', \"From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Find the isolation.tools.copy.disable value and set it to true.\nIf the setting does not exist, add the Name and Value setting at the bottom of\nscreen.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \\\"VM Name\\\" | New-AdvancedSetting -Name isolation.tools.copy.disable\n-Value true\n\nIf the setting exists, run:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name isolation.tools.copy.disable |\nSet-AdvancedSetting -Value true\"\n\n  command = \"(Get-VM -Name #{input('vmName')} | Get-AdvancedSetting -Name isolation.tools.copy.disable).value\"\n  describe powercli_command(command).stdout.strip do\n    it { should cmp \"true\" }\n  end\n\nend\n",
+      "source_location": {
+        "ref": "./vmware/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline/controls/VMCH-67-000001.rb",
+        "line": 1
+      },
+      "id": "VMCH-67-000001"
+    },
+    {
+      "title": "The virtual machine guest operating system must be locked when the\nlast console connection is closed.",
+      "desc": "When accessing the VM console the guest OS must be locked when the\nlast console user disconnects, limiting the possibility of session hijacking.\nThis setting only applies to Windows-based VMs with VMware tools installed.",
+      "descriptions": {
+        "default": "When accessing the VM console the guest OS must be locked when the\nlast console user disconnects, limiting the possibility of session hijacking.\nThis setting only applies to Windows-based VMs with VMware tools installed.",
+        "check": "From the vSphere Web Client select the Virtual Machine, right\nclick and go to Edit Settings >> VM Options Tab >> Advanced >> Configuration\nParameters >> Edit Configuration. Find the tools.guest.desktop.autolock value\nand verify that it is set to true.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name tools.guest.desktop.autolock\n\nIf the virtual machine advanced setting tools.guest.desktop.autolock does not\nexist or is not set to true, this is a finding.\n\nIf the VM is not Windows-based, this is not a finding.",
+        "fix": "From the vSphere Client select the Virtual Machine, right click and\ngo to Edit Settings >> VM Options Tab >> Advanced >> Configuration Parameters\n>> Edit Configuration. Find or create the tools.guest.desktop.autolock value\nand set it to true.\n\nNote: The VM must be powered off to modify the advanced settings through the\nvSphere Web Client. It is recommended to configure these settings with PowerCLI\nas this can be done while the VM is powered on. In this case the modified\nsettings will not take effect until a cold boot of the VM.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \"VM Name\" | New-AdvancedSetting -Name tools.guest.desktop.autolock\n-Value true\n\nIf the setting exists, run:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name tools.guest.desktop.autolock |\nSet-AdvancedSetting -Value true"
+      },
+      "impact": 0.5,
+      "refs": [],
+      "tags": {
+        "severity": "CAT II",
+        "gtitle": "SRG-OS-000480-VMM-002000",
+        "gid": null,
+        "rid": "VMCH-67-000022",
+        "stig_id": "VMCH-67-000022",
+        "cci": "CCI-000366",
+        "nist": [
+          "CM-6 b",
+          "Rev_4"
+        ]
+      },
+      "code": "control \"VMCH-67-000022\" do\n  title \"The virtual machine guest operating system must be locked when the\nlast console connection is closed.\"\n  desc  \"When accessing the VM console the guest OS must be locked when the\nlast console user disconnects, limiting the possibility of session hijacking.\nThis setting only applies to Windows-based VMs with VMware tools installed.\"\n  impact 0.5\n  tag severity: \"CAT II\"\n  tag gtitle: \"SRG-OS-000480-VMM-002000\"\n  tag gid: nil\n  tag rid: \"VMCH-67-000022\"\n  tag stig_id: \"VMCH-67-000022\"\n  tag cci: \"CCI-000366\"\n  tag nist: [\"CM-6 b\", \"Rev_4\"]\n  desc 'check', \"From the vSphere Web Client select the Virtual Machine, right\nclick and go to Edit Settings >> VM Options Tab >> Advanced >> Configuration\nParameters >> Edit Configuration. Find the tools.guest.desktop.autolock value\nand verify that it is set to true.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name tools.guest.desktop.autolock\n\nIf the virtual machine advanced setting tools.guest.desktop.autolock does not\nexist or is not set to true, this is a finding.\n\nIf the VM is not Windows-based, this is not a finding.\"\n  desc 'fix', \"From the vSphere Client select the Virtual Machine, right click and\ngo to Edit Settings >> VM Options Tab >> Advanced >> Configuration Parameters\n>> Edit Configuration. Find or create the tools.guest.desktop.autolock value\nand set it to true.\n\nNote: The VM must be powered off to modify the advanced settings through the\nvSphere Web Client. It is recommended to configure these settings with PowerCLI\nas this can be done while the VM is powered on. In this case the modified\nsettings will not take effect until a cold boot of the VM.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \\\"VM Name\\\" | New-AdvancedSetting -Name tools.guest.desktop.autolock\n-Value true\n\nIf the setting exists, run:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name tools.guest.desktop.autolock |\nSet-AdvancedSetting -Value true\"\n\n  command = \"(Get-VM -Name #{input('vmName')} | Get-AdvancedSetting -Name tools.guest.desktop.autolock).value\"\n  describe powercli_command(command).stdout.strip do\n    it { should cmp \"true\" }\n  end\n\nend\n",
+      "source_location": {
+        "ref": "./vmware/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline/controls/VMCH-67-000022.rb",
+        "line": 1
+      },
+      "id": "VMCH-67-000022"
+    },
+    {
+      "title": "Use of the virtual machine console must be minimized.",
+      "desc": "The VM console enables a connection to the console of a virtual\nmachine, in effect seeing what a monitor on a physical server would show. The\nVM console also provides power management and removable device connectivity\ncontrols, which might potentially allow a malicious user to bring down a\nvirtual machine. In addition, it also has a performance impact on the service\nconsole, especially if many VM console sessions are open simultaneously.",
+      "descriptions": {
+        "default": "The VM console enables a connection to the console of a virtual\nmachine, in effect seeing what a monitor on a physical server would show. The\nVM console also provides power management and removable device connectivity\ncontrols, which might potentially allow a malicious user to bring down a\nvirtual machine. In addition, it also has a performance impact on the service\nconsole, especially if many VM console sessions are open simultaneously.",
+        "check": "Remote management services, such as terminal services and SSH,\nmust be used to interact with virtual machines. VM console access should only\nbe granted when remote management services are unavailable or insufficient to\nperform necessary management tasks.\n\nAsk the SA if a VM console is used to perform VM management tasks, other than\nfor troubleshooting VM issues.\n\nIf a VM console is used to perform VM management tasks, other than for\ntroubleshooting VM issues, this is a finding.\n\nIf SSH and/or terminal management services are exclusively used to perform\nmanagement tasks, this is not a finding.",
+        "fix": "Develop a policy prohibiting the use of a VM console for performing\nmanagement services. This policy should include procedures for the use of SSH\nand Terminal Management services for VM management. Where SSH and Terminal\nManagement services prove insufficient to troubleshoot a VM, access to the VM\nconsole may be temporarily granted."
+      },
+      "impact": 0.5,
+      "refs": [],
+      "tags": {
+        "severity": "CAT II",
+        "gtitle": "SRG-OS-000480-VMM-002000",
+        "gid": null,
+        "rid": "VMCH-67-000021",
+        "stig_id": "VMCH-67-000021",
+        "cci": "CCI-000366",
+        "nist": [
+          "CM-6 b",
+          "Rev_4"
+        ]
+      },
+      "code": "control \"VMCH-67-000021\" do\n  title \"Use of the virtual machine console must be minimized.\"\n  desc  \"The VM console enables a connection to the console of a virtual\nmachine, in effect seeing what a monitor on a physical server would show. The\nVM console also provides power management and removable device connectivity\ncontrols, which might potentially allow a malicious user to bring down a\nvirtual machine. In addition, it also has a performance impact on the service\nconsole, especially if many VM console sessions are open simultaneously.\"\n  impact 0.5\n  tag severity: \"CAT II\"\n  tag gtitle: \"SRG-OS-000480-VMM-002000\"\n  tag gid: nil\n  tag rid: \"VMCH-67-000021\"\n  tag stig_id: \"VMCH-67-000021\"\n  tag cci: \"CCI-000366\"\n  tag nist: [\"CM-6 b\", \"Rev_4\"]\n  desc 'check', \"Remote management services, such as terminal services and SSH,\nmust be used to interact with virtual machines. VM console access should only\nbe granted when remote management services are unavailable or insufficient to\nperform necessary management tasks.\n\nAsk the SA if a VM console is used to perform VM management tasks, other than\nfor troubleshooting VM issues.\n\nIf a VM console is used to perform VM management tasks, other than for\ntroubleshooting VM issues, this is a finding.\n\nIf SSH and/or terminal management services are exclusively used to perform\nmanagement tasks, this is not a finding.\"\n  desc 'fix', \"Develop a policy prohibiting the use of a VM console for performing\nmanagement services. This policy should include procedures for the use of SSH\nand Terminal Management services for VM management. Where SSH and Terminal\nManagement services prove insufficient to troubleshoot a VM, access to the VM\nconsole may be temporarily granted.\"\n\n  describe \"This check is a manual or policy based check\" do\n    skip \"This must be reviewed manually\"\n  end\n\nend\n",
+      "source_location": {
+        "ref": "./vmware/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline/controls/VMCH-67-000021.rb",
+        "line": 1
+      },
+      "id": "VMCH-67-000021"
+    },
+    {
+      "title": "System administrators must use templates to deploy virtual machines\nwhenever possible.",
+      "desc": "By capturing a hardened base operating system image (with no\napplications installed) in a template, ensure all virtual machines are created\nwith a known baseline level of security. Then use this template to create\nother, application-specific templates, or use the application template to\ndeploy virtual machines. Manual installation of the OS and applications into a\nVM introduces the risk of misconfiguration due to human or process error.",
+      "descriptions": {
+        "default": "By capturing a hardened base operating system image (with no\napplications installed) in a template, ensure all virtual machines are created\nwith a known baseline level of security. Then use this template to create\nother, application-specific templates, or use the application template to\ndeploy virtual machines. Manual installation of the OS and applications into a\nVM introduces the risk of misconfiguration due to human or process error.",
+        "check": "Ask the SA if hardened, patched templates are used for VM\ncreation, properly configured OS deployments, including applications both\ndependent and non-dependent on VM-specific configurations.\n\nIf hardened, patched templates are not used for VM creation, this is a finding.",
+        "fix": "Create hardened virtual machine templates to use for OS\ndeployments."
+      },
+      "impact": 0.3,
+      "refs": [],
+      "tags": {
+        "severity": "CAT III",
+        "gtitle": "SRG-OS-000480-VMM-002000",
+        "gid": null,
+        "rid": "VMCH-67-000020",
+        "stig_id": "VMCH-67-000020",
+        "cci": "CCI-000366",
+        "nist": [
+          "CM-6 b",
+          "Rev_4"
+        ]
+      },
+      "code": "control \"VMCH-67-000020\" do\n  title \"System administrators must use templates to deploy virtual machines\nwhenever possible.\"\n  desc  \"By capturing a hardened base operating system image (with no\napplications installed) in a template, ensure all virtual machines are created\nwith a known baseline level of security. Then use this template to create\nother, application-specific templates, or use the application template to\ndeploy virtual machines. Manual installation of the OS and applications into a\nVM introduces the risk of misconfiguration due to human or process error.\"\n  impact 0.3\n  tag severity: \"CAT III\"\n  tag gtitle: \"SRG-OS-000480-VMM-002000\"\n  tag gid: nil\n  tag rid: \"VMCH-67-000020\"\n  tag stig_id: \"VMCH-67-000020\"\n  tag cci: \"CCI-000366\"\n  tag nist: [\"CM-6 b\", \"Rev_4\"]\n  desc 'check', \"Ask the SA if hardened, patched templates are used for VM\ncreation, properly configured OS deployments, including applications both\ndependent and non-dependent on VM-specific configurations.\n\nIf hardened, patched templates are not used for VM creation, this is a finding.\"\n  desc 'fix', \"Create hardened virtual machine templates to use for OS\ndeployments.\"\n\n  describe \"This check is a manual or policy based check\" do\n    skip \"This must be reviewed manually\"\n  end\n\nend\n",
+      "source_location": {
+        "ref": "./vmware/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline/controls/VMCH-67-000020.rb",
+        "line": 1
+      },
+      "id": "VMCH-67-000020"
+    },
+    {
+      "title": "HGFS file transfers must be disabled on the virtual machine.",
+      "desc": "Setting isolation.tools.hgfsServerSet.disable to true disables\nregistration of the guest's HGFS server with the host. APIs that use HGFS to\ntransfer files to and from the guest operating system, such as some VIX\ncommands, will not function. An attacker could potentially use this to transfer\nfiles inside the guest OS.",
+      "descriptions": {
+        "default": "Setting isolation.tools.hgfsServerSet.disable to true disables\nregistration of the guest's HGFS server with the host. APIs that use HGFS to\ntransfer files to and from the guest operating system, such as some VIX\ncommands, will not function. An attacker could potentially use this to transfer\nfiles inside the guest OS.",
+        "check": "From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Verify the isolation.tools.hgfsServerSet.disable value is\nset to true.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name\nisolation.tools.hgfsServerSet.disable\n\nIf the virtual machine advanced setting isolation.tools.hgfsServerSet.disable\ndoes not exist or is not set to true, this is a finding.",
+        "fix": "From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Find the isolation.tools.hgfsServerSet.disable value and set it\nto true. If the setting does not exist, add the Name and Value setting at the\nbottom of screen.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \"VM Name\" | New-AdvancedSetting -Name\nisolation.tools.hgfsServerSet.disable -Value true\n\nIf the setting exists, run:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name\nisolation.tools.hgfsServerSet.disable | Set-AdvancedSetting -Value true"
+      },
+      "impact": 0.5,
+      "refs": [],
+      "tags": {
+        "severity": "CAT II",
+        "gtitle": "SRG-OS-000480-VMM-002000",
+        "gid": null,
+        "rid": "VMCH-67-000007",
+        "stig_id": "VMCH-67-000007",
+        "cci": "CCI-000366",
+        "nist": [
+          "CM-6 b",
+          "Rev_4"
+        ]
+      },
+      "code": "control \"VMCH-67-000007\" do\n  title \"HGFS file transfers must be disabled on the virtual machine.\"\n  desc  \"Setting isolation.tools.hgfsServerSet.disable to true disables\nregistration of the guest's HGFS server with the host. APIs that use HGFS to\ntransfer files to and from the guest operating system, such as some VIX\ncommands, will not function. An attacker could potentially use this to transfer\nfiles inside the guest OS.\"\n  impact 0.5\n  tag severity: \"CAT II\"\n  tag gtitle: \"SRG-OS-000480-VMM-002000\"\n  tag gid: nil\n  tag rid: \"VMCH-67-000007\"\n  tag stig_id: \"VMCH-67-000007\"\n  tag cci: \"CCI-000366\"\n  tag nist: [\"CM-6 b\", \"Rev_4\"]\n  desc 'check', \"From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Verify the isolation.tools.hgfsServerSet.disable value is\nset to true.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name\nisolation.tools.hgfsServerSet.disable\n\nIf the virtual machine advanced setting isolation.tools.hgfsServerSet.disable\ndoes not exist or is not set to true, this is a finding.\"\n  desc 'fix', \"From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Find the isolation.tools.hgfsServerSet.disable value and set it\nto true. If the setting does not exist, add the Name and Value setting at the\nbottom of screen.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \\\"VM Name\\\" | New-AdvancedSetting -Name\nisolation.tools.hgfsServerSet.disable -Value true\n\nIf the setting exists, run:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name\nisolation.tools.hgfsServerSet.disable | Set-AdvancedSetting -Value true\"\n\n  command = \"(Get-VM -Name #{input('vmName')} | Get-AdvancedSetting -Name isolation.tools.hgfsServerSet.disable).value\"\n  describe powercli_command(command).stdout.strip do\n    it { should cmp \"true\" }\n  end\n\nend\n",
+      "source_location": {
+        "ref": "./vmware/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline/controls/VMCH-67-000007.rb",
+        "line": 1
+      },
+      "id": "VMCH-67-000007"
+    },
+    {
+      "title": "Unauthorized removal, connection and modification of devices must be\nprevented on the virtual machine.",
+      "desc": "In a virtual machine, users and processes without root or\nadministrator privileges can connect or disconnect devices, such as network\nadaptors and CD-ROM drives, and can modify device settings. Use the virtual\nmachine settings editor or configuration editor to remove unneeded or unused\nhardware devices. If you want to use the device again, you can prevent a user\nor running process in the virtual machine from connecting, disconnecting, or\nmodifying a device from within the guest operating system. By default, a rogue\nuser with nonadministrator privileges in a virtual machine can:\n    1. Connect a disconnected CD-ROM drive and access sensitive information on\nthe media left in the drive\n    2. Disconnect a network adaptor to isolate the virtual machine from its\nnetwork, which is a denial of service\n    3. Modify settings on a device",
+      "descriptions": {
+        "default": "In a virtual machine, users and processes without root or\nadministrator privileges can connect or disconnect devices, such as network\nadaptors and CD-ROM drives, and can modify device settings. Use the virtual\nmachine settings editor or configuration editor to remove unneeded or unused\nhardware devices. If you want to use the device again, you can prevent a user\nor running process in the virtual machine from connecting, disconnecting, or\nmodifying a device from within the guest operating system. By default, a rogue\nuser with nonadministrator privileges in a virtual machine can:\n    1. Connect a disconnected CD-ROM drive and access sensitive information on\nthe media left in the drive\n    2. Disconnect a network adaptor to isolate the virtual machine from its\nnetwork, which is a denial of service\n    3. Modify settings on a device",
+        "check": "From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Verify the isolation.device.connectable.disable value is\nset to true.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name\nisolation.device.connectable.disable\n\nIf the virtual machine advanced setting isolation.device.connectable.disable\ndoes not exist or is not set to true, this is a finding.",
+        "fix": "From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Find the isolation.device.connectable.disable value and set it\nto true. If the setting does not exist, add the Name and Value setting at the\nbottom of screen.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \"VM Name\" | New-AdvancedSetting -Name\nisolation.device.connectable.disable -Value true\n\nIf the setting exists, run:\n\nGet-VM \"VM Name\" | Get-AdvancedSetting -Name\nisolation.device.connectable.disable | Set-AdvancedSetting -Value true"
+      },
+      "impact": 0.5,
+      "refs": [],
+      "tags": {
+        "severity": "CAT II",
+        "gtitle": "SRG-OS-000480-VMM-002000",
+        "gid": null,
+        "rid": "VMCH-67-000016",
+        "stig_id": "VMCH-67-000016",
+        "cci": "CCI-000366",
+        "nist": [
+          "CM-6 b",
+          "Rev_4"
+        ]
+      },
+      "code": "control \"VMCH-67-000016\" do\n  title \"Unauthorized removal, connection and modification of devices must be\nprevented on the virtual machine.\"\n  desc  \"In a virtual machine, users and processes without root or\nadministrator privileges can connect or disconnect devices, such as network\nadaptors and CD-ROM drives, and can modify device settings. Use the virtual\nmachine settings editor or configuration editor to remove unneeded or unused\nhardware devices. If you want to use the device again, you can prevent a user\nor running process in the virtual machine from connecting, disconnecting, or\nmodifying a device from within the guest operating system. By default, a rogue\nuser with nonadministrator privileges in a virtual machine can:\n    1. Connect a disconnected CD-ROM drive and access sensitive information on\nthe media left in the drive\n    2. Disconnect a network adaptor to isolate the virtual machine from its\nnetwork, which is a denial of service\n    3. Modify settings on a device\n  \"\n  impact 0.5\n  tag severity: \"CAT II\"\n  tag gtitle: \"SRG-OS-000480-VMM-002000\"\n  tag gid: nil\n  tag rid: \"VMCH-67-000016\"\n  tag stig_id: \"VMCH-67-000016\"\n  tag cci: \"CCI-000366\"\n  tag nist: [\"CM-6 b\", \"Rev_4\"]\n  desc 'check', \"From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings >> VM Options >> Advanced >> Configuration Parameters >>\nEdit Configuration. Verify the isolation.device.connectable.disable value is\nset to true.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name\nisolation.device.connectable.disable\n\nIf the virtual machine advanced setting isolation.device.connectable.disable\ndoes not exist or is not set to true, this is a finding.\"\n  desc 'fix', \"From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings >> VM Options >> Advanced >> Configuration Parameters >> Edit\nConfiguration. Find the isolation.device.connectable.disable value and set it\nto true. If the setting does not exist, add the Name and Value setting at the\nbottom of screen.\n\nNote: The VM must be powered off to configure the advanced settings through the\nvSphere Web Client so it is recommended to configure these settings with\nPowerCLI as it can be done while the VM is powered on. Settings do not take\neffect via either method until the virtual machine is cold started, not\nrebooted.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nIf the setting does not exist, run:\n\nGet-VM \\\"VM Name\\\" | New-AdvancedSetting -Name\nisolation.device.connectable.disable -Value true\n\nIf the setting exists, run:\n\nGet-VM \\\"VM Name\\\" | Get-AdvancedSetting -Name\nisolation.device.connectable.disable | Set-AdvancedSetting -Value true\"\n\n  command = \"(Get-VM -Name #{input('vmName')} | Get-AdvancedSetting -Name isolation.device.connectable.disable).value\"\n  describe powercli_command(command).stdout.strip do\n    it { should cmp \"true\" }\n  end\n\nend\n",
+      "source_location": {
+        "ref": "./vmware/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline/controls/VMCH-67-000016.rb",
+        "line": 1
+      },
+      "id": "VMCH-67-000016"
+    },
+    {
+      "title": "Encryption must be enabled for vMotion on the virtual machine.",
+      "desc": "vMotion migrations in vSphere 6.0 and earlier transferred working\nmemory and CPU state information in clear text over the vMotion network. As of\nvSphere 6.5 this transfer can be transparently encrypted using 256bit\nAES-GCM with negligible performance impact. vSphere 6.5 enables encrypted\nvMotion by default as 'Opportunistic', meaning that encrypted channels are used\nwhere supported but the operation will continue in plain text where encryption\nis not supported. For example when vMotioning between two 6.5 hosts encryption\nwill always be utilized but since 6.0 and earlier releases do not support this\nfeature vMotion from a 6.5 host to a 6.0 host would be allowed but would not be\nencrypted. If this finding is set to 'Required' then vMotions to unsupported\nhosts will fail. This setting must be set to 'Opportunistic' or 'Required'.",
+      "descriptions": {
+        "default": "vMotion migrations in vSphere 6.0 and earlier transferred working\nmemory and CPU state information in clear text over the vMotion network. As of\nvSphere 6.5 this transfer can be transparently encrypted using 256bit\nAES-GCM with negligible performance impact. vSphere 6.5 enables encrypted\nvMotion by default as 'Opportunistic', meaning that encrypted channels are used\nwhere supported but the operation will continue in plain text where encryption\nis not supported. For example when vMotioning between two 6.5 hosts encryption\nwill always be utilized but since 6.0 and earlier releases do not support this\nfeature vMotion from a 6.5 host to a 6.0 host would be allowed but would not be\nencrypted. If this finding is set to 'Required' then vMotions to unsupported\nhosts will fail. This setting must be set to 'Opportunistic' or 'Required'.",
+        "check": "From the vSphere Web Client select the Virtual Machine, right\nclick and go to Edit Settings >> VM Options Tab >> Encryption >> Encrypted\nvMotion.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM | Where {($_.ExtensionData.Config.MigrateEncryption -ne \"opportunistic\") -and ($_.ExtensionData.Config.MigrateEncryption -ne \"required\")}\n\nIf the setting does not have a value of \"Opportunistic\" or \"Required\", this\nis a finding.",
+        "fix": "From the vSphere Client select the Virtual Machine, right click and\ngo to Edit Settings >> VM Options Tab >> Encryption >> Encrypted vMotion. Set\nthe value to \"Opportunistic\" or \"Required\"."
+      },
+      "impact": 0.3,
+      "refs": [],
+      "tags": {
+        "severity": "CAT II",
+        "gtitle": "SRG-OS-000480-VMM-002000",
+        "gid": null,
+        "rid": "VMCH-67-000024",
+        "stig_id": "VMCH-67-000024",
+        "cci": "CCI-000366",
+        "nist": [
+          "CM-6 b",
+          "Rev_4"
+        ]
+      },
+      "code": "control \"VMCH-67-000024\" do\n  title \"Encryption must be enabled for vMotion on the virtual machine.\"\n  desc  \"vMotion migrations in vSphere 6.0 and earlier transferred working\nmemory and CPU state information in clear text over the vMotion network. As of\nvSphere 6.5 this transfer can be transparently encrypted using 256bit\nAES-GCM with negligible performance impact. vSphere 6.5 enables encrypted\nvMotion by default as 'Opportunistic', meaning that encrypted channels are used\nwhere supported but the operation will continue in plain text where encryption\nis not supported. For example when vMotioning between two 6.5 hosts encryption\nwill always be utilized but since 6.0 and earlier releases do not support this\nfeature vMotion from a 6.5 host to a 6.0 host would be allowed but would not be\nencrypted. If this finding is set to 'Required' then vMotions to unsupported\nhosts will fail. This setting must be set to 'Opportunistic' or 'Required'.\"\n  impact 0.3\n  tag severity: \"CAT II\"\n  tag gtitle: \"SRG-OS-000480-VMM-002000\"\n  tag gid: nil\n  tag rid: \"VMCH-67-000024\"\n  tag stig_id: \"VMCH-67-000024\"\n  tag cci: \"CCI-000366\"\n  tag nist: [\"CM-6 b\", \"Rev_4\"]\n  desc 'check', \"From the vSphere Web Client select the Virtual Machine, right\nclick and go to Edit Settings >> VM Options Tab >> Encryption >> Encrypted\nvMotion.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM | Where {($_.ExtensionData.Config.MigrateEncryption -ne \\\"opportunistic\\\") -and ($_.ExtensionData.Config.MigrateEncryption -ne \\\"required\\\")}\n\nIf the setting does not have a value of \\\"Opportunistic\\\" or \\\"Required\\\", this\nis a finding.\"\n  desc 'fix', \"From the vSphere Client select the Virtual Machine, right click and\ngo to Edit Settings >> VM Options Tab >> Encryption >> Encrypted vMotion. Set\nthe value to \\\"Opportunistic\\\" or \\\"Required\\\".\"\n\n  list = [\"opportunistic\", \"required\"]\n  command = \"((Get-VM -Name #{input('vmName')}).ExtensionData.Config.MigrateEncryption)\"\n  describe powercli_command(command).stdout.strip do\n   it {should_not cmp \"disabled\"}\n   it {should be_in list}\n  end\n\nend\n",
+      "source_location": {
+        "ref": "./vmware/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline/controls/VMCH-67-000024.rb",
+        "line": 1
+      },
+      "id": "VMCH-67-000024"
+    },
+    {
+      "title": "Unauthorized USB devices must be disconnected on the virtual machine.",
+      "desc": "Ensure that no device is connected to a virtual machine if it is not\nrequired. For example, floppy, serial and parallel ports are rarely used for\nvirtual machines in a datacenter environment, and CD/DVD drives are usually\nconnected only temporarily during software installation.",
+      "descriptions": {
+        "default": "Ensure that no device is connected to a virtual machine if it is not\nrequired. For example, floppy, serial and parallel ports are rarely used for\nvirtual machines in a datacenter environment, and CD/DVD drives are usually\nconnected only temporarily during software installation.",
+        "check": "From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings. Review the VMs hardware and verify no USB devices exist.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following commands:\n\nGet-VM | Where {$_.ExtensionData.Config.Hardware.Device.DeviceInfo.Label -match\n\"usb\"}\nGet-VM | Get-UsbDevice\n\nIf a virtual machine has any USB devices or USB controllers present, this is a\nfinding.\n\nIf USB smart card readers are used to pass smart cards through the VM console\nto a VM then the use of a USB controller and USB devices for that purpose is\nnot a finding.",
+        "fix": "From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings. Select the USB controller and click the circle-x to remove\nthen OK.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \"VM Name\" | Get-USBDevice | Remove-USBDevice\n\nNote:  This will not remove the USB controller just any connected devices."
+      },
+      "impact": 0.5,
+      "refs": [],
+      "tags": {
+        "severity": "CAT II",
+        "gtitle": "SRG-OS-000480-VMM-002000",
+        "gid": null,
+        "rid": "VMCH-67-000012",
+        "stig_id": "VMCH-67-000012",
+        "cci": "CCI-000366",
+        "nist": [
+          "CM-6 b",
+          "Rev_4"
+        ]
+      },
+      "code": "control \"VMCH-67-000012\" do\n  title \"Unauthorized USB devices must be disconnected on the virtual machine.\"\n  desc  \"Ensure that no device is connected to a virtual machine if it is not\nrequired. For example, floppy, serial and parallel ports are rarely used for\nvirtual machines in a datacenter environment, and CD/DVD drives are usually\nconnected only temporarily during software installation.\"\n  impact 0.5\n  tag severity: \"CAT II\"\n  tag gtitle: \"SRG-OS-000480-VMM-002000\"\n  tag gid: nil\n  tag rid: \"VMCH-67-000012\"\n  tag stig_id: \"VMCH-67-000012\"\n  tag cci: \"CCI-000366\"\n  tag nist: [\"CM-6 b\", \"Rev_4\"]\n  desc 'check', \"From the vSphere Web Client right-click the Virtual Machine and\ngo to Edit Settings. Review the VMs hardware and verify no USB devices exist.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following commands:\n\nGet-VM | Where {$_.ExtensionData.Config.Hardware.Device.DeviceInfo.Label -match\n\\\"usb\\\"}\nGet-VM | Get-UsbDevice\n\nIf a virtual machine has any USB devices or USB controllers present, this is a\nfinding.\n\nIf USB smart card readers are used to pass smart cards through the VM console\nto a VM then the use of a USB controller and USB devices for that purpose is\nnot a finding.\"\n  desc 'fix', \"From the vSphere Web Client right-click the Virtual Machine and go\nto Edit Settings. Select the USB controller and click the circle-x to remove\nthen OK.\n\nor\n\nFrom a PowerCLI command prompt while connected to the ESXi host or vCenter\nserver, run the following command:\n\nGet-VM \\\"VM Name\\\" | Get-USBDevice | Remove-USBDevice\n\nNote:  This will not remove the USB controller just any connected devices.\"\n\n  command = \"(Get-VM -Name #{input('vmName')}).ExtensionData.Config.Hardware.Device.DeviceInfo.label\"\n  describe powercli_command(command).stdout do\n    it { should_not match 'USB' }\n  end\n\nend\n",
+      "source_location": {
+        "ref": "./vmware/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline/controls/VMCH-67-000012.rb",
+        "line": 1
+      },
+      "id": "VMCH-67-000012"
+    }
+  ],
+  "groups": [
+    {
+      "title": null,
+      "controls": [
+        "VMCH-67-000017"
+      ],
+      "id": "controls/VMCH-67-000017.rb"
+    },
+    {
+      "title": null,
+      "controls": [
+        "VMCH-67-000006"
+      ],
+      "id": "controls/VMCH-67-000006.rb"
+    },
+    {
+      "title": null,
+      "controls": [
+        "VMCH-67-000009"
+      ],
+      "id": "controls/VMCH-67-000009.rb"
+    },
+    {
+      "title": null,
+      "controls": [
+        "VMCH-67-000002"
+      ],
+      "id": "controls/VMCH-67-000002.rb"
+    },
+    {
+      "title": null,
+      "controls": [
+        "VMCH-67-000005"
+      ],
+      "id": "controls/VMCH-67-000005.rb"
+    },
+    {
+      "title": null,
+      "controls": [
+        "VMCH-67-000023"
+      ],
+      "id": "controls/VMCH-67-000023.rb"
+    },
+    {
+      "title": null,
+      "controls": [
+        "VMCH-67-000019"
+      ],
+      "id": "controls/VMCH-67-000019.rb"
+    },
+    {
+      "title": null,
+      "controls": [
+        "VMCH-67-000010"
+      ],
+      "id": "controls/VMCH-67-000010.rb"
+    },
+    {
+      "title": null,
+      "controls": [
+        "VMCH-67-000015"
+      ],
+      "id": "controls/VMCH-67-000015.rb"
+    },
+    {
+      "title": null,
+      "controls": [
+        "VMCH-67-000008"
+      ],
+      "id": "controls/VMCH-67-000008.rb"
+    },
+    {
+      "title": null,
+      "controls": [
+        "VMCH-67-000018"
+      ],
+      "id": "controls/VMCH-67-000018.rb"
+    },
+    {
+      "title": null,
+      "controls": [
+        "VMCH-67-000013"
+      ],
+      "id": "controls/VMCH-67-000013.rb"
+    },
+    {
+      "title": null,
+      "controls": [
+        "VMCH-67-000003"
+      ],
+      "id": "controls/VMCH-67-000003.rb"
+    },
+    {
+      "title": null,
+      "controls": [
+        "VMCH-67-000014"
+      ],
+      "id": "controls/VMCH-67-000014.rb"
+    },
+    {
+      "title": null,
+      "controls": [
+        "VMCH-67-000011"
+      ],
+      "id": "controls/VMCH-67-000011.rb"
+    },
+    {
+      "title": null,
+      "controls": [
+        "VMCH-67-000004"
+      ],
+      "id": "controls/VMCH-67-000004.rb"
+    },
+    {
+      "title": null,
+      "controls": [
+        "VMCH-67-000001"
+      ],
+      "id": "controls/VMCH-67-000001.rb"
+    },
+    {
+      "title": null,
+      "controls": [
+        "VMCH-67-000022"
+      ],
+      "id": "controls/VMCH-67-000022.rb"
+    },
+    {
+      "title": null,
+      "controls": [
+        "VMCH-67-000021"
+      ],
+      "id": "controls/VMCH-67-000021.rb"
+    },
+    {
+      "title": null,
+      "controls": [
+        "VMCH-67-000020"
+      ],
+      "id": "controls/VMCH-67-000020.rb"
+    },
+    {
+      "title": null,
+      "controls": [
+        "VMCH-67-000007"
+      ],
+      "id": "controls/VMCH-67-000007.rb"
+    },
+    {
+      "title": null,
+      "controls": [
+        "VMCH-67-000016"
+      ],
+      "id": "controls/VMCH-67-000016.rb"
+    },
+    {
+      "title": null,
+      "controls": [
+        "VMCH-67-000024"
+      ],
+      "id": "controls/VMCH-67-000024.rb"
+    },
+    {
+      "title": null,
+      "controls": [
+        "VMCH-67-000012"
+      ],
+      "id": "controls/VMCH-67-000012.rb"
+    }
+  ],
+  "sha256": "f7a3139480ae47b1568a54f525aa14f783e07266bb2c6b9b852277756bfe1411",
+  "status_message": "",
+  "status": "loaded",
+  "generator": {
+    "name": "inspec",
+    "version": "4.23.15"
+  }
+}

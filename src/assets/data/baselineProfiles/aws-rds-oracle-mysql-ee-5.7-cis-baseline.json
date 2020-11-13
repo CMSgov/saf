@@ -9,11 +9,6 @@
   "Description": "An InSpec Compliance Profile.",
   "version": "0.2.0",
   "inspec_version": ">= 4.0",
-  "supports": [
-    {
-      "platform": "aws"
-    }
-  ],
   "depends": [
     {
       "name": "oracle-mysql-ee-5.7-cis-baseline",
@@ -85,6 +80,7 @@
       ]
     }
   ],
+  "supports": [],
   "controls": [
     {
       "title": "Ensure Passwords Are Not Stored in the Global Configuration (Scored)",
@@ -2374,10 +2370,11 @@
     }
   ],
   "inputs": [],
-  "sha256": "944885c87e2982ea47092174de3df455fdcc13c49823193fd0070b736209b278",
+  "sha256": "1b76c1a4f67436b2cfbe0cdc291be97f0f137a22a0552603681809fef38f33c1",
+  "status_message": "",
   "status": "loaded",
   "generator": {
     "name": "inspec",
-    "version": "4.18.108"
+    "version": "4.23.15"
   }
 }

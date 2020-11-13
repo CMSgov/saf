@@ -5,210 +5,299 @@
       "longName": "Red Hat 6 STIG",
       "link": "https://github.com/mitre/redhat-enterprise-linux-6-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Operating Systems"]
+      "category": [
+        "Operating Systems"
+      ],
+      "gitHash": "34971b4b8452f1358479c23a8346afc309998c08"
     },
     {
       "shortName": "Red Hat 7 STIG",
       "longName": "Red Hat 7 STIG",
       "link": "https://github.com/mitre/redhat-enterprise-linux-7-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Operating Systems"]
+      "category": [
+        "Operating Systems"
+      ],
+      "gitHash": "d1efaa83347099ac81851c59a3c113fe5c73ad37"
     },
     {
       "shortName": "Red Hat CVE Scan",
       "longName": "Red Hat CVE Vulnerability Scan",
       "link": "https://github.com/CMSgov/redhat-enterprise-linux-cve-vulnerability-scan-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Operating Systems"]
+      "category": [
+        "Operating Systems"
+      ],
+      "gitHash": "e1c998f71ce5542114ea12031ca304f103bf8b90"
     },
     {
       "shortName": "Windows 2012 STIG",
       "longName": "Microsoft Windows 2012r2 Member Server STIG",
       "link": "https://github.com/mitre/microsoft-windows-2012r2-memberserver-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Operating Systems"]
+      "category": [
+        "Operating Systems"
+      ],
+      "gitHash": "82bdf2c9877a8f918f7dcca7d420fb2f91d2b3e9"
     },
     {
       "shortName": "Windows 2016 STIG",
       "longName": "Microsoft Windows Server 2016 STIG",
       "link": "https://github.com/mitre/microsoft-windows-server-2016-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Operating Systems"]
+      "category": [
+        "Operating Systems"
+      ],
+      "gitHash": "9dcad84f1d5687b760740841651b154ead222087"
     },
     {
       "shortName": "Windows 2019 STIG",
       "longName": "Microsoft Windows Server 2019 STIG",
       "link": "https://github.com/mitre/microsoft-windows-server-2019-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Operating Systems"]
+      "category": [
+        "Operating Systems"
+      ],
+      "gitHash": "67c8901ab12955e5e43faa9b891dc10f3b980795"
     },
     {
       "shortName": "Docker CE CIS",
       "longName": "Docker CE CIS",
       "link": "https://github.com/mitre/docker-ce-cis-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Virtual Platforms"]
+      "category": [
+        "Virtual Platforms"
+      ],
+      "gitHash": "f601bd2c9411ac7f6152ad331b49ecd775db9d42"
     },
     {
       "shortName": "Ubuntu 16.04 STIG",
       "longName": "Canonical Ubuntu 16.04 STIG",
       "link": "https://github.com/mitre/canonical-ubuntu-16.04-lts-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Operating Systems"]
+      "category": [
+        "Operating Systems"
+      ],
+      "gitHash": "d0875b2fbb4bfff61b8107e89a93c5549188fa29"
     },
     {
       "shortName": "Windows 10 STIG",
       "longName": "Microsoft Windows 10 STIG v1r19",
       "link": "https://github.com/mitre/microsoft-windows-10-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Operating Systems"]
+      "category": [
+        "Operating Systems"
+      ],
+      "gitHash": "3b12950bd94b394396075899012ea8521164a683"
     },
     {
       "shortName": "RSA Archer 6 SCG",
       "longName": "RSA Archer 6 Security Configuration Guide",
       "link": "https://github.com/mitre/rsa-archer-6-security-configuration-guide-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Application Logic"]
+      "category": [
+        "Application Logic"
+      ],
+      "gitHash": "f74be5ae96571f3fd148c161662f02f848f1f84f"
     },
     {
       "shortName": "Red Hat Jboss EAP 6.3 STIG",
       "longName": "Red Hat Jboss Enterprise Application Server 6.3 STIG",
       "link": "https://github.com/mitre/redhat-jboss-enterprise-application-platform-6.3-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Application Logic"]
+      "category": [
+        "Application Logic"
+      ],
+      "gitHash": "2fe45350452216a0f1646d1116835543edab6314"
     },
     {
       "shortName": "JRE 7 STIG",
       "longName": "Oracle Java Runtime Environment 7 Unix STIG",
       "link": "https://github.com/mitre/oracle-java-runtime-environment-7-unix-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Application Logic"]
+      "category": [
+        "Application Logic"
+      ],
+      "gitHash": "a4d7c4d629b2369002c4e26b01af8873e0f3f571"
     },
     {
       "shortName": "JRE 8 STIG",
       "longName": "Oracle Java Runtime Environment 8 Unix STIG",
       "link": "https://github.com/mitre/oracle-java-runtime-environment-8-unix-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Application Logic"]
+      "category": [
+        "Application Logic"
+      ],
+      "gitHash": "59dfb34c776811019cde6e7dff4e3f792574ba9a"
     },
     {
       "shortName": "IIS 8.5 Server STIG",
       "longName": "Microsoft IIS 8.5 Server STIG",
       "link": "https://github.com/mitre/microsoft-iis-8.5-server-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Web Servers"]
+      "category": [
+        "Web Servers"
+      ],
+      "gitHash": "ab18203dd389e409c214b15384c8572fd760138c"
     },
     {
       "shortName": "IIS 8.5 Site STIG",
       "longName": "Microsoft IIS 8.5 Site STIG",
       "link": "https://github.com/mitre/microsoft-iis-8.5-site-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Web Servers"]
+      "category": [
+        "Web Servers"
+      ],
+      "gitHash": "916347f0c279de5a5a1b3e84314180cf60195328"
     },
     {
       "shortName": "NGINX STIG",
       "longName": "NGINX STIG",
       "link": "https://github.com/mitre/nginx-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Web Servers"]
+      "category": [
+        "Web Servers"
+      ],
+      "gitHash": "218bafbd15c619695dfe9716ef054debf3a0f80d"
     },
     {
       "shortName": "Oracle MySQL 5.7 CIS",
       "longName": "Oracle MySQL Enterprise Edition 5.7 CIS",
       "link": "https://github.com/mitre/oracle-mysql-ee-5.7-cis-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Databases"]
+      "category": [
+        "Databases"
+      ],
+      "gitHash": "4c8dc87af83fe089f4551d67313466f74d60aa45"
     },
     {
       "shortName": "AWS RDS MySQL 5.7 CIS",
       "longName": "AWS RDS MySQL Enterprise Edition 5.7 CIS",
       "link": "https://github.com/mitre/aws-rds-oracle-mysql-ee-5.7-cis-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Databases"]
+      "category": [
+        "Databases"
+      ],
+      "gitHash": "0ce145928ae23e1755b0534632c5c6f6cad13f3d"
     },
     {
       "shortName": "PostgreSQL 9.x STIG",
       "longName": "Crunchy Data PostgreSQL 9.x STIG",
       "link": "https://github.com/CrunchyData/pgstigcheck-inspec",
       "svg": "inspec-blue-back-border",
-      "category": ["Databases"]
+      "category": [
+        "Databases"
+      ],
+      "gitHash": "96e6b8877a3a240490c08879e504472ff3102500"
     },
     {
       "shortName": "AWS RDS PostgreSQL 9.x STIG",
       "longName": "AWS RDS Crunchy Data PostgreSQL 9.x STIG",
       "link": "https://github.com/mitre/aws-rds-crunchy-data-postgresql-9-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Databases"]
+      "category": [
+        "Databases"
+      ],
+      "gitHash": "f7e73504243fcd8453bb76566adcc6a7d9271bfe"
     },
     {
       "shortName": "MSQL 2014 Database STIG",
       "longName": "Microsoft SQL Server 2014 Database STIG",
       "link": "https://github.com/mitre/microsoft-sql-server-2014-database-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Databases"]
+      "category": [
+        "Databases"
+      ],
+      "gitHash": "197506e37e36b3d3e42d829f5a6d96dd5a3a1b68"
     },
     {
       "shortName": "MSQL 2014 Instance STIG",
       "longName": "Microsoft SQL Server 2014 Database STIG",
       "link": "https://github.com/mitre/microsoft-sql-server-2014-instance-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Databases"]
+      "category": [
+        "Databases"
+      ],
+      "gitHash": "da80b9bd8fb979bd4ff717471bcfb431ebd2a485"
     },
     {
       "shortName": "AWS MSQL 2014 STIG",
       "longName": "AWS RDS Microsoft SQL 2014 Server STIG Instance",
       "link": "https://github.com/mitre/aws-rds-microsoft-sql-server-2014-instance-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Databases"]
+      "category": [
+        "Databases"
+      ],
+      "gitHash": "8f43257b9b8a31274cb541eb44802aa24a83beae"
     },
     {
       "shortName": "AWS RDS Oracle Database 12c STIG",
       "longName": "AWS RDS Oracle Database 12c STIG",
       "link": "https://github.com/mitre/aws-rds-oracle-database-12c-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Databases"]
+      "category": [
+        "Databases"
+      ],
+      "gitHash": "4e849aeee2f594056ef78f52fc6e52a778b6b4a7"
     },
     {
       "shortName": "Oracle Database 12c STIG",
       "longName": "Oracle Database 12c STIG",
       "link": "https://github.com/mitre/oracle-database-12c-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Databases"]
+      "category": [
+        "Databases"
+      ],
+      "gitHash": "b3025c8484e99fb9efa815530fd7c1202eef03f0"
     },
     {
       "shortName": "MongoDB STIG",
       "longName": "MongoDB STIG",
       "link": "https://github.com/mitre/mongodb-enterprise-advanced-3-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Databases"]
+      "category": [
+        "Databases"
+      ],
+      "gitHash": "56366a55ca841c5fe869060cfc21c0185d328495"
     },
     {
       "shortName": "AWS CIS",
       "longName": "AWS CIS Foundations",
       "link": "https://github.com/mitre/aws-foundations-cis-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Cloud Service Providers"]
+      "category": [
+        "Cloud Service Providers"
+      ],
+      "gitHash": "5eef0c02122876b932568d2eeee7c0df0272c8e7"
     },
     {
       "shortName": "AWS S3",
       "longName": "AWS S3",
       "link": "https://github.com/mitre/aws-s3-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Cloud Service Providers"]
+      "category": [
+        "Cloud Service Providers"
+      ],
+      "gitHash": "5a4ee7ae419bf9706f2b5583dc717b51c0903449"
     },
     {
       "shortName": "AWS RDS CIS",
       "longName": "AWS RDS Infrastructure CIS",
       "link": "https://github.com/mitre/aws-rds-infrastructure-cis-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Cloud Service Providers"]
+      "category": [
+        "Cloud Service Providers"
+      ],
+      "gitHash": "20467b86644defef32d1a76aff6749d82e2e3175"
     },
     {
       "shortName": "DRAFT: GCP PCI-DSS 3.2.1",
       "longName": "DRAFT: Google Cloud Platform PCI-DSS 3.2.1",
       "link": "https://github.com/GoogleCloudPlatform/inspec-gcp-pci-profile",
       "svg": "inspec-blue-back-border",
-      "category": ["Cloud Service Providers"],
+      "category": [
+        "Cloud Service Providers"
+      ],
       "gitHash": "0"
     },
     {
@@ -216,7 +305,9 @@
       "longName": "DRAFT: Google Cloud Platform CIS Benchmark",
       "link": "https://github.com/GoogleCloudPlatform/inspec-gcp-cis-benchmark",
       "svg": "inspec-blue-back-border",
-      "category": ["Cloud Service Providers"],
+      "category": [
+        "Cloud Service Providers"
+      ],
       "gitHash": "0"
     },
     {
@@ -224,70 +315,100 @@
       "longName": "DRAFT: VMWare ESXI 6.7 STIG",
       "link": "https://github.com/vmware/dod-compliance-and-automation/tree/master/vsphere/6.7/vsphere/inspec/vmware-esxi-6.7-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Virtual Platforms"]
+      "category": [
+        "Virtual Platforms"
+      ],
+      "gitHash": "01013bb1badb6deb87e6cd68c05ac9f66fd2ef4a"
     },
     {
       "shortName": "DRAFT: VMWare vSphere VM 6.7 STIG",
       "longName": "DRAFT: VMware vSphere Virtual Machines version 6.7 STIG",
       "link": "https://github.com/vmware/dod-compliance-and-automation/tree/master/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Virtual Platforms"]
+      "category": [
+        "Virtual Platforms"
+      ],
+      "gitHash": "01013bb1badb6deb87e6cd68c05ac9f66fd2ef4a"
     },
     {
       "shortName": "VMWare vSphere VM 6.5 STIG",
       "longName": "VMware vSphere Virtual Machines version 6.5 STIG",
       "link": "https://github.com/kclinden/vmware-vsphere-65-virtual-machine-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Virtual Platforms"]
+      "category": [
+        "Virtual Platforms"
+      ],
+      "gitHash": "f61ed9eb72f02b7bce1a0cfd6d725a0542fc88c4"
     },
     {
       "shortName": "VMWare ESXI 6.5 STIG",
       "longName": "VMWare ESXI 6.5 STIG",
       "link": "https://github.com/kclinden/vmware-esxi-6.5-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Virtual Platforms"]
+      "category": [
+        "Virtual Platforms"
+      ],
+      "gitHash": "2967554bf747766e5251720ba1329866129ec9c0"
     },
     {
       "shortName": "DRAFT: VMWare VCSA 6.7 STIG",
       "longName": "DRAFT: VMware vCenter Service Appliance version 6.7",
       "link": "https://github.com/vmware/dod-compliance-and-automation/tree/master/vsphere/6.7/vcsa/inspec/vmware-vcsa-6.7-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Virtual Platforms"]
+      "category": [
+        "Virtual Platforms"
+      ],
+      "gitHash": "01013bb1badb6deb87e6cd68c05ac9f66fd2ef4a"
     },
     {
       "shortName": "DRAFT: Tomcat 8 CIS",
       "longName": "DRAFT: Apache Tomcat 8 CIS",
       "link": "https://github.com/mitre/apache-tomcat-8-cis-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Web Servers"]
+      "category": [
+        "Web Servers"
+      ],
+      "gitHash": "857ef3fb913a18eafef89fccb29868135783c065"
     },
     {
       "shortName": "DRAFT: Tomcat 7 CIS",
       "longName": "DRAFT: Apache Tomcat 7 CIS",
       "link": "https://github.com/mitre/apache-tomcat-7-cis-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Web Servers"]
+      "category": [
+        "Web Servers"
+      ],
+      "gitHash": "b4af1143ace12739bb52f1aa2a4b832ebcde5e40"
     },
     {
       "shortName": "Kubernetes CIS",
       "longName": "Kubernetes CIS",
       "link": "https://github.com/mitre/kubernetes-cis-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Application Logic"]
+      "category": [
+        "Application Logic"
+      ],
+      "gitHash": "f820e6c9f3f165ffd3150fb2cd0d7d065a404023"
     },
     {
       "shortName": "Apache Server STIG",
       "longName": "Apache Server 2.2 STIG",
       "link": "https://github.com/mitre/apache-server-2.2-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Web Servers"]
+      "category": [
+        "Web Servers"
+      ],
+      "gitHash": "8e40e22de5cfdad3a6fb409e008009dfeadbcc8d"
     },
     {
       "shortName": "Apache Site STIG",
       "longName": "Apache Site 2.2 STIG",
       "link": "https://github.com/mitre/apache-site-2.2-stig-baseline",
       "svg": "inspec-blue-back-border",
-      "category": ["Web Servers"]
+      "category": [
+        "Web Servers"
+      ],
+      "gitHash": "62da29b74b831de8b984a439df8aa88bc1edfa51"
     }
   ],
   "extras": {
@@ -297,7 +418,8 @@
         "longName": "CWE tool data mapped by Heimdall_tools",
         "link": "https://github.com/mitre/heimdall_tools",
         "path": "Heimdall_tools/lib/data/cwe-nist-mapping.csv",
-        "column": "NIST-ID"
+        "column": "NIST-ID",
+        "gitHash": "0929c1f127211c7548f46aa9610eaf1a56a1813c"
       }
     ]
   }
