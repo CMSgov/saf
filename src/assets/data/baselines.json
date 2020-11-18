@@ -18,7 +18,7 @@
       "category": [
         "Operating Systems"
       ],
-      "gitHash": "d1efaa83347099ac81851c59a3c113fe5c73ad37"
+      "gitHash": "4b75cb8a7d677966eaaf2bd7f6d6d746ecc76862"
     },
     {
       "shortName": "Red Hat CVE Scan",
@@ -238,7 +238,7 @@
       "category": [
         "Databases"
       ],
-      "gitHash": "4e849aeee2f594056ef78f52fc6e52a778b6b4a7"
+      "gitHash": "1bf88e715b3b6522a9948f30f527d0a273bc74cf"
     },
     {
       "shortName": "Oracle Database 12c STIG",
@@ -288,7 +288,7 @@
       "category": [
         "Cloud Service Providers"
       ],
-      "gitHash": "20467b86644defef32d1a76aff6749d82e2e3175"
+      "gitHash": "9ea0a5644f6962bda8df73a50ebca0dc8bfca371"
     },
     {
       "shortName": "DRAFT: GCP PCI-DSS 3.2.1",

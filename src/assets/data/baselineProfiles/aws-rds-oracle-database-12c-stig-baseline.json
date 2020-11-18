@@ -1489,8 +1489,12 @@
       "descriptions": {
         "default": "Remote administrative access to systems provides a path for access to\n  and exploit of DBA privileges. Where the risk has been accepted to allow remote\n  administrative access, it is imperative to instate increased monitoring of this\n  access to detect any abuse or compromise."
       },
-      "impact": 0.5,
-      "refs": [],
+      "impact": 0,
+      "refs": [
+        {
+          "ref": []
+        }
+      ],
       "tags": {
         "gtitle": "SRG-APP-000516-DB-999900",
         "gid": "V-61493",
@@ -1517,7 +1521,7 @@
         "check": "If remote administrative access to the database is prohibited\n  and is disabled, this check is not a finding.\n\n  Review policy, procedure and evidence of implementation for monitoring of\n  remote administrative access to the database.\n\n  If monitoring procedures for remote administrative access are not documented or\n  implemented, this is a finding.",
         "fix": "Develop, document and implement policy and procedures to monitor\n  remote administrative access to the DBMS.\n\n  The automated generation of a log report with automatic dissemination to the\n  ISSO/ISSM may be used.\n\n  Require and store an acknowledgement of receipt and confirmation of review for\n  the log report."
       },
-      "code": "control 'V-61493' do\n  title \"Remote administrative access to the database must be monitored by the\n  ISSO or ISSM.\"\n  desc \"Remote administrative access to systems provides a path for access to\n  and exploit of DBA privileges. Where the risk has been accepted to allow remote\n  administrative access, it is imperative to instate increased monitoring of this\n  access to detect any abuse or compromise.\"\n  impact 0.5\n  tag \"gtitle\": 'SRG-APP-000516-DB-999900'\n  tag \"gid\": 'V-61493'\n  tag \"rid\": 'SV-75983r1_rule'\n  tag \"stig_id\": 'O121-BP-024400'\n  tag \"fix_id\": 'F-67409r1_fix'\n  tag \"cci\": ['CCI-000366']\n  tag \"nist\": ['CM-6 b', 'Rev_4']\n  tag \"false_negatives\": nil\n  tag \"false_positives\": nil\n  tag \"documentable\": false\n  tag \"mitigations\": nil\n  tag \"severity_override_guidance\": false\n  tag \"potential_impacts\": nil\n  tag \"third_party_tools\": nil\n  tag \"mitigation_controls\": nil\n  tag \"responsibility\": nil\n  tag \"ia_controls\": nil\n  tag \"check\": \"If remote administrative access to the database is prohibited\n  and is disabled, this check is not a finding.\n\n  Review policy, procedure and evidence of implementation for monitoring of\n  remote administrative access to the database.\n\n  If monitoring procedures for remote administrative access are not documented or\n  implemented, this is a finding.\"\n  tag \"fix\": \"Develop, document and implement policy and procedures to monitor\n  remote administrative access to the DBMS.\n\n  The automated generation of a log report with automatic dissemination to the\n  ISSO/ISSM may be used.\n\n  Require and store an acknowledgement of receipt and confirmation of review for\n  the log report.\"\n  describe sshd_config do\n    its('PermitRootLogin') { should eq 'no' }\n  end\n  describe service('auditd') do\n    it { should be_enabled }\n    it { should be_running }\n  end\nend\n",
+      "code": "    control 'V-61493' do\n      impact 0.0\n      describe 'This control is not applicable on oracle within aws rds, as aws manages the operating system in which the oracle database is running on' do\n        skip 'This control is not applicable on oracle within aws rds, as aws manages the operating system in which the oracle database is running on'\n      end\n    end\n",
       "source_location": {
         "ref": "/github/home/.inspec/cache/b3025c8484e99fb9efa815530fd7c1202eef03f0/controls/V-61493.rb",
         "line": 1
@@ -2466,8 +2470,12 @@
       "descriptions": {
         "default": "Applications that provide remote access to information systems must be\n  able to enforce remote access policy requirements or work in conjunction with\n  enterprise tools designed to enforce policy requirements. Examples of policy\n  requirements include, but are not limited to, authorizing remote access to the\n  information system, limiting access based on authentication credentials, and\n  monitoring for unauthorized access.\n\n      If databases allowing remote connections do not enforce requirements for\n  remote access, an attacker may gain access to the database and may, through the\n  database, gain access to other components of the information system."
       },
-      "impact": 0.5,
-      "refs": [],
+      "impact": 0,
+      "refs": [
+        {
+          "ref": []
+        }
+      ],
       "tags": {
         "gtitle": "SRG-APP-000140-DB-000033",
         "gid": "V-61675",
@@ -2494,7 +2502,7 @@
         "check": "Review organization's access control policies and procedures\n  addressing remote access to the information system.\n\n  If remote connections are not allowed by the organization, this is NA. (Note\n  that \"remote\" means \"from outside the DoD Information Network (DoDIN)\" and\n  that connections via approved Virtual Private Networks (VPNs) are considered to\n  be inside the DoDIN.)\n\n  Review the DBMS, OS, and/or enterprise account management settings to verify\n  access controls and auditing settings exist and they enforce the requirements\n  for remote access defined by the organization.\n\n  If access controls and auditing do not exist or do not fully enforce the\n  requirements defined in the organization's policies and procedures, this is a\n  finding.",
         "fix": "Configure DBMS settings to ensure access control and auditing\n  requirements for remote connections are enforced by the DBMS."
       },
-      "code": "control 'V-61675' do\n  title \"The DBMS must enforce requirements for remote connections to the\n  information system.\"\n  desc \"Applications that provide remote access to information systems must be\n  able to enforce remote access policy requirements or work in conjunction with\n  enterprise tools designed to enforce policy requirements. Examples of policy\n  requirements include, but are not limited to, authorizing remote access to the\n  information system, limiting access based on authentication credentials, and\n  monitoring for unauthorized access.\n\n      If databases allowing remote connections do not enforce requirements for\n  remote access, an attacker may gain access to the database and may, through the\n  database, gain access to other components of the information system.\n  \"\n  impact 0.5\n  tag \"gtitle\": 'SRG-APP-000140-DB-000033'\n  tag \"gid\": 'V-61675'\n  tag \"rid\": 'SV-76165r1_rule'\n  tag \"stig_id\": 'O121-C2-011400'\n  tag \"fix_id\": 'F-67589r1_fix'\n  tag \"cci\": ['CCI-000366']\n  tag \"nist\": ['CM-6 b', 'Rev_4']\n  tag \"false_negatives\": nil\n  tag \"false_positives\": nil\n  tag \"documentable\": false\n  tag \"mitigations\": nil\n  tag \"severity_override_guidance\": false\n  tag \"potential_impacts\": nil\n  tag \"third_party_tools\": nil\n  tag \"mitigation_controls\": nil\n  tag \"responsibility\": nil\n  tag \"ia_controls\": nil\n  tag \"check\": \"Review organization's access control policies and procedures\n  addressing remote access to the information system.\n\n  If remote connections are not allowed by the organization, this is NA. (Note\n  that \\\"remote\\\" means \\\"from outside the DoD Information Network (DoDIN)\\\" and\n  that connections via approved Virtual Private Networks (VPNs) are considered to\n  be inside the DoDIN.)\n\n  Review the DBMS, OS, and/or enterprise account management settings to verify\n  access controls and auditing settings exist and they enforce the requirements\n  for remote access defined by the organization.\n\n  If access controls and auditing do not exist or do not fully enforce the\n  requirements defined in the organization's policies and procedures, this is a\n  finding.\"\n  tag \"fix\": \"Configure DBMS settings to ensure access control and auditing\n  requirements for remote connections are enforced by the DBMS.\"\n  describe sshd_config do\n    its('PermitRootLogin') { should eq 'no' }\n  end\n  describe service('auditd') do\n    it { should be_enabled }\n    it { should be_running }\n  end\nend\n",
+      "code": "    control 'V-61675' do\n      impact 0.0\n      describe 'This control is not applicable on oracle within aws rds, as aws manages the operating system in which the oracle database is running on' do\n        skip 'This control is not applicable on oracle within aws rds, as aws manages the operating system in which the oracle database is running on'\n      end\n    end\n",
       "source_location": {
         "ref": "/github/home/.inspec/cache/b3025c8484e99fb9efa815530fd7c1202eef03f0/controls/V-61675.rb",
         "line": 1
@@ -7964,8 +7972,12 @@
       "descriptions": {
         "default": "Remote administration may expose configuration and sensitive data to\n  unauthorized viewing during transit across the network or allow unauthorized\n  administrative access to the DBMS to remote users.\n\n      For the purposes of this STIG, \"Remote\" means \"outside the DoDIN.\"\n  However, use of an approved and properly configured VPN counts as inside the\n  DoDIN."
       },
-      "impact": 0.5,
-      "refs": [],
+      "impact": 0,
+      "refs": [
+        {
+          "ref": []
+        }
+      ],
       "tags": {
         "gtitle": "SRG-APP-000516-DB-999900",
         "gid": "V-61523",
@@ -7992,7 +8004,7 @@
         "check": "Review the System Security Plan for authorization, assignments\n  and usage procedures for remote DBMS administration.\n\n  If remote administration of the DBMS is not documented or poorly documented,\n  this is a finding.\n\n  If remote administration of the DBMS is not authorized and not disabled, this\n  is a finding.\n\n  If remote administration is to be performed from outside the DoDIN, but is not\n  done via an approved and properly configured VPN, this is a finding.",
         "fix": "Disable remote administration of the DBMS where not required.\n\n  Where remote administration of the DBMS is required, develop, document and\n  implement policy and procedures on its use.\n\n  Assign remote administration privileges to ISSO-authorized personnel only.\n\n  Document assignments in the System Security Plan.\n\n  Where remote administration is to be performed from outside the DoDIN,\n  configure an approved VPN client for this purpose."
       },
-      "code": "control 'V-61523' do\n  title \"Remote DBMS administration must be documented and authorized or\n  disabled.\"\n  desc \"Remote administration may expose configuration and sensitive data to\n  unauthorized viewing during transit across the network or allow unauthorized\n  administrative access to the DBMS to remote users.\n\n      For the purposes of this STIG, \\\"Remote\\\" means \\\"outside the DoDIN.\\\"\n  However, use of an approved and properly configured VPN counts as inside the\n  DoDIN.\n  \"\n  impact 0.5\n  tag \"gtitle\": 'SRG-APP-000516-DB-999900'\n  tag \"gid\": 'V-61523'\n  tag \"rid\": 'SV-76013r3_rule'\n  tag \"stig_id\": 'O121-BP-026000'\n  tag \"fix_id\": 'F-67439r4_fix'\n  tag \"cci\": ['CCI-000366']\n  tag \"nist\": ['CM-6 b', 'Rev_4']\n  tag \"false_negatives\": nil\n  tag \"false_positives\": nil\n  tag \"documentable\": false\n  tag \"mitigations\": nil\n  tag \"severity_override_guidance\": false\n  tag \"potential_impacts\": nil\n  tag \"third_party_tools\": nil\n  tag \"mitigation_controls\": nil\n  tag \"responsibility\": nil\n  tag \"ia_controls\": nil\n  tag \"check\": \"Review the System Security Plan for authorization, assignments\n  and usage procedures for remote DBMS administration.\n\n  If remote administration of the DBMS is not documented or poorly documented,\n  this is a finding.\n\n  If remote administration of the DBMS is not authorized and not disabled, this\n  is a finding.\n\n  If remote administration is to be performed from outside the DoDIN, but is not\n  done via an approved and properly configured VPN, this is a finding.\"\n  tag \"fix\": \"Disable remote administration of the DBMS where not required.\n\n  Where remote administration of the DBMS is required, develop, document and\n  implement policy and procedures on its use.\n\n  Assign remote administration privileges to ISSO-authorized personnel only.\n\n  Document assignments in the System Security Plan.\n\n  Where remote administration is to be performed from outside the DoDIN,\n  configure an approved VPN client for this purpose.\"\n  describe sshd_config do\n    its('PermitRootLogin') { should eq 'no' }\n  end\n  describe service('auditd') do\n    it { should be_enabled }\n    it { should be_running }\n  end\nend\n",
+      "code": "    control 'V-61523' do\n      impact 0.0\n      describe 'This control is not applicable on oracle within aws rds, as aws manages the operating system in which the oracle database is running on' do\n        skip 'This control is not applicable on oracle within aws rds, as aws manages the operating system in which the oracle database is running on'\n      end\n    end\n",
       "source_location": {
         "ref": "/github/home/.inspec/cache/b3025c8484e99fb9efa815530fd7c1202eef03f0/controls/V-61523.rb",
         "line": 1
@@ -9816,7 +9828,7 @@
       "id": "/github/home/.inspec/cache/b3025c8484e99fb9efa815530fd7c1202eef03f0/controls/V-61543.rb"
     }
   ],
-  "sha256": "181bc8fe7b56afc846b820d19c00e8129248e127a77cea675d6bc69b02c42988",
+  "sha256": "469d0ec6d913ebab7dfd8e144639a978f0d5302594f1d2007cfb1725afde2145",
   "status_message": "",
   "status": "loaded",
   "generator": {

@@ -3,17 +3,13 @@
   "title": "Validates AWS RDS Infrastucture Layer",
   "maintainer": "MITRE InSpec Team",
   "copyright": "The MITRE Corporation, 2019",
-  "copyright_email": "inspec@mitre.org",
+  "copyright_email": "saf@groups.mitre.org",
   "license": "Apache-2.0",
   "summary": "Validates AWS RDS Infrastucture Layer",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "inspec_version": ">= 4.0",
-  "supports": [
-    {
-      "platform": "aws"
-    }
-  ],
   "inputs": [],
+  "supports": [],
   "controls": [
     {
       "title": "Ensure RDS Database is configured to use the Data Tier Security Group",
@@ -381,7 +377,7 @@
       "id": "controls/aws-rds-baseline-10.rb"
     }
   ],
-  "sha256": "b3ed6e77c0c21c2ecd2a8bc327737168133b46be465de32d0086461405336b32",
+  "sha256": "1759cd7df654dcfc2f205acef824d4bcf2e24b372754b42e6f2b83070b3fe25e",
   "status_message": "",
   "status": "loaded",
   "generator": {
