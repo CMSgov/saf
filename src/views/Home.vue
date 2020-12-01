@@ -10,25 +10,52 @@
     <v-row justify="center" align="center">
       <v-col md="12" lg="10" xs="12" class="pa-0">
         <v-row justify="center" align="center" class="pa-0">
-          <v-col cols="12" sm="4" md="4" lg="4" xl="4" v-for="item in mission.items" :key="item">
-            <div class="google-font title" style="text-align: center">{{ make_readable(item.name) }}</div>
+          <v-col
+            cols="12"
+            sm="4"
+            md="4"
+            lg="4"
+            xl="4"
+            v-for="item in mission.items"
+            :key="item"
+          >
+            <div class="google-font title" style="text-align: center">
+              {{ make_readable(item.name) }}
+            </div>
             <ul
               v-for="bullet in item.bullets"
               :key="bullet"
               class="google-font pa-2 body-1"
               style="text-align: center"
-            >• {{bullet}}</ul>
+            >
+              •
+              {{
+                bullet
+              }}
+            </ul>
           </v-col>
         </v-row>
       </v-col>
     </v-row>
-
+    <v-row justify="center" align="center" class="mx-0">
+      <v-col cols="12" lg="10"
+        ><p style="font-size: 150%" class="my-10">
+          <a target="_blank" href="https://youtu.be/Vgr5wR1SFuA"
+            >CMS CISO Forum 2020 SAF Presentation</a
+          >
+        </p></v-col
+      ></v-row
+    >
     <v-row justify="center" align="center" class="mx-0">
       <v-col
         cols="12"
         lg="10"
         class="py-0"
-        :class="this.$vuetify.theme.dark == true ? 'darkModeContainer' : 'lightModeContainer'"
+        :class="
+          this.$vuetify.theme.dark == true
+            ? 'darkModeContainer'
+            : 'lightModeContainer'
+        "
       >
         <whatwedo :whatwedodata="wwd" />
       </v-col>
@@ -87,7 +114,7 @@ import missiondata from "@/assets/data/mission.json";
 export default {
   components: {
     homeStartScreen,
-    whatwedo
+    whatwedo,
     //aboutCommunity,
     //events,
     //featureEvents,
@@ -95,12 +122,12 @@ export default {
   },
   data: () => ({
     wwd: whatwedodata.whatWeDo,
-    mission: missiondata.whatWeDo[0]
+    mission: missiondata.whatWeDo[0],
   }),
   computed: {
     showTraining() {
       return this.$store.state.showFutureTraining;
-    }
+    },
   },
   created() {
     let metaThemeColor = document.querySelector("meta[name=theme-color]");
@@ -113,8 +140,8 @@ export default {
   methods: {
     make_readable(str) {
       return str.replace(/_/, " ");
-    }
-  }
+    },
+  },
 };
 </script>
 
