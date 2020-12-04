@@ -41,7 +41,7 @@
       <v-col cols="12" lg="10"
         ><p style="font-size: 150%" class="my-10">
           <a target="_blank" href="https://youtu.be/Vgr5wR1SFuA"
-            >Getting Started With SAF</a
+            >Video: Security Automation Framework Overview</a
           >
         </p></v-col
       ></v-row
