@@ -183,7 +183,7 @@
     {
       "shortName": "PostgreSQL 9.x STIG",
       "longName": "Crunchy Data PostgreSQL 9.x STIG",
-      "link": "https://github.com/CrunchyData/pgstigcheck-inspec",
+      "link": "https://github.com/mitre/pgstigcheck-inspec",
       "svg": "inspec-blue-back-border",
       "category": [
         "Databases"
