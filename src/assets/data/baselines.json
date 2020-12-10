@@ -18,7 +18,7 @@
       "category": [
         "Operating Systems"
       ],
-      "gitHash": "4b75cb8a7d677966eaaf2bd7f6d6d746ecc76862"
+      "gitHash": "78a14863582c1db9e212c8f41535e07cda099c92"
     },
     {
       "shortName": "Red Hat CVE Scan",
@@ -58,7 +58,7 @@
       "category": [
         "Operating Systems"
       ],
-      "gitHash": "67c8901ab12955e5e43faa9b891dc10f3b980795"
+      "gitHash": "1ab4f61f03d530b0cbe2034545a2e20093af860a"
     },
     {
       "shortName": "Docker CE CIS",
@@ -188,7 +188,7 @@
       "category": [
         "Databases"
       ],
-      "gitHash": "96e6b8877a3a240490c08879e504472ff3102500"
+      "gitHash": "2f2ff6811b9855b17d7a06c4b969d36bc9ebdcf2"
     },
     {
       "shortName": "AWS RDS PostgreSQL 9.x STIG",
@@ -198,7 +198,7 @@
       "category": [
         "Databases"
       ],
-      "gitHash": "f7e73504243fcd8453bb76566adcc6a7d9271bfe"
+      "gitHash": "1d6f4fd9ce5141313002f4a907fe71e66074f8a2"
     },
     {
       "shortName": "MSQL 2014 Database STIG",
@@ -268,7 +268,7 @@
       "category": [
         "Cloud Service Providers"
       ],
-      "gitHash": "e6d634b145b1f8ea9070a65253edd252b90030cf"
+      "gitHash": "33ea91484f62ac81440b8264c91651c300cf992a"
     },
     {
       "shortName": "AWS S3",
@@ -318,7 +318,7 @@
       "category": [
         "Virtual Platforms"
       ],
-      "gitHash": "01013bb1badb6deb87e6cd68c05ac9f66fd2ef4a"
+      "gitHash": "c6ca6e9b7bac081a1cdec13c0d59b9e1bc2f8470"
     },
     {
       "shortName": "DRAFT: VMWare vSphere VM 6.7 STIG",
@@ -328,7 +328,7 @@
       "category": [
         "Virtual Platforms"
       ],
-      "gitHash": "01013bb1badb6deb87e6cd68c05ac9f66fd2ef4a"
+      "gitHash": "c6ca6e9b7bac081a1cdec13c0d59b9e1bc2f8470"
     },
     {
       "shortName": "VMWare vSphere VM 6.5 STIG",
@@ -358,7 +358,7 @@
       "category": [
         "Virtual Platforms"
       ],
-      "gitHash": "01013bb1badb6deb87e6cd68c05ac9f66fd2ef4a"
+      "gitHash": "c6ca6e9b7bac081a1cdec13c0d59b9e1bc2f8470"
     },
     {
       "shortName": "DRAFT: Tomcat 8 CIS",
