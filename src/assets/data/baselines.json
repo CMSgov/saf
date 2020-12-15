@@ -188,7 +188,7 @@
       "category": [
         "Databases"
       ],
-      "gitHash": "2f2ff6811b9855b17d7a06c4b969d36bc9ebdcf2"
+      "gitHash": "a30917c58b08b6de03a149ac99f81d60956085b8"
     },
     {
       "shortName": "AWS RDS PostgreSQL 9.x STIG",
@@ -268,7 +268,7 @@
       "category": [
         "Cloud Service Providers"
       ],
-      "gitHash": "33ea91484f62ac81440b8264c91651c300cf992a"
+      "gitHash": "4ef3e71ee0e5d243dc3bfa0766a3fe8940348aa0"
     },
     {
       "shortName": "AWS S3",
@@ -419,7 +419,7 @@
         "link": "https://github.com/mitre/heimdall_tools",
         "path": "Heimdall_tools/lib/data/cwe-nist-mapping.csv",
         "column": "NIST-ID",
-        "gitHash": "0929c1f127211c7548f46aa9610eaf1a56a1813c"
+        "gitHash": "60d6ecaaf3e686cdeb13643da33aa2fcad145359"
       }
     ]
   }

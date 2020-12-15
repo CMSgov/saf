@@ -6,7 +6,7 @@
   "copyright_email": "inspec@mitre.org",
   "license": "Apache-2.0",
   "summary": "InSpec Profile to validate the CIS AWS Foundations Benchmark v1.1.0",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "inspec_version": ">= 4.0",
   "supports": [
     {
@@ -2031,7 +2031,7 @@
       "id": "controls/aws-foundations-cis-2.4.rb"
     }
   ],
-  "sha256": "d8f4c0a730b89f10f41014c9864062fd6218cfd047578d05cb5383a9edc765eb",
+  "sha256": "2a1e43df192e6719bc66357e9ac22d94264cd58f5e048b3646bf600a08a5f06d",
   "status_message": "",
   "status": "loaded",
   "generator": {

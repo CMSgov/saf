@@ -6,7 +6,7 @@
   "copyright_email": "info@crunchydata.com",
   "license": "Apache-2.0",
   "summary": "Crunchy PostgreSQL 9.5 Security Technical Implementation Guide InSpec profile",
-  "version": "1.6.10",
+  "version": "1.6.11",
   "inputs": [],
   "supports": [],
   "controls": [
@@ -5405,7 +5405,7 @@
       "id": "controls/V-72913.rb"
     }
   ],
-  "sha256": "d5a2e164ec979b1452e5725c8b9222283f937047845878df2e62e99fd01a6489",
+  "sha256": "e4cba9fa0490cfbb54bf72a814e6534a163c7de893ee35f4630660aa8cfe884f",
   "status_message": "",
   "status": "loaded",
   "generator": {
