@@ -188,7 +188,7 @@
       "category": [
         "Databases"
       ],
-      "gitHash": "a30917c58b08b6de03a149ac99f81d60956085b8"
+      "gitHash": "e65575c1671de298b64da23f0e1fbc817f5326c2"
     },
     {
       "shortName": "AWS RDS PostgreSQL 9.x STIG",
@@ -318,7 +318,7 @@
       "category": [
         "Virtual Platforms"
       ],
-      "gitHash": "c6ca6e9b7bac081a1cdec13c0d59b9e1bc2f8470"
+      "gitHash": "7ecf013dfe51c2a0a1539bcaa8d9c29823d8bff7"
     },
     {
       "shortName": "DRAFT: VMWare vSphere VM 6.7 STIG",
@@ -328,7 +328,7 @@
       "category": [
         "Virtual Platforms"
       ],
-      "gitHash": "c6ca6e9b7bac081a1cdec13c0d59b9e1bc2f8470"
+      "gitHash": "7ecf013dfe51c2a0a1539bcaa8d9c29823d8bff7"
     },
     {
       "shortName": "VMWare vSphere VM 6.5 STIG",
@@ -358,7 +358,7 @@
       "category": [
         "Virtual Platforms"
       ],
-      "gitHash": "c6ca6e9b7bac081a1cdec13c0d59b9e1bc2f8470"
+      "gitHash": "7ecf013dfe51c2a0a1539bcaa8d9c29823d8bff7"
     },
     {
       "shortName": "DRAFT: Tomcat 8 CIS",
