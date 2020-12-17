@@ -23,23 +23,12 @@
       "tag": "security-control-associations"
     },
     {
-      "question": "What is a recommended best practice for Code Review?",
-      "answer": "Teams should follow the code review recommendations given here:",
-      "links": [
-        {
-          "name": "SAF Code Review Recommendations",
-          "download_link": "SAF_Code_Review_Recommendations.pdf"
-        }
-      ],
-      "tag": "code-review"
-    },
-    {
       "question": "Which tools are supported by the CMS SAF?",
       "answer": "",
       "links": [
         {
           "name": "InSpec (and our InSpec profiles)",
-          "link": "https://cmsgov.github.io/saf/#/validation",
+          "link": "https://saf.cms.gov/#/validation",
           "desc": " for assessing configuration settings, vulnerabilities, and least functionality"
         },
         {
@@ -77,6 +66,33 @@
       ],
       "tag": "tools"
     },
+    {
+      "question": "What is the ACT process?",
+      "answer": "The Adaptive Capabilities Testing program is CMS's risk-based security assessment for CMS systems. CMS SAF supports the ACT's goal of baking security into the development process. See the videos below to learn more about ACT.",
+      "links": [
+        {
+          "name": "A Brief Look at Adaptive Capabilities Testing",
+          "link": "https://youtu.be/VZl_zTwFgz4"
+        },
+        {
+          "name": "Adaptive Capabilities Testing Overview",
+          "link": "https://youtu.be/mLgmDwyZjrs"
+        }
+      ],
+      "tag" : "act"
+    },
+    {
+      "question": "What is a recommended best practice for Code Review?",
+      "answer": "Teams should follow the code review recommendations given here:",
+      "links": [
+        {
+          "name": "SAF Code Review Recommendations",
+          "download_link": "SAF_Code_Review_Recommendations.pdf"
+        }
+      ],
+      "tag": "code-review"
+    },
+    
 
     {
       "question": "How is InSpec deployed?",
