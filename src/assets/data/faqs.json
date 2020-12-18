@@ -68,7 +68,7 @@
     },
     {
       "question": "What is the ACT process?",
-      "answer": "The Adaptive Capabilities Testing program is CMS's risk-based security assessment for CMS systems. CMS SAF supports the ACT's goal of baking security into the development process. See the videos below to learn more about ACT.",
+      "answer": "The Adaptive Capabilities Testing program is the CMS risk-based security assessment for CMS systems. See the videos below to learn more about ACT.",
       "links": [
         {
           "name": "A Brief Look at Adaptive Capabilities Testing",
