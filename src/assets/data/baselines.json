@@ -18,7 +18,7 @@
       "category": [
         "Operating Systems"
       ],
-      "gitHash": "4b75cb8a7d677966eaaf2bd7f6d6d746ecc76862"
+      "gitHash": "78a14863582c1db9e212c8f41535e07cda099c92"
     },
     {
       "shortName": "Red Hat CVE Scan",
@@ -58,7 +58,7 @@
       "category": [
         "Operating Systems"
       ],
-      "gitHash": "67c8901ab12955e5e43faa9b891dc10f3b980795"
+      "gitHash": "1ab4f61f03d530b0cbe2034545a2e20093af860a"
     },
     {
       "shortName": "Docker CE CIS",
@@ -188,7 +188,7 @@
       "category": [
         "Databases"
       ],
-      "gitHash": "96e6b8877a3a240490c08879e504472ff3102500"
+      "gitHash": "97357a8077b08603e8f2da2b1c9cc3a45af13ea0"
     },
     {
       "shortName": "AWS RDS PostgreSQL 9.x STIG",
@@ -198,7 +198,7 @@
       "category": [
         "Databases"
       ],
-      "gitHash": "f7e73504243fcd8453bb76566adcc6a7d9271bfe"
+      "gitHash": "1d6f4fd9ce5141313002f4a907fe71e66074f8a2"
     },
     {
       "shortName": "MSQL 2014 Database STIG",
@@ -268,7 +268,7 @@
       "category": [
         "Cloud Service Providers"
       ],
-      "gitHash": "e6d634b145b1f8ea9070a65253edd252b90030cf"
+      "gitHash": "4ef3e71ee0e5d243dc3bfa0766a3fe8940348aa0"
     },
     {
       "shortName": "AWS S3",
@@ -318,7 +318,7 @@
       "category": [
         "Virtual Platforms"
       ],
-      "gitHash": "01013bb1badb6deb87e6cd68c05ac9f66fd2ef4a"
+      "gitHash": "327ee513388dc1d5e26a7b1db27d46d256407218"
     },
     {
       "shortName": "DRAFT: VMWare vSphere VM 6.7 STIG",
@@ -328,7 +328,7 @@
       "category": [
         "Virtual Platforms"
       ],
-      "gitHash": "01013bb1badb6deb87e6cd68c05ac9f66fd2ef4a"
+      "gitHash": "327ee513388dc1d5e26a7b1db27d46d256407218"
     },
     {
       "shortName": "VMWare vSphere VM 6.5 STIG",
@@ -358,7 +358,7 @@
       "category": [
         "Virtual Platforms"
       ],
-      "gitHash": "01013bb1badb6deb87e6cd68c05ac9f66fd2ef4a"
+      "gitHash": "327ee513388dc1d5e26a7b1db27d46d256407218"
     },
     {
       "shortName": "DRAFT: Tomcat 8 CIS",
@@ -419,7 +419,7 @@
         "link": "https://github.com/mitre/heimdall_tools",
         "path": "Heimdall_tools/lib/data/cwe-nist-mapping.csv",
         "column": "NIST-ID",
-        "gitHash": "0929c1f127211c7548f46aa9610eaf1a56a1813c"
+        "gitHash": "60d6ecaaf3e686cdeb13643da33aa2fcad145359"
       }
     ]
   }
