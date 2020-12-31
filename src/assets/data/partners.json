@@ -39,6 +39,11 @@
       "name": "GitHub",
       "link": "https://github.com/",
       "img": "github.png"
+    },
+    {
+      "name": "VmWare",
+      "link": "https://www.refactr.it/",
+      "img": "refactr.png"
     }
   ]
 }
