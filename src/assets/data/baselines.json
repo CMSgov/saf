@@ -419,7 +419,7 @@
         "link": "https://github.com/mitre/heimdall_tools",
         "path": "Heimdall_tools/lib/data/cwe-nist-mapping.csv",
         "column": "NIST-ID",
-        "gitHash": "60d6ecaaf3e686cdeb13643da33aa2fcad145359"
+        "gitHash": "16cf58aa59eb6062c1ac0ae70c336bd673288787"
       }
     ]
   }
