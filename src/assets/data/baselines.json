@@ -168,7 +168,7 @@
       "category": [
         "Databases"
       ],
-      "gitHash": "1ab3f229ae0a3fdac22ef99880a1fd897d96849c"
+      "gitHash": "8d5d86144c15fa7df9d8afa34af7f0ab136f7091"
     },
     {
       "shortName": "AWS RDS MySQL 5.7 CIS",
@@ -178,7 +178,7 @@
       "category": [
         "Databases"
       ],
-      "gitHash": "034171230fbc9ce0db867e7123e6c412a2d3ad4e"
+      "gitHash": "ce6494b717e8bbdbe9b601ca85621c072ed0d529"
     },
     {
       "shortName": "PostgreSQL 9.x STIG",
