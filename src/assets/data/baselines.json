@@ -188,7 +188,7 @@
       "category": [
         "Databases"
       ],
-      "gitHash": "97357a8077b08603e8f2da2b1c9cc3a45af13ea0"
+      "gitHash": "9136f50250adaa59d22f842660945389a57a8c77"
     },
     {
       "shortName": "AWS RDS PostgreSQL 9.x STIG",
@@ -198,7 +198,7 @@
       "category": [
         "Databases"
       ],
-      "gitHash": "1d6f4fd9ce5141313002f4a907fe71e66074f8a2"
+      "gitHash": "12cbd79265f878bbdda4219745abeaa64dd71b96"
     },
     {
       "shortName": "MSQL 2014 Database STIG",
