@@ -318,7 +318,7 @@
       "category": [
         "Virtual Platforms"
       ],
-      "gitHash": "327ee513388dc1d5e26a7b1db27d46d256407218"
+      "gitHash": "0a99812226d7fef2ad6cce4aa2c9dc6421f7d492"
     },
     {
       "shortName": "DRAFT: VMWare vSphere VM 6.7 STIG",
@@ -328,7 +328,7 @@
       "category": [
         "Virtual Platforms"
       ],
-      "gitHash": "327ee513388dc1d5e26a7b1db27d46d256407218"
+      "gitHash": "0a99812226d7fef2ad6cce4aa2c9dc6421f7d492"
     },
     {
       "shortName": "VMWare vSphere VM 6.5 STIG",
@@ -358,7 +358,7 @@
       "category": [
         "Virtual Platforms"
       ],
-      "gitHash": "327ee513388dc1d5e26a7b1db27d46d256407218"
+      "gitHash": "0a99812226d7fef2ad6cce4aa2c9dc6421f7d492"
     },
     {
       "shortName": "DRAFT: Tomcat 8 CIS",
