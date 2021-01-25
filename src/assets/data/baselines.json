@@ -151,9 +151,9 @@
       "gitHash": "916347f0c279de5a5a1b3e84314180cf60195328"
     },
     {
-      "shortName": "NGINX STIG",
-      "longName": "NGINX STIG",
-      "link": "https://github.com/mitre/nginx-stig-baseline",
+      "shortName": "NGINX Baseline",
+      "longName": "NGINX Baseline",
+      "link": "https://github.com/mitre/nginx-baseline",
       "svg": "inspec-blue-back-border",
       "category": [
         "Web Servers"
@@ -168,7 +168,7 @@
       "category": [
         "Databases"
       ],
-      "gitHash": "8d5d86144c15fa7df9d8afa34af7f0ab136f7091"
+      "gitHash": "4c8dc87af83fe089f4551d67313466f74d60aa45"
     },
     {
       "shortName": "AWS RDS MySQL 5.7 CIS",
@@ -178,7 +178,7 @@
       "category": [
         "Databases"
       ],
-      "gitHash": "ce6494b717e8bbdbe9b601ca85621c072ed0d529"
+      "gitHash": "0ce145928ae23e1755b0534632c5c6f6cad13f3d"
     },
     {
       "shortName": "PostgreSQL 9.x STIG",
@@ -188,7 +188,7 @@
       "category": [
         "Databases"
       ],
-      "gitHash": "9136f50250adaa59d22f842660945389a57a8c77"
+      "gitHash": "97357a8077b08603e8f2da2b1c9cc3a45af13ea0"
     },
     {
       "shortName": "AWS RDS PostgreSQL 9.x STIG",
@@ -198,7 +198,7 @@
       "category": [
         "Databases"
       ],
-      "gitHash": "12cbd79265f878bbdda4219745abeaa64dd71b96"
+      "gitHash": "1d6f4fd9ce5141313002f4a907fe71e66074f8a2"
     },
     {
       "shortName": "MSQL 2014 Database STIG",
@@ -228,7 +228,7 @@
       "category": [
         "Databases"
       ],
-      "gitHash": "f2114c6c3392be137351b66add95c00a9f261bbe"
+      "gitHash": "8f43257b9b8a31274cb541eb44802aa24a83beae"
     },
     {
       "shortName": "AWS RDS Oracle Database 12c STIG",
@@ -318,7 +318,7 @@
       "category": [
         "Virtual Platforms"
       ],
-      "gitHash": "0a99812226d7fef2ad6cce4aa2c9dc6421f7d492"
+      "gitHash": "327ee513388dc1d5e26a7b1db27d46d256407218"
     },
     {
       "shortName": "DRAFT: VMWare vSphere VM 6.7 STIG",
@@ -328,7 +328,7 @@
       "category": [
         "Virtual Platforms"
       ],
-      "gitHash": "0a99812226d7fef2ad6cce4aa2c9dc6421f7d492"
+      "gitHash": "327ee513388dc1d5e26a7b1db27d46d256407218"
     },
     {
       "shortName": "VMWare vSphere VM 6.5 STIG",
@@ -358,7 +358,7 @@
       "category": [
         "Virtual Platforms"
       ],
-      "gitHash": "0a99812226d7fef2ad6cce4aa2c9dc6421f7d492"
+      "gitHash": "327ee513388dc1d5e26a7b1db27d46d256407218"
     },
     {
       "shortName": "DRAFT: Tomcat 8 CIS",
@@ -419,7 +419,7 @@
         "link": "https://github.com/mitre/heimdall_tools",
         "path": "Heimdall_tools/lib/data/cwe-nist-mapping.csv",
         "column": "NIST-ID",
-        "gitHash": "16cf58aa59eb6062c1ac0ae70c336bd673288787"
+        "gitHash": "60d6ecaaf3e686cdeb13643da33aa2fcad145359"
       }
     ]
   }
