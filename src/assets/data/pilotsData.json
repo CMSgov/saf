@@ -10,71 +10,71 @@
         },
         {
             "name" : "BCDA",
-            "scope" : "Uses the AWS CIS Foundations and Red Hat InSpec profiles and Heimdall in their DevOps pipeline"
+            "scope" : ""
         },
         {
             "name" : "CFACTS",
-            "scope" : "Uses these InSpec profiles and Heimdall to routinely assess and remediate their supporting operating systems, databases, web servers, and COTS software"
+            "scope" : ""
         },
         {
             "name" : "T-MSIS",
-            "scope" : "Uses Red Hat InSpec profiles and Heimdall in their DevOps pipeline"
+            "scope" : ""
         },
         {
             "name" : "IDM",
-            "scope" : "Uses the AWS CIS Foundations and Red Hat InSpec profiles and Heimdall in their DevOps pipeline"
+            "scope" : ""
         },
         {
             "name" : "MACFin",
-            "scope" : "Uses the AWS CIS Foundations, Red Hat, CVE, JBoss, Oracle RDS, Heimdall tools and Heimdall in their DevOps pipeline"
+            "scope" : ""
         },
         {
             "name" : "Lewin Group",
-            "scope" : "Uses the Red Hat InSpec profile and Ansible hardening to routinely assess and remediate their servers, and support their ACT"
+            "scope" : ""
         },
         {
             "name" : "Maximus",
-            "scope" : "Uses InSpec and InSpec_tools in their DevSecOps pipeline"
+            "scope" : ""
         },
         {
             "name" : "MACPro",
-            "scope" : "Uses InSpec and Heimdall Server in their routine workflow"
+            "scope" : ""
         },
         {
             "name" : "MARx",
-            "scope" : "Uses Red Hat InSpec and AWS RDS InSpec profiles and Heimdall in their workflow and for ACT assessments"
+            "scope" : ""
         },
         {
             "name" : "DRFP",
-            "scope" : "Uses AWS, Red Hat, and AWS RDS MySQL InSpec profiles to support their ACT assessments"
+            "scope" : ""
         },
         {
             "name" : "REGTAP",
-            "scope" : "Uses Red Hat InSpec profile to support their ACT assessments"
+            "scope" : ""
         },
         {
             "name" : "MPSM",
-            "scope" : "Uses AWS InSpec profile and their own InSpec overlay profiles and Heimdall in their DevSecOps workflow"
+            "scope" : ""
         },
         {
             "name" : "DBidS",
-            "scope" : "Uses AWS, Red Hat, Oracle, PostgreSQL and Apache Tomcat InSpec profiles and Heimdall in their DevSecOps pipeline and to support their ACT assessments"
+            "scope" : ""
         },
         {
             "name" : "MLMS",
-            "scope" : "Uses Red Hat InSpec profile to support their ACT assessments"
+            "scope" : ""
         },
         {
             "name" : "RAD",
-            "scope" : "Uses Windows and PostgreSQL InSpec profiles and Heimdall for routine scans and their ACT assessments"
+            "scope" : ""
         },
         {
             "name" : "AREMAC",
-            "scope" : "Uses Red Hat and AWS RDS MySQL InSpec profiles and Heimdall for routine scans and their ACT assessments"
+            "scope" : ""
         },
         {
             "name" : "ACO-OS",
-            "scope" : "Uses AWS and other InSpec profiles, Heimdall_tools and Heimdall Server in their DevSecOps pipeline and for their ACT assessments"
+            "scope" : ""
         }
     ]
 }
