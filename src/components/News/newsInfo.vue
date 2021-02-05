@@ -5,19 +5,14 @@
         <v-row class>
           <v-col>
             <p class=" mb-0">
-              Here are the top 10 blogs/articles written by me. You can find more blogs/articles on
-              <a
-                :href="'https://medium.com/'+cd.MediumBlogPublicationUsername"
-                style="text-decoration:none"
-                target="_blank"
-              >Medium</a>
+              Check back here for release information for our tools.
             </p>
             <!-- {{blogsData.feed.link}} -->
           </v-col>
         </v-row>
 
         <!-- Desktop Loader -->
-        <v-row class="mb-5 hidden-sm-and-down" v-if="loader">
+        <!-- <v-row class="mb-5 hidden-sm-and-down" >
           <v-col
             md="3"
             lg="3"
@@ -31,9 +26,9 @@
               <v-skeleton-loader class="mx-auto" max-width="100%" type="card"></v-skeleton-loader>
             </v-sheet>
           </v-col>
-        </v-row>
+        </v-row> -->
 
-        <v-row class="mb-5 d-md-none d-lg-none" v-if="loader">
+        <!-- <v-row class="mb-5 d-md-none d-lg-none" >
           <v-col
             md="3"
             lg="3"
@@ -43,23 +38,23 @@
             v-for="(item,i) in 3"
             :key="i"
           >
-            <!-- Mobile Loader -->
-            <v-skeleton-loader ref="skeleton" type="article" class="mx-auto elevation-1"></v-skeleton-loader>
-            <!-- Mobile Loader -->
-          </v-col>
-        </v-row>
 
-        <v-row class="mb-5" v-else>
+            <v-skeleton-loader ref="skeleton" type="article" class="mx-auto elevation-1"></v-skeleton-loader> 
+
+          </v-col>
+        </v-row> -->
+
+        <v-row class="mb-5">
           <v-col
             md="3"
             lg="3"
             sm="6"
             cols="12"
             class="pa-2"
-            v-for="(item,i) in blogsData.items"
+            v-for="(item,i) in newsData.data"
             :key="i"
           >
-            <BlogCard :data="{data:item}" />
+            <NewsCard :data="item" />
           </v-col>
           <br />
         </v-row>
@@ -70,35 +65,34 @@
 
 <script>
 import communityData from "@/assets/data/communityData.json";
-import BlogCard from "@/components/Blogs/BlogCard";
-import { configData } from "@/config/config";
+import NewsCard from "@/components/News/NewsCard";
+// import { configData } from "@/config/config";
+import newsData from "@/assets/data/news.json"
 export default {
   inject: ["theme"],
   components: {
-    BlogCard
+    NewsCard
   },
   data() {
     return {
       communityData: communityData,
-      blogsData: [],
-      cd: configData,
-      loader: true
+      newsData: newsData,
     };
   },
-  created() {
-    fetch(
-      "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/" +
-        configData.MediumBlogPublicationUsername
-    )
-      .then(res => res.json())
-      .then(data => {
-        this.blogsData = data;
-        this.loader = false;
-      })
-      .catch(e => {
-        // console.log(e)
-        this.loader = false;
-      });
-  }
+  // created() {
+  //   fetch(
+  //     "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/" +
+  //       configData.MediumBlogPublicationUsername
+  //   )
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       this.blogsData = data;
+  //       this.loader = false;
+  //     })
+  //     .catch(e => {
+  //       // console.log(e)
+  //       this.loader = false;
+  //     });
+  // }
 };
 </script>

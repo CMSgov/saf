@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "title": "Hello World",
+      "author": "John Doe",
+      "pubDate": "2021-2-5",
+      "description" : "Lorem Ipsum"
+    },
+    {
+        "title": "Post from last year",
+        "author": "Jane Doe",
+        "pubDate": "2020-12-13",
+        "description" : "Once upon a midnight dreary, an ISSO was trying to pass an ATO. . ."
+      }
+  ]
+}
