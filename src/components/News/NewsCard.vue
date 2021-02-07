@@ -29,7 +29,7 @@
       class="mx-auto"
       max-width="100%"
       outlined
-      :to="{ path: '/news/' + data.pubDate, params: { date : data.pubDate } }"
+      :to="{ path: '/news/' + data.pubDate }"
     >
       <v-list-item three-line>
         <v-list-item-content>
@@ -41,19 +41,11 @@
           <!-- <v-list-item-subtitle class="" v-html="$options.filters.summary(data.data.description,180)"></v-list-item-subtitle> -->
           <v-list-item-subtitle
             class="mb-0"
-            v-html="$options.filters.summary(filterData(data.description), 100)"
+            v-html="$options.filters.summary(filterData(data.content), 100)"
           ></v-list-item-subtitle>
           <!-- <p class=" mt-0 mb-0" style="font-size:70%;">{{data.data.author}}</p> -->
         </v-list-item-content>
-
-        <v-list-item-avatar tile size="100" color="grey">
-          <v-img :src="data.thumbnail" alt />
-        </v-list-item-avatar>
       </v-list-item>
-
-      <v-card-actions>
-        <v-btn :href="data.pubDate" target="_blank" text>Read</v-btn>
-      </v-card-actions>
     </v-card>
   </div>
 </template>

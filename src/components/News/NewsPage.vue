@@ -1,30 +1,30 @@
 <template>
   <v-content class="pa-0">
-    {{ data }}
-    <v-container fluid class="pa-0 mt-2">
-      <v-row
-        justify="center"
-        align="center"
-        class="py-0 my-0"
-        :class="
-          this.$vuetify.theme.dark == true ? 'grey darken-4' : 'grey lighten-4'
-        "
-      >
-        <v-col md="12" lg="10" xs="12" class="py-3 my-0">
+    <v-container fluid class="pa-0 ma-0">
+      <v-row justify="center" align="center" class="mx-0">
+        <v-col cols="12" lg="10" class="pa-0">
           <Header>
-            <h3 slot="title">{{ data.name }}</h3>
-            <span slot="subtitle"
-              ><h4>By {{ data.author }}</h4>
-              <h4>{{ data.pubDate | dateFilter }}</h4></span
-            >
+            <h3 slot="title">{{ data.title }}</h3>
+            <span slot="subtitle">
+              <!-- <h4>{{ data.pubDate | dateFilter }}</h4> -->
+              <router-link to="/news">News</router-link> >
+              <router-link :to="date"> {{ data.pubDate }} </router-link>
+            </span>
           </Header>
         </v-col>
       </v-row>
     </v-container>
-    <v-container fluid>
+    <v-container fluid class="mt-4">
       <v-row justify="center" align="center">
         <v-col md="8" lg="8" xs="12" class="d-flex py-0">
-          <v-html>{{ data.data }}</v-html>
+          <v-html
+            >{{ data.content }}
+            <ul>
+              <li v-for="(bullet, index) in data.bullets" :key="index">
+                {{ bullet }}
+              </li>
+            </ul>
+          </v-html>
         </v-col>
       </v-row>
     </v-container>
