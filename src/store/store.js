@@ -22,6 +22,16 @@ export default new Vuex.Store({
         }
       },
       {
+        text: "News",
+        to: "/news",
+        icon: "mdi-newspaper",
+        meta: {
+          showToolbar: true,
+          enabled: true,
+          showBottomNav: true
+        }
+      },
+      {
         text: "Getting Started",
         to: "/gettingstarted",
         icon: "mdi-book-open",
