@@ -28,6 +28,7 @@
     <v-card
       class="mx-auto"
       max-width="100%"
+      height="9rem"
       outlined
       :to="{ path: '/news/' + data.pubDate }"
     >

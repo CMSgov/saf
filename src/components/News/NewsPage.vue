@@ -17,14 +17,12 @@
     <v-container fluid class="mt-4">
       <v-row justify="center" align="center">
         <v-col md="8" lg="8" xs="12" class="d-flex py-0">
-          <v-html
-            >{{ data.content }}
-            <ul>
-              <li v-for="(bullet, index) in data.bullets" :key="index">
-                {{ bullet }}
-              </li>
-            </ul>
-          </v-html>
+          <span v-html="data.content"></span>
+          <ul>
+            <li v-for="(bullet, index) in data.bullets" :key="index">
+              {{ bullet }}
+            </li>
+          </ul>
         </v-col>
       </v-row>
     </v-container>
