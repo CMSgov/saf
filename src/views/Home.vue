@@ -46,6 +46,7 @@
         </p></v-col
       ></v-row
     >
+    <NewsPage />
     <v-row justify="center" align="center" class="mx-0">
       <v-col
         cols="12"
@@ -106,6 +107,7 @@ import homeStartScreen from "../components/home/homeScreen";
 import whatwedo from "../components/home/whatwedo";
 import whatwedodata from "@/assets/data/whatWeDo.json";
 import missiondata from "@/assets/data/mission.json";
+import NewsPage from "@/components/News/NewsPage.vue"
 //import aboutCommunity from "../components/home/aboutCommunity";
 //import events from "../components/home/events";
 //import featureEvents from "../components/home/featureEvents";
@@ -115,6 +117,7 @@ export default {
   components: {
     homeStartScreen,
     whatwedo,
+    NewsPage
     //aboutCommunity,
     //events,
     //featureEvents,

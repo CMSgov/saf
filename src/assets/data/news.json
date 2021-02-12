@@ -1,29 +1,9 @@
 {
   "data": [
     {
-      "title": "Hello World",
-      "pubDate": "2021-2-5",
-      "content": "This section can be a quick summary of updates. We can talk about exactly how we want to structure these. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "bullets": [
-        "Added X feature to Y tool.",
-        "Added Z feature to AA tool.",
-        "Removed autoplaying music from all Heimdall pages."
-      ]
-    },
-    {
-      "title": "Post from last year",
-      "pubDate": "2020-12-13",
-      "content": "Once upon a midnight dreary, an ISSO was trying to pass an ATO. . .",
-      "bullets": [
-        "This is a bullet.",
-        "This, too, is a bullet.",
-        "You guessed it. Bullet."
-      ]
-    },
-    {
       "title" : "News For February",
       "pubDate" : "2021-2-12",
-      "content" : "<p>Reminder: <li>Check back often to find the latest information on <a href=\"https://saf.cms.gov/#/validate\">InSpec profiles</a>, <a href='https://heimdall-tools.mitre.org/'>Heimdall-tool converters</a>, and <a href=\"https://github.com/mitre/heimdall2/releases\">Heimdall updates!</a></li></p><p>New:<li><a href=\"https://heimdall-lite.cms.gov/\"Heimdall-lite.cms.gov</a> is live! CMS now has its own version of Heimdall-lite, an in-browser tool for analyzing security data! </li><li><a href=\"https://heimdall-tools.mitre.org/\">Heimdall-tools supports JFrog Xray scan data conversion for viewing in Heimdall!</li><li>Updated <a href=\"https://github.com/CMSgov/cms-ars-3.1-moderate-aws-rds-oracle-mysql-ee-5.7-cis-overlay\">AWS RDS MySQL InSpec profile</a> to align to RDS conventions and improve README instructions</li></p><p>Coming Soon:<li>Heimdall Server support for groups-based role-based access control and additional authentication integrations. Follow releases <a href=\"https://github.com/mitre/heimdall2/releases\">here</a>.</li><li>An AWS Lambda runner for InSpec – convenient scans without having to set up a runner!</li><li>(Late March) Another set of InSpec profile development training classes are in planning for late March / early April</li></p>"
+      "content" : "<p>Reminder: <li>Check back often to find the latest information on <a href=\"https://saf.cms.gov/#/validate\">InSpec profiles</a>, <a href='https://heimdall-tools.mitre.org/'>Heimdall-tool converters</a>, and <a href=\"https://github.com/mitre/heimdall2/releases\">Heimdall updates!</a></li></p><p>New:<li><a href=\"https://heimdall-lite.cms.gov/\">Heimdall-lite.cms.gov</a> is live! CMS now has its own version of Heimdall-lite, an in-browser tool for analyzing security data! </li><li><a href=\"https://heimdall-tools.mitre.org/\">Heimdall-tools supports JFrog Xray scan data conversion for viewing in Heimdall!</li><li>Updated <a href=\"https://github.com/CMSgov/cms-ars-3.1-moderate-aws-rds-oracle-mysql-ee-5.7-cis-overlay\">AWS RDS MySQL InSpec profile</a> to align to RDS conventions and improve README instructions</li></p><p>Coming Soon:<li>Heimdall Server support for groups-based role-based access control and additional authentication integrations. Follow releases <a href=\"https://github.com/mitre/heimdall2/releases\">here</a>.</li><li>An AWS Lambda runner for InSpec – convenient scans without having to set up a runner!</li><li>(Late March) Another set of InSpec profile development training classes are in planning for late March / early April</li></p>"
     }
   ]
 }

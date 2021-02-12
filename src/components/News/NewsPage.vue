@@ -43,7 +43,9 @@ export default {
   },
   computed: {
     date: function () {
-      return this.$route.params.date;
+      // return this.$route.params.date;
+      // return the most recent date
+      return "2021-2-12"
     },
     data: function () {
       return this.getNewsItem(this.date);
