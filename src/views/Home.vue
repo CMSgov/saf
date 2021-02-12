@@ -46,7 +46,7 @@
         </p></v-col
       ></v-row
     >
-    <NewsPage />
+    <NewsPage class="my-4"/>
     <v-row justify="center" align="center" class="mx-0">
       <v-col
         cols="12"
