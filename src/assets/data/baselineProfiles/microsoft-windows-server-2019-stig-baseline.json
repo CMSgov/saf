@@ -6,7 +6,7 @@
   "copyright_email": "you@example.com",
   "license": "Apache-2.0",
   "summary": "This Security Technical Implementation Guide is published as a tool to improve the security of Department of Defense (DoD) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via email to the following address: disa.stig_spt@mail.mil.",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "inspec_version": ">= 4.0",
   "inputs": [],
   "supports": [],
@@ -4130,7 +4130,7 @@
           "Rev_4"
         ]
       },
-      "code": "control \"V-92991\" do\n  title \"Windows Server 2019 local volumes must use a format that supports NTFS\nattributes.\"\n  desc  \"The ability to set access permissions and auditing is critical to\nmaintaining the security and proper access controls of a system. To support\nthis, volumes must be formatted using a file system that supports NTFS\nattributes.\"\n  desc  \"rationale\", \"\"\n  desc  'check', \"Open \\\"Computer Management\\\".\n\n    Select \\\"Disk Management\\\" under \\\"Storage\\\".\n\n    For each local volume, if the file system does not indicate \\\"NTFS\\\", this\nis a finding.\n\n    \\\"ReFS\\\" (resilient file system) is also acceptable and would not be a\nfinding.\n\n    This does not apply to system partitions such the Recovery and EFI System\nPartition.\"\n  desc  'fix', \"Format volumes to use NTFS or ReFS.\"\n  impact 0.7\n  tag 'severity': nil\n  tag 'gtitle': 'SRG-OS-000080-GPOS-00048'\n  tag 'gid': 'V-92991'\n  tag 'rid': 'SV-103079r1_rule'\n  tag 'stig_id': 'WN19-00-000130'\n  tag 'fix_id': 'F-99237r1_fix'\n  tag 'cci': [\"CCI-000213\"]\n  tag 'nist': [\"AC-3\", \"Rev_4\"]\n\n  get_volumes = command(\"wmic logicaldisk get FileSystem | findstr /r /v '^$' |Findstr /v 'FileSystem'\").stdout.strip.split(\"\\r\\n\")\n\n  get_volumes.each do |volume|\n    volumes = volume.strip\n    describe.one do\n      describe 'The format local volumes' do\n        subject { volumes }\n        it { should eq 'NTFS' }\n      end\n      describe 'The format local volumes' do\n        subject { volumes }\n        it { should eq 'ReFS' }\n      end\n    end\n  end\n  if get_volumes.empty?\n    impact 0.0\n    describe 'There are no local volumes' do\n      skip 'This control is not applicable'\n    end\n  end\nend\n",
+      "code": "control \"V-92991\" do\n  title \"Windows Server 2019 local volumes must use a format that supports NTFS\nattributes.\"\n  desc  \"The ability to set access permissions and auditing is critical to\nmaintaining the security and proper access controls of a system. To support\nthis, volumes must be formatted using a file system that supports NTFS\nattributes.\"\n  desc  \"rationale\", \"\"\n  desc  'check', \"Open \\\"Computer Management\\\".\n\n    Select \\\"Disk Management\\\" under \\\"Storage\\\".\n\n    For each local volume, if the file system does not indicate \\\"NTFS\\\", this\nis a finding.\n\n    \\\"ReFS\\\" (resilient file system) is also acceptable and would not be a\nfinding.\n\n    This does not apply to system partitions such the Recovery and EFI System\nPartition.\"\n  desc  'fix', \"Format volumes to use NTFS or ReFS.\"\n  impact 0.7\n  tag 'severity': nil\n  tag 'gtitle': 'SRG-OS-000080-GPOS-00048'\n  tag 'gid': 'V-92991'\n  tag 'rid': 'SV-103079r1_rule'\n  tag 'stig_id': 'WN19-00-000130'\n  tag 'fix_id': 'F-99237r1_fix'\n  tag 'cci': [\"CCI-000213\"]\n  tag 'nist': [\"AC-3\", \"Rev_4\"]\n\n  get_volumes = command(\"wmic logicaldisk where DriveType=3 get FileSystem | findstr /r /v '^$' |Findstr /v 'FileSystem'\").stdout.strip.split(\"\\r\\n\")\n\n  get_volumes.each do |volume|\n    volumes = volume.strip\n    describe.one do\n      describe 'The format local volumes' do\n        subject { volumes }\n        it { should eq 'NTFS' }\n      end\n      describe 'The format local volumes' do\n        subject { volumes }\n        it { should eq 'ReFS' }\n      end\n    end\n  end\n  if get_volumes.empty?\n    impact 0.0\n    describe 'There are no local volumes' do\n      skip 'This control is not applicable'\n    end\n  end\nend\n",
       "source_location": {
         "ref": "./Windows 2019 STIG/controls/V-92991.rb",
         "line": 3
@@ -12757,7 +12757,7 @@
       "id": "controls/V-93533.rb"
     }
   ],
-  "sha256": "63266ef5a16ab9d754f381cca11f9a57e63c598c0fc71ae2741e337963a57756",
+  "sha256": "bbbcae6ed6a2c4947806823123fb06b28aef3d5224a6bb5479dd9fff9cae1fef",
   "status_message": "",
   "status": "loaded",
   "generator": {
