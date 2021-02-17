@@ -15,7 +15,7 @@
             <router-link to="/validation">Validation</router-link>page. Due to the intuitive nature of the InSpec language, developers and security professionals can spend less time debating about
             <i>how</i> to test, and more time solving problems using the
             <a
-              href="https://heimdall-lite.mitre.org/#/"
+              href="https://heimdall-lite.cms.gov/"
               target="_blank"
             >Heimdall Lite</a> or
             <a href="https://github.com/mitre/heimdall" target="_blank">Heimdall Server</a> visualization tools.
