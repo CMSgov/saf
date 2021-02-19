@@ -37,15 +37,17 @@
         </v-row>
       </v-col>
     </v-row>
-    <v-row justify="center" align="center" class="mx-0">
-      <v-col cols="12" lg="10"
-        ><p style="font-size: 150%" class="my-10">
-          <a target="_blank" href="https://youtu.be/Vgr5wR1SFuA"
-            >Video: Security Automation Framework Overview</a
-          >
-        </p></v-col
-      ></v-row
-    >
+    <v-row justify="center" align="center" class="mx-0 my-8">
+      <v-col md="12" lg="10" xs="12" class="pa-0">
+        <v-row justify="center" align="center" class="pa-2">
+          <v-col sm="4" md="4" lg="4" xl="4" xs="12">
+            <wwdBasicCard :item="video" />
+          </v-col>
+          <v-col v-if="!$vuetify.breakpoint.mdAndDown" cols="2" />
+          <v-col sm="4" md="4" lg="4" xl="4" xs="12"
+            ><wwdBasicCard :item="whats_new"
+          /></v-col> </v-row></v-col
+    ></v-row>
     <v-row justify="center" align="center" class="mx-0">
       <v-col
         cols="12"
@@ -106,6 +108,7 @@ import homeStartScreen from "../components/home/homeScreen";
 import whatwedo from "../components/home/whatwedo";
 import whatwedodata from "@/assets/data/whatWeDo.json";
 import missiondata from "@/assets/data/mission.json";
+import wwdBasicCard from "@/components/home/wwdComponents/wwdBasicCard.vue";
 //import aboutCommunity from "../components/home/aboutCommunity";
 //import events from "../components/home/events";
 //import featureEvents from "../components/home/featureEvents";
@@ -115,6 +118,7 @@ export default {
   components: {
     homeStartScreen,
     whatwedo,
+    wwdBasicCard,
     //aboutCommunity,
     //events,
     //featureEvents,
@@ -123,6 +127,18 @@ export default {
   data: () => ({
     wwd: whatwedodata.whatWeDo,
     mission: missiondata.whatWeDo[0],
+    video: {
+      name: "VIDEO: CMS SAF Overview",
+      icon: "play-circle",
+      link: "https://youtu.be/Vgr5wR1SFuA",
+      height: "200px"
+    },
+    whats_new: {
+      name: "What's New?",
+      icon: "newspaper",
+      router_link: "/news",
+      height: "200px"
+    },
   }),
   computed: {
     showTraining() {
