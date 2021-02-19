@@ -21,16 +21,7 @@ export default new Vuex.Store({
           showBottomNav: true
         }
       },
-      {
-        text: "News",
-        to: "/news",
-        icon: "mdi-newspaper",
-        meta: {
-          showToolbar: true,
-          enabled: true,
-          showBottomNav: true
-        }
-      },
+      
       {
         text: "Getting Started",
         to: "/gettingstarted",
@@ -101,6 +92,16 @@ export default new Vuex.Store({
           showBottomNav: true
         }
       }, */
+      {
+        text: "News",
+        to: "/news",
+        icon: "mdi-newspaper",
+        meta: {
+          showToolbar: true,
+          enabled: true,
+          showBottomNav: true
+        }
+      },
       {
         text: "FAQ",
         to: "/faq",

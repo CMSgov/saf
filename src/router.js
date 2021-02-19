@@ -258,20 +258,20 @@ const router = new Router({
       name:"news",
       component:()=> import('@/views/News.vue'),
       meta:{
-        title:`News | ${communityData.CommunityName}`,
+        title:`What's New | ${communityData.CommunityName}`,
         color:"#0277bd",
         requiresAuth: false
       }
     },
-    {
-      path:'/news/:date',
-      name:"news-page",
-      component:()=> import('@/components/News/NewsPage.vue'),
-      meta: (route) => ({
-        title: `News ` + route.params.date + ` | ${communityData.CommunityName}`,
-        color:"#0277bd",
-      })
-    },
+    // {
+    //   path:'/news/:date',
+    //   name:"news-page",
+    //   component:()=> import('@/components/News/NewsPage.vue'),
+    //   meta: (route) => ({
+    //     title: `News ` + route.params.date + ` | ${communityData.CommunityName}`,
+    //     color:"#0277bd",
+    //   })
+    // },
     {
       path: "/validation",
       redirect: "/validate"
