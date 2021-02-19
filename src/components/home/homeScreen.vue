@@ -21,7 +21,9 @@
               CMS Security Automation Framework
           </b>
         </p>
-
+        <br />
+        <NewsPage />
+        <br />
         <p class=" ms-0 title">{{communityData.communityShortDescription}}</p>
         <p class="ma-0">
           <ul class="title mt-4">
@@ -66,7 +68,6 @@ export default {
       communityData: communityData
     };
   },
-
   methods: {
     color_mode() {
       if (this.$vuetify.theme.dark) return "color:white";

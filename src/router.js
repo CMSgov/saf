@@ -254,6 +254,25 @@ const router = new Router({
       }
     },
     {
+      path:'/whats-new',
+      name:"whats-new",
+      component:()=> import('@/views/News.vue'),
+      meta:{
+        title:`What's New | ${communityData.CommunityName}`,
+        color:"#0277bd",
+        requiresAuth: false
+      }
+    },
+    // {
+    //   path:'/news/:date',
+    //   name:"news-page",
+    //   component:()=> import('@/components/News/NewsPage.vue'),
+    //   meta: (route) => ({
+    //     title: `News ` + route.params.date + ` | ${communityData.CommunityName}`,
+    //     color:"#0277bd",
+    //   })
+    // },
+    {
       path: "/validation",
       redirect: "/validate"
     },
@@ -287,7 +306,7 @@ router.beforeEach((to, from, next) => {
   // const user = firebase.auth.currentUser;
   // const requiresAuth = to.matched.some(record=> record.meta.requiresAuth);
   if (to.meta.title) {
-    document.title = to.meta.title;
+    document.title = to.meta.title; 
     // let metaThemeColor = document.querySelector("meta[name=theme-color]");
     // metaThemeColor.setAttribute("content", to.meta.color);
     // // if(this.$vuetify.theme.dark){
