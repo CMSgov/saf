@@ -254,8 +254,8 @@ const router = new Router({
       }
     },
     {
-      path:'/news',
-      name:"news",
+      path:'/whats-new',
+      name:"whats-new",
       component:()=> import('@/views/News.vue'),
       meta:{
         title:`What's New | ${communityData.CommunityName}`,

@@ -138,7 +138,7 @@ export default {
     whats_new: {
       name: "What's New?",
       icon: "newspaper",
-      router_link: "/news",
+      router_link: "/whats-new",
       height: "200px"
     },
   }),

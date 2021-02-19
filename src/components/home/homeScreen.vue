@@ -62,15 +62,11 @@
 
 <script>
 import communityData from "@/assets/data/communityData.json";
-import NewsPage from "@/components/News/NewsPage.vue";
 export default {
   data() {
     return {
       communityData: communityData
     };
-  },
-  components : {
-    NewsPage
   },
   methods: {
     color_mode() {

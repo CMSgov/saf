@@ -3,7 +3,7 @@
     <v-row justify="center" align="center" class="mx-0">
       <v-col cols="12" lg="10" class="pa-0">
         <Header>
-          <h3 slot="title">News</h3>
+          <h3 slot="title">What's New</h3>
         </Header>
       </v-col>
     </v-row>

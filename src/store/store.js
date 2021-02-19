@@ -103,8 +103,8 @@ export default new Vuex.Store({
         }
       }, */
       {
-        text: "News",
-        to: "/news",
+        text: "What's New",
+        to: "/whats-new",
         icon: "mdi-newspaper",
         meta: {
           showToolbar: true,
