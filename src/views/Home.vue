@@ -2,7 +2,9 @@
   <v-container fluid class="pa-0 ma-0">
     <v-row justify="center" align="center" class="mx-0">
       <v-col cols="12" lg="10">
-        <homeStartScreen />
+        
+        <homeStartScreen class="mb-4"/>
+        
       </v-col>
     </v-row>
     <!-- MISSION -->

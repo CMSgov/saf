@@ -306,7 +306,7 @@ router.beforeEach((to, from, next) => {
   // const user = firebase.auth.currentUser;
   // const requiresAuth = to.matched.some(record=> record.meta.requiresAuth);
   if (to.meta.title) {
-    document.title = to.meta.title;
+    document.title = to.meta.title; 
     // let metaThemeColor = document.querySelector("meta[name=theme-color]");
     // metaThemeColor.setAttribute("content", to.meta.color);
     // // if(this.$vuetify.theme.dark){

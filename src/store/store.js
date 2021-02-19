@@ -82,6 +82,16 @@ export default new Vuex.Store({
           showBottomNav: true
         }
       },
+      // {
+      //   text: "News",
+      //   to: "/news",
+      //   icon: "mdi-newspaper",
+      //   meta: {
+      //     showToolbar: true,
+      //     enabled: true,
+      //     showBottomNav: true
+      //   }
+      // },
       /* {
         text: "Contact Us",
         to: "/contactus",
