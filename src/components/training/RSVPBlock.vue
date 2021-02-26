@@ -32,7 +32,7 @@
     <p>
       Please RSVP if you are interested in attending or have additional
       questions. If you are having trouble with the form, please email
-      <a :href="communityData.trainingContactEmail" target="_blank"
+      <a :href="'mailto:' + communityData.trainingContactEmail" target="_blank"
         >SAF@groups.mitre.org.</a
       >
     </p>
