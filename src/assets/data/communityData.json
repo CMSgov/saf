@@ -4,9 +4,13 @@
   "communityLongDec": "Developers can use the framework to harden their systems and run validation security tests early and often in their environments to keep security defects as low as possible. Users can bring their own orchestration, functional and unit testing systems. The ACT (Adaptive Capabilities Testing) team will accept security testing data from this framework. ",
   "communityMeetupLink": "",
   "communityEmail": "saf@cms.hhs.gov",
-  "website": "https://cmsgov.github.io/saf/",
+  "website": "https://saf.cms.gov",
   "programWebsite": "",
   "communityHashTags": ["CMSSAF", "CMS_SAF"],
+  "trainingSiteBasic" : "https://mitre-inspec-developer.netlify.com/",
+  "trainingSiteAdvanced" : "https://mitre-inspec-advanced-developer.netlify.app/",
+  "trainingSignUpLink" : "https://forms.office.com/Pages/ResponsePage.aspx?id=SNwgxlAdUkmLOd9NVNdNgkOA91ej9MNHss6_kcyA_29UMFAzTkFSSkFaMVdWRUZFREo5QzBNTkUyRy4u",
+  "trainingContactEmail" : "saf@groups.mitre.org",
   "socialLinks": [
     {
       "name": "Facebook",

@@ -2,9 +2,7 @@
   <v-container fluid>
     <template v-for="(item, index) in resources.items">
       <div :key="index" class="ms-2">
-        <p class=" mb-2 wrap-list-text">
-          <b>{{item.name}}</b>
-        </p>
+        <h2>{{item.name}}</h2>
         <span v-html="item.desc" />
         <p flat dense class="ma-2 " v-for="entry in item.values" :key="entry.name">
           <span>

@@ -49,3 +49,10 @@ body {
   word-break: normal;
   hyphens: none;
 }
+
+h2 {
+  color: #1a73e8;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: normal;
+}
