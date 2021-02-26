@@ -103,7 +103,7 @@ export default new Vuex.Store({
         }
       }, */
       {
-        text: "What's New",
+        text: "What's New [InSpec Training in March!]",
         to: "/whats-new",
         icon: "mdi-newspaper",
         meta: {
