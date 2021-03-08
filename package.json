@@ -37,7 +37,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "@mdi/font": "^5.0.45",
+    "@mdi/font": "^5.9.55",
     "babel-plugin-prismjs": "^2.0.1",
     "babel-polyfill": "^6.26.0",
     "core-js": "^2.6.11",
