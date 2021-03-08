@@ -30,13 +30,16 @@
       "header": "Heimdall Tools",
       "desc": "MITRE created the <a href='https://heimdall-tools.mitre.org/' target='_blank'>Heimdall Tools</a> command line toolset to allow the conversion of output from widely used automated security testing tools into HDF. At present, Heimdall Tools can convert output from:",
       "bullets": [
-        { "main": "Sonarqube" },
-        { "main": "Fortify" },
-        { "main": "OWASP ZAP" },
-        { "main": "Burp Suite" },
-        { "main": "Nessus" },
-        { "main": "Snyk" },
-        { "main": "Nikto" }
+        { "main": "Sonarqube", "link" : "https://www.sonarqube.org/" },
+        { "main": "Fortify", "link" : "https://www.microfocus.com/en-us/products/static-code-analysis-sast/overview" },
+        { "main": "OWASP ZAP", "link" : "https://www.zaproxy.org/" },
+        { "main": "Burp Suite", "link" : "https://portswigger.net/burp" },
+        { "main": "Nessus", "link" : "https://www.tenable.com/products/nessus" },
+        { "main": "Snyk", "link" : "https://snyk.io/" },
+        { "main": "Nikto", "link" : "https://cirt.net/Nikto2" },
+        { "main": "JFrog Xray", "link" : "https://jfrog.com/xray/" },
+        { "main": "DbProtect", "link": "https://www.trustwave.com/en-us/services/technology/dbprotect/" },
+        { "main": "AWS Config", "link" : "https://aws.amazon.com/config/"}
       ]
     },
     {

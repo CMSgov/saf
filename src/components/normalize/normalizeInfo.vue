@@ -7,7 +7,8 @@
       </p>
       <ul v-if="row.bullets" class="ma-2">
         <li v-for="(bullet, index) in row.bullets" :key="index">
-          {{bullet.main}}
+          <a v-if="bullet.link" :href="bullet.link" target="_blank">{{bullet.main}}</a>
+          <div v-else>{{bullet.main}}</div>
           <ul v-if="bullet.sub">
             <li v-for="(sub_bullet, index) in bullet.sub" :key="index">{{sub_bullet}}</li>
           </ul>
