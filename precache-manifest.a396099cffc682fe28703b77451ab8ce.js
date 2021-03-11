@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "de082471416590559725",
+    "revision": "c3b3f45e0465dc8d7b6d",
     "url": "/css/app.55dab6f6.css"
   },
   {
-    "revision": "de082471416590559725",
-    "url": "/js/app.3125b03c.js"
+    "revision": "c3b3f45e0465dc8d7b6d",
+    "url": "/js/app.84afd941.js"
   },
   {
     "revision": "bdae092cfe4d5ee25c2e",
@@ -92,12 +92,12 @@ self.__precacheManifest = [
     "url": "/js/chunk-57de4c16.3deff795.js"
   },
   {
-    "revision": "c08b4b26c0ebf57f9759",
+    "revision": "f906af438f51dd20ab2b",
     "url": "/css/chunk-6062a520.4586e6c4.css"
   },
   {
-    "revision": "c08b4b26c0ebf57f9759",
-    "url": "/js/chunk-6062a520.5c5d028a.js"
+    "revision": "f906af438f51dd20ab2b",
+    "url": "/js/chunk-6062a520.13355f3d.js"
   },
   {
     "revision": "118e3d17fb52e278eee8",
@@ -540,7 +540,7 @@ self.__precacheManifest = [
     "url": "/img/team copy.bcdbf0b8.svg"
   },
   {
-    "revision": "f2282e8b8942abd3f77101ccc727f379",
+    "revision": "c7cc24f78833d7ccb4cfd8dcb91cf4e9",
     "url": "/index.html"
   },
   {
@@ -558,10 +558,6 @@ self.__precacheManifest = [
   {
     "revision": "d8cd15ffaf79bc2d69205b7ae80c3a65",
     "url": "/ISPG_DevSecOps_Research_Graphic_04062020.pdf"
-  },
-  {
-    "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
-    "url": "/robots.txt"
   },
   {
     "revision": "1effd52284926865e83ec7b5e2eefa43",
@@ -588,8 +584,12 @@ self.__precacheManifest = [
     "url": "/CMS_InSpec_Profile_Lifecycle_SOP_v1.0_20190702.pdf"
   },
   {
-    "revision": "4076d8e641ae460f689afda8336dfdc4",
-    "url": "/DRAFT-DevSecOps_Best_Practices_Guide_20190516.pdf"
+    "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
+    "url": "/robots.txt"
+  },
+  {
+    "revision": "c9e4ab4c680e1d254f1d334c8bd591c3",
+    "url": "/CMS-SAF-DevSecOps_Best_Practices_Guide_Jan_2021.pdf"
   },
   {
     "revision": "4b00a811782f7fa776f060ad7ca0e6de",
