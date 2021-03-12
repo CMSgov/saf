@@ -73,7 +73,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.2.3",
     "material-design-icons-iconfont": "^5.0.1",
-    "sass": "^1.26.3",
+    "sass": "^1.32.8",
     "sass-loader": "^7.1.0",
     "vue-cli-plugin-vuetify": "^0.6.3",
     "vue-template-compiler": "^2.6.11",
