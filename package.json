@@ -50,7 +50,7 @@
     "vue": "^2.6.12",
     "vue-cheetah-grid": "^0.22.3",
     "vue-code-highlight": "^0.7.5",
-    "vue-prism-component": "^1.2.0",
+    "vue-prism-component": "^2.0.0",
     "vue-router": "^3.5.1",
     "vue-svg-inline-loader": "^1.5.0",
     "vue-svg-loader": "^0.15.0",
