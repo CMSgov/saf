@@ -560,6 +560,10 @@ self.__precacheManifest = [
     "url": "/ISPG_DevSecOps_Research_Graphic_04062020.pdf"
   },
   {
+    "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
+    "url": "/robots.txt"
+  },
+  {
     "revision": "1effd52284926865e83ec7b5e2eefa43",
     "url": "/SAF_Code_Review_Recommendations.pdf"
   },
@@ -582,10 +586,6 @@ self.__precacheManifest = [
   {
     "revision": "13e04d26de97f23093f1133418926c28",
     "url": "/CMS_InSpec_Profile_Lifecycle_SOP_v1.0_20190702.pdf"
-  },
-  {
-    "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
-    "url": "/robots.txt"
   },
   {
     "revision": "c9e4ab4c680e1d254f1d334c8bd591c3",
