@@ -52,6 +52,7 @@ export default {
     return {
       fab: false,
       categoryOrder: [
+        "Manual Controls",
         "Cloud Service Providers",
         "Operating Systems",
         "Databases",
