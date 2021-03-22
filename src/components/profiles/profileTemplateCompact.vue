@@ -26,7 +26,7 @@
             </v-row>
             <v-card
               outlined
-              class="d-flex px-1 py-4 ma-2"
+              class="d-flex px-1 ma-2"
               :class="$vuetify.theme.dark ?'grey darken-4':'grey lighten-5'"
               v-for="(entry, i) in getByCategory(profiles, [cat])"
               :key="i"

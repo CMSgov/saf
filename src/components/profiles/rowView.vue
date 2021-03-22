@@ -17,7 +17,7 @@
         class="pa-0"
       >
         <v-container
-          class="pa-0 mt-1 pl-2"
+          class="pa-0 pl-2"
           v-if="
             getByFips(entry, 'low') ||
             getByFips(entry, 'mod') ||
