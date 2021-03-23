@@ -26,7 +26,7 @@
             </v-row>
             <v-card
               outlined
-              class="d-flex pr-1 pl-1 ma-2"
+              class="d-flex px-1 ma-2"
               :class="$vuetify.theme.dark ?'grey darken-4':'grey lighten-5'"
               v-for="(entry, i) in getByCategory(profiles, [cat])"
               :key="i"
@@ -52,6 +52,7 @@ export default {
     return {
       fab: false,
       categoryOrder: [
+        "Manual Controls",
         "Cloud Service Providers",
         "Operating Systems",
         "Databases",

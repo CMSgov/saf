@@ -1,5 +1,5 @@
 <template>
-  <v-container class="pa-0" fluid>
+  <v-container class="pa-0 ma-1" fluid>
     <v-row justify="center">
       <v-col cols="12" class="pa-0 ma-2">
         <v-row justify="center">
