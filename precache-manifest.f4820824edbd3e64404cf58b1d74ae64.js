@@ -1,27 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "2f14c75f3edfc419ad59",
+    "revision": "bd0bdf986aad37e729e1",
     "url": "/css/app.74e96ce5.css"
   },
   {
-    "revision": "2f14c75f3edfc419ad59",
-    "url": "/js/app.11f7be47.js"
-  },
-  {
-    "revision": "bd6c4113b562a4b51c8a",
-    "url": "/css/chunk-016b3d18.4586e6c4.css"
-  },
-  {
-    "revision": "bd6c4113b562a4b51c8a",
-    "url": "/js/chunk-016b3d18.6c046ba4.js"
-  },
-  {
-    "revision": "2c1253e1056b4d0bb30c",
-    "url": "/css/chunk-09434256.b6b92317.css"
-  },
-  {
-    "revision": "2c1253e1056b4d0bb30c",
-    "url": "/js/chunk-09434256.faf3e2a9.js"
+    "revision": "bd0bdf986aad37e729e1",
+    "url": "/js/app.a7e315a6.js"
   },
   {
     "revision": "c09c344a6c0afb122c5c",
@@ -34,6 +18,14 @@ self.__precacheManifest = [
   {
     "revision": "2d7a89656fff4af028be",
     "url": "/js/chunk-0f425009.4e32e1a0.js"
+  },
+  {
+    "revision": "185ae5ccda8c2fd847a1",
+    "url": "/css/chunk-1087dd25.b6b92317.css"
+  },
+  {
+    "revision": "185ae5ccda8c2fd847a1",
+    "url": "/js/chunk-1087dd25.6e562923.js"
   },
   {
     "revision": "47a676c43f9f5a536d60",
@@ -122,6 +114,14 @@ self.__precacheManifest = [
   {
     "revision": "9c7e59c26e0e90ec2c11",
     "url": "/js/chunk-624a35da.1c61bc4d.js"
+  },
+  {
+    "revision": "5772d44a30904d2aec52",
+    "url": "/css/chunk-65e5c558.d86a908d.css"
+  },
+  {
+    "revision": "5772d44a30904d2aec52",
+    "url": "/js/chunk-65e5c558.fbdc78f2.js"
   },
   {
     "revision": "c98e9c98534c5a0b5761",
@@ -372,6 +372,10 @@ self.__precacheManifest = [
     "url": "/img/visualization_frame2.7180e69d.png"
   },
   {
+    "revision": "70231d4896539dcb63b0fdef3f1bf8d7",
+    "url": "/img/heimdall.70231d48.png"
+  },
+  {
     "revision": "119a77ba34b0a50a1138f3a66f02d09b",
     "url": "/img/CHEF Icon and Typemark-Dark.119a77ba.svg"
   },
@@ -540,7 +544,7 @@ self.__precacheManifest = [
     "url": "/img/team copy.bcdbf0b8.svg"
   },
   {
-    "revision": "e9908a8b4ca508bd47b26b42d33f248c",
+    "revision": "c0b2cc5e353e75588932e6c3bdb49c0a",
     "url": "/index.html"
   },
   {
