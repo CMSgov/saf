@@ -255,6 +255,7 @@ const router = new Router({
       redirect: "/train"
     },
     { path: '/hdf', redirect: { name: 'normalize' }},
+    { path: '/DevSecOps_Best_Practices_Guide_01262020.pdf', redirect: '/DRAFT-DevSecOps_Best_Practices_Guide_01262020.pdf'},
     {
       path: "*",
       name: "redirect",
