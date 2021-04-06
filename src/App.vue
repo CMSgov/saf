@@ -31,7 +31,7 @@ import AdminDrawer from "./components/Admin/Core/AdminDrawer";
 
 import AuraToolbar from "./components/core/Toolbar";
 import AuraDrawer from "./components/core/Drawer";
-import AuraBottomNav from "./components/core/BottomNav";
+// import AuraBottomNav from "./components/core/BottomNav";
 import AuraView from "./components/core/View";
 import AuraFooter from "./components/core/Footer";
 
@@ -43,7 +43,7 @@ export default {
     AuraToolbar,
     AuraDrawer,
     AuraView,
-    AuraBottomNav,
+    // AuraBottomNav,
     AuraFooter
   },
   data: () => ({
