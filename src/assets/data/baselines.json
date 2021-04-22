@@ -157,8 +157,7 @@
       "svg": "inspec-blue-back-border",
       "category": [
         "Web Servers"
-      ],
-      "gitHash": "218bafbd15c619695dfe9716ef054debf3a0f80d"
+      ]
     },
     {
       "shortName": "Oracle MySQL 5.7 CIS",
