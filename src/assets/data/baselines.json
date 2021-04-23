@@ -18,7 +18,7 @@
       "category": [
         "Operating Systems"
       ],
-      "gitHash": "78a14863582c1db9e212c8f41535e07cda099c92"
+      "gitHash": "2000fb9978a92b81739c4db661dae356dd5d5918"
     },
     {
       "shortName": "Red Hat CVE Scan",
@@ -38,7 +38,7 @@
       "category": [
         "Operating Systems"
       ],
-      "gitHash": "82bdf2c9877a8f918f7dcca7d420fb2f91d2b3e9"
+      "gitHash": "482560f3d903a4848c899371ced12b4fee3762fb"
     },
     {
       "shortName": "Windows 2016 STIG",
@@ -48,7 +48,7 @@
       "category": [
         "Operating Systems"
       ],
-      "gitHash": "9dcad84f1d5687b760740841651b154ead222087"
+      "gitHash": "a845f1e0afad03912a44d088ece74c5258da5bbd"
     },
     {
       "shortName": "Windows 2019 STIG",
@@ -58,7 +58,7 @@
       "category": [
         "Operating Systems"
       ],
-      "gitHash": "1ab4f61f03d530b0cbe2034545a2e20093af860a"
+      "gitHash": "6d2dac5b47e6fc9e8c5489655bc9adcc3b188d67"
     },
     {
       "shortName": "Docker CE CIS",
@@ -68,7 +68,7 @@
       "category": [
         "Virtual Platforms"
       ],
-      "gitHash": "f601bd2c9411ac7f6152ad331b49ecd775db9d42"
+      "gitHash": "345294adac45ebf7b727e864d9fd2744d1234af6"
     },
     {
       "shortName": "Ubuntu 16.04 STIG",
@@ -78,7 +78,7 @@
       "category": [
         "Operating Systems"
       ],
-      "gitHash": "d0875b2fbb4bfff61b8107e89a93c5549188fa29"
+      "gitHash": "4a56525199ecc0bd6ba9c18ad163264bae6112ae"
     },
     {
       "shortName": "Windows 10 STIG",
@@ -88,7 +88,7 @@
       "category": [
         "Operating Systems"
       ],
-      "gitHash": "3b12950bd94b394396075899012ea8521164a683"
+      "gitHash": "f85c9a62384405a7fe8c8202bdafeacda78a7b27"
     },
     {
       "shortName": "RSA Archer 6 SCG",
@@ -138,7 +138,7 @@
       "category": [
         "Web Servers"
       ],
-      "gitHash": "ab18203dd389e409c214b15384c8572fd760138c"
+      "gitHash": "6483621cd943592f4ddb56e2e51b5a21ca21f733"
     },
     {
       "shortName": "IIS 8.5 Site STIG",
@@ -148,7 +148,7 @@
       "category": [
         "Web Servers"
       ],
-      "gitHash": "916347f0c279de5a5a1b3e84314180cf60195328"
+      "gitHash": "a9af02f6a8421a190a6ab6083f82a2a8b5bd6868"
     },
     {
       "shortName": "NGINX Baseline",
@@ -157,7 +157,8 @@
       "svg": "inspec-blue-back-border",
       "category": [
         "Web Servers"
-      ]
+      ],
+      "gitHash": "218bafbd15c619695dfe9716ef054debf3a0f80d"
     },
     {
       "shortName": "Oracle MySQL 5.7 CIS",
@@ -167,7 +168,7 @@
       "category": [
         "Databases"
       ],
-      "gitHash": "4c8dc87af83fe089f4551d67313466f74d60aa45"
+      "gitHash": "8d5d86144c15fa7df9d8afa34af7f0ab136f7091"
     },
     {
       "shortName": "AWS RDS MySQL 5.7 CIS",
@@ -177,7 +178,7 @@
       "category": [
         "Databases"
       ],
-      "gitHash": "0ce145928ae23e1755b0534632c5c6f6cad13f3d"
+      "gitHash": "ce6494b717e8bbdbe9b601ca85621c072ed0d529"
     },
     {
       "shortName": "PostgreSQL 9.x STIG",
@@ -187,7 +188,7 @@
       "category": [
         "Databases"
       ],
-      "gitHash": "97357a8077b08603e8f2da2b1c9cc3a45af13ea0"
+      "gitHash": "9136f50250adaa59d22f842660945389a57a8c77"
     },
     {
       "shortName": "AWS RDS PostgreSQL 9.x STIG",
@@ -197,7 +198,7 @@
       "category": [
         "Databases"
       ],
-      "gitHash": "1d6f4fd9ce5141313002f4a907fe71e66074f8a2"
+      "gitHash": "12cbd79265f878bbdda4219745abeaa64dd71b96"
     },
     {
       "shortName": "MSQL 2014 Database STIG",
@@ -227,7 +228,7 @@
       "category": [
         "Databases"
       ],
-      "gitHash": "8f43257b9b8a31274cb541eb44802aa24a83beae"
+      "gitHash": "f2114c6c3392be137351b66add95c00a9f261bbe"
     },
     {
       "shortName": "AWS RDS Oracle Database 12c STIG",
@@ -247,7 +248,7 @@
       "category": [
         "Databases"
       ],
-      "gitHash": "b3025c8484e99fb9efa815530fd7c1202eef03f0"
+      "gitHash": "2696d626a661a8b60d2bd6b9f3d0a071bef76505"
     },
     {
       "shortName": "MongoDB STIG",
@@ -267,7 +268,7 @@
       "category": [
         "Cloud Service Providers"
       ],
-      "gitHash": "4ef3e71ee0e5d243dc3bfa0766a3fe8940348aa0"
+      "gitHash": "3818c5f6868e1ffc905769436ee4808323ff8659"
     },
     {
       "shortName": "AWS S3",
@@ -277,7 +278,7 @@
       "category": [
         "Cloud Service Providers"
       ],
-      "gitHash": "5a4ee7ae419bf9706f2b5583dc717b51c0903449"
+      "gitHash": "82a69e756ae8cfec4ec5a4ce3b9012cfa9196714"
     },
     {
       "shortName": "AWS RDS CIS",
@@ -327,7 +328,7 @@
       "category": [
         "Virtual Platforms"
       ],
-      "gitHash": "327ee513388dc1d5e26a7b1db27d46d256407218"
+      "gitHash": "61bc21d6699a286cc06ef84abc5734d8eb065366"
     },
     {
       "shortName": "DRAFT: VMWare vSphere VM 6.7 STIG",
@@ -337,7 +338,7 @@
       "category": [
         "Virtual Platforms"
       ],
-      "gitHash": "327ee513388dc1d5e26a7b1db27d46d256407218"
+      "gitHash": "61bc21d6699a286cc06ef84abc5734d8eb065366"
     },
     {
       "shortName": "VMWare vSphere VM 6.5 STIG",
@@ -367,7 +368,7 @@
       "category": [
         "Virtual Platforms"
       ],
-      "gitHash": "327ee513388dc1d5e26a7b1db27d46d256407218"
+      "gitHash": "61bc21d6699a286cc06ef84abc5734d8eb065366"
     },
     {
       "shortName": "DRAFT: Tomcat 8 CIS",
@@ -428,7 +429,7 @@
         "link": "https://github.com/mitre/heimdall_tools",
         "path": "Heimdall_tools/lib/data/cwe-nist-mapping.csv",
         "column": "NIST-ID",
-        "gitHash": "60d6ecaaf3e686cdeb13643da33aa2fcad145359"
+        "gitHash": "b8a784f62ef3b8f1b19c5e84321ead71fd52953d"
       }
     ]
   }
