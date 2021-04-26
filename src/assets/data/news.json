@@ -1,18 +1,18 @@
 {
     "whatsnew" : {
+        "new" : {
+            "header" : "New",
+            "content" : [
+                "Automate Manual Controls! SAF/InSpec can now address manual controls! See \"Manual Controls\" on the <a href=\"https://saf.cms.gov/#/validate\">Validate page</a>.",
+                "<a href=\"https://heimdall-tools.mitre.org/\">Heimdall-tools</a> now supports JFrog Xray, DbProtect, AWS Config, and NetSparker scan data conversion for viewing in Heimdall!",
+                "Heimdall Server supports role-based access, multi-target CAAT export, and more! Follow releases here."
+            ]
+        },
         "reminders" : {
             "header" : "Reminders",
             "content" : [
                 "Check back often to find the latest information on <a href=\"https://saf.cms.gov/#/validate\">InSpec profiles</a>, <a href='https://heimdall-tools.mitre.org/'>Heimdall-tool converters</a>, and <a href=\"https://github.com/mitre/heimdall2/releases\">Heimdall updates!</a>",
                 "<a href=\"https://heimdall-lite.cms.gov/\">Heimdall-lite.cms.gov</a> is live! CMS now has its own version of Heimdall-lite, an in-browser tool for analyzing security data!"
-            ]
-        },
-        "new" : {
-            "header" : "New",
-            "content" : [
-                "SAF/InSpec can now address manual controls! See \"Manual Controls\" on the <a href=\"https://saf.cms.gov/#/validate\">Validate page</a>.",
-                "<a href=\"https://heimdall-tools.mitre.org/\">Heimdall-tools</a> now supports JFrog Xray, DbProtect, AWS Config, and NetSparker scan data conversion for viewing in Heimdall!",
-                "Heimdall Server supports role-based access, multi-target CAAT export, and more! Follow releases here."
             ]
         },
         "coming-soon" : {
