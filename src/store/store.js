@@ -113,7 +113,7 @@ export default new Vuex.Store({
         }
       }, */
       {
-        text: "What's New",
+        text: "What's New [Now Automate Manual Controls!]",
         to: "/whats-new",
         icon: "mdi-newspaper",
         meta: {
