@@ -1,18 +1,25 @@
 <template>
-  <v-container fluid class="ma-2">
-    <RSVPBlock />
-    <span v-html="newsData.content"></span>
-    <ul>
-      <li v-for="(bullet, index) in newsData.bullets" :key="index">
-        {{ bullet }}
-      </li>
-    </ul>
+  <v-container fluid class="ma-0">
+    <!-- <RSVPBlock /> -->
+
+    <div v-for="(section, index) in newsData.whatsnew" :key="index">
+      
+      <h2>{{ section.header }}</h2>
+      <p>
+
+      <ul>
+        <li v-for="(bullet, index) in section.content" :key="index">
+          <span v-html="bullet"></span>
+        </li>
+      </ul>
+      </p>
+    </div>
   </v-container>
 </template>
 
 <script>
 import newsData from "@/assets/data/news.json";
-import RSVPBlock from "@/components/training/RSVPBlock.vue"
+// import RSVPBlock from "@/components/training/RSVPBlock.vue"
 export default {
   data() {
     return {
@@ -20,7 +27,7 @@ export default {
     };
   },
   components: {
-    RSVPBlock
+    // RSVPBlock
   },
 };
 </script>
