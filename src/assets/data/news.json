@@ -3,21 +3,21 @@
         "reminders" : {
             "header" : "Reminders",
             "content" : [
-                "Check back often to find the latest information on <a href=\"https://saf.cms.gov/#/validate\">InSpec profiles</a>, <a href='https://heimdall-tools.mitre.org/'>Heimdall-tool converters</a>, and <a href=\"https://github.com/mitre/heimdall2/releases\">Heimdall updates!</a>"
+                "Check back often to find the latest information on <a href=\"https://saf.cms.gov/#/validate\">InSpec profiles</a>, <a href='https://heimdall-tools.mitre.org/'>Heimdall-tool converters</a>, and <a href=\"https://github.com/mitre/heimdall2/releases\">Heimdall updates!</a>",
+                "<a href=\"https://heimdall-lite.cms.gov/\">Heimdall-lite.cms.gov</a> is live! CMS now has its own version of Heimdall-lite, an in-browser tool for analyzing security data!"
             ]
         },
         "new" : {
             "header" : "New",
             "content" : [
-                "<a href=\"https://heimdall-lite.cms.gov/\">Heimdall-lite.cms.gov</a> is live! CMS now has its own version of Heimdall-lite, an in-browser tool for analyzing security data!",
-                "<a href=\"https://heimdall-tools.mitre.org/\">Heimdall-tools</a> supports JFrog Xray scan data conversion for viewing in Heimdall!",
-                "Updated <a href=\"https://github.com/CMSgov/cms-ars-3.1-moderate-aws-rds-oracle-mysql-ee-5.7-cis-overlay\">AWS RDS MySQL InSpec profile</a> to align to RDS conventions and improve README instructions"
+                "SAF/InSpec can now address manual controls! See \"Manual Controls\" on the <a href=\"https://saf.cms.gov/#/validate\">Validate page</a>.",
+                "<a href=\"https://heimdall-tools.mitre.org/\">Heimdall-tools</a> now supports JFrog Xray, DbProtect, AWS Config, and NetSparker scan data conversion for viewing in Heimdall!",
+                "Heimdall Server supports role-based access, multi-target CAAT export, and more! Follow releases here."
             ]
         },
         "coming-soon" : {
             "header" : "Coming Soon",
             "content" : [
-                "Heimdall Server support for groups-based role-based access control and additional authentication integrations. Follow releases <a href=\"https://github.com/mitre/heimdall2/releases\">here</a>.",
                 "An AWS Lambda runner for InSpec – convenient scans without having to set up a runner!"
             ]
         }
