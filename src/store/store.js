@@ -72,7 +72,7 @@ export default new Vuex.Store({
         },
       },
       {
-        text: "Train [InSpec Training in March!]",
+        text: "Train",
         to: "/train",
         icon: "mdi-chair-school",
         meta: {

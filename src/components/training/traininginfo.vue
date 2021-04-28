@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="pa-0">
+  <v-container fluid class="pa-2">
     <v-row align="center" justify="center" class="ma-0">
       <v-col class="pa-0">
         <p class="primary--text mb-2" style="font-size: 1.5rem">
@@ -9,7 +9,7 @@
     </v-row>
 
     <v-row align="center" justify="center" class="ma-0">
-      <v-col v-for="(course, i) in trainingData.courses" :key="i" class="pa-0 ps-2" style="border-left: 1px solid var(--v-primary-base)">
+      <v-col v-for="(course, i) in trainingData.courses" :key="i" class="pa-2" style="border-left: 1px solid var(--v-primary-base)">
         <a :href="course.link" target="_blank" style="font-size: 1.25rem">{{course.name}}</a>
         <p class="my-2">{{course.desc}}</p>
         <ul>
@@ -36,7 +36,7 @@
         <p class="ma-0 pa-0">{{item.name}}</p>
       </v-col>
     </v-row> -->
-    <RSVPBlock class="mt-4" />
+    <!-- <RSVPBlock class="mt-4" /> -->
 
     <v-row align="center" justify="center" class="ma-0 mt-2">
       <v-col class="pa-0">
@@ -44,14 +44,14 @@
           <b>Past Training Sessions</b>
         </p>
         <p
-          class="ma-0"
+          class="ma-0 px-2"
         >Trainings are listed in chronological order by date.</p>
-        <p class="ma-0">
+        <p class="ma-0 px-2">
           <b>Note:</b> Video recordings of these trainings will be made available once they are edited for presentability.
         </p>
       </v-col>
     </v-row>
-    <v-row :class="color_mode" class="ma-0 mb-3" style="height: 10rem">
+    <v-row :class="color_mode" class="ma-0 mb-6 mt-3" style="height: 10rem">
       <v-col class="pa-0">
         <v-slide-group show-arrows class="py-3">
           <v-slide-item v-for="(item, i) in pastTrainings" :key="i">
@@ -113,7 +113,7 @@
 import communityData from "@/assets/data/communityData.json";
 import trainingData from "@/assets/data/trainingData.json";
 import resources from "@/assets/data/resources.json";
-import RSVPBlock from "@/components/training/RSVPBlock.vue"
+// import RSVPBlock from "@/components/training/RSVPBlock.vue"
 export default {
   name: "App",
   data: () => ({
@@ -136,9 +136,9 @@ export default {
       return this.trainingData.pastTraining.introTraining.concat(this.trainingData.pastTraining.advTraining);
     },
   },
-  components: {
-    RSVPBlock
-  },
+  // components: {
+  //   RSVPBlock
+  // },
   methods: {
     passItemData(item) {
       this.dialogData = item;
