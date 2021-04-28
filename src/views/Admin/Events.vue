@@ -33,12 +33,13 @@
             :loading="loading" 
             loading-text="Loading... Please wait"
             >
-                <template v-slot:item.status="{ item }">
+                <!-- <template v-slot:item.status="{ item }"> -->
+                <template v-slot:item="{ item }">
                     <v-chip v-if="item.status == true" class="green" small dark>Upcoming</v-chip>
                     <v-chip v-else class="red" small dark>Past</v-chip>
-                </template>
+                <!-- </template>
 
-                <template v-slot:item.link="{ item }">
+                <template v-slot:item.link="{ item }"> -->
                     <a :href="item.link" target="_blank" style="text-decoration:none">See More</a>
                 </template>
             </v-data-table>

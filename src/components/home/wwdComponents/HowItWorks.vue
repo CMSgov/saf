@@ -6,7 +6,6 @@
     <v-row justify="center" v-for="(row, n) in data" :key="n">
       <v-col cols="1" v-if="$vuetify.breakpoint.smAndUp">
         <v-card
-          v-resize="goals"
           flat
           class="primary--text"
           color="rgba(0, 0, 0, 0.0)"
@@ -151,9 +150,9 @@ export default {
       data: howitworks.rows,
     };
   },
-  created : {
-    imgVersion : '-Dark'
-  },
+  // created() {
+  //   imgVersion : '-Dark'
+  // },
   methods: {
     getHighlight() {
       return {
