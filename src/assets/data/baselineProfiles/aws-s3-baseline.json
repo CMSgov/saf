@@ -6,7 +6,7 @@
   "copyright_email": "inspec@mitre.org",
   "license": "Apache-2.0",
   "summary": "InSpec validation example baseline profile for AWS S3 - to test if you have public buckets",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "inspec_version": ">= 4.0",
   "supports": [
     {
@@ -87,7 +87,7 @@
       "id": "controls/aws_s3_bucket_objects.rb"
     }
   ],
-  "sha256": "1084323f22ea724c9dc818956d5292006e1330fe8f58e83e8ca9845de4ae42ad",
+  "sha256": "8f90154b1357a926b6ee505924ec9fbe7d4f7996088093a5cf0bc7917f909085",
   "status_message": "",
   "status": "loaded",
   "generator": {

@@ -1,13 +1,12 @@
 {
   "name": "aws-rds-oracle-mysql-ee-5.7-cis-baseline",
-  "title": "CIS baseline for AWS RDS Mysql server enterprise edition 5.7",
+  "title": "aws-rds-oracle-mysql-ee-5.7-cis-baseline",
   "maintainer": "MITRE InSpec Team",
   "copyright": "The MITRE Corporation, 2018",
   "copyright_email": ".",
-  "summary": "The AWS RDS Mysql Server Enterprise Edition Benchmark InSpec profile.",
+  "summary": "InSpec Validation Profile for AWS RDS Mysql server enterprise edition 5.7 CIS",
   "license": "Apache-2.0",
-  "Description": "An InSpec Compliance Profile.",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "inspec_version": ">= 4.0",
   "depends": [
     {
@@ -2322,7 +2321,7 @@
       "id": "oracle-mysql-ee-5.7-cis-baseline-master/controls/9.5.rb"
     }
   ],
-  "sha256": "bb9e17b6e7ce3d31a18598d13f3ecb16706c3c55cd603331177e0e93deea45ee",
+  "sha256": "c24ee5f627468d3deaed268059ea0af1e52fc3f4cb417005018df65901cbc983",
   "status_message": "",
   "status": "loaded",
   "generator": {

@@ -1,13 +1,13 @@
 {
   "name": "aws-rds-crunchy-data-postgresql-9-stig-baseline",
-  "title": "STIG Baseline for AWS RDS PostgreSQL 9.x",
+  "title": "aws-rds-crunchy-data-postgresql-9-stig-baseline",
   "maintainer": "MITRE InSpec Team",
   "copyright": "The MITRE Corporation, 2018",
   "copyright_email": "opensource@mitre.org",
-  "summary": "The AWS RDS PostgreSQL 9.x InSpec profile.",
+  "summary": "Inspec Validation Profile for AWS RDS PostgreSQL 9.x STIG",
   "license": "Apache-2.0",
   "Description": "An InSpec Compliance Profile.",
-  "version": "1.6.17",
+  "version": "1.7.0",
   "inspec_version": ">= 4.0",
   "depends": [
     {
@@ -5782,7 +5782,7 @@
       "id": "pgstigcheck-inspec-master/controls/V-73123.rb"
     }
   ],
-  "sha256": "980e142c3d9314eed9321d634b282c437fd501fb906a3e975aca340fcfcffafa",
+  "sha256": "823ef544f49c6ab18fe3d663f525485e5816a72113bed4b1d6a90cae9ee4ab26",
   "status_message": "",
   "status": "loaded",
   "generator": {

@@ -1,12 +1,12 @@
 {
   "name": "aws-rds-microsoft-sql-server-2014-instance-stig-baseline",
-  "title": "STIG Baseline for AWS RDS Microsoft SQL Server 2014",
+  "title": "aws-rds-microsoft-sql-server-2014-instance-stig-baseline",
   "maintainer": "MITRE InSpec Team",
   "copyright": "The MITRE Corporation, 2018",
   "copyright_email": "opensource@mitre.org",
-  "summary": "An InSpec Compliance Profile",
+  "summary": "Inspec Validation Profile for AWS RDS Microsoft SQL Server 2014 STIG",
   "license": "Apache-2.0",
-  "version": "1.9.1",
+  "version": "1.9.2",
   "inspec_version": ">= 4.0",
   "depends": [
     {
@@ -4537,7 +4537,7 @@
     }
   ],
   "inputs": [],
-  "sha256": "07d27303450e37e7e77474c9160938cba56460900ebde8d964f6be66b07eb840",
+  "sha256": "4011d714b4bed0a989f8adfdd761548a2f84cdb904247e20014103f6babd4664",
   "status_message": "",
   "status": "loaded",
   "generator": {
