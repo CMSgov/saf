@@ -2,14 +2,13 @@
   <v-container fluid class="pa-2">
     <v-row align="center" justify="center" class="ma-0">
       <v-col class="pa-0">
-        <p class="primary--text mb-2" style="font-size: 1.5rem">
-          <b>Training Courses Currently Offered</b>
-        </p>
+        <p class="header">Training Courses Currently Offered</p>
+        <p class="ma-2">The MITRE SAF team regularly offers training courses for developing automated validations tests using InSpec. Dates and sign-up links for courses are posted when training dates are finalized.</p>
       </v-col>
     </v-row>
 
-    <v-row align="center" justify="center" class="ma-0">
-      <v-col v-for="(course, i) in trainingData.courses" :key="i" class="pa-2" style="border-left: 1px solid var(--v-primary-base)">
+    <v-row align="center" justify="center" class="ma-2">
+      <v-col v-for="(course, i) in trainingData.courses" :key="i" class="pa-2 ma-2" style="border-left: 1px solid var(--v-primary-base)">
         <a :href="course.link" target="_blank" style="font-size: 1.25rem">{{course.name}}</a>
         <p class="my-2">{{course.desc}}</p>
         <ul>
@@ -38,10 +37,10 @@
     </v-row> -->
     <!-- <RSVPBlock class="mt-4" /> -->
 
-    <v-row align="center" justify="center" class="ma-0 mt-2">
+<!--     <v-row align="center" justify="center" class="ma-0 mt-2">
       <v-col class="pa-0">
         <p class="primary--text my-2" style="font-size: 1.5rem">
-          <b>Past Training Sessions</b>
+          <b>Training Recordings</b>
         </p>
         <p
           class="ma-0 px-2"
@@ -50,8 +49,8 @@
           <b>Note:</b> Video recordings of these trainings will be made available once they are edited for presentability.
         </p>
       </v-col>
-    </v-row>
-    <v-row :class="color_mode" class="ma-0 mb-6 mt-3" style="height: 10rem">
+    </v-row> -->
+<!--     <v-row :class="color_mode" class="ma-0 mb-6 mt-3" style="height: 10rem">
       <v-col class="pa-0">
         <v-slide-group show-arrows class="py-3">
           <v-slide-item v-for="(item, i) in pastTrainings" :key="i">
@@ -105,7 +104,7 @@
           </v-slide-item>
         </v-slide-group>
       </v-col>
-    </v-row>
+    </v-row> -->
   </v-container>
 </template>
 
@@ -118,7 +117,7 @@ export default {
   name: "App",
   data: () => ({
     communityData: communityData,
-    trainingData: trainingData.training[0],
+    trainingData: trainingData.training,
     resources: resources,
     dialog: false,
     dialogData: {
@@ -132,9 +131,9 @@ export default {
       if (this.$vuetify.theme.dark) return "darkModeContainer";
       return "lightModeContainer";
     },
-    pastTrainings() {
-      return this.trainingData.pastTraining.introTraining.concat(this.trainingData.pastTraining.advTraining);
-    },
+    // pastTrainings() {
+    //   return this.trainingData.pastTraining.introTraining.concat(this.trainingData.pastTraining.advTraining);
+    // },
   },
   // components: {
   //   RSVPBlock

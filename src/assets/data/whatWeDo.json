@@ -5,7 +5,7 @@
       "sectionHeader": "When To Use It",
       "sectionDesc" : "Develop and programmatically automate security in planning, development, assessment, and operational activities",
       "images": [
-        { "filename": "whenToUseIt", "router_link": "gettingstarted" }
+        { "filename": "whenToUseIt" }
       ],
       "items": [
         {
@@ -14,8 +14,7 @@
           "bullets" : [
             "Identify applicable security and privacy requirements",
             "Assess development best practices guidance",
-            "Identify MITRE SAF tools to support development, assessment, & operations security processes",
-            "Become a participant through the Continuous Collaboration Agreement"
+            "Identify MITRE SAF tools to support development, assessment, & operations security processes"
           ]
         },
         {

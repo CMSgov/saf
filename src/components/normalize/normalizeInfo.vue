@@ -53,16 +53,6 @@ export default {
 </script>
 
 <style scoped>
-.header {
-  font-size: 150%;
-  font-weight: bold;
-  color: #1a73e8;
-}
-.subheader {
-  font-size: 125%;
-  font-weight: bold;
-  color: #1a73e8;
-}
 
 code {
   background-color: #292929;

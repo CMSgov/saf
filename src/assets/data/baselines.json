@@ -291,8 +291,8 @@
       "gitHash": "9ea0a5644f6962bda8df73a50ebca0dc8bfca371"
     },
     {
-      "shortName": "DRAFT: GCP PCI-DSS 3.2.1",
-      "longName": "DRAFT: Google Cloud Platform PCI-DSS 3.2.1",
+      "shortName": "GCP PCI-DSS 3.2.1",
+      "longName": "Google Cloud Platform PCI-DSS 3.2.1",
       "link": "https://github.com/GoogleCloudPlatform/inspec-gcp-pci-profile",
       "svg": "inspec-blue-back-border",
       "category": [
@@ -301,8 +301,8 @@
       "gitHash": "0"
     },
     {
-      "shortName": "DRAFT: GCP CIS Benchmark",
-      "longName": "DRAFT: Google Cloud Platform CIS Benchmark",
+      "shortName": "GCP CIS Benchmark",
+      "longName": "Google Cloud Platform CIS Benchmark",
       "link": "https://github.com/GoogleCloudPlatform/inspec-gcp-cis-benchmark",
       "svg": "inspec-blue-back-border",
       "category": [
@@ -311,8 +311,8 @@
       "gitHash": "0"
     },
     {
-      "shortName": "DRAFT: GKE CIS Benchmark",
-      "longName": "DRAFT: Google Kubernetes Engine CIS Benchmark",
+      "shortName": "GKE CIS Benchmark",
+      "longName": "Google Kubernetes Engine CIS Benchmark",
       "link": "https://github.com/GoogleCloudPlatform/inspec-gke-cis-benchmark",
       "svg": "inspec-blue-back-border",
       "category": [
@@ -321,8 +321,8 @@
       "gitHash": "0"
     },
     {
-      "shortName": "DRAFT: VMWare ESXI 6.7 STIG",
-      "longName": "DRAFT: VMWare ESXI 6.7 STIG",
+      "shortName": "VMWare ESXI 6.7 STIG",
+      "longName": "VMWare ESXI 6.7 STIG",
       "link": "https://github.com/vmware/dod-compliance-and-automation/tree/master/vsphere/6.7/vsphere/inspec/vmware-esxi-6.7-stig-baseline",
       "svg": "inspec-blue-back-border",
       "category": [
@@ -331,8 +331,8 @@
       "gitHash": "61bc21d6699a286cc06ef84abc5734d8eb065366"
     },
     {
-      "shortName": "DRAFT: VMWare vSphere VM 6.7 STIG",
-      "longName": "DRAFT: VMware vSphere Virtual Machines version 6.7 STIG",
+      "shortName": "VMWare vSphere VM 6.7 STIG",
+      "longName": "VMware vSphere Virtual Machines version 6.7 STIG",
       "link": "https://github.com/vmware/dod-compliance-and-automation/tree/master/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline",
       "svg": "inspec-blue-back-border",
       "category": [
@@ -361,8 +361,8 @@
       "gitHash": "2967554bf747766e5251720ba1329866129ec9c0"
     },
     {
-      "shortName": "DRAFT: VMWare VCSA 6.7 STIG",
-      "longName": "DRAFT: VMware vCenter Service Appliance version 6.7",
+      "shortName": "VMWare VCSA 6.7 STIG",
+      "longName": "VMware vCenter Service Appliance version 6.7",
       "link": "https://github.com/vmware/dod-compliance-and-automation/tree/master/vsphere/6.7/vcsa/inspec/vmware-vcsa-6.7-stig-baseline",
       "svg": "inspec-blue-back-border",
       "category": [
