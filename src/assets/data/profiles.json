@@ -305,22 +305,6 @@
       ]
     },
     {
-      "name": "Docker CE CIS",
-      "category": [
-        "Operating Systems"
-      ],
-      "links" : [
-        {
-          "name": "ARS 3.1 Moderate",
-          "fips": [
-            "mod"
-          ],
-          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-docker-ce-cis-overlay",
-          "svg": "inspec-blue-black-border"
-        }
-      ]
-    },
-    {
       "name": "MongoDB STIG",
       "category": [
         "Databases"
@@ -564,6 +548,102 @@
             "high"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-high-manual-controls-overlay",
+          "svg": "inspec-blue-black-border"
+        }
+      ]
+    },
+    {
+      "name": "Docker CE CIS",
+      "category": [
+        "Virtual Platforms"
+      ],
+      "links" : [
+        {
+          "name": "ARS 3.1 Moderate",
+          "fips": [
+            "mod"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-docker-ce-cis-overlay",
+          "svg": "inspec-blue-black-border"
+        }
+      ]
+    },
+    {
+      "name": "VMWare ESXI 6.7 STIG",
+      "category": [
+        "Virtual Platforms"
+      ],
+      "links" : [
+        {
+          "name": "VMWare ESXI 6.7 STIG Baseline",
+          "fips": [
+            "none"
+          ],
+          "link": "https://github.com/vmware/dod-compliance-and-automation/tree/master/vsphere/6.7/vsphere/inspec/vmware-esxi-6.7-stig-baseline",
+          "svg": "inspec-blue-black-border"
+        }
+      ]
+    },
+    {
+      "name": "VMWare vSphere 6.7 STIG",
+      "category": [
+        "Virtual Platforms"
+      ],
+      "links" : [
+        {
+          "name": "VMWare vSphere 6.7 STIG Baseline",
+          "fips": [
+            "none"
+          ],
+          "link": "https://github.com/vmware/dod-compliance-and-automation/tree/master/vsphere/6.7/vsphere/inspec/vmware-vm-6.7-stig-baseline",
+          "svg": "inspec-blue-black-border"
+        }
+      ]
+    },
+    {
+      "name": "VMWare vSphere VM 6.5 STIG",
+      "category": [
+        "Virtual Platforms"
+      ],
+      "links" : [
+        {
+          "name": "VMWare vSphere VM 6.5 STIG Baseline",
+          "fips": [
+            "none"
+          ],
+          "link": "https://github.com/kclinden/vmware-vsphere-65-virtual-machine-stig-baseline",
+          "svg": "inspec-blue-black-border"
+        }
+      ]
+    },
+    {
+      "name": "VMWare ESXI 6.5 STIG",
+      "category": [
+        "Virtual Platforms"
+      ],
+      "links" : [
+        {
+          "name": "VMWare ESXI 6.5 STIG Baseline",
+          "fips": [
+            "none"
+          ],
+          "link": "https://github.com/kclinden/vmware-esxi-6.5-stig-baseline",
+          "svg": "inspec-blue-black-border"
+        }
+      ]
+    },
+    {
+      "name": "VMWare VCSA 6.7 STIG",
+      "category": [
+        "Virtual Platforms"
+      ],
+      "links" : [
+        {
+          "name": "VMWare VCSA 6.7 STIG Baseline",
+          "fips": [
+            "none"
+          ],
+          "link": "https://github.com/vmware/dod-compliance-and-automation/tree/master/vsphere/6.7/vcsa/inspec/vmware-vcsa-6.7-stig-baseline",
           "svg": "inspec-blue-black-border"
         }
       ]

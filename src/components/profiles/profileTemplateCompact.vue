@@ -54,6 +54,7 @@ export default {
       categoryOrder: [
         "Manual Controls",
         "Cloud Service Providers",
+        "Virtual Platforms",
         "Operating Systems",
         "Databases",
         "Application Logic",
