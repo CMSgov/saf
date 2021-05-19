@@ -406,7 +406,7 @@
       "link": "https://github.com/mitre/kubernetes-cis-baseline",
       "svg": "inspec-blue-back-border",
       "category": [
-        "Application Logic"
+        "Virtual Platforms"
       ],
       "gitHash": "f820e6c9f3f165ffd3150fb2cd0d7d065a404023"
     },
