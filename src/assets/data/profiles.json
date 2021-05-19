@@ -647,6 +647,22 @@
           "svg": "inspec-blue-black-border"
         }
       ]
+    },
+    {
+      "name": "Kubernetes CIS",
+      "category": [
+        "Virtual Platforms"
+      ],
+      "links" : [
+        {
+          "name": "Kubernetes CIS Benchmark",
+          "fips": [
+            "none"
+          ],
+          "link": "https://github.com/mitre/kubernetes-cis-baseline",
+          "svg": "inspec-blue-black-border"
+        }
+      ]
     }
   ]
 }
