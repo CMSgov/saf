@@ -59,9 +59,9 @@
       <div justify="center" v-show="item.shields" class="mt-2">
         <img v-for="shield in item.shields" :key="shield" class="ms-2" :src="shield" />
       </div>
-      <v-card-actions v-if="(item.app_link || item.doc_link || item.github_link)" class="pa-0">
+      <v-card-actions v-if="(item.app_link || item.doc_link || item.github_link)" >
         <v-container row dense>
-          <v-row justify="center">
+          <v-row justify="center" align="">
             <v-tooltip top>
               <template v-slot:activator="{ on }">
                 <v-btn

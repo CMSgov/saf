@@ -66,8 +66,7 @@
           "tools": "",
           "shields": [
             "https://img.shields.io/github/v/tag/mitre/heimdall2?label=version",
-            "https://img.shields.io/npm/dt/heimdall2?label=npm%20downloads",
-            "https://img.shields.io/docker/pulls/mitre/heimdall2?label=docker%20hub%20pulls"
+            "https://img.shields.io/npm/dt/heimdall-lite?label=npm%20downloads"
           ]
         },
         {
@@ -83,7 +82,6 @@
           "tools": "",
           "shields": [
             "https://img.shields.io/github/v/tag/mitre/heimdall2?label=version",
-            "https://img.shields.io/npm/dt/heimdall2?label=npm%20downloads",
             "https://img.shields.io/docker/pulls/mitre/heimdall2?label=docker%20hub%20pulls"
           ]
         },
@@ -92,7 +90,7 @@
           "link": "",
           "desc": "Application for streamlining InSpec profile and overlay development using the Security Requirements Guide (SRG)",
           "icon": "",
-          "app_link": "https://vulcan-demo.mitre.org",
+          "app_link": "",
           "app_svg": "app",
           "doc_link": "https://vulcan.mitre.org",
           "github_link": "https://github.com/mitre/vulcan",
