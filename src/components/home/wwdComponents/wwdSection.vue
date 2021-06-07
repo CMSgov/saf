@@ -17,6 +17,9 @@
         </v-card>
       </v-col>
     </v-row>
+    <v-row justify="center" v-if="topic.chevrons" class="d-flex">
+        <Chevrons :chevrons="topic.chevrons" />
+    </v-row>
     <v-row justify="center">
       <v-col
         v-for="(item, i) in topic.items"
@@ -36,9 +39,11 @@
 
 <script>
 import wwdBasicCard from "@/components/home/wwdComponents/wwdBasicCard.vue";
+import Chevrons from "@/components/home/wwdComponents/Chevrons.vue"
 export default {
   components: {
-    wwdBasicCard
+    wwdBasicCard,
+    Chevrons
   },
   props: {
     topic: Object,
