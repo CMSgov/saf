@@ -1,12 +1,11 @@
 <template>
   <v-container class style="width:100%">
-    <v-row align="center" justify="center" style>
+    <v-row align="center" justify="center" class="my-4">
       <p class="primary--text ma-0" style="font-size:300%">How CMS SAF Works</p>
     </v-row>
     <v-row justify="center" v-for="(row, n) in data" :key="n">
       <v-col cols="1" v-if="$vuetify.breakpoint.smAndUp">
         <v-card
-          v-resize="goals"
           flat
           class="primary--text"
           color="rgba(0, 0, 0, 0.0)"
@@ -151,9 +150,9 @@ export default {
       data: howitworks.rows,
     };
   },
-  created : {
-    imgVersion : '-Dark'
-  },
+  // created : {
+  //   imgVersion : '-Dark'
+  // },
   methods: {
     getHighlight() {
       return {

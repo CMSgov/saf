@@ -18,8 +18,8 @@
             md="4"
             lg="4"
             xl="4"
-            v-for="item in mission.items"
-            :key="item"
+            v-for="(item, index) in mission.items"
+            :key="index"
           >
             <div class="google-font title" style="text-align: center">
               {{ make_readable(item.name) }}

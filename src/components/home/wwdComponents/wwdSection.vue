@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <v-row align="center" justify="center" v-if="topic.sectionHeader">
+    <v-row align="center" justify="center" v-if="topic.sectionHeader" class="my-4">
       <p class=" ma-4 tool-header">{{ topic.sectionHeader }}</p>
     </v-row>
     <v-row align="center" justify="center" v-if="topic.sectionDesc">
