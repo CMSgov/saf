@@ -7,10 +7,14 @@
         </Header>
       </v-col>
     </v-row>
-
-    <v-row justify="center" align="center" class="mx-0">
-      <v-col cols="12" lg="10" class="pa-0">
-        <pilotsInfo />
+    <v-row justify="center" align="center" class="py-0 my-0">
+      <v-col md="12" lg="10" xs="12" class="py-3">
+        <div class="ml-2">
+          <p>
+            CMS SAF techniques and tools have seen wide adoption by CMS teams. Our pilot programs include:
+          </p>
+          <pilotsInfo />
+        </div>
       </v-col>
     </v-row>
   </v-container>

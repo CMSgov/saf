@@ -1,21 +1,10 @@
 <template>
-  <v-container fluid>
-    <v-simple-table>
-      <template v-slot:default>
-        <thead>
-          <tr>
-            <th class="text-left  title">Team</th>
-            <th class="text-left  title">Scope</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="pilot in pilots.pilots" :key="pilot.name" class="">
-            <td class="subtitle-1">{{ pilot.name }}</td>
-            <td class="body-2">{{ pilot.scope }}</td>
-          </tr>
-        </tbody>
-      </template>
-    </v-simple-table>
+  <v-container fluid class="py-0">
+    <v-col cols="6" mdAndDown="12">
+      <v-chip-group column>
+        <v-card v-for="(pilot, index) in pilots.pilots" :key="index" outlined class="ma-2 pa-4">{{pilot.name}}</v-card>
+      </v-chip-group>
+    </v-col>
   </v-container>
 </template>
 
