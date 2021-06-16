@@ -7,8 +7,8 @@ import communityData from "./assets/data/communityData.json";
 Vue.use(Router);
 
 const router = new Router({
-//  mode: "history",
-//  base: process.env.BASE_URL,
+  //  mode: "history",
+  //  base: process.env.BASE_URL,
   scrollBehavior() {
     return { x: 0, y: 0 };
   },
@@ -20,18 +20,18 @@ const router = new Router({
       meta: {
         title: "Home | " + communityData.communityName,
         color: "#0277bd",
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
-        {
+    {
       path: "/about",
       name: "about",
       component: () => import("./views/About.vue"),
       meta: {
         title: "About | " + communityData.communityName,
         color: "#0277bd",
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
     {
       path: "/events",
@@ -40,8 +40,8 @@ const router = new Router({
       meta: {
         title: "Events | " + communityData.communityName,
         color: "#0277bd",
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
     // {
     //   path: "/team",
@@ -70,8 +70,8 @@ const router = new Router({
       meta: {
         title: "Contact | " + communityData.communityName,
         color: "#0277bd",
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
     {
       path: "/partners",
@@ -80,8 +80,8 @@ const router = new Router({
       meta: {
         title: "Partners | " + communityData.communityName,
         color: "#0277bd",
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
     {
       path: "/events/:id",
@@ -90,18 +90,18 @@ const router = new Router({
       meta: {
         title: "Event Name | " + communityData.communityName,
         color: "#0277bd",
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
     {
-      path: '/team/:id',
-      name: 'team-details',
-      component: () => import( './views/ViewTeam.vue'),
-      meta:{
-        title:'Team | '+communityData.CommunityName,
-        color:'#0277bd',
-        requiresAuth:false
-      }
+      path: "/team/:id",
+      name: "team-details",
+      component: () => import("./views/ViewTeam.vue"),
+      meta: {
+        title: "Team | " + communityData.CommunityName,
+        color: "#0277bd",
+        requiresAuth: false,
+      },
     },
     {
       path: "/admin",
@@ -110,8 +110,8 @@ const router = new Router({
       meta: {
         title: `Admin Login | ${communityData.communityName}`,
         color: "#0277bd",
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
     {
       path: "/dashboard",
@@ -120,8 +120,8 @@ const router = new Router({
       meta: {
         title: `Admin Dashboard | ${communityData.communityName}`,
         color: "#0277bd",
-        requiresAuth: true
-      }
+        requiresAuth: true,
+      },
     },
     {
       path: "/validate",
@@ -180,18 +180,18 @@ const router = new Router({
       meta: {
         title: `Normalize | ${communityData.communityName}`,
         color: "#0277bd",
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
     {
-      path: "/pilots",
-      name: "pilots",
-      component: () => import("@/views/Pilots.vue"),
+      path: "/CMSTeams",
+      name: "CMSTeams",
+      component: () => import("@/views/CMSTeams.vue"),
       meta: {
-        title: `Pilots | ${communityData.communityName}`,
+        title: `CMSTeams | ${communityData.communityName}`,
         color: "#0277bd",
-        requiresAuth: false
-      }
+        requiresAuth: false,
+      },
     },
     // {
     //   path: '/demo',
@@ -204,64 +204,64 @@ const router = new Router({
     //   }
     // },
     {
-      path:'/admin/dashboard/events',
-      name:"admin-events",
-      component:()=> import('@/views/Admin/Events'),
-      meta:{
-        title:`Admin Dashboard | ${communityData.CommunityName}`,
-        color:"#0277bd",
+      path: "/admin/dashboard/events",
+      name: "admin-events",
+      component: () => import("@/views/Admin/Events"),
+      meta: {
+        title: `Admin Dashboard | ${communityData.CommunityName}`,
+        color: "#0277bd",
         requiresAuth: true,
-      }
+      },
     },
     {
-      path:'/admin/dashboard/team',
-      name:"admin-team",
-      component:()=> import('@/views/Admin/Team'),
-      meta:{
-        title:`Admin Dashboard | ${communityData.CommunityName}`,
-        color:"#0277bd",
+      path: "/admin/dashboard/team",
+      name: "admin-team",
+      component: () => import("@/views/Admin/Team"),
+      meta: {
+        title: `Admin Dashboard | ${communityData.CommunityName}`,
+        color: "#0277bd",
         requiresAuth: true,
-      }
+      },
     },
     {
-      path:'/admin/dashboard/team/:id',
-      name:"admin-team-member",
-      component:()=> import('@/views/Admin/Team/showTeam'),
-      meta:{
-        title:`Admin Dashboard | ${communityData.CommunityName}`,
-        color:"#0277bd",
+      path: "/admin/dashboard/team/:id",
+      name: "admin-team-member",
+      component: () => import("@/views/Admin/Team/showTeam"),
+      meta: {
+        title: `Admin Dashboard | ${communityData.CommunityName}`,
+        color: "#0277bd",
         requiresAuth: true,
-      }
+      },
     },
     {
-      path:'/admin/dashboard/speaker',
-      name:"admin-speakers",
-      component:()=> import('@/views/Admin/Speaker'),
-      meta:{
-        title:`Admin Dashboard | ${communityData.CommunityName}`,
-        color:"#0277bd",
+      path: "/admin/dashboard/speaker",
+      name: "admin-speakers",
+      component: () => import("@/views/Admin/Speaker"),
+      meta: {
+        title: `Admin Dashboard | ${communityData.CommunityName}`,
+        color: "#0277bd",
         requiresAuth: true,
-      }
+      },
     },
     {
-      path:'/admin/dashboard/speaker/:id',
-      name:"admin-speaker-member",
-      component:()=> import('@/views/Admin/Speaker/viewSpeaker'),
-      meta:{
-        title:`Admin Dashboard | ${communityData.CommunityName}`,
-        color:"#0277bd",
+      path: "/admin/dashboard/speaker/:id",
+      name: "admin-speaker-member",
+      component: () => import("@/views/Admin/Speaker/viewSpeaker"),
+      meta: {
+        title: `Admin Dashboard | ${communityData.CommunityName}`,
+        color: "#0277bd",
         requiresAuth: true,
-      }
+      },
     },
     {
-      path:'/whats-new',
-      name:"whats-new",
-      component:()=> import('@/views/News.vue'),
-      meta:{
-        title:`What's New | ${communityData.CommunityName}`,
-        color:"#0277bd",
-        requiresAuth: false
-      }
+      path: "/whats-new",
+      name: "whats-new",
+      component: () => import("@/views/News.vue"),
+      meta: {
+        title: `What's New | ${communityData.CommunityName}`,
+        color: "#0277bd",
+        requiresAuth: false,
+      },
     },
     // {
     //   path:'/news/:date',
@@ -274,39 +274,39 @@ const router = new Router({
     // },
     {
       path: "/validation",
-      redirect: "/validate"
+      redirect: "/validate",
     },
     {
       path: "/implementation",
-      redirect: "/implement"
+      redirect: "/implement",
     },
     {
       path: "/gettingstarted",
-      redirect: "/getstarted"
+      redirect: "/getstarted",
     },
     {
       path: "/training",
-      redirect: "/train"
+      redirect: "/train",
     },
-    { path: '/hdf', redirect: { name: 'normalize' }},
+    { path: "/hdf", redirect: { name: "normalize" } },
     {
-      path: '*',
-      name: 'redirect',
-      redirect: { path: '/' },
-      meta:{
-        title:`Redirect | ${communityData.CommunityName}`,
-        color:"#0277bd",
+      path: "*",
+      name: "redirect",
+      redirect: { path: "/" },
+      meta: {
+        title: `Redirect | ${communityData.CommunityName}`,
+        color: "#0277bd",
         requiresAuth: false,
-      }
-    }
-  ]
+      },
+    },
+  ],
 });
 
 router.beforeEach((to, from, next) => {
   // const user = firebase.auth.currentUser;
   // const requiresAuth = to.matched.some(record=> record.meta.requiresAuth);
   if (to.meta.title) {
-    document.title = to.meta.title; 
+    document.title = to.meta.title;
     // let metaThemeColor = document.querySelector("meta[name=theme-color]");
     // metaThemeColor.setAttribute("content", to.meta.color);
     // // if(this.$vuetify.theme.dark){
