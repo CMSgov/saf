@@ -1,5 +1,5 @@
 {
-    "pilots" : [
+    "CMSTeams" : [
         {
             "name" : "ACT",
             "scope" : "Uses security testing data and Heimdall from this framework to support Assessments"
