@@ -655,11 +655,59 @@
       ],
       "links" : [
         {
-          "name": "Kubernetes CIS Benchmark",
+          "name": "Kubernetes CIS",
           "fips": [
             "none"
           ],
           "link": "https://github.com/mitre/kubernetes-cis-baseline",
+          "svg": "inspec-blue-black-border"
+        }
+      ]
+    },
+    {
+      "name": "Google Cloud Platform PCI-DSS 3.2.1",
+      "category": [
+        "Cloud Service Providers"
+      ],
+      "links" : [
+        {
+          "name": "Google Cloud Platform PCI-DSS 3.2.1",
+          "fips": [
+            "none"
+          ],
+          "link": "https://github.com/GoogleCloudPlatform/inspec-gcp-pci-profile",
+          "svg": "inspec-blue-black-border"
+        }
+      ]
+    },
+    {
+      "name": "Google Cloud Platform CIS",
+      "category": [
+        "Cloud Service Providers"
+      ],
+      "links" : [
+        {
+          "name": "Google Cloud Platform CIS",
+          "fips": [
+            "none"
+          ],
+          "link": "https://github.com/GoogleCloudPlatform/inspec-gcp-cis-benchmark",
+          "svg": "inspec-blue-black-border"
+        }
+      ]
+    },
+    {
+      "name": "Google Kubernetes Engine CIS",
+      "category": [
+        "Virtual Platforms"
+      ],
+      "links" : [
+        {
+          "name": "Google Kubernetes Engine CIS",
+          "fips": [
+            "none"
+          ],
+          "link": "https://github.com/GoogleCloudPlatform/inspec-gke-cis-benchmark",
           "svg": "inspec-blue-black-border"
         }
       ]
