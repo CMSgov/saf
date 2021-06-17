@@ -28,8 +28,8 @@
             >!
           </p>
           <p>
-            For ADO users of CMS AWS Cloud, AWS Foundations and Infrastructure
-            scans are also provided via AWS SecurityHub. See the
+            For CMS Cloud users, AWS Foundations and Infrastructure scans are
+            also provided via AWS SecurityHub. See the
             <a href="https://cloud.cms.gov" target="_blank"
               >CMS Cloud website</a
             >
