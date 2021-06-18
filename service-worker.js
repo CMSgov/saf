@@ -1,4 +1,4 @@
-importScripts("/precache-manifest.3d7b1015e7c54d5044b5121d59fcbd84.js", "https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+importScripts("/precache-manifest.dc38d95beefc1133d89b08ee216d54bc.js", "https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 self.addEventListener("message", e => {
   if (!e.data) {
@@ -14,22 +14,22 @@ self.addEventListener("message", e => {
   }
 });
 
-importScripts("https://www.gstatic.com/firebasejs/3.5.2/firebase-app.js");
-importScripts("https://www.gstatic.com/firebasejs/3.5.2/firebase-messaging.js");
+// importScripts("https://www.gstatic.com/firebasejs/3.5.2/firebase-app.js");
+// importScripts("https://www.gstatic.com/firebasejs/3.5.2/firebase-messaging.js");
 
-var config = {
-  apiKey: "AIzaSyBb-1hlnQfIELblC3HUqzI-M29xiwoMYds",
-  authDomain: "cms-saf.firebaseapp.com",
-  databaseURL: "https://cms-saf.firebaseio.com",
-  projectId: "cms-saf",
-  storageBucket: "cms-saf.appspot.com",
-  messagingSenderId: "157303555912",
-  appId: "1:157303555912:web:04c0e431777d1ee41f557d"
-};
+// var config = {
+//   apiKey: "AIzaSyBb-1hlnQfIELblC3HUqzI-M29xiwoMYds",
+//   authDomain: "cms-saf.firebaseapp.com",
+//   databaseURL: "https://cms-saf.firebaseio.com",
+//   projectId: "cms-saf",
+//   storageBucket: "cms-saf.appspot.com",
+//   messagingSenderId: "157303555912",
+//   appId: "1:157303555912:web:04c0e431777d1ee41f557d"
+// };
 
-firebase.initializeApp(config);
+// firebase.initializeApp(config);
 
-const messaging = firebase.messaging();
+// const messaging = firebase.messaging();
 
 var dataPush = {}
 
