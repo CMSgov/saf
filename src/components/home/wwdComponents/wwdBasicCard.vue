@@ -17,7 +17,8 @@
         style="font-size:300%"
         class="mt-4"
         :color="hover && (item.router_link || item.link) ? '#1a73e8' : ''"
-      >mdi-{{ item.icon }}</v-icon>
+        >mdi-{{ item.icon }}</v-icon
+      >
       <!-- <v-fade-transition v-if="item.graphic" mode="out-in">
       <v-img
         v-on:mouseover="mouseOverCheck = current"
@@ -42,26 +43,41 @@
         class="ma-2"
         max-height="328"
       />
-      <v-card-title class="google-font mt-2 title align-bottom justify-center break-word">
+      <v-card-title
+        class="google-font mt-2 title align-bottom justify-center break-word"
+      >
         <!-- :color="hover && (item.router_link || item.link) ? '#1a73e8' : ''" -->
         <v-icon class="mr-2">mdi-{{ item.side_icon }}</v-icon>
         <span v-html="make_readable(item.name)" />
       </v-card-title>
       <v-spacer />
-      <v-card-text v-if="item.desc" class="pa-2 body-1">{{ item.desc }}</v-card-text>
+      <v-card-text v-if="item.desc" class="pa-2 body-1">{{
+        item.desc
+      }}</v-card-text>
       <template v-if="item.bullets">
         <v-card-text class="text-left">
           <ul>
-            <li v-for="bullet in item.bullets" :key="bullet" class="google-font body-1">{{bullet}}</li>
+            <li
+              v-for="bullet in item.bullets"
+              :key="bullet"
+              class="google-font body-1"
+            >
+              {{ bullet }}
+            </li>
           </ul>
         </v-card-text>
       </template>
       <v-spacer />
       <div justify="center" v-show="item.shields" class="mt-2">
-        <img v-for="shield in item.shields" :key="shield" class="ms-2" :src="shield" />
+        <img
+          v-for="shield in item.shields"
+          :key="shield"
+          class="ms-2"
+          :src="shield"
+        />
       </div>
-      <v-card-actions class="pa-0">
-        <v-container row dense>
+      <v-card-actions class="pt-0">
+        <v-container row dense class="ma-0">
           <v-row justify="center">
             <v-tooltip top>
               <template v-slot:activator="{ on }">
@@ -116,60 +132,59 @@
 </template>
 
 <script>
-// see https://stackoverflow.com/questions/58556447/is-there-a-card-footer-card-deck-feature-on-vuetify
-// for details on arranging card components
+  // see https://stackoverflow.com/questions/58556447/is-there-a-card-footer-card-deck-feature-on-vuetify
+  // for details on arranging card components
 
-//import toolBlock from "@/components/home/wwdComponents/toolBlock.vue";
-export default {
-  data() {
-    return {
-      mouseOverCheck: "",
-    };
-  },
-  props: {
-    item: Object,
-  },
-  components: {
-    //toolBlock
-  },
-  methods: {
-    make_readable(str) {
-      return str.replace(/_/, " ");
-    },
-    getHighlight() {
+  //import toolBlock from "@/components/home/wwdComponents/toolBlock.vue";
+  export default {
+    data() {
       return {
-        lighten: this.$vuetify.theme.isDark,
-        darken: !this.$vuetify.theme.isDark,
+        mouseOverCheck: "",
       };
-    }
-  }
-};
+    },
+    props: {
+      item: Object,
+    },
+    components: {
+      //toolBlock
+    },
+    methods: {
+      make_readable(str) {
+        return str.replace(/_/, " ");
+      },
+      getHighlight() {
+        return {
+          lighten: this.$vuetify.theme.isDark,
+          darken: !this.$vuetify.theme.isDark,
+        };
+      },
+    },
+  };
 </script>
 
 <style scoped lang="scss">
-.card-outer {
-  position: relative;
-  padding-bottom: 10px;
-}
-.card-actions {
-  position: absolute;
-  bottom: 0;
-}
-.flexcard {
-  display: flex;
-  flex-direction: column;
-}
-.svg-style {
-  max-width: 24px;
-  max-height: 24px;
-}
+  .card-outer {
+    position: relative;
+    padding-bottom: 10px;
+  }
+  .card-actions {
+    position: absolute;
+    bottom: 0;
+  }
+  .flexcard {
+    display: flex;
+    flex-direction: column;
+  }
+  .svg-style {
+    max-width: 24px;
+    max-height: 24px;
+  }
 
-.lighten {
-  background-color: lighten(#1d1d1d, 20%);
-}
+  .lighten {
+    background-color: lighten(#1d1d1d, 20%);
+  }
 
-.darken {
-  background-color: darken(#ffff, 20%);
-}
-
+  .darken {
+    background-color: darken(#ffff, 20%);
+  }
 </style>

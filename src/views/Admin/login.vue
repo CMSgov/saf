@@ -11,16 +11,35 @@
                 width="100%"
               >
                 <template v-slot:placeholder>
-                  <v-row class="fill-height ma-0" align="center" justify="center">
-                    <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+                  <v-row
+                    class="fill-height ma-0"
+                    align="center"
+                    justify="center"
+                  >
+                    <v-progress-circular
+                      indeterminate
+                      color="grey lighten-5"
+                    ></v-progress-circular>
                   </v-row>
                 </template>
               </v-img>
               <h2 class=" mb-5">Login Panel for Aura Admin</h2>
-              <v-text-field label="Email" v-model="email" type="email" outlined></v-text-field>
-              <v-text-field type="password" v-model="password" label="Password" outlined></v-text-field>
+              <v-text-field
+                label="Email"
+                v-model="email"
+                type="email"
+                outlined
+              ></v-text-field>
+              <v-text-field
+                type="password"
+                v-model="password"
+                label="Password"
+                outlined
+              ></v-text-field>
 
-              <v-btn class="primary" @click="login" :loading="isLoading" text>Login</v-btn>
+              <v-btn class="primary" @click="login" :loading="isLoading" text
+                >Login</v-btn
+              >
             </v-col>
           </v-row>
         </v-col>
@@ -30,29 +49,29 @@
 </template>
 
 <script>
-import firebase from "@/firebase";
-export default {
-  name: "adminLogin",
-  data: () => ({
-    email: "",
-    password: "",
-    isLoading: false
-  }),
-  methods: {
-    login() {
-      this.isLoading = true;
-      firebase.auth
-        .signInWithEmailAndPassword(this.email, this.password)
-        .then(() => {
-          this.loading = false;
-          this.$router.replace("/admin/dashboard/home");
-        })
-        .catch(e => {
-          this.loading = false;
-          alert("Alert " + e);
-        });
-      this.loading = false;
-    }
-  }
-};
+  // import firebase from "@/firebase";
+  export default {
+    name: "adminLogin",
+    data: () => ({
+      email: "",
+      password: "",
+      isLoading: false,
+    }),
+    methods: {
+      login() {
+        this.isLoading = true;
+        // firebase.auth
+        //   .signInWithEmailAndPassword(this.email, this.password)
+        //   .then(() => {
+        //     this.loading = false;
+        //     this.$router.replace("/admin/dashboard/home");
+        //   })
+        //   .catch(e => {
+        //     this.loading = false;
+        //     alert("Alert " + e);
+        //   });
+        this.loading = false;
+      },
+    },
+  };
 </script>

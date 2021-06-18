@@ -5,7 +5,9 @@
         <v-btn color="indigo" dark v-on="on">Add Speaker</v-btn>
       </template>
       <v-card>
-        <v-card-title class="headline deep-purple accent-4 white--text">Add new Speaker</v-card-title>
+        <v-card-title class="headline deep-purple accent-4 white--text"
+          >Add new Speaker</v-card-title
+        >
         <v-divider></v-divider>
         <v-card-text>
           <v-container fluid>
@@ -25,7 +27,12 @@
                       ></v-select>
                     </v-col>
                     <v-col cols="6" md="4" xl="3">
-                      <v-text-field v-model="userId" label="ID" type="text" outlined></v-text-field>
+                      <v-text-field
+                        v-model="userId"
+                        label="ID"
+                        type="text"
+                        outlined
+                      ></v-text-field>
                     </v-col>
                   </v-row>
                   <v-row align="center">
@@ -35,7 +42,12 @@
                     <v-col cols="12" sm="8" md="10">
                       <v-row align="center">
                         <v-col cols="12" md="8" xl="3" class="pa-1 ma-0">
-                          <v-text-field v-model="name" label="Full Name" type="text" outlined></v-text-field>
+                          <v-text-field
+                            v-model="name"
+                            label="Full Name"
+                            type="text"
+                            outlined
+                          ></v-text-field>
                         </v-col>
                         <v-col cols="12" md="4" xl="3" class="pa-1 ma-0">
                           <v-text-field
@@ -63,7 +75,8 @@
                                 dark
                                 class="mt-n6"
                                 v-on="on"
-                              >Upload Image</v-btn>
+                                >Upload Image</v-btn
+                              >
                             </template>
                             <v-card>
                               <v-card-title>Upload Speaker Image</v-card-title>
@@ -85,8 +98,14 @@
                                   color="green darken-1"
                                   text
                                   @click="dialogImageUload = false"
-                                >Discard</v-btn>
-                                <v-btn color="green darken-1" text @click="uploadImage">Upload Image</v-btn>
+                                  >Discard</v-btn
+                                >
+                                <v-btn
+                                  color="green darken-1"
+                                  text
+                                  @click="uploadImage"
+                                  >Upload Image</v-btn
+                                >
                               </v-card-actions>
                             </v-card>
                           </v-dialog>
@@ -99,7 +118,11 @@
                     </v-col>
 
                     <v-col cols="12" md="10" class="pa-1 ma-0">
-                      <v-textarea outlined v-model="bio" label="Bio"></v-textarea>
+                      <v-textarea
+                        outlined
+                        v-model="bio"
+                        label="Bio"
+                      ></v-textarea>
                     </v-col>
                   </v-row>
                   <v-row align="center">
@@ -115,19 +138,44 @@
                       ></v-text-field>
                     </v-col>
                     <v-col cols="12" md="6" class="pa-1 ma-0">
-                      <v-text-field v-model="email" label="Email" type="email" outlined></v-text-field>
+                      <v-text-field
+                        v-model="email"
+                        label="Email"
+                        type="email"
+                        outlined
+                      ></v-text-field>
                     </v-col>
                     <v-col cols="12" md="6" class="pa-1 ma-0">
-                      <v-text-field v-model="companyName" label="Company Name" type="text" outlined></v-text-field>
+                      <v-text-field
+                        v-model="companyName"
+                        label="Company Name"
+                        type="text"
+                        outlined
+                      ></v-text-field>
                     </v-col>
                     <v-col cols="12" md="6" class="pa-1 ma-0">
-                      <v-text-field v-model="companyURL" label="Company URL" type="url" outlined></v-text-field>
+                      <v-text-field
+                        v-model="companyURL"
+                        label="Company URL"
+                        type="url"
+                        outlined
+                      ></v-text-field>
                     </v-col>
                     <v-col cols="12" md="6" class="pa-1 ma-0">
-                      <v-text-field v-model="city" label="City" type="text" outlined></v-text-field>
+                      <v-text-field
+                        v-model="city"
+                        label="City"
+                        type="text"
+                        outlined
+                      ></v-text-field>
                     </v-col>
                     <v-col cols="12" md="6" class="pa-1 ma-0">
-                      <v-text-field v-model="country" label="Country" type="text" outlined></v-text-field>
+                      <v-text-field
+                        v-model="country"
+                        label="Country"
+                        type="text"
+                        outlined
+                      ></v-text-field>
                     </v-col>
                   </v-row>
                   <v-row align="center">
@@ -135,22 +183,52 @@
                       <p style="font-size:120%" class="my-0">Social Links</p>
                     </v-col>
                     <v-col cols="12" md="6" class="pa-1 ma-0">
-                      <v-text-field v-model="facebook" label="Facebook" type="url" outlined></v-text-field>
+                      <v-text-field
+                        v-model="facebook"
+                        label="Facebook"
+                        type="url"
+                        outlined
+                      ></v-text-field>
                     </v-col>
                     <v-col cols="12" md="6" class="pa-1 ma-0">
-                      <v-text-field v-model="twitter" label="Twitter" type="url" outlined></v-text-field>
+                      <v-text-field
+                        v-model="twitter"
+                        label="Twitter"
+                        type="url"
+                        outlined
+                      ></v-text-field>
                     </v-col>
                     <v-col cols="12" md="6" class="pa-1 ma-0">
-                      <v-text-field v-model="github" label="Github" type="url" outlined></v-text-field>
+                      <v-text-field
+                        v-model="github"
+                        label="Github"
+                        type="url"
+                        outlined
+                      ></v-text-field>
                     </v-col>
                     <v-col cols="12" md="6" class="pa-1 ma-0">
-                      <v-text-field v-model="linkedin" label="LinkdeIN" type="url" outlined></v-text-field>
+                      <v-text-field
+                        v-model="linkedin"
+                        label="LinkdeIN"
+                        type="url"
+                        outlined
+                      ></v-text-field>
                     </v-col>
                     <v-col cols="12" md="6" class="pa-1 ma-0">
-                      <v-text-field v-model="medium" label="Medium" type="url" outlined></v-text-field>
+                      <v-text-field
+                        v-model="medium"
+                        label="Medium"
+                        type="url"
+                        outlined
+                      ></v-text-field>
                     </v-col>
                     <v-col cols="12" md="6" class="pa-1 ma-0">
-                      <v-text-field v-model="website" label="Website" type="url" outlined></v-text-field>
+                      <v-text-field
+                        v-model="website"
+                        label="Website"
+                        type="url"
+                        outlined
+                      ></v-text-field>
                     </v-col>
                   </v-row>
                 </v-col>
@@ -161,8 +239,16 @@
         <v-divider></v-divider>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="blue darken-1" text @click="dialog = false">Close</v-btn>
-          <v-btn color="primary" dark @click="saveData" :loading="addSpeakerLoading">Add new Speaker</v-btn>
+          <v-btn color="blue darken-1" text @click="dialog = false"
+            >Close</v-btn
+          >
+          <v-btn
+            color="primary"
+            dark
+            @click="saveData"
+            :loading="addSpeakerLoading"
+            >Add new Speaker</v-btn
+          >
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -170,105 +256,104 @@
 </template>
 
 <script>
-import firebase from "@/firebase";
+  // import firebase from "@/firebase";
 
-export default {
-  name: "addSpeaker",
-  data: () => ({
-    dialog: false,
-    dialogImageUload: false,
-    visiblity: [true, false],
-    uploadbtnText: "Upload Image",
-    visible: Boolean,
-    userId: "",
-    name: "",
-    desigination: "",
-    imageURL: "",
-    imagePre: "",
-    imageUploading: false,
-    bio: "",
-    imageUpload: [],
-    mbnumber: "",
-    email: "",
-    companyName: "",
-    companyURL: "",
-    country: "",
-    city: "",
-    facebook: "",
-    github: "",
-    linkedin: "",
-    twitter: "",
-    medium: "",
-    website: "",
-    addSpeakerLoading: false
-  }),
-  methods: {
-    onFileChange() {
-      let reader = new FileReader();
-      reader.readAsDataURL(this.imageUpload);
-      reader.onload = () => {
-        this.imagePre = reader.result;
-      };
+  export default {
+    name: "addSpeaker",
+    data: () => ({
+      dialog: false,
+      dialogImageUload: false,
+      visiblity: [true, false],
+      uploadbtnText: "Upload Image",
+      visible: Boolean,
+      userId: "",
+      name: "",
+      desigination: "",
+      imageURL: "",
+      imagePre: "",
+      imageUploading: false,
+      bio: "",
+      imageUpload: [],
+      mbnumber: "",
+      email: "",
+      companyName: "",
+      companyURL: "",
+      country: "",
+      city: "",
+      facebook: "",
+      github: "",
+      linkedin: "",
+      twitter: "",
+      medium: "",
+      website: "",
+      addSpeakerLoading: false,
+    }),
+    methods: {
+      onFileChange() {
+        let reader = new FileReader();
+        reader.readAsDataURL(this.imageUpload);
+        reader.onload = () => {
+          this.imagePre = reader.result;
+        };
+      },
+      // uploadImage() {
+      //   this.imageUploading = true;
+      //   var fileName = `${this.userId}.${this.imageUpload.name.split(".")[1]}`;
+      //   //console.log(fileName);
+      //   var refLink = firebase.storage.ref("speakers/" + fileName);
+      //   refLink.put(this.imageUpload).then(() => {
+      //     //console.log(file);
+      //     refLink.getDownloadURL().then(a => {
+      //       //console.log(a);
+      //       this.imageURL = a;
+      //       this.imageUploading = false;
+      //       this.uploadImage = "Uploaded";
+      //     });
+      //   });
+      //   this.dialogImageUload = false;
+      // },
+      saveData() {
+        this.addSpeakerLoading = true;
+        var Data = {
+          visible: this.visible,
+          id: this.userId,
+          name: this.name,
+          designation: this.desigination,
+          mbnumber: this.mbnumber,
+          email: this.email,
+          image: this.imageURL,
+          bio: this.bio,
+          city: this.city,
+          country: this.country,
+          company: {
+            name: this.companyName,
+            url: this.companyURL,
+          },
+          socialLinks: {
+            facebook: this.facebook,
+            github: this.github,
+            linkedin: this.linkedin,
+            medium: this.medium,
+            twitter: this.twitter,
+            web: this.website,
+          },
+        };
+        // firebase.firestore
+        //   .collection("speakers")
+        //   .doc(Data.id)
+        //   .set(Data)
+        //   .then(() => {
+        //     //console.log(res);
+        //     this.dialog = false;
+        //     this.addSpeakerLoading = false;
+        //     this.$emit("showSuccess", true);
+        //   })
+        //   .catch(() => {
+        //     //console.log(e);
+        //   });
+      },
     },
-    uploadImage() {
-      this.imageUploading = true;
-      var fileName = `${this.userId}.${this.imageUpload.name.split(".")[1]}`;
-      //console.log(fileName);
-      var refLink = firebase.storage.ref("speakers/" + fileName);
-      refLink.put(this.imageUpload).then(() => {
-        //console.log(file);
-        refLink.getDownloadURL().then(a => {
-          //console.log(a);
-          this.imageURL = a;
-          this.imageUploading = false;
-          this.uploadImage = "Uploaded";
-        });
-      });
-      this.dialogImageUload = false;
-    },
-    saveData() {
-      this.addSpeakerLoading = true;
-      var Data = {
-        visible: this.visible,
-        id: this.userId,
-        name: this.name,
-        designation: this.desigination,
-        mbnumber: this.mbnumber,
-        email: this.email,
-        image: this.imageURL,
-        bio: this.bio,
-        city: this.city,
-        country: this.country,
-        company: {
-          name: this.companyName,
-          url: this.companyURL
-        },
-        socialLinks: {
-          facebook: this.facebook,
-          github: this.github,
-          linkedin: this.linkedin,
-          medium: this.medium,
-          twitter: this.twitter,
-          web: this.website
-        }
-      };
-      firebase.firestore
-        .collection("speakers")
-        .doc(Data.id)
-        .set(Data)
-        .then(() => {
-          //console.log(res);
-          this.dialog = false;
-          this.addSpeakerLoading = false;
-          this.$emit("showSuccess", true);
-        })
-        .catch(() => {
-          //console.log(e);
-        });
-    }
-  }
-};
+  };
 </script>
 
-<style>
-</style>
+<style></style>

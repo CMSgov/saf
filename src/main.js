@@ -7,7 +7,7 @@ import store from "./store/store";
 import "./registerServiceWorker";
 import vuetify from "./plugins/vuetify";
 import "./style.css";
-import firebase from "@/firebase";
+// import firebase from "@/firebase";
 import cssVars from "css-vars-ponyfill";
 import Prism from 'prismjs';
 Prism.highlightAll();
@@ -20,11 +20,11 @@ IntersectionObserver.prototype.POLL_INTERVAL = 100; // time in ms
 
 Vue.config.productionTip = false;
 
-firebase.auth.onAuthStateChanged(() => {
+// firebase.auth.onAuthStateChanged(() => {
   new Vue({
     router,
     store,
     vuetify,
     render: h => h(App)
   }).$mount("#app");
-});
+// });

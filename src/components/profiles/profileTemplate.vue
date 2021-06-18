@@ -18,10 +18,11 @@
       <v-btn
         v-for="cat in categorized"
         :key="cat"
-        :class="{'x-small': $vuetify.breakpoint.mdAndDown}"
+        :class="{ 'x-small': $vuetify.breakpoint.mdAndDown }"
         class="pa-2 ma-2 "
-        :to="{hash: make_linkable(cat)}"
-      >{{cat}}</v-btn>
+        :to="{ hash: make_linkable(cat) }"
+        >{{ cat }}</v-btn
+      >
     </div>
     <v-sheet
       v-for="cat in categorized"
@@ -46,7 +47,6 @@
               <v-img
                 v-show="entry.svg"
                 :src="require('@/assets/img/svg/' + entry.svg + '.svg')"
-                svg-inline
                 style="max-width: 50px; max-height: 50px;"
                 class="ml-4"
                 contain
@@ -55,7 +55,9 @@
             </v-row>
           </v-col>
           <v-col cols="9">
-            <v-card-title class="headline break-word ">{{ entry.longName }}</v-card-title>
+            <v-card-title class="headline break-word ">{{
+              entry.longName
+            }}</v-card-title>
           </v-col>
         </v-row>
       </v-card>
@@ -64,76 +66,76 @@
 </template>
 
 <script>
-export default {
-  props: {
-    profiles: Array
-  },
-  data() {
-    return {
-      fab: false
-    };
-  },
-  methods: {
-    make_linkable(str) {
-      return str.replace(/\s+/g, "-").toLowerCase();
+  export default {
+    props: {
+      profiles: Array,
     },
-    onScroll(e) {
-      if (typeof window === "undefined") return;
-      const top = window.pageYOffset || e.target.scrollTop || 0;
-      this.fab = top > 200;
+    data() {
+      return {
+        fab: false,
+      };
     },
-    toTop() {
-      this.$vuetify.goTo(0);
-    },
-    getByCategory(profiles, category) {
-      var filteredProfiles = [];
-      var i;
-      var j;
-      for (i = 0; i < profiles.length; i++) {
-        for (j = 0; j < profiles[i].category.length; j++) {
-          if (profiles[i].category[j] == category) {
-            filteredProfiles.push(profiles[i]);
+    methods: {
+      make_linkable(str) {
+        return str.replace(/\s+/g, "-").toLowerCase();
+      },
+      onScroll(e) {
+        if (typeof window === "undefined") return;
+        const top = window.pageYOffset || e.target.scrollTop || 0;
+        this.fab = top > 200;
+      },
+      toTop() {
+        this.$vuetify.goTo(0);
+      },
+      getByCategory(profiles, category) {
+        var filteredProfiles = [];
+        var i;
+        var j;
+        for (i = 0; i < profiles.length; i++) {
+          for (j = 0; j < profiles[i].category.length; j++) {
+            if (profiles[i].category[j] == category) {
+              filteredProfiles.push(profiles[i]);
+            }
           }
         }
-      }
-      return filteredProfiles.sort(function(a, b) {
-        if (a["longName"] > b["longName"]) {
-          return 1;
-        } else if (a["longName"] < b["longName"]) {
-          return -1;
-        }
-        return 0;
-      });
-    }
-  },
-  computed: {
-    moveForBottomNavStyle() {
-      if (this.$vuetify.breakpoint.smAndDown) {
-        return "z-index: 10; bottom: 60px";
-      } else {
-        return "";
-      }
+        return filteredProfiles.sort(function(a, b) {
+          if (a["longName"] > b["longName"]) {
+            return 1;
+          } else if (a["longName"] < b["longName"]) {
+            return -1;
+          }
+          return 0;
+        });
+      },
     },
-    categorized() {
-      var categories = new Set();
-      var i;
-      var j;
-      for (i = 0; i < this.profiles.length; i++) {
-        for (j = 0; j < this.profiles[i].category.length; j++) {
-          categories.add(this.profiles[i].category[j]);
+    computed: {
+      moveForBottomNavStyle() {
+        if (this.$vuetify.breakpoint.smAndDown) {
+          return "z-index: 10; bottom: 60px";
+        } else {
+          return "";
         }
-      }
-      return Array.from(categories);
-    }
-  }
-};
+      },
+      categorized() {
+        var categories = new Set();
+        var i;
+        var j;
+        for (i = 0; i < this.profiles.length; i++) {
+          for (j = 0; j < this.profiles[i].category.length; j++) {
+            categories.add(this.profiles[i].category[j]);
+          }
+        }
+        return Array.from(categories);
+      },
+    },
+  };
 </script>
 <style scoped>
-*[id]:before {
-  display: block;
-  content: " ";
-  margin-top: 26px;
-  height: 26px;
-  visibility: hidden;
-}
+  *[id]:before {
+    display: block;
+    content: " ";
+    margin-top: 26px;
+    height: 26px;
+    visibility: hidden;
+  }
 </style>

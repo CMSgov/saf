@@ -81,7 +81,7 @@
 </template>
 
 <script>
-import firebase from "@/firebase";
+// import firebase from "@/firebase";
 
 import AddSpeaker from "@/components/Admin/Speaker/addSpeaker";
 
@@ -104,13 +104,13 @@ export default {
       this.snackBarText = "Speaker Removed Successfully"
     }
   },
-  mounted() {
-    if (firebase.auth.currentUser) {
-      this.showData();
-    } else {
-      this.$router.replace("login");
-    }
-  },
+  // mounted() {
+  //   if (firebase.auth.currentUser) {
+  //     this.showData();
+  //   } else {
+  //     this.$router.replace("login");
+  //   }
+  // },
   methods: {
     gotoSpeaker(id) {
       this.$router.replace("/admin/dashboard/speaker/" + id);
@@ -124,20 +124,20 @@ export default {
     showData() {
       this.speakerLoader = true;
       this.speakerData = [];
-      firebase.firestore
-        .collection("speakers")
-        .get()
-        .then(snapshot => {
-          snapshot.forEach(doc => {
-            this.id = doc.id;
-            this.speakerData.push(doc.data());
-          });
-          this.speakerLoader = false;
-          this.loading = false;
-        })
-        .catch(() => {
-        //console.log("Error getting documents", err);
-        });
+      // firebase.firestore
+      //   .collection("speakers")
+      //   .get()
+      //   .then(snapshot => {
+      //     snapshot.forEach(doc => {
+      //       this.id = doc.id;
+      //       this.speakerData.push(doc.data());
+      //     });
+      //     this.speakerLoader = false;
+      //     this.loading = false;
+      //   })
+      //   .catch(() => {
+      //   //console.log("Error getting documents", err);
+      //   });
     }
   }
 };

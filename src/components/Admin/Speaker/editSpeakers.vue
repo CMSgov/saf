@@ -1,18 +1,20 @@
 <template>
   <v-dialog v-model="dialog" scrollable width="1200">
     <!--<template v-slot:activator="{ on }">-->
-      <v-tooltip bottom>
-        <template v-slot:activator="{ on }">
-          <v-btn icon color="primary" v-on="on" @click.stop="dialog = true" dark>
-            <v-icon>mdi-lead-pencil</v-icon>
-          </v-btn>
-        </template>
-        <span>Edit {{speakerData.name}} Details</span>
-      </v-tooltip>
+    <v-tooltip bottom>
+      <template v-slot:activator="{ on }">
+        <v-btn icon color="primary" v-on="on" @click.stop="dialog = true" dark>
+          <v-icon>mdi-lead-pencil</v-icon>
+        </v-btn>
+      </template>
+      <span>Edit {{ speakerData.name }} Details</span>
+    </v-tooltip>
     <!--</template>-->
 
     <v-card v-if="dialog">
-      <v-card-title class="headline" primary-title>Edit {{speakerData.name.split(" ")[0]}}'s Details</v-card-title>
+      <v-card-title class="headline" primary-title
+        >Edit {{ speakerData.name.split(" ")[0] }}'s Details</v-card-title
+      >
 
       <v-card-text class>
         <v-container fluid class="pa-0">
@@ -32,7 +34,13 @@
                     ></v-select>
                   </v-col>
                   <v-col cols="6" md="4" xl="3">
-                    <v-text-field v-model="updatedData.id" disabled label="ID" type="text" outlined></v-text-field>
+                    <v-text-field
+                      v-model="updatedData.id"
+                      disabled
+                      label="ID"
+                      type="text"
+                      outlined
+                    ></v-text-field>
                   </v-col>
                 </v-row>
                 <v-row align="center">
@@ -75,7 +83,8 @@
                               dark
                               class="mt-n6"
                               v-on="on"
-                            >Upload Image</v-btn>
+                              >Upload Image</v-btn
+                            >
                           </template>
                           <v-card>
                             <v-card-title>Upload Speaker Image</v-card-title>
@@ -97,8 +106,14 @@
                                 color="green darken-1"
                                 text
                                 @click="dialogImageUload = false"
-                              >Discard</v-btn>
-                              <v-btn color="green darken-1" text @click="uploadImage">Upload Image</v-btn>
+                                >Discard</v-btn
+                              >
+                              <v-btn
+                                color="green darken-1"
+                                text
+                                @click="uploadImage"
+                                >Upload Image</v-btn
+                              >
                             </v-card-actions>
                           </v-card>
                         </v-dialog>
@@ -111,7 +126,11 @@
                   </v-col>
 
                   <v-col cols="12" md="10" class="pa-1 ma-0">
-                    <v-textarea outlined v-model="updatedData.bio" label="Bio"></v-textarea>
+                    <v-textarea
+                      outlined
+                      v-model="updatedData.bio"
+                      label="Bio"
+                    ></v-textarea>
                   </v-col>
                 </v-row>
                 <v-row align="center">
@@ -127,7 +146,12 @@
                     ></v-text-field>
                   </v-col>
                   <v-col cols="12" md="6" class="pa-1 ma-0">
-                    <v-text-field v-model="updatedData.email" label="Email" type="email" outlined></v-text-field>
+                    <v-text-field
+                      v-model="updatedData.email"
+                      label="Email"
+                      type="email"
+                      outlined
+                    ></v-text-field>
                   </v-col>
                   <v-col cols="12" md="6" class="pa-1 ma-0">
                     <v-text-field
@@ -146,7 +170,12 @@
                     ></v-text-field>
                   </v-col>
                   <v-col cols="12" md="6" class="pa-1 ma-0">
-                    <v-text-field v-model="updatedData.city" label="City" type="text" outlined></v-text-field>
+                    <v-text-field
+                      v-model="updatedData.city"
+                      label="City"
+                      type="text"
+                      outlined
+                    ></v-text-field>
                   </v-col>
                   <v-col cols="12" md="6" class="pa-1 ma-0">
                     <v-text-field
@@ -221,114 +250,116 @@
       <v-card-actions>
         <div class="flex-grow-1"></div>
         <v-btn color="primary" text @click="dialog = false">Close</v-btn>
-        <v-btn color="primary" @click="updateData" :loading="isUpdating">Update Details</v-btn>
+        <v-btn color="primary" @click="updateData" :loading="isUpdating"
+          >Update Details</v-btn
+        >
       </v-card-actions>
     </v-card>
   </v-dialog>
 </template>
 
 <script>
-import firebase from "@/firebase";
+  // import firebase from "@/firebase";
 
-export default {
-  props: {
-    speakerData: {}
-  },
-  data() {
-    return {
-      dialog: false,
-      visiblity: [true, false],
-      imageUploading: false,
-      imagePre: "",
-      dialogImageUload: false,
-      imageUpload: [],
-      isUpdating:false,
-      updatedData: {
-        visible: this.speakerData.visible,
-        name: this.speakerData.name,
-        designation: this.speakerData.designation,
-        mbnumber: this.speakerData.mbnumber,
-        email: this.speakerData.email,
-        image: this.speakerData.image,
-        bio: this.speakerData.bio,
-        id: this.speakerData.id,
-        city: this.speakerData.city,
-        country: this.speakerData.country,
-        company: {
-          name: this.speakerData.company.name,
-          url: this.speakerData.company.url
-        },
-        socialLinks: {
-          facebook: this.speakerData.socialLinks.facebook,
-          github: this.speakerData.socialLinks.github,
-          linkedin: this.speakerData.socialLinks.linkedin,
-          medium: this.speakerData.socialLinks.medium,
-          twitter: this.speakerData.socialLinks.twitter,
-          web: this.speakerData.socialLinks.web
-        }
-      }
-    };
-  },
-  methods: {
-    onFileChange() {
-      let reader = new FileReader();
-      reader.readAsDataURL(this.imageUpload);
-      reader.onload = () => {
-        this.imagePre = reader.result;
-      };
+  export default {
+    props: {
+      speakerData: {},
     },
-    uploadImage() {
-      this.imageUploading = true;
-      var fileName = `${this.updatedData.id}.${
-        this.imageUpload.name.split(".")[1]
-      }`;
-      var refLink = firebase.storage.ref("speakers/" + fileName);
-      refLink.put(this.imageUpload).then(() => {
-        //console.log(file);
-        refLink.getDownloadURL().then(a => {
-          this.updatedData.image = a;
-          this.imageUploading = false;
-        });
-      });
-      this.dialogImageUload = false;
-    },
-    updateData() {
-        this.isUpdating = true;
-      firebase.firestore
-        .collection("speakers")
-        .doc(this.updatedData.id)
-        .update({
-          visible: this.updatedData.visible,
+    data() {
+      return {
+        dialog: false,
+        visiblity: [true, false],
+        imageUploading: false,
+        imagePre: "",
+        dialogImageUload: false,
+        imageUpload: [],
+        isUpdating: false,
+        updatedData: {
+          visible: this.speakerData.visible,
+          name: this.speakerData.name,
+          designation: this.speakerData.designation,
+          mbnumber: this.speakerData.mbnumber,
+          email: this.speakerData.email,
+          image: this.speakerData.image,
+          bio: this.speakerData.bio,
           id: this.speakerData.id,
-          name: this.updatedData.name,
-          designation: this.updatedData.designation,
-          mbnumber: this.updatedData.mbnumber,
-          email: this.updatedData.email,
-          image: this.updatedData.image,
-          bio: this.updatedData.bio,
-          city: this.updatedData.city,
-          country: this.updatedData.country,
+          city: this.speakerData.city,
+          country: this.speakerData.country,
           company: {
-            name: this.updatedData.company.name,
-            url: this.updatedData.company.url
+            name: this.speakerData.company.name,
+            url: this.speakerData.company.url,
           },
           socialLinks: {
-            facebook: this.updatedData.socialLinks.facebook,
-            github: this.updatedData.socialLinks.github,
-            linkedin: this.updatedData.socialLinks.linkedin,
-            medium: this.updatedData.socialLinks.medium,
-            twitter: this.updatedData.socialLinks.twitter,
-            web: this.updatedData.socialLinks.web
-          }
-        }).then(()=>{
-            this.isUpdating = false;
-            this.dialog = false;
-            this.$emit("showEditSuccess", true);
-        }).catch(()=>{
-            //console.log(err);
-            this.isUpdating = false;
-        });
-    }
-  }
-};
+            facebook: this.speakerData.socialLinks.facebook,
+            github: this.speakerData.socialLinks.github,
+            linkedin: this.speakerData.socialLinks.linkedin,
+            medium: this.speakerData.socialLinks.medium,
+            twitter: this.speakerData.socialLinks.twitter,
+            web: this.speakerData.socialLinks.web,
+          },
+        },
+      };
+    },
+    methods: {
+      onFileChange() {
+        let reader = new FileReader();
+        reader.readAsDataURL(this.imageUpload);
+        reader.onload = () => {
+          this.imagePre = reader.result;
+        };
+      },
+      uploadImage() {
+        this.imageUploading = true;
+        var fileName = `${this.updatedData.id}.${
+          this.imageUpload.name.split(".")[1]
+        }`;
+        // var refLink = firebase.storage.ref("speakers/" + fileName);
+        // refLink.put(this.imageUpload).then(() => {
+        //   //console.log(file);
+        //   refLink.getDownloadURL().then(a => {
+        //     this.updatedData.image = a;
+        //     this.imageUploading = false;
+        //   });
+        // });
+        this.dialogImageUload = false;
+      },
+      updateData() {
+        this.isUpdating = true;
+        // firebase.firestore
+        //   .collection("speakers")
+        //   .doc(this.updatedData.id)
+        //   .update({
+        //     visible: this.updatedData.visible,
+        //     id: this.speakerData.id,
+        //     name: this.updatedData.name,
+        //     designation: this.updatedData.designation,
+        //     mbnumber: this.updatedData.mbnumber,
+        //     email: this.updatedData.email,
+        //     image: this.updatedData.image,
+        //     bio: this.updatedData.bio,
+        //     city: this.updatedData.city,
+        //     country: this.updatedData.country,
+        //     company: {
+        //       name: this.updatedData.company.name,
+        //       url: this.updatedData.company.url
+        //     },
+        //     socialLinks: {
+        //       facebook: this.updatedData.socialLinks.facebook,
+        //       github: this.updatedData.socialLinks.github,
+        //       linkedin: this.updatedData.socialLinks.linkedin,
+        //       medium: this.updatedData.socialLinks.medium,
+        //       twitter: this.updatedData.socialLinks.twitter,
+        //       web: this.updatedData.socialLinks.web
+        //     }
+        //   }).then(()=>{
+        //       this.isUpdating = false;
+        //       this.dialog = false;
+        //       this.$emit("showEditSuccess", true);
+        //   }).catch(()=>{
+        //       //console.log(err);
+        //       this.isUpdating = false;
+        //   });
+      },
+    },
+  };
 </script>
