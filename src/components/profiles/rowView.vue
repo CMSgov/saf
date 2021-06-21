@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="pa-0">
+  <v-container fluid class="pa-0 my-4">
     <v-row dense align="center" class="pa-1">
       <v-col cols="4" class="pa-0">
         <v-row justify="start" v-if="getByFips(entry, 'none')">
@@ -11,17 +11,17 @@
         cols="8"
         v-if="
           getByFips(entry, 'low') ||
-          getByFips(entry, 'mod') ||
-          getByFips(entry, 'high')
+            getByFips(entry, 'mod') ||
+            getByFips(entry, 'high')
         "
         class="pa-0"
       >
         <v-container
-          class="pa-0 pl-2"
+          class="pa-0 pl-2 mt-1"
           v-if="
             getByFips(entry, 'low') ||
-            getByFips(entry, 'mod') ||
-            getByFips(entry, 'high')
+              getByFips(entry, 'mod') ||
+              getByFips(entry, 'high')
           "
           fluid
         >
@@ -49,30 +49,29 @@
 </template>
 
 <script>
-import profileChip from "@/components/profiles/profileChip.vue";
-export default {
-  components: {
-    profileChip,
-  },
-  props: {
-    entry: Object,
-  },
-  methods: {
-    getByFips(profile, fips_cat) {
-      var i;
-      var j;
-      //console.log(profile.links.length)
-      for (i = 0; i < profile.links.length; i++) {
-        for (j = 0; j < profile.links[i].fips.length; j++) {
-          //console.log(profile.links[i].fips)
-          if (profile.links[i].fips[j] == fips_cat) {
-            //console.log(profile.links[i]);
-            return profile.links[i];
+  import profileChip from "@/components/profiles/profileChip.vue";
+  export default {
+    components: {
+      profileChip,
+    },
+    props: {
+      entry: Object,
+    },
+    methods: {
+      getByFips(profile, fips_cat) {
+        var i;
+        var j;
+        //console.log(profile.links.length)
+        for (i = 0; i < profile.links.length; i++) {
+          for (j = 0; j < profile.links[i].fips.length; j++) {
+            //console.log(profile.links[i].fips)
+            if (profile.links[i].fips[j] == fips_cat) {
+              //console.log(profile.links[i]);
+              return profile.links[i];
+            }
           }
         }
-      }
+      },
     },
-  },
-};
+  };
 </script>
-
