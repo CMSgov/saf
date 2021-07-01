@@ -217,11 +217,7 @@
           "doc_link": "https://engineering.cerner.com/blog/inspec-delta/",
           "github_link": "https://github.com/cerner/inspec_delta",
           "svg": "",
-          "tools": "",
-          "shields": [
-            "https://img.shields.io/github/v/release/cerner/inspec_delta?label=version",
-            "https://img.shields.io/github/downloads/cerner/inspec_delta/total?label=github%20downloads"
-          ]
+          "tools": ""
         },
         {
           "name": "Serverless InSpec (AWS)",

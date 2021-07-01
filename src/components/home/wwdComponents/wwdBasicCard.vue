@@ -80,9 +80,12 @@
           :src="shield"
         />
       </div>
-      <v-card-actions v-if="item.app_link || item.doc_link || item.github_link">
+      <v-card-actions
+        v-if="item.app_link || item.doc_link || item.github_link"
+        class="mt-4"
+      >
         <v-container row dense>
-          <v-row justify="center" align="">
+          <v-row justify="center">
             <v-tooltip top>
               <template v-slot:activator="{ on }">
                 <v-btn
