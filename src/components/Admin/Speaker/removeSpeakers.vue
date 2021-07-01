@@ -46,18 +46,18 @@
         isLoading: false,
       };
     },
-    methods: {
-      deleteItem(id) {
-        this.isLoading = true;
-        // firebase.firestore.collection('speakers').doc(id).delete().then(()=>{
-        //     this.isLoading = false;
-        //     this.dialog = false
-        //   this.$router.push({
-        //         path: "/admin/dashboard/speaker",
-        //         query: { msg: "removesuccess" }
-        //       });
-        // });
-      },
-    },
+    // methods: {
+    //   deleteItem(id) {
+    //     this.isLoading = true;
+    //     firebase.firestore.collection('speakers').doc(id).delete().then(()=>{
+    //         this.isLoading = false;
+    //         this.dialog = false
+    //       this.$router.push({
+    //             path: "/admin/dashboard/speaker",
+    //             query: { msg: "removesuccess" }
+    //           });
+    //     });
+    //   },
+    // },
   };
 </script>

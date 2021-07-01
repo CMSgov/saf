@@ -54,7 +54,7 @@
 
 <script>
   // import firebase from '@/firebase';
-  import { configData } from "@/config/config";
+  //import { configData } from "@/config/config";
   export default {
     components: {},
     name: "admin-dashboard",

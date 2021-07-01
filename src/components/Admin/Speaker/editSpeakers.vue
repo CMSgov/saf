@@ -300,66 +300,66 @@
         },
       };
     },
-    methods: {
-      onFileChange() {
-        let reader = new FileReader();
-        reader.readAsDataURL(this.imageUpload);
-        reader.onload = () => {
-          this.imagePre = reader.result;
-        };
-      },
-      uploadImage() {
-        this.imageUploading = true;
-        var fileName = `${this.updatedData.id}.${
-          this.imageUpload.name.split(".")[1]
-        }`;
-        // var refLink = firebase.storage.ref("speakers/" + fileName);
-        // refLink.put(this.imageUpload).then(() => {
-        //   //console.log(file);
-        //   refLink.getDownloadURL().then(a => {
-        //     this.updatedData.image = a;
-        //     this.imageUploading = false;
-        //   });
-        // });
-        this.dialogImageUload = false;
-      },
-      updateData() {
-        this.isUpdating = true;
-        // firebase.firestore
-        //   .collection("speakers")
-        //   .doc(this.updatedData.id)
-        //   .update({
-        //     visible: this.updatedData.visible,
-        //     id: this.speakerData.id,
-        //     name: this.updatedData.name,
-        //     designation: this.updatedData.designation,
-        //     mbnumber: this.updatedData.mbnumber,
-        //     email: this.updatedData.email,
-        //     image: this.updatedData.image,
-        //     bio: this.updatedData.bio,
-        //     city: this.updatedData.city,
-        //     country: this.updatedData.country,
-        //     company: {
-        //       name: this.updatedData.company.name,
-        //       url: this.updatedData.company.url
-        //     },
-        //     socialLinks: {
-        //       facebook: this.updatedData.socialLinks.facebook,
-        //       github: this.updatedData.socialLinks.github,
-        //       linkedin: this.updatedData.socialLinks.linkedin,
-        //       medium: this.updatedData.socialLinks.medium,
-        //       twitter: this.updatedData.socialLinks.twitter,
-        //       web: this.updatedData.socialLinks.web
-        //     }
-        //   }).then(()=>{
-        //       this.isUpdating = false;
-        //       this.dialog = false;
-        //       this.$emit("showEditSuccess", true);
-        //   }).catch(()=>{
-        //       //console.log(err);
-        //       this.isUpdating = false;
-        //   });
-      },
-    },
+    // methods: {
+    //   onFileChange() {
+    //     let reader = new FileReader();
+    //     reader.readAsDataURL(this.imageUpload);
+    //     reader.onload = () => {
+    //       this.imagePre = reader.result;
+    //     };
+    //   },
+    //   uploadImage() {
+    //     this.imageUploading = true;
+    //     var fileName = `${this.updatedData.id}.${
+    //       this.imageUpload.name.split(".")[1]
+    //     }`;
+    //     // var refLink = firebase.storage.ref("speakers/" + fileName);
+    //     // refLink.put(this.imageUpload).then(() => {
+    //     //   //console.log(file);
+    //     //   refLink.getDownloadURL().then(a => {
+    //     //     this.updatedData.image = a;
+    //     //     this.imageUploading = false;
+    //     //   });
+    //     // });
+    //     this.dialogImageUload = false;
+    //   },
+    //   updateData() {
+    //     this.isUpdating = true;
+    //     // firebase.firestore
+    //     //   .collection("speakers")
+    //     //   .doc(this.updatedData.id)
+    //     //   .update({
+    //     //     visible: this.updatedData.visible,
+    //     //     id: this.speakerData.id,
+    //     //     name: this.updatedData.name,
+    //     //     designation: this.updatedData.designation,
+    //     //     mbnumber: this.updatedData.mbnumber,
+    //     //     email: this.updatedData.email,
+    //     //     image: this.updatedData.image,
+    //     //     bio: this.updatedData.bio,
+    //     //     city: this.updatedData.city,
+    //     //     country: this.updatedData.country,
+    //     //     company: {
+    //     //       name: this.updatedData.company.name,
+    //     //       url: this.updatedData.company.url
+    //     //     },
+    //     //     socialLinks: {
+    //     //       facebook: this.updatedData.socialLinks.facebook,
+    //     //       github: this.updatedData.socialLinks.github,
+    //     //       linkedin: this.updatedData.socialLinks.linkedin,
+    //     //       medium: this.updatedData.socialLinks.medium,
+    //     //       twitter: this.updatedData.socialLinks.twitter,
+    //     //       web: this.updatedData.socialLinks.web
+    //     //     }
+    //     //   }).then(()=>{
+    //     //       this.isUpdating = false;
+    //     //       this.dialog = false;
+    //     //       this.$emit("showEditSuccess", true);
+    //     //   }).catch(()=>{
+    //     //       //console.log(err);
+    //     //       this.isUpdating = false;
+    //     //   });
+    //   },
+    // },
   };
 </script>

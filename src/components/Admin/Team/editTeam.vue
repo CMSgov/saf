@@ -349,82 +349,82 @@
         },
       };
     },
-    methods: {
-      onFileChange() {
-        let reader = new FileReader();
-        reader.readAsDataURL(this.imageUpload);
-        reader.onload = () => {
-          this.imagePre = reader.result;
-        };
-      },
-      uploadImage() {
-        this.imageUploading = true;
-        var fileName = `${this.userId}.${this.imageUpload.name.split(".")[1]}`;
-        //console.log(fileName);
-        // var refLink = firebase.storage().ref("team/" + fileName);
-        // refLink.put(this.imageUpload).then(() => {
-        //   refLink.getDownloadURL().then(a => {
-        //   //console.log(a);
-        //     this.imageURL = a;
-        //     this.imageUploading = false;
-        //     this.uploadImage = "Uploaded";
-        //   });
-        // });
-        this.dialogImageUload = false;
-      },
-      UpdateData() {
-        var self = this;
-        self.loading = true;
-        if (this.$refs.form.validate()) {
-          //console.log(this.updatedData)
-          //console.log(this.teamData.id)
-          // firebase.firestore().collection("team").where("id", "==", this.teamData.id)
-          // .get()
-          // .then(function(querySnapshot) {
-          //     querySnapshot.forEach(function(doc) {
-          //       //console.log(doc.id, " => ", doc.data());
-          //         // Build doc ref from doc.id
-          //         firebase.firestore().collection("team").doc(doc.id).update({
-          //             active: self.updatedData.active,
-          //             visible: self.updatedData.visible,
-          //             name:self.updatedData.name,
-          //             designation: self.updatedData.designation,
-          //             mbnumber: self.updatedData.mbnumber,
-          //             email:self.updatedData.email,
-          //             image:self.updatedData.image,
-          //             bio:self.updatedData.bio,
-          //             id: self.updatedData.id,
-          //             role:self.updatedData.role,
-          //             socialLinks:{
-          //                 facebook: self.updatedData.socialLinks.facebook,
-          //                 github: self.updatedData.socialLinks.github,
-          //                 linkedin: self.updatedData.socialLinks.linkedin,
-          //                 meetup: self.updatedData.socialLinks.meetup,
-          //                 twitter: self.updatedData.socialLinks.twitter,
-          //                 web: self.updatedData.socialLinks.web,
-          //             }
-          //         });
-          //     });
-          // }).then(()=>{
-          //     // alert('Data Updated')
-          //   self.loading = false
-          //   self.dialog = false
-          //   self.$emit('editedSuccess')
-          // }).catch(()=>{
-          //   //console.log(e)
-          //     self.loading = false
-          // })
-          // firebase.firestore().collection('team').where('id','==', this.teamData.id)
-          // update(Data).then(res=>{
-          //     // console.log(res)
-          //     alert('Updated')
-          //     this.dialog = false
-          //     this.$emit('showSuccess')
-          // }).catch(e=>{
-          //   //console.log(e)
-          // })
-        }
-      },
-    },
+    // methods: {
+    //   onFileChange() {
+    //     let reader = new FileReader();
+    //     reader.readAsDataURL(this.imageUpload);
+    //     reader.onload = () => {
+    //       this.imagePre = reader.result;
+    //     };
+    //   },
+    //   uploadImage() {
+    //     this.imageUploading = true;
+    //     var fileName = `${this.userId}.${this.imageUpload.name.split(".")[1]}`;
+    //     console.log(fileName);
+    //     var refLink = firebase.storage().ref("team/" + fileName);
+    //     refLink.put(this.imageUpload).then(() => {
+    //       refLink.getDownloadURL().then(a => {
+    //       //console.log(a);
+    //         this.imageURL = a;
+    //         this.imageUploading = false;
+    //         this.uploadImage = "Uploaded";
+    //       });
+    //     });
+    //     this.dialogImageUload = false;
+    //   },
+    //   UpdateData() {
+    //     var self = this;
+    //     self.loading = true;
+    //     if (this.$refs.form.validate()) {
+    //       console.log(this.updatedData)
+    //       console.log(this.teamData.id)
+    //       firebase.firestore().collection("team").where("id", "==", this.teamData.id)
+    //       .get()
+    //       .then(function(querySnapshot) {
+    //           querySnapshot.forEach(function(doc) {
+    //             //console.log(doc.id, " => ", doc.data());
+    //               // Build doc ref from doc.id
+    //               firebase.firestore().collection("team").doc(doc.id).update({
+    //                   active: self.updatedData.active,
+    //                   visible: self.updatedData.visible,
+    //                   name:self.updatedData.name,
+    //                   designation: self.updatedData.designation,
+    //                   mbnumber: self.updatedData.mbnumber,
+    //                   email:self.updatedData.email,
+    //                   image:self.updatedData.image,
+    //                   bio:self.updatedData.bio,
+    //                   id: self.updatedData.id,
+    //                   role:self.updatedData.role,
+    //                   socialLinks:{
+    //                       facebook: self.updatedData.socialLinks.facebook,
+    //                       github: self.updatedData.socialLinks.github,
+    //                       linkedin: self.updatedData.socialLinks.linkedin,
+    //                       meetup: self.updatedData.socialLinks.meetup,
+    //                       twitter: self.updatedData.socialLinks.twitter,
+    //                       web: self.updatedData.socialLinks.web,
+    //                   }
+    //               });
+    //           });
+    //       }).then(()=>{
+    //           // alert('Data Updated')
+    //         self.loading = false
+    //         self.dialog = false
+    //         self.$emit('editedSuccess')
+    //       }).catch(()=>{
+    //         //console.log(e)
+    //           self.loading = false
+    //       })
+    //       firebase.firestore().collection('team').where('id','==', this.teamData.id)
+    //       update(Data).then(res=>{
+    //           // console.log(res)
+    //           alert('Updated')
+    //           this.dialog = false
+    //           this.$emit('showSuccess')
+    //       }).catch(e=>{
+    //         //console.log(e)
+    //       })
+    //     }
+    //   },
+    // },
   };
 </script>

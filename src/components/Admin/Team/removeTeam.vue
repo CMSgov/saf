@@ -51,20 +51,20 @@
         loading: false,
       };
     },
-    methods: {
-      deleteItem(id) {
-        this.loading = true;
-        // firebase.firestore().collection('team').where('id', '==',id).get().then(snapshot=>{
-        //     snapshot.forEach(doc=>{
-        //         doc.ref.delete()
-        //         this.loading = false
-        //         this.dialog = false
-        //         this.$emit('RemoveSuceess')
-        //         this.$router.push({ path: '/admin/dashboard/team', query: { msg: 'removesuccess' } })
-        //         // this.$router.replace('/admin/dashboard/team?msg=removesuccess')
-        //     })
-        // })
-      },
-    },
+    // methods: {
+    //   deleteItem(id) {
+    //     this.loading = true;
+    //     firebase.firestore().collection('team').where('id', '==',id).get().then(snapshot=>{
+    //         snapshot.forEach(doc=>{
+    //             doc.ref.delete()
+    //             this.loading = false
+    //             this.dialog = false
+    //             this.$emit('RemoveSuceess')
+    //             this.$router.push({ path: '/admin/dashboard/team', query: { msg: 'removesuccess' } })
+    //             // this.$router.replace('/admin/dashboard/team?msg=removesuccess')
+    //         })
+    //     })
+    //   },
+    // },
   };
 </script>

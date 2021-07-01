@@ -60,7 +60,7 @@
   // import pastTraining from "../components/training/traininginfo";
   import communityData from "@/assets/data/communityData.json";
   import Header from "@/components/core/Header.vue";
-  import RSVPBlock from "@/components/training/RSVPBlock.vue";
+  // import RSVPBlock from "@/components/training/RSVPBlock.vue";
 
   export default {
     data() {
@@ -70,7 +70,7 @@
     },
     components: {
       Header,
-      RSVPBlock,
+      // RSVPBlock,
       // pastTraining
     },
     created() {

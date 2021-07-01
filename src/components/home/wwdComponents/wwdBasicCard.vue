@@ -2,7 +2,7 @@
   <v-hover v-slot:default="{ hover }">
     <v-card
       outlined
-      class="d-flex flex-column"
+      class="pa-2"
       :to="item.router_link"
       :href="item.link"
       :class="hover && (item.link || item.router_link) ? getHighlight() : ''"
@@ -14,23 +14,13 @@
       <v-icon
         v-if="item.icon"
         large
-        style="font-size:300%"
-        class="mt-4"
+        :style="
+          item.icon_sizer ? 'font-size:' + item.icon_sizer : 'font-size:300%'
+        "
+        class="mt-4 d-flex flex-column"
         :color="hover && (item.router_link || item.link) ? '#1a73e8' : ''"
         >mdi-{{ item.icon }}</v-icon
       >
-      <!-- <v-fade-transition v-if="item.graphic" mode="out-in">
-      <v-img
-        v-on:mouseover="mouseOverCheck = current"
-        v-on:mouseout="mouseOverCheck = ''"
-        :key="current"
-        :src="mouseOverCheck === current ? require('@/assets/img/gif/' + item.graphic + '.gif') : require('@/assets/img/gif/' + item.graphic_frame + '.png')"
-        :lazy-src="item.graphic_frame"
-        v-on="on"
-        class="ma-2"
-        max-height="328"
-      />
-      </v-fade-transition>-->
       <v-img
         v-if="item.graphic"
         :src="require('@/assets/img/gif/' + item.graphic + '.gif')"
@@ -42,6 +32,20 @@
         v-bind:src="require('@/assets/img/gif/' + item.graphic_frame)"
         class="ma-2"
         max-height="328"
+      />
+      <v-img
+        v-else-if="item.png_dark && $vuetify.theme.isDark"
+        v-bind:src="require('@/assets/img/tools/' + item.png_dark + '.png')"
+        class="ma-2 mx-auto"
+        height="100"
+        width="100"
+      />
+      <v-img
+        v-else-if="item.png"
+        v-bind:src="require('@/assets/img/tools/' + item.png + '.png')"
+        class="ma-2 mx-auto"
+        height="100"
+        width="100"
       />
       <v-card-title
         class="google-font mt-2 title align-bottom justify-center break-word"
@@ -76,7 +80,7 @@
           :src="shield"
         />
       </div>
-      <v-card-actions class="pt-0">
+      <v-card-actions class="pt-0 mt-4">
         <v-container row dense class="ma-0">
           <v-row justify="center">
             <v-tooltip top>
