@@ -10,23 +10,9 @@
       style="width: 100%"
       :elevation="hover && (item.router_link || item.link) ? '20' : ''"
     >
-      <!--<toolBlock v-if="item.tools" :tools="item.tools" />-->
-      <!-- :color="hover && (item.router_link || item.link) ? '#1a73e8' : ''" -->
       <v-icon v-if="item.icon" large style="font-size:600%" class="mt-2">{{
         item.icon
       }}</v-icon>
-      <!-- <v-fade-transition v-if="item.graphic" mode="out-in">
-      <v-img
-        v-on:mouseover="mouseOverCheck = current"
-        v-on:mouseout="mouseOverCheck = ''"
-        :key="current"
-        :src="mouseOverCheck === current ? require('@/assets/img/gif/' + item.graphic + '.gif') : require('@/assets/img/gif/' + item.graphic_frame + '.png')"
-        :lazy-src="item.graphic_frame"
-        v-on="on"
-        class="ma-2"
-        max-height="328"
-      />
-      </v-fade-transition>-->
       <v-img
         v-if="item.graphic"
         :src="require('@/assets/img/gif/' + item.graphic + '.gif')"
@@ -38,6 +24,13 @@
         v-bind:src="require('@/assets/img/gif/' + item.graphic_frame + '.png')"
         class="ma-2"
         max-height="328"
+      />
+      <v-img
+        v-else-if="item.png_dark && $vuetify.theme.isDark"
+        v-bind:src="require('@/assets/img/tools/' + item.png_dark + '.png')"
+        class="ma-2 mx-auto"
+        height="100"
+        width="100"
       />
       <v-img
         v-else-if="item.png"
@@ -175,14 +168,17 @@
     position: relative;
     padding-bottom: 10px;
   }
+
   .card-actions {
     position: absolute;
     bottom: 0;
   }
+
   .flexcard {
     display: flex;
     flex-direction: column;
   }
+
   .svg-style {
     max-width: 24px;
     max-height: 24px;
