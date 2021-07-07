@@ -67,6 +67,7 @@
     "@vue/cli-plugin-pwa": "^3.12.1",
     "@vue/cli-service": "^3.12.1",
     "babel-eslint": "^10.1.0",
+    "cypress": "^7.6.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.2.3",
     "material-design-icons-iconfont": "^5.0.1",
