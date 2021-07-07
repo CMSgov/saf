@@ -429,6 +429,26 @@
         "Web Servers"
       ],
       "gitHash": "62da29b74b831de8b984a439df8aa88bc1edfa51"
+    },
+    {
+      "shortName": "AWS RDS Best Practices Benchmark",
+      "longName": "AWS RDS Best Practices Benchmark",
+      "link": "https://github.com/Staggerlee011/rds-bp-benchmark",
+      "svg": "inspec-blue-back-border",
+      "category": [
+        "Cloud Service Providers"
+      ],
+      "gitHash": "0"
+    },
+    {
+      "shortName": "AWS S3 Best Practices Benchmark",
+      "longName": "AWS S3 Best Practices Benchmark",
+      "link": "https://github.com/Staggerlee011/s3-bp-benchmark",
+      "svg": "inspec-blue-back-border",
+      "category": [
+        "Cloud Service Providers"
+      ],
+      "gitHash": "0"
     }
   ],
   "extras": {
