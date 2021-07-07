@@ -711,6 +711,40 @@
           "svg": "inspec-blue-black-border"
         }
       ]
+    },
+    {
+      "name": "AWS RDS Best Practices Benchmark",
+      "links" : [
+        {
+          "name": "AWS RDS Best Practices Benchmark",
+          "link" : "https://github.com/Staggerlee011/rds-bp-benchmark",
+          "fips" : [
+            "none"
+          ],
+          "svg": "inspec-blue-back-border"
+        }
+      ],
+      "category": [
+        "Cloud Service Providers"
+      ],
+      "gitHash": "0"
+    },
+    {
+      "name": "AWS S3 Best Practices Benchmark",
+      "links" : [
+        {
+          "name": "AWS S3 Best Practices Benchmark",
+          "link" : "https://github.com/Staggerlee011/s3-bp-benchmark",
+          "fips" : [
+            "none"
+          ],
+          "svg": "inspec-blue-back-border"
+        }
+      ],
+      "category": [
+        "Cloud Service Providers"
+      ],
+      "gitHash": "0"
     }
   ]
 }
