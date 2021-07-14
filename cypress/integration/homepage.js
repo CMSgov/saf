@@ -8,9 +8,5 @@ describe('The Home Page', () => {
       cy.contains('(Code Analysis, Continuous Monitoring, Security Operations)')
       // check a chevron
       cy.get('[id=operations_chevron]')
-      cy.contains('')
-      cy.contains('')
-      cy.contains('')
-      cy.contains('')
     })
   })
