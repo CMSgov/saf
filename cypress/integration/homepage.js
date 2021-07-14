@@ -12,6 +12,5 @@ describe('The Home Page', () => {
       cy.contains('')
       cy.contains('')
       cy.contains('')
-
     })
   })
