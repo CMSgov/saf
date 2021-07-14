@@ -24,3 +24,10 @@ jobs:
           start: npx serve -s dist
           config: baseUrl=http://localhost:5000
           wait-on: "http://localhost:5000"
+
+      - name: Store artifacts
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
