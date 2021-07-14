@@ -10,8 +10,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
+
+      - name: install
+        run: npm install
+
       - name: Build
         run: npm run serve
 
