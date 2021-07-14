@@ -7,7 +7,7 @@ describe('The Home Page', () => {
       // check How CMS SAF Works
       cy.contains('(Code Analysis, Continuous Monitoring, Security Operations)')
       // check a chevron
-      cy.get('[id=operations_chevron]').should('be.visible')
+      cy.get('[id=operations_chevron]')
       cy.contains('')
       cy.contains('')
       cy.contains('')
