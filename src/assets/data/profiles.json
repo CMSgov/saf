@@ -129,6 +129,54 @@
       ]
     },
     {
+      "name": "Apache 2.4 Server STIG",
+      "category": [
+        "Web Servers"
+      ],
+      "links": [
+        {
+          "name": "Apache 2.4 Server STIG",
+          "fips": [
+            "none"
+          ],
+          "link": "https://gitlab.dsolab.io/scv-content/inspec/apache/httpd_2.4x_server",
+          "svg": "inspec-blue-black-border"
+        }
+      ]
+    },
+    {
+      "name": "Apache 2.4 Site STIG",
+      "category": [
+        "Web Servers"
+      ],
+      "links": [
+        {
+          "name": "Apache 2.4 Site STIG",
+          "fips": [
+            "none"
+          ],
+          "link": "https://gitlab.dsolab.io/scv-content/inspec/apache/httpd_2.4x_site",
+          "svg": "inspec-blue-black-border"
+        }
+      ]
+    },
+    {
+      "name": "Apache Tomcat 9 STIG",
+      "category": [
+        "Web Servers"
+      ],
+      "links": [
+        {
+          "name": "Apache Tomcat 9 STIG",
+          "fips": [
+            "none"
+          ],
+          "link": "https://gitlab.dsolab.io/scv-content/inspec/apache/tomcat_9.x",
+          "svg": "inspec-blue-black-border"
+        }
+      ]
+    },
+    {
       "name": "MSQL Server 2014 Database STIG",
       "category": [
         "Databases"
@@ -156,6 +204,22 @@
             "high"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay",
+          "svg": "inspec-blue-black-border"
+        }
+      ]
+    },
+    {
+      "name": "MongoDB Enterprise 3 STIG",
+      "category": [
+        "Databases"
+      ],
+      "links": [
+        {
+          "name": "MongoDB Enterprise 3 STIG",
+          "fips": [
+            "none"
+          ],
+          "link": "https://gitlab.dsolab.io/scv-content/inspec/mongo/mongodb_enterprise_3.x",
           "svg": "inspec-blue-black-border"
         }
       ]
@@ -660,6 +724,70 @@
             "none"
           ],
           "link": "https://github.com/mitre/kubernetes-cis-baseline",
+          "svg": "inspec-blue-black-border"
+        }
+      ]
+    },
+    {
+      "name": "Kubernetes Cluster STIG",
+      "category": [
+        "Virtual Platforms"
+      ],
+      "links" : [
+        {
+          "name": "Kubernetes Cluster STIG",
+          "fips": [
+            "none"
+          ],
+          "link": "https://gitlab.dsolab.io/scv-content/inspec/kubernetes/baselines/k8s-cluster-stig-baseline",
+          "svg": "inspec-blue-black-border"
+        }
+      ]
+    },
+    {
+      "name": "Kubernetes Node STIG",
+      "category": [
+        "Virtual Platforms"
+      ],
+      "links" : [
+        {
+          "name": "Kubernetes Node STIG",
+          "fips": [
+            "none"
+          ],
+          "link": "https://gitlab.dsolab.io/scv-content/inspec/kubernetes/baselines/k8s-node-stig-baseline",
+          "svg": "inspec-blue-black-border"
+        }
+      ]
+    },
+    {
+      "name": "K3S Cluster STIG",
+      "category": [
+        "Virtual Platforms"
+      ],
+      "links" : [
+        {
+          "name": "K3S Cluster STIG",
+          "fips": [
+            "none"
+          ],
+          "link": "https://gitlab.dsolab.io/scv-content/inspec/kubernetes/k3s/k3s-cluster-stig-baseline",
+          "svg": "inspec-blue-black-border"
+        }
+      ]
+    },
+    {
+      "name": "K3S Node STIG",
+      "category": [
+        "Virtual Platforms"
+      ],
+      "links" : [
+        {
+          "name": "K3S Node STIG",
+          "fips": [
+            "none"
+          ],
+          "link": "https://gitlab.dsolab.io/scv-content/inspec/kubernetes/k3s/k3s-node-stig-baseline",
           "svg": "inspec-blue-black-border"
         }
       ]
