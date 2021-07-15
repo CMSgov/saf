@@ -26,4 +26,4 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           config: baseUrl=http://localhost:5000/#/
-          wait-on: "http://localhost:5000"
+          wait-on: "http://localhost:5000/#/"
