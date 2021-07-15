@@ -3,8 +3,8 @@
         "new" : {
             "header" : "New",
             "content" : [
-                "Automate Manual Controls! SAF/InSpec can now address manual controls! See \"Manual Controls\" on the <a href=\"https://saf.cms.gov/#/validate\">Validate page</a>.",
-                "<a href=\"https://heimdall-tools.mitre.org/\">Heimdall-tools</a> now supports JFrog Xray, DbProtect, AWS Config, and NetSparker scan data conversion for viewing in Heimdall!",
+                "<a href=\"https://github.com/mitre/serverless-inspec-lambda\">Serverless InSpec (AWS)</a> - An AWS Lambda runner for InSpec - convenient scans without having to set up a runner!",
+                "<a href=\"https://heimdall-tools.mitre.org/\">Heimdall-tools</a> now supports JFrog Xray, DbProtect, AWS Config, NetSparker, SCC, Snyk and ScoutSuite scan data conversion for viewing in Heimdall!",
                 "Heimdall Server supports role-based access, multi-target CAAT export, and more! Follow releases <a href=\"https://github.com/mitre/heimdall2/releases\">here</a>."
             ]
         },
@@ -12,13 +12,14 @@
             "header" : "Reminders",
             "content" : [
                 "Check back often to find the latest information on <a href=\"https://saf.cms.gov/#/validate\">InSpec profiles</a>, <a href='https://heimdall-tools.mitre.org/'>Heimdall-tool converters</a>, and <a href=\"https://github.com/mitre/heimdall2/releases\">Heimdall updates!</a>",
+                "Automate Manual Controls! SAF/InSpec can now address manual controls! See \"Manual Controls\" on the <a href=\"https://saf.cms.gov/#/validate\">Validate page</a>.",
                 "<a href=\"https://heimdall-lite.cms.gov/\">Heimdall-lite.cms.gov</a> is live! CMS now has its own version of Heimdall-lite, an in-browser tool for analyzing security data!"
             ]
         },
         "coming-soon" : {
             "header" : "Coming Soon",
             "content" : [
-                "An AWS Lambda runner for InSpec – convenient scans without having to set up a runner!"
+                "Support for viewing AWS Security Hub information in Heimdall"
             ]
         }
     }

@@ -113,7 +113,7 @@ export default new Vuex.Store({
         }
       }, */
       {
-        text: "What's New [Now Automate Manual Controls!]",
+        text: "What's New [Now Run InSpec using AWS Lambda]",
         to: "/whats-new",
         icon: "mdi-newspaper",
         meta: {
