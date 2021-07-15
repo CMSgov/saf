@@ -1,8 +1,5 @@
 name: Integration tests
-on:
-  push:
-    branches:
-      - cypress
+on: pull_request
 
 jobs:
   cypress-run:
@@ -11,23 +8,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: install
+      - name: install dependencies
         run: npm install
 
-      # - name: Build
-      #   run: npm run serve
+      - name: build site
+        run: npm run build
 
-      - name: Cypress run
+      - name: deploy site
+        run: npx serve -s dist
+
+      - name: test site with cypress
         uses: cypress-io/github-action@v2
         with:
-          build: npm run build
-          start: npx serve -s dist
-          config: baseUrl=http://localhost:5000
+          config: baseUrl=http://localhost:5000/#/
           wait-on: "http://localhost:5000"
-
-      - name: Store artifacts
-        uses: actions/upload-artifact@v2
-        if: always()
-        with:
-          name: cypress-screenshots
-          path: cypress/screenshots
