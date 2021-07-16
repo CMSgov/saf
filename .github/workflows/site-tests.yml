@@ -19,11 +19,9 @@ jobs:
       - name: build site
         run: npm run build
 
-      - name: deploy site
-        run: npx serve -s dist
-
       - name: test site with cypress
         uses: cypress-io/github-action@v2
         with:
+          start: npx serve -s dist
           config: baseUrl=http://localhost:5000/#/
           wait-on: "http://localhost:5000/#/"
