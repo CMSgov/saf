@@ -8,7 +8,7 @@ describe('The Getting Started Page', () => {
       cy.contains('DevSecOps is a software development framework')
       // check the image
       cy.get('[id=inspec-runner]')
-    }),
+    })
     it('has working links', () => {
       cy.get('a').get('[id*=gs-]').each(link => {
         if (link.hasClass('download')) {
