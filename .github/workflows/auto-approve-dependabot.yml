@@ -7,13 +7,13 @@ jobs:
     if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
     runs-on: ubuntu-20.04
     steps:
-    - uses: hmarr/auto-approve-action@v2.0.0
-      with:
-        github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - uses: hmarr/auto-approve-action@v2.0.0
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
   merge:
     name: Auto-merge approved dependabot PRs
     runs-on: ubuntu-20.04
     steps:
-    - uses: ahmadnassri/action-dependabot-auto-merge@v2
-      with:
-        github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - uses: ahmadnassri/action-dependabot-auto-merge@v2
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
