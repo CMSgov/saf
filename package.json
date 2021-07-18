@@ -50,7 +50,7 @@
     "css-vars-ponyfill": "^2.3.2",
     "intersection-observer": "^0.10.0",
     "material-design-icons": "^3.0.1",
-    "prismjs": "^1.23.0",
+    "prismjs": "^1.24.0",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.12",
     "vue-cheetah-grid": "^0.22.3",
