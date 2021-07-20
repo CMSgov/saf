@@ -321,13 +321,6 @@
       "link": "https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_Server_2016_V1R3_STIG_PowerShell_DSC.zip",
       "svg": "powershell-logo",
       "category": ["Operating Systems"]
-    },
-    {
-      "shortName": "Windows 2016 STIG",
-      "longName": "Windows 2016 r2 STIG",
-      "link": "https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_Server_2016_V1R3_STIG_PowerShell_DSC.zip",
-      "svg": "powershell-logo",
-      "category": ["Operating Systems"]
     }
   ]
 }
