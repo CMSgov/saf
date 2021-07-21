@@ -278,14 +278,14 @@
       "longName": "Cisco IOS XE NDM and RTR STIG",
       "link": "https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Cisco_IOS_XE_Router_NDM_RTR_V1R3_STIG_Ansible.zip",
       "svg": "ansible",
-      "category": ["Operating Systems"]
+      "category": ["Network"]
     },
     {
       "shortName": "Cisco IOS XE Router STIG",
       "longName": "Cisco IOS XE Router STIG",
       "link": "https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Cisco_IOS_XE_Router_V2R1_STIG_Ansible.zip",
       "svg": "ansible",
-      "category": ["Operating Systems"]
+      "category": ["Network"]
     },
     {
       "shortName": "Docker Enterprise 2.x STIG",
@@ -299,14 +299,7 @@
       "longName": "Juniper SRX SG STIG",
       "link": "https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Juniper_SRX_SG_V1R1_STIG_Ansible.zip",
       "svg": "ansible",
-      "category": ["Operating Systems"]
-    },
-    {
-      "shortName": "Juniper SRX SG STIG",
-      "longName": "Juniper SRX SG STIG",
-      "link": "https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Juniper_SRX_SG_V1R1_STIG_Ansible.zip",
-      "svg": "ansible",
-      "category": ["Operating Systems"]
+      "category": ["Network"]
     },
     {
       "shortName": "VMware vSphere 6.5 STIG",
