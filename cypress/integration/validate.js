@@ -11,5 +11,6 @@ describe('The Validate Page', () => {
       cy.contains('MongoDB STIG')
       cy.contains('RSA Archer 6 SCG')
       cy.contains('NGINX')
+      cy.contains('FOOBAR')
   })
 })
