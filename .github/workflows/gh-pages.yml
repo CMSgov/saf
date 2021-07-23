@@ -45,4 +45,4 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}
     steps:
       - name: abort deploy
-      - run: echo "Site tests failed. GitHub Pages deployment aborted."
+        run: echo "Site tests failed. GitHub Pages deployment aborted."
