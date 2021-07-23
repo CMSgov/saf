@@ -1,0 +1,34 @@
+name: Integration tests
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - cypress
+      - master
+jobs:
+  cypress-run:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: install dependencies
+        run: npm install
+
+      - name: build site
+        run: npm run build
+
+      - name: test site with cypress
+        uses: cypress-io/github-action@v2
+        with:
+          start: npx serve -s dist
+          config: baseUrl=http://localhost:5000/#/
+          wait-on: "http://localhost:5000/#/"
+
+      - uses: actions/upload-artifact@v1
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
