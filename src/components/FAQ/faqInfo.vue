@@ -1,5 +1,6 @@
 <template>
   <v-container fluid>
+  <v-btn @click="expandAll">Expand All</v-btn>
     <v-expansion-panels focusable hover tile multiple v-model="panel">
       <v-expansion-panel v-for="(faq, index) in faqs" :key="index">
         <v-expansion-panel-header class="" style="font-weight: 300; font-size:120% ">
@@ -77,6 +78,12 @@ export default {
       }
     }
   },
+  mounted() {
+    Event.$on('printPrep', () => {
+      this.panel = [1,2,3]
+      console.log(this.panel)
+    })
+  },
   methods : {
     lookupOrder(name) {
       var i;
@@ -86,6 +93,11 @@ export default {
           return i;
         }
       }
+    },
+    expandAll() {
+      console.log(this.faqs.length)
+      this.panel = [1,2,3,4,5,6]//Array(this.faqs.length)
+      console.log(this.panel)
     }
   }
 };

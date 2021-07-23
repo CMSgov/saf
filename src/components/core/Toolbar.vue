@@ -39,6 +39,7 @@
       @click="onClick($event, link)"
     >{{ link.text }}</v-btn>
     <!--<PushNotification />-->
+    <PrintButton :printId="this.$route.name">Print Page</PrintButton>
     <v-btn icon v-on:click="darkMode" class="ml-2">
       <v-icon v-if="this.$vuetify.theme.dark">mdi-brightness-7</v-icon>
       <v-icon v-else>mdi-brightness-4</v-icon>
@@ -49,6 +50,7 @@
 <script>
 import communityData from "@/assets/data/communityData.json";
 import feedbackModal from "@/components/core/FeedbackModal.vue";
+import PrintButton from "@/components/core/PrintButton.vue"
 // import PushNotification from "@/components/core/PushNotifications";
 import { mapMutations, mapGetters } from "vuex";
 export default {
@@ -59,6 +61,7 @@ export default {
   },
   components: {
     feedbackModal: feedbackModal,
+    PrintButton: PrintButton
   },
   computed: {
     metalinks() {

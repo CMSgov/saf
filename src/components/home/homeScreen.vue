@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="py-0">
+  <v-container fluid class="py-0" id="homepage-template">
     <v-row align="center">
       <!-- <v-col md="3" sm="5">
         <v-img
