@@ -1,13 +1,9 @@
 name: Deploy to GitHub Pages
-# on:
-#   push:
-#     branches:
-#       - master
-
 on:
   workflow_run:
     workflows: ["site-tests"]
-    types: [completed]
+    types:
+      - completed
 
 jobs:
   build-deploy:
