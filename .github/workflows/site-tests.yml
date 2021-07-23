@@ -1,4 +1,4 @@
-name: Integration tests
+name: site-tests
 on:
   pull_request:
     branches:
