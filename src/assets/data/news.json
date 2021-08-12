@@ -3,6 +3,7 @@
         "new" : {
             "header" : "New",
             "content" : [
+                "<a href=\"https://saf.cms.gov/#/train\">RSVP – InSpec profile developer training for September 2021!</a>",
                 "Automate Manual Controls! SAF/InSpec can now address manual controls! See \"Manual Controls\" on the <a href=\"https://saf.cms.gov/#/validate\">Validate page</a>.",
                 "<a href=\"https://heimdall-tools.mitre.org/\">Heimdall-tools</a> now supports JFrog Xray, DbProtect, AWS Config, and NetSparker scan data conversion for viewing in Heimdall!",
                 "Heimdall Server supports role-based access, multi-target CAAT export, and more! Follow releases <a href=\"https://github.com/mitre/heimdall2/releases\">here</a>."
