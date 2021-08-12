@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>RSVP – InSpec profile developer training for March/April 2021!</h2>
+    <h2>RSVP – InSpec profile developer training for September 2021!</h2>
     <p>
       Sponsored by CMS under the CMS Security Automation Framework, we’re happy
       to announce plans to again provide training to developers interested in
@@ -18,16 +18,14 @@
       <a :href="communityData.trainingSiteBasic" target="_blank"
         >base introductory InSpec developer class</a
       >
-      will again be offered on March 30-31, 2021 (9am-4pm both days)
+      will again be offered on September 8-9, 2021 (9am-4pm both days)
     </p>
     <p>
       The
-      <a
-        :href="communityData.trainingSiteAdvanced"
-        target="_blank"
+      <a :href="communityData.trainingSiteAdvanced" target="_blank"
         >follow-on Advanced InSpec developer class</a
       >
-      will again be offered on April 13-14, 2021 (9am-4pm both days)
+      will again be offered on September 22-23, 2021 (9am-4pm both days)
     </p>
     <p>
       Please RSVP if you are interested in attending or have additional
@@ -73,12 +71,12 @@
   </div>
 </template>
 <script>
-import communityData from "@/assets/data/communityData.json";
-export default {
-  data() {
-    return {
-      communityData: communityData,
-    };
-  },
-}
+  import communityData from "@/assets/data/communityData.json";
+  export default {
+    data() {
+      return {
+        communityData: communityData,
+      };
+    },
+  };
 </script>
