@@ -1,5 +1,6 @@
 <template>
   <v-container fluid>
+    <RSVPBlock class="mt-2" />
     <v-row
       align="center"
       justify="center"
@@ -41,7 +42,7 @@
   import communityData from "@/assets/data/communityData.json";
   import trainingData from "@/assets/data/trainingData.json";
   import resources from "@/assets/data/resources.json";
-  // import RSVPBlock from "@/components/training/RSVPBlock.vue"
+  import RSVPBlock from "@/components/training/RSVPBlock.vue";
   export default {
     name: "App",
     data: () => ({
@@ -64,9 +65,9 @@
       //   return this.trainingData.pastTraining.introTraining.concat(this.trainingData.pastTraining.advTraining);
       // },
     },
-    // components: {
-    //   RSVPBlock
-    // },
+    components: {
+      RSVPBlock,
+    },
     methods: {
       passItemData(item) {
         this.dialogData = item;
