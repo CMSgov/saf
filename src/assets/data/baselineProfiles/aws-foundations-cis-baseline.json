@@ -2031,7 +2031,7 @@
       "id": "controls/aws-foundations-cis-1.17.rb"
     }
   ],
-  "sha256": "bb3bf75663012f43e5029686e3a097855b531081fdfc217baf6070fd9bcbfa0a",
+  "sha256": "11bb147099d022bd96bed5918a97d6e1ee19add6f8398adda60d04e1f2b99577",
   "status_message": "",
   "status": "loaded",
   "generator": {
