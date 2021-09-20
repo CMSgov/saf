@@ -10,7 +10,7 @@
     <v-row justify="center" align="center" class="mx-0">
       <v-col cols="12" lg="10" class="pa-0">
         <v-container fluid>
-          <RSVPBlock />
+          <!-- <RSVPBlock /> -->
           <h2>About CMS SAF Training</h2>
           <p>
             InSpec is an open-source and precise scripting framework to help you
@@ -60,7 +60,7 @@
   // import pastTraining from "../components/training/traininginfo";
   import communityData from "@/assets/data/communityData.json";
   import Header from "@/components/core/Header.vue";
-  import RSVPBlock from "@/components/training/RSVPBlock.vue";
+  //import RSVPBlock from "@/components/training/RSVPBlock.vue";
 
   export default {
     data() {
@@ -70,7 +70,7 @@
     },
     components: {
       Header,
-      RSVPBlock,
+      //RSVPBlock,
       // pastTraining
     },
     created() {
