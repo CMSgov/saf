@@ -171,6 +171,16 @@
       "gitHash": "8d5d86144c15fa7df9d8afa34af7f0ab136f7091"
     },
     {
+      "shortName": "Oracle Database 19c CIS",
+      "longName": "Oracle Database 19c CIS",
+      "link": "https://gitlab.dsolab.io/scv-content/inspec/oracle/oracle-database-19c-cis-baseline/-/tree/master",
+      "svg": "inspec-blue-back-border",
+      "category": [
+        "Databases"
+      ],
+      "gitHash": "0"
+    },
+    {
       "shortName": "AWS RDS MySQL 5.7 CIS",
       "longName": "AWS RDS MySQL Enterprise Edition 5.7 CIS",
       "link": "https://github.com/mitre/aws-rds-oracle-mysql-ee-5.7-cis-baseline",
