@@ -281,16 +281,6 @@
       "gitHash": "3818c5f6868e1ffc905769436ee4808323ff8659"
     },
     {
-      "shortName": "AWS RDS BP Benchmark",
-      "longName": "AWS RDS Best Practices Benchmark",
-      "link": "https://github.com/Staggerlee011/rds-bp-benchmark",
-      "svg": "inspec-blue-back-border",
-      "category": [
-        "Cloud Service Providers"
-      ],
-      "gitHash": ""
-    },
-    {
       "shortName": "AWS S3",
       "longName": "AWS S3",
       "link": "https://github.com/mitre/aws-s3-baseline",
