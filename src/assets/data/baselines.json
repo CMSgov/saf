@@ -351,16 +351,6 @@
       "gitHash": "61bc21d6699a286cc06ef84abc5734d8eb065366"
     },
     {
-      "shortName": "VMWare vSphere VM 6.5 STIG",
-      "longName": "VMware vSphere Virtual Machines version 6.5 STIG",
-      "link": "https://github.com/kclinden/vmware-vsphere-65-virtual-machine-stig-baseline",
-      "svg": "inspec-blue-back-border",
-      "category": [
-        "Virtual Platforms"
-      ],
-      "gitHash": "f61ed9eb72f02b7bce1a0cfd6d725a0542fc88c4"
-    },
-    {
       "shortName": "VMWare ESXI 6.5 STIG",
       "longName": "VMWare ESXI 6.5 STIG",
       "link": "https://github.com/kclinden/vmware-esxi-6.5-stig-baseline",
