@@ -25,7 +25,7 @@
             "text" : "<b>VALIDATE</b>",
             "size" : "2rem"
           },
-          "subtitle": "<b>Generate detailed security testing results</b> throughout the lifecycle of a system",
+          "subtitle": "<b>Generate detailed security testing results</b> throughout the lifecycle of a system via <b>automated tests</b> and <b>manual attestation</b>",
           "router_link" : "/validate",
           "cols": {
             "xl" : "3",
@@ -124,6 +124,12 @@
         {
           "subcards": [
             {
+              "svg": "Hardening Lib Icon",
+              "title": "Hardening",
+              "subtitle": "Content Library",
+              "router_link" : "/harden"
+            },
+            {
               "svg": "Terraform Icon and Typemark",
               "link" : "https://www.terraform.io/"
             },
@@ -134,12 +140,6 @@
             {
               "svg": "Ansible Logo and Typemark",
               "link" : "https://www.ansible.com/"
-            },
-            {
-              "svg": "Hardening Lib Icon",
-              "title": "Hardening",
-              "subtitle": "Content Library",
-              "router_link" : "/harden"
             }
           ],
           "cols": {
@@ -153,6 +153,30 @@
         },
         {
           "subcards": [
+            {
+              "svg": "Validation Lib Icon",
+              "title": "Validation",
+              "subtitle": "Content Library",
+              "router_link" : "/validate"
+            },
+            {
+              "title": "Manual Attestation",
+              "subtitle": [
+                {
+                  "type": "svg",
+                  "contents": "InSpec Icon"
+                },
+                {
+                  "type": "svg",
+                  "contents": "InSpec Typemark"
+                },
+                {
+                  "type": "text",
+                  "contents": "plugin for manual attestation via interviews and examination"
+                }
+              ],
+              "link" : "https://github.com/mitre/inspec-reporter-json-hdf"
+            },
             {
               "title": "Vulcan",
               "subtitle": [
@@ -196,12 +220,6 @@
                 }
               ],
               "link" : "https://inspec-tools.mitre.org"
-            },
-            {
-              "svg": "Validation Lib Icon",
-              "title": "Validation",
-              "subtitle": "Content Library",
-              "router_link" : "/validate"
             }
           ],
           "cols": {
