@@ -27,6 +27,11 @@
       "footer" : "Properly created InSpec profiles naturally produce results in this format. To create HDF files using non-InSpec tool output, we provide Heimdall Tools."
     },
     {
+      "header": "HDF Schema",
+      "desc": "While the core elements of HDF describe individual controls, the full schema of an HDF output file describes a set of security validation profiles (such as InSpec profiles) that were executed against a target system, the controls included in those profiles, and the results they generated. HDF output also includes helpful statistics such as which controls passed, which failed, and which were skipped as non-applicable.",
+      "image": "hdf-schema-diagram"
+    },
+    {
       "header": "Heimdall Tools",
       "desc": "MITRE created the <a href='https://heimdall-tools.mitre.org/' target='_blank'>Heimdall Tools</a> command line toolset to allow the conversion of output from widely used automated security testing tools into HDF. At present, Heimdall Tools can convert output from:",
       "bullets": [

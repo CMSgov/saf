@@ -5,6 +5,9 @@
       <p class="ma-2">
         <span v-html="row.desc" />
       </p>
+      <p class="ma-2" v-if="row.image">
+        <v-img :src="require('@/assets/img/' + row.image + '.png')" />
+      </p>
       <ul v-if="row.bullets" class="ma-2">
         <li v-for="(bullet, index) in row.bullets" :key="index">
           <a v-if="bullet.link" :href="bullet.link" target="_blank">{{
