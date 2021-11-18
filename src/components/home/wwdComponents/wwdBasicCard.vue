@@ -7,7 +7,7 @@
       :href="item.link"
       :color="hover && (item.router_link || item.link) ? get_highlight() : ''"
       :target="item.link ? '_blank' : ''"
-      style="width: 100%"
+      style="height: 100%"
       :elevation="hover && (item.router_link || item.link) ? '20' : ''"
     >
       <v-icon v-if="item.icon" large style="font-size:600%" class="mt-2">{{
