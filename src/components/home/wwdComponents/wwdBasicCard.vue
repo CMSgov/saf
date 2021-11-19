@@ -10,35 +10,26 @@
       style="height: 100%"
       :elevation="hover && (item.router_link || item.link) ? '20' : ''"
     >
-      <v-icon v-if="item.icon" large style="font-size:600%" class="mt-2">{{
-        item.icon
-      }}</v-icon>
-      <v-img
-        v-if="item.graphic"
-        :src="require('@/assets/img/gif/' + item.graphic + '.gif')"
-        class="ma-2"
-        max-height="328"
-      />
-      <v-img
-        v-else-if="item.graphic_frame"
-        v-bind:src="require('@/assets/img/gif/' + item.graphic_frame + '.png')"
-        class="ma-2"
-        max-height="328"
-      />
-      <v-img
-        v-else-if="item.png_dark && $vuetify.theme.isDark"
-        v-bind:src="require('@/assets/img/tools/' + item.png_dark + '.png')"
-        class="ma-2 mx-auto"
-        height="100"
-        width="100"
-      />
-      <v-img
-        v-else-if="item.png"
-        v-bind:src="require('@/assets/img/tools/' + item.png + '.png')"
-        class="ma-2 mx-auto"
-        height="100"
-        width="100"
-      />
+      <v-sheet height="100" v-if="item.icon || item.png">
+        <v-icon v-if="item.icon" large style="font-size:600%" class="mt-2">{{
+          item.icon
+        }}</v-icon>
+        <v-img
+          v-else-if="item.png_dark && $vuetify.theme.isDark"
+          v-bind:src="require('@/assets/img/tools/' + item.png_dark + '.png')"
+          style="vertical-align: middle"
+          class="ma-2 mx-auto"
+          :height="item.img_height ? item.img_height : '100'"
+          :width="item.img_width ? item.img_width : '100'"
+        />
+        <v-img
+          v-else-if="item.png"
+          v-bind:src="require('@/assets/img/tools/' + item.png + '.png')"
+          class="ma-2 mx-auto"
+          :height="item.img_height ? item.img_height : '100'"
+          :width="item.img_width ? item.img_width : '100'"
+        />
+      </v-sheet>
       <!-- :style="hover && (item.router_link || item.link) ? 'color:#1a73e8' : ''" -->
       <v-card-title
         class="google-font mt-2 title align-bottom justify-center break-word"
