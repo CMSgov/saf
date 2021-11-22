@@ -19,7 +19,7 @@
                   <v-col>
                     <json-viewer
                       :value="jsonwrapper.json"
-                      theme="json-theme"
+                      :theme="darkTheme ? 'json-theme-dark' : 'json-theme-light'"
                       copyable
                     />
                   </v-col>
@@ -74,6 +74,11 @@
         normalize_data: [],
       };
     },
+    computed: {
+      darkTheme: function () {
+        return this.$vuetify.theme.dark;
+      }
+    },
     components: {
       Prism,
       JsonViewer,
@@ -114,8 +119,51 @@
 </style>
 
 <style lang='scss'>
-  .json-theme {
+  .json-theme-dark {
     background: #222222;
+
+    .jv-ellipsis {
+      color: #eee;
+      background-color: #353535;
+    }
+
+    .jv-key {
+      color: #eee;
+    }
+
+    .jv-item {
+      &.jv-array {
+        color: #eee;
+      }
+      &.jv-object {
+        color: #eee;
+      }
+    }
+  }
+
+  .json-theme-light {
+    background: #fff;
+
+    .jv-ellipsis {
+      color: #999;
+      background-color: #eee;
+    }
+
+    .jv-key {
+      color: #111;
+    }
+
+    .jv-item {
+      &.jv-array {
+        color: #111;
+      }
+      &.jv-object {
+        color: #111;
+      }
+    }
+  }
+
+  .jv-container {
     white-space: nowrap;
     color: #525252;
     font-size: 14px;
@@ -123,8 +171,6 @@
     max-height: 50em;
 
     .jv-ellipsis {
-      color: #eee;
-      background-color: #353535;
       display: inline-block;
       line-height: 0.9;
       font-size: 0.9em;
@@ -139,13 +185,9 @@
       color: #49b3ff;
     }
     .jv-key {
-      color: #EEEEEE;
       margin-right: 4px;
     }
     .jv-item {
-      &.jv-array {
-        color: #EEEEEE;
-      }
       &.jv-boolean {
         color: #fc1e70;
       }
@@ -155,8 +197,11 @@
       &.jv-number {
         color: #fc1e70;
       }
-      &.jv-object {
-        color: #EEEEEE;
+      &.jv-number-float {
+        color: #fc1e70;
+      }
+      &.jv-number-integer {
+        color: #fc1e70;
       }
       &.jv-undefined {
         color: #e08331;
