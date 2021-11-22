@@ -35,7 +35,7 @@
           "url": "https://raw.githubusercontent.com/mitre/heimdall2/master/libs/inspecjs/schemas/exec-json.json"
         },
         {
-          "title": "Ubuntu 16.04 STIG baseline requirement V-75443",
+          "title": "Example Ubuntu 16.04 STIG baseline requirement V-75443",
           "json": {
             "platform": { "name": "ubuntu", "release": "16.04" },
             "profiles": [
