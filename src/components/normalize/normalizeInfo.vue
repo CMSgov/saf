@@ -5,7 +5,7 @@
       <p class="ma-2">
         <span v-html="row.desc" />
       </p>
-      <p class="ma-2" v-if="row.jsonviewer">
+      <p class="ma-2 pb-2" v-if="row.jsonviewer">
         <v-container fluid class="pa-0">
           <v-row>
             <v-col v-for="(jsonwrapper, index_jsonwrapper) in row.jsonviewer" :key="index_jsonwrapper">
@@ -120,6 +120,7 @@
     color: #525252;
     font-size: 14px;
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    max-height: 50em;
 
     .jv-ellipsis {
       color: #eee;
@@ -171,6 +172,9 @@
       }
     }
     .jv-code {
+      max-height: inherit;
+      overflow: auto;
+
       .jv-toggle {
         &:before {
           padding: 0px 2px;
