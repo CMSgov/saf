@@ -44,7 +44,9 @@
         :xl="xl"
         class="text-center pa-1 d-flex justify-center"
       >
-        <wwdBasicCard :item="item" />
+        <v-sheet outlined :color="item.border_color" rounded style="width:100%">
+          <wwdBasicCard :item="item" />
+        </v-sheet>
       </v-col>
     </v-row>
   </v-container>

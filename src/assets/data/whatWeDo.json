@@ -71,7 +71,8 @@
           "shields": [
             "https://img.shields.io/github/v/tag/mitre/heimdall2?label=version",
             "https://img.shields.io/npm/dt/heimdall-lite?label=npm%20downloads"
-          ]
+          ],
+          "border_color": "orange"
         },
         {
           "name": "Heimdall Server",
@@ -88,49 +89,8 @@
           "shields": [
             "https://img.shields.io/github/v/tag/mitre/heimdall2?label=version",
             "https://img.shields.io/docker/pulls/mitre/heimdall2?label=docker%20hub%20pulls"
-          ]
-        },
-        {
-          "name": "Vulcan (alpha)",
-          "link": "",
-          "desc": "Application for streamlining InSpec profile and overlay development using the Security Requirements Guide (SRG)",
-          "icon": "",
-          "png" : "saf_logo",
-          "app_link": "",
-          "app_svg": "app",
-          "doc_link": "https://vulcan.mitre.org",
-          "github_link": "https://github.com/mitre/vulcan",
-          "svg": "",
-          "tools": ""
-        },
-        {
-          "name": "InSpec Tools",
-          "link": "",
-          "desc": "A set of Ruby utilities for creating, converting, and processing security baseline formats, results, and data",
-          "icon": "",
-          "png" : "inspec_logo",
-          "app_link": "",
-          "app_svg": "app",
-          "doc_link": "https://inspec-tools.mitre.org",
-          "github_link": "https://github.com/mitre/inspec_tools/",
-          "svg": "",
-          "tools": "",
-          "shields": [
-            "https://img.shields.io/github/v/release/mitre/inspec_tools?label=version",
-            "https://img.shields.io/gem/dt/inspec_tools?label=gem%20downloads"
-          ]
-        },
-        {
-          "name": "InSpec Tools GitHub Action",
-          "link": "",
-          "desc": "Add InSpec Tools to your GitHub Actions workflow",
-          "icon": "mdi-github",
-          "app_link": "",
-          "app_svg": "",
-          "doc_link": "https://github.com/marketplace/actions/inspec-tools-action",
-          "github_link": "https://github.com/mitre/inspec_tools_action",
-          "svg": "",
-          "tools": ""
+          ],
+          "border_color": "orange"
         },
         {
           "name": "Heimdall Tools",
@@ -147,7 +107,8 @@
           "shields": [
             "https://img.shields.io/github/v/release/mitre/heimdall_tools?label=version",
             "https://img.shields.io/gem/dt/heimdall_tools?label=gem%20downloads"
-          ]
+          ],
+          "border_color": "orange"
         },
         {
           "name": "Heimdall Tools GitHub Action",
@@ -158,37 +119,8 @@
           "app_svg": "",
           "doc_link": "https://github.com/marketplace/actions/heimdall-tools-action",
           "github_link": "https://github.com/mitre/heimdall_tools_action",
-          "svg": ""
-        },
-        {
-          "name": "InSpecJS",
-          "link": "",
-          "desc": "A Typescript library for working with InSpec data",
-          "icon": "",
-          "png" : "inspec_logo",
-          "app_link": "",
-          "app_svg": "app",
-          "doc_link": "https://inspecjs.mitre.org",
-          "github_link": "https://github.com/mitre/inspecjs",
           "svg": "",
-          "tools": "",
-          "shields": [
-            "https://img.shields.io/npm/v/inspecjs?label=version",
-            "https://img.shields.io/npm/dt/inspecjs?label=npm%20downloads"
-          ]
-        },
-        {
-          "name": "InSpecJS Tools",
-          "link": "",
-          "desc": "A set of JavaScript utilities for creating, converting, and processing security baseline formats, results, and data",
-          "icon": "",
-          "png" : "inspec_logo",
-          "app_link": "",
-          "app_svg": "app",
-          "doc_link": "https://inspec-tools-js.mitre.org",
-          "github_link": "https://github.com/mitre/inspec_tools_js",
-          "svg": "",
-          "tools": ""
+          "border_color": "orange"
         },
         {
           "name": "HDF Splunk Plugin",
@@ -206,7 +138,71 @@
           "shields": [
             "https://img.shields.io/github/v/release/mitre/hdf-json-to-splunk?label=version",
             "https://img.shields.io/github/downloads/mitre/hdf-json-to-splunk/total?label=github%20downloads"
-          ]
+          ],
+          "border_color": "orange"
+        },
+        {
+          "name": "InSpec Tools",
+          "link": "",
+          "desc": "A set of Ruby utilities for creating, converting, and processing security baseline formats, results, and data",
+          "icon": "",
+          "png" : "inspec_logo",
+          "app_link": "",
+          "app_svg": "app",
+          "doc_link": "https://inspec-tools.mitre.org",
+          "github_link": "https://github.com/mitre/inspec_tools/",
+          "svg": "",
+          "tools": "",
+          "shields": [
+            "https://img.shields.io/github/v/release/mitre/inspec_tools?label=version",
+            "https://img.shields.io/gem/dt/inspec_tools?label=gem%20downloads"
+          ],
+          "border_color": "#4783B2"
+        },
+        {
+          "name": "InSpec Tools GitHub Action",
+          "link": "",
+          "desc": "Add InSpec Tools to your GitHub Actions workflow",
+          "icon": "mdi-github",
+          "app_link": "",
+          "app_svg": "",
+          "doc_link": "https://github.com/marketplace/actions/inspec-tools-action",
+          "github_link": "https://github.com/mitre/inspec_tools_action",
+          "svg": "",
+          "tools": "",
+          "border_color": "#4783B2"
+        },
+        {
+          "name": "InSpecJS",
+          "link": "",
+          "desc": "A Typescript library for working with InSpec data",
+          "icon": "",
+          "png" : "inspec_logo",
+          "app_link": "",
+          "app_svg": "app",
+          "doc_link": "https://inspecjs.mitre.org",
+          "github_link": "https://github.com/mitre/inspecjs",
+          "svg": "",
+          "tools": "",
+          "shields": [
+            "https://img.shields.io/npm/v/inspecjs?label=version",
+            "https://img.shields.io/npm/dt/inspecjs?label=npm%20downloads"
+          ],
+          "border_color": "#4783B2"
+        },
+        {
+          "name": "InSpecJS Tools",
+          "link": "",
+          "desc": "A set of JavaScript utilities for creating, converting, and processing security baseline formats, results, and data",
+          "icon": "",
+          "png" : "inspec_logo",
+          "app_link": "",
+          "app_svg": "app",
+          "doc_link": "https://inspec-tools-js.mitre.org",
+          "github_link": "https://github.com/mitre/inspec_tools_js",
+          "svg": "",
+          "tools": "",
+          "border_color": "#4783B2"
         },
         {
           "name": "InSpec Delta",
@@ -219,7 +215,8 @@
           "doc_link": "https://engineering.cerner.com/blog/inspec-delta/",
           "github_link": "https://github.com/cerner/inspec_delta",
           "svg": "",
-          "tools": ""
+          "tools": "",
+          "border_color": "#4783B2"
         },
         {
           "name": "Serverless InSpec (AWS)",
@@ -236,34 +233,57 @@
           "shields": [
             "https://img.shields.io/github/v/release/mitre/serverless-inspec-lambda?label=version",
             "https://img.shields.io/github/downloads/mitre/serverless-inspec-lambda/total?label=github%20downloads"
-          ]
+          ],
+          "border_color": "#4783B2"
         },
         {
-          "name": "Baseline Parser",
+          "name": "eMASSer",
           "link": "",
-          "desc": "Script to determine the set of NIST SP 800-53 controls covered by a baseline stored in GitHub",
+          "desc": "CLI tool providing utilities for the Enterprise Mission Assurance Support Service (eMASS) via its REST API",
+          "icon": "",
+          "png" : "emass",
+          "png_dark" : "emass_dark",
+          "app_link": "",
+          "app_svg": "app",
+          "doc_link": "https://mitre.github.io/emasser/",
+          "github_link": "https://github.com/mitre/emasser",
+          "svg": "",
+          "tools": "",
+          "border_color": "purple",
+          "img_width": 200,
+          "img_height": 100
+        },
+        {
+          "name": "eMASS Checklist Updater",
+          "link": "",
+          "desc": "Tool to translate findings from older to newer versions of an eMASS Checklist",
+          "icon": "",
+          "png" : "emass",
+          "png_dark" : "emass_dark",
+          "app_link": "",
+          "app_svg": "app",
+          "doc_link": "",
+          "github_link": "https://github.com/mitre/ckl2ckl",
+          "svg": "",
+          "tools": "",
+          "border_color": "purple",
+          "img_width": 200,
+          "img_height": 100
+        },
+        {
+          "name": "Vulcan (alpha)",
+          "link": "",
+          "desc": "Application for streamlining InSpec profile and overlay development using the Security Requirements Guide (SRG)",
           "icon": "",
           "png" : "saf_logo",
           "app_link": "",
-          "app_svg": "",
-          "doc_link": "",
-          "github_link": "https://github.com/mitre/saf-baseline-ingestion",
+          "app_svg": "app",
+          "doc_link": "https://vulcan.mitre.org",
+          "github_link": "https://github.com/mitre/vulcan",
           "svg": "",
-          "tools": ""
-        },
-        {
-          "name": "HeimdallJS Tools (Coming Soon!)",
-          "link": "",
-          "desc": "A set of JavaScript utilities for converting and working with compliance data for use in Heimdall apps",
-          "icon": "",
-          "png" : "heimdall_logo",
-          "app_link": "",
-          "app_svg": "",
-          "doc_link": "",
-          "github_link": "",
-          "svg": "",
-          "tools": ""
-        }        
+          "tools": "",
+          "border_color": "red"
+        }
       ]
     }
   ]

@@ -5,7 +5,7 @@
       <p class="ma-2">
         <span v-html="row.desc" />
       </p>
-      <p class="ma-2" v-if="row.jsonviewer">
+      <p class="ma-2 pb-2" v-if="row.jsonviewer">
         <v-container fluid class="pa-0">
           <v-row>
             <v-col
@@ -22,7 +22,9 @@
                   <v-col>
                     <json-viewer
                       :value="jsonwrapper.json"
-                      theme="json-theme"
+                      :theme="
+                        darkTheme ? 'json-theme-dark' : 'json-theme-light'
+                      "
                       copyable
                     />
                   </v-col>
@@ -84,6 +86,11 @@
         normalize_data: [],
       };
     },
+    computed: {
+      darkTheme: function() {
+        return this.$vuetify.theme.dark;
+      },
+    },
     components: {
       PrismComponent,
       JsonViewer,
@@ -135,16 +142,58 @@
 </style>
 
 <style lang="scss">
-  .json-theme {
+  .json-theme-dark {
     background: #222222;
-    white-space: nowrap;
-    color: #525252;
-    font-size: 14px;
-    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 
     .jv-ellipsis {
       color: #eee;
       background-color: #353535;
+    }
+
+    .jv-key {
+      color: #eee;
+    }
+
+    .jv-item {
+      &.jv-array {
+        color: #eee;
+      }
+      &.jv-object {
+        color: #eee;
+      }
+    }
+  }
+
+  .json-theme-light {
+    background: #fff;
+
+    .jv-ellipsis {
+      color: #999;
+      background-color: #eee;
+    }
+
+    .jv-key {
+      color: #111;
+    }
+
+    .jv-item {
+      &.jv-array {
+        color: #111;
+      }
+      &.jv-object {
+        color: #111;
+      }
+    }
+  }
+
+  .jv-container {
+    white-space: nowrap;
+    color: #525252;
+    font-size: 14px;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    max-height: 50em;
+
+    .jv-ellipsis {
       display: inline-block;
       line-height: 0.9;
       font-size: 0.9em;
@@ -161,15 +210,10 @@
     }
 
     .jv-key {
-      color: #eeeeee;
       margin-right: 4px;
     }
 
     .jv-item {
-      &.jv-array {
-        color: #eeeeee;
-      }
-
       &.jv-boolean {
         color: #fc1e70;
       }
@@ -181,9 +225,11 @@
       &.jv-number {
         color: #fc1e70;
       }
-
-      &.jv-object {
-        color: #eeeeee;
+      &.jv-number-float {
+        color: #fc1e70;
+      }
+      &.jv-number-integer {
+        color: #fc1e70;
       }
 
       &.jv-undefined {
@@ -202,6 +248,9 @@
     }
 
     .jv-code {
+      max-height: inherit;
+      overflow: auto;
+
       .jv-toggle {
         &:before {
           padding: 0px 2px;
