@@ -218,7 +218,7 @@
     }
     .jv-code {
       max-height: inherit;
-      overflow: auto;
+      overflow: auto !important;
 
       .jv-toggle {
         &:before {
