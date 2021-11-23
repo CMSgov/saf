@@ -53,7 +53,7 @@
         <div v-for="(ex, index3) in row.examples" :key="index3" class="ma-4">
           <p class="subheader ma-0">{{ ex.title }}</p>
           <p>{{ ex.desc }}</p>
-          <Prism>{{ ex.code }}</Prism>
+          <PrismComponent :language="ex.syntax">{{ ex.code }}</PrismComponent>
         </div>
       </div>
       <p v-if="row.footer" class="ma-2">
@@ -65,11 +65,16 @@
 
 <script>
   import normalize_data from "@/assets/data/normalize.json";
+
   import "prismjs";
-  import "prismjs/components/prism-ruby.js";
-  import "prismjs/components/prism-markup.js";
-  import Prism from "vue-prism-component";
-  import "prismjs/themes/prism.css";
+
+  import "prismjs/components/prism-json";
+  import "prismjs/components/prism-ruby";
+  import "prismjs/themes/prism-tomorrow.css";
+  import "prismjs/plugins/normalize-whitespace/prism-normalize-whitespace";
+
+  import PrismComponent from "vue-prism-component";
+
   import JsonViewer from "vue-json-viewer";
   import HDFSVG from "@/components/normalize/HDFSVG.vue";
 
@@ -80,7 +85,7 @@
       };
     },
     components: {
-      Prism,
+      PrismComponent,
       JsonViewer,
       HDFSVG,
     },
@@ -112,6 +117,9 @@
       this.normalize_data = normalize_data.normalize;
     },
   };
+
+  // eslint-disable-next-line
+  Prism.languages.rb.string[1].pattern = /("|')(\1|(?:(?![^\\]\1)[\s\S])*[^\\]\1)/g;
 </script>
 
 <style scoped>
@@ -147,32 +155,41 @@
       cursor: pointer;
       user-select: none;
     }
+
     .jv-button {
       color: #49b3ff;
     }
+
     .jv-key {
       color: #eeeeee;
       margin-right: 4px;
     }
+
     .jv-item {
       &.jv-array {
         color: #eeeeee;
       }
+
       &.jv-boolean {
         color: #fc1e70;
       }
+
       &.jv-function {
         color: #067bca;
       }
+
       &.jv-number {
         color: #fc1e70;
       }
+
       &.jv-object {
         color: #eeeeee;
       }
+
       &.jv-undefined {
         color: #e08331;
       }
+
       &.jv-string {
         color: #42b983;
         word-break: break-word;
@@ -183,12 +200,14 @@
         }
       }
     }
+
     .jv-code {
       .jv-toggle {
         &:before {
           padding: 0px 2px;
           border-radius: 2px;
         }
+
         &:hover {
           &:before {
             background: #eee;
