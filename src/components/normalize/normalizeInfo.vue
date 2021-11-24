@@ -2,10 +2,10 @@
   <v-container fluid class="pa-0">
     <div v-for="(row, index) in normalize_data" :key="index">
       <p class="header">{{ row.header }}</p>
-      <p class="ma-2">
+      <p class="my-2">
         <span v-html="row.desc" />
       </p>
-      <p class="ma-2 pb-2" v-if="row.jsonviewer">
+      <p class="ma-y pb-2" v-if="row.jsonviewer">
         <v-container fluid class="pa-0">
           <v-row>
             <v-col
@@ -34,10 +34,15 @@
           </v-row>
         </v-container>
       </p>
-      <p class="ma-2" v-if="row.image">
+      <v-row
+        align="center"
+        class="ma-y"
+        v-if="row.image && $vuetify.breakpoint.mdAndUp"
+      >
         <!-- <v-img :src="require('@/assets/img/svg/' + row.image + '.svg')" /> -->
+
         <HDFSVG class="pa-2" />
-      </p>
+      </v-row>
       <ul v-if="row.bullets" class="ma-2">
         <li v-for="(bullet, index) in row.bullets" :key="index">
           <a v-if="bullet.link" :href="bullet.link" target="_blank">{{
@@ -52,13 +57,13 @@
         </li>
       </ul>
       <div v-if="row.examples">
-        <div v-for="(ex, index3) in row.examples" :key="index3" class="ma-4">
+        <div v-for="(ex, index3) in row.examples" :key="index3">
           <p class="subheader ma-0">{{ ex.title }}</p>
           <p>{{ ex.desc }}</p>
           <PrismComponent :language="ex.syntax">{{ ex.code }}</PrismComponent>
         </div>
       </div>
-      <p v-if="row.footer" class="ma-2">
+      <p v-if="row.footer" class="my-2">
         <span v-html="row.footer" />
       </p>
     </div>
