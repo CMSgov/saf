@@ -41,33 +41,33 @@
 </template>
 
 <script>
-import firebase from "@/firebase";
-export default {
-  props: {
-    speakerData: {},
-  },
-  data() {
-    return {
-      dialog: false,
-      isLoading: false,
-    };
-  },
-  methods: {
-    deleteItem(id) {
-      this.isLoading = true;
-      firebase.firestore
-        .collection("speakers")
-        .doc(id)
-        .delete()
-        .then(() => {
-          this.isLoading = false;
-          this.dialog = false;
-          this.$router.push({
-            path: "/admin/dashboard/speaker",
-            query: { msg: "removesuccess" },
-          });
-        });
-    },
-  },
-};
+  // import firebase from "@/firebase";
+  // export default {
+  //   props: {
+  //     speakerData: {},
+  //   },
+  //   data() {
+  //     return {
+  //       dialog: false,
+  //       isLoading: false,
+  //     };
+  //   },
+  //   methods: {
+  //     deleteItem(id) {
+  //       this.isLoading = true;
+  //       firebase.firestore
+  //         .collection("speakers")
+  //         .doc(id)
+  //         .delete()
+  //         .then(() => {
+  //           this.isLoading = false;
+  //           this.dialog = false;
+  //           this.$router.push({
+  //             path: "/admin/dashboard/speaker",
+  //             query: { msg: "removesuccess" },
+  //           });
+  //         });
+  //     },
+  //   },
+  // };
 </script>

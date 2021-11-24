@@ -1,5 +1,5 @@
 <template>
-  <v-content :class="$vuetify.theme.dark == true?'blank':'grey lighten-5'">
+  <v-content :class="$vuetify.theme.dark == true ? 'blank' : 'grey lighten-5'">
     <v-snackbar :timeout="5000" v-model="isSnackbar" bottom right>
       {{ snackBarText }}
       <v-btn color="pink" text @click="isSnackbar = false">Close</v-btn>
@@ -29,7 +29,12 @@
           <v-container fluid>
             <v-row justify="center" align="center" v-if="speakerLoader">
               <v-col col="12" md="2" class="text-center">
-                <v-progress-circular :width="4" :size="70" color="indigo" indeterminate></v-progress-circular>
+                <v-progress-circular
+                  :width="4"
+                  :size="70"
+                  color="indigo"
+                  indeterminate
+                ></v-progress-circular>
               </v-col>
             </v-row>
 
@@ -43,7 +48,7 @@
                         cols="6"
                         md="2"
                         sm="3"
-                        v-for="(item,idx) in props.items"
+                        v-for="(item, idx) in props.items"
                         :key="idx"
                         class="pa-1"
                       >
@@ -51,21 +56,41 @@
                           style="cursor: pointer;height:200px"
                           v-ripple
                           class="text-center py-3 elevation-1"
-                          :class="$vuetify.theme.dark == true?'grey darken-3':'white'"
+                          :class="
+                            $vuetify.theme.dark == true
+                              ? 'grey darken-3'
+                              : 'white'
+                          "
                           @click="gotoSpeaker(item.id)"
                         >
                           <v-avatar size="100">
-                            <img :src="(item.image.length>0)?item.image:require('@/assets/img/common/avatar.png')" alt />
+                            <img
+                              :src="
+                                item.image.length > 0
+                                  ? item.image
+                                  : require('@/assets/img/common/avatar.png')
+                              "
+                              alt
+                            />
                           </v-avatar>
-                          <p class="mt-3 mb-0 google-font mb-0" style="font-size:120%">{{item.name}}</p>
+                          <p
+                            class="mt-3 mb-0 google-font mb-0"
+                            style="font-size:120%"
+                          >
+                            {{ item.name }}
+                          </p>
                           <p
                             class="mt-0 mb-0 google-font mt-0"
                             style="font-size:70%"
-                          >{{item.designation}}</p>
+                          >
+                            {{ item.designation }}
+                          </p>
                           <p
                             class="mt-0 mb-0 google-font mt-0"
                             style="font-size:80%"
-                          >{{item.company.name}}</p>
+                          >
+                            {{ item.company.name }}
+                          </p>
                         </div>
                       </v-col>
                     </v-row>
@@ -81,67 +106,66 @@
 </template>
 
 <script>
-import firebase from "@/firebase";
+  // import firebase from "@/firebase";
 
-import AddSpeaker from "@/components/Admin/Speaker/addSpeaker";
+  // import AddSpeaker from "@/components/Admin/Speaker/addSpeaker";
 
-export default {
-  name: "speakers",
-  components: {
-    AddSpeaker
-  },
-  data: () => ({
-    search: "",
-    speakerData: [],
-    loading: true,
-    speakerLoader: true,
-    isSnackbar: false,
-    snackBarText:"",
-  }),
-  created() {
-    if (this.$route.query.msg) {
-      this.isSnackbar = true;
-      this.snackBarText = "Speaker Removed Successfully"
-    }
-  },
-  mounted() {
-    if (firebase.auth.currentUser) {
-      this.showData();
-    } else {
-      this.$router.replace("login");
-    }
-  },
-  methods: {
-    gotoSpeaker(id) {
-      this.$router.replace("/admin/dashboard/speaker/" + id);
-    },
-    success() {
-      this.isSnackbar = true;
-      this.snackBarText = "Speaker Added Successfully",
-      
-      this.showData();
-    },
-    showData() {
-      this.speakerLoader = true;
-      this.speakerData = [];
-      firebase.firestore
-        .collection("speakers")
-        .get()
-        .then(snapshot => {
-          snapshot.forEach(doc => {
-            this.id = doc.id;
-            this.speakerData.push(doc.data());
-          });
-          this.speakerLoader = false;
-          this.loading = false;
-        })
-        .catch(() => {
-        //console.log("Error getting documents", err);
-        });
-    }
-  }
-};
+  // export default {
+  //   name: "speakers",
+  //   components: {
+  //     AddSpeaker
+  //   },
+  //   data: () => ({
+  //     search: "",
+  //     speakerData: [],
+  //     loading: true,
+  //     speakerLoader: true,
+  //     isSnackbar: false,
+  //     snackBarText:"",
+  //   }),
+  //   created() {
+  //     if (this.$route.query.msg) {
+  //       this.isSnackbar = true;
+  //       this.snackBarText = "Speaker Removed Successfully"
+  //     }
+  //   },
+  //   mounted() {
+  //     if (firebase.auth.currentUser) {
+  //       this.showData();
+  //     } else {
+  //       this.$router.replace("login");
+  //     }
+  //   },
+  //   methods: {
+  //     gotoSpeaker(id) {
+  //       this.$router.replace("/admin/dashboard/speaker/" + id);
+  //     },
+  //     success() {
+  //       this.isSnackbar = true;
+  //       this.snackBarText = "Speaker Added Successfully",
+
+  //       this.showData();
+  //     },
+  //     showData() {
+  //       this.speakerLoader = true;
+  //       this.speakerData = [];
+  //       firebase.firestore
+  //         .collection("speakers")
+  //         .get()
+  //         .then(snapshot => {
+  //           snapshot.forEach(doc => {
+  //             this.id = doc.id;
+  //             this.speakerData.push(doc.data());
+  //           });
+  //           this.speakerLoader = false;
+  //           this.loading = false;
+  //         })
+  //         .catch(() => {
+  //         //console.log("Error getting documents", err);
+  //         });
+  //     }
+  //   }
+  // };
 </script>
 
-<style>
-</style>
+<style></style>

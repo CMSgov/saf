@@ -4,7 +4,6 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store/store";
-import "./registerServiceWorker";
 import vuetify from "./plugins/vuetify";
 import "./style.css"; 
 import cssVars from "css-vars-ponyfill";
@@ -16,7 +15,7 @@ cssVars({
 
 IntersectionObserver.prototype.POLL_INTERVAL = 100; // time in ms
 
-Vue.config.productionTip = false;
+Vue.config.productionTip = false; 
 
 const VueApp = 
   new Vue({
