@@ -10,7 +10,7 @@
     >
       <v-col class="px-0">
         <p class="header my-2">{{ course.name }}</p>
-        <p class="ma-2">{{ course.desc }}</p>
+        <p class="my-2">{{ course.desc }}</p>
         <ul class="my-2">
           <li v-for="(bullet, j) in course.bullets" :key="j" class="ms-2">
             {{ bullet }}
