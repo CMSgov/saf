@@ -9,9 +9,6 @@ import vuetify from "./plugins/vuetify";
 import "./style.css";
 // import firebase from "@/firebase";
 import cssVars from "css-vars-ponyfill";
-import Prism from 'prismjs';
-Prism.highlightAll();
-
 cssVars({
   watch: true,
 });
@@ -21,10 +18,12 @@ IntersectionObserver.prototype.POLL_INTERVAL = 100; // time in ms
 Vue.config.productionTip = false;
 
 // firebase.auth.onAuthStateChanged(() => {
+  const VueApp = 
   new Vue({
     router,
     store,
     vuetify,
-    render: h => h(App)
-  }).$mount("#app");
+    render: (h) => h(App),
+  });
+VueApp.$mount("#app");
 // });
