@@ -16,13 +16,13 @@
 </template>
 
 <script>
-import Header from "@/components/core/Header.vue";
-import normalizeInfo from "@/components/normalize/normalizeInfo.vue";
+  import Header from "@/components/core/Header.vue";
+  import normalizeInfo from "@/components/normalize/normalizeInfo.vue";
 
-export default {
-  components: {
-    Header,
-    normalizeInfo
-  },
-};
+  export default {
+    components: {
+      Header,
+      normalizeInfo,
+    },
+  };
 </script>

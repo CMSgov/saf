@@ -2,13 +2,16 @@
   <v-container fluid class="pa-0">
     <div v-for="(row, index) in normalize_data" :key="index">
       <p class="header">{{ row.header }}</p>
-      <p class="ma-2">
+      <p class="my-2">
         <span v-html="row.desc" />
       </p>
-      <p class="ma-2 pb-2" v-if="row.jsonviewer">
+      <p class="ma-y pb-2" v-if="row.jsonviewer">
         <v-container fluid class="pa-0">
           <v-row>
-            <v-col v-for="(jsonwrapper, index_jsonwrapper) in row.jsonviewer" :key="index_jsonwrapper">
+            <v-col
+              v-for="(jsonwrapper, index_jsonwrapper) in row.jsonviewer"
+              :key="index_jsonwrapper"
+            >
               <v-container fluid class="pa-0">
                 <v-row>
                   <v-col>
@@ -19,7 +22,9 @@
                   <v-col>
                     <json-viewer
                       :value="jsonwrapper.json"
-                      :theme="darkTheme ? 'json-theme-dark' : 'json-theme-light'"
+                      :theme="
+                        darkTheme ? 'json-theme-dark' : 'json-theme-light'
+                      "
                       copyable
                     />
                   </v-col>
@@ -29,9 +34,15 @@
           </v-row>
         </v-container>
       </p>
-      <p class="ma-2" v-if="row.image">
-        <v-img :src="require('@/assets/img/' + row.image + '.png')" />
-      </p>
+      <v-row
+        align="center"
+        class="ma-y"
+        v-if="row.image && $vuetify.breakpoint.mdAndUp"
+      >
+        <!-- <v-img :src="require('@/assets/img/svg/' + row.image + '.svg')" /> -->
+
+        <HDFSVG class="pa-2" />
+      </v-row>
       <ul v-if="row.bullets" class="ma-2">
         <li v-for="(bullet, index) in row.bullets" :key="index">
           <a v-if="bullet.link" :href="bullet.link" target="_blank">{{
@@ -46,13 +57,13 @@
         </li>
       </ul>
       <div v-if="row.examples">
-        <div v-for="(ex, index3) in row.examples" :key="index3" class="ma-4">
+        <div v-for="(ex, index3) in row.examples" :key="index3">
           <p class="subheader ma-0">{{ ex.title }}</p>
           <p>{{ ex.desc }}</p>
-          <Prism>{{ ex.code }}</Prism>
+          <PrismComponent :language="ex.syntax">{{ ex.code }}</PrismComponent>
         </div>
       </div>
-      <p v-if="row.footer" class="ma-2">
+      <p v-if="row.footer" class="my-2">
         <span v-html="row.footer" />
       </p>
     </div>
@@ -61,12 +72,18 @@
 
 <script>
   import normalize_data from "@/assets/data/normalize.json";
+
   import "prismjs";
-  import "prismjs/components/prism-ruby.js";
-  import "prismjs/components/prism-markup.js";
-  import Prism from "vue-prism-component";
-  import "prismjs/themes/prism.css";
-  import JsonViewer from 'vue-json-viewer';
+
+  import "prismjs/components/prism-json";
+  import "prismjs/components/prism-ruby";
+  import "prismjs/themes/prism-tomorrow.css";
+  import "prismjs/plugins/normalize-whitespace/prism-normalize-whitespace";
+
+  import PrismComponent from "vue-prism-component";
+
+  import JsonViewer from "vue-json-viewer";
+  import HDFSVG from "@/components/normalize/HDFSVG.vue";
 
   export default {
     data() {
@@ -75,26 +92,34 @@
       };
     },
     computed: {
-      darkTheme: function () {
+      darkTheme: function() {
         return this.$vuetify.theme.dark;
-      }
+      },
     },
     components: {
-      Prism,
+      PrismComponent,
       JsonViewer,
+      HDFSVG,
     },
     async created() {
-      for(const [index_row, row] of normalize_data.normalize.entries()) {
-        if(Object.prototype.hasOwnProperty.call(row, 'jsonviewer')) {
-          for(const [index_jsonwrapper, jsonwrapper] of row.jsonviewer.entries()) {
+      for (const [index_row, row] of normalize_data.normalize.entries()) {
+        if (Object.prototype.hasOwnProperty.call(row, "jsonviewer")) {
+          for (const [
+            index_jsonwrapper,
+            jsonwrapper,
+          ] of row.jsonviewer.entries()) {
             if (Object.prototype.hasOwnProperty.call(jsonwrapper, "url")) {
               try {
-                  const response = await fetch(jsonwrapper.url);
-                  const data = await response.json();
-                  normalize_data.normalize[index_row].jsonviewer[index_jsonwrapper].json = data;
+                const response = await fetch(jsonwrapper.url);
+                const data = await response.json();
+                normalize_data.normalize[index_row].jsonviewer[
+                  index_jsonwrapper
+                ].json = data;
               } catch (_) {
                 console.log(`Couldn't resolve the url: ${jsonwrapper.url}`);
-                  normalize_data.normalize[index_row].jsonviewer[index_jsonwrapper].json = jsonwrapper.url;
+                normalize_data.normalize[index_row].jsonviewer[
+                  index_jsonwrapper
+                ].json = jsonwrapper.url;
               }
             }
           }
@@ -104,6 +129,9 @@
       this.normalize_data = normalize_data.normalize;
     },
   };
+
+  // eslint-disable-next-line
+  Prism.languages.rb.string[1].pattern = /("|')(\1|(?:(?![^\\]\1)[\s\S])*[^\\]\1)/g;
 </script>
 
 <style scoped>
@@ -118,7 +146,7 @@
   }
 </style>
 
-<style lang='scss'>
+<style lang="scss">
   .json-theme-dark {
     background: #222222;
 
@@ -167,7 +195,7 @@
     white-space: nowrap;
     color: #525252;
     font-size: 14px;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
     max-height: 50em;
 
     .jv-ellipsis {
@@ -181,19 +209,24 @@
       cursor: pointer;
       user-select: none;
     }
+
     .jv-button {
       color: #49b3ff;
     }
+
     .jv-key {
       margin-right: 4px;
     }
+
     .jv-item {
       &.jv-boolean {
         color: #fc1e70;
       }
+
       &.jv-function {
         color: #067bca;
       }
+
       &.jv-number {
         color: #fc1e70;
       }
@@ -203,9 +236,11 @@
       &.jv-number-integer {
         color: #fc1e70;
       }
+
       &.jv-undefined {
         color: #e08331;
       }
+
       &.jv-string {
         color: #42b983;
         word-break: break-word;
@@ -216,6 +251,7 @@
         }
       }
     }
+
     .jv-code {
       max-height: inherit;
       overflow: auto !important;
@@ -225,6 +261,7 @@
           padding: 0px 2px;
           border-radius: 2px;
         }
+
         &:hover {
           &:before {
             background: #eee;

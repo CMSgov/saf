@@ -14,7 +14,7 @@
 }
 
 .roboto-font {
-    font-family: roboto-condensed;
+  font-family: roboto-condensed;
 }
 
 body {
@@ -74,4 +74,8 @@ h2 {
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: normal;
+}
+
+.theme--dark.v-application code {
+  background-color: inherit !important;
 }
