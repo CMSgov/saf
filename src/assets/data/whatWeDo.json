@@ -237,7 +237,7 @@
           "border_color": "#4783B2"
         },
         {
-          "name": "eMASSer",
+          "name": "emasser",
           "link": "",
           "desc": "CLI tool providing utilities for the Enterprise Mission Assurance Support Service (eMASS) via its REST API",
           "icon": "",
