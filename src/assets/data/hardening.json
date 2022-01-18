@@ -277,6 +277,18 @@
       "category": ["Web Servers"] 
     },
     {
+      "shortName": "Windows 10 STIG",
+      "longName": "Windows 10 STIG",
+      "link": "https://github.com/ansible-lockdown/Windows-10-STIG",
+      "platform_name": "Ansible",
+      "platform_img": "ansible.svg",
+      "platform_link": "https://www.ansible.com/",
+      "sponsor_name" : "Ansible Lockdown",
+      "sponsor_img": "ansible-lockdown.png",
+      "sponsor_link": "https://www.lockdownenterprise.com/",
+      "category": ["Operating Systems"] 
+    },
+    {
       "shortName": "Windows 2016 STIG",
       "longName": "Windows 2016 STIG",
       "link": "https://github.com/ansible-lockdown/Windows-2016-STIG",
