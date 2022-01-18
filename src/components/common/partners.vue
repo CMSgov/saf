@@ -2,18 +2,23 @@
   <v-container fluid>
     <v-row align="center" justify="center" class="mb-0">
       <v-col cols="12" class="mb-0">
-        <p class="mb-1 primary--text" style="font-weight: bold; font-size:200%">
+        <p
+          class="mb-1 primary--text"
+          style="font-weight: bold; font-size: 200%"
+        >
           The MITRE SAF Community
         </p>
         <p class="mt-1 mb-0">
-          A very big thank you to our community members for their continued partnership.
+          A very big thank you to our community members for their continued
+          partnership.
         </p>
         <p class="mt-0 mb-0">
           If you’re interested in being showcased here, please contact
           <a
-            style="text-decoration: none;"
+            style="text-decoration: none"
             :href="`mailto:${communityData.communityEmail}`"
-          >{{communityData.communityEmail}}</a>
+            >{{ communityData.communityEmail }}</a
+          >
           to discuss opportunities.
         </p>
       </v-col>
@@ -25,7 +30,7 @@
       style="height: 17rem; min-height: 275px"
     >
       <v-col class="pb-0" style="flex-grow: 1">
-        <p class="mb-0" style="font-size:1.3rem" ref="sponsors">
+        <p class="mb-0" style="font-size: 1.3rem" ref="sponsors">
           Sponsors
           <v-btn icon to="#sponsors" @click="jump('sponsors')" class="ml-2">
             <v-icon>mdi-link</v-icon>
@@ -43,8 +48,14 @@
               v-bind:href="sponsor.link"
               target="_blank"
             >
-              <v-img :src="getImgUrl(sponsor.img)" class="white" height="100" width="200" contain></v-img>
-              <v-card-subtitle class="mb-0">{{sponsor.name}}</v-card-subtitle>
+              <v-img
+                :src="getImgUrl(sponsor.img)"
+                class="white"
+                height="100"
+                width="200"
+                contain
+              ></v-img>
+              <v-card-subtitle class="mb-0">{{ sponsor.name }}</v-card-subtitle>
             </v-card>
           </v-slide-item>
         </v-slide-group>
@@ -57,9 +68,14 @@
       style="height: 15rem; min-height: 200px"
     >
       <v-col class="pb-0" style="flex-grow: 1">
-        <p class="mb-0" style="font-size:1.3rem" ref="commercial-partners">
+        <p class="mb-0" style="font-size: 1.3rem" ref="commercial-partners">
           Commercial Partners
-          <v-btn icon to="#commercial-partners" @click="jump('commercial-partners')" class="ml-2">
+          <v-btn
+            icon
+            to="#commercial-partners"
+            @click="jump('commercial-partners')"
+            class="ml-2"
+          >
             <v-icon>mdi-link</v-icon>
           </v-btn>
         </p>
@@ -91,58 +107,57 @@
 </template>
 
 <script>
-import sponsorData from "@/assets/data/sponsors.json";
-import partnerData from "@/assets/data/partners.json";
-import communityData from "@/assets/data/communityData.json";
-export default {
-  data() {
-    return {
-      sponsors: sponsorData["Sponsors"],
-      partners: partnerData["Commercial Partners"],
-      communityData: communityData,
-      showArrows: true,
-    };
-  },
-  methods: {
-    getImgUrl(pic) {
-      return require("@/assets/img/partners/" + pic);
+  import sponsorData from "@/assets/data/sponsors.json";
+  import partnerData from "@/assets/data/partners.json";
+  import communityData from "@/assets/data/communityData.json";
+  export default {
+    data() {
+      return {
+        sponsors: sponsorData["Sponsors"],
+        partners: partnerData["Commercial Partners"],
+        communityData: communityData,
+        showArrows: true,
+      };
     },
-    jump (ref) {
-      var element = this.$refs[ref];
-      var top = element.offsetTop;
-      this.$vuetify.goTo(top);
-    }
-  },
-  computed: {
-    color_mode() {
-      return this.$vuetify.theme.dark
-        ? "darkModeContainer"
-        : "lightModeContainer";
+    methods: {
+      getImgUrl(pic) {
+        return require("@/assets/img/partners/" + pic);
+      },
+      jump(ref) {
+        var element = this.$refs[ref];
+        var top = element.offsetTop;
+        this.$vuetify.goTo(top);
+      },
     },
-  },
-  mounted: function () {
-    if (this.$route.hash) {
-      this.jump(this.$route.hash.substring(1))
-    }
-  },
-  
-};
+    computed: {
+      color_mode() {
+        return this.$vuetify.theme.dark
+          ? "darkModeContainer"
+          : "lightModeContainer";
+      },
+    },
+    mounted: function () {
+      if (this.$route.hash) {
+        this.jump(this.$route.hash.substring(1));
+      }
+    },
+  };
 </script>
 
 <style scoped>
-.client-logo {
-  height: 90px;
-  padding: 12px 12px;
-  border-radius: 7px;
-  background: white;
-  border: 1px solid #ebebeb;
-  text-align: center;
-}
+  .client-logo {
+    height: 90px;
+    padding: 12px 12px;
+    border-radius: 7px;
+    background: white;
+    border: 1px solid #ebebeb;
+    text-align: center;
+  }
 
-.fixed-ratio-resize {
-  /* basic responsive img */
-  max-width: 100%;
-  height: auto;
-  width: auto\9; /* IE8 */
-}
+  .fixed-ratio-resize {
+    /* basic responsive img */
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* IE8 */
+  }
 </style>

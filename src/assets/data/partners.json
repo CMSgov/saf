@@ -33,7 +33,7 @@
     {
       "name": "NSA SIMP",
       "link": "https://www.simp-project.com/",
-      "img": "simp-blk.svg"
+      "img": "simp.png"
     },
     {
       "name": "GitHub",
@@ -43,7 +43,7 @@
     {
       "name": "Refactr",
       "link": "https://www.refactr.it/",
-      "img": "refactr.png"
+      "img": "sophos.png"
     }
   ]
 }
