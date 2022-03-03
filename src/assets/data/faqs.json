@@ -72,11 +72,15 @@
     },
     {
       "question": "What happened to Heimdall_Tools and InSpec_Tools?",
-      "answer": "MITRE SAF has combined a number of its tools, including Heimdall_Tools and InSpec_Tools, into a single utility called saf cli. The new tool covers the same use cases as the old ones in a more convenient package. See our page for saf cli for details.",
+      "answer": "MITRE SAF has combined a number of its tools, including Heimdall_Tools and InSpec_Tools, into a single utility called SAF CLI. The new tool covers the same use cases as the old ones in a more convenient package. Similarly, our GitHub Actions for the older tools have been replaced by the SAF CLI GitHub Action. Action. See our page for SAF CLI for details.",
       "links": [
         {
-          "name": "saf cli",
+          "name": "SAF CLI",
           "link": "http://saf-cli.mitre.org/"
+        },
+        {
+          "name": "SAF CLI GitHub Action",
+          "link": "https://github.com/mitre/saf_action"
         }
       ],
       "tag" : "deprecated_tools"

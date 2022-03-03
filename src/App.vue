@@ -83,7 +83,7 @@
       //   this.snackWithButtons = true;
       // },
       refreshApp() {
-        console.log("refreshApp called");
+        //console.log("refreshApp called");
         // this.snackWithButtons = false;
         if (!this.registration || !this.registration.waiting) {
           return;
