@@ -256,104 +256,104 @@
 </template>
 
 <script>
-  // import firebase from "@/firebase";
+// import firebase from "@/firebase";
 
-  export default {
-    name: "addSpeaker",
-    // data: () => ({
-    //   dialog: false,
-    //   dialogImageUload: false,
-    //   visiblity: [true, false],
-    //   uploadbtnText: "Upload Image",
-    //   visible: Boolean,
-    //   userId: "",
-    //   name: "",
-    //   desigination: "",
-    //   imageURL: "",
-    //   imagePre: "",
-    //   imageUploading: false,
-    //   bio: "",
-    //   imageUpload: [],
-    //   mbnumber: "",
-    //   email: "",
-    //   companyName: "",
-    //   companyURL: "",
-    //   country: "",
-    //   city: "",
-    //   facebook: "",
-    //   github: "",
-    //   linkedin: "",
-    //   twitter: "",
-    //   medium: "",
-    //   website: "",
-    //   addSpeakerLoading: false,
-    // }),
-    methods: {
-      onFileChange() {
-        let reader = new FileReader();
-        reader.readAsDataURL(this.imageUpload);
-        reader.onload = () => {
-          this.imagePre = reader.result;
-        };
-      },
-      // uploadImage() {
-      //   this.imageUploading = true;
-      //   var fileName = `${this.userId}.${this.imageUpload.name.split(".")[1]}`;
-      //   //console.log(fileName);
-      //   var refLink = firebase.storage.ref("speakers/" + fileName);
-      //   refLink.put(this.imageUpload).then(() => {
-      //     //console.log(file);
-      //     refLink.getDownloadURL().then(a => {
-      //       //console.log(a);
-      //       this.imageURL = a;
-      //       this.imageUploading = false;
-      //       this.uploadImage = "Uploaded";
-      //     });
-      //   });
-      //   this.dialogImageUload = false;
-      // },
-      saveData() {
-        this.addSpeakerLoading = true;
-        // var Data = {
-        //   visible: this.visible,
-        //   id: this.userId,
-        //   name: this.name,
-        //   designation: this.desigination,
-        //   mbnumber: this.mbnumber,
-        //   email: this.email,
-        //   image: this.imageURL,
-        //   bio: this.bio,
-        //   city: this.city,
-        //   country: this.country,
-        //   company: {
-        //     name: this.companyName,
-        //     url: this.companyURL,
-        //   },
-        //   socialLinks: {
-        //     facebook: this.facebook,
-        //     github: this.github,
-        //     linkedin: this.linkedin,
-        //     medium: this.medium,
-        //     twitter: this.twitter,
-        //     web: this.website,
-        //   },
-        // };
-        // firebase.firestore
-        //   .collection("speakers")
-        //   .doc(Data.id)
-        //   .set(Data)
-        //   .then(() => {
-        //     //console.log(res);
-        //     this.dialog = false;
-        //     this.addSpeakerLoading = false;
-        //     this.$emit("showSuccess", true);
-        //   })
-        //   .catch(() => {
-        //     //console.log(e);
-        //   });
-      },
-    },
-  };
+// export default {
+//   name: "addSpeaker",
+//   data: () => ({
+//     dialog: false,
+//     dialogImageUload: false,
+//     visiblity: [true, false],
+//     uploadbtnText: "Upload Image",
+//     visible: Boolean,
+//     userId: "",
+//     name: "",
+//     desigination: "",
+//     imageURL: "",
+//     imagePre: "",
+//     imageUploading: false,
+//     bio: "",
+//     imageUpload: [],
+//     mbnumber: "",
+//     email: "",
+//     companyName: "",
+//     companyURL: "",
+//     country: "",
+//     city: "",
+//     facebook: "",
+//     github: "",
+//     linkedin: "",
+//     twitter: "",
+//     medium: "",
+//     website: "",
+//     addSpeakerLoading: false
+//   }),
+//   methods: {
+//     onFileChange() {
+//       let reader = new FileReader();
+//       reader.readAsDataURL(this.imageUpload);
+//       reader.onload = () => {
+//         this.imagePre = reader.result;
+//       };
+//     },
+//     uploadImage() {
+//       this.imageUploading = true;
+//       var fileName = `${this.userId}.${this.imageUpload.name.split(".")[1]}`;
+//       //console.log(fileName);
+//       var refLink = firebase.storage.ref("speakers/" + fileName);
+//       refLink.put(this.imageUpload).then(() => {
+//         //console.log(file);
+//         refLink.getDownloadURL().then(a => {
+//           //console.log(a);
+//           this.imageURL = a;
+//           this.imageUploading = false;
+//           this.uploadImage = "Uploaded";
+//         });
+//       });
+//       this.dialogImageUload = false;
+//     },
+//     saveData() {
+//       this.addSpeakerLoading = true;
+//       var Data = {
+//         visible: this.visible,
+//         id: this.userId,
+//         name: this.name,
+//         designation: this.desigination,
+//         mbnumber: this.mbnumber,
+//         email: this.email,
+//         image: this.imageURL,
+//         bio: this.bio,
+//         city: this.city,
+//         country: this.country,
+//         company: {
+//           name: this.companyName,
+//           url: this.companyURL
+//         },
+//         socialLinks: {
+//           facebook: this.facebook,
+//           github: this.github,
+//           linkedin: this.linkedin,
+//           medium: this.medium,
+//           twitter: this.twitter,
+//           web: this.website
+//         }
+//       };
+//       firebase.firestore
+//         .collection("speakers")
+//         .doc(Data.id)
+//         .set(Data)
+//         .then(() => {
+//           //console.log(res);
+//           this.dialog = false;
+//           this.addSpeakerLoading = false;
+//           this.$emit("showSuccess", true);
+//         })
+//         .catch(() => {
+//           //console.log(e);
+//         });
+//     }
+//   }
+// };
 </script>
 
 <style></style>

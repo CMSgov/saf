@@ -12,8 +12,10 @@
           <v-toolbar
             text
             class="pa-0 px-0 mt-3 mx-0 elevation-0"
-            style="padding:0 !important"
-            :class="this.$vuetify.theme.dark == true?'grey darken-4':'white'"
+            style="padding: 0 !important"
+            :class="
+              this.$vuetify.theme.dark == true ? 'grey darken-4' : 'white'
+            "
           >
             <v-btn
               to="/home"
@@ -45,9 +47,9 @@ export default {
   data() {
     return {
       communityData: communityData,
-      FooterData: FooterData
+      FooterData: FooterData,
     };
-  }
+  },
 };
 </script>
 

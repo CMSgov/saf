@@ -16,23 +16,13 @@
 </template>
 
 <script>
-import Header from "@/components/core/Header.vue";
-import newsInfo from "../components/News/newsInfo";
+  import Header from "@/components/core/Header.vue";
+  import newsInfo from "../components/News/newsInfo";
 
-export default {
-  components: {
-    Header,
-    newsInfo
-  },
-  created() {
-    let metaThemeColor = document.querySelector("meta[name=theme-color]");
-    if (this.$vuetify.theme.dark) {
-      metaThemeColor.setAttribute("content", "#212121");
-    } else {
-      metaThemeColor.setAttribute("content", "#0277bd");
-    }
-  }
-};
+  export default {
+    components: {
+      Header,
+      newsInfo,
+    },
+  };
 </script>
-
-

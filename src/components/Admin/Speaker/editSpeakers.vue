@@ -76,7 +76,7 @@
 
                       <v-col cols="12" sm="6" class="pa-1 ma-0">
                         <v-dialog v-model="dialogImageUload" max-width="290">
-                          <template v-slot:activator="{ on }">
+                          <template v-slot:activator="{on}">
                             <v-btn
                               color="primary"
                               :loading="imageUploading"
@@ -261,105 +261,105 @@
 <script>
   // import firebase from "@/firebase";
 
-  export default {
-    props: {
-      speakerData: {},
-    },
-    data() {
-      return {
-        dialog: false,
-        visiblity: [true, false],
-        imageUploading: false,
-        imagePre: "",
-        dialogImageUload: false,
-        imageUpload: [],
-        isUpdating: false,
-        updatedData: {
-          visible: this.speakerData.visible,
-          name: this.speakerData.name,
-          designation: this.speakerData.designation,
-          mbnumber: this.speakerData.mbnumber,
-          email: this.speakerData.email,
-          image: this.speakerData.image,
-          bio: this.speakerData.bio,
-          id: this.speakerData.id,
-          city: this.speakerData.city,
-          country: this.speakerData.country,
-          company: {
-            name: this.speakerData.company.name,
-            url: this.speakerData.company.url,
-          },
-          socialLinks: {
-            facebook: this.speakerData.socialLinks.facebook,
-            github: this.speakerData.socialLinks.github,
-            linkedin: this.speakerData.socialLinks.linkedin,
-            medium: this.speakerData.socialLinks.medium,
-            twitter: this.speakerData.socialLinks.twitter,
-            web: this.speakerData.socialLinks.web,
-          },
-        },
-      };
-    },
-    // methods: {
-    //   onFileChange() {
-    //     let reader = new FileReader();
-    //     reader.readAsDataURL(this.imageUpload);
-    //     reader.onload = () => {
-    //       this.imagePre = reader.result;
-    //     };
-    //   },
-    //   uploadImage() {
-    //     this.imageUploading = true;
-    //     var fileName = `${this.updatedData.id}.${
-    //       this.imageUpload.name.split(".")[1]
-    //     }`;
-    //     // var refLink = firebase.storage.ref("speakers/" + fileName);
-    //     // refLink.put(this.imageUpload).then(() => {
-    //     //   //console.log(file);
-    //     //   refLink.getDownloadURL().then(a => {
-    //     //     this.updatedData.image = a;
-    //     //     this.imageUploading = false;
-    //     //   });
-    //     // });
-    //     this.dialogImageUload = false;
-    //   },
-    //   updateData() {
-    //     this.isUpdating = true;
-    //     // firebase.firestore
-    //     //   .collection("speakers")
-    //     //   .doc(this.updatedData.id)
-    //     //   .update({
-    //     //     visible: this.updatedData.visible,
-    //     //     id: this.speakerData.id,
-    //     //     name: this.updatedData.name,
-    //     //     designation: this.updatedData.designation,
-    //     //     mbnumber: this.updatedData.mbnumber,
-    //     //     email: this.updatedData.email,
-    //     //     image: this.updatedData.image,
-    //     //     bio: this.updatedData.bio,
-    //     //     city: this.updatedData.city,
-    //     //     country: this.updatedData.country,
-    //     //     company: {
-    //     //       name: this.updatedData.company.name,
-    //     //       url: this.updatedData.company.url
-    //     //     },
-    //     //     socialLinks: {
-    //     //       facebook: this.updatedData.socialLinks.facebook,
-    //     //       github: this.updatedData.socialLinks.github,
-    //     //       linkedin: this.updatedData.socialLinks.linkedin,
-    //     //       medium: this.updatedData.socialLinks.medium,
-    //     //       twitter: this.updatedData.socialLinks.twitter,
-    //     //       web: this.updatedData.socialLinks.web
-    //     //     }
-    //     //   }).then(()=>{
-    //     //       this.isUpdating = false;
-    //     //       this.dialog = false;
-    //     //       this.$emit("showEditSuccess", true);
-    //     //   }).catch(()=>{
-    //     //       //console.log(err);
-    //     //       this.isUpdating = false;
-    //     //   });
-    //   },
-    // },
-  };
+  // export default {
+  //   props: {
+  //     speakerData: {}
+  //   },
+  //   data() {
+  //     return {
+  //       dialog: false,
+  //       visiblity: [true, false],
+  //       imageUploading: false,
+  //       imagePre: "",
+  //       dialogImageUload: false,
+  //       imageUpload: [],
+  //       isUpdating:false,
+  //       updatedData: {
+  //         visible: this.speakerData.visible,
+  //         name: this.speakerData.name,
+  //         designation: this.speakerData.designation,
+  //         mbnumber: this.speakerData.mbnumber,
+  //         email: this.speakerData.email,
+  //         image: this.speakerData.image,
+  //         bio: this.speakerData.bio,
+  //         id: this.speakerData.id,
+  //         city: this.speakerData.city,
+  //         country: this.speakerData.country,
+  //         company: {
+  //           name: this.speakerData.company.name,
+  //           url: this.speakerData.company.url
+  //         },
+  //         socialLinks: {
+  //           facebook: this.speakerData.socialLinks.facebook,
+  //           github: this.speakerData.socialLinks.github,
+  //           linkedin: this.speakerData.socialLinks.linkedin,
+  //           medium: this.speakerData.socialLinks.medium,
+  //           twitter: this.speakerData.socialLinks.twitter,
+  //           web: this.speakerData.socialLinks.web
+  //         }
+  //       }
+  //     };
+  //   },
+  //   methods: {
+  //     onFileChange() {
+  //       let reader = new FileReader();
+  //       reader.readAsDataURL(this.imageUpload);
+  //       reader.onload = () => {
+  //         this.imagePre = reader.result;
+  //       };
+  //     },
+  //     uploadImage() {
+  //       this.imageUploading = true;
+  //       var fileName = `${this.updatedData.id}.${
+  //         this.imageUpload.name.split(".")[1]
+  //       }`;
+  //       var refLink = firebase.storage.ref("speakers/" + fileName);
+  //       refLink.put(this.imageUpload).then(() => {
+  //         //console.log(file);
+  //         refLink.getDownloadURL().then(a => {
+  //           this.updatedData.image = a;
+  //           this.imageUploading = false;
+  //         });
+  //       });
+  //       this.dialogImageUload = false;
+  //     },
+  //     updateData() {
+  //         this.isUpdating = true;
+  //       firebase.firestore
+  //         .collection("speakers")
+  //         .doc(this.updatedData.id)
+  //         .update({
+  //           visible: this.updatedData.visible,
+  //           id: this.speakerData.id,
+  //           name: this.updatedData.name,
+  //           designation: this.updatedData.designation,
+  //           mbnumber: this.updatedData.mbnumber,
+  //           email: this.updatedData.email,
+  //           image: this.updatedData.image,
+  //           bio: this.updatedData.bio,
+  //           city: this.updatedData.city,
+  //           country: this.updatedData.country,
+  //           company: {
+  //             name: this.updatedData.company.name,
+  //             url: this.updatedData.company.url
+  //           },
+  //           socialLinks: {
+  //             facebook: this.updatedData.socialLinks.facebook,
+  //             github: this.updatedData.socialLinks.github,
+  //             linkedin: this.updatedData.socialLinks.linkedin,
+  //             medium: this.updatedData.socialLinks.medium,
+  //             twitter: this.updatedData.socialLinks.twitter,
+  //             web: this.updatedData.socialLinks.web
+  //           }
+  //         }).then(()=>{
+  //             this.isUpdating = false;
+  //             this.dialog = false;
+  //             this.$emit("showEditSuccess", true);
+  //         }).catch(()=>{
+  //             //console.log(err);
+  //             this.isUpdating = false;
+  //         });
+  //     }
+  //   }
+  // };
 </script>

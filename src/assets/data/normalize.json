@@ -24,7 +24,7 @@
         },
         { "main": "Test Elements – the individual tests that make up the actions in the ‘Check Text’" }
       ],
-      "footer" : "Properly created InSpec profiles naturally produce results in this format. To create HDF files using non-InSpec tool output, we provide Heimdall Tools."
+      "footer" : "Properly created InSpec profiles naturally produce results in this format. To create HDF files using non-InSpec tool output, we provide <a href='https://saf-cli.mitre.org/#convert' target='_blank'>saf convert</a>."
     },
     {
       "header": "HDF Schema",
@@ -122,20 +122,28 @@
       "image": "hdf-schema-diagram"
     },
     {
-      "header": "Heimdall Tools",
-      "desc": "MITRE created the <a href='https://heimdall-tools.mitre.org/' target='_blank'>Heimdall Tools</a> command line toolset to allow the conversion of output from widely used automated security testing tools into HDF. At present, Heimdall Tools can convert output from:",
+      "header": "saf convert",
+      "desc": "MITRE SAF's <a href='https://saf-cli.mitre.org/#convert' target='_blank'>saf convert option</a> allows the conversion of output from widely used automated security testing tools into HDF (and from HDF into other common formats). SAF CLI has converters for tools and formats such as:",
       "bullets": [
-        { "main": "Sonarqube", "link" : "https://www.sonarqube.org/" },
-        { "main": "Fortify", "link" : "https://www.microfocus.com/en-us/products/static-code-analysis-sast/overview" },
-        { "main": "OWASP ZAP", "link" : "https://www.zaproxy.org/" },
-        { "main": "Burp Suite", "link" : "https://portswigger.net/burp" },
-        { "main": "Nessus", "link" : "https://www.tenable.com/products/nessus" },
-        { "main": "Snyk", "link" : "https://snyk.io/" },
-        { "main": "Nikto", "link" : "https://cirt.net/Nikto2" },
-        { "main": "JFrog Xray", "link" : "https://jfrog.com/xray/" },
-        { "main": "DbProtect", "link": "https://www.trustwave.com/en-us/services/technology/dbprotect/" },
-        { "main": "AWS Config", "link" : "https://aws.amazon.com/config/"}
-      ]
+        { "main": "AWS Security Hub" },
+        { "main": "Burp Suite" },
+        { "main": "DISA CKL files" },
+        { "main": "DISA XCCDF results files" },
+        { "main": "DBProtect" },
+        { "main": "Fortify" },
+        { "main": "JFrog Xray" },
+        { "main": "Netsparker" },
+        { "main": "Nikto" },
+        { "main": "Prowler" },
+        { "main": "Sarif" },
+        { "main": "Scoutsuite" },
+        { "main": "Sonarqube" },
+        { "main": "Snyk" },
+        { "main": "Tenable Nessus" },
+        { "main": "Trivy" },
+        { "main": "OWASP ZAP" }
+      ],
+      "footer": "For instructions on using the converter function, check out the page for SAF CLI linked above. If you need a converter that is not on the list, reach out to us to discuss creating a new one (or write your own!)."
     },
     {
       "header": "InSpec Control Template Examples That Support Proper Generation of HDF Output",

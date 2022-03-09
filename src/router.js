@@ -9,8 +9,14 @@ Vue.use(Router);
 const router = new Router({
   //  mode: "history",
   //  base: process.env.BASE_URL,
-  scrollBehavior() {
-    return { x: 0, y: 0 };
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return { selector: to.hash };
+    } else if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { x: 0, y: 0 };
+    }
   },
   routes: [
     {
@@ -53,6 +59,16 @@ const router = new Router({
     //     requiresAuth: false
     //   }
     // },
+    {
+      path: "/control-table",
+      name: "control-table",
+      component: () => import("./views/ControlTableView.vue"),
+      meta: {
+        title: "Control Table | " + communityData.communityName,
+        color: "#0277bd",
+        requiresAuth: false,
+      },
+    },
     {
       path: "/control-table",
       name: "control-table",

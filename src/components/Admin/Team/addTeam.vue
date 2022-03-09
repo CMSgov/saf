@@ -1,7 +1,7 @@
 <template>
   <div class="text-center">
     <v-dialog v-model="dialog" width="1200">
-      <template v-slot:activator="{ on }">
+      <template v-slot:activator="{on}">
         <v-btn color="indigo" dark v-on="on">
           Add New Team Member
         </v-btn>
@@ -105,7 +105,7 @@
                     <!-- Image URL Upload Model -->
                     <v-col cols="12" sm="6" class="pa-1 ma-0">
                       <v-dialog v-model="dialogImageUload" max-width="290">
-                        <template v-slot:activator="{ on }">
+                        <template v-slot:activator="{on}">
                           <v-btn
                             color="primary"
                             :loading="imageUploading"
@@ -281,101 +281,103 @@
 
 <script>
   // import firebase from 'firebase/app'
-  // import { firestore } from 'firebase';
-  // import { storage } from 'firebase';
-  export default {
-    props: {},
-    data() {
-      return {
-        imageUpload: [],
-        imagePre: "",
-        imageUploading: false,
-        valid: true,
-        dialogImageUload: false,
-        nameRules: [
-          (v) => !!v || "Name is required",
-          (v) =>
-            (v && v.length <= 10) || "Name must be less than 10 characters",
-        ],
-        emailRules: [
-          (v) => !!v || "E-mail is required",
-          (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
-        ],
-        teamRole: ["Core Team", "Organizing Team", "Volunteer"],
-        dialog: false,
-        loading: false,
-        items: [true, false],
-        active: Boolean,
-        visible: Boolean,
-        id: "",
-        mbnumber: "",
-        name: "",
-        facebook: "",
-        github: "",
-        linkedin: "",
-        email: "",
-        meetup: "",
-        twitter: "",
-        web: "",
-        bio: "",
-        imageURL: "",
-        designation: "",
-        role: null,
-      };
-    },
-    // methods: {
-    //   onFileChange() {
-    //     let reader = new FileReader();
-    //     reader.readAsDataURL(this.imageUpload);
-    //     reader.onload = () => {
-    //       this.imagePre = reader.result;
-    //     };
-    //   },
-    //   uploadImage() {
-    //     this.imageUploading = true;
-    //     var fileName = `${this.userId}.${this.imageUpload.name.split(".")[1]}`;
-    //     //console.log(fileName);
-    //     // var refLink = firebase.storage().ref("team/" + fileName);
-    //     // refLink.put(this.imageUpload).then(() => {
-    //     //   refLink.getDownloadURL().then(a => {
-    //     //     //console.log(a);
-    //     //     this.imageURL = a;
-    //     //     this.imageUploading = false;
-    //     //     this.uploadImage = "Uploaded";
-    //     //   });
-    //     // });
-    //     this.dialogImageUload = false;
-    //   },
-    //   SaveEvent() {
-    //     if (this.$refs.form.validate()) {
-    //       var Data = {
-    //         active: this.active,
-    //         visible: this.visible,
-    //         name: this.name,
-    //         designation: this.designation,
-    //         mbnumber: this.mbnumber,
-    //         email: this.email,
-    //         image: this.imageURL,
-    //         bio: this.bio,
-    //         id: this.id,
-    //         role: this.role,
-    //         socialLinks: {
-    //           facebook: this.facebook,
-    //           github: this.github,
-    //           linkedin: this.linkedin,
-    //           meetup: this.meetup,
-    //           twitter: this.twitter,
-    //           web: this.web,
-    //         },
-    //       };
-    //       // firebase.firestore().collection('team').doc(Data.id).set(Data).then(()=>{
-    //       //     this.dialog = false
-    //       //     this.$emit('showSuccess')
-    //       // }).catch(()=>{
-    //       //     //console.log(e)
-    //       // })
-    //     }
-    //   },
-    // },
-  };
+  // // import { firestore } from 'firebase';
+  // // import { storage } from 'firebase';
+  //   export default {
+  //     props:{
+
+  //     },
+  //     data () {
+  //       return {
+  //         imageUpload: [],
+  //         imagePre: "",
+  //         imageUploading: false,
+  //         valid: true,
+  //         dialogImageUload: false,
+  //         nameRules: [
+  //             v => !!v || 'Name is required',
+  //             v => (v && v.length <= 10) || 'Name must be less than 10 characters',
+  //         ],
+  //         emailRules: [
+  //             v => !!v || 'E-mail is required',
+  //             v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+  //         ],
+  //         teamRole:["Core Team","Organizing Team", "Volunteer"],
+  //         dialog: false,
+  //         loading:false,
+  //         items:[true,false],
+  //         active:Boolean,
+  //         visible: Boolean,
+  //         id:'',
+  //         mbnumber:'',
+  //         name:'',
+  //         facebook:'',
+  //         github:'',
+  //         linkedin:'',
+  //         email:'',
+  //         meetup:'',
+  //         twitter:'',
+  //         web:'',
+  //         bio:'',
+  //         imageURL:'',
+  //         designation:'',
+  //         role:null
+  //       }
+  //     },
+  //     methods:{
+  //       onFileChange() {
+  //         let reader = new FileReader();
+  //         reader.readAsDataURL(this.imageUpload);
+  //         reader.onload = () => {
+  //           this.imagePre = reader.result;
+  //         };
+  //       },
+  //       uploadImage() {
+  //         this.imageUploading = true;
+  //         var fileName = `${this.userId}.${this.imageUpload.name.split(".")[1]}`;
+  //         //console.log(fileName);
+  //         var refLink = firebase.storage().ref("team/" + fileName);
+  //         refLink.put(this.imageUpload).then(() => {
+  //           refLink.getDownloadURL().then(a => {
+  //             //console.log(a);
+  //             this.imageURL = a;
+  //             this.imageUploading = false;
+  //             this.uploadImage = "Uploaded";
+  //           });
+  //         });
+  //         this.dialogImageUload = false;
+  //       },
+  //       SaveEvent(){
+  //         if (this.$refs.form.validate()) {
+  //             var Data = {
+  //                 active: this.active,
+  //                 visible: this.visible,
+  //                 name:this.name,
+  //                 designation: this.designation,
+  //                 mbnumber: this.mbnumber,
+  //                 email:this.email,
+  //                 image:this.imageURL,
+  //                 bio:this.bio,
+  //                 id: this.id,
+  //                 role:this.role,
+  //                 socialLinks:{
+  //                     facebook: this.facebook,
+  //                     github: this.github,
+  //                     linkedin: this.linkedin,
+  //                     meetup: this.meetup,
+  //                     twitter: this.twitter,
+  //                     web: this.web,
+  //                 }
+  //             }
+  //             firebase.firestore().collection('team').doc(Data.id).set(Data).then(()=>{
+  //                 this.dialog = false
+  //                 this.$emit('showSuccess')
+  //             }).catch(()=>{
+  //                 //console.log(e)
+  //             })
+  //         }
+
+  //       }
+  //     }
+  //   }
 </script>

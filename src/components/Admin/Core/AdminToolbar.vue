@@ -7,8 +7,8 @@
         <v-row align="center">
           <v-col>
             <router-link
-              :to="{ name: 'admin-dashhboard' }"
-              class=""
+              :to="{name: 'admin-dashhboard'}"
+              class="google-font"
               style="text-decoration:none;font-size:110%;"
               >{{ communitydata.CommunityName }}</router-link
             >
@@ -33,7 +33,7 @@
       <v-icon v-else>mdi-brightness-4</v-icon>
     </v-btn>
     <v-btn
-      class="ml-2 "
+      class="ml-2 google-font"
       style="text-transform: capitalize;"
       text
       @click="logout"
@@ -44,43 +44,43 @@
 
 <script>
   // import firebase from "@/firebase";
-  import communitydata from "@/assets/data/communityData.json";
-  import { mapGetters, mapMutations } from "vuex";
-  export default {
-    data() {
-      return {
-        communitydata: communitydata,
-      };
-    },
-    components: {},
-    computed: {
-      ...mapGetters(["AdminLinks"]),
-    },
-    methods: {
-      ...mapMutations(["ADtoggleDrawer"]),
-      onClick(e, item) {
-        e.stopPropagation();
-        if (item.to || !item.href) return;
-        this.$vuetify.goTo(item.href);
-      },
-      // logout() {
-      //   firebase.auth.signOut().then(() => {
-      //     this.$router.replace("/admin");
-      //   });
-      // },
-      darkMode() {
-        let metaThemeColor = document.querySelector("meta[name=theme-color]");
-        this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
-        if (localStorage)
-          localStorage.setItem("darkMode", this.$vuetify.theme.dark);
-        if (this.$vuetify.theme.dark) {
-          metaThemeColor.setAttribute("content", "#212121");
-        } else {
-          metaThemeColor.setAttribute("content", "#0277bd");
-        }
-      },
-    },
-  };
+  // import communitydata from "@/assets/data/communityData.json";
+  // import { mapGetters, mapMutations } from "vuex";
+  // export default {
+  //   data() {
+  //     return {
+  //       communitydata: communitydata
+  //     };
+  //   },
+  //   components: {},
+  //   computed: {
+  //     ...mapGetters(["AdminLinks"])
+  //   },
+  //   methods: {
+  //     ...mapMutations(["ADtoggleDrawer"]),
+  //     onClick(e, item) {
+  //       e.stopPropagation();
+  //       if (item.to || !item.href) return;
+  //       this.$vuetify.goTo(item.href);
+  //     },
+  //     logout() {
+  //       firebase.auth.signOut().then(() => {
+  //         this.$router.replace("/admin");
+  //       });
+  //     },
+  //     darkMode() {
+  //       let metaThemeColor = document.querySelector("meta[name=theme-color]");
+  //       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+  //       if (localStorage)
+  //         localStorage.setItem("darkMode", this.$vuetify.theme.dark);
+  //       if (this.$vuetify.theme.dark) {
+  //         metaThemeColor.setAttribute("content", "#212121");
+  //       } else {
+  //         metaThemeColor.setAttribute("content", "#0277bd");
+  //       }
+  //     }
+  //   }
+  // };
 </script>
 
 <style scoped>

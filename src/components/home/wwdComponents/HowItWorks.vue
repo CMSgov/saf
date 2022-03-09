@@ -150,7 +150,7 @@ export default {
       data: howitworks.rows,
     };
   },
-  // created : {
+  // created() {
   //   imgVersion : '-Dark'
   // },
   methods: {

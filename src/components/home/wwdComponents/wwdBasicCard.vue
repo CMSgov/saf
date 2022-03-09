@@ -5,66 +5,51 @@
       class="pa-2"
       :to="item.router_link"
       :href="item.link"
-      :class="hover && (item.link || item.router_link) ? getHighlight() : ''"
+      :color="hover && (item.router_link || item.link) ? get_highlight() : ''"
       :target="item.link ? '_blank' : ''"
-      style="width: 100%"
+      style="height: 100%"
+      :elevation="hover && (item.router_link || item.link) ? '20' : ''"
     >
-      <!--<toolBlock v-if="item.tools" :tools="item.tools" />       -->
-
-      <v-icon
-        v-if="item.icon"
-        large
-        :style="
-          item.icon_sizer ? 'font-size:' + item.icon_sizer : 'font-size:300%'
-        "
-        class="mt-4 d-flex flex-column"
-        :color="hover && (item.router_link || item.link) ? '#1a73e8' : ''"
-        >mdi-{{ item.icon }}</v-icon
-      >
-      <v-img
-        v-if="item.graphic"
-        :src="require('@/assets/img/gif/' + item.graphic + '.gif')"
-        class="ma-2"
-        max-height="328"
-      />
-      <v-img
-        v-else-if="item.graphic_frame"
-        v-bind:src="require('@/assets/img/gif/' + item.graphic_frame)"
-        class="ma-2"
-        max-height="328"
-      />
-      <v-img
-        v-else-if="item.png_dark && $vuetify.theme.isDark"
-        v-bind:src="require('@/assets/img/tools/' + item.png_dark + '.png')"
-        class="ma-2 mx-auto"
-        height="100"
-        width="100"
-      />
-      <v-img
-        v-else-if="item.png"
-        v-bind:src="require('@/assets/img/tools/' + item.png + '.png')"
-        class="ma-2 mx-auto"
-        height="100"
-        width="100"
-      />
+      <v-sheet height="100" v-if="item.icon || item.png">
+        <v-icon v-if="item.icon" large style="font-size:600%" class="mt-2">{{
+          item.icon
+        }}</v-icon>
+        <v-img
+          v-else-if="item.png_dark && $vuetify.theme.isDark"
+          v-bind:src="require('@/assets/img/tools/' + item.png_dark + '.png')"
+          style="vertical-align: middle"
+          class="ma-2 mx-auto"
+          :height="item.img_height ? item.img_height : '100'"
+          :width="item.img_width ? item.img_width : '100'"
+        />
+        <v-img
+          v-else-if="item.png"
+          v-bind:src="require('@/assets/img/tools/' + item.png + '.png')"
+          class="ma-2 mx-auto"
+          :height="item.img_height ? item.img_height : '100'"
+          :width="item.img_width ? item.img_width : '100'"
+        />
+      </v-sheet>
+      <!-- :style="hover && (item.router_link || item.link) ? 'color:#1a73e8' : ''" -->
       <v-card-title
         class="google-font mt-2 title align-bottom justify-center break-word"
+        :style="item.font_size ? 'font-size:' + item.font_size + '% !important' : ''"
       >
         <!-- :color="hover && (item.router_link || item.link) ? '#1a73e8' : ''" -->
-        <v-icon class="mr-2">mdi-{{ item.side_icon }}</v-icon>
+        <v-icon v-if="item.side_icon" class="mr-2">mdi-{{ item.side_icon }}</v-icon>
         <span v-html="make_readable(item.name)" />
       </v-card-title>
       <v-spacer />
-      <v-card-text v-if="item.desc" class="pa-2 body-1">{{
-        item.desc
-      }}</v-card-text>
+      <v-card-text v-if="item.desc" class="google-font pa-2 body-1"
+        ><span v-html="item.desc"
+      /></v-card-text>
       <template v-if="item.bullets">
         <v-card-text class="text-left">
           <ul>
             <li
               v-for="bullet in item.bullets"
               :key="bullet"
-              class="google-font body-1"
+              class="google-font body-1 "
             >
               {{ bullet }}
             </li>
@@ -80,8 +65,11 @@
           :src="shield"
         />
       </div>
-      <v-card-actions class="pt-0 mt-4">
-        <v-container row dense class="ma-0">
+      <v-card-actions
+        v-if="item.app_link || item.doc_link || item.github_link"
+        class="mt-4"
+      >
+        <v-container row dense>
           <v-row justify="center">
             <v-tooltip top>
               <template v-slot:activator="{ on }">
@@ -166,7 +154,7 @@
   };
 </script>
 
-<style scoped lang="scss">
+<style scoped>
   .card-outer {
     position: relative;
     padding-bottom: 10px;

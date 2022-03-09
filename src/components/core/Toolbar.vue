@@ -1,7 +1,11 @@
 <template>
-  <v-app-bar app fixed class>
-    <v-app-bar-nav-icon class="d-md-none d-lg-none" @click="toggleDrawer"></v-app-bar-nav-icon>
+  <v-app-bar app>
+    <v-app-bar-nav-icon
+      class="d-md-none d-lg-none"
+      @click="toggleDrawer"
+    ></v-app-bar-nav-icon>
 
+<<<<<<< HEAD
     <v-toolbar-title class="px-0">
       <router-link
         :to="{ name: 'home'}"
@@ -29,16 +33,43 @@
       <v-btn>what</v-btn>
     </div>-->
     <v-spacer />
+=======
+    <v-toolbar-title class="pl-2">
+      <router-link
+        :to="{ name: 'home' }"
+        class="google-font"
+        style="text-decoration: none; font-size: 1.4rem"
+        :class="this.$vuetify.theme.dark ? 'whiteText' : 'blackText'"
+      >
+        <img
+          :src="require('@/assets/img/svg/saf_logo.svg')"
+          style="width:2rem;height:2rem;vertical-align: middle"
+          class="mr-2"
+        />
+        {{ communityData.communityName }}
+      </router-link>
+    </v-toolbar-title>
+
+    <v-spacer />
+
+>>>>>>> mitre-saf/master
     <v-btn
       v-for="(link, i) in metalinks"
       :key="i"
       :to="link.to"
+<<<<<<< HEAD
       class="ml-2 hidden-sm-and-down"
       style="text-transform: capitalize;"
+=======
+      class="ml-2 google-font hidden-sm-and-down"
+      style="text-transform: capitalize"
+>>>>>>> mitre-saf/master
       text
       @click="onClick($event, link)"
-    >{{ link.text }}</v-btn>
-    <!--<PushNotification />-->
+    >
+      {{ link.text }}
+    </v-btn>
+
     <v-btn icon v-on:click="darkMode" class="ml-2">
       <v-icon v-if="this.$vuetify.theme.dark">mdi-brightness-7</v-icon>
       <v-icon v-else>mdi-brightness-4</v-icon>
@@ -48,27 +79,20 @@
 
 <script>
 import communityData from "@/assets/data/communityData.json";
-import feedbackModal from "@/components/core/FeedbackModal.vue";
-// import PushNotification from "@/components/core/PushNotifications";
-import { mapMutations, mapGetters } from "vuex";
+import { mapMutations } from "vuex";
 export default {
   data() {
     return {
       communityData: communityData,
     };
   },
-  components: {
-    feedbackModal: feedbackModal,
-  },
   computed: {
     metalinks() {
       return this.$store.getters.links.filter((link) => link.meta.enabled);
     },
-    ...mapGetters(["feedbackModalGetter"]),
   },
   methods: {
     ...mapMutations(["toggleDrawer"]),
-    ...mapMutations(["showFeedbackModal"]),
 
     onClick(e, item) {
       e.stopPropagation();

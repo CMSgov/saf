@@ -75,7 +75,7 @@ const getters = {
       controlNames.field = (rec) => rec[controlNames.value];
       controlNames.checkmark = 'RESET';
       controlNames.checkmarkFont = '16px sans-serif';
-      controlNames.width = 120;
+      controlNames.width = 100;
     }
     let all = undefined;
     if((all = columns.find(col => col.value === 'ALL'))) {

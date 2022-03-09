@@ -33,14 +33,14 @@
             :loading="loading"
             loading-text="Loading... Please wait"
           >
-            <template v-slot:item.status="{ item }">
+            <template v-slot:item.status="{item}">
               <v-chip v-if="item.status == true" class="green" small dark
                 >Upcoming</v-chip
               >
               <v-chip v-else class="red" small dark>Past</v-chip>
             </template>
 
-            <template v-slot:item.link="{ item }">
+            <template v-slot:item.link="{item}">
               <a :href="item.link" target="_blank" style="text-decoration:none"
                 >See More</a
               >
@@ -54,73 +54,75 @@
 
 <script>
   // import firebase from '@/firebase';
-  //import { configData } from "@/config/config";
-  export default {
-    components: {},
-    name: "admin-dashboard",
-    data: () => ({
-      search: "",
-      loading: true,
-      headers: [
-        {
-          text: "Name",
-          align: "left",
-          sortable: false,
-          value: "name",
-        },
-        { text: "Date", value: "local_date" },
-        { text: "Status", value: "status" },
-        { text: "Venue", value: "venue.name" },
-        { text: "RSVP Yes", value: "yes_rsvp_count" },
-        { text: "See More", value: "link" },
-      ],
-      userEmail: "",
-      title: "",
-      body: "",
-      isLoading: false,
-      isSuccessAlert: false,
-      eventsData: [],
-      showLoader: true,
-      notFoundEventFlag: false,
-    }),
-    // mounted(){
-    //     if(firebase.auth.currentUser){
-    //         this.userEmail = firebase.auth.currentUser.email
-    //         this.loading = true
-    //         fetch("https://cors-anywhere.herokuapp.com/https://api.meetup.com/" +
-    //             configData.MeetupURLName +
-    //             "/events?desc=true&photo-host=public&sign=true&page=1000&status=past")
-    //         .then(data => data.json())
-    //         .then(res => {
-    //             if (res.length > 0) {
-    //                 this.showLoader = false;
-    //                 // this.showData = true;
-    //                 this.eventsData = res;
-    //                 this.loading = false
-    //                 // console.log(this.eventsData)
-    //             } else {
-    //                 this.notFoundEventFlag = true;
-    //                 this.loading = false
-    //                 this.showLoader = false;
-    //             }
-    //         })
-    //         .catch(e => {
-    //             this.showLoader = false;
-    //             this.errorMsg = "Issue found with " + e;
-    //             // this.errorAlert = true;
-    //             // this.notFoundEventFlag = true;
-    //         });
-    //     }else{
-    //         this.$router.replace('admin')
-    //     }
-    // },
-    // methods:{
+  // import { configData } from "@/config/config";
+  // export default {
+  //     components:{
 
-    //     logout(){
-    //         firebase.auth.signOut().then(()=>{
-    //             this.$router.replace('/admin')
-    //         })
-    //     }
-    // }
-  };
+  //     },
+  //     name:"admin-dashboard",
+  //     data:()=>({
+  //         search:'',
+  //         loading:true,
+  //         headers: [
+  //           {
+  //             text: 'Name',
+  //             align: 'left',
+  //             sortable: false,
+  //             value: 'name',
+  //           },
+  //           { text: 'Date', value: 'local_date' },
+  //           { text: 'Status', value: 'status' },
+  //           { text: 'Venue', value: 'venue.name' },
+  //           { text: 'RSVP Yes', value: 'yes_rsvp_count' },
+  //           { text: 'See More', value: 'link' },
+  //         ],
+  //         userEmail:'',
+  //         title:"",
+  //         body:"",
+  //         isLoading:false,
+  //         isSuccessAlert:false,
+  //         eventsData: [],
+  //         showLoader: true,
+  //         notFoundEventFlag: false
+  //     }),
+  //     mounted(){
+  //         if(firebase.auth.currentUser){
+  //             this.userEmail = firebase.auth.currentUser.email
+  //             this.loading = true
+  //             fetch("https://cors-anywhere.herokuapp.com/https://api.meetup.com/" +
+  //                 configData.MeetupURLName +
+  //                 "/events?desc=true&photo-host=public&sign=true&page=1000&status=past")
+  //             .then(data => data.json())
+  //             .then(res => {
+  //                 if (res.length > 0) {
+  //                     this.showLoader = false;
+  //                     // this.showData = true;
+  //                     this.eventsData = res;
+  //                     this.loading = false
+  //                     // console.log(this.eventsData)
+  //                 } else {
+  //                     this.notFoundEventFlag = true;
+  //                     this.loading = false
+  //                     this.showLoader = false;
+  //                 }
+  //             })
+  //             .catch(e => {
+  //                 this.showLoader = false;
+  //                 this.errorMsg = "Issue found with " + e;
+  //                 // this.errorAlert = true;
+  //                 // this.notFoundEventFlag = true;
+  //             });
+  //         }else{
+  //             this.$router.replace('admin')
+  //         }
+  //     },
+  //     methods:{
+
+  //         logout(){
+  //             firebase.auth.signOut().then(()=>{
+  //                 this.$router.replace('/admin')
+  //             })
+  //         }
+  //     }
+  // }
 </script>

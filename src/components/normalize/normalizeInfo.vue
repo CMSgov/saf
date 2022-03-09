@@ -39,6 +39,8 @@
         class="ma-y"
         v-if="row.image && $vuetify.breakpoint.mdAndUp"
       >
+        <!-- <v-img :src="require('@/assets/img/svg/' + row.image + '.svg')" /> -->
+
         <HDFSVG class="pa-2" />
       </v-row>
       <ul v-if="row.bullets" class="ma-2">

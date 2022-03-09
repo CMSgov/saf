@@ -18,8 +18,8 @@ export default new Vuex.Store({
         meta: {
           showToolbar: true,
           enabled: true,
-          showBottomNav: true
-        }
+          showBottomNav: false,
+        },
       },
       
       {
@@ -29,8 +29,8 @@ export default new Vuex.Store({
         meta: {
           showToolbar: true,
           enabled: true,
-          showBottomNav: true
-        }
+          showBottomNav: false,
+        },
       },
       {
         text: "Validate",
@@ -39,8 +39,8 @@ export default new Vuex.Store({
         meta: {
           showToolbar: true,
           enabled: true,
-          showBottomNav: true
-        }
+          showBottomNav: true,
+        },
       },
       // {
       //   text: "Hardening",
@@ -59,8 +59,8 @@ export default new Vuex.Store({
         meta: {
           showToolbar: true,
           enabled: false,
-          showBottomNav: true
-        }
+          showBottomNav: true,
+        },
       },
       {
         text: "Implement/Harden",
@@ -86,6 +86,16 @@ export default new Vuex.Store({
         text: "Train",
         to: "/train",
         icon: "mdi-chair-school",
+        meta: {
+          showToolbar: true,
+          enabled: true,
+          showBottomNav: true,
+        }
+      },
+      {
+        text: "What's New",
+        to: "/whats-new",
+        icon: "mdi-newspaper",
         meta: {
           showToolbar: true,
           enabled: true,
@@ -129,7 +139,7 @@ export default new Vuex.Store({
         meta: {
           showToolbar: true,
           enabled: true,
-          showBottomNav: true
+          showBottomNav: true,
         }
       },
       // {
@@ -151,8 +161,8 @@ export default new Vuex.Store({
         icon: "mdi-home",
         meta: {
           showToolbar: false,
-          showBottomNav: true
-        }
+          showBottomNav: true,
+        },
       },
       {
         text: "Events",
@@ -160,8 +170,8 @@ export default new Vuex.Store({
         icon: "mdi-assistant",
         meta: {
           showToolbar: false,
-          showBottomNav: true
-        }
+          showBottomNav: true,
+        },
       },
       {
         text: "Team",
@@ -169,8 +179,8 @@ export default new Vuex.Store({
         icon: "mdi-account-group",
         meta: {
           showToolbar: false,
-          showBottomNav: true
-        }
+          showBottomNav: true,
+        },
       },
       {
         text: "Speaker",
@@ -178,34 +188,30 @@ export default new Vuex.Store({
         icon: "mdi-account-switch",
         meta: {
           showToolbar: false,
-          showBottomNav: true
-        }
-      }
-    ]
+          showBottomNav: true,
+        },
+      },
+    ],
   },
   getters: {
-    links: state => {
+    links: (state) => {
       return state.items;
     },
-    AdminLinks: state => {
+    AdminLinks: (state) => {
       return state.adminLinks;
     },
-    isCompactGetter: state => {
+    isCompactGetter: (state) => {
       return state.isCompact;
-    },
-    feedbackModalGetter: state => {
-      return state.showFeedbackModal;
     },
   },
   mutations: {
     setDrawer: (state, payload) => (state.drawer = payload),
-    toggleDrawer: state => (state.drawer = !state.drawer),
-    toggleCompact: state => (state.isCompact = !state.isCompact),
-    showFeedbackModal: state => (state.showFeedbackModal = !state.showFeedbackModal),
+    toggleDrawer: (state) => (state.drawer = !state.drawer),
+    toggleCompact: (state) => (state.isCompact = !state.isCompact),
 
     // For Admin
     ADsetDrawer: (state, payload) => (state.adminDrawer = payload),
-    ADtoggleDrawer: state => (state.adminDrawer = !state.adminDrawer)
+    ADtoggleDrawer: (state) => (state.adminDrawer = !state.adminDrawer),
   },
   actions: {},
   modules: {
