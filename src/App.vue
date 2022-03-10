@@ -1,23 +1,6 @@
 <template>
   <v-app class="google-font">
     <v-content>
-      <!-- <v-snackbar
-        v-model="snackWithButtons"
-        :timeout="timeout"
-        bottom
-        left
-        class="snack"
-      >
-        {{ snackWithBtnText }}
-        <v-spacer />
-        <v-btn dark text color="#00f500" @click.native="refreshApp">{{
-          snackBtnText
-        }}</v-btn>
-        <v-btn icon @click="snackWithButtons = false">
-          <v-icon>mdi-close</v-icon>
-        </v-btn>
-      </v-snackbar> -->
-
       <AdminToolbar v-if="$route.meta.requiresAuth" />
       <AuraToolbar v-if="!$route.meta.requiresAuth" />
 

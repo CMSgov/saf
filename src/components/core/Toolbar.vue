@@ -60,20 +60,26 @@
 
 <script>
   import communityData from "@/assets/data/communityData.json";
-  import {mapMutations} from "vuex";
+  import feedbackModal from "@/components/core/FeedbackModal.vue";
+  import {mapMutations, mapGetters} from "vuex";
   export default {
     data() {
       return {
         communityData: communityData,
       };
     },
+    components: {
+      feedbackModal: feedbackModal,
+    },
     computed: {
       metalinks() {
         return this.$store.getters.links.filter((link) => link.meta.enabled);
       },
+      ...mapGetters(["feedbackModalGetter"]),
     },
     methods: {
       ...mapMutations(["toggleDrawer"]),
+      ...mapMutations(["showFeedbackModal"]),
 
       onClick(e, item) {
         e.stopPropagation();

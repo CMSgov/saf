@@ -5,9 +5,9 @@
       class="pa-2"
       :to="item.router_link"
       :href="item.link"
-      :color="hover && (item.router_link || item.link) ? get_highlight() : ''"
+      :color="hover && (item.router_link || item.link) ? getHighlight() : ''"
       :target="item.link ? '_blank' : ''"
-      style="height: 100%"
+      style="height: 100%; width: 100%"
       :elevation="hover && (item.router_link || item.link) ? '20' : ''"
     >
       <v-sheet height="100" v-if="item.icon || item.png">

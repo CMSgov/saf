@@ -279,15 +279,6 @@ const router = new Router({
         requiresAuth: false,
       },
     },
-    // {
-    //   path:'/news/:date',
-    //   name:"news-page",
-    //   component:()=> import('@/components/News/NewsPage.vue'),
-    //   meta: (route) => ({
-    //     title: `News ` + route.params.date + ` | ${communityData.CommunityName}`,
-    //     color:"#0277bd",
-    //   })
-    // },
     {
       path: "/validation",
       redirect: "/validate",

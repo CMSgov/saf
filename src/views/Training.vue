@@ -23,7 +23,7 @@
             test the functionality and security of your systems. Many profiles
             are available as part of the open source community, with
             CMS-tailored profiles located on our
-            <router-link to="/validation">Validation</router-link>page. Due to
+            <router-link to="/validation">Validation</router-link> page. Due to
             the intuitive nature of the InSpec language, developers and security
             professionals can spend less time debating about <i>how</i> to test,
             and more time solving problems using the
@@ -76,8 +76,7 @@
     },
     components: {
       Header,
-      pastTraining
       //RSVPBlock
-    }
+    },
   };
 </script>
