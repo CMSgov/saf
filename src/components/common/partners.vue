@@ -10,40 +10,49 @@
       </v-col>
     </v-row>
 
-    <v-container fluid>
-      <v-row justify="center" align="center" v-for="(itemp,i) in partnerData" :key="i" :class="color_mode">
-        <!-- <v-col cols="12" md="12" lg="12" sm="12" class="mx-1 mt-5" v-if="itemp.length>0">
+    <!-- <v-container fluid> -->
+    <v-row
+      justify="center"
+      align="center"
+      v-for="(itemp, i) in partnerData"
+      :key="i"
+      :class="color_mode"
+    >
+      <!-- <v-col cols="12" md="12" lg="12" sm="12" class="mx-1 mt-5" v-if="itemp.length>0">
           <p class=" mb-0" style="font-size:130%">{{i}}</p>
         </v-col> -->
-        <v-slide-group class="pa-2" show-arrows>
-          <v-col v-for="(item,j) in itemp" :key="j" >
-              <!--:color="active ? 'primary' : '#574B75'"         // This was never configured properly - what is "active"? -->
-            <v-card
-              class="ma-4"
-              elevation="4"
-              height="180"
-              width="200"
-              v-bind:href="sponsor.link"
-              target="_blank"
-              text-center
-            >
-              <v-tooltip bottom>
-                <template v-slot:activator="{ on }">
-                  <v-img
-                    :src="getImgUrl(item.img)"
-                    :lazy-src="getImgUrl(item.img)"
-                    class="white"
-                    height="100"
-                    width="200"
-                    contain
-                  ></v-img>
-                  <!-- <v-card-subtitle class=" mb-0 justify-center">{{item.name}}</v-card-subtitle> -->
-                </template>
-              </v-tooltip>
-              <v-card-title class="justify-center align-center">{{item.name}}</v-card-title>
-            </v-card>
+      <v-slide-group class="pa-2" show-arrows>
+        <v-col v-for="(item, j) in itemp" :key="j">
+          <!--:color="active ? 'primary' : '#574B75'"         // This was never configured properly - what is "active"? -->
+          <v-card
+            class="ma-4"
+            elevation="4"
+            height="180"
+            width="200"
+            v-bind:href="sponsor.link"
+            target="_blank"
+            text-center
+          >
+            <v-tooltip bottom>
+              <template v-slot:activator="{on}">
+                <v-img
+                  :src="getImgUrl(item.img)"
+                  :lazy-src="getImgUrl(item.img)"
+                  class="white"
+                  height="100"
+                  width="200"
+                  contain
+                ></v-img>
+                <!-- <v-card-subtitle class=" mb-0 justify-center">{{item.name}}</v-card-subtitle> -->
+              </template>
+            </v-tooltip>
+            <v-card-title class="justify-center align-center">{{
+              item.name
+            }}</v-card-title>
+          </v-card>
           <!-- </v-slide-item> -->
-        </v-slide-group>
+        </v-col>
+      </v-slide-group>
       <!-- </v-col> -->
     </v-row>
 
@@ -84,7 +93,6 @@
 </template>
 
 <script>
-  import sponsorData from "@/assets/data/sponsors.json";
   import partnerData from "@/assets/data/partners.json";
   import communityData from "@/assets/data/communityData.json";
   export default {
@@ -113,7 +121,7 @@
           : "lightModeContainer";
       },
     },
-    mounted: function () {
+    mounted: function() {
       if (this.$route.hash) {
         this.jump(this.$route.hash.substring(1));
       }

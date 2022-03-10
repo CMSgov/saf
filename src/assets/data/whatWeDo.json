@@ -65,28 +65,32 @@
           "router_link": "CMSTeams",
           "desc": "Aid ISPG ACT team in deploying tools for security assessments",
           "svg": "",
-          "icon": ""
+          "icon": "",
+          "border_color": "blue"
         },
         {
           "name": "DevOps Onboarding for CMS Teams",
           "router_link": "CMSTeams",
           "desc": "Engage CMS DevOps teams to incorporate SAF tools and techniques",
           "svg": "",
-          "icon": ""
+          "icon": "",
+          "border_color": "blue"
         },
         {
           "name": "Training for DevOps Teams",
           "router_link": "training",
           "desc": "7 classes provided, including DHS staff and contractors 48 CMS contractors trained to develop InSpec profiles",
           "svg": "",
-          "icon": ""
+          "icon": "",
+          "border_color": "blue"
         },
         {
           "name": "Control Status Reporting",
           "link": "https://heimdall-demo.mitre.org",
           "desc": "Expand Heimdall to meet IUSG enterprise-level demands and new DevOps requirements",
           "svg": "",
-          "icon": ""
+          "icon": "",
+          "border_color": "blue"
         },
         {
           "name": "SAF CLI",

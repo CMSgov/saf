@@ -5,27 +5,33 @@
       @click="toggleDrawer"
     ></v-app-bar-nav-icon>
 
-<<<<<<< HEAD
     <v-toolbar-title class="px-0">
       <router-link
-        :to="{ name: 'home'}"
+        :to="{name: 'home'}"
         class
         style="text-decoration:none;font-size:110%"
-        :class="this.$vuetify.theme.dark?'whiteText':'blackText'"
-      >{{communityData.communityName}}</router-link>
+        :class="this.$vuetify.theme.dark ? 'whiteText' : 'blackText'"
+        >{{ communityData.communityName }}</router-link
+      >
     </v-toolbar-title>
 
     <v-spacer />
     <div v-show="$vuetify.breakpoint.smAndUp">
-      <v-dialog v-model="feedbackModalGetter" width="50rem" @click:outside="showFeedbackModal" slot="activator">
-        <template v-slot:activator="{ on }">
+      <v-dialog
+        v-model="feedbackModalGetter"
+        width="50rem"
+        @click:outside="showFeedbackModal"
+        slot="activator"
+      >
+        <template v-slot:activator="{on}">
           <v-btn
             @click="showFeedbackModal"
             style="text-transform: capitalize;"
             text
-          >Give Us Feedback!</v-btn>
+            >Give Us Feedback!</v-btn
+          >
         </template>
-        <feedbackModal v-show="feedbackModalGetter" ></feedbackModal>
+        <feedbackModal v-show="feedbackModalGetter"></feedbackModal>
       </v-dialog>
     </div>
     <!-- <feedbackModal v-show="feedbackModalGetter" @close="showFeedbackModal">Hello World!</feedbackModal>
@@ -33,37 +39,12 @@
       <v-btn>what</v-btn>
     </div>-->
     <v-spacer />
-=======
-    <v-toolbar-title class="pl-2">
-      <router-link
-        :to="{ name: 'home' }"
-        class="google-font"
-        style="text-decoration: none; font-size: 1.4rem"
-        :class="this.$vuetify.theme.dark ? 'whiteText' : 'blackText'"
-      >
-        <img
-          :src="require('@/assets/img/svg/saf_logo.svg')"
-          style="width:2rem;height:2rem;vertical-align: middle"
-          class="mr-2"
-        />
-        {{ communityData.communityName }}
-      </router-link>
-    </v-toolbar-title>
-
-    <v-spacer />
-
->>>>>>> mitre-saf/master
     <v-btn
       v-for="(link, i) in metalinks"
       :key="i"
       :to="link.to"
-<<<<<<< HEAD
       class="ml-2 hidden-sm-and-down"
       style="text-transform: capitalize;"
-=======
-      class="ml-2 google-font hidden-sm-and-down"
-      style="text-transform: capitalize"
->>>>>>> mitre-saf/master
       text
       @click="onClick($event, link)"
     >
@@ -78,48 +59,48 @@
 </template>
 
 <script>
-import communityData from "@/assets/data/communityData.json";
-import { mapMutations } from "vuex";
-export default {
-  data() {
-    return {
-      communityData: communityData,
-    };
-  },
-  computed: {
-    metalinks() {
-      return this.$store.getters.links.filter((link) => link.meta.enabled);
+  import communityData from "@/assets/data/communityData.json";
+  import {mapMutations} from "vuex";
+  export default {
+    data() {
+      return {
+        communityData: communityData,
+      };
     },
-  },
-  methods: {
-    ...mapMutations(["toggleDrawer"]),
+    computed: {
+      metalinks() {
+        return this.$store.getters.links.filter((link) => link.meta.enabled);
+      },
+    },
+    methods: {
+      ...mapMutations(["toggleDrawer"]),
 
-    onClick(e, item) {
-      e.stopPropagation();
-      if (item.to || !item.href) return;
-      this.$vuetify.goTo(item.href);
-    },
+      onClick(e, item) {
+        e.stopPropagation();
+        if (item.to || !item.href) return;
+        this.$vuetify.goTo(item.href);
+      },
 
-    darkMode() {
-      let metaThemeColor = document.querySelector("meta[name=theme-color]");
-      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
-      if (localStorage)
-        localStorage.setItem("darkMode", this.$vuetify.theme.dark);
-      if (this.$vuetify.theme.dark) {
-        metaThemeColor.setAttribute("content", "#212121");
-      } else {
-        metaThemeColor.setAttribute("content", "#0277bd");
-      }
+      darkMode() {
+        let metaThemeColor = document.querySelector("meta[name=theme-color]");
+        this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+        if (localStorage)
+          localStorage.setItem("darkMode", this.$vuetify.theme.dark);
+        if (this.$vuetify.theme.dark) {
+          metaThemeColor.setAttribute("content", "#212121");
+        } else {
+          metaThemeColor.setAttribute("content", "#0277bd");
+        }
+      },
     },
-  },
-};
+  };
 </script>
 
 <style scoped>
-.whiteText {
-  color: white;
-}
-.blackText {
-  color: rgba(0, 0, 0, 0.87);
-}
+  .whiteText {
+    color: white;
+  }
+  .blackText {
+    color: rgba(0, 0, 0, 0.87);
+  }
 </style>

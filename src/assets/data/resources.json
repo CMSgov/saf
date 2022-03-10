@@ -61,8 +61,6 @@
           "link": "https://mitre.github.io/inspec_tools/"
         }
       ]
-<<<<<<< HEAD
-=======
     },
     { 
       "name": "How is InSpec deployed?",
@@ -86,7 +84,6 @@
     {
       "name": "Inspec: Human Readable, Automated Compliance",
       "link": "https://www.youtube.com/embed/IaUjpJ5SUAA"
->>>>>>> mitre-saf/master
     },
     {
       "name": "How is InSpec deployed?",

@@ -76,6 +76,13 @@ h2 {
   word-break: normal;
 }
 
+h3 {
+  color: #1a73e8;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: normal;
+}
+
 .theme--dark.v-application code {
   background-color: inherit !important;
 }

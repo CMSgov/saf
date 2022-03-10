@@ -1,5 +1,5 @@
 <template>
-  <v-hover v-slot:default="{ hover }">
+  <v-hover v-slot:default="{hover}">
     <v-card
       outlined
       class="pa-2"
@@ -11,9 +11,16 @@
       :elevation="hover && (item.router_link || item.link) ? '20' : ''"
     >
       <v-sheet height="100" v-if="item.icon || item.png">
-        <v-icon v-if="item.icon" large style="font-size:600%" class="mt-2">{{
-          item.icon
-        }}</v-icon>
+        <v-icon
+          v-if="item.icon"
+          large
+          :style="
+            item.icon_sizer ? 'font-size:' + item.icon_sizer : 'font-size:300%'
+          "
+          class="mt-4 d-flex flex-column"
+          :color="hover && (item.router_link || item.link) ? '#1a73e8' : ''"
+          >mdi-{{ item.icon }}
+        </v-icon>
         <v-img
           v-else-if="item.png_dark && $vuetify.theme.isDark"
           v-bind:src="require('@/assets/img/tools/' + item.png_dark + '.png')"
@@ -33,10 +40,14 @@
       <!-- :style="hover && (item.router_link || item.link) ? 'color:#1a73e8' : ''" -->
       <v-card-title
         class="google-font mt-2 title align-bottom justify-center break-word"
-        :style="item.font_size ? 'font-size:' + item.font_size + '% !important' : ''"
+        :style="
+          item.font_size ? 'font-size:' + item.font_size + '% !important' : ''
+        "
       >
         <!-- :color="hover && (item.router_link || item.link) ? '#1a73e8' : ''" -->
-        <v-icon v-if="item.side_icon" class="mr-2">mdi-{{ item.side_icon }}</v-icon>
+        <v-icon v-if="item.side_icon" class="mr-2"
+          >mdi-{{ item.side_icon }}</v-icon
+        >
         <span v-html="make_readable(item.name)" />
       </v-card-title>
       <v-spacer />
@@ -72,7 +83,7 @@
         <v-container row dense>
           <v-row justify="center">
             <v-tooltip top>
-              <template v-slot:activator="{ on }">
+              <template v-slot:activator="{on}">
                 <v-btn
                   color="primary"
                   v-if="item.app_link"
@@ -87,7 +98,7 @@
               <span>Demo</span>
             </v-tooltip>
             <v-tooltip top>
-              <template v-slot:activator="{ on }">
+              <template v-slot:activator="{on}">
                 <v-btn
                   color="primary"
                   v-if="item.doc_link"
@@ -102,7 +113,7 @@
               <span>Documentation</span>
             </v-tooltip>
             <v-tooltip top>
-              <template v-slot:activator="{ on }">
+              <template v-slot:activator="{on}">
                 <v-btn
                   color="primary"
                   v-if="item.github_link"
