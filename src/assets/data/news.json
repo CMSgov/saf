@@ -4,21 +4,26 @@
             "header" : "New",
             "content" : [
                 "<a href=\"https://saf-cli.mitre.org/\">SAF CLI</a> consolidates SAF automation goals into a convenient command-line tool, including commands to: generate InSpec security validation code, set and validate threshold checks within a pipeline, convert security tool test data to and from our standard Heimdall Data Format (HDF), and automate Heimdall setup and deployment.",
+                "The <a href=\"https://saf-cli.mitre.org/\">SAF CLI</a> now supports AWS Security Hub and Splunk data integration!",
+                "CMS SAF now supports InSpec validation of Kubernetes (K8S, K3S, EKS)! Web, application, and database profiles have been confirmed/updated to work against containerized instances.",
                 "<a href=\"https://heimdall-lite.mitre.org/\">Heimdall</a> can now auto-convert native security data file formats just through drag and drop! These are the same formats supported by the <a href=\"https://github.com/mitre/saf#convert\">saf convert</a> tool (formerly Heimdall-tools).",
-                "The SAF team has published <a href=\"https://github.com/mitre/emasser\">eMASSer</a>, a CLI tool providing utilities for interacting with the eMASS API!"
+                "SAF now offers an <a href=\"https://github.com/mitre/serverless-inspec-lambda\">AWS Lambda runner for InSpec</a> – convenient scans without having to set up a runner!"
             ]
         },
         "reminders" : {
             "header" : "Reminders",
             "content" : [
-                "Check back often to find the latest information on <a href=\"https://saf.cms.gov/#/validate\">InSpec profiles</a>, <a href='https://heimdall-tools.mitre.org/'>Heimdall-tool converters</a>, and <a href=\"https://github.com/mitre/heimdall2/releases\">Heimdall updates!</a>",
+                "Automate Manual Controls! SAF/InSpec can now address manual controls! See \"Manual Controls\" on the <a href=\"https://saf.cms.gov/#/validate\">Validate page</a>.",
+                "Heimdall Server supports role-based access, multi-target CAAT export, and more! Follow releases <a href=\"https://github.com/mitre/heimdall2/releases\">here</a>.",
+                "Check back often to find the latest information on <a href=\"https://saf.cms.gov/#/validate\">InSpec profiles</a>, <a href='https://saf-cli.mitre.org/#convert/'>SAF CLI format converters</a>, and <a href=\"https://github.com/mitre/heimdall2/releases\">Heimdall updates!</a>",
                 "<a href=\"https://heimdall-lite.cms.gov/\">Heimdall-lite.cms.gov</a> is live! CMS now has its own version of Heimdall-lite, an in-browser tool for analyzing security data!"
             ]
         },
         "coming-soon" : {
             "header" : "Coming Soon",
             "content" : [
-                "SAF CLI will replace all the capabilities of the current <a href=\"https://inspec-tools.mitre.org\">InSpec Tools</a>.",
+                "A <a href='https://github.com/mitre/saf-lambda-function'>SAF CLI Lambda runner</a> - convert, integrate, view data without having to install the SAF CLI!",
+                "SAF CLI will replace all the capabilities of the current <a href='https://inspec-tools.mitre.org/'>InSpec Tools</a> utility.",
                 "SAF CLI will help update existing InSpec profiles to current STIG and CIS standards."
             ]
         }
