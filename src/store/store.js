@@ -181,6 +181,7 @@ export default new Vuex.Store({
     setDrawer: (state, payload) => (state.drawer = payload),
     toggleDrawer: (state) => (state.drawer = !state.drawer),
     toggleCompact: (state) => (state.isCompact = !state.isCompact),
+    showFeedbackModal: state => (state.showFeedbackModal = !state.showFeedbackModal),
 
     // For Admin
     ADsetDrawer: (state, payload) => (state.adminDrawer = payload),
