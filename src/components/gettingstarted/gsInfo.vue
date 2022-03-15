@@ -47,7 +47,7 @@
         <v-img
           v-if="item.image"
           :id="item.image"
-          :src="require('@/assets/img/tools/' + item.image)"
+          :src="require('@/assets/img/tools/' + item.image + '.png')"
         />
       </div>
     </template>
