@@ -1,6 +1,6 @@
 <template>
-  <v-container fluid>
-    <div :key="index" class="ms-2">
+  <v-container fluid class="pa-2">
+    <div class="mb-2">
       <h2>Video Tutorials</h2>
       <v-row justify="center" align="center" class="mx-0 my-8">
         <v-col md="12" lg="10" xs="12" class="pa-0">
@@ -15,7 +15,7 @@
       ></v-row>
     </div>
     <template v-for="(item, index) in resources.items">
-      <div :key="index" class="ms-2">
+      <div :key="index">
         <h2>{{ item.name }}</h2>
         <span v-html="item.desc" />
         <p
@@ -47,7 +47,7 @@
         <v-img
           v-if="item.image"
           :id="item.image"
-          :src="require('@/assets/img/tools/' + item.image + '.png')"
+          :src="require('@/assets/img/tools/' + item.image)"
         />
       </div>
     </template>

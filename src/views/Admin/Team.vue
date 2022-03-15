@@ -118,88 +118,88 @@
 
 <script>
   // import firebase from 'firebase/app'
-  // import { firestore } from 'firebase';
-  // import { configData } from "@/config/config";
-  import AddTeam from "../../components/Admin/Team/addTeam";
-  //import Team from '../../components/Admin/Team/viewTeam'
-  export default {
-    components: {
-      AddTeam,
-      //Team
-    },
-    name: "admin-dashboard",
-    data: () => ({
-      teamRole: ["Core Team", "Organizing Team", "Volunteer"],
-      itemsPerPageOptions: [8, 16, 32],
-      itemsPerPage: 8,
-      removeSuccess: false,
-      teamLoader: true,
-      search: "",
-      loading: true,
-      teamData: [],
-      snackbarSuccess: false,
-    }),
-    created() {
-      if (this.$route.query.msg) {
-        this.removeSuccess = true;
-        // this.alert  = this.$route.query.msg;
-      }
-    },
-    computed: {
-      // fitlerData(){
-      //   return this.teamData.filter(team=>{
-      //     // console.log(team)
-      //     return team.name.match(this.search)
-      //   })
-      // }
-    },
-    // mounted(){
-    //     // firebase.auth().currentUser
-    //     if(firebase.auth().currentUser){
-    //         // this.userEmail = firebase.auth.currentUser.email
-    //         this.showData()
-    //     }else{
-    //         this.$router.replace('login')
-    //     }
-    // },
-    methods: {
-      showTeam(id) {
-        this.$router.replace("/admin/dashboard/team/" + id);
-      },
-      getImgUrl(pic) {
-        if (pic.length > 0) {
-          return pic;
-          // return require('@/assets/img/team/'+pic)
-        } else {
-          return require("@/assets/img/common/avatar.png");
-        }
-      },
-      showData() {
-        this.teamLoader = true;
-        // this.dataLoadingStatus = true
-        this.teamData = [];
-        //console.log('Calling Show Data')
-        // firebase.firestore().collection('team').get()
-        // .then((snapshot) => {
-        //     snapshot.forEach((doc) => {
-        //         this.id = doc.id
-        //         // console.log(this.id)
-        //         // doc.data().docId = this.id
-        //         // Object.assign(doc.data(), {docID: doc.id});
-        //         // console.log(typeof(doc.data()))
-        //         this.teamData.push(doc.data())
-        //         // console.log(this.teamData)
+  // // import { firestore } from 'firebase';
+  // // import { configData } from "@/config/config";
+  // import AddTeam from '../../components/Admin/Team/addTeam'
+  // //import Team from '../../components/Admin/Team/viewTeam'
+  // export default {
+  //     components:{
+  //       AddTeam,
+  //       //Team
+  //     },
+  //     name:"admin-dashboard",
+  //     data:()=>({
+  //       teamRole:["Core Team","Organizing Team", "Volunteer"],
+  //       itemsPerPageOptions: [8, 16, 32],
+  //       itemsPerPage: 8,
+  //       removeSuccess:false,
+  //       teamLoader:true,
+  //       search:'',
+  //       loading:true,
+  //       teamData:[],
+  //       snackbarSuccess:false
+  //     }),
+  //     created(){
+  //       if(this.$route.query.msg) {
+  //         this.removeSuccess = true
+  //         // this.alert  = this.$route.query.msg;
+  //       }
+  //     },
+  //     computed:{
+  //       // fitlerData(){
+  //       //   return this.teamData.filter(team=>{
+  //       //     // console.log(team)
+  //       //     return team.name.match(this.search)
+  //       //   })
+  //       // }
+  //     },
+  //     mounted(){
+  //         // firebase.auth().currentUser
+  //         if(firebase.auth().currentUser){
+  //             // this.userEmail = firebase.auth.currentUser.email
+  //             this.showData()
+  //         }else{
+  //             this.$router.replace('login')
+  //         }
+  //     },
+  //     methods:{
+  //       showTeam(id){
+  //         this.$router.replace('/admin/dashboard/team/'+id)
+  //       },
+  //       getImgUrl(pic) {
+  //           if(pic.length>0){
+  //             return pic
+  //               // return require('@/assets/img/team/'+pic)
+  //           }else{
+  //               return require('@/assets/img/common/avatar.png')
+  //           }
+  //       },
+  //       showData(){
+  //           this.teamLoader = true
+  //           // this.dataLoadingStatus = true
+  //           this.teamData = []
+  //         //console.log('Calling Show Data')
+  //           firebase.firestore().collection('team').get()
+  //           .then((snapshot) => {
+  //               snapshot.forEach((doc) => {
+  //                   this.id = doc.id
+  //                   // console.log(this.id)
+  //                   // doc.data().docId = this.id
+  //                   // Object.assign(doc.data(), {docID: doc.id});
+  //                   // console.log(typeof(doc.data()))
+  //                   this.teamData.push(doc.data())
+  //                   // console.log(this.teamData)
 
-        //     });
-        //     this.teamLoader = false
-        //     this.loading = false
-        // })
-        // .catch(() => {
-        //   //console.log('Error getting documents', err);
-        // });
-        // this.snackbarSuccess = true
-        // this.dataLoadingStatus = false
-      },
-    },
-  };
+  //               });
+  //               this.teamLoader = false
+  //               this.loading = false
+  //           })
+  //           .catch(() => {
+  //             //console.log('Error getting documents', err);
+  //           });
+  //           // this.snackbarSuccess = true
+  //           // this.dataLoadingStatus = false
+  //       }
+  //     }
+  // }
 </script>

@@ -32,9 +32,9 @@
           "desc": " for assessing configuration settings, vulnerabilities, and least functionality"
         },
         {
-          "name": "InSpec Tools",
-          "link": "https://inspec-tools.mitre.org",
-          "desc": "to create and format InSpec data like profiles and results"
+          "name": "SAF CLI",
+          "link": "https://sadf-cli.mitre.org",
+          "desc": "to serve as a utility to assist with end-to-end automation tasks, including generating metadata for new InSpec profiles, converting between security tool output formats, and deploying Heimdall"
         },
         {
           "name": "Heimdall Server",
@@ -45,26 +45,24 @@
           "name": "Heimdall Lite",
           "link": "https://heimdall-lite.cms.gov",
           "desc": " to visualize security data easily from anywhere, using a lightweight in-browser version of Heimdall for simple use cases"
-        },
-        {
-          "name": "Heimdall_tools",
-          "link": "https://heimdall-tools.mitre.org/",
-          "desc": " to convert data from these tools (to Heimdall Data Format - HDF) to be viewed in Heimdall:",
-          "bullets": [
-            "SonarQube",
-            "Fortify",
-            "OWASP ZAP",
-            "Burp Suite Pro",
-            "Nessus"
-          ]
-        },
-        {
-          "name": "HDF-to-Splunk",
-          "link": "http://hdf-json-to-splunk.mitre.org/",
-          "desc": " converter to use Splunk to store HDF security data"
         }
       ],
       "tag": "tools"
+    },
+    {
+      "question": "What happened to Heimdall_Tools and InSpec_Tools?",
+      "answer": "SAF CLI has combined the functionality of many of the older CMS SAF-supported tools, including Heimdall_Tools and InSpec_Tools, into a single utility. The new tool covers the same use cases as the old ones in a more convenient package. Similarly, our GitHub Actions for the older tools have been replaced by the SAF CLI GitHub Action.",
+      "links": [
+        {
+          "name": "SAF CLI",
+          "link": "http://saf-cli.mitre.org/"
+        },
+        {
+          "name": "SAF CLI GitHub Action",
+          "link": "https://github.com/mitre/saf_action"
+        }
+      ],
+      "tag" : "deprecated_tools"
     },
     {
       "question": "What is the ACT process?",
@@ -92,8 +90,6 @@
       ],
       "tag": "code-review"
     },
-    
-
     {
       "question": "How is InSpec deployed?",
       "answer": "It is intended and recommended that InSpec be installed on a \"runner\" host (such as a DevOps orchestration server, an administrative management system, or a developer's workstation/laptop) and run against the target remotely. However, InSpec may be deployed in various ways depending on the needs of the user:",

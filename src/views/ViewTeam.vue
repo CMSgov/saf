@@ -145,63 +145,64 @@
 <script>
   // import firebase from 'firebase/app'
 
-  export default {
-    components: {},
-    data: () => ({
-      snackbarSuccess: false,
-      userNotFound: false,
-      showTeamData: false,
-      showLoader: true,
-      teamLoader: true,
-      teamData: [],
-      search: "",
-    }),
-    created() {
-      let metaThemeColor = document.querySelector("meta[name=theme-color]");
-      if (this.$vuetify.theme.dark) {
-        metaThemeColor.setAttribute("content", "#212121");
-      } else {
-        metaThemeColor.setAttribute("content", "#0277bd");
-      }
+  // export default {
+  //   components: {
+  //   },
+  //   data:()=>({
+  //         snackbarSuccess:false,
+  //         userNotFound:false,
+  //         showTeamData: false,
+  //         showLoader: true,
+  //         teamLoader:true,
+  //         teamData:[],
+  //         search:''
+  //     }),
+  //   created(){
+  //     let metaThemeColor = document.querySelector("meta[name=theme-color]");
+  //     if(this.$vuetify.theme.dark){
+  //       metaThemeColor.setAttribute("content", '#212121');
+  //     }else{
+  //         metaThemeColor.setAttribute("content", '#0277bd');
+  //     }
 
-      if (this.$route.params.id) {
-        this.getTeamData();
-      }
-    },
-    methods: {
-      getImgUrl(pic) {
-        if (pic.length > 0) {
-          return pic;
-          //   return require('@/assets/img/team/'+pic)
-        } else {
-          return require("@/assets/img/common/avatar.png");
-        }
-      },
-      getTeamData() {
-        this.showLoader = true;
-        this.showTeamData = false;
-        this.userNotFound = false;
-        //   firebase.firestore().collection('team').doc(this.$route.params.id).get().then(doc=>{
-        //   //console.log(doc.data())
-        //     if(doc.data() == undefined){
-        //         this.showLoader = false
-        //         this.showTeamData = false
-        //         this.userNotFound = true
-        //     }
-        //     else if(doc.data()){
-        //         this.showTeamData = true
-        //         this.showLoader = false
-        //         this.teamData = doc.data()
-        //     }
-        //     else{
-        //         this.showTeamData = false
-        //         this.showLoader = false
-        //         this.userNotFound = true
-        //     }
-        //   })
-      },
-    },
-  };
+  //     if(this.$route.params.id){
+  //         this.getTeamData()
+  //     }
+  //   },
+  //   methods:{
+  //       getImgUrl(pic) {
+  //           if(pic.length>0){
+  //               return pic
+  //             //   return require('@/assets/img/team/'+pic)
+  //           }else{
+  //               return require('@/assets/img/common/avatar.png')
+  //           }
+  //       },
+  //       getTeamData(){
+  //           this.showLoader = true
+  //           this.showTeamData = false
+  //           this.userNotFound = false
+  //           firebase.firestore().collection('team').doc(this.$route.params.id).get().then(doc=>{
+  //           //console.log(doc.data())
+  //             if(doc.data() == undefined){
+  //                 this.showLoader = false
+  //                 this.showTeamData = false
+  //                 this.userNotFound = true
+  //             }
+  //             else if(doc.data()){
+  //                 this.showTeamData = true
+  //                 this.showLoader = false
+  //                 this.teamData = doc.data()
+  //             }
+  //             else{
+  //                 this.showTeamData = false
+  //                 this.showLoader = false
+  //                 this.userNotFound = true
+  //             }
+  //           })
+  //       },
+  //   }
+  // };
 </script>
 
 <style scoped></style>

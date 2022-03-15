@@ -2,7 +2,7 @@
   <v-dialog v-model="dialog" width="1200">
     <!--<template v-slot:activator="{ on }">-->
     <v-tooltip bottom>
-      <template v-slot:activator="{ on }">
+      <template v-slot:activator="{on}">
         <v-btn icon color="primary" v-on="on" @click.stop="dialog = true" dark>
           <v-icon>mdi-lead-pencil</v-icon>
           <!--  -->
@@ -109,7 +109,7 @@
                   <!-- Image URL Upload Model -->
                   <v-col cols="12" sm="6" class="pa-1 ma-0">
                     <v-dialog v-model="dialogImageUload" max-width="290">
-                      <template v-slot:activator="{ on }">
+                      <template v-slot:activator="{on}">
                         <v-btn
                           color="primary"
                           :loading="imageUploading"
@@ -284,147 +284,150 @@
 
 <script>
   // import firebase from 'firebase/app'
-  //import { firestore } from 'firebase';
-  //import { storage } from 'firebase';
-  export default {
-    props: {
-      teamData: {},
-    },
-    data() {
-      return {
-        imageUpload: [],
-        imagePre: "",
-        imageUploading: false,
-        valid: true,
-        dialogImageUload: false,
-        nameRules: [
-          (v) => !!v || "Name is required",
-          (v) =>
-            (v && v.length <= 20) || "Name must be less than 10 characters",
-        ],
-        emailRules: [
-          (v) => !!v || "E-mail is required",
-          (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
-        ],
-        teamRole: ["Core Team", "Organizing Team", "Volunteer"],
-        dialog: false,
-        loading: false,
-        items: [true, false],
-        active: Boolean,
-        visible: Boolean,
-        id: "",
-        mbnumber: "",
-        name: "",
-        facebook: "",
-        github: "",
-        linkedin: "",
-        email: "",
-        meetup: "",
-        twitter: "",
-        web: "",
-        bio: "",
-        imageURL: "",
-        image: "",
-        designation: "",
-        role: null,
-        updatedData: {
-          active: this.teamData.active,
-          visible: this.teamData.visible,
-          name: this.teamData.name,
-          designation: this.teamData.designation,
-          mbnumber: this.teamData.mbnumber,
-          email: this.teamData.email,
-          image: this.teamData.image,
-          bio: this.teamData.bio,
-          id: this.teamData.id,
-          role: this.teamData.role,
-          socialLinks: {
-            facebook: this.teamData.socialLinks.facebook,
-            github: this.teamData.socialLinks.github,
-            linkedin: this.teamData.socialLinks.linkedin,
-            meetup: this.teamData.socialLinks.meetup,
-            twitter: this.teamData.socialLinks.twitter,
-            web: this.teamData.socialLinks.web,
-          },
-        },
-      };
-    },
-    // methods: {
-    //   onFileChange() {
-    //     let reader = new FileReader();
-    //     reader.readAsDataURL(this.imageUpload);
-    //     reader.onload = () => {
-    //       this.imagePre = reader.result;
-    //     };
-    //   },
-    //   uploadImage() {
-    //     this.imageUploading = true;
-    //     var fileName = `${this.userId}.${this.imageUpload.name.split(".")[1]}`;
-    //     console.log(fileName);
-    //     var refLink = firebase.storage().ref("team/" + fileName);
-    //     refLink.put(this.imageUpload).then(() => {
-    //       refLink.getDownloadURL().then(a => {
-    //       //console.log(a);
-    //         this.imageURL = a;
-    //         this.imageUploading = false;
-    //         this.uploadImage = "Uploaded";
-    //       });
-    //     });
-    //     this.dialogImageUload = false;
-    //   },
-    //   UpdateData() {
-    //     var self = this;
-    //     self.loading = true;
-    //     if (this.$refs.form.validate()) {
-    //       console.log(this.updatedData)
-    //       console.log(this.teamData.id)
-    //       firebase.firestore().collection("team").where("id", "==", this.teamData.id)
-    //       .get()
-    //       .then(function(querySnapshot) {
-    //           querySnapshot.forEach(function(doc) {
-    //             //console.log(doc.id, " => ", doc.data());
-    //               // Build doc ref from doc.id
-    //               firebase.firestore().collection("team").doc(doc.id).update({
-    //                   active: self.updatedData.active,
-    //                   visible: self.updatedData.visible,
-    //                   name:self.updatedData.name,
-    //                   designation: self.updatedData.designation,
-    //                   mbnumber: self.updatedData.mbnumber,
-    //                   email:self.updatedData.email,
-    //                   image:self.updatedData.image,
-    //                   bio:self.updatedData.bio,
-    //                   id: self.updatedData.id,
-    //                   role:self.updatedData.role,
-    //                   socialLinks:{
-    //                       facebook: self.updatedData.socialLinks.facebook,
-    //                       github: self.updatedData.socialLinks.github,
-    //                       linkedin: self.updatedData.socialLinks.linkedin,
-    //                       meetup: self.updatedData.socialLinks.meetup,
-    //                       twitter: self.updatedData.socialLinks.twitter,
-    //                       web: self.updatedData.socialLinks.web,
-    //                   }
-    //               });
-    //           });
-    //       }).then(()=>{
-    //           // alert('Data Updated')
-    //         self.loading = false
-    //         self.dialog = false
-    //         self.$emit('editedSuccess')
-    //       }).catch(()=>{
-    //         //console.log(e)
-    //           self.loading = false
-    //       })
-    //       firebase.firestore().collection('team').where('id','==', this.teamData.id)
-    //       update(Data).then(res=>{
-    //           // console.log(res)
-    //           alert('Updated')
-    //           this.dialog = false
-    //           this.$emit('showSuccess')
-    //       }).catch(e=>{
-    //         //console.log(e)
-    //       })
-    //     }
-    //   },
-    // },
-  };
+  // //import { firestore } from 'firebase';
+  // //import { storage } from 'firebase';
+  //   export default {
+  //     props:{
+  //         teamData:{}
+  //     },
+  //     data () {
+  //       return {
+  //         imageUpload: [],
+  //         imagePre: "",
+  //         imageUploading: false,
+  //         valid: true,
+  //         dialogImageUload: false,
+  //         nameRules: [
+  //             v => !!v || 'Name is required',
+  //             v => (v && v.length <= 20) || 'Name must be less than 10 characters',
+  //         ],
+  //         emailRules: [
+  //             v => !!v || 'E-mail is required',
+  //             v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+  //         ],
+  //         teamRole:["Core Team","Organizing Team", "Volunteer"],
+  //         dialog: false,
+  //         loading:false,
+  //         items:[true,false],
+  //         active:Boolean,
+  //         visible: Boolean,
+  //         id:'',
+  //         mbnumber:'',
+  //         name:'',
+  //         facebook:'',
+  //         github:'',
+  //         linkedin:'',
+  //         email:'',
+  //         meetup:'',
+  //         twitter:'',
+  //         web:'',
+  //         bio:'',
+  //         imageURL:'',
+  //         image:'',
+  //         designation:'',
+  //         role:null,
+  //         updatedData:{
+  //             active: this.teamData.active,
+  //             visible: this.teamData.visible,
+  //             name:this.teamData.name,
+  //             designation: this.teamData.designation,
+  //             mbnumber: this.teamData.mbnumber,
+  //             email:this.teamData.email,
+  //             image:this.teamData.image,
+  //             bio:this.teamData.bio,
+  //             id: this.teamData.id,
+  //             role:this.teamData.role,
+  //             socialLinks:{
+  //                 facebook: this.teamData.socialLinks.facebook,
+  //                 github: this.teamData.socialLinks.github,
+  //                 linkedin: this.teamData.socialLinks.linkedin,
+  //                 meetup: this.teamData.socialLinks.meetup,
+  //                 twitter: this.teamData.socialLinks.twitter,
+  //                 web: this.teamData.socialLinks.web,
+  //             }
+  //         }
+  //       }
+  //     },
+  //     methods:{
+  //       onFileChange() {
+  //         let reader = new FileReader();
+  //         reader.readAsDataURL(this.imageUpload);
+  //         reader.onload = () => {
+  //           this.imagePre = reader.result;
+  //         };
+  //       },
+  //       uploadImage() {
+  //         this.imageUploading = true;
+  //         var fileName = `${this.userId}.${this.imageUpload.name.split(".")[1]}`;
+  //       //console.log(fileName);
+  //         var refLink = firebase.storage().ref("team/" + fileName);
+  //         refLink.put(this.imageUpload).then(() => {
+  //           refLink.getDownloadURL().then(a => {
+  //           //console.log(a);
+  //             this.imageURL = a;
+  //             this.imageUploading = false;
+  //             this.uploadImage = "Uploaded";
+  //           });
+  //         });
+  //         this.dialogImageUload = false;
+  //       },
+  //         UpdateData(){
+  //             var self =this
+  //             self.loading = true
+  //             if (this.$refs.form.validate()) {
+  //               //console.log(this.updatedData)
+  //               //console.log(this.teamData.id)
+
+  //                 firebase.firestore().collection("team").where("id", "==", this.teamData.id)
+  //                 .get()
+  //                 .then(function(querySnapshot) {
+  //                     querySnapshot.forEach(function(doc) {
+  //                       //console.log(doc.id, " => ", doc.data());
+  //                         // Build doc ref from doc.id
+
+  //                         firebase.firestore().collection("team").doc(doc.id).update({
+  //                             active: self.updatedData.active,
+  //                             visible: self.updatedData.visible,
+  //                             name:self.updatedData.name,
+  //                             designation: self.updatedData.designation,
+  //                             mbnumber: self.updatedData.mbnumber,
+  //                             email:self.updatedData.email,
+  //                             image:self.updatedData.image,
+  //                             bio:self.updatedData.bio,
+  //                             id: self.updatedData.id,
+  //                             role:self.updatedData.role,
+  //                             socialLinks:{
+  //                                 facebook: self.updatedData.socialLinks.facebook,
+  //                                 github: self.updatedData.socialLinks.github,
+  //                                 linkedin: self.updatedData.socialLinks.linkedin,
+  //                                 meetup: self.updatedData.socialLinks.meetup,
+  //                                 twitter: self.updatedData.socialLinks.twitter,
+  //                                 web: self.updatedData.socialLinks.web,
+  //                             }
+  //                         });
+  //                     });
+  //                 }).then(()=>{
+  //                     // alert('Data Updated')
+  //                   self.loading = false
+  //                   self.dialog = false
+  //                   self.$emit('editedSuccess')
+  //                 }).catch(()=>{
+  //                   //console.log(e)
+  //                     self.loading = false
+  //                 })
+
+  //                 // firebase.firestore().collection('team').where('id','==', this.teamData.id)
+  //                 // update(Data).then(res=>{
+  //                 //     // console.log(res)
+  //                 //     alert('Updated')
+  //                 //     this.dialog = false
+  //                 //     this.$emit('showSuccess')
+  //                 // }).catch(e=>{
+  //                 //   //console.log(e)
+  //                 // })
+  //             }
+
+  //         }
+  //     }
+  //   }
 </script>

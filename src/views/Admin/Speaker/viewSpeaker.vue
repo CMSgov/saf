@@ -173,56 +173,56 @@
 </template>
 
 <script>
-  import removeSpeakers from "@/components/Admin/Speaker/removeSpeakers";
-  import editSpeaker from "@/components/Admin/Speaker/editSpeakers";
+  // import removeSpeakers from "@/components/Admin/Speaker/removeSpeakers";
+  // import editSpeaker from "@/components/Admin/Speaker/editSpeakers";
 
   // import firebase from "@/firebase";
 
-  export default {
-    name: "viewSpeakers",
-    components: {
-      removeSpeakers,
-      editSpeaker,
-    },
-    data: () => ({
-      speaker: {},
-      isLoading: true,
-      isSpeakerFound: true,
-      snackbarSuccess: false,
-    }),
-    // mounted() {
-    //   if (firebase.auth.currentUser) {
-    //   //console.log("found");
-    //   } else {
-    //     this.$router.replace("/admin");
-    //   }
-    // },
-    methods: {
-      editSuccessFunction() {
-        this.snackbarSuccess = true;
-        this.loadData();
-      },
-      loadData() {
-        this.isLoading = true;
-        // firebase.firestore
-        //   .collection("speakers")
-        //   .doc(this.$route.params.id)
-        //   .get()
-        //   .then(res => {
-        //     if (res.exists) {
-        //       this.speaker = res.data();
-        //       this.isLoading = false;
-        //     } else {
-        //       this.isSpeakerFound = false;
-        //       this.isLoading = false;
-        //     }
-        //   });
-      },
-    },
-    created() {
-      this.loadData();
-    },
-  };
+  // export default {
+  //   name: "viewSpeakers",
+  //   components: {
+  //     removeSpeakers,
+  //     editSpeaker
+  //   },
+  //   data: () => ({
+  //     speaker: {},
+  //     isLoading: true,
+  //     isSpeakerFound: true,
+  //     snackbarSuccess: false
+  //   }),
+  //   mounted() {
+  //     if (firebase.auth.currentUser) {
+  //     //console.log("found");
+  //     } else {
+  //       this.$router.replace("/admin");
+  //     }
+  //   },
+  //   methods: {
+  //     editSuccessFunction() {
+  //       this.snackbarSuccess = true;
+  //       this.loadData();
+  //     },
+  //     loadData(){
+  //       this.isLoading = true;
+  //       firebase.firestore
+  //         .collection("speakers")
+  //         .doc(this.$route.params.id)
+  //         .get()
+  //         .then(res => {
+  //           if (res.exists) {
+  //             this.speaker = res.data();
+  //             this.isLoading = false;
+  //           } else {
+  //             this.isSpeakerFound = false;
+  //             this.isLoading = false;
+  //           }
+  //         });
+  //     }
+  //   },
+  //   created() {
+  //     this.loadData();
+  //   }
+  // };
 </script>
 
 <style>

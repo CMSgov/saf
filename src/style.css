@@ -4,8 +4,17 @@
     url("assets/fonts/google-font.woff") format("woff");
 }
 
+@font-face {
+  font-family: roboto-condensed;
+  src: url(~@/assets/fonts/RobotoCondensed-Regular.ttf) format("truetype");
+}
+
 .google-font {
   font-family: google-sans;
+}
+
+.roboto-font {
+  font-family: roboto-condensed;
 }
 
 body {
@@ -43,12 +52,12 @@ body {
 }
 
 .break-word {
+  overflow-wrap: normal;
   word-wrap: break-word;
-  overflow-wrap: break-word;
-
   word-break: normal;
-  hyphens: none;
+  hyphens: auto;
 }
+
 .header {
   font-size: 150%;
   font-weight: bold;
@@ -61,6 +70,13 @@ body {
 }
 
 h2 {
+  color: #1a73e8;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: normal;
+}
+
+h3 {
   color: #1a73e8;
   overflow-wrap: break-word;
   word-wrap: break-word;

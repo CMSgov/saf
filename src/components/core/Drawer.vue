@@ -21,21 +21,34 @@
 
     <v-list-item>
       <v-list-item-content>
-        <v-list-item-title class style="font-size:130%">{{communityData.communityName}}</v-list-item-title>
-        <!-- <v-list-item-subtitle class="">
+        <v-list-item-title class="google-font" style="font-size: 130%"
+          ><img
+            slot="img"
+            :src="require('@/assets/img/svg/saf_logo.svg')"
+            style="width: 2rem; height: 2rem; vertical-align: middle"
+            class="mr-2"
+          />{{ communityData.communityName }}</v-list-item-title
+        >
+        <!-- <v-list-item-subtitle class="google-font">
             Google Developers Group
         </v-list-item-subtitle>-->
       </v-list-item-content>
     </v-list-item>
 
     <v-divider />
-    <v-dialog v-model="feedbackModalGetter" width="50rem" @click:outside="showFeedbackModal">
-      <template v-slot:activator="{ on }">
-        <v-btn class="ma-2"
+    <v-dialog
+      v-model="feedbackModalGetter"
+      width="50rem"
+      @click:outside="showFeedbackModal"
+    >
+      <template v-slot:activator="{on}">
+        <v-btn
+          class="ma-2"
           @click="showFeedbackModal"
           style="text-transform: capitalize;"
           text
-        >Give Us Feedback!</v-btn>
+          >Give Us Feedback!</v-btn
+        >
       </template>
       <feedbackModal v-show="feedbackModalGetter"></feedbackModal>
     </v-dialog>
@@ -52,7 +65,9 @@
           color="primary"
         >
           <v-list-item-icon class="pl-4">
-            <v-icon>{{ link.meta.enabled ? link.icon : 'mdi-close-circle-outline' }}</v-icon>
+            <v-icon>{{
+              link.meta.enabled ? link.icon : "mdi-close-circle-outline"
+            }}</v-icon>
           </v-list-item-icon>
 
           <v-list-item-content>
@@ -71,46 +86,46 @@
 </template>
 
 <script>
-import communityData from "@/assets/data/communityData.json";
-import feedbackModal from "@/components/core/FeedbackModal.vue";
-// Utilities
-import { mapGetters, mapMutations } from "vuex";
-export default {
-  name: "CoreDrawer",
-  data() {
-    return {
-      communityData: communityData,
-    };
-  },
-  components: {
-    feedbackModal: feedbackModal,
-  },
-  computed: {
-    ...mapGetters(["links"]),
-    ...mapGetters(["feedbackModalGetter"]),
-    drawer: {
-      get() {
-        return this.$store.state.drawer;
-      },
-      set(val) {
-        this.setDrawer(val);
+  import communityData from "@/assets/data/communityData.json";
+  import feedbackModal from "@/components/core/FeedbackModal.vue";
+  // Utilities
+  import {mapGetters, mapMutations} from "vuex";
+  export default {
+    name: "CoreDrawer",
+    data() {
+      return {
+        communityData: communityData,
+      };
+    },
+    components: {
+      feedbackModal: feedbackModal,
+    },
+    computed: {
+      ...mapGetters(["links"]),
+      ...mapGetters(["feedbackModalGetter"]),
+      drawer: {
+        get() {
+          return this.$store.state.drawer;
+        },
+        set(val) {
+          this.setDrawer(val);
+        },
       },
     },
-  },
-  methods: {
-    ...mapMutations(["setDrawer"]),
-    ...mapMutations(["showFeedbackModal"]),
-    onClick(e, item) {
-      e.stopPropagation();
-      if (item.to === "/") {
-        this.$vuetify.goTo(0);
+    methods: {
+      ...mapMutations(["setDrawer"]),
+      ...mapMutations(["showFeedbackModal"]),
+      onClick(e, item) {
+        e.stopPropagation();
+        if (item.to === "/") {
+          this.$vuetify.goTo(0);
+          this.setDrawer(false);
+          return;
+        }
+        if (item.to || !item.href) return;
+        this.$vuetify.goTo(item.href);
         this.setDrawer(false);
-        return;
-      }
-      if (item.to || !item.href) return;
-      this.$vuetify.goTo(item.href);
-      this.setDrawer(false);
+      },
     },
-  },
-};
+  };
 </script>

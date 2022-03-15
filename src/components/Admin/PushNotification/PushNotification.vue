@@ -1,11 +1,11 @@
 <template>
-  <v-container fluid class>
+  <v-container fluid class="">
     <v-row justify="center" align="center">
       <v-col md="8" class="text-center">
         <!-- <v-btn :to="'/home'" outlined class="ma-5">Home
-        </v-btn>-->
+                    </v-btn> -->
         <!-- <v-btn :to="'/dashboard/events'" outlined class="ma-5">Events
-        </v-btn>-->
+                    </v-btn> -->
         <p>Logged in as {{ userEmail }}</p>
         <v-btn text class="mb-3" v-on:click="logout">Logout</v-btn>
         <h3>Send Push Notification</h3>
@@ -31,7 +31,7 @@
 </template>
 
 <script>
-  // // import firebase from "@/firebase";
+  // import firebase from "@/firebase";
   // export default {
   //   components: {},
   //   name: "admin-dashboard",
@@ -42,13 +42,13 @@
   //     isLoading: false,
   //     isSuccessAlert: false
   //   }),
-  //   // mounted() {
-  //   //   if (firebase.auth.currentUser) {
-  //   //     this.userEmail = firebase.auth.currentUser.email;
-  //   //   } else {
-  //   //     this.$router.replace("admin");
-  //   //   }
-  //   // },
+  //   mounted() {
+  //     if (firebase.auth.currentUser) {
+  //       this.userEmail = firebase.auth.currentUser.email;
+  //     } else {
+  //       this.$router.replace("admin");
+  //     }
+  //   },
   //   methods: {
   //     send() {
   //       firebase.firestore
@@ -68,7 +68,8 @@
   //             const options = {
   //               method: "POST",
   //               headers: new Headers({
-  //                 Authorization: "key=",
+  //                 Authorization:
+  //                   "key=",
   //                 "Content-Type": "application/json"
   //               })
   //             };
@@ -84,53 +85,48 @@
   //           });
   //         });
   //     },
-  //     methods: {
-  //       send() {
-  //         this.isLoading = true;
-  //         firebase.firestore
-  //           .collection("apiEnd")
-  //           .get()
-  //           .then(docs => {
-  //             docs.forEach(doc => {
-  //               let token = doc.data().token;
-  //               let body = {
-  //                 to: token,
-  //                 notification: {
-  //                   title: this.title,
-  //                   body: {
-  //                     body: this.body,
-  //                     eventID: "devfest",
-  //                     regLink: ""
-  //                   },
-  //                   tag: "newEvent",
-  //                   image: ""
-  //                 }
-  //               };
-  //               const options = {
-  //                 method: "POST",
-  //                 headers: new Headers({
-  //                   Authorization: "key=",
-  //                   "Content-Type": "application/json"
-  //                 })
-  //               };
-  //               options.body = JSON.stringify(body);
-  //               //console.log(options.body)
-  //               fetch("", options)
-  //                 .then(res => res.json())
-  //                 .then(() => {
-  //                   this.isSuccessAlert = true;
-  //                   //console.log(data);
-  //                   this.isLoading = false;
-  //                 })
-  //                 .catch(err => alert(err));
+  //     methods:{
+  //         send(){
+  //             this.isLoading = true;
+  //             firebase.firestore.collection("apiEnd")
+  //             .get()
+  //             .then(docs => {
+  //                 docs.forEach(doc => {
+  //                     let token = doc.data().token;
+  //                     let body={
+  //                         "to": token,
+  //                         "notification": {
+  //                             "title": this.title,
+  //                             "body": {
+  //                                 "body":this.body,
+  //                                 "eventID": "devfest",
+  //                                 "regLink": "",
+  //                             },
+  //                             "tag":"newEvent",
+  //                             "image": "",
+  //                         },
+  //                     }
+  //                     const options = {
+  //                         method: 'POST',
+  //                         headers: new Headers({"Authorization": "key=",'Content-Type': 'application/json',}),
+  //                     };
+  //                     options.body = JSON.stringify(body);
+  //                     //console.log(options.body)
+  //                     fetch('', options).then((res) => res.json())
+  //                     .then(() =>{
+  //                         this.isSuccessAlert = true;
+  //                         //console.log(data);
+  //                         this.isLoading = false;
+  //                     })
+  //                     .catch((err)=>alert(err));
+  //                 });
   //             });
-  //           });
-  //       },
-  //       logout() {
-  //         firebase.auth.signOut().then(() => {
-  //           this.$router.replace("/admin");
-  //         });
-  //       }
+  //         },
+  //         logout(){
+  //             firebase.auth.signOut().then(()=>{
+  //                 this.$router.replace('/admin')
+  //             })
+  //         }
   //     }
   //   }
   // };

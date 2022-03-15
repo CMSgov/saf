@@ -50,28 +50,28 @@
 
 <script>
   // import firebase from "@/firebase";
-  export default {
-    name: "adminLogin",
-    data: () => ({
-      email: "",
-      password: "",
-      isLoading: false,
-    }),
-    methods: {
-      login() {
-        this.isLoading = true;
-        // firebase.auth
-        //   .signInWithEmailAndPassword(this.email, this.password)
-        //   .then(() => {
-        //     this.loading = false;
-        //     this.$router.replace("/admin/dashboard/home");
-        //   })
-        //   .catch(e => {
-        //     this.loading = false;
-        //     alert("Alert " + e);
-        //   });
-        this.loading = false;
-      },
-    },
-  };
+  // export default {
+  //   name: "adminLogin",
+  //   data: () => ({
+  //     email: "",
+  //     password: "",
+  //     isLoading: false
+  //   }),
+  //   methods: {
+  //     login() {
+  //       this.isLoading = true;
+  //       firebase.auth
+  //         .signInWithEmailAndPassword(this.email, this.password)
+  //         .then(() => {
+  //           this.loading = false;
+  //           this.$router.replace("/admin/dashboard/home");
+  //         })
+  //         .catch(e => {
+  //           this.loading = false;
+  //           alert("Alert " + e);
+  //         });
+  //       this.loading = false;
+  //     }
+  //   }
+  // };
 </script>

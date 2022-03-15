@@ -1,12 +1,26 @@
 <template>
   <v-dialog v-model="dialog" max-width="300">
-    <template v-slot:activator="{ on }">
+    <!-- <template v-slot:activator="{ on }"> -->
+    <template v-slot:activator="scope">
       <v-tooltip bottom>
+<<<<<<< HEAD
         <template v-slot:activator="{ on }">
           <v-btn icon v-on="on" dark color="red" @click.stop="dialog = true">
             <v-icon>mdi-delete</v-icon>
           </v-btn>
         </template>
+=======
+        <!-- <template v-slot:activator="{ on }"> -->
+        <v-btn
+          icon
+          v-on="scope.on"
+          dark
+          color="red"
+          @click.stop="dialog = true"
+        >
+          <v-icon>mdi-delete</v-icon>
+        </v-btn>
+>>>>>>> mitre-saf/master
         <span>Remove {{ speakerData.name }}</span>
       </v-tooltip>
     </template>
@@ -36,6 +50,7 @@
 
 <script>
   // import firebase from "@/firebase";
+<<<<<<< HEAD
   export default {
     props: {
       speakerData: {},
@@ -60,4 +75,34 @@
     //   },
     // },
   };
+=======
+  // export default {
+  //   props: {
+  //     speakerData: {},
+  //   },
+  //   data() {
+  //     return {
+  //       dialog: false,
+  //       isLoading: false,
+  //     };
+  //   },
+  //   methods: {
+  //     deleteItem(id) {
+  //       this.isLoading = true;
+  //       firebase.firestore
+  //         .collection("speakers")
+  //         .doc(id)
+  //         .delete()
+  //         .then(() => {
+  //           this.isLoading = false;
+  //           this.dialog = false;
+  //           this.$router.push({
+  //             path: "/admin/dashboard/speaker",
+  //             query: { msg: "removesuccess" },
+  //           });
+  //         });
+  //     },
+  //   },
+  // };
+>>>>>>> mitre-saf/master
 </script>

@@ -2,7 +2,7 @@
   <v-dialog v-model="dialog" max-width="300">
     <!--<template v-slot:activator="{ on }">-->
     <v-tooltip bottom>
-      <template v-slot:activator="{ on }">
+      <template v-slot:activator="{on}">
         <v-btn icon v-on="on" dark color="red" @click.stop="dialog = true">
           <v-icon>mdi-delete</v-icon>
         </v-btn>
@@ -40,31 +40,31 @@
 
 <script>
   // import firebase from 'firebase/app'
-  //import { firestore } from 'firebase';
-  export default {
-    props: {
-      teamData: {},
-    },
-    data() {
-      return {
-        dialog: false,
-        loading: false,
-      };
-    },
-    // methods: {
-    //   deleteItem(id) {
-    //     this.loading = true;
-    //     firebase.firestore().collection('team').where('id', '==',id).get().then(snapshot=>{
-    //         snapshot.forEach(doc=>{
-    //             doc.ref.delete()
-    //             this.loading = false
-    //             this.dialog = false
-    //             this.$emit('RemoveSuceess')
-    //             this.$router.push({ path: '/admin/dashboard/team', query: { msg: 'removesuccess' } })
-    //             // this.$router.replace('/admin/dashboard/team?msg=removesuccess')
-    //         })
-    //     })
-    //   },
-    // },
-  };
+  // //import { firestore } from 'firebase';
+  // export default {
+  //   props:{
+  //       teamData:{}
+  //   },
+  //   data () {
+  //     return {
+  //       dialog: false,
+  //       loading: false
+  //     }
+  //   },
+  //   methods:{
+  //       deleteItem(id){
+  //           this.loading = true
+  //           firebase.firestore().collection('team').where('id', '==',id).get().then(snapshot=>{
+  //               snapshot.forEach(doc=>{
+  //                   doc.ref.delete()
+  //                   this.loading = false
+  //                   this.dialog = false
+  //                   this.$emit('RemoveSuceess')
+  //                   this.$router.push({ path: '/admin/dashboard/team', query: { msg: 'removesuccess' } })
+  //                   // this.$router.replace('/admin/dashboard/team?msg=removesuccess')
+  //               })
+  //           })
+  //       },
+  //   }
+  // }
 </script>
