@@ -161,22 +161,6 @@
       ]
     },
     {
-      "name": "MongoDB Enterprise 3 STIG",
-      "category": [
-        "Databases"
-      ],
-      "links": [
-        {
-          "name": "MongoDB Enterprise 3 STIG",
-          "fips": [
-            "none"
-          ],
-          "link": "https://gitlab.dsolab.io/scv-content/inspec/mongo/mongodb_enterprise_3.x",
-          "svg": "inspec-blue-black-border"
-        }
-      ]
-    },
-    {
       "name": "Windows 2012 STIG",
       "category": [
         "Operating Systems"
