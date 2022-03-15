@@ -13,7 +13,8 @@
       justify="center"
       v-if="topic.sectionDesc"
       v-for="(item, i) in topic.sectionDesc"
-      :key="i">
+      :key="i"
+    >
       <span class="google-font pa-2" v-html="topic.sectionDesc[i]"></span>
     </v-row>
     <v-row
