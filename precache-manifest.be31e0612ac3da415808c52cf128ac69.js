@@ -600,14 +600,6 @@ self.__precacheManifest = [
     "url": "/ISPG_DevSecOps_Research_Graphic_04062020.pdf"
   },
   {
-    "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
-    "url": "/robots.txt"
-  },
-  {
-    "revision": "1effd52284926865e83ec7b5e2eefa43",
-    "url": "/SAF_Code_Review_Recommendations.pdf"
-  },
-  {
     "revision": "7780cecd623b8144d4a5d71c31059d31",
     "url": "/CMS_SAF_ARS_Assessment_Range_04232020.pdf"
   },
@@ -620,8 +612,16 @@ self.__precacheManifest = [
     "url": "/ISPG_DevSecOps_Research_Graphic_04062020.pptx"
   },
   {
+    "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
+    "url": "/robots.txt"
+  },
+  {
     "revision": "55830a5e46681197886743aaad704e5f",
     "url": "/ISPG_DevSecOps_Research_Program_Overview_04062020.pptx"
+  },
+  {
+    "revision": "1effd52284926865e83ec7b5e2eefa43",
+    "url": "/SAF_Code_Review_Recommendations.pdf"
   },
   {
     "revision": "13e04d26de97f23093f1133418926c28",
