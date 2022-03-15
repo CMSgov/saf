@@ -449,6 +449,38 @@
       ]
     },
     {
+      "name": "Red Hat 8 STIG",
+      "category": [
+        "Operating Systems"
+      ],
+      "links" : [
+        {
+          "name": "ARS 3.1 Low",
+          "fips": [
+            "low"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-low-red-hat-enterprise-linux-8-stig-overlay",
+          "svg": "inspec-blue-black-border"
+        },
+        {
+          "name": "ARS 3.1 Moderate",
+          "fips": [
+            "mod"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-red-hat-enterprise-linux-8-stig-overlay",
+          "svg": "inspec-blue-black-border"
+        },
+        {
+          "name": "ARS 3.1 High",
+          "fips": [
+            "high"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-high-red-hat-enterprise-linux-8-stig-overlay",
+          "svg": "inspec-blue-black-border"
+        }
+      ]
+    },
+    {
       "name": "Red Hat Jboss 6.3 STIG",
       "category": [
         "Application Logic"
@@ -724,6 +756,70 @@
             "none"
           ],
           "link": "https://github.com/GoogleCloudPlatform/inspec-gke-cis-benchmark",
+          "svg": "inspec-blue-black-border"
+        }
+      ]
+    },    
+    {
+      "name": "EKS Cluster CIS",
+      "category": [
+        "Virtual Platforms"
+      ],
+      "links" : [
+        {
+          "name": "ARS 3.1 Low",
+          "fips": [
+            "low"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-low-eks-cis-cluster-overlay",
+          "svg": "inspec-blue-black-border"
+        },
+        {
+          "name": "ARS 3.1 Moderate",
+          "fips": [
+            "mod"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-eks-cis-cluster-overlay",
+          "svg": "inspec-blue-black-border"
+        },
+        {
+          "name": "ARS 3.1 High",
+          "fips": [
+            "high"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-high-eks-cis-cluster-overlay",
+          "svg": "inspec-blue-black-border"
+        }
+      ]
+    },
+    {
+      "name": "EKS Node CIS",
+      "category": [
+        "Virtual Platforms"
+      ],
+      "links" : [
+        {
+          "name": "ARS 3.1 Low",
+          "fips": [
+            "low"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-low-eks-cis-node-overlay",
+          "svg": "inspec-blue-black-border"
+        },
+        {
+          "name": "ARS 3.1 Moderate",
+          "fips": [
+            "mod"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-eks-cis-node-overlay",
+          "svg": "inspec-blue-black-border"
+        },
+        {
+          "name": "ARS 3.1 High",
+          "fips": [
+            "high"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-high-eks-cis-node-overlay",
           "svg": "inspec-blue-black-border"
         }
       ]
