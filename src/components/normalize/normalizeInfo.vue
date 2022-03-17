@@ -131,7 +131,7 @@
   };
 
   // eslint-disable-next-line
-  Prism.languages.rb.string[1].pattern = /("|')(\1|(?:(?![^\\]\1)[\s\S])*[^\\]\1)/g;
+  Prism.languages.rb["string-literal"][1].pattern = /("|')(\1|(?:(?![^\\]\1)[\s\S])*[^\\]\1)/g;
 </script>
 
 <style scoped>
