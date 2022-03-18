@@ -1,11 +1,1 @@
-{
-  "name": "CMS Security Automation Framework",
-  "short_name": "CMS SAF",
-  "icons": [
-
-  ],
-  "start_url": "./index.html",
-  "display": "standalone",
-  "background_color": "#fff",
-  "theme_color": "#0277bd"
-}
+{"name":"CMS Security Automation Framework","short_name":"CMS SAF","theme_color":"#0277bd","icons":[],"start_url":"./index.html","display":"standalone","background_color":"#fff"}
