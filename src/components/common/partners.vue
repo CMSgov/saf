@@ -98,7 +98,6 @@
   export default {
     data() {
       return {
-        sponsors: sponsorData["Sponsors"],
         partners: partnerData["Commercial Partners"],
         communityData: communityData,
         showArrows: true,
