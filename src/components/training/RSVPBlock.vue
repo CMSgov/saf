@@ -1,35 +1,35 @@
-<template>
+<template >
   <div>
-    <h2>RSVP – InSpec profile developer training for September 2021!</h2>
-    <p class="ma-2">
+    <h2 class="mb-2">RSVP – InSpec profile developer training for May/June 2022!</h2>
+    <p >
       Sponsored by CMS under the
       <a href="https://saf.cms.gov" target="_blank"
         >CMS Security Automation Framework</a
       >, we’re happy to announce plans to again provide training to developers
       interested in learning to create and maintain InSpec profiles.
     </p>
-    <p class="ma-2">
+    <p >
       InSpec profiles are a core tool in establishing tailored, transparent,
       open-source community-based automated security testing content.
     </p>
-    <p class="ma-2">
+    <p >
       These are free, on-line virtual, hands-on, instructor-led 2-day classes.
     </p>
-    <p class="ma-2">
+    <p >
       The
       <a :href="communityData.trainingSiteBasic" target="_blank"
         >base introductory InSpec developer class</a
       >
-      will again be offered on September 8-9, 2021 (9am-4pm both days)
+      will again be offered on May 24-25, 2022 (9am-4pm both days) (12 CPE)
     </p>
-    <p class="ma-2">
+    <p >
       The
       <a :href="communityData.trainingSiteAdvanced" target="_blank"
         >follow-on Advanced InSpec developer class</a
       >
-      will again be offered on September 22-23, 2021 (9am-4pm both days)
+      will again be offered on June 14-15, 2022 (9am-4pm both days) (12 CPE)
     </p>
-    <p class="ma-2">
+    <p >
       Please RSVP if you are interested in attending or have additional
       questions. If you are having trouble with the form, please email
       <a :href="'mailto:' + communityData.trainingContactEmail" target="_blank"
@@ -48,7 +48,7 @@
       color="accent"
       >RSVP!</v-btn
     >
-    <p class="ma-2">
+    <p >
       A note on prerequisites: For the basic class, knowledge of basic
       programming concepts, modern language conventions and some working
       experience with a modern language (e.g., Ruby, Python, Go, etc) is useful.
