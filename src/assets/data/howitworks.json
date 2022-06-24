@@ -160,22 +160,14 @@
               "router_link" : "/validate"
             },
             {
-              "title": "Manual Attestation",
+              "title": "saf attest",
               "subtitle": [
                 {
-                  "type": "svg",
-                  "contents": "InSpec Icon"
-                },
-                {
-                  "type": "svg",
-                  "contents": "InSpec Typemark"
-                },
-                {
                   "type": "text",
-                  "contents": "plugin for manual attestation via interviews and examination"
+                  "contents": "Add manual attestation (collected via interviews and examination) to security scan output"
                 }
               ],
-              "link" : "https://github.com/mitre/inspec-reporter-json-hdf"
+              "link" : "https://saf-cli.mitre.org/#attest"
             },
             {
               "title": "Vulcan",
