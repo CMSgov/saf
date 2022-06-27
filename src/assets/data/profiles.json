@@ -65,6 +65,102 @@
       ]
     },
     {
+      "name": "MSQL Server 2017 CIS",
+      "category": [
+        "Databases"
+      ],
+      "links": [
+        {
+          "name": "ARS 3.1 Low",
+          "fips": [
+            "low"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-low-microsoft-sql-server-2017-cis-overlay",
+          "svg": "inspec-blue-black-border"
+        },
+        {
+          "name": "ARS 3.1 Moderate",
+          "fips": [
+            "mod"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-microsoft-sql-server-2017-cis-overlay",
+          "svg": "inspec-blue-black-border"
+        },
+        {
+          "name": "ARS 3.1 High",
+          "fips": [
+            "high"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-high-microsoft-sql-server-2017-cis-overlay",
+          "svg": "inspec-blue-black-border"
+        } 
+      ]
+    },
+    {
+      "name": "AWS RDS PostgreSQL 10-13 STIG",
+      "category": [
+        "Databases"
+      ],
+      "links": [
+        {
+          "name": "ARS 3.1 Low",
+          "fips": [
+            "low"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-low-aws-rds-crunchy-data-postgresql-stig-overlay",
+          "svg": "inspec-blue-black-border"
+        },
+        {
+          "name": "ARS 3.1 Moderate",
+          "fips": [
+            "mod"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-aws-rds-crunchy-data-postgresql-stig-overlay",
+          "svg": "inspec-blue-black-border"
+        },
+        {
+          "name": "ARS 3.1 High",
+          "fips": [
+            "high"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-high-aws-rds-crunchy-data-postgresql-stig-overlay",
+          "svg": "inspec-blue-black-border"
+        } 
+      ]
+    },
+    {
+      "name": "PostgreSQL 10-13 STIG",
+      "category": [
+        "Databases"
+      ],
+      "links": [
+        {
+          "name": "ARS 3.1 Low",
+          "fips": [
+            "low"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-low-crunchy-data-postgresql-stig-overlay",
+          "svg": "inspec-blue-black-border"
+        },
+        {
+          "name": "ARS 3.1 Moderate",
+          "fips": [
+            "mod"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-crunchy-data-postgresql-stig-overlay",
+          "svg": "inspec-blue-black-border"
+        },
+        {
+          "name": "ARS 3.1 High",
+          "fips": [
+            "high"
+          ],
+          "link": "https://github.com/CMSgov/cms-ars-3.1-high-crunchy-data-postgresql-stig-overlay",
+          "svg": "inspec-blue-black-border"
+        } 
+      ]
+    },
+    {
       "name": "AWS RDS Oracle Database 12c STIG",
       "category": [
         "Databases"
