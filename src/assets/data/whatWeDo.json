@@ -214,7 +214,7 @@
           "border_color": "#4783B2"
         },
         {
-          "name": "emasser cli",
+          "name": "emasser",
           "link": "",
           "desc": "CLI tool providing utilities for the Enterprise Mission Assurance Support Service (eMASS) via its REST API",
           "icon": "",
@@ -228,14 +228,15 @@
           "tools": "",
           "shields" : [
             "https://img.shields.io/github/v/release/mitre/emasser?label=version",
-            "https://img.shields.io/gem/dt/emasser?label=gem%20downloads"
+            "https://img.shields.io/gem/dt/emasser?label=gem%20downloads",
+            "https://img.shields.io/docker/pulls/mitre/emasser"
           ],
           "border_color": "purple",
           "img_width": 200,
           "img_height": 100
         },
         {
-          "name": "emasser_client",
+          "name": "eMASS Client",
           "link": "",
           "desc": "Repository that provides libraries for working with the eMASS REST API in your own tools (Ruby gem and Typescript package currently available)",
           "icon": "",
