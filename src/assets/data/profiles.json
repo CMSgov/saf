@@ -41,35 +41,19 @@
         {
           "name": "ARS 3.1 Low",
           "fips": [
-            "high"
+            "low"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-low-aws-rds-microsoft-sql-server-2017-cis-overlay",
           "svg": "inspec-blue-black-border"
-        }
-      ]
-    },
-    {
-      "name": "AWS RDS MSQL Server 2017 CIS",
-      "category": [
-        "Databases"
-      ],
-      "links": [
+        },
         {
           "name": "ARS 3.1 Moderate",
           "fips": [
-            "high"
+            "mod"
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-moderate-aws-rds-microsoft-sql-server-2017-cis-overlay",
           "svg": "inspec-blue-black-border"
-        }
-      ]
-    },
-    {
-      "name": "AWS RDS MSQL Server 2017 CIS",
-      "category": [
-        "Databases"
-      ],
-      "links": [
+        },
         {
           "name": "ARS 3.1 High",
           "fips": [
@@ -77,7 +61,7 @@
           ],
           "link": "https://github.com/CMSgov/cms-ars-3.1-high-aws-rds-microsoft-sql-server-2017-cis-overlay",
           "svg": "inspec-blue-black-border"
-        }
+        } 
       ]
     },
     {
