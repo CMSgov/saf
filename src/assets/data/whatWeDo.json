@@ -275,12 +275,12 @@
           "img_height": 100
         },
         {
-          "name": "Vulcan (alpha)",
+          "name": "Vulcan",
           "link": "",
-          "desc": "Application for streamlining InSpec profile and overlay development using the Security Requirements Guide (SRG)",
+          "desc": "Application for streamlining InSpec profile and overlay development using Security Requirements Guides (SRGs)",
           "icon": "",
           "png" : "saf_logo",
-          "app_link": "",
+          "app_link": "https://mitre-vulcan-staging.herokuapp.com/users/sign_in",
           "app_svg": "app",
           "doc_link": "https://vulcan.mitre.org",
           "github_link": "https://github.com/mitre/vulcan",
