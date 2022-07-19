@@ -257,6 +257,54 @@
       ]
     },
     {
+      "name": "Apache 2.4 Server STIG",
+      "category": [
+        "Web Servers"
+      ],
+      "links": [
+        {
+          "name": "Apache 2.4 Server STIG",
+          "fips": [
+            "none"
+          ],
+          "link": "https://github.com/CMSgov/httpd_2.4x_server",
+          "svg": "inspec-blue-black-border"
+        }
+      ]
+    },
+    {
+      "name": "Apache 2.4 Site STIG",
+      "category": [
+        "Web Servers"
+      ],
+      "links": [
+        {
+          "name": "Apache 2.4 Site STIG",
+          "fips": [
+            "none"
+          ],
+          "link": "https://github.com/CMSgov/httpd_2.4x_site",
+          "svg": "inspec-blue-black-border"
+        }
+      ]
+    },
+    {
+      "name": "Apache Tomcat 9 STIG",
+      "category": [
+        "Web Servers"
+      ],
+      "links": [
+        {
+          "name": "Apache Tomcat 9 STIG",
+          "fips": [
+            "none"
+          ],
+          "link": "https://github.com/CMSgov/tomcat_9.x",
+          "svg": "inspec-blue-black-border"
+        }
+      ]
+    },   
+    {
       "name": "MSQL Server 2014 Database STIG",
       "category": [
         "Databases"
