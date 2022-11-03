@@ -103,6 +103,14 @@
       ],
       "links": [
         {
+          "name": "ARS 5.0",
+          "fips": [
+            "low"
+          ],
+          "link": "https://github.com/CMS-Enterprise/cms-ars-5.0-crunchy-data-postgresql-stig-overlay",
+          "svg": "inspec-blue-black-border"
+        },
+        {
           "name": "ARS 3.1 Low",
           "fips": [
             "low"
