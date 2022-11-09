@@ -7,6 +7,11 @@
             v-if="getByFips(this.entry, 'none')"
             :entry="getByFips(this.entry, 'none')"
           />
+          <profileChip
+            class="ma-1"
+            v-if="getByFips(entry, 'ars5')"
+            :entry="getByFips(entry, 'ars5')"
+          />
           <div class="ma-1 body-2 break-word" v-else>
             {{ entry.name }}
           </div> </v-row
