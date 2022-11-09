@@ -79,11 +79,6 @@
         "Databases"
       ],
       "links": {
-        "ars5":{
-          "name" : "ARS 5.0",
-          "link" : "https://github.com/mitre/aws-rds-crunchy-data-postgresql-stig-baseline",
-          "svg" : "inspec-blue-back-border"
-        },
         "low":{
           "name": "ARS 3.1 Low",
           "link": "https://github.com/CMSgov/cms-ars-3.1-low-aws-rds-crunchy-data-postgresql-stig-overlay",
@@ -490,6 +485,11 @@
         "Operating Systems"
       ],
       "links" : {
+        "ars5":{
+          "name": "ARS 5.0",
+          "link": "https://github.com/CMSgov/cms-ars-5.0-red-hat-enterprise-linux-8-stig-overlay",
+          "svg": "inspec-blue-black-border"
+        },
         "low":{
           "name": "ARS 3.1 Low",
           "link": "https://github.com/CMSgov/cms-ars-3.1-low-red-hat-enterprise-linux-8-stig-overlay",
@@ -552,6 +552,11 @@
         "Operating Systems"
       ],
       "links" : {
+        "ars5":{
+          "name": "ARS 5.0",
+          "link": "https://github.com/CMSgov/cms-ars-5.0-microsoft-windows-server-2019-stig-overlay",
+          "svg": "inspec-blue-black-border"
+        },
         "low":{
           "name": "ARS 3.1 Low",
           "link": "https://github.com/CMSgov/cms-ars-3.1-low-microsoft-windows-server-2019-stig-overlay",
