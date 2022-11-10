@@ -4,28 +4,20 @@
       <v-col cols="12" class="pa-0 ma-2">
         <v-row justify="center">
           <profileChip
-            v-if="getByFips(this.entry, 'none')"
-            :entry="getByFips(this.entry, 'none')"
+            v-if="entry.links.baseline"
+            :entry="entry.links.baseline"
           />
           <div class="ma-1 body-2 break-word" v-else>
             {{ entry.name }}
           </div> </v-row
         ><v-row justify="center">
-          <profileChip
-            class="ma-1"
-            v-if="getByFips(entry, 'low')"
-            :entry="getByFips(entry, 'low')"
-          />
-          <profileChip
-            class="ma-1"
-            v-if="getByFips(this.entry, 'mod')"
-            :entry="getByFips(entry, 'mod')"
-          />
-          <profileChip
-            class="ma-1"
-            v-if="getByFips(this.entry, 'high')"
-            :entry="getByFips(entry, 'high')"
-          />
+          <div v-for="(category, i) in ['ars5', 'low', 'mod','high']" :key=i>
+            <profileChip 
+              class="ma-1"
+              v-if="entry.links[category]"
+              :entry="entry.links[category]"
+            />
+          </div>
         </v-row>
       </v-col>
     </v-row>
