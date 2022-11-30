@@ -743,6 +743,11 @@
         "Virtual Platforms"
       ],
       "links" : {
+        "ars5":{
+          "name": "ARS 5.0",
+          "link": "https://github.com/CMS-Enterprise/cms-ars-5.0-eks-cis-cluster-overlay",
+          "svg": "inspec-blue-black-border" 
+        }, 
         "low":{
           "name": "ARS 3.1 Low",
           "link": "https://github.com/CMSgov/cms-ars-3.1-low-eks-cis-cluster-overlay",
@@ -772,6 +777,11 @@
         "Virtual Platforms"
       ],
       "links" : {
+        "ars5":{
+          "name": "ARS 5.0",
+          "link": "https://github.com/CMS-Enterprise/cms-ars-5.0-eks-cis-node-overlay",
+          "svg": "inspec-blue-black-border" 
+        }, 
         "low":{
           "name": "ARS 3.1 Low",
           "link": "https://github.com/CMSgov/cms-ars-3.1-low-eks-cis-node-overlay",
