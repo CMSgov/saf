@@ -79,6 +79,11 @@
         "Databases"
       ],
       "links": {
+        "ars5":{
+          "name": "ARS 5.0",
+          "link": "https://github.com/CMS-Enterprise/cms-ars-5.0-aws-rds-crunchy-data-postgresql-stig-overlay",
+          "svg": "inspec-blue-black-border" 
+        }, 
         "low":{
           "name": "ARS 3.1 Low",
           "link": "https://github.com/CMSgov/cms-ars-3.1-low-aws-rds-crunchy-data-postgresql-stig-overlay",
