@@ -800,6 +800,32 @@
       }
     },
     {
+      "name": "K8S Cluster STIG",
+      "category": [
+        "Virtual Platforms"
+      ],
+      "links" : {
+        "ars5":{
+          "name": "ARS 5.0",
+          "link": "https://github.com/CMS-Enterprise/cms-ars-5.0-k8s-cluster-stig-overlay",
+          "svg": "inspec-blue-black-border" 
+        }
+      }
+    },    
+    {
+      "name": "K8S Node STIG",
+      "category": [
+        "Virtual Platforms"
+      ],
+      "links" : {
+        "ars5":{
+          "name": "ARS 5.0",
+          "link": "https://github.com/CMS-Enterprise/cms-ars-5.0-k8s-node-stig-overlay",
+          "svg": "inspec-blue-black-border" 
+        }
+      }
+    },    
+    {
       "name": "AWS RDS Best Practices Benchmark",
       "links" : {
         "baseline":{
