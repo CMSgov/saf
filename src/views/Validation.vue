@@ -16,11 +16,8 @@
             profiles, please see our links to Training material.
           </p>
           <p class="mx-0">
-            All assessment tests under SAF are associated with CMS ARS 3.1 (NIST
-            SP 800-53) Security Controls. Explore these associations in this
-            <router-link to="control-table"
-              >Control Assessment Range table</router-link
-            >!
+            All assessment tests under SAF are associated with CMS ARS (NIST
+            SP 800-53) Security Controls.
           </p>
           <p class="mx-0">
             For CMS Cloud users, AWS Foundations and Infrastructure scans are
