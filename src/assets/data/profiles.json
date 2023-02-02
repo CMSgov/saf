@@ -143,6 +143,19 @@
       }
     },
     {
+      "name": "AWS RDS Oracle Database 19c CIS",
+      "category": [
+        "Databases"
+      ],
+      "links": {
+        "ars5":{
+          "name": "ARS 5.0",
+          "link": "https://github.com/CMS-Enterprise/cms-ars-5.0-aws-rds-oracle-19c-cis-overlay",
+          "svg": "inspec-blue-black-border"
+        }
+      }
+    },
+    {
       "name": "AWS RDS Oracle Database 12c STIG",
       "category": [
         "Databases"
