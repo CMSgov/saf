@@ -394,6 +394,19 @@
       }
     },
     {
+      "name": "AWS RDS Oracle MySQL 8 STIG",
+      "category": [
+        "Databases"
+      ],
+      "links" : {
+        "ars5":{
+          "name": "ARS 5.0",
+          "link": "https://github.com/CMS-Enterprise/cms-ars-5.0-oracle-mysql-8-stig-overlay#aws-rds-ready-profile-updated-to-adapt-checks-when-the-running-against-an-aws-rds-instance-of-mysql-by-setting-the-input-aws_rds-to-true-see-inputs-tailoring-your-scan-to-your-environment-and-mysql-client-setup-below",
+          "svg": "inspec-blue-black-border"
+        }
+      }
+    },
+    {
       "name": "PostgreSQL 9.x STIG",
       "category": [
         "Databases"
@@ -485,6 +498,19 @@
       }
     },
     {
+      "name": "Oracle MySQL 8 STIG",
+      "category": [
+        "Databases"
+      ],
+      "links" : {
+        "ars5":{
+          "name": "ARS 5.0",
+          "link": "https://github.com/CMS-Enterprise/cms-ars-5.0-oracle-mysql-8-stig-overlay",
+          "svg": "inspec-blue-black-border"
+        }
+      }
+    },
+   {
       "name": "Red Hat 6 STIG",
       "category": [
         "Operating Systems"
