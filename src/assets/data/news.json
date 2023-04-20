@@ -3,6 +3,8 @@
         "new" : {
             "header" : "New",
             "content" : [
+                "ARS (Acceptable Risk Safeguards) 5 Support!  CMS SAF has updated relevant InSpec profiles (see “ARS 5” links on our <a href=\"https://saf.cms.gov/#/validate\">Validate page</a>) to allow teams to validate against CMS’ latest organizational-specific requirements!"
+                "•	Open-source tool support! The SAF CLI’s \“convert\” tool continues to support import/export/interchange of security data for a variety of open-source and vendor security tools."
                 "<a href=\"https://saf-cli.mitre.org/\">SAF CLI</a> consolidates SAF automation goals into a convenient command-line tool, including commands to: generate InSpec security validation code, set and validate threshold checks within a pipeline, convert security tool test data to and from our standard Heimdall Data Format (HDF), and automate Heimdall setup and deployment.",
                 "The <a href=\"https://saf-cli.mitre.org/\">SAF CLI</a> now supports AWS Security Hub and Splunk data integration!",
                 "CMS SAF now supports InSpec validation of Kubernetes (K8S, K3S, EKS)! Web, application, and database profiles have been confirmed/updated to work against containerized instances.",
