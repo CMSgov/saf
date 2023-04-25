@@ -18,10 +18,8 @@
                 "Automate Manual Controls! SAF/InSpec can now address manual controls! See \"Manual Controls\" on the <a href=\"https://saf.cms.gov/#/validate\">Validate page</a>.",
                 "Container Support! CMS SAF now supports InSpec validation of Kubernetes (K8S, K3S, EKS)! Also, web, application, and database profiles have been confirmed/updated to work against containerized instances.",
                 "AWS Lambda Support - SAF now offers an <a href=\"https://github.com/mitre/serverless-inspec-lambda\">AWS Lambda runner for InSpec</a> – convenient scans without having to set up a runner!",
-                "Visualization Support: [
                 "<a href=\"https://heimdall-lite.cms.gov/\">Heimdall-lite.cms.gov</a> is live! CMS now has its own version of Heimdall-lite, an in-browser tool for analyzing security data!",             
-                "Heimdall Server supports role-based access, multi-target CAAT export, and more! Follow releases <a href=\"https://github.com/mitre/heimdall2/releases\">here</a>."
-                ]",
+                "Heimdall Server supports role-based access, multi-target CAAT export, and more! Follow releases <a href=\"https://github.com/mitre/heimdall2/releases\">here</a>.",
                 "Check back often to find the latest information on <a href=\"https://saf.cms.gov/#/validate\">InSpec profiles</a>, <a href='https://saf-cli.mitre.org/#convert/'>SAF CLI format converters</a>, and <a href=\"https://github.com/mitre/heimdall2/releases\">Heimdall updates!</a>",
                 "<a href=\"https://heimdall-lite.cms.gov/\">Heimdall-lite.cms.gov</a> is live! CMS now has its own version of Heimdall-lite, an in-browser tool for analyzing security data!",
                 "Drag and drop data visualization - <a href=\"https://heimdall-lite.mitre.org/\">Heimdall</a> can auto-convert native security data file formats just through drag and drop! These are the same formats supported by the <a href=\"https://github.com/mitre/saf#convert\">saf convert</a> tool."
