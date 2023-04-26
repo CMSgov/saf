@@ -16,7 +16,6 @@
   </v-container>
 </template>
 
-
 <script>
 import communityData from "@/assets/data/communityData.json";
 export default {
