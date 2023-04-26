@@ -5,6 +5,37 @@
       "desc": "One major barrier to security automation is having multiple security tools that do not use a common format for representing security data. CMS SAF uses the Heimdall Data Format (HDF) as a common format to represent normalized security data. HDF files record vital security data about a completed validation test, such as the test code, description, attributes, and outcome. This allows for the aggregation and analysis of test results from a wide range of validation tools at once."
     },
     {
+      "header": "saf convert",
+      "desc": "The SAF CLI's <a href='https://saf-cli.mitre.org/#convert' target='_blank'>saf convert option</a> allows the conversion of output from widely used automated security testing tools into HDF (and from HDF into other common formats). SAF CLI has converters for tools and formats such as:",
+      "bullets": [
+        { "main": "AWS Security Hub" },
+        { "main": "AWS Config" },
+        { "main": "Burp Suite" },
+        { "main": "DISA CKL files" },
+        { "main": "DISA XCCDF results files" },
+        { "main": "DBProtect" },
+        { "main": "Fortify" },
+        { "main": "GoSec" },
+        { "main": "Ion Channel" },
+        { "main": "JFrog Xray" },
+        { "main": "Netsparker" },
+        { "main": "Nikto" },
+        { "main": "Prisma" },
+        { "main": "Prowler" },
+        { "main": "Sarif" },
+        { "main": "Scoutsuite" },
+        { "main": "Snyk" },
+        { "main": "Sonarqube" },
+        { "main": "Splunk" },
+        { "main": "Tenable Nessus" },
+        { "main": "Trivy" },
+        { "main": "Twistlock" },
+        { "main": "Veracode" },
+        { "main": "OWASP ZAP" }
+      ],
+      "footer": "For instructions on using the converter function, check out the page for SAF CLI linked above. If you need a converter that is not on the list, reach out to us to discuss creating a new one (or write your own!)."
+    },
+    {
       "header": "HDF Core Elements",
       "desc": "HDF uses a common alignment point of the core elements of testing results data so that we can transform multiple formats. The goal is to preserve metadata from unique testing formats as tags when translated into HDF. HDF requires the following core data elements to standardize the testing results data from various formats.",
       "bullets": [
@@ -120,37 +151,6 @@
         }
       ],
       "image": "hdf-schema-diagram"
-    },
-    {
-      "header": "saf convert",
-      "desc": "The SAF CLI's <a href='https://saf-cli.mitre.org/#convert' target='_blank'>saf convert option</a> allows the conversion of output from widely used automated security testing tools into HDF (and from HDF into other common formats). SAF CLI has converters for tools and formats such as:",
-      "bullets": [
-        { "main": "AWS Security Hub" },
-        { "main": "AWS Config" },
-        { "main": "Burp Suite" },
-        { "main": "DISA CKL files" },
-        { "main": "DISA XCCDF results files" },
-        { "main": "DBProtect" },
-        { "main": "Fortify" },
-        { "main": "GoSec" },
-        { "main": "Ion Channel" },
-        { "main": "JFrog Xray" },
-        { "main": "Netsparker" },
-        { "main": "Nikto" },
-        { "main": "Prisma" },
-        { "main": "Prowler" },
-        { "main": "Sarif" },
-        { "main": "Scoutsuite" },
-        { "main": "Snyk" },
-        { "main": "Sonarqube" },
-        { "main": "Splunk" },
-        { "main": "Tenable Nessus" },
-        { "main": "Trivy" },
-        { "main": "Twistlock" },
-        { "main": "Veracode" },
-        { "main": "OWASP ZAP" }
-      ],
-      "footer": "For instructions on using the converter function, check out the page for SAF CLI linked above. If you need a converter that is not on the list, reach out to us to discuss creating a new one (or write your own!)."
     },
     {
       "header": "InSpec Control Template Examples That Support Proper Generation of HDF Output",
