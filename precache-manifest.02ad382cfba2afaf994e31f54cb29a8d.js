@@ -48,11 +48,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/_redirects"
   },
   {
-    "revision": "fb2d64336b9f40fecb20",
+    "revision": "c0ca5dcb353a918c0aa4",
     "url": "/css/app.38eaad60.css"
   },
   {
-    "revision": "0be36343780af32f8391",
+    "revision": "2d59162a8800c648cb25",
     "url": "/css/chunk-04e67f36.04775128.css"
   },
   {
@@ -96,7 +96,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/css/chunk-579e1ea3.3d970a49.css"
   },
   {
-    "revision": "0e259212bba9a3452a2a",
+    "revision": "ec903cd0f2b8470faa27",
     "url": "/css/chunk-68891128.fca02344.css"
   },
   {
@@ -532,16 +532,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/whenToUseIt.e1434b95.png"
   },
   {
-    "revision": "e7e8c37aacf362a68ee41d03caf9f79f",
+    "revision": "e463048ad3a604a5078b169a3358b664",
     "url": "/index.html"
   },
   {
-    "revision": "fb2d64336b9f40fecb20",
-    "url": "/js/app.e2cb5dd3.js"
+    "revision": "c0ca5dcb353a918c0aa4",
+    "url": "/js/app.d4684cd4.js"
   },
   {
-    "revision": "0be36343780af32f8391",
-    "url": "/js/chunk-04e67f36.9f6d8e41.js"
+    "revision": "2d59162a8800c648cb25",
+    "url": "/js/chunk-04e67f36.dc218949.js"
   },
   {
     "revision": "036de19eb91b012d7660",
@@ -596,8 +596,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/js/chunk-579e1ea3.ecfa6dc6.js"
   },
   {
-    "revision": "0e259212bba9a3452a2a",
-    "url": "/js/chunk-68891128.ea16a2e8.js"
+    "revision": "ec903cd0f2b8470faa27",
+    "url": "/js/chunk-68891128.d7c25278.js"
   },
   {
     "revision": "7d2bfe404dc001faed35",
@@ -608,8 +608,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/js/chunk-8227ea98.76464f2c.js"
   },
   {
-    "revision": "f56c8e40b9dffa37f9f0",
-    "url": "/js/chunk-91ee10a4.29e7da85.js"
+    "revision": "54e6bf7771839420dd66",
+    "url": "/js/chunk-91ee10a4.eb9ad989.js"
   },
   {
     "revision": "9ccbea65139eacb55375",
