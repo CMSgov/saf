@@ -9,10 +9,16 @@ on:
       - master
 jobs:
   cypress-run:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+
+      - name: setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+          cache: "npm"
 
       - name: install dependencies
         run: npm install
@@ -21,7 +27,7 @@ jobs:
         run: npm run build
 
       - name: test site with cypress
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v5
         with:
           start: npx serve -s dist
           config: baseUrl=http://localhost:3000/#/
