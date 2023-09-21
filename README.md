@@ -2,7 +2,7 @@
 
 The CMS ISPG SAF program was discontinued in September 2023.
 
-Existing CMS-tailored Security Validation (InSpec Profile) content will still be available on GitHub, as well as the other open-source tools provided on the [MITRE SAF website](https://saf.mitre.org/): 
+Existing CMS-tailored Security Validation (InSpec Profile) content will still be available on [Github](https://security.cms.gov/learn/security-automation-framework-saf), as well as the other open-source tools provided on the [MITRE SAF website](https://saf.mitre.org/): 
 
 - [Baseline (to STIG or CIS) Security Validation InSpec profiles](https://saf.mitre.org/libs/validate)
 - [SAF Data Converter and Attestation tools](https://saf-cli.mitre.org/)
