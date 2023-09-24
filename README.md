@@ -1,6 +1,8 @@
-# CMS Security Automation Framework (CMS SAF)
+# CMS customizations based on MITRE's Security Automation Framework (CMS SAF)
 
-The CMS ISPG SAF program was discontinued in September 2023.
+# **PLEASE NOTE: **[MITRE SAF](https://saf.mitre.org/)**** continues as an open-source shared community.
+
+CMS’ ISPG (Information Security and Privacy Group) decided to **discontinue funding it’s own CMS customizations** based on [MITRE’s Security Automation Framework (SAF)](https://saf.mitre.org/) for CMS after September 2023.
 
 Existing CMS-tailored Security Validation (InSpec Profile) content will still be available on [Github](https://security.cms.gov/learn/security-automation-framework-saf), as well as the other open-source tools provided on the [MITRE SAF website](https://saf.mitre.org/): 
 
